@@ -22,16 +22,15 @@
 
 namespace gpu {
 namespace xetpp {
-namespace core {    
+namespace core {
 
 #include "xetpp_core_common.hpp"
 
 /// @addtogroup xetpp_core_raw_send
-/// @{ 
-
+/// @{
 
 /// @brief Raw send with one source operand and one destination operand.
-/// 
+///
 /// @tparam T1 is the data type of the msgDst.
 /// @tparam n1 is the data length of the msgDst.
 /// @tparam T2 is the data type of the msgSrc0.
@@ -48,25 +47,25 @@ namespace core {
 /// @param exDesc  [in] is the extended message descriptor.
 /// @param msgDesc [in] is the message descriptor.
 /// @param mask    [in] is the predicate to specify enabled channels (optional - default to on).
-/// 
-template<typename T1, uint32_t n1, typename T2, uint32_t n2, uint8_t execSize, uint8_t sfid, uint8_t numSrc0, uint8_t numDst, uint8_t isEOT = 0, uint8_t isSendc = 0, uint32_t N = 16>
-__XETPP_API void xetpp_raw_send(__XETPP_CORE_NS::xetpp_vector_ref<T1, n1> _REF_ msgDst,
-                                __XETPP_CORE_NS::xetpp_vector<T2, n2> msgSrc0,
-                                uint32_t exDesc,
-                                uint32_t msgDesc,
-                                __XETPP_CORE_NS::xetpp_mask<N> mask = 1) {
+///
+template <typename T1, uint32_t n1, typename T2, uint32_t n2, uint8_t execSize,
+        uint8_t sfid, uint8_t numSrc0, uint8_t numDst, uint8_t isEOT = 0,
+        uint8_t isSendc = 0, uint32_t N = 16>
+__XETPP_API void xetpp_raw_send(
+        __XETPP_CORE_NS::xetpp_vector_ref<T1, n1> _REF_ msgDst,
+        __XETPP_CORE_NS::xetpp_vector<T2, n2> msgSrc0, uint32_t exDesc,
+        uint32_t msgDesc, __XETPP_CORE_NS::xetpp_mask<N> mask = 1) {
 #if XETPP_ESIMD_ENABLED
-    msgDst =  __ESIMD_EXT_NS::raw_send_load(msgDst, msgSrc0, exDesc, msgDesc, execSize, sfid, numSrc0, numDst, isEOT,
-                                            isSendc, mask);
+    msgDst = __ESIMD_EXT_NS::raw_send_load(msgDst, msgSrc0, exDesc, msgDesc,
+            execSize, sfid, numSrc0, numDst, isEOT, isSendc, mask);
 #else
-    cm_raw_send(msgDst, msgSrc0, 0, exDesc, msgDesc, execSize, sfid, numSrc0, 0, numDst, isEOT, isSendc, mask);
+    cm_raw_send(msgDst, msgSrc0, 0, exDesc, msgDesc, execSize, sfid, numSrc0, 0,
+            numDst, isEOT, isSendc, mask);
 #endif
-
 }
 
-
 /// @brief Raw send with two source operands and one destination operand.
-/// 
+///
 /// @tparam T1 is the data type of the msgDst.
 /// @tparam n1 is the data length of the msgDst.
 /// @tparam T2 is the data type of the msgSrc0.
@@ -87,28 +86,28 @@ __XETPP_API void xetpp_raw_send(__XETPP_CORE_NS::xetpp_vector_ref<T1, n1> _REF_ 
 /// @param exDesc  [in] is the extended message descriptor.
 /// @param msgDesc [in] is the message descriptor.
 /// @param mask    [in] is the predicate to specify enabled channels (optional - default to on).
-/// 
-template<typename T1, uint32_t n1, typename T2, uint32_t n2, typename T3, uint32_t n3, uint8_t execSize, uint8_t sfid, uint8_t numSrc0, uint8_t numSrc1, uint8_t numDst, uint8_t isEOT = 0, uint8_t isSendc = 0, uint32_t N = 16>
-__XETPP_API void xetpp_raw_send(__XETPP_CORE_NS::xetpp_vector_ref<T1, n1> _REF_ msgDst,
-                                __XETPP_CORE_NS::xetpp_vector<T2, n2> msgSrc0,
-                                __XETPP_CORE_NS::xetpp_vector<T3, n3> msgSrc1,
-                                uint32_t exDesc,
-                                uint32_t msgDesc,
-                                __XETPP_CORE_NS::xetpp_mask<N> mask = 1) {
+///
+template <typename T1, uint32_t n1, typename T2, uint32_t n2, typename T3,
+        uint32_t n3, uint8_t execSize, uint8_t sfid, uint8_t numSrc0,
+        uint8_t numSrc1, uint8_t numDst, uint8_t isEOT = 0, uint8_t isSendc = 0,
+        uint32_t N = 16>
+__XETPP_API void xetpp_raw_send(
+        __XETPP_CORE_NS::xetpp_vector_ref<T1, n1> _REF_ msgDst,
+        __XETPP_CORE_NS::xetpp_vector<T2, n2> msgSrc0,
+        __XETPP_CORE_NS::xetpp_vector<T3, n3> msgSrc1, uint32_t exDesc,
+        uint32_t msgDesc, __XETPP_CORE_NS::xetpp_mask<N> mask = 1) {
 #if XETPP_ESIMD_ENABLED
-    msgDst =  __ESIMD_EXT_NS::raw_sends_load(msgDst, msgSrc0, msgSrc1, exDesc, msgDesc, execSize, sfid, numSrc0, numSrc1, numDst, isEOT,
-                                            isSendc, mask);
+    msgDst = __ESIMD_EXT_NS::raw_sends_load(msgDst, msgSrc0, msgSrc1, exDesc,
+            msgDesc, execSize, sfid, numSrc0, numSrc1, numDst, isEOT, isSendc,
+            mask);
 #else
-    cm_raw_send(msgDst, msgSrc0, msgSrc1, exDesc, msgDesc, execSize, sfid, numSrc0, numSrc1, numDst, isEOT, isSendc, mask);
+    cm_raw_send(msgDst, msgSrc0, msgSrc1, exDesc, msgDesc, execSize, sfid,
+            numSrc0, numSrc1, numDst, isEOT, isSendc, mask);
 #endif
-
 }
 
-
-
-
 /// @brief Raw send with one source operand and no return.
-/// 
+///
 /// @tparam T1 is the data type of the msgSrc0.
 /// @tparam n1 is the data length of the msgSrc0.
 /// @tparam execSize is the execution size.
@@ -121,24 +120,24 @@ __XETPP_API void xetpp_raw_send(__XETPP_CORE_NS::xetpp_vector_ref<T1, n1> _REF_ 
 /// @param exDesc  [in] is the extended message descriptor.
 /// @param msgDesc [in] is the message descriptor.
 /// @param mask    [in] is the predicate to specify enabled channels (optional - default to on).
-/// 
-template<typename T1, uint32_t n1, uint8_t execSize, uint8_t sfid, uint8_t numSrc0, uint8_t isEOT = 0, uint8_t isSendc = 0, uint32_t N = 16>
+///
+template <typename T1, uint32_t n1, uint8_t execSize, uint8_t sfid,
+        uint8_t numSrc0, uint8_t isEOT = 0, uint8_t isSendc = 0,
+        uint32_t N = 16>
 __XETPP_API void xetpp_raw_send(__XETPP_CORE_NS::xetpp_vector<T2, n2> msgSrc0,
-                                uint32_t exDesc,
-                                uint32_t msgDesc,
-                                __XETPP_CORE_NS::xetpp_mask<N> mask = 1) {
+        uint32_t exDesc, uint32_t msgDesc,
+        __XETPP_CORE_NS::xetpp_mask<N> mask = 1) {
 #if XETPP_ESIMD_ENABLED
-    __ESIMD_EXT_NS::raw_send_store(msgSrc0, exDesc, msgDesc, execSize, sfid, numSrc0, isEOT,
-                                             isSendc, mask);
+    __ESIMD_EXT_NS::raw_send_store(msgSrc0, exDesc, msgDesc, execSize, sfid,
+            numSrc0, isEOT, isSendc, mask);
 #else
-    cm_raw_send(0, msgSrc0, 0, exDesc, msgDesc, execSize, sfid, numSrc0, 0, 0, isEOT, isSendc, mask);
+    cm_raw_send(0, msgSrc0, 0, exDesc, msgDesc, execSize, sfid, numSrc0, 0, 0,
+            isEOT, isSendc, mask);
 #endif
-
 }
 
-
 /// @brief Raw send with two source operands and no return.
-/// 
+///
 /// @tparam T1 is the data type of the msgSrc0.
 /// @tparam n1 is the data length of the msgSrc0.
 /// @tparam T2 is the data type of the msgSrc1.
@@ -155,29 +154,26 @@ __XETPP_API void xetpp_raw_send(__XETPP_CORE_NS::xetpp_vector<T2, n2> msgSrc0,
 /// @param exDesc  [in] is the extended message descriptor.
 /// @param msgDesc [in] is the message descriptor.
 /// @param mask    [in] is the predicate to specify enabled channels (optional - default to on).
-/// 
-template<typename T1, uint32_t n1, typename T2, uint32_t n2, uint8_t execSize, uint8_t sfid, uint8_t numSrc0, uint8_t numSrc1, uint8_t isEOT = 0, uint8_t isSendc = 0, uint32_t N = 16>
+///
+template <typename T1, uint32_t n1, typename T2, uint32_t n2, uint8_t execSize,
+        uint8_t sfid, uint8_t numSrc0, uint8_t numSrc1, uint8_t isEOT = 0,
+        uint8_t isSendc = 0, uint32_t N = 16>
 __XETPP_API void xetpp_raw_send(__XETPP_CORE_NS::xetpp_vector<T1, n1> msgSrc0,
-                                __XETPP_CORE_NS::xetpp_vector<T2, n2> msgSrc1,
-                                uint32_t exDesc,
-                                uint32_t msgDesc,
-                                __XETPP_CORE_NS::xetpp_mask<N> mask = 1) {
+        __XETPP_CORE_NS::xetpp_vector<T2, n2> msgSrc1, uint32_t exDesc,
+        uint32_t msgDesc, __XETPP_CORE_NS::xetpp_mask<N> mask = 1) {
 #if XETPP_ESIMD_ENABLED
-    __ESIMD_EXT_NS::raw_sends_load(msgSrc0, msgSrc1, exDesc, msgDesc, execSize, sfid, numSrc0, numSrc1, isEOT,
-                                   isSendc, mask);
+    __ESIMD_EXT_NS::raw_sends_load(msgSrc0, msgSrc1, exDesc, msgDesc, execSize,
+            sfid, numSrc0, numSrc1, isEOT, isSendc, mask);
 #else
-    cm_raw_send(0, msgSrc0, msgSrc1, exDesc, msgDesc, execSize, sfid, numSrc0, numSrc1, 0, isEOT, isSendc, mask);
+    cm_raw_send(0, msgSrc0, msgSrc1, exDesc, msgDesc, execSize, sfid, numSrc0,
+            numSrc1, 0, isEOT, isSendc, mask);
 #endif
-
 }
-
-
 
 /// @} xetpp_core_raw_send
 
 } // namespace core
 } // namespace xetpp
 } // namespace gpu
-
 
 #endif

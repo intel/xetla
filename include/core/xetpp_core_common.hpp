@@ -18,33 +18,32 @@
 /// C++ API
 
 #ifndef GPU_XETPP_CORE_COMMON_HPP
-#define GPU_XETPP_CORE_COMMON_HPP  
+#define GPU_XETPP_CORE_COMMON_HPP
 
 /// @addtogroup xetpp_core
 /// @{
 
 /// @brief KERNEL_MAIN macro.
 #if XETPP_ESIMD_ENABLED
-/// Alias to ESIMD `"SYCL_ESIMD_KERNEL"`;   
-/// 
-    #define KERNEL_MAIN SYCL_ESIMD_KERNEL
+/// Alias to ESIMD `"SYCL_ESIMD_KERNEL"`;
+///
+#define KERNEL_MAIN SYCL_ESIMD_KERNEL
 #else
-/// Alias to CM `"_GENX_MAIN_"`; 
-/// 
-    #define KERNEL_MAIN _GENX_MAIN_
+/// Alias to CM `"_GENX_MAIN_"`;
+///
+#define KERNEL_MAIN _GENX_MAIN_
 #endif
 
 /// @brief KERNEL_FUNC macro.
 #if XETPP_ESIMD_ENABLED
 /// Alias to ESIMD `"SYCL_ESIMD_FUNCTION SYCL_EXTERNAL"`;
-/// 
-    #define KERNEL_FUNC SYCL_ESIMD_FUNCTION SYCL_EXTERNAL
+///
+#define KERNEL_FUNC SYCL_ESIMD_FUNCTION SYCL_EXTERNAL
 #else
-/// Alias to CM `"_GENX_"`; 
-/// 
-    #define KERNEL_FUNC _GENX_
+/// Alias to CM `"_GENX_"`;
+///
+#define KERNEL_FUNC _GENX_
 #endif
-
 
 /// @} xetpp_core
 
@@ -52,12 +51,11 @@
 #define __XETPP_API inline
 
 #if XETPP_ESIMD_ENABLED
-    #define __ESIMD_EXT_NS sycl::ext::intel::experimental::esimd
-    
-    #ifndef __ESIMD_NS
-        #define __ESIMD_NS sycl::ext::intel::esimd
-    #endif
-#endif
+#define __ESIMD_EXT_NS sycl::ext::intel::experimental::esimd
 
+#ifndef __ESIMD_NS
+#define __ESIMD_NS sycl::ext::intel::esimd
+#endif
+#endif
 
 #endif

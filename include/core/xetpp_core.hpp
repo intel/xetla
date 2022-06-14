@@ -61,16 +61,16 @@
 
 /// @} xetpp_core
 
-#include "xetpp_core_common.hpp"
-#include "xetpp_core_base_types.hpp"
-#include "xetpp_core_base_ops.hpp"
 #include "xetpp_core_base_consts.hpp"
-#include "xetpp_core_explicit_conv.hpp"
+#include "xetpp_core_base_ops.hpp"
+#include "xetpp_core_base_types.hpp"
 #include "xetpp_core_bit_mask_manip.hpp"
+#include "xetpp_core_common.hpp"
+#include "xetpp_core_explicit_conv.hpp"
 #include "xetpp_core_math_fma.hpp"
 #include "xetpp_core_math_mma.hpp"
 #include "xetpp_core_memory.hpp"
-#include "xetpp_core_raw_send.hpp"
 #include "xetpp_core_misc.hpp"
+#include "xetpp_core_raw_send.hpp"
 
 #endif

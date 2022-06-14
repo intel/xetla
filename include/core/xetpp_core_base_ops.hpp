@@ -22,90 +22,74 @@
 
 namespace gpu {
 namespace xetpp {
-namespace core {    
+namespace core {
 
 /// @addtogroup xetpp_core_base_ops
-/// @{ 
+/// @{
 
-
-/// @brief xetpp format. 
+/// @brief xetpp format.
 #if XETPP_ESIMD_ENABLED
 /// Alias to ESIMD `.template bit_cast_view<...>()`;
 /// @note usage:
 /// ```
-/// [xetpp_vector|xetpp_vector_ref|xetpp_matrix_ref].xetpp_format<type>(): returns a reference to the calling object interpreted as a new xetpp_vector_ref (1D)   
-/// 
-/// [xetpp_vector|xetpp_vector_ref|xetpp_matrix_ref].xetpp_format<type, rows, columns>(): returns a reference to the calling object interpreted as a new xetpp_matrix_ref (2D)   
+/// [xetpp_vector|xetpp_vector_ref|xetpp_matrix_ref].xetpp_format<type>(): returns a reference to the calling object interpreted as a new xetpp_vector_ref (1D)
+///
+/// [xetpp_vector|xetpp_vector_ref|xetpp_matrix_ref].xetpp_format<type, rows, columns>(): returns a reference to the calling object interpreted as a new xetpp_matrix_ref (2D)
 /// ```
-/// 
-    #define xetpp_format template bit_cast_view
+///
+#define xetpp_format template bit_cast_view
 #else
-/// Alias to CM `.format<...>()`; 
+/// Alias to CM `.format<...>()`;
 /// @note usage:
 /// ```
-/// [xetpp_vector|xetpp_vector_ref|xetpp_matrix_ref].xetpp_format<type>(): returns a reference to the calling object interpreted as a new xetpp_vector_ref (1D)   
-/// 
-/// [xetpp_vector|xetpp_vector_ref|xetpp_matrix_ref].xetpp_format<type, rows, columns>(): returns a reference to the calling object interpreted as a new xetpp_matrix_ref (2D)   
+/// [xetpp_vector|xetpp_vector_ref|xetpp_matrix_ref].xetpp_format<type>(): returns a reference to the calling object interpreted as a new xetpp_vector_ref (1D)
+///
+/// [xetpp_vector|xetpp_vector_ref|xetpp_matrix_ref].xetpp_format<type, rows, columns>(): returns a reference to the calling object interpreted as a new xetpp_matrix_ref (2D)
 /// ```
-/// 
-    #define xetpp_format format
+///
+#define xetpp_format format
 #endif
-
 
 /// @brief xetpp select.
 #if XETPP_ESIMD_ENABLED
 /// Alias to ESIMD `.template select<...>()`;
 /// @note usage:
 /// ```
-/// [xetpp_vector|xetpp_vector_ref].xetpp_select<size, stride>(uint16_t offset=0): returns a reference to the sub-vector starting from the offset-th element   
-/// 
-/// [xetpp_matrix_ref].xetpp_select<size_y, stride_y, size_x, stride_x>(uint16_t offset_y=0, uint16_t offset_x=0): returns a reference to the sub-matrix starting from the (offset_y, offset_x)-th element     
+/// [xetpp_vector|xetpp_vector_ref].xetpp_select<size, stride>(uint16_t offset=0): returns a reference to the sub-vector starting from the offset-th element
+///
+/// [xetpp_matrix_ref].xetpp_select<size_y, stride_y, size_x, stride_x>(uint16_t offset_y=0, uint16_t offset_x=0): returns a reference to the sub-matrix starting from the (offset_y, offset_x)-th element
 /// ```
-/// 
-    #define xetpp_select template select
-#else 
-/// Alias to CM `.select<...>()`; 
+///
+#define xetpp_select template select
+#else
+/// Alias to CM `.select<...>()`;
 /// @note usage:
 /// ```
-/// [xetpp_vector|xetpp_vector_ref].xetpp_select<size, stride>(uint16_t offset=0): returns a reference to the sub-vector starting from the offset-th element   
-/// 
-/// [xetpp_matrix_ref].xetpp_select<size_y, stride_y, size_x, stride_x>(uint16_t offset_y=0, uint16_t offset_x=0): returns a reference to the sub-matrix starting from the (offset_y, offset_x)-th element     
+/// [xetpp_vector|xetpp_vector_ref].xetpp_select<size, stride>(uint16_t offset=0): returns a reference to the sub-vector starting from the offset-th element
+///
+/// [xetpp_matrix_ref].xetpp_select<size_y, stride_y, size_x, stride_x>(uint16_t offset_y=0, uint16_t offset_x=0): returns a reference to the sub-matrix starting from the (offset_y, offset_x)-th element
 /// ```
-/// 
-    #define xetpp_select select
+///
+#define xetpp_select select
 #endif
 
-
-
 /// @brief xetpp merge.
-/// Alias to `.merge(...)`. Replaces part of the underlying data with the one taken from the other object according to a mask. 
+/// Alias to `.merge(...)`. Replaces part of the underlying data with the one taken from the other object according to a mask.
 /// @note usage:
 /// ```
-/// [xetpp_vector|xetpp_vector_ref].xetpp_merge(xetpp_vector<Ty, N>Val, xetpp_mask<N>mask): only elements in lanes with non-zero mask predicate are assigned from corresponding Val elements   
-/// 
-/// [xetpp_vector|xetpp_vector_ref].xetpp_merge(xetpp_vector<Ty, N>Val1, xetpp_vector<Ty, N>Val2, xetpp_mask<N>mask): non-zero in a mask's lane tells to take corresponding element from Val1, zero - from Val2.   
+/// [xetpp_vector|xetpp_vector_ref].xetpp_merge(xetpp_vector<Ty, N>Val, xetpp_mask<N>mask): only elements in lanes with non-zero mask predicate are assigned from corresponding Val elements
+///
+/// [xetpp_vector|xetpp_vector_ref].xetpp_merge(xetpp_vector<Ty, N>Val1, xetpp_vector<Ty, N>Val2, xetpp_mask<N>mask): non-zero in a mask's lane tells to take corresponding element from Val1, zero - from Val2.
 /// ```
-/// 
+///
 #define xetpp_merge merge
-
-
-
 
 // TODO add replicate, iselect
 
-
-
-
-
-
 /// @} xetpp_core_base_ops
-
-
 
 } // namespace core
 } // namespace xetpp
 } // namespace gpu
-
-
 
 #endif

@@ -22,15 +22,12 @@
 
 namespace gpu {
 namespace xetpp {
-namespace core {    
+namespace core {
 
 /// @addtogroup xetpp_core_conv
-/// @{ 
-
+/// @{
 
 /// @} xetpp_core_conv
-
-
 
 } // namespace core
 } // namespace xetpp
