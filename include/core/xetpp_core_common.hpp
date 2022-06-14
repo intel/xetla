@@ -20,6 +20,13 @@
 #ifndef GPU_XETPP_CORE_COMMON_HPP
 #define GPU_XETPP_CORE_COMMON_HPP
 
+#if XETPP_ESIMD_ENABLED
+#include <CL/sycl.hpp>
+#include <ext/intel/esimd.hpp>
+#else
+#include <cm/cm.h>
+#endif
+
 /// @addtogroup xetpp_core
 /// @{
 
