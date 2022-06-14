@@ -51,7 +51,9 @@
 #define __XETPP_API inline
 
 #if XETPP_ESIMD_ENABLED
-#define __ESIMD_EXT_NS sycl::ext::intel::experimental::esimd
+#ifndef __ESIMD_ENS
+#define __ESIMD_ENS sycl::ext::intel::experimental::esimd
+#endif
 
 #ifndef __ESIMD_NS
 #define __ESIMD_NS sycl::ext::intel::esimd

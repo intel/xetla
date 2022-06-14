@@ -20,11 +20,11 @@
 #ifndef GPU_XETPP_CORE_BASE_TYPES_HPP
 #define GPU_XETPP_CORE_BASE_TYPES_HPP
 
+#include "xetpp_core_common.hpp"
+
 namespace gpu {
 namespace xetpp {
 namespace core {
-
-#include "xetpp_core_common.hpp"
 
 /// @addtogroup xetpp_core_base_types
 /// @{
