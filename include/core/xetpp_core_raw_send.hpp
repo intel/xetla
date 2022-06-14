@@ -56,8 +56,8 @@ __XETPP_API void xetpp_raw_send(
         __XETPP_CORE_NS::xetpp_vector<T2, n2> msgSrc0, uint32_t exDesc,
         uint32_t msgDesc, __XETPP_CORE_NS::xetpp_mask<N> mask = 1) {
 #if XETPP_ESIMD_ENABLED
-    msgDst = __ESIMD_ENS::raw_send_load(msgDst, msgSrc0, exDesc, msgDesc,
-            execSize, sfid, numSrc0, numDst, isEOT, isSendc, mask);
+    msgDst = __ESIMD_ENS::raw_send_load<T1, n1>(msgDst, msgSrc0, exDesc,
+            msgDesc, execSize, sfid, numSrc0, numDst, isEOT, isSendc, mask);
 #else
     cm_raw_send(msgDst, msgSrc0, 0, exDesc, msgDesc, execSize, sfid, numSrc0, 0,
             numDst, isEOT, isSendc, mask);
@@ -97,9 +97,9 @@ __XETPP_API void xetpp_raw_send(
         __XETPP_CORE_NS::xetpp_vector<T3, n3> msgSrc1, uint32_t exDesc,
         uint32_t msgDesc, __XETPP_CORE_NS::xetpp_mask<N> mask = 1) {
 #if XETPP_ESIMD_ENABLED
-    msgDst = __ESIMD_ENS::raw_sends_load(msgDst, msgSrc0, msgSrc1, exDesc,
-            msgDesc, execSize, sfid, numSrc0, numSrc1, numDst, isEOT, isSendc,
-            mask);
+    msgDst = __ESIMD_ENS::raw_sends_load<T1, n1>(msgDst, msgSrc0, msgSrc1,
+            exDesc, msgDesc, execSize, sfid, numSrc0, numSrc1, numDst, isEOT,
+            isSendc, mask);
 #else
     cm_raw_send(msgDst, msgSrc0, msgSrc1, exDesc, msgDesc, execSize, sfid,
             numSrc0, numSrc1, numDst, isEOT, isSendc, mask);
@@ -124,7 +124,7 @@ __XETPP_API void xetpp_raw_send(
 template <typename T1, uint32_t n1, uint8_t execSize, uint8_t sfid,
         uint8_t numSrc0, uint8_t isEOT = 0, uint8_t isSendc = 0,
         uint32_t N = 16>
-__XETPP_API void xetpp_raw_send(__XETPP_CORE_NS::xetpp_vector<T2, n2> msgSrc0,
+__XETPP_API void xetpp_raw_send(__XETPP_CORE_NS::xetpp_vector<T1, n1> msgSrc0,
         uint32_t exDesc, uint32_t msgDesc,
         __XETPP_CORE_NS::xetpp_mask<N> mask = 1) {
 #if XETPP_ESIMD_ENABLED
@@ -162,7 +162,7 @@ __XETPP_API void xetpp_raw_send(__XETPP_CORE_NS::xetpp_vector<T1, n1> msgSrc0,
         __XETPP_CORE_NS::xetpp_vector<T2, n2> msgSrc1, uint32_t exDesc,
         uint32_t msgDesc, __XETPP_CORE_NS::xetpp_mask<N> mask = 1) {
 #if XETPP_ESIMD_ENABLED
-    __ESIMD_ENS::raw_sends_load(msgSrc0, msgSrc1, exDesc, msgDesc, execSize,
+    __ESIMD_ENS::raw_sends_store(msgSrc0, msgSrc1, exDesc, msgDesc, execSize,
             sfid, numSrc0, numSrc1, isEOT, isSendc, mask);
 #else
     cm_raw_send(0, msgSrc0, msgSrc1, exDesc, msgDesc, execSize, sfid, numSrc0,
