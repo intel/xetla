@@ -81,7 +81,7 @@ enum class cache_hint : uint8_t {
 };
 
 /// Data size or format to read or store
-enum class lsc_data_size : uint8_t {
+enum class data_size : uint8_t {
     default_size = 0,
     u8 = 1,
     u16 = 2,

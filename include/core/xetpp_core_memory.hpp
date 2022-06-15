@@ -76,39 +76,38 @@ constexpr CacheHint get_cache_hint(__XETPP_CORE_NS::cache_hint ch) {
 ///
 #if XETPP_ESIMD_ENABLED
 constexpr __ESIMD_ENS::lsc_data_size get_data_size(
-        __XETPP_CORE_NS::lsc_data_size ds) {
+        __XETPP_CORE_NS::data_size ds) {
     switch (ds) {
-        case __XETPP_CORE_NS::lsc_data_size::default_size:
+        case __XETPP_CORE_NS::data_size::default_size:
             return __ESIMD_ENS::lsc_data_size::default_size;
-        case __XETPP_CORE_NS::lsc_data_size::u8:
+        case __XETPP_CORE_NS::data_size::u8:
             return __ESIMD_ENS::lsc_data_size::u8;
-        case __XETPP_CORE_NS::lsc_data_size::u16:
+        case __XETPP_CORE_NS::data_size::u16:
             return __ESIMD_ENS::lsc_data_size::u16;
-        case __XETPP_CORE_NS::lsc_data_size::u32:
+        case __XETPP_CORE_NS::data_size::u32:
             return __ESIMD_ENS::lsc_data_size::u32;
-        case __XETPP_CORE_NS::lsc_data_size::u64:
+        case __XETPP_CORE_NS::data_size::u64:
             return __ESIMD_ENS::lsc_data_size::u64;
-        case __XETPP_CORE_NS::lsc_data_size::u8u32:
+        case __XETPP_CORE_NS::data_size::u8u32:
             return __ESIMD_ENS::lsc_data_size::u8u32;
-        case __XETPP_CORE_NS::lsc_data_size::u16u32:
+        case __XETPP_CORE_NS::data_size::u16u32:
             return __ESIMD_ENS::lsc_data_size::u16u32;
-        case __XETPP_CORE_NS::lsc_data_size::u16u32h:
+        case __XETPP_CORE_NS::data_size::u16u32h:
             return __ESIMD_ENS::lsc_data_size::u16u32h;
         default: return __ESIMD_ENS::lsc_data_size::default_size;
     }
 }
 #else
-constexpr DataSize get_data_size(__XETPP_CORE_NS::lsc_data_size ds) {
+constexpr DataSize get_data_size(__XETPP_CORE_NS::data_size ds) {
     switch (ds) {
-        case __XETPP_CORE_NS::lsc_data_size::default_size:
-            return DataSize::Default;
-        case __XETPP_CORE_NS::lsc_data_size::u8: return DataSize::U8;
-        case __XETPP_CORE_NS::lsc_data_size::u16: return DataSize::U16;
-        case __XETPP_CORE_NS::lsc_data_size::u32: return DataSize::U32;
-        case __XETPP_CORE_NS::lsc_data_size::u64: return DataSize::U64;
-        case __XETPP_CORE_NS::lsc_data_size::u8u32: return DataSize::U8U32;
-        case __XETPP_CORE_NS::lsc_data_size::u16u32: return DataSize::U16U32;
-        case __XETPP_CORE_NS::lsc_data_size::u16u32h: return DataSize::U16U32H;
+        case __XETPP_CORE_NS::data_size::default_size: return DataSize::Default;
+        case __XETPP_CORE_NS::data_size::u8: return DataSize::U8;
+        case __XETPP_CORE_NS::data_size::u16: return DataSize::U16;
+        case __XETPP_CORE_NS::data_size::u32: return DataSize::U32;
+        case __XETPP_CORE_NS::data_size::u64: return DataSize::U64;
+        case __XETPP_CORE_NS::data_size::u8u32: return DataSize::U8U32;
+        case __XETPP_CORE_NS::data_size::u16u32: return DataSize::U16U32;
+        case __XETPP_CORE_NS::data_size::u16u32h: return DataSize::U16U32H;
         default: return DataSize::Default;
     }
 }
@@ -136,8 +135,7 @@ constexpr DataSize get_data_size(__XETPP_CORE_NS::lsc_data_size ds) {
 /// @param offsets [in] is the zero-based offsets in bytes.
 /// @param pred    [in] is predicates.
 ///
-template <typename T, uint8_t NElts = 1,
-        lsc_data_size DS = lsc_data_size::default_size,
+template <typename T, uint8_t NElts = 1, data_size DS = data_size::default_size,
         cache_hint L1H = cache_hint::none, cache_hint L3H = cache_hint::none,
         int N>
 __XETPP_API void xetpp_prefetch_ugm(
@@ -147,9 +145,11 @@ __XETPP_API void xetpp_prefetch_ugm(
             detail::get_cache_hint(L1H), detail::get_cache_hint(L3H), N>(
             p, offsets, pred);
 #else
-    cm_ptr_prefetch<details::lsc_vector_size<NElts>(),
-            detail::get_data_size(DS), detail::get_cache_hint(L1H),
-            detail::get_cache_hint(L3H), N>(p, offsets, pred);
+    constexpr DataSize _DS = details::lsc_expand_ds(
+            details::lsc_data_size<T, detail::get_data_size(DS)>());
+    cm_ptr_prefetch<details::lsc_vector_size<NElts>(), _DS,
+            detail::get_cache_hint(L1H), detail::get_cache_hint(L3H), N>(
+            (const unsigned *const)p, offsets, pred);
 #endif
 }
 
@@ -168,8 +168,7 @@ __XETPP_API void xetpp_prefetch_ugm(
 /// @param p      [in] is the base pointer.
 /// @param offset [in] is the zero-based offset in bytes.
 ///
-template <typename T, uint8_t NElts = 1,
-        lsc_data_size DS = lsc_data_size::default_size,
+template <typename T, uint8_t NElts = 1, data_size DS = data_size::default_size,
         cache_hint L1H = cache_hint::none, cache_hint L3H = cache_hint::none>
 __XETPP_API void xetpp_prefetch_ugm(const T *p, uint64_t offset) {
 #if XETPP_ESIMD_ENABLED
@@ -177,9 +176,10 @@ __XETPP_API void xetpp_prefetch_ugm(const T *p, uint64_t offset) {
             detail::get_cache_hint(L1H), detail::get_cache_hint(L3H)>(
             p + (offset / sizeof(T)));
 #else
-    cm_ptr_prefetch<NElts, detail::get_data_size(DS),
-            detail::get_cache_hint(L1H), detail::get_cache_hint(L3H)>(
-            p, offset);
+    constexpr DataSize _DS = details::lsc_expand_ds(
+            details::lsc_data_size<T, detail::get_data_size(DS)>());
+    cm_ptr_prefetch<NElts, _DS, detail::get_cache_hint(L1H),
+            detail::get_cache_hint(L3H)>((const unsigned *const)p, offset);
 #endif
 }
 
@@ -202,8 +202,7 @@ __XETPP_API void xetpp_prefetch_ugm(const T *p, uint64_t offset) {
 /// @param pred    [in] is predicates.
 /// @return  is a xetpp_vector of type T and size N * NElts
 ///
-template <typename T, uint8_t NElts = 1,
-        lsc_data_size DS = lsc_data_size::default_size,
+template <typename T, uint8_t NElts = 1, data_size DS = data_size::default_size,
         cache_hint L1H = cache_hint::none, cache_hint L3H = cache_hint::none,
         int N>
 __XETPP_API xetpp_vector<T, N * NElts> xetpp_load_ugm(
@@ -236,8 +235,7 @@ __XETPP_API xetpp_vector<T, N * NElts> xetpp_load_ugm(
 /// @param offset [in] is the zero-based offset in bytes.
 /// @return is a xetpp_vector of type T and size NElts
 ///
-template <typename T, uint8_t NElts = 1,
-        lsc_data_size DS = lsc_data_size::default_size,
+template <typename T, uint8_t NElts = 1, data_size DS = data_size::default_size,
         cache_hint L1H = cache_hint::none, cache_hint L3H = cache_hint::none>
 __XETPP_API xetpp_vector<T, NElts> xetpp_load_ugm(const T *p, uint64_t offset) {
 #if XETPP_ESIMD_ENABLED
@@ -269,8 +267,7 @@ __XETPP_API xetpp_vector<T, NElts> xetpp_load_ugm(const T *p, uint64_t offset) {
 /// @param vals    [in] is values to store.
 /// @param pred    [in] is predicates.
 ///
-template <typename T, uint8_t NElts = 1,
-        lsc_data_size DS = lsc_data_size::default_size,
+template <typename T, uint8_t NElts = 1, data_size DS = data_size::default_size,
         cache_hint L1H = cache_hint::none, cache_hint L3H = cache_hint::none,
         int N>
 __XETPP_API void xetpp_store_ugm(T *p, xetpp_vector<uint32_t, N> offsets,
@@ -302,8 +299,7 @@ __XETPP_API void xetpp_store_ugm(T *p, xetpp_vector<uint32_t, N> offsets,
 /// @param offset [in] is the zero-based offset in bytes.
 /// @param vals   [in] is values to store.
 ///
-template <typename T, uint8_t NElts = 1,
-        lsc_data_size DS = lsc_data_size::default_size,
+template <typename T, uint8_t NElts = 1, data_size DS = data_size::default_size,
         cache_hint L1H = cache_hint::none, cache_hint L3H = cache_hint::none>
 __XETPP_API void xetpp_store_ugm(
         T *p, uint64_t offset, xetpp_vector<T, NElts> vals) {
