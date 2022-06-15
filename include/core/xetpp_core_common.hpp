@@ -67,4 +67,31 @@
 #endif
 #endif
 
+namespace __XETPP_CORE_NS {
+
+/// L1 or L3 cache hint kinds.
+enum class cache_hint : uint8_t {
+    none = 0,
+    uncached = 1,
+    cached = 2,
+    write_back = 3,
+    write_through = 4,
+    streaming = 5,
+    read_invalidate = 6
+};
+
+/// Data size or format to read or store
+enum class lsc_data_size : uint8_t {
+    default_size = 0,
+    u8 = 1,
+    u16 = 2,
+    u32 = 3,
+    u64 = 4,
+    u8u32 = 5, /// load 8b, zero extend to 32b; store the opposite
+    u16u32 = 6, /// load 16b, zero extend to 32b; store the opposite
+    u16u32h = 7, /// load 16b into high 16 of each 32b; store the high 16
+};
+
+} // namespace __XETPP_CORE_NS
+
 #endif
