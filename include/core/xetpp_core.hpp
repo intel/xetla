@@ -43,6 +43,9 @@
 /// @defgroup xetpp_core_memory Memory access APIs.
 /// Defines XeTPP APIs to access memory, including read, write and atomic.
 
+/// @defgroup xetpp_core_barrier Synchronization APIs.
+/// Defines XeTPP APIs for synchronization primitives.
+
 /// @defgroup xetpp_core_math Math operation APIs.
 /// Defines math operations on XeTPP vector data types.
 
@@ -61,6 +64,7 @@
 
 /// @} xetpp_core
 
+#include "xetpp_core_barrier.hpp"
 #include "xetpp_core_base_consts.hpp"
 #include "xetpp_core_base_ops.hpp"
 #include "xetpp_core_base_types.hpp"
