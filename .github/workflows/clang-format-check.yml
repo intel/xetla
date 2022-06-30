@@ -1,0 +1,16 @@
+name: Run clang-format
+on: [pull_request]
+
+jobs:
+  formatting-check:
+    runs-on: [self-hosted, linux]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Check Clang Format
+        uses: ./ci_docker
+        with:
+          args: 
+            /bin/bash ./ci_docker/clang_format_check.sh
