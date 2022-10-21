@@ -1,0 +1,13 @@
+name: Fake DPCPP Daily Regression Test
+on:
+  schedule:
+    - cron: "30 8 * * *"
+
+jobs:
+  fake-dpcpp-regression:
+    name: fake dpcpp regression
+    runs-on: [self-hosted, linux, sim_docker_test]
+    steps:
+      - name: fake test
+        run: |
+          echo "fake dpcpp regression test for testing schedule trigger"
