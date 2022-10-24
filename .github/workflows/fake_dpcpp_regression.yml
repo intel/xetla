@@ -1,15 +1,22 @@
 name: Fake DPCPP Daily Regression Test
 on:
   schedule:
-    - cron: "5,15 9 * * *"
+    - cron: "0 17 * * *"
   push:
     branches:
-      - xiaoxuan/ci/fake_dpcpp_regression
+      - xiaoxuan/ci/dpcpp_daily_regression
+      - xiaoxuan/ci/fake_dpcpp_manual_trigger
+  workflow_dispatch:
+    inputs:
+      dpcpp_ver:
+        description: DPCPP version number
+        required: true
+        default: "0"
 
 jobs:
   fake-dpcpp-regression:
     name: fake dpcpp regression
-    runs-on: [self-hosted, linux, sim_docker_test]
+    runs-on: [self-hosted, linux, sim_docker_temp]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -17,4 +24,20 @@ jobs:
           fetch-depth: 0
       - name: fake test
         run: |
-          echo "fake dpcpp regression test for testing schedule trigger"
+          echo "fake dpcpp regression test for manual trigger"
+      - name: Get DPCPP version
+        id: get_dpcpp_ver
+        run: |
+          if [[ ! "${{ github.event.inputs.dpcpp_ver }}" == "0" ]]; then
+            echo "dpcpp_ver=${{ github.event.inputs.dpcpp_ver }}" >> $GITHUB_OUTPUT
+          else
+            echo "dpcpp_ver=`date -d '-1 day' '+%Y%m%d'`" >> $GITHUB_OUTPUT
+          fi
+      - name: Update dpcpp
+        id: update_dpcpp
+        env:
+          DPCPP_PWD: ${{ secrets.DPCPP_PWD }}
+          DPCPP_VER: ${{ steps.update_dpcpp.get_dpcpp_ver.dpcpp_ver }}
+        run: |
+          echo ${{ steps.update_dpcpp.get_dpcpp_ver.dpcpp_ver }}
+          echo $DPCPP_VER
