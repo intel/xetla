@@ -59,3 +59,12 @@ root@chengxi_gpu_sim_dev_ww19:~/working_dir/libraries.gpu.xetpp# git commit -m "
 [wcx/add_clang_format ddb3c9e] try clang hook
 root@chengxi_gpu_sim_dev_ww19:~/working_dir/libraries.gpu.xetpp# git diff HEAD
 ```
+
+
+## Known issues
+### Unstable llvm in DPCPP leads to CI formating check failed
+Clang-format uses llvm compiler frotend to analyze cpp syntax. After you exporting envs like `CC` and `CXX`, llvm in DPCPP will be in use. Because llvm in DPCPP is not stable, clang-formatted files in local docker container might be different files in CI. 
+
+W/A: 
+1. starting a new command line session before using clang-format; or 
+2. using git GUI to commit changes if you’ve set up git commit hook.
