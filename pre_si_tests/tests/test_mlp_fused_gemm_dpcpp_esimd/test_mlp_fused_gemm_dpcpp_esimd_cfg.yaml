@@ -1,0 +1,16 @@
+cmake:
+  _cmake_file: "."
+  _env_CC : "{DPCPP_CC}"
+  _env_CXX : "{DPCPP_CXX}"
+  _env_PATH: "{DPCPP_BIN}:{PATH}"
+  _env_LD_LIBRARY_PATH: "{DPCPP_LD_LIBRARY_PATH}:{LD_LIBRARY_PATH}"
+  _arg_: "-DNEW_XMAIN=on"
+fulsim:
+  _arg_wl: " -msglevel terse "
+
+
+wl:
+  ci:
+    _fp16_cmd: "--gtest_filter=nerf/mlp_fusion_test.esimd_fp16/0"
+  perf:
+    _fp16_cmd: "--gtest_filter=nerf/mlp_fusion_test.esimd_fp16/1"
