@@ -1,0 +1,103 @@
+_doc: "testing scenarios for fulsim"
+_arg_wl: ""
+_arg_device: "-device {hw._platform}.{hw._tile}tx8x{hw._ss_eu}.{hw._stepping}"
+
+# flag to control using native rasty in fulsim context
+# set global to False and overwrite in native_rasty
+_is_native_rasty: False
+
+cobalt:
+  _arg_feature: ""
+  # attribute group for run_kaolin switch
+  _ktrace:
+    _arg_ktrace: "-enableFeature :kaolinObserverAndTraceRecording -frametime 0 -kArch pvc -kout kout"
+
+rasty:
+  _arg_feature: "-enableFeature 999997155 999997156 999997157"
+  _env_KNOB_SIM_ENABLE_VALIDATION: 1
+  _env_KNOB_SIM_PRESERVE_ISA_KERNELS: 1
+  _env_KNOB_SIM_ENABLE_VS_ISA: 1
+  _env_KNOB_SIM_ENABLE_DS_ISA: 1
+  _env_KNOB_SIM_ENABLE_CS_ISA: 1
+  _env_KNOB_SIM_ENABLE_MS_ISA: 1
+  _env_KNOB_SIM_ENABLE_TASK_ISA: 1
+  _env_KNOB_SIM_ENABLE_PS_ISA: 1
+  _env_KNOB_SIM_ENABLE_HS_ISA: 1
+  _env_KNOB_SIM_ENABLE_GS_ISA: 1
+  _env_KNOB_SIM_ENABLE_RS_ISA: 1
+  _env_RASTY_AUB_CAPTURE_ENABLE: 1
+  _env_RASTY_DISABLE_IOMMU: 1
+  # attribute group for run_kaolin switch
+  _ktrace:
+    _env_RASTY_MODULE_DIR: "$FULSIM_ROOT/archrasty_bin"
+    _env_KNOB_JIT_ENABLE_LIBSF: 1
+    _env_KNOB_AR_DISABLE_SWTAGS: 1
+    _env_KNOB_AR_ENABLE_KTRACE_EVENTS: 1
+    _env_KNOB_KTRACE_SLICES: 8
+    _env_KNOB_MAX_CORES_PER_NUMA_NODE: 1
+    _env_KNOB_DUMP_SHADERS: 1
+    _env_KNOB_AR_ENABLE_MEMORY_EVENTS: 1
+    _env_KNOB_AR_ENABLE_SIM_STATS: 1
+    _env_KNOB_KTRACE_DEBUG_PRINT_LEVEL: 1
+    _arg_feature: "-enableFeature 999997155 999997156 999997157 999997173"
+
+native_rasty:
+  _is_native_rasty: True
+  __skip_neo:
+    _reason: "only support neo embargo driver"
+    _if: "{'embargo' not in OS_ENV.get('NEO_VERSION','')}"
+
+  # To set LD_PRELOAD globally causing any process to load libintercept.so
+  # for example, the subprocess in python, or linux app sort, tee
+  # which causes some strange behavior
+  # the w/a is to set LD_PRELOAD to LD_PRELOAD_APP in run.sh
+  _env_LD_PRELOAD_APP: "{RASTY_ROOT}/libintercept.so:{NEO_ROOT}/usr/lib/x86_64-linux-gnu/libze_intel_gpu.so.1"
+
+  _env_RASTY_DISABLE_IOMMU: "1"
+  _env_RASTY_DRIVER_DIR: "{NEO_ROOT}"
+  _env_RASTY_DUMP_LOG: 1
+  _env_RASTY_HW_PLATFORM: !hw
+    pvc*: "gen12-hp"
+    rlt.*: "gen12-hp"
+    elg.*: "xe2_hpg"
+  _env_RASTY_HW_SKU: !hw
+    pvc.b0.*: "pvcxl"
+    pvcxl.*: "pvcxl"
+    pvcxt.*: "pvcxt"
+    rlt.*: "rlt"
+    elg.*: "elg_x3_7x4"
+  _env_RASTY_MODULE_DIR: "{RASTY_ROOT}"
+
+  # Setings for CM
+  _env_IGC_CMFE_DEFAULT_ARCH: !hw
+    pvc*: "pvc"
+    rlt*: "rlt"
+    elg*: "elg"
+
+  _env_CM_FORCE_ASSEMBLY_DUMP: "1"
+
+  _env_KNOB_JIT_FORCE_LARGE_GRF_MODE: !hw
+    rlt*: "1"
+    "*": "0"
+
+  _ktrace:
+    _env_RASTY_MODULE_DIR: "{ARCHRASTY_ROOT}"
+    _env_LD_PRELOAD_APP: "{ARCHRASTY_ROOT}/libintercept.so:{NEO_ROOT}/usr/lib/x86_64-linux-gnu/libze_intel_gpu.so.1"
+    _env_KNOB_JIT_ENABLE_LIBSF: 1
+    _env_KNOB_AR_DISABLE_SWTAGS: 1
+    _env_KNOB_AR_ENABLE_KTRACE_EVENTS: 1
+    _env_KNOB_KTRACE_SLICES: 8
+    _env_KNOB_MAX_CORES_PER_NUMA_NODE: 1
+    _env_KNOB_DUMP_SHADERS: 1
+    _env_KNOB_AR_ENABLE_MEMORY_EVENTS: 1
+    _env_KNOB_AR_ENABLE_SIM_STATS: 1
+    _env_KNOB_KTRACE_DEBUG_PRINT_LEVEL: 1
+    _env_EnableDirectSubmission: 0
+    _env_RASTY_DUMP_LOG: 1
+    _arg_feature: "-enableFeature 999997155 999997156 999997157 999997173"
+
+_is_hw: False
+hw:
+  _is_hw: True
+  _arg_wl: None
+  _arg_device: None

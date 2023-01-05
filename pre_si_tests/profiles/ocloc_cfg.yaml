@@ -1,0 +1,4 @@
+ocloc:
+  _env_CB_OCLOC_DEVICE_ENV: !hw
+    pvc*: "-device pvc"
+    skl*: "-device skl"

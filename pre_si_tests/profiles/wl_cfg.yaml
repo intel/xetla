@@ -1,0 +1,4 @@
+ci:
+  _doc: "The test scenario for ci based test"
+perf:
+  _doc: "The test scenario for performance based test"

@@ -1,0 +1,11 @@
+# current we don't have different way to build a cmake application
+# so we don't need an entry to define a scenario and make every configuration globally
+_doc: "testing config for cmake"
+_cmake_file : "Path of CMakeLists.txt is not set"
+# the specific cmds to execute before & after cmake
+_pre_cmds: []
+_post_cmds: []
+_env_IGC_DumpToCustomDir : "./dump"
+_env_IGC_ShaderDumpEnable: 1
+_install: false
+_cmake_timeout_in_minutes: 20
