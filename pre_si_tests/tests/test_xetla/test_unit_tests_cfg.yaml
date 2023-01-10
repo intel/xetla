@@ -1,0 +1,14 @@
+cmake:
+  _cmake_file: "{REPO_ROOT}"
+  _env_CC: "{DPCPP_ROOT}/bin-llvm/clang"
+  _env_CXX: "{DPCPP_ROOT}/bin-llvm/clang++"
+  _env_PATH: "{DPCPP_BIN}:{DPCPP_ROOT}/bin-llvm:{PATH}"
+  _env_LD_LIBRARY_PATH: "{DPCPP_ROOT}/compiler/lib/intel64_lin/:{DPCPP_LD_LIBRARY_PATH}:{LD_LIBRARY_PATH}"
+  _env_CMAKE_BUILD_PARALLEL_LEVEL: "8"
+  _arg_: "-DNEW_XMAIN=on"
+
+fulsim:
+  _arg_wl: " -msglevel terse "
+
+wl:
+  _env_SYCL_DEVICE_FILTER: "opencl"
