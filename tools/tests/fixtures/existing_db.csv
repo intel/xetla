@@ -1,0 +1,5 @@
+test_id,scenario,kernel,kernel_time.minimum(ms),time,kernel_time.mean(ms),kernel_time.maximum(gflops),kernel_time.median(gflops)
+nerf/mlp_fusion_test/esimd_tf32,"(1, 1024)",fused_gemm,189436.7457,1999.1.1,189436.7457,189436.7457,189436.7457
+nerf/mlp_fusion_test/esimd_fp16,"(1, 1024)",fused_gemm,97272.78608,1999.1.1,97272.78608,97272.78608,97272.78608
+nerf/mlp_fusion_test/esimd_fp16,"(1, 1048576)",abc_gemm,101,1999.1.1,1404,1555,1335
+nerf/mlp_fusion_test/esimd_fp16,"(100, 1048576)",fused_gemm,1.1,1999.1.1,14.4,150.5,130.3

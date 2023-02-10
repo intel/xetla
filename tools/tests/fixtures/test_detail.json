@@ -1,0 +1,195 @@
+{
+    "tests": 12,
+    "failures": 6,
+    "disabled": 0,
+    "errors": 0,
+    "timestamp": "2023-01-11T07:33:15Z",
+    "time": "3550.58s",
+    "name": "AllTests",
+    "testsuites": [
+        {
+            "name": "nerf\/mlp_fusion_test",
+            "tests": 12,
+            "failures": 6,
+            "disabled": 0,
+            "errors": 0,
+            "timestamp": "2023-01-11T07:33:15Z",
+            "time": "3550.58s",
+            "testsuite": [
+                {
+                    "name": "cm_interop_tf32\/0",
+                    "value_param": "(1, 1024)",
+                    "status": "RUN",
+                    "result": "COMPLETED",
+                    "timestamp": "2023-01-11T07:33:15Z",
+                    "time": "0.434s",
+                    "classname": "nerf\/mlp_fusion_test",
+                    "failures": [
+                        {
+                            "failure": "unknown file\nC++ exception with description \"Backends mismatch -59 (PI_ERROR_INVALID_OPERATION)\" thrown in the test body.",
+                            "type": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "cm_interop_tf32\/1",
+                    "value_param": "(1, 1048576)",
+                    "status": "RUN",
+                    "result": "COMPLETED",
+                    "timestamp": "2023-01-11T07:33:15Z",
+                    "time": "1.044s",
+                    "classname": "nerf\/mlp_fusion_test",
+                    "failures": [
+                        {
+                            "failure": "unknown file\nC++ exception with description \"Backends mismatch -59 (PI_ERROR_INVALID_OPERATION)\" thrown in the test body.",
+                            "type": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "cm_interop_tf32\/2",
+                    "value_param": "(100, 1048576)",
+                    "status": "RUN",
+                    "result": "COMPLETED",
+                    "timestamp": "2023-01-11T07:33:16Z",
+                    "time": "0.882s",
+                    "classname": "nerf\/mlp_fusion_test",
+                    "failures": [
+                        {
+                            "failure": "unknown file\nC++ exception with description \"Backends mismatch -59 (PI_ERROR_INVALID_OPERATION)\" thrown in the test body.",
+                            "type": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "esimd_tf32\/0",
+                    "value_param": "(1, 1024)",
+                    "status": "RUN",
+                    "result": "COMPLETED",
+                    "timestamp": "2023-01-11T07:33:17Z",
+                    "time": "194.103s",
+                    "classname": "nerf\/mlp_fusion_test",
+                    ":kernel_time:ms": "minimum:maximum:median:mean",
+                    ":kernel_time:gflops": "minimum:maximum:median:mean",
+                    "kernel_time:ms:fused_gemm": "189436.745690 189436.745690 189436.745690 189436.745690",
+                    "kernel_time:gflops:fused_gemm": "189436.745690 189436.745690 189436.745690 189436.745690"
+                },
+                {
+                    "name": "esimd_tf32\/1",
+                    "value_param": "(1, 1048576)",
+                    "status": "RUN",
+                    "result": "COMPLETED",
+                    "timestamp": "2023-01-11T07:36:31Z",
+                    "time": "210.147s",
+                    "classname": "nerf\/mlp_fusion_test",
+                    ":kernel_time:ms": "minimum:maximum:median:mean",
+                    ":kernel_time:gflops": "minimum:maximum:median:mean",
+                    "kernel_time:ms:fused_gemm": "122246.369610 122246.369610 122246.369610 122246.369610",
+                    "kernel_time:gflops:fused_gemm": "122246.369610 122246.369610 122246.369610 122246.369610"
+                },
+                {
+                    "name": "esimd_tf32\/2",
+                    "value_param": "(100, 1048576)",
+                    "status": "RUN",
+                    "result": "COMPLETED",
+                    "timestamp": "2023-01-11T07:40:01Z",
+                    "time": "1234.86s",
+                    "classname": "nerf\/mlp_fusion_test",
+                    ":kernel_time:ms": "minimum:maximum:median:mean",
+                    ":kernel_time:gflops": "minimum:maximum:median:mean",
+                    "kernel_time:ms:fused_gemm": "4483.085178 90896.487238 10441.569323 11789.031353",
+                    "kernel_time:gflops:fused_gemm": "4483.085178 90896.487238 10441.569323 11789.031353"
+                },
+                {
+                    "name": "cm_interop_fp16\/0",
+                    "_comments": "some gtest cases use the type_param, so modify this json file for unit test",
+                    "type_param": "(1, 1024)",
+                    "status": "RUN",
+                    "result": "COMPLETED",
+                    "timestamp": "2023-01-11T08:00:36Z",
+                    "time": "0.004s",
+                    "classname": "nerf\/mlp_fusion_test",
+                    "failures": [
+                        {
+                            "failure": "unknown file\nC++ exception with description \"Backends mismatch -59 (PI_ERROR_INVALID_OPERATION)\" thrown in the test body.",
+                            "type": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "cm_interop_fp16\/1",
+                    "value_param": "(1, 1048576)",
+                    "status": "RUN",
+                    "result": "COMPLETED",
+                    "timestamp": "2023-01-11T08:00:36Z",
+                    "time": "0.986s",
+                    "classname": "nerf\/mlp_fusion_test",
+                    "failures": [
+                        {
+                            "failure": "unknown file\nC++ exception with description \"Backends mismatch -59 (PI_ERROR_INVALID_OPERATION)\" thrown in the test body.",
+                            "type": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "cm_interop_fp16\/2",
+                    "value_param": "(100, 1048576)",
+                    "status": "RUN",
+                    "result": "COMPLETED",
+                    "timestamp": "2023-01-11T08:00:37Z",
+                    "time": "0.987s",
+                    "classname": "nerf\/mlp_fusion_test",
+                    "failures": [
+                        {
+                            "failure": "unknown file\nC++ exception with description \"Backends mismatch -59 (PI_ERROR_INVALID_OPERATION)\" thrown in the test body.",
+                            "type": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "esimd_fp16\/0",
+                    "value_param": "(1, 1024)",
+                    "status": "RUN",
+                    "result": "COMPLETED",
+                    "timestamp": "2023-01-11T08:00:38Z",
+                    "time": "100.327s",
+                    "classname": "nerf\/mlp_fusion_test",
+                    ":kernel_time:ms": "minimum:maximum:median:mean",
+                    ":kernel_time:gflops": "minimum:maximum:median:mean",
+                    "kernel_time:ms:fused_gemm": "97272.786083 97272.786083 97272.786083 97272.786083",
+                    "kernel_time:gflops:fused_gemm": "97272.786083 97272.786083 97272.786083 97272.786083"
+                },
+                {
+                    "name": "esimd_fp16\/1",
+                    "value_param": "(1, 1048576)",
+                    "status": "RUN",
+                    "result": "COMPLETED",
+                    "timestamp": "2023-01-11T08:02:19Z",
+                    "time": "121.988s",
+                    "classname": "nerf\/mlp_fusion_test",
+                    ":kernel_time:ms": "minimum:maximum:median:mean",
+                    ":kernel_time:gflops": "minimum:maximum:median:mean",
+                    "kernel_time:ms:fused_gemm": "68114.741997 68114.741997 68114.741997 68114.741997",
+                    "kernel_time:gflops:fused_gemm": "68114.741997 68114.741997 68114.741997 68114.741997",
+                    "kernel_time:ms:abc_gemm": "101 505 303 404",
+                    "kernel_time:gflops:abc_gemm": "111 555 335 444"
+                },
+                {
+                    "name": "esimd_fp16\/2",
+                    "value_param": "(100, 1048576)",
+                    "status": "RUN",
+                    "result": "COMPLETED",
+                    "timestamp": "2023-01-11T08:04:21Z",
+                    "time": "1684.81s",
+                    "classname": "nerf\/mlp_fusion_test",
+                    ":kernel_time:ms": "minimum:maximum:median:mean",
+                    ":kernel_time:gflops": "minimum:maximum:median:mean",
+                    "kernel_time:ms:fused_gemm": "1.1 5.5 3.3 4.4",
+                    "kernel_time:gflops:fused_gemm": "10.1 50.5 30.3 40.4",
+                    "kernel_time:ms:abc_gemm": "100 500 300 400",
+                    "kernel_time:gflops:abc_gemm": "110 550 330 440"
+                }
+            ]
+        }
+    ]
+}

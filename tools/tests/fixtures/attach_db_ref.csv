@@ -1,0 +1,9 @@
+test_id,scenario,kernel,kernel_time.minimum(ms),time,kernel_time.mean(ms),kernel_time.maximum(gflops),kernel_time.median(gflops)
+nerf/mlp_fusion_test/esimd_tf32,"(1, 1024)",fused_gemm,189436.7457,1999.1.1,189436.7457,189436.7457,189436.7457
+nerf/mlp_fusion_test/esimd_fp16,"(1, 1024)",fused_gemm,97272.78608,1999.1.1,97272.78608,97272.78608,97272.78608
+nerf/mlp_fusion_test/esimd_fp16,"(1, 1048576)",abc_gemm,101,1999.1.1,1404,1555,1335
+nerf/mlp_fusion_test/esimd_fp16,"(100, 1048576)",fused_gemm,1.1,1999.1.1,14.4,150.5,130.3
+nerf/mlp_fusion_test/esimd_tf32,"(1, 1024)",fused_gemm,189436.74569,2023.1.1,189436.74569,189436.74569,189436.74569
+nerf/mlp_fusion_test/esimd_fp16,"(1, 1024)",fused_gemm,97272.786083,2023.1.1,97272.786083,97272.786083,97272.786083
+nerf/mlp_fusion_test/esimd_fp16,"(1, 1048576)",abc_gemm,101.0,2023.1.1,404.0,555.0,335.0
+nerf/mlp_fusion_test/esimd_fp16,"(100, 1048576)",fused_gemm,1.1,2023.1.1,4.4,50.5,30.3
