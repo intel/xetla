@@ -1,0 +1,6 @@
+<map id="gpu::xetla::group::ln_fwd_fused_op_t&lt; ln_fwd_fused_kind::ln_dropout, dtype_in_, dtype_out_, dtype_acc_, layer_norm_attr_, gpu_arch::Xe &gt;" name="gpu::xetla::group::ln_fwd_fused_op_t&lt; ln_fwd_fused_kind::ln_dropout, dtype_in_, dtype_out_, dtype_acc_, layer_norm_attr_, gpu_arch::Xe &gt;">
+<area shape="rect" id="node1" title=" " alt="" coords="537,62,732,161"/>
+<area shape="rect" id="node2" href="$structgpu_1_1xetla_1_1subgroup_1_1tile__t.html" title=" " alt="" coords="211,5,356,60"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,20,133,45"/>
+<area shape="rect" id="node4" href="$structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t.html" title=" " alt="" coords="183,85,384,183"/>
+</map>

@@ -1,0 +1,13 @@
+var structgpu_1_1xetla_1_1kernel_1_1layer__norm__fwd__t_3_01dtype__x___00_01dtype__y___00_01dtype__w678e01627b39f80350d654b1d9c8f6b0 =
+[
+    [ "beta_ptr", "structgpu_1_1xetla_1_1kernel_1_1layer__norm__fwd__t_3_01dtype__x___00_01dtype__y___00_01dtype__w678e01627b39f80350d654b1d9c8f6b0.html#abd672da166c6339a297a24338d8bfcbc", null ],
+    [ "epsilon", "structgpu_1_1xetla_1_1kernel_1_1layer__norm__fwd__t_3_01dtype__x___00_01dtype__y___00_01dtype__w678e01627b39f80350d654b1d9c8f6b0.html#a379d3d8c4b86099a2b1ae55b275c0c9d", null ],
+    [ "gamma_ptr", "structgpu_1_1xetla_1_1kernel_1_1layer__norm__fwd__t_3_01dtype__x___00_01dtype__y___00_01dtype__w678e01627b39f80350d654b1d9c8f6b0.html#aeedc6bd926f640e1ca431d76559cb11b", null ],
+    [ "mat_ld", "structgpu_1_1xetla_1_1kernel_1_1layer__norm__fwd__t_3_01dtype__x___00_01dtype__y___00_01dtype__w678e01627b39f80350d654b1d9c8f6b0.html#a576f7319fa331610b05b580ca0432841", null ],
+    [ "matrix_m", "structgpu_1_1xetla_1_1kernel_1_1layer__norm__fwd__t_3_01dtype__x___00_01dtype__y___00_01dtype__w678e01627b39f80350d654b1d9c8f6b0.html#a2ea50368a4261455d64b75376c19295d", null ],
+    [ "matrix_n", "structgpu_1_1xetla_1_1kernel_1_1layer__norm__fwd__t_3_01dtype__x___00_01dtype__y___00_01dtype__w678e01627b39f80350d654b1d9c8f6b0.html#a1390eb14f00da2b114da33efbfe2f2e1", null ],
+    [ "mu_ptr", "structgpu_1_1xetla_1_1kernel_1_1layer__norm__fwd__t_3_01dtype__x___00_01dtype__y___00_01dtype__w678e01627b39f80350d654b1d9c8f6b0.html#af7e516fb6543029649d2b79f1e59c052", null ],
+    [ "rs_ptr", "structgpu_1_1xetla_1_1kernel_1_1layer__norm__fwd__t_3_01dtype__x___00_01dtype__y___00_01dtype__w678e01627b39f80350d654b1d9c8f6b0.html#ab20a6582052f44dc57210137461b9b87", null ],
+    [ "x_in_ptr", "structgpu_1_1xetla_1_1kernel_1_1layer__norm__fwd__t_3_01dtype__x___00_01dtype__y___00_01dtype__w678e01627b39f80350d654b1d9c8f6b0.html#abaa8295ca8928c30930ff501215f1142", null ],
+    [ "y_out_ptr", "structgpu_1_1xetla_1_1kernel_1_1layer__norm__fwd__t_3_01dtype__x___00_01dtype__y___00_01dtype__w678e01627b39f80350d654b1d9c8f6b0.html#aa808e348768e4008a264c9af99e995ca", null ]
+];

@@ -1,0 +1,17 @@
+var structgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__default_3_01gpu__arch_1_1Xe_01_4_0db93540e69047ebd206bbd99ad0d08b4 =
+[
+    [ "arguments_t", "structgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__default_3_01gpu__arch_1_1Xe_01_4_0db93540e69047ebd206bbd99ad0d08b4.html#a4dcf5ec79a56cd77c07dfc2711c81c25", null ],
+    [ "arguments_t", "structgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__default_3_01gpu__arch_1_1Xe_01_4_0db93540e69047ebd206bbd99ad0d08b4.html#af7c2937ff91304fc7b2869269bc5255d", null ],
+    [ "arguments_t", "structgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__default_3_01gpu__arch_1_1Xe_01_4_0db93540e69047ebd206bbd99ad0d08b4.html#ae9dd13797fbf5b6486aebd5dd080f703", null ],
+    [ "operator=", "structgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__default_3_01gpu__arch_1_1Xe_01_4_0db93540e69047ebd206bbd99ad0d08b4.html#aa8faba5009a0e8f35a6cbc9be351c656", null ],
+    [ "epilogue_args", "structgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__default_3_01gpu__arch_1_1Xe_01_4_0db93540e69047ebd206bbd99ad0d08b4.html#a1cf975688417fa32b9708eac5412498d", null ],
+    [ "matA_base", "structgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__default_3_01gpu__arch_1_1Xe_01_4_0db93540e69047ebd206bbd99ad0d08b4.html#ac1c1d145aeb2d88cbe49ef9059aebabc", null ],
+    [ "matA_ld", "structgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__default_3_01gpu__arch_1_1Xe_01_4_0db93540e69047ebd206bbd99ad0d08b4.html#a4570d262f829095a3a8bf8546ee5ffbb", null ],
+    [ "matB_base", "structgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__default_3_01gpu__arch_1_1Xe_01_4_0db93540e69047ebd206bbd99ad0d08b4.html#af00ea12d7c91d4c397c5ed15d42743d6", null ],
+    [ "matB_ld", "structgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__default_3_01gpu__arch_1_1Xe_01_4_0db93540e69047ebd206bbd99ad0d08b4.html#a9eeac3d6026a4999462053f5c818b3bd", null ],
+    [ "matC_base", "structgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__default_3_01gpu__arch_1_1Xe_01_4_0db93540e69047ebd206bbd99ad0d08b4.html#ab10b208721b035e9a33760a408cb0b17", null ],
+    [ "matC_ld", "structgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__default_3_01gpu__arch_1_1Xe_01_4_0db93540e69047ebd206bbd99ad0d08b4.html#a2eaab1662de52d3110829ea630adcb83", null ],
+    [ "matrix_k", "structgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__default_3_01gpu__arch_1_1Xe_01_4_0db93540e69047ebd206bbd99ad0d08b4.html#ab17ff986be3f92617135c4faa69c95be", null ],
+    [ "matrix_m", "structgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__default_3_01gpu__arch_1_1Xe_01_4_0db93540e69047ebd206bbd99ad0d08b4.html#ae525bf1e4ee83041976740917e1d201e", null ],
+    [ "matrix_n", "structgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__default_3_01gpu__arch_1_1Xe_01_4_0db93540e69047ebd206bbd99ad0d08b4.html#a03dbe4483a3b1147aeb4e24b4e04c747", null ]
+];

@@ -1,0 +1,4 @@
+<map id="gpu::xetla::subgroup::rng_dropout_op_t&lt; dtype_mask_, gpu_arch::Xe &gt;" name="gpu::xetla::subgroup::rng_dropout_op_t&lt; dtype_mask_, gpu_arch::Xe &gt;">
+<area shape="rect" id="node1" title="Is the random number generator and dropout op functor, specialized for Xe architecture." alt="" coords="5,108,180,163"/>
+<area shape="rect" id="node2" href="$structgpu_1_1xetla_1_1xetla__rand__t.html" title=" " alt="" coords="19,5,166,45"/>
+</map>

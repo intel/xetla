@@ -1,0 +1,5 @@
+var row__reduce__store__xe_8hpp =
+[
+    [ "gpu::xetla::group::group_row_reduce_store_t< dtype_acc, dtype_out, row_size, wg_size_x, wg_size_y, max_simd_len, gpu_arch::Xe >", "structgpu_1_1xetla_1_1group_1_1group__row__reduce__store__t_3_01dtype__acc_00_01dtype__out_00_01f2ea596db41d958c37b7a7a52caa0906.html", "structgpu_1_1xetla_1_1group_1_1group__row__reduce__store__t_3_01dtype__acc_00_01dtype__out_00_01f2ea596db41d958c37b7a7a52caa0906" ],
+    [ "gpu::xetla::group::group_row_reduce_store_t< dtype_acc, dtype_out, row_size, wg_size_x, 1, max_simd_len, gpu_arch::Xe >", "structgpu_1_1xetla_1_1group_1_1group__row__reduce__store__t_3_01dtype__acc_00_01dtype__out_00_01d1fe9e626bc4adc90fe46288676b32cb.html", "structgpu_1_1xetla_1_1group_1_1group__row__reduce__store__t_3_01dtype__acc_00_01dtype__out_00_01d1fe9e626bc4adc90fe46288676b32cb" ]
+];

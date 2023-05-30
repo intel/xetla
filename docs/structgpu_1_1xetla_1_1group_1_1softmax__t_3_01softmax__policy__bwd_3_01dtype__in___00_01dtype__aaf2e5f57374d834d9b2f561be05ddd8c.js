@@ -1,0 +1,8 @@
+var structgpu_1_1xetla_1_1group_1_1softmax__t_3_01softmax__policy__bwd_3_01dtype__in___00_01dtype__aaf2e5f57374d834d9b2f561be05ddd8c =
+[
+    [ "arguments_t", "structgpu_1_1xetla_1_1group_1_1softmax__t_3_01softmax__policy__bwd_3_01dtype__in___00_01dtype__aaf2e5f57374d834d9b2f561be05ddd8c.html#a6140282502abdd87f87be2373e117f25", null ],
+    [ "arguments_t", "structgpu_1_1xetla_1_1group_1_1softmax__t_3_01softmax__policy__bwd_3_01dtype__in___00_01dtype__aaf2e5f57374d834d9b2f561be05ddd8c.html#ae6321f9e145d774d34763aace9cd7702", null ],
+    [ "base", "structgpu_1_1xetla_1_1group_1_1softmax__t_3_01softmax__policy__bwd_3_01dtype__in___00_01dtype__aaf2e5f57374d834d9b2f561be05ddd8c.html#a1d722779a7f3ff2a06d215735df400af", null ],
+    [ "shape", "structgpu_1_1xetla_1_1group_1_1softmax__t_3_01softmax__policy__bwd_3_01dtype__in___00_01dtype__aaf2e5f57374d834d9b2f561be05ddd8c.html#a943599d2bfc689acb1f4c8dbb30f97a1", null ],
+    [ "sqrt_dk_inv", "structgpu_1_1xetla_1_1group_1_1softmax__t_3_01softmax__policy__bwd_3_01dtype__in___00_01dtype__aaf2e5f57374d834d9b2f561be05ddd8c.html#a8cca76bd95dc38e0ade37be9139d7f83", null ]
+];

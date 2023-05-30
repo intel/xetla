@@ -1,0 +1,5 @@
+<map id="gpu::xetla::group::group_reduce_t&lt; T, SZ, N, Op, N_SG, is_all_reduce, gpu_arch::Xe &gt;" name="gpu::xetla::group::group_reduce_t&lt; T, SZ, N, Op, N_SG, is_all_reduce, gpu_arch::Xe &gt;">
+<area shape="rect" id="node1" title=" " alt="" coords="284,45,475,115"/>
+<area shape="rect" id="node2" href="$structgpu_1_1xetla_1_1group_1_1group__reduce__t_3_01T_00_01SZ_00_01N_00_01Op_00_011_00_01is__all91388879f880ff2671715a7c4fe8af7c.html" title=" " alt="" coords="7,5,169,75"/>
+<area shape="rect" id="node3" href="$structgpu_1_1xetla_1_1xetla__nbarrier__t.html" title=" " alt="" coords="5,99,171,139"/>
+</map>

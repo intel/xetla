@@ -1,0 +1,12 @@
+<map id="include/experimental/kernel/reduction/row_reduction_xe.hpp" name="include/experimental/kernel/reduction/row_reduction_xe.hpp">
+<area shape="rect" id="node1" title="C++ API." alt="" coords="362,5,505,60"/>
+<area shape="rect" id="node2" href="$row__reduction__fused__op__xe_8hpp.html" title="C++ API." alt="" coords="5,108,168,163"/>
+<area shape="rect" id="node5" href="$row__reduce__store__xe_8hpp.html" title="C++ API." alt="" coords="192,108,341,163"/>
+<area shape="rect" id="node7" href="$experimental_2kernel_2reduction_2api_8hpp.html" title="C++ API." alt="" coords="366,115,501,155"/>
+<area shape="rect" id="node8" href="$experimental_2kernel_2reduction_2common_8hpp.html" title="C++ API." alt="" coords="413,218,571,258"/>
+<area shape="rect" id="node10" href="$reduction_2config_8hpp.html" title="C++ API." alt="" coords="577,115,719,155"/>
+<area shape="rect" id="node3" href="$row__reduction__fused__op__api_8hpp.html" title="C++ API." alt="" coords="9,211,172,265"/>
+<area shape="rect" id="node4" title=" " alt="" coords="188,313,345,339"/>
+<area shape="rect" id="node6" href="$reduction__api_8hpp.html" title="C++ API." alt="" coords="199,211,335,265"/>
+<area shape="rect" id="node9" title=" " alt="" coords="417,313,567,339"/>
+</map>
