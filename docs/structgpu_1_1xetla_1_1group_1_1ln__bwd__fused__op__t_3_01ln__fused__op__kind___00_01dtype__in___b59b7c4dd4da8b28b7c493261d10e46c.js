@@ -1,0 +1,11 @@
+var structgpu_1_1xetla_1_1group_1_1ln__bwd__fused__op__t_3_01ln__fused__op__kind___00_01dtype__in___b59b7c4dd4da8b28b7c493261d10e46c =
+[
+    [ "arguments_t", "structgpu_1_1xetla_1_1group_1_1ln__bwd__fused__op__t_3_01ln__fused__op__kind___00_01dtype__in___b59b7c4dd4da8b28b7c493261d10e46c.html#a320d7e318df13eeb46f233c28ff45c00", null ],
+    [ "dtype_acc", "structgpu_1_1xetla_1_1group_1_1ln__bwd__fused__op__t_3_01ln__fused__op__kind___00_01dtype__in___b59b7c4dd4da8b28b7c493261d10e46c.html#a4cc029084f87bccafbf897bdb7b47186", null ],
+    [ "dtype_in", "structgpu_1_1xetla_1_1group_1_1ln__bwd__fused__op__t_3_01ln__fused__op__kind___00_01dtype__in___b59b7c4dd4da8b28b7c493261d10e46c.html#adaafd4f82e71bf4fd958c543a336f77c", null ],
+    [ "dtype_out", "structgpu_1_1xetla_1_1group_1_1ln__bwd__fused__op__t_3_01ln__fused__op__kind___00_01dtype__in___b59b7c4dd4da8b28b7c493261d10e46c.html#a3dc25d7c5cb27ae71b87487f439a0819", null ],
+    [ "final_op", "structgpu_1_1xetla_1_1group_1_1ln__bwd__fused__op__t_3_01ln__fused__op__kind___00_01dtype__in___b59b7c4dd4da8b28b7c493261d10e46c.html#ad76e6922044a1343887b9bcca414ecbb", null ],
+    [ "init", "structgpu_1_1xetla_1_1group_1_1ln__bwd__fused__op__t_3_01ln__fused__op__kind___00_01dtype__in___b59b7c4dd4da8b28b7c493261d10e46c.html#abb2181bf89db8eb4f5db03d72f38a33e", null ],
+    [ "post_op", "structgpu_1_1xetla_1_1group_1_1ln__bwd__fused__op__t_3_01ln__fused__op__kind___00_01dtype__in___b59b7c4dd4da8b28b7c493261d10e46c.html#a423fd986fc4426e9715af652e2cdae04", null ],
+    [ "pre_op", "structgpu_1_1xetla_1_1group_1_1ln__bwd__fused__op__t_3_01ln__fused__op__kind___00_01dtype__in___b59b7c4dd4da8b28b7c493261d10e46c.html#acc4b5834c43d8fea62f2f48f9fab1481", null ]
+];

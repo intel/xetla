@@ -1,0 +1,13 @@
+<map id="XeTLA Core" name="XeTLA Core">
+<area shape="rect" id="node1" title="This is a low&#45;level API wrapper for ESIMD." alt="" coords="5,228,96,253"/>
+<area shape="rect" id="node2" href="$group__xetla__core__arch__config.html" title="Defines some hardware arch related information, mainly used to do HW limitation check." alt="" coords="171,5,325,31"/>
+<area shape="rect" id="node3" href="$group__xetla__core__barrier.html" title="Defines XeTLA APIs for synchronization primitives." alt="" coords="175,55,321,80"/>
+<area shape="rect" id="node4" href="$group__xetla__core__base__ops.html" title="Defines base ops for vector, vector reference and matrix reference data types." alt="" coords="209,104,287,129"/>
+<area shape="rect" id="node5" href="$group__xetla__core__base__types.html" title="Defines vector, vector reference and matrix reference data types." alt="" coords="204,153,292,179"/>
+<area shape="rect" id="node6" href="$group__xetla__core__bit__manipulation.html" title="Defines bitwise operations." alt="" coords="144,203,352,228"/>
+<area shape="rect" id="node7" href="$group__xetla__core__conv.html" title="Defines explicit conversions (with and without saturation), truncation etc." alt="" coords="167,252,329,277"/>
+<area shape="rect" id="node8" href="$group__xetla__core__math.html" title="Defines math operations on XeTLA vector data types." alt="" coords="178,301,318,327"/>
+<area shape="rect" id="node9" href="$group__xetla__core__memory.html" title="Defines XeTLA APIs to access memory, including read, write and atomic." alt="" coords="175,351,321,376"/>
+<area shape="rect" id="node10" href="$group__xetla__core__misc.html" title="Wraps some useful functions." alt="" coords="171,401,325,441"/>
+<area shape="rect" id="node11" href="$group__xetla__core__raw__send.html" title="Implements the send instruction to send messages to variaous components of the Intel(R) processor gra..." alt="" coords="193,465,303,491"/>
+</map>

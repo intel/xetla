@@ -1,0 +1,8 @@
+var classgpu_1_1xetla_1_1group_1_1epilogue__t_3_01epilogue__policy__default_3_01gpu__arch_1_1Xe_01_4fba60624b12ee769839451fe08649161 =
+[
+    [ "arguments_t", "structgpu_1_1xetla_1_1group_1_1epilogue__t_3_01epilogue__policy__default_3_01gpu__arch_1_1Xe_01_f578e5a096adc1f924d2657db125b703.html", null ],
+    [ "mem_desc_c_t", "classgpu_1_1xetla_1_1group_1_1epilogue__t_3_01epilogue__policy__default_3_01gpu__arch_1_1Xe_01_4fba60624b12ee769839451fe08649161.html#ac1a33c60fc1a11440e0fe3a590e2fcea", null ],
+    [ "tile_shape", "classgpu_1_1xetla_1_1group_1_1epilogue__t_3_01epilogue__policy__default_3_01gpu__arch_1_1Xe_01_4fba60624b12ee769839451fe08649161.html#aed2390e709e7331736596f418404a68e", null ],
+    [ "update_method", "classgpu_1_1xetla_1_1group_1_1epilogue__t_3_01epilogue__policy__default_3_01gpu__arch_1_1Xe_01_4fba60624b12ee769839451fe08649161.html#a4c7225bf76de428d83ef5bbb64273423", null ],
+    [ "operator()", "classgpu_1_1xetla_1_1group_1_1epilogue__t_3_01epilogue__policy__default_3_01gpu__arch_1_1Xe_01_4fba60624b12ee769839451fe08649161.html#ad98aad32318c0bd7c2896eb0db4158e6", null ]
+];

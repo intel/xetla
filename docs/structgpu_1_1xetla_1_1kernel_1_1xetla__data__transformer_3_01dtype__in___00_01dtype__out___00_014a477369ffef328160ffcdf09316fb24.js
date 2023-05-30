@@ -1,0 +1,21 @@
+var structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_014a477369ffef328160ffcdf09316fb24 =
+[
+    [ "arguments_t", "structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_01eee9a0dbc5ed89980f008e699edc33af.html", "structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_01eee9a0dbc5ed89980f008e699edc33af" ],
+    [ "get_barrier_count", "structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_015454549f3796976cb10fe3722d61088d.html", null ],
+    [ "get_slm_size", "structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_01999440d6b40b8e03d91fb5048cb93856.html", null ],
+    [ "arch_attr", "structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_014a477369ffef328160ffcdf09316fb24.html#a315962c50cacc32a574536b82f495fcb", null ],
+    [ "data_transformer_attr", "structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_014a477369ffef328160ffcdf09316fb24.html#aeb1174e8698ec4a67af65193488cfe34", null ],
+    [ "dtype_compute", "structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_014a477369ffef328160ffcdf09316fb24.html#aef69ca0f77f17b105d26fa0c1b3254ca", null ],
+    [ "dtype_in", "structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_014a477369ffef328160ffcdf09316fb24.html#a3c2321679c76e539d219ebdb5143a56a", null ],
+    [ "dtype_out", "structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_014a477369ffef328160ffcdf09316fb24.html#a7646a3a5d142c62c719465568ea0ab47", null ],
+    [ "global_compute_t", "structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_014a477369ffef328160ffcdf09316fb24.html#a9198d246b526f76a62d8d0149e6384cf", null ],
+    [ "global_compute_tile_desc", "structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_014a477369ffef328160ffcdf09316fb24.html#a1b8ad075dc4631787dbf3a6796d5a6b6", null ],
+    [ "global_ld_payload_t", "structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_014a477369ffef328160ffcdf09316fb24.html#ab6024998eaeed4f8390b02b04060480d", null ],
+    [ "global_ld_t", "structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_014a477369ffef328160ffcdf09316fb24.html#aea647f648e8f3a3df98fc8503e2938c9", null ],
+    [ "global_ld_tile_desc_t", "structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_014a477369ffef328160ffcdf09316fb24.html#aef3fa5833d4c564286c73a3d850ab83c", null ],
+    [ "global_st_payload_t", "structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_014a477369ffef328160ffcdf09316fb24.html#a29d1fdf97b87d8e98bc5e94401182cf7", null ],
+    [ "global_st_t", "structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_014a477369ffef328160ffcdf09316fb24.html#aa7208baa1b6d34ecca278ef6a17d6e31", null ],
+    [ "global_st_tile_desc_t", "structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_014a477369ffef328160ffcdf09316fb24.html#aa2f8d034559b13a4aaafe3a507c1cd54", null ],
+    [ "load_store_attr", "structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_014a477369ffef328160ffcdf09316fb24.html#af20745c95823dcbf7969d828e4233d2e", null ],
+    [ "wg_reduce_t", "structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_014a477369ffef328160ffcdf09316fb24.html#a93d12b0d6014966b798142bc5974a92d", null ]
+];

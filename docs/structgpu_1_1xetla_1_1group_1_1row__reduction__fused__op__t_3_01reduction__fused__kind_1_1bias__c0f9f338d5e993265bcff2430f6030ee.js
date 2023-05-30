@@ -1,0 +1,12 @@
+var structgpu_1_1xetla_1_1group_1_1row__reduction__fused__op__t_3_01reduction__fused__kind_1_1bias__c0f9f338d5e993265bcff2430f6030ee =
+[
+    [ "arguments_t", "structgpu_1_1xetla_1_1group_1_1row__reduction__fused__op__t_3_01reduction__fused__kind_1_1bias__c0f9f338d5e993265bcff2430f6030ee.html#ab97697f5325a37f9873a7fc5f8a00c58", null ],
+    [ "dtype_acc", "structgpu_1_1xetla_1_1group_1_1row__reduction__fused__op__t_3_01reduction__fused__kind_1_1bias__c0f9f338d5e993265bcff2430f6030ee.html#afbfa813ba8f58c0a94d417b6bf83de41", null ],
+    [ "dtype_in", "structgpu_1_1xetla_1_1group_1_1row__reduction__fused__op__t_3_01reduction__fused__kind_1_1bias__c0f9f338d5e993265bcff2430f6030ee.html#a31344e04fdd1284e18ce4e99f5e80520", null ],
+    [ "dtype_out", "structgpu_1_1xetla_1_1group_1_1row__reduction__fused__op__t_3_01reduction__fused__kind_1_1bias__c0f9f338d5e993265bcff2430f6030ee.html#ac6660a3d1560b553caec6689ae1a9d29", null ],
+    [ "row_reduction_fused_op_t", "structgpu_1_1xetla_1_1group_1_1row__reduction__fused__op__t_3_01reduction__fused__kind_1_1bias__c0f9f338d5e993265bcff2430f6030ee.html#aab91de7695688e22839807aec0a1687f", null ],
+    [ "operator()", "structgpu_1_1xetla_1_1group_1_1row__reduction__fused__op__t_3_01reduction__fused__kind_1_1bias__c0f9f338d5e993265bcff2430f6030ee.html#aca3aa699040d02b5c4428d3c130e0c64", null ],
+    [ "update_tdesc", "structgpu_1_1xetla_1_1group_1_1row__reduction__fused__op__t_3_01reduction__fused__kind_1_1bias__c0f9f338d5e993265bcff2430f6030ee.html#a6d998c158f2e0e253a1be6162b6051a6", null ],
+    [ "w_load_base_desc", "structgpu_1_1xetla_1_1group_1_1row__reduction__fused__op__t_3_01reduction__fused__kind_1_1bias__c0f9f338d5e993265bcff2430f6030ee.html#a1dd76d42ae708b59d559dd1d56723d88", null ],
+    [ "x_store_base_desc", "structgpu_1_1xetla_1_1group_1_1row__reduction__fused__op__t_3_01reduction__fused__kind_1_1bias__c0f9f338d5e993265bcff2430f6030ee.html#a52e46437790323638c9ec058664f708f", null ]
+];

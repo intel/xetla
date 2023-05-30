@@ -1,0 +1,27 @@
+var memory_8hpp =
+[
+    [ "get_atomic_op", "memory_8hpp.html#a25d554b1b5e98457ad0c8171a424f40b", null ],
+    [ "get_cache_hint", "memory_8hpp.html#aff696bc2f5562227872ba2f03f127d73", null ],
+    [ "get_data_size", "memory_8hpp.html#a3f08e833f350198b52cdb1d05a44aaee", null ],
+    [ "get_fence_op", "memory_8hpp.html#a7eadb4c4bfd7443f2a0b90b4262ccf95", null ],
+    [ "get_fence_scope", "memory_8hpp.html#a199d80e68d2c34c47be7f2732faa2a8e", null ],
+    [ "get_memory_kind", "memory_8hpp.html#ab90f2b9ff85e61ec789d038f2eeec469", null ],
+    [ "xetla_atomic_global", "memory_8hpp.html#gad0c0e26e34fa6bbdca0de3a76ddb8f5c", null ],
+    [ "xetla_atomic_global", "memory_8hpp.html#ga5fc1f1948643e09670002ec57137f83b", null ],
+    [ "xetla_atomic_global", "memory_8hpp.html#ga3aeec8413bd2e81ed58b2c54043a59ca", null ],
+    [ "xetla_atomic_local", "memory_8hpp.html#ga0da945efe90b2fd829a59177340c7903", null ],
+    [ "xetla_atomic_local", "memory_8hpp.html#gabe53caa69315b7dec3488f544a220727", null ],
+    [ "xetla_atomic_local", "memory_8hpp.html#ga040951eb98ed9c412266f8ab7535baa6", null ],
+    [ "xetla_fence", "memory_8hpp.html#ga405ebabe993e0ba91b46e34a2731665a", null ],
+    [ "xetla_load_global", "memory_8hpp.html#ga6bc059e7ed30628a868a1033a2e626ee", null ],
+    [ "xetla_load_global", "memory_8hpp.html#ga103379b76c960b4967704e057b7969ba", null ],
+    [ "xetla_load_local", "memory_8hpp.html#gaf180b3b4d5e2ceec14e6c6ccb42a130b", null ],
+    [ "xetla_load_local", "memory_8hpp.html#ga8ea747b34159e29f8feb9d2ce6f1ea81", null ],
+    [ "xetla_local_init", "memory_8hpp.html#ga530064066727fd84339ed21a07ba973b", null ],
+    [ "xetla_prefetch_global", "memory_8hpp.html#ga12977e49695cb3cfd62359da9ccf2cf8", null ],
+    [ "xetla_prefetch_global", "memory_8hpp.html#ga4d89ab60cfe99dedda4f94185b13eed9", null ],
+    [ "xetla_store_global", "memory_8hpp.html#gad6f2ca1d7a16efedd55131e88f3642c9", null ],
+    [ "xetla_store_global", "memory_8hpp.html#ga03572dc0e489ddc1e352f82914d8d4c9", null ],
+    [ "xetla_store_local", "memory_8hpp.html#ga1a340b34b3475ab665d68267fea50cd0", null ],
+    [ "xetla_store_local", "memory_8hpp.html#gae5a98482c237779c19b8d32ad199e206", null ]
+];

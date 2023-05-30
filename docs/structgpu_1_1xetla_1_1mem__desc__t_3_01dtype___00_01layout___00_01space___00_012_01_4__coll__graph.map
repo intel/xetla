@@ -1,0 +1,6 @@
+<map id="gpu::xetla::mem_desc_t&lt; dtype_, layout_, space_, 2 &gt;" name="gpu::xetla::mem_desc_t&lt; dtype_, layout_, space_, 2 &gt;">
+<area shape="rect" id="node1" title=" " alt="" coords="252,62,403,117"/>
+<area shape="rect" id="node2" href="$structgpu_1_1xetla_1_1mem__shape__t.html" title=" " alt="" coords="5,5,164,45"/>
+<area shape="rect" id="node3" href="$structgpu_1_1xetla_1_1mem__coord__t.html" title=" " alt="" coords="7,69,162,109"/>
+<area shape="rect" id="node4" href="$structgpu_1_1xetla_1_1mem__base__t.html" title=" " alt="" coords="9,133,160,173"/>
+</map>

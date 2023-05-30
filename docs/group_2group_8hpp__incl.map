@@ -1,0 +1,22 @@
+<map id="include/group/group.hpp" name="include/group/group.hpp">
+<area shape="rect" id="node1" title="C++ API." alt="" coords="525,5,685,31"/>
+<area shape="rect" id="node2" href="$brgemm_8hpp.html" title="C++ API." alt="" coords="1022,79,1204,104"/>
+<area shape="rect" id="node13" href="$cooperative__reduction__xe_8hpp.html" title="C++ API." alt="" coords="694,328,876,368"/>
+<area shape="rect" id="node14" href="$epilogue_8hpp.html" title="C++ API." alt="" coords="115,79,298,104"/>
+<area shape="rect" id="node3" href="$group_2brgemm_2api_8hpp.html" title="C++ API." alt="" coords="1452,247,1603,273"/>
+<area shape="rect" id="node4" href="$group_2brgemm_2common_8hpp.html" title="C++ API." alt="" coords="1018,335,1202,361"/>
+<area shape="rect" id="node7" href="$compute__policy_8hpp.html" title="C++ API." alt="" coords="1031,240,1190,280"/>
+<area shape="rect" id="node8" href="$default__fpu__xe_8hpp.html" title="C++ API." alt="" coords="900,152,1075,192"/>
+<area shape="rect" id="node9" href="$default__xmx__xe_8hpp.html" title="C++ API." alt="" coords="1151,152,1326,192"/>
+<area shape="rect" id="node10" href="$pre__processing__xe_8hpp.html" title="C++ API." alt="" coords="1401,152,1556,192"/>
+<area shape="rect" id="node11" href="$selector__xe_8hpp.html" title="C++ API." alt="" coords="694,152,876,192"/>
+<area shape="rect" id="node12" href="$tile__shape_8hpp.html" title="C++ API." alt="" coords="562,416,704,441"/>
+<area shape="rect" id="node5" title=" " alt="" coords="703,489,854,515"/>
+<area shape="rect" id="node6" title=" " alt="" coords="729,416,886,441"/>
+<area shape="rect" id="node15" href="$group_2epilogue_2api_8hpp.html" title="C++ API." alt="" coords="322,247,474,273"/>
+<area shape="rect" id="node16" href="$group_2epilogue_2common_8hpp.html" title="C++ API." alt="" coords="248,335,434,361"/>
+<area shape="rect" id="node17" href="$epilogue__policy_8hpp.html" title="C++ API." alt="" coords="88,240,247,280"/>
+<area shape="rect" id="node18" href="$group_2epilogue_2impl_2default__xe_8hpp.html" title="C++ API." alt="" coords="432,152,567,192"/>
+<area shape="rect" id="node19" href="$quant__tile__op__xe_8hpp.html" title="C++ API." alt="" coords="48,152,197,192"/>
+<area shape="rect" id="node20" href="$tile__op__xe_8hpp.html" title="C++ API." alt="" coords="222,152,356,192"/>
+</map>

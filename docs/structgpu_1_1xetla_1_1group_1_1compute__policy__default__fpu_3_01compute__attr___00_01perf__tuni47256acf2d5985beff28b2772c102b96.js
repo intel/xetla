@@ -1,0 +1,8 @@
+var structgpu_1_1xetla_1_1group_1_1compute__policy__default__fpu_3_01compute__attr___00_01perf__tuni47256acf2d5985beff28b2772c102b96 =
+[
+    [ "compute_attr", "structgpu_1_1xetla_1_1group_1_1compute__policy__default__fpu_3_01compute__attr___00_01perf__tuni47256acf2d5985beff28b2772c102b96.html#adeb8e9476ef814677137ff2e08ce0d92", null ],
+    [ "dtype_mma_a", "structgpu_1_1xetla_1_1group_1_1compute__policy__default__fpu_3_01compute__attr___00_01perf__tuni47256acf2d5985beff28b2772c102b96.html#af362232d777e43a5cefc093afeefc410", null ],
+    [ "dtype_mma_acc", "structgpu_1_1xetla_1_1group_1_1compute__policy__default__fpu_3_01compute__attr___00_01perf__tuni47256acf2d5985beff28b2772c102b96.html#a8fa116c55622402b98b17f97de6b681a", null ],
+    [ "dtype_mma_b", "structgpu_1_1xetla_1_1group_1_1compute__policy__default__fpu_3_01compute__attr___00_01perf__tuni47256acf2d5985beff28b2772c102b96.html#acc87c6fd60924bde60b8673eb038e2a7", null ],
+    [ "perf_tuning_knob", "structgpu_1_1xetla_1_1group_1_1compute__policy__default__fpu_3_01compute__attr___00_01perf__tuni47256acf2d5985beff28b2772c102b96.html#ac7eaaf0454e1388c70d9249c03949f2e", null ]
+];
