@@ -167,8 +167,7 @@ void gemm_relu_bias_run(uint32_t iter) {
     using mem_desc_output_t
             = mem_desc_t<data_type_c, mem_layout::row_major, mem_space::global>;
     using epilogue_t = xetla::group::epilogue_t<
-            xetla::group::epilogue_policy_tile_op<tile_op_t, result_overwrite,
-                    gpu_arch::Xe>,
+            xetla::group::epilogue_policy_tile_op<tile_op_t, gpu_arch::Xe>,
             tile_shape, mem_desc_output_t>;
 
     using gemm_op_t = xetla::kernel::gemm_t<

@@ -267,8 +267,7 @@ void sdp_fwd_run(uint32_t iter) {
                             sg_tile_k_qk, mma_engine::xmx, gpu_arch::Xe,
                             prefetch_distance, periodic_sync_interval>::brgemm;
                     using epilogue0_t = epilogue_t<
-                            epilogue_policy_tile_op<post_op_t, result_overwrite,
-                                    gpu_arch::Xe>,
+                            epilogue_policy_tile_op<post_op_t, gpu_arch::Xe>,
                             tile_shape0,
                             mem_desc_t<dtype_sfx, mem_layout::row_major,
                                     mem_space::local>>;

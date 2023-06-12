@@ -114,7 +114,7 @@ void gemm_exec(size_t matrix_m, size_t matrix_n, size_t matrix_k,
         using update_method = typename std::conditional<(Test::l3_kslicing > 1),
                 result_reduce_sum, result_overwrite>::type;
         using epilogue_t = epilogue_t<
-                epilogue_policy_tile_op<none_op_t, update_method, gpu_arch::Xe>,
+                epilogue_policy_default<update_method, gpu_arch::Xe>,
                 tile_shape,
                 mem_desc_t<data_type_c, mem_layout::row_major,
                         mem_space::global>>;

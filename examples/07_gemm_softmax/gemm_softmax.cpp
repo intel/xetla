@@ -213,7 +213,8 @@ void gemm_softmax_run(uint32_t iter) {
 
                             // epilogue function to overwrite the result
                             using epilogue_t = epilogue_t<
-                                    epilogue_policy_default<gpu_arch::Xe>,
+                                    epilogue_policy_default<result_overwrite,
+                                            gpu_arch::Xe>,
                                     tile_shape, mem_desc_c_t>;
 
                             // using experimental::group::softmax

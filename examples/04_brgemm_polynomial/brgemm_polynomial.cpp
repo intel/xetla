@@ -203,10 +203,9 @@ void brgemm_polynomial_run(int iter) {
                 // is already calculated.
                 // Mathematically epilogue_t is a map that applies to each element:
                 //   epilogue_t: [m, n] -> [m, n], C_acc |-> tile_op_t(C_acc)
-                using epilogue_t
-                        = epilogue_t<epilogue_policy_tile_op<tile_op_t,
-                                             result_overwrite, gpu_arch::Xe>,
-                                tile_shape, mem_desc_output_c>;
+                using epilogue_t = epilogue_t<
+                        epilogue_policy_tile_op<tile_op_t, gpu_arch::Xe>,
+                        tile_shape, mem_desc_output_c>;
 
                 // [Polynomial] define arguments for each epilogue_tile_op in chained_tile_op_t<>
                 using epilogue_tile_op_args_t
