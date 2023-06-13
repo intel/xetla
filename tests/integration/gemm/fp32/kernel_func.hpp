@@ -23,7 +23,7 @@ using namespace gpu::xetla;
 template <typename dtype_a, typename dtype_b, typename dtype_c,
         typename dtype_acc, int wg_m, int wg_n, int sg_m, int sg_n, int sg_k,
         mem_layout layout_a, mem_layout layout_b, uint32_t l3_kslicing,
-        uint32_t slm_kslicing>
+        uint32_t slm_kslicing, mma_engine engine>
 struct sgemm_test_func {
 
     static const char *func_name() { return "sgemm_test_func"; }
@@ -38,8 +38,8 @@ struct sgemm_test_func {
         static constexpr uint32_t prefetch_distance = 1;
         using brgemm_t = typename brgemm_selector_t<dtype_a, dtype_b, layout_a,
                 layout_b, mem_space::global, mem_space::global, 4, 4, dtype_acc,
-                tile_shape, sg_k, mma_engine::fpu, gpu_arch::Xe,
-                prefetch_distance, periodic_sync_interval>::brgemm;
+                tile_shape, sg_k, engine, gpu_arch::Xe, prefetch_distance,
+                periodic_sync_interval>::brgemm;
 
         using update_method = typename std::conditional<(l3_kslicing > 1),
                 result_reduce_sum, result_overwrite>::type;

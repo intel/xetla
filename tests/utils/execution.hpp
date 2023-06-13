@@ -17,6 +17,7 @@
 #pragma once
 
 #include "profiling.hpp"
+#include "xetla.hpp"
 
 using namespace cl::sycl;
 using namespace gpu;
@@ -30,7 +31,7 @@ template <class Test, typename data_type_a, typename data_type_b,
         template <class, typename, typename, typename, typename> class KERNEL,
         int SLMSIZE = 128 * 1024, int BARNUM = 32>
 void gemm_exec(size_t matrix_m, size_t matrix_n, size_t matrix_k,
-        std::string compile_str) {
+        std::string compile_str, size_t batch = 1) {
 
     constexpr size_t wg_tile_m = Test::wg_m;
     constexpr size_t wg_tile_n = Test::wg_n;
@@ -49,19 +50,19 @@ void gemm_exec(size_t matrix_m, size_t matrix_n, size_t matrix_k,
     std::cout << "Running on " << device.get_info<info::device::name>() << "\n";
 
     auto A = alloc_device_and_init<data_type_a>(
-            size_a,
+            batch * size_a,
             [](data_type_a *data, size_t idx) {
                 data[idx] = static_cast<data_type_a>(random_float());
             },
             queue, device, context);
     auto B = alloc_device_and_init<data_type_b>(
-            size_b,
+            batch * size_b,
             [](data_type_b *data, size_t idx) {
                 data[idx] = static_cast<data_type_b>(random_float());
             },
             queue, device, context);
     auto C = alloc_device_and_init<data_type_c>(
-            size_c,
+            batch * size_c,
             [](data_type_c *data, size_t idx) {
                 data[idx] = static_cast<data_type_c>(0.0f);
             },
@@ -92,20 +93,65 @@ void gemm_exec(size_t matrix_m, size_t matrix_n, size_t matrix_k,
         setenv("SYCL_PROGRAM_COMPILE_OPTIONS", compile_str.c_str(), 1);
         kernel_bundle<bundle_state::executable> exeBundle = build(inputBundle);
         unsetenv("SYCL_PROGRAM_COMPILE_OPTIONS");
-        auto e_esimd = queue.submit([&](handler &cgh) {
-            cgh.use_kernel_bundle(exeBundle);
-            cgh.parallel_for<Test>(
-                    nd_range, [=](nd_item<3> item) SYCL_ESIMD_KERNEL {
-                        gpu::xetla::xetla_exec_item<3> ei(item);
-                        gpu::xetla::xetla_local_init<SLMSIZE>();
-                        gpu::xetla::xetla_nbarrier_init<BARNUM>();
-                        KERNEL<Test, data_type_a, data_type_b, data_type_c,
-                                data_type_acc>::run(ei, A, B, C, matrix_m,
-                                matrix_n, matrix_k);
-                    });
-        });
-        e_esimd.wait();
 
+        using namespace gpu::xetla::group;
+        using namespace gpu::xetla::kernel;
+        using namespace gpu::xetla::subgroup;
+        using tile_shape
+                = tile_shape_t<wg_tile_n, wg_tile_m, sg_tile_n, sg_tile_m>;
+        static constexpr uint32_t periodic_sync_interval = 8;
+        static constexpr uint32_t prefetch_distance = 3;
+        using brgemm_t = typename brgemm_selector_t<data_type_a, data_type_b,
+                Test::layout_a, Test::layout_b, mem_space::global,
+                mem_space::global, sizeof(data_type_a) == 4 ? 4 : 8,
+                sizeof(data_type_a) == 4 ? 4 : 8, data_type_acc, tile_shape,
+                sg_tile_k, mma_engine::xmx, gpu_arch::Xe, prefetch_distance,
+                periodic_sync_interval>::brgemm;
+
+        using update_method = typename std::conditional<(Test::l3_kslicing > 1),
+                result_reduce_sum, result_overwrite>::type;
+        using epilogue_t = epilogue_t<
+                epilogue_policy_tile_op<none_op_t, update_method, gpu_arch::Xe>,
+                tile_shape,
+                mem_desc_t<data_type_c, mem_layout::row_major,
+                        mem_space::global>>;
+
+        using gemm_op_t = gemm_t<dispatch_policy_kslicing<Test::l3_kslicing,
+                                         Test::slm_kslicing, gpu_arch::Xe>,
+                brgemm_t, epilogue_t>;
+
+        for (int i = 0; i < batch; i++) {
+            auto A_ptr = A + i * size_a;
+            auto B_ptr = B + i * size_b;
+            auto C_ptr = C + i * size_c;
+            typename gemm_op_t::arguments_t arg(matrix_m, matrix_k, matrix_n,
+                    A_ptr,
+                    Test::layout_a == mem_layout::col_major ? matrix_m
+                                                            : matrix_k,
+                    B_ptr,
+                    Test::layout_b == mem_layout::col_major ? matrix_k
+                                                            : matrix_n,
+                    C_ptr, matrix_n);
+            if (!gemm_op_t::can_implement(arg)) {
+                std::cout << "The arguments cannot be supported, skip ... "
+                          << std::endl;
+                GTEST_SKIP();
+            }
+
+            auto e_esimd = queue.submit([&](handler &cgh) {
+                cgh.use_kernel_bundle(exeBundle);
+                cgh.parallel_for<Test>(
+                        nd_range, [=](nd_item<3> item) SYCL_ESIMD_KERNEL {
+                            gpu::xetla::xetla_exec_item<3> ei(item);
+                            gpu::xetla::xetla_local_init<SLMSIZE>();
+                            gpu::xetla::xetla_nbarrier_init<BARNUM>();
+                            KERNEL<Test, data_type_a, data_type_b, data_type_c,
+                                    data_type_acc>::run(ei, A_ptr, B_ptr, C_ptr,
+                                    matrix_m, matrix_n, matrix_k);
+                        });
+            });
+            e_esimd.wait();
+        }
     } catch (cl::sycl::exception const &e) {
         std::cout << "SYCL exception caught: " << e.what() << '\n';
         FAIL();
