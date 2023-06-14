@@ -23,6 +23,8 @@ using namespace cl::sycl;
 using namespace gpu;
 using namespace gpu::xetla;
 
+enum class test_result { complete = 0, skip = 1, fail = 2 };
+
 template <class Test, typename data_type_a, typename data_type_b,
         typename data_type_c, typename data_type_acc,
         template <class, typename, typename, typename, typename>
@@ -31,6 +33,7 @@ template <class Test, typename data_type_a, typename data_type_b,
         int SLMSIZE = 128 * 1024, int BARNUM = 32>
 void gemm_exec(size_t matrix_m, size_t matrix_n, size_t matrix_k,
         std::string compile_str, size_t batch = 1) {
+    test_result result = test_result::complete;
 
     constexpr size_t wg_tile_m = Test::wg_m;
     constexpr size_t wg_tile_n = Test::wg_n;
@@ -135,7 +138,8 @@ void gemm_exec(size_t matrix_m, size_t matrix_n, size_t matrix_k,
             if (!gemm_op_t::can_implement(arg)) {
                 std::cout << "The arguments cannot be supported, skip ... "
                           << std::endl;
-                GTEST_SKIP();
+                result = test_result::skip;
+                break;
             }
 
             auto e_esimd = queue.submit([&](handler &cgh) {
@@ -154,17 +158,26 @@ void gemm_exec(size_t matrix_m, size_t matrix_n, size_t matrix_k,
         }
     } catch (cl::sycl::exception const &e) {
         std::cout << "SYCL exception caught: " << e.what() << '\n';
-        FAIL();
+        result = test_result::fail;
     }
 
     // validation
-    validate_func<Test, data_type_a, data_type_b, data_type_c, data_type_acc>
-            vfunc;
-    ASSERT_EQ(0, vfunc(A, B, C, queue, context));
+    if (result == test_result::complete) {
+        validate_func<Test, data_type_a, data_type_b, data_type_c,
+                data_type_acc>
+                vfunc;
+        ASSERT_EQ(0, vfunc(A, B, C, queue, context));
+    }
 
     free(A, context);
     free(B, context);
     free(C, context);
+
+    if (result == test_result::skip) {
+        GTEST_SKIP();
+    } else if (result != test_result::complete) {
+        FAIL();
+    }
 }
 
 /// @brief The template function to execute kernel in esimd way for unit test framework
