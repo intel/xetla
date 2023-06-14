@@ -218,23 +218,6 @@ public:
     static constexpr mma_engine engine = mma_engine::xmx;
 };
 
-template <typename dtype_a, typename dtype_b, typename dtype_c>
-class input_buffer_init {
-public:
-    void operator()(dtype_a *A, dtype_b *B, dtype_c *C, size_t size_a,
-            size_t size_b, size_t size_c) {
-        for (unsigned i = 0; i < size_a; ++i) {
-            A[i] = (i * 3) % 17;
-        }
-        for (unsigned i = 0; i < size_b; ++i) {
-            B[i] = (i * 5) % 19;
-        }
-        for (unsigned i = 0; i < size_c; ++i) {
-            C[i] = 0;
-        }
-    }
-};
-
 template <class Test, typename dtype_a, typename dtype_b, typename dtype_c,
         typename dtype_acc>
 using sgemm_func = sgemm_test_func<dtype_a, dtype_b, dtype_c, dtype_acc,

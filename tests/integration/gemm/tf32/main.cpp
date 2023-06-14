@@ -19,23 +19,6 @@
 #include "test.hpp"
 #include <gtest/gtest.h>
 
-template <typename dtype_a, typename dtype_b, typename dtype_c>
-class input_buffer_init {
-public:
-    void operator()(dtype_a *A, dtype_b *B, dtype_c *C, size_t size_a,
-            size_t size_b, size_t size_c) {
-        for (unsigned i = 0; i < size_a; ++i) {
-            A[i] = (i * 3) % 17;
-        }
-        for (unsigned i = 0; i < size_b; ++i) {
-            B[i] = (i * 5) % 19;
-        }
-        for (unsigned i = 0; i < size_c; ++i) {
-            C[i] = 0;
-        }
-    }
-};
-
 template <class Test, typename dtype_a, typename dtype_b, typename dtype_c,
         typename dtype_acc>
 class result_validate {
@@ -67,9 +50,8 @@ TYPED_TEST_SUITE_P(gemm_tf32);
 TYPED_TEST_P(gemm_tf32, esimd) {
     gemm_exec<TypeParam, typename TypeParam::data_type_a,
             typename TypeParam::data_type_b, typename TypeParam::data_type_c,
-            float, input_buffer_init, result_validate, gemm_func>(
-            TypeParam::mat_m, TypeParam::mat_n, TypeParam::mat_k,
-            esimd_compile_string);
+            float, result_validate, gemm_func>(TypeParam::mat_m,
+            TypeParam::mat_n, TypeParam::mat_k, esimd_compile_string);
 }
 REGISTER_TYPED_TEST_SUITE_P(gemm_tf32, esimd);
 INSTANTIATE_TYPED_TEST_SUITE_P(gemm_tf32_suite, gemm_tf32, tests);

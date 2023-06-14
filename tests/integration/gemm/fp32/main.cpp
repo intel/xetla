@@ -34,9 +34,8 @@ TYPED_TEST_SUITE_P(sgemm_test);
 
 TYPED_TEST_P(sgemm_test, esimd) {
     gemm_exec<TypeParam, data_type_a, data_type_b, data_type_c, data_type_acc,
-            input_buffer_init, result_validate, sgemm_func>(TypeParam::mat_m,
-            TypeParam::mat_n, TypeParam::mat_k, esimd_compile_string,
-            TypeParam::batch_size);
+            result_validate, sgemm_func>(TypeParam::mat_m, TypeParam::mat_n,
+            TypeParam::mat_k, esimd_compile_string, TypeParam::batch_size);
 }
 
 REGISTER_TYPED_TEST_SUITE_P(sgemm_test, esimd);

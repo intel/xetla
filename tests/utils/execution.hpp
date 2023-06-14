@@ -25,7 +25,6 @@ using namespace gpu::xetla;
 
 template <class Test, typename data_type_a, typename data_type_b,
         typename data_type_c, typename data_type_acc,
-        template <typename, typename, typename> class initialize_func,
         template <class, typename, typename, typename, typename>
         class validate_func,
         template <class, typename, typename, typename, typename> class KERNEL,
@@ -39,32 +38,33 @@ void gemm_exec(size_t matrix_m, size_t matrix_n, size_t matrix_k,
     constexpr size_t sg_tile_n = Test::sg_n;
     constexpr size_t sg_tile_k = Test::sg_k;
 
-    int size_a = matrix_m * matrix_k;
-    int size_b = matrix_k * matrix_n;
-    int size_c = matrix_m * matrix_n;
+    size_t size_a = matrix_m * matrix_k;
+    size_t size_b = matrix_k * matrix_n;
+    size_t size_c = matrix_m * matrix_n;
     sycl::property_list properties {sycl::property::queue::enable_profiling()};
     auto queue = sycl::queue(properties);
     auto context = queue.get_info<info::queue::context>();
     auto device = queue.get_info<info::queue::device>();
 
-    std::cout << "Running on " << device.get_info<info::device::name>() << "\n";
+    std::cout << "Running on batch: " << batch << ", "
+              << device.get_info<info::device::name>() << "\n";
 
     auto A = alloc_device_and_init<data_type_a>(
             batch * size_a,
             [](data_type_a *data, size_t idx) {
-                data[idx] = static_cast<data_type_a>(random_float());
+                data[idx] = static_cast<data_type_a>((idx * 3) % 17);
             },
             queue, device, context);
     auto B = alloc_device_and_init<data_type_b>(
             batch * size_b,
             [](data_type_b *data, size_t idx) {
-                data[idx] = static_cast<data_type_b>(random_float());
+                data[idx] = static_cast<data_type_b>((idx * 5) % 19);
             },
             queue, device, context);
     auto C = alloc_device_and_init<data_type_c>(
             batch * size_c,
             [](data_type_c *data, size_t idx) {
-                data[idx] = static_cast<data_type_c>(0.0f);
+                data[idx] = static_cast<data_type_c>(0);
             },
             queue, device, context);
 
@@ -120,7 +120,7 @@ void gemm_exec(size_t matrix_m, size_t matrix_n, size_t matrix_k,
                                          Test::slm_kslicing, gpu_arch::Xe>,
                 brgemm_t, epilogue_t>;
 
-        for (int i = 0; i < batch; i++) {
+        for (size_t i = 0; i < batch; i++) {
             auto A_ptr = A + i * size_a;
             auto B_ptr = B + i * size_b;
             auto C_ptr = C + i * size_c;
@@ -174,8 +174,8 @@ void gemm_exec(size_t matrix_m, size_t matrix_n, size_t matrix_k,
 /// @param nd_range the range of workitems
 /// @param validate_result validation function, taking 3 parameters buffer A, B as input C as output
 ///
-template <typename data_type, class KERNEL, int SLMSIZE = 128 * 1024,
-        int BARNUM = 32, int Size = 4096>
+template <typename data_type, class KERNEL, size_t SLMSIZE = 128 * 1024,
+        size_t BARNUM = 32, size_t Size = 4096>
 void kernel_run(auto nd_range, auto validate_result) {
 
     queue queue {};
