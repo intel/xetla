@@ -26,7 +26,7 @@ template <typename data_type_a, typename data_type_b, typename data_type_c,
         typename data_type_acc = float>
 int gemm_polynomial_result_validate(data_type_a *A_device,
         data_type_b *B_device, data_type_c *C_device, int m, int k, int n,
-        sycl::queue queue, mem_layout mem_layout_a_ = mem_layout::row_major,
+        sycl::queue &queue, mem_layout mem_layout_a_ = mem_layout::row_major,
         mem_layout mem_layout_b_ = mem_layout::row_major) {
     auto A = alloc_host_and_copy<data_type_a>(A_device, m * k, queue);
     auto B = alloc_host_and_copy<data_type_b>(B_device, k * n, queue);

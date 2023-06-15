@@ -37,7 +37,7 @@ template <typename data_type_a, typename data_type_b, typename data_type_c,
         typename data_type_acc = float>
 int mlp_result_validate(data_type_a *A_device, data_type_b *B_device,
         data_type_c *C_device, data_type_w *W_device, data_type_v *V_device,
-        uint32_t m, uint32_t k, uint32_t n, uint32_t l, sycl::queue queue,
+        uint32_t m, uint32_t k, uint32_t n, uint32_t l, sycl::queue &queue,
         mem_layout mem_layout_a_ = mem_layout::row_major,
         mem_layout mem_layout_w_ = mem_layout::row_major,
         mem_layout mem_layout_v_ = mem_layout::row_major) {

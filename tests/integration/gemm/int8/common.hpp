@@ -195,7 +195,7 @@ class result_validate {
 
 public:
     int operator()(data_type_a *A_device, data_type_b *B_device,
-            data_type_c *C_device, sycl::queue queue, sycl::context context) {
+            data_type_c *C_device, sycl::queue &queue, sycl::context &context) {
         auto A = alloc_host_and_copy<data_type_a>(
                 A_device, Test::mat_m * Test::mat_k, queue);
         auto B = alloc_host_and_copy<data_type_b>(

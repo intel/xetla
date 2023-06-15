@@ -24,7 +24,7 @@ int validation(data_type *layer_inputs_device, data_type *h0_inputs_device,
         std::vector<data_type *> i_weights, std::vector<data_type *> h_weights,
         data_type *hidden_outputs_device, data_type *layer_outputs_device,
         uint32_t batch_size, uint32_t input_size, uint32_t hidden_size,
-        uint32_t sequence_length, sycl::queue queue, uint32_t layer_size = 1) {
+        uint32_t sequence_length, sycl::queue &queue, uint32_t layer_size = 1) {
     uint32_t layer_input_size = batch_size * input_size;
     uint32_t hidden_io_size = batch_size * hidden_size;
     uint32_t i_weight_size = input_size * hidden_size;

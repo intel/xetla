@@ -31,7 +31,7 @@ template <typename dtype_in, typename dtype_out, typename data_type_acc = float>
 int sdp_fwd_result_validate(dtype_in *q_device, dtype_in *k_device,
         dtype_in *v_device, dtype_in *mask_device, dtype_out *c_device,
         uint32_t qk_m, uint32_t qk_k, uint32_t qk_n, uint32_t sv_m,
-        uint32_t sv_k, uint32_t sv_n, uint32_t batch_cnt, sycl::queue queue,
+        uint32_t sv_k, uint32_t sv_n, uint32_t batch_cnt, sycl::queue &queue,
         mem_layout mem_layout_qk_a_ = mem_layout::row_major,
         mem_layout mem_layout_qk_b_ = mem_layout::row_major,
         mem_layout mem_layout_sv_a_ = mem_layout::row_major,

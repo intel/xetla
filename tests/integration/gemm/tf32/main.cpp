@@ -23,8 +23,8 @@ template <class Test, typename dtype_a, typename dtype_b, typename dtype_c,
         typename dtype_acc>
 class result_validate {
 public:
-    int operator()(dtype_a *A, dtype_b *B, dtype_c *C, sycl::queue queue,
-            sycl::context context) {
+    int operator()(dtype_a *A, dtype_b *B, dtype_c *C, sycl::queue &queue,
+            sycl::context &context) {
         return gemm_result_validate<dtype_a, dtype_b, dtype_c, dtype_acc>(A, B,
                 C, 1, Test::mat_m, Test::mat_k, Test::mat_n, queue, context,
                 Test::layout_a, Test::layout_b);
