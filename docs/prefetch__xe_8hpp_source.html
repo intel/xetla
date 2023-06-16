@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.1</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.2</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -175,7 +175,7 @@ $(document).ready(function(){initNavTree('prefetch__xe_8hpp_source.html',''); in
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keyword">using </span>tile_desc = <span class="keyword">typename</span> payload_t::tile_desc;</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keyword">using </span>prefetch_dtype = <span class="keyword">typename</span> payload_t::prefetch_dtype;</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keyword">constexpr</span> uint32_t prefetch_len</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            = payload_t::mem_tile_size_x / payload_t::scale_factor;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            = tile_desc::tile_size_x / payload_t::scale_factor;</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (prefetch_len &gt;= 64) {</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="preprocessor">#pragma unroll</span></div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; prefetch_len / 64; j++) {</div>

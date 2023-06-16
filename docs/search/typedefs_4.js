@@ -1,5 +1,6 @@
 var searchData=
 [
   ['epilogue_5fargs_5ft_0',['epilogue_args_t',['../structgru__layer.html#a350542bcb3e7055d82ff9e08fa0554d0',1,'gru_layer']]],
-  ['epilogue_5ft_1',['epilogue_t',['../structgru__layer.html#a6744920473a3c26ee265afd1d36c108a',1,'gru_layer']]]
+  ['epilogue_5fpolicy_1',['epilogue_policy',['../classgpu_1_1xetla_1_1group_1_1epilogue__t_3_01epilogue__policy__default_3_01update__method___00_859d08e089de62b8785eb323001884e1.html#a7690cedcf10418a66ff41cca486902ce',1,'gpu::xetla::group::epilogue_t&lt; epilogue_policy_default&lt; update_method_, gpu_arch::Xe &gt;, tile_shape_, mem_desc_c_t_ &gt;::epilogue_policy()'],['../classgpu_1_1xetla_1_1group_1_1epilogue__t_3_01epilogue__policy__quant__op_3_01tile__op__t___00_0342488e5e34a93e1ec1669be28813e3c.html#a5df91bd29648f5680bb54e539e55f4e8',1,'gpu::xetla::group::epilogue_t&lt; epilogue_policy_quant_op&lt; tile_op_t_, quant_op_t_, gpu_arch::Xe &gt;, tile_shape_, mem_desc_c_t_ &gt;::epilogue_policy()'],['../classgpu_1_1xetla_1_1group_1_1epilogue__t_3_01epilogue__policy__tile__op_3_01tile__op__t___00_01fdfffbb48a21b909e0f0376722b8d7a2.html#aa492047fa2b5bcd51d37f57c7ca14653',1,'gpu::xetla::group::epilogue_t&lt; epilogue_policy_tile_op&lt; tile_op_t_, gpu_arch::Xe &gt;, tile_shape_, mem_desc_c_t_ &gt;::epilogue_policy()']]],
+  ['epilogue_5ft_2',['epilogue_t',['../structgru__layer.html#aac934b9577529ff5831d61f729d2d893',1,'gru_layer']]]
 ];

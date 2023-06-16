@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.1</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.2</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -165,8 +165,8 @@ Static Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a1b26f13ec1d980fdff933cbbab06fd61"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__default__xmx_3_01compute__attr___00cfb0805f04374331c75878919ee17cda.html#a1b26f13ec1d980fdff933cbbab06fd61">accum_step</a> = compute_policy::accum_step</td></tr>
-<tr class="separator:a1b26f13ec1d980fdff933cbbab06fd61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d7385864f82980c1911aa52dbf03e07"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__default__xmx_3_01compute__attr___00cfb0805f04374331c75878919ee17cda.html#a0d7385864f82980c1911aa52dbf03e07">k_stride</a> = compute_policy::k_stride</td></tr>
+<tr class="separator:a0d7385864f82980c1911aa52dbf03e07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a480641b253bce92c85b52a31dab54121"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__default__xmx_3_01compute__attr___00cfb0805f04374331c75878919ee17cda.html#a480641b253bce92c85b52a31dab54121">wg_tile_m</a> = tile_shape::wg_tile_size_y</td></tr>
 <tr class="separator:a480641b253bce92c85b52a31dab54121"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab25d60b102a59af33aa924860181668e"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__default__xmx_3_01compute__attr___00cfb0805f04374331c75878919ee17cda.html#ab25d60b102a59af33aa924860181668e">wg_tile_n</a> = tile_shape::wg_tile_size_x</td></tr>
@@ -183,8 +183,12 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:a26b8342a52a381aeadb6bddf153a7529"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd9b86a07bac8fec26a6c39accbeff2d"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__default__xmx_3_01compute__attr___00cfb0805f04374331c75878919ee17cda.html#acd9b86a07bac8fec26a6c39accbeff2d">barrier_count</a> = enable_periodic_sync ? barrier_count_x + barrier_count_y : 0</td></tr>
 <tr class="separator:acd9b86a07bac8fec26a6c39accbeff2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd351e7534b5c67785ff1023b4cedbb6"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__default__xmx_3_01compute__attr___00cfb0805f04374331c75878919ee17cda.html#afd351e7534b5c67785ff1023b4cedbb6">slm_size</a> = is_local_a ? <a class="el" href="classgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__default__xmx_3_01compute__attr___00cfb0805f04374331c75878919ee17cda.html#a480641b253bce92c85b52a31dab54121">wg_tile_m</a> * <a class="el" href="classgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__default__xmx_3_01compute__attr___00cfb0805f04374331c75878919ee17cda.html#a1b26f13ec1d980fdff933cbbab06fd61">accum_step</a> * sizeof(dtype_a) : 0</td></tr>
+<tr class="memitem:afd351e7534b5c67785ff1023b4cedbb6"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__default__xmx_3_01compute__attr___00cfb0805f04374331c75878919ee17cda.html#afd351e7534b5c67785ff1023b4cedbb6">slm_size</a> = is_local_a ? <a class="el" href="classgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__default__xmx_3_01compute__attr___00cfb0805f04374331c75878919ee17cda.html#a480641b253bce92c85b52a31dab54121">wg_tile_m</a> * <a class="el" href="classgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__default__xmx_3_01compute__attr___00cfb0805f04374331c75878919ee17cda.html#a0d7385864f82980c1911aa52dbf03e07">k_stride</a> * sizeof(dtype_a) : 0</td></tr>
 <tr class="separator:afd351e7534b5c67785ff1023b4cedbb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a510a30a85f989b11cc622e6577e98b08"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__default__xmx_3_01compute__attr___00cfb0805f04374331c75878919ee17cda.html#a510a30a85f989b11cc622e6577e98b08">is_2d_block_a</a> = matA_payload_t::message_type == <a class="el" href="namespacegpu_1_1xetla.html#aa8afe1d12e7777419fb6ea09534a0aa7af359df7632214793e086fdf1885d5db6">msg_type::block_2d</a></td></tr>
+<tr class="separator:a510a30a85f989b11cc622e6577e98b08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d67fca7b946e442b4cca5028a645809"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__default__xmx_3_01compute__attr___00cfb0805f04374331c75878919ee17cda.html#a5d67fca7b946e442b4cca5028a645809">is_2d_block_b</a> = matB_payload_t::message_type == <a class="el" href="namespacegpu_1_1xetla.html#aa8afe1d12e7777419fb6ea09534a0aa7af359df7632214793e086fdf1885d5db6">msg_type::block_2d</a></td></tr>
+<tr class="separator:a5d67fca7b946e442b4cca5028a645809"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename compute_attr_, typename perf_tuning_knob_, typename tile_shape_, typename mem_desc_a_t_, typename mem_desc_b_t_, typename pre_processing_t_&gt;<br />
@@ -528,30 +532,6 @@ template&lt;typename compute_attr_ , typename perf_tuning_knob_ , typename tile_
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a1b26f13ec1d980fdff933cbbab06fd61" name="a1b26f13ec1d980fdff933cbbab06fd61"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1b26f13ec1d980fdff933cbbab06fd61">&#9670;&#160;</a></span>accum_step</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename compute_attr_ , typename perf_tuning_knob_ , typename tile_shape_ , typename mem_desc_a_t_ , typename mem_desc_b_t_ , typename pre_processing_t_ &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr uint32_t <a class="el" href="classgpu_1_1xetla_1_1group_1_1brgemm__t.html">gpu::xetla::group::brgemm_t</a>&lt; <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__xmx.html">compute_policy_default_xmx</a>&lt; compute_attr_, perf_tuning_knob_, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;, tile_shape_, mem_desc_a_t_, mem_desc_b_t_, pre_processing_t_ &gt;::accum_step = compute_policy::accum_step</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a26b8342a52a381aeadb6bddf153a7529" name="a26b8342a52a381aeadb6bddf153a7529"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a26b8342a52a381aeadb6bddf153a7529">&#9670;&#160;</a></span>arch_tag</h2>
 
@@ -589,6 +569,78 @@ template&lt;typename compute_attr_ , typename perf_tuning_knob_ , typename tile_
       <table class="memname">
         <tr>
           <td class="memname">constexpr uint32_t <a class="el" href="classgpu_1_1xetla_1_1group_1_1brgemm__t.html">gpu::xetla::group::brgemm_t</a>&lt; <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__xmx.html">compute_policy_default_xmx</a>&lt; compute_attr_, perf_tuning_knob_, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;, tile_shape_, mem_desc_a_t_, mem_desc_b_t_, pre_processing_t_ &gt;::barrier_count = enable_periodic_sync ? barrier_count_x + barrier_count_y : 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a510a30a85f989b11cc622e6577e98b08" name="a510a30a85f989b11cc622e6577e98b08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a510a30a85f989b11cc622e6577e98b08">&#9670;&#160;</a></span>is_2d_block_a</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename compute_attr_ , typename perf_tuning_knob_ , typename tile_shape_ , typename mem_desc_a_t_ , typename mem_desc_b_t_ , typename pre_processing_t_ &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool <a class="el" href="classgpu_1_1xetla_1_1group_1_1brgemm__t.html">gpu::xetla::group::brgemm_t</a>&lt; <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__xmx.html">compute_policy_default_xmx</a>&lt; compute_attr_, perf_tuning_knob_, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;, tile_shape_, mem_desc_a_t_, mem_desc_b_t_, pre_processing_t_ &gt;::is_2d_block_a = matA_payload_t::message_type == <a class="el" href="namespacegpu_1_1xetla.html#aa8afe1d12e7777419fb6ea09534a0aa7af359df7632214793e086fdf1885d5db6">msg_type::block_2d</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5d67fca7b946e442b4cca5028a645809" name="a5d67fca7b946e442b4cca5028a645809"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d67fca7b946e442b4cca5028a645809">&#9670;&#160;</a></span>is_2d_block_b</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename compute_attr_ , typename perf_tuning_knob_ , typename tile_shape_ , typename mem_desc_a_t_ , typename mem_desc_b_t_ , typename pre_processing_t_ &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool <a class="el" href="classgpu_1_1xetla_1_1group_1_1brgemm__t.html">gpu::xetla::group::brgemm_t</a>&lt; <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__xmx.html">compute_policy_default_xmx</a>&lt; compute_attr_, perf_tuning_knob_, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;, tile_shape_, mem_desc_a_t_, mem_desc_b_t_, pre_processing_t_ &gt;::is_2d_block_b = matB_payload_t::message_type == <a class="el" href="namespacegpu_1_1xetla.html#aa8afe1d12e7777419fb6ea09534a0aa7af359df7632214793e086fdf1885d5db6">msg_type::block_2d</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0d7385864f82980c1911aa52dbf03e07" name="a0d7385864f82980c1911aa52dbf03e07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d7385864f82980c1911aa52dbf03e07">&#9670;&#160;</a></span>k_stride</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename compute_attr_ , typename perf_tuning_knob_ , typename tile_shape_ , typename mem_desc_a_t_ , typename mem_desc_b_t_ , typename pre_processing_t_ &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr uint32_t <a class="el" href="classgpu_1_1xetla_1_1group_1_1brgemm__t.html">gpu::xetla::group::brgemm_t</a>&lt; <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__xmx.html">compute_policy_default_xmx</a>&lt; compute_attr_, perf_tuning_knob_, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;, tile_shape_, mem_desc_a_t_, mem_desc_b_t_, pre_processing_t_ &gt;::k_stride = compute_policy::k_stride</td>
         </tr>
       </table>
   </td>
@@ -660,7 +712,7 @@ template&lt;typename compute_attr_ , typename perf_tuning_knob_ , typename tile_
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr uint32_t <a class="el" href="classgpu_1_1xetla_1_1group_1_1brgemm__t.html">gpu::xetla::group::brgemm_t</a>&lt; <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__xmx.html">compute_policy_default_xmx</a>&lt; compute_attr_, perf_tuning_knob_, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;, tile_shape_, mem_desc_a_t_, mem_desc_b_t_, pre_processing_t_ &gt;::slm_size = is_local_a ? <a class="el" href="classgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__default__xmx_3_01compute__attr___00cfb0805f04374331c75878919ee17cda.html#a480641b253bce92c85b52a31dab54121">wg_tile_m</a> * <a class="el" href="classgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__default__xmx_3_01compute__attr___00cfb0805f04374331c75878919ee17cda.html#a1b26f13ec1d980fdff933cbbab06fd61">accum_step</a> * sizeof(dtype_a) : 0</td>
+          <td class="memname">constexpr uint32_t <a class="el" href="classgpu_1_1xetla_1_1group_1_1brgemm__t.html">gpu::xetla::group::brgemm_t</a>&lt; <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__xmx.html">compute_policy_default_xmx</a>&lt; compute_attr_, perf_tuning_knob_, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;, tile_shape_, mem_desc_a_t_, mem_desc_b_t_, pre_processing_t_ &gt;::slm_size = is_local_a ? <a class="el" href="classgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__default__xmx_3_01compute__attr___00cfb0805f04374331c75878919ee17cda.html#a480641b253bce92c85b52a31dab54121">wg_tile_m</a> * <a class="el" href="classgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__default__xmx_3_01compute__attr___00cfb0805f04374331c75878919ee17cda.html#a0d7385864f82980c1911aa52dbf03e07">k_stride</a> * sizeof(dtype_a) : 0</td>
         </tr>
       </table>
   </td>

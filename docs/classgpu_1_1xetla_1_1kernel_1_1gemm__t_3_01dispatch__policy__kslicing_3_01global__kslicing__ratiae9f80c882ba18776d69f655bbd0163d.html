@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.1</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.2</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -125,9 +125,9 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a207de8ebbb62a7cffe98b18eb5d20c15"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core.html#gafb2a0442e367d71b79a2f932d0d39c8b">KERNEL_FUNC</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__kslicing_3_01global__kslicing__ratiae9f80c882ba18776d69f655bbd0163d.html#a207de8ebbb62a7cffe98b18eb5d20c15">operator()</a> (<a class="el" href="classgpu_1_1xetla_1_1xetla__exec__item.html">xetla_exec_item</a>&lt; 3 &gt; &amp;ei, arguments_t &amp;args, uint32_t slm_base=0, uint32_t nbarrier_base=0)</td></tr>
-<tr class="memdesc:a207de8ebbb62a7cffe98b18eb5d20c15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main execution function for GEMM.  <a href="classgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__kslicing_3_01global__kslicing__ratiae9f80c882ba18776d69f655bbd0163d.html#a207de8ebbb62a7cffe98b18eb5d20c15">More...</a><br /></td></tr>
-<tr class="separator:a207de8ebbb62a7cffe98b18eb5d20c15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16ab9223379f247d001339829c451fbe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core.html#gafb2a0442e367d71b79a2f932d0d39c8b">KERNEL_FUNC</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__kslicing_3_01global__kslicing__ratiae9f80c882ba18776d69f655bbd0163d.html#a16ab9223379f247d001339829c451fbe">operator()</a> (<a class="el" href="classgpu_1_1xetla_1_1xetla__exec__item.html">xetla_exec_item</a>&lt; 3 &gt; &amp;ei, const arguments_t &amp;args, uint32_t slm_base=0, uint32_t nbarrier_base=0)</td></tr>
+<tr class="memdesc:a16ab9223379f247d001339829c451fbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main execution function for GEMM.  <a href="classgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__kslicing_3_01global__kslicing__ratiae9f80c882ba18776d69f655bbd0163d.html#a16ab9223379f247d001339829c451fbe">More...</a><br /></td></tr>
+<tr class="separator:a16ab9223379f247d001339829c451fbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -143,9 +143,12 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a3b7caddf30b092a11347b7920ed3c58c"><td class="memItemLeft" align="right" valign="top">static cl::sycl::range&lt; 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__kslicing_3_01global__kslicing__ratiae9f80c882ba18776d69f655bbd0163d.html#a3b7caddf30b092a11347b7920ed3c58c">get_group_range</a> (uint32_t matrix_m, uint32_t matrix_n)</td></tr>
 <tr class="memdesc:a3b7caddf30b092a11347b7920ed3c58c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Host helper function to get the expected group range under the current GEMM config.  <a href="classgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__kslicing_3_01global__kslicing__ratiae9f80c882ba18776d69f655bbd0163d.html#a3b7caddf30b092a11347b7920ed3c58c">More...</a><br /></td></tr>
 <tr class="separator:a3b7caddf30b092a11347b7920ed3c58c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9791bb2f2bea35abe4f3d3bbc801e930"><td class="memItemLeft" align="right" valign="top">static cl::sycl::nd_range&lt; 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__kslicing_3_01global__kslicing__ratiae9f80c882ba18776d69f655bbd0163d.html#a9791bb2f2bea35abe4f3d3bbc801e930">get_nd_range</a> (uint32_t matrix_m, uint32_t matrix_n)</td></tr>
-<tr class="memdesc:a9791bb2f2bea35abe4f3d3bbc801e930"><td class="mdescLeft">&#160;</td><td class="mdescRight">Host helper function to get the expected nd_range under the current GEMM config.  <a href="classgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__kslicing_3_01global__kslicing__ratiae9f80c882ba18776d69f655bbd0163d.html#a9791bb2f2bea35abe4f3d3bbc801e930">More...</a><br /></td></tr>
-<tr class="separator:a9791bb2f2bea35abe4f3d3bbc801e930"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c957a8d2d51f5ee4f83417968bce461"><td class="memItemLeft" align="right" valign="top">static cl::sycl::nd_range&lt; 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__kslicing_3_01global__kslicing__ratiae9f80c882ba18776d69f655bbd0163d.html#a2c957a8d2d51f5ee4f83417968bce461">get_nd_range</a> (arguments_t &amp;args)</td></tr>
+<tr class="memdesc:a2c957a8d2d51f5ee4f83417968bce461"><td class="mdescLeft">&#160;</td><td class="mdescRight">Host helper function to get the expected nd_range under the current GEMM config.  <a href="classgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__kslicing_3_01global__kslicing__ratiae9f80c882ba18776d69f655bbd0163d.html#a2c957a8d2d51f5ee4f83417968bce461">More...</a><br /></td></tr>
+<tr class="separator:a2c957a8d2d51f5ee4f83417968bce461"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a958453cd27301e6d999f39a311ee66ab"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__kslicing_3_01global__kslicing__ratiae9f80c882ba18776d69f655bbd0163d.html#a958453cd27301e6d999f39a311ee66ab">can_implement</a> (arguments_t &amp;args)</td></tr>
+<tr class="memdesc:a958453cd27301e6d999f39a311ee66ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the arguments can be implemented.  <a href="classgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__kslicing_3_01global__kslicing__ratiae9f80c882ba18776d69f655bbd0163d.html#a958453cd27301e6d999f39a311ee66ab">More...</a><br /></td></tr>
+<tr class="separator:a958453cd27301e6d999f39a311ee66ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;int global_kslicing_ratio_, int local_kslicing_ratio_, typename brgemm_t_, typename epilogue_t_&gt;<br />
@@ -160,6 +163,43 @@ class gpu::xetla::kernel::gemm_t&lt; dispatch_policy_kslicing&lt; global_kslicin
   </dd>
 </dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a958453cd27301e6d999f39a311ee66ab" name="a958453cd27301e6d999f39a311ee66ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a958453cd27301e6d999f39a311ee66ab">&#9670;&#160;</a></span>can_implement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int global_kslicing_ratio_, int local_kslicing_ratio_, typename brgemm_t_ , typename epilogue_t_ &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool <a class="el" href="classgpu_1_1xetla_1_1kernel_1_1gemm__t.html">gpu::xetla::kernel::gemm_t</a>&lt; <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1dispatch__policy__kslicing.html">dispatch_policy_kslicing</a>&lt; global_kslicing_ratio_, local_kslicing_ratio_, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;, brgemm_t_, epilogue_t_ &gt;::can_implement </td>
+          <td>(</td>
+          <td class="paramtype">arguments_t &amp;&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if the arguments can be implemented. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>Is the GEMM arguments for application-related runtime variables. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Check result. </dd></dl>
+
+</div>
+</div>
 <a id="a330956962e30bbf2235f6eb06a358e40" name="a330956962e30bbf2235f6eb06a358e40"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a330956962e30bbf2235f6eb06a358e40">&#9670;&#160;</a></span>get_barrier_count()</h2>
 
@@ -268,8 +308,8 @@ template&lt;int global_kslicing_ratio_, int local_kslicing_ratio_, typename brge
 
 </div>
 </div>
-<a id="a9791bb2f2bea35abe4f3d3bbc801e930" name="a9791bb2f2bea35abe4f3d3bbc801e930"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9791bb2f2bea35abe4f3d3bbc801e930">&#9670;&#160;</a></span>get_nd_range()</h2>
+<a id="a2c957a8d2d51f5ee4f83417968bce461" name="a2c957a8d2d51f5ee4f83417968bce461"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c957a8d2d51f5ee4f83417968bce461">&#9670;&#160;</a></span>get_nd_range()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -282,19 +322,9 @@ template&lt;int global_kslicing_ratio_, int local_kslicing_ratio_, typename brge
         <tr>
           <td class="memname">static cl::sycl::nd_range&lt; 3 &gt; <a class="el" href="classgpu_1_1xetla_1_1kernel_1_1gemm__t.html">gpu::xetla::kernel::gemm_t</a>&lt; <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1dispatch__policy__kslicing.html">dispatch_policy_kslicing</a>&lt; global_kslicing_ratio_, local_kslicing_ratio_, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;, brgemm_t_, epilogue_t_ &gt;::get_nd_range </td>
           <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>matrix_m</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">arguments_t &amp;&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>matrix_n</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -307,8 +337,7 @@ template&lt;int global_kslicing_ratio_, int local_kslicing_ratio_, typename brge
 <p>Host helper function to get the expected nd_range under the current GEMM config. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">matrix_m</td><td>Is the size of the m dimension of the matrix multiplication (m x k x n). </td></tr>
-    <tr><td class="paramname">matrix_n</td><td>Is the size of the n dimension of the matrix multiplication (m x k x n). </td></tr>
+    <tr><td class="paramname">args</td><td>Is the GEMM arguments for application-related runtime variables. </td></tr>
   </table>
   </dd>
 </dl>
@@ -346,8 +375,8 @@ template&lt;int global_kslicing_ratio_, int local_kslicing_ratio_, typename brge
 
 </div>
 </div>
-<a id="a207de8ebbb62a7cffe98b18eb5d20c15" name="a207de8ebbb62a7cffe98b18eb5d20c15"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a207de8ebbb62a7cffe98b18eb5d20c15">&#9670;&#160;</a></span>operator()()</h2>
+<a id="a16ab9223379f247d001339829c451fbe" name="a16ab9223379f247d001339829c451fbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16ab9223379f247d001339829c451fbe">&#9670;&#160;</a></span>operator()()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -366,7 +395,7 @@ template&lt;int global_kslicing_ratio_, int local_kslicing_ratio_, typename brge
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">arguments_t &amp;&#160;</td>
+          <td class="paramtype">const arguments_t &amp;&#160;</td>
           <td class="paramname"><em>args</em>, </td>
         </tr>
         <tr>

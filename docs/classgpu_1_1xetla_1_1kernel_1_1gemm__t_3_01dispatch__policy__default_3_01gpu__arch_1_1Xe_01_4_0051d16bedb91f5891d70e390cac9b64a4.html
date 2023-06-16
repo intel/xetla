@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.1</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.2</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -125,9 +125,9 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9552a1bb60a2b445d1816acceb5b69f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core.html#gafb2a0442e367d71b79a2f932d0d39c8b">KERNEL_FUNC</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__default_3_01gpu__arch_1_1Xe_01_4_0051d16bedb91f5891d70e390cac9b64a4.html#a9552a1bb60a2b445d1816acceb5b69f2">operator()</a> (<a class="el" href="classgpu_1_1xetla_1_1xetla__exec__item.html">xetla_exec_item</a>&lt; 3 &gt; &amp;ei, arguments_t &amp;args, uint32_t slm_base=0, uint32_t nbarrier_base=0)</td></tr>
-<tr class="memdesc:a9552a1bb60a2b445d1816acceb5b69f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main execution function for GEMM.  <a href="classgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__default_3_01gpu__arch_1_1Xe_01_4_0051d16bedb91f5891d70e390cac9b64a4.html#a9552a1bb60a2b445d1816acceb5b69f2">More...</a><br /></td></tr>
-<tr class="separator:a9552a1bb60a2b445d1816acceb5b69f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a907dad09aa938812b462d2f18f1e9c4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core.html#gafb2a0442e367d71b79a2f932d0d39c8b">KERNEL_FUNC</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__default_3_01gpu__arch_1_1Xe_01_4_0051d16bedb91f5891d70e390cac9b64a4.html#a907dad09aa938812b462d2f18f1e9c4f">operator()</a> (<a class="el" href="classgpu_1_1xetla_1_1xetla__exec__item.html">xetla_exec_item</a>&lt; 3 &gt; &amp;ei, const arguments_t &amp;args, uint32_t slm_base=0, uint32_t nbarrier_base=0)</td></tr>
+<tr class="memdesc:a907dad09aa938812b462d2f18f1e9c4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main execution function for GEMM.  <a href="classgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__default_3_01gpu__arch_1_1Xe_01_4_0051d16bedb91f5891d70e390cac9b64a4.html#a907dad09aa938812b462d2f18f1e9c4f">More...</a><br /></td></tr>
+<tr class="separator:a907dad09aa938812b462d2f18f1e9c4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -143,9 +143,12 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a5781435aeafe97c15900ddcbfb6449f5"><td class="memItemLeft" align="right" valign="top">static cl::sycl::range&lt; 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__default_3_01gpu__arch_1_1Xe_01_4_0051d16bedb91f5891d70e390cac9b64a4.html#a5781435aeafe97c15900ddcbfb6449f5">get_group_range</a> (uint32_t matrix_m, uint32_t matrix_n)</td></tr>
 <tr class="memdesc:a5781435aeafe97c15900ddcbfb6449f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Host helper function to get the expected group range under the current GEMM config.  <a href="classgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__default_3_01gpu__arch_1_1Xe_01_4_0051d16bedb91f5891d70e390cac9b64a4.html#a5781435aeafe97c15900ddcbfb6449f5">More...</a><br /></td></tr>
 <tr class="separator:a5781435aeafe97c15900ddcbfb6449f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afbb99cc9eed6e9d182b58e5307ffe92a"><td class="memItemLeft" align="right" valign="top">static cl::sycl::nd_range&lt; 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__default_3_01gpu__arch_1_1Xe_01_4_0051d16bedb91f5891d70e390cac9b64a4.html#afbb99cc9eed6e9d182b58e5307ffe92a">get_nd_range</a> (uint32_t matrix_m, uint32_t matrix_n)</td></tr>
-<tr class="memdesc:afbb99cc9eed6e9d182b58e5307ffe92a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Host helper function to get the expected nd_range under the current GEMM config.  <a href="classgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__default_3_01gpu__arch_1_1Xe_01_4_0051d16bedb91f5891d70e390cac9b64a4.html#afbb99cc9eed6e9d182b58e5307ffe92a">More...</a><br /></td></tr>
-<tr class="separator:afbb99cc9eed6e9d182b58e5307ffe92a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f356bc44aa0dda1e98e2ecbce452e77"><td class="memItemLeft" align="right" valign="top">static cl::sycl::nd_range&lt; 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__default_3_01gpu__arch_1_1Xe_01_4_0051d16bedb91f5891d70e390cac9b64a4.html#a5f356bc44aa0dda1e98e2ecbce452e77">get_nd_range</a> (arguments_t &amp;args)</td></tr>
+<tr class="memdesc:a5f356bc44aa0dda1e98e2ecbce452e77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Host helper function to get the expected nd_range under the current GEMM config.  <a href="classgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__default_3_01gpu__arch_1_1Xe_01_4_0051d16bedb91f5891d70e390cac9b64a4.html#a5f356bc44aa0dda1e98e2ecbce452e77">More...</a><br /></td></tr>
+<tr class="separator:a5f356bc44aa0dda1e98e2ecbce452e77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb7e23f2ea6430443ce5b6196d67a43f"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__default_3_01gpu__arch_1_1Xe_01_4_0051d16bedb91f5891d70e390cac9b64a4.html#acb7e23f2ea6430443ce5b6196d67a43f">can_implement</a> (arguments_t &amp;args)</td></tr>
+<tr class="memdesc:acb7e23f2ea6430443ce5b6196d67a43f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the arguments can be implemented.  <a href="classgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__default_3_01gpu__arch_1_1Xe_01_4_0051d16bedb91f5891d70e390cac9b64a4.html#acb7e23f2ea6430443ce5b6196d67a43f">More...</a><br /></td></tr>
+<tr class="separator:acb7e23f2ea6430443ce5b6196d67a43f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename brgemm_t_, typename epilogue_t_&gt;<br />
@@ -158,6 +161,43 @@ class gpu::xetla::kernel::gemm_t&lt; dispatch_policy_default&lt; gpu_arch::Xe &g
   </dd>
 </dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="acb7e23f2ea6430443ce5b6196d67a43f" name="acb7e23f2ea6430443ce5b6196d67a43f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb7e23f2ea6430443ce5b6196d67a43f">&#9670;&#160;</a></span>can_implement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename brgemm_t_ , typename epilogue_t_ &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool <a class="el" href="classgpu_1_1xetla_1_1kernel_1_1gemm__t.html">gpu::xetla::kernel::gemm_t</a>&lt; <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1dispatch__policy__default.html">dispatch_policy_default</a>&lt; <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;, brgemm_t_, epilogue_t_ &gt;::can_implement </td>
+          <td>(</td>
+          <td class="paramtype">arguments_t &amp;&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if the arguments can be implemented. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>Is the GEMM arguments for application-related runtime variables. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Check result. </dd></dl>
+
+</div>
+</div>
 <a id="afebd19c701c5c197a713bf1cde55e8f6" name="afebd19c701c5c197a713bf1cde55e8f6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afebd19c701c5c197a713bf1cde55e8f6">&#9670;&#160;</a></span>get_barrier_count()</h2>
 
@@ -266,8 +306,8 @@ template&lt;typename brgemm_t_ , typename epilogue_t_ &gt; </div>
 
 </div>
 </div>
-<a id="afbb99cc9eed6e9d182b58e5307ffe92a" name="afbb99cc9eed6e9d182b58e5307ffe92a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afbb99cc9eed6e9d182b58e5307ffe92a">&#9670;&#160;</a></span>get_nd_range()</h2>
+<a id="a5f356bc44aa0dda1e98e2ecbce452e77" name="a5f356bc44aa0dda1e98e2ecbce452e77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f356bc44aa0dda1e98e2ecbce452e77">&#9670;&#160;</a></span>get_nd_range()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -280,19 +320,9 @@ template&lt;typename brgemm_t_ , typename epilogue_t_ &gt; </div>
         <tr>
           <td class="memname">static cl::sycl::nd_range&lt; 3 &gt; <a class="el" href="classgpu_1_1xetla_1_1kernel_1_1gemm__t.html">gpu::xetla::kernel::gemm_t</a>&lt; <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1dispatch__policy__default.html">dispatch_policy_default</a>&lt; <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;, brgemm_t_, epilogue_t_ &gt;::get_nd_range </td>
           <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>matrix_m</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">arguments_t &amp;&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>matrix_n</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -305,8 +335,7 @@ template&lt;typename brgemm_t_ , typename epilogue_t_ &gt; </div>
 <p>Host helper function to get the expected nd_range under the current GEMM config. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">matrix_m</td><td>Is the size of the m dimension of the matrix multiplication (m x k x n). </td></tr>
-    <tr><td class="paramname">matrix_n</td><td>Is the size of the n dimension of the matrix multiplication (m x k x n). </td></tr>
+    <tr><td class="paramname">args</td><td>Is the GEMM arguments for application-related runtime variables. </td></tr>
   </table>
   </dd>
 </dl>
@@ -344,8 +373,8 @@ template&lt;typename brgemm_t_ , typename epilogue_t_ &gt; </div>
 
 </div>
 </div>
-<a id="a9552a1bb60a2b445d1816acceb5b69f2" name="a9552a1bb60a2b445d1816acceb5b69f2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9552a1bb60a2b445d1816acceb5b69f2">&#9670;&#160;</a></span>operator()()</h2>
+<a id="a907dad09aa938812b462d2f18f1e9c4f" name="a907dad09aa938812b462d2f18f1e9c4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a907dad09aa938812b462d2f18f1e9c4f">&#9670;&#160;</a></span>operator()()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -364,7 +393,7 @@ template&lt;typename brgemm_t_ , typename epilogue_t_ &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">arguments_t &amp;&#160;</td>
+          <td class="paramtype">const arguments_t &amp;&#160;</td>
           <td class="paramname"><em>args</em>, </td>
         </tr>
         <tr>

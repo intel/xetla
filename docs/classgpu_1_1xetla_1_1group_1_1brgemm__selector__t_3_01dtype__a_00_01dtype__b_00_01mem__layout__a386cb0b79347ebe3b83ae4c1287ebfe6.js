@@ -1,0 +1,4 @@
+var classgpu_1_1xetla_1_1group_1_1brgemm__selector__t_3_01dtype__a_00_01dtype__b_00_01mem__layout__a386cb0b79347ebe3b83ae4c1287ebfe6 =
+[
+    [ "brgemm", "classgpu_1_1xetla_1_1group_1_1brgemm__selector__t_3_01dtype__a_00_01dtype__b_00_01mem__layout__a386cb0b79347ebe3b83ae4c1287ebfe6.html#af506358621b8faec1978591ea8de3b19", null ]
+];

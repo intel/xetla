@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.1</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.2</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -155,7 +155,7 @@ $(document).ready(function(){initNavTree('brgemm__polynomial_8hpp_source.html','
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <a class="code hl_typedef" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector&lt;dtype_acc, elems&gt;</a> res(0.0f);</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <span class="keyword">auto</span> x = matAcc.reg.xetla_select&lt;elems, 1&gt;(elems * r);</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#pragma unroll</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; <a class="code hl_define" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a>; ++i) {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; N; ++i) {</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                res = x * res;</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                res += <span class="keyword">static_cast&lt;</span>dtype_acc<span class="keyword">&gt;</span>(args.<a class="code hl_variable" href="structgpu_1_1xetla_1_1subgroup_1_1polynomial__op__t_1_1arguments__t.html#a06921dc856fdc3c6adab17017ef117b0">coeff</a>[i]);</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            }</div>
@@ -167,7 +167,7 @@ $(document).ready(function(){initNavTree('brgemm__polynomial_8hpp_source.html','
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            <span class="keyword">auto</span> x = matAcc.reg.xetla_select&lt;remained_elems, 1&gt;(</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                    elems * (matAcc_t::tile_elems / elems));</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#pragma unroll</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; <a class="code hl_define" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a>; ++i) {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; N; ++i) {</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                res = x * res;</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                res += <span class="keyword">static_cast&lt;</span>dtype_acc<span class="keyword">&gt;</span>(args.<a class="code hl_variable" href="structgpu_1_1xetla_1_1subgroup_1_1polynomial__op__t_1_1arguments__t.html#a06921dc856fdc3c6adab17017ef117b0">coeff</a>[i]);</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            }</div>
@@ -178,9 +178,8 @@ $(document).ready(function(){initNavTree('brgemm__polynomial_8hpp_source.html','
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>} <span class="comment">// namespace gpu::xetla::subgroup</span></div>
 <div class="ttc" id="acommon_2core_2common_8hpp_html_a9ed53999886ec13b86a4fe2e0fc16765"><div class="ttname"><a href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a></div><div class="ttdeci">#define __XETLA_API</div><div class="ttdef"><b>Definition:</b> common.hpp:43</div></div>
-<div class="ttc" id="agroup__xetla__core__base__types_html_ga8cf5d016d24c8870706e20c376287e04"><div class="ttname"><a href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">gpu::xetla::xetla_vector</a></div><div class="ttdeci">__ESIMD_NS::simd&lt; native_type_t&lt; Ty &gt;, N &gt; xetla_vector</div><div class="ttdoc">wrapper for xetla_vector.</div><div class="ttdef"><b>Definition:</b> base_types.hpp:161</div></div>
+<div class="ttc" id="agroup__xetla__core__base__types_html_ga8cf5d016d24c8870706e20c376287e04"><div class="ttname"><a href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">gpu::xetla::xetla_vector</a></div><div class="ttdeci">__ESIMD_NS::simd&lt; native_type_t&lt; Ty &gt;, N &gt; xetla_vector</div><div class="ttdoc">wrapper for xetla_vector.</div><div class="ttdef"><b>Definition:</b> base_types.hpp:167</div></div>
 <div class="ttc" id="agroup__xetla__core_html_gafb2a0442e367d71b79a2f932d0d39c8b"><div class="ttname"><a href="group__xetla__core.html#gafb2a0442e367d71b79a2f932d0d39c8b">KERNEL_FUNC</a></div><div class="ttdeci">#define KERNEL_FUNC</div><div class="ttdoc">KERNEL_FUNC macro.</div><div class="ttdef"><b>Definition:</b> common.hpp:39</div></div>
-<div class="ttc" id="amulti__head__attention_8cpp_html_a0240ac851181b84ac374872dc5434ee4"><div class="ttname"><a href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a></div><div class="ttdeci">#define N</div><div class="ttdef"><b>Definition:</b> multi_head_attention.cpp:26</div></div>
 <div class="ttc" id="anamespacegpu_1_1xetla_1_1group_html"><div class="ttname"><a href="namespacegpu_1_1xetla_1_1group.html">gpu::xetla::group</a></div><div class="ttdef"><b>Definition:</b> dropout_mask_gen.hpp:25</div></div>
 <div class="ttc" id="anamespacegpu_1_1xetla_1_1subgroup_html"><div class="ttname"><a href="namespacegpu_1_1xetla_1_1subgroup.html">gpu::xetla::subgroup</a></div><div class="ttdef"><b>Definition:</b> tile_broadcast_op.hpp:24</div></div>
 <div class="ttc" id="anamespacegpu_1_1xetla_html"><div class="ttname"><a href="namespacegpu_1_1xetla.html">gpu::xetla</a></div><div class="ttdef"><b>Definition:</b> arch_config.hpp:24</div></div>

@@ -1,5 +1,6 @@
 var base__types_8hpp =
 [
+    [ "sycl::is_device_copyable< T, std::enable_if_t< gpu::xetla::is_host_callable< T >::value > >", "structsycl_1_1is__device__copyable_3_01T_00_01std_1_1enable__if__t_3_01gpu_1_1xetla_1_1is__host_cf13af5cc49ff51c2d56dc67f2e77257.html", null ],
     [ "__REF__", "group__xetla__core__base__types.html#ga126a6fcae520c421efd2419512e9bf70", null ],
     [ "fp16", "base__types_8hpp.html#ga7148d7c2fc8e5ae5213b5ab5d0467d41", null ],
     [ "get_uint_type_t", "base__types_8hpp.html#ga4a9c083ae3716a7a7cb47400b30c536e", null ],

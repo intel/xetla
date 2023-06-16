@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.1</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.2</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -114,12 +114,12 @@ $(document).ready(function(){initNavTree('structgpu_1_1xetla_1_1kernel_1_1layer_
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a03880fd66a722a0d96638ac4bca9604e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1layer__norm__fwd__t_3_01dtype__x___00_01dtype__y___00_01dtype__w34b86ab2795b16851d713a3deae4a27a.html#a03880fd66a722a0d96638ac4bca9604e">call</a> (<a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, 1 &gt; mu_vec, <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, 1 &gt; m2_vec)</td></tr>
+<tr class="memitem:a03880fd66a722a0d96638ac4bca9604e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; T, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1layer__norm__fwd__t_3_01dtype__x___00_01dtype__y___00_01dtype__w34b86ab2795b16851d713a3deae4a27a.html#a03880fd66a722a0d96638ac4bca9604e">call</a> (<a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; T, 1 &gt; mu_vec, <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; T, 1 &gt; m2_vec)</td></tr>
 <tr class="separator:a03880fd66a722a0d96638ac4bca9604e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename dtype_x_, typename dtype_y_, typename dtype_weight_, typename dtype_acc_, typename layer_norm_attr_, bool store_for_bwd_, typename ln_fwd_fused_op_&gt;<br />
-template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, uint32_t N&gt;<br />
+template&lt;typename T, uint32_t N&gt;<br />
 struct gpu::xetla::kernel::layer_norm_fwd_t&lt; dtype_x_, dtype_y_, dtype_weight_, dtype_acc_, layer_norm_attr_, store_for_bwd_, gpu_arch::Xe, ln_fwd_fused_op_ &gt;::parallel_mu_m2_t&lt; T, 1, N &gt;</div><dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td></td></tr>
@@ -136,21 +136,21 @@ struct gpu::xetla::kernel::layer_norm_fwd_t&lt; dtype_x_, dtype_y_, dtype_weight
 <div class="memtemplate">
 template&lt;typename dtype_x_ , typename dtype_y_ , typename dtype_weight_ , typename dtype_acc_ , typename layer_norm_attr_ , bool store_for_bwd_, typename ln_fwd_fused_op_ &gt; </div>
 <div class="memtemplate">
-template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , uint32_t N&gt; </div>
+template&lt;typename T , uint32_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, 2 &gt; <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1layer__norm__fwd__t.html">gpu::xetla::kernel::layer_norm_fwd_t</a>&lt; dtype_x_, dtype_y_, dtype_weight_, dtype_acc_, layer_norm_attr_, store_for_bwd_, gpu_arch::Xe, ln_fwd_fused_op_ &gt;::parallel_mu_m2_t&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, 1, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt;::call </td>
+          <td class="memname">static <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; T, 2 &gt; <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1layer__norm__fwd__t.html">gpu::xetla::kernel::layer_norm_fwd_t</a>&lt; dtype_x_, dtype_y_, dtype_weight_, dtype_acc_, layer_norm_attr_, store_for_bwd_, gpu_arch::Xe, ln_fwd_fused_op_ &gt;::parallel_mu_m2_t&lt; T, 1, N &gt;::call </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, 1 &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; T, 1 &gt;&#160;</td>
           <td class="paramname"><em>mu_vec</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, 1 &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; T, 1 &gt;&#160;</td>
           <td class="paramname"><em>m2_vec</em>&#160;</td>
         </tr>
         <tr>

@@ -14,6 +14,8 @@ var group__xetla__core__base__types =
       [ "operator=", "structgpu_1_1xetla_1_1tf32.html#ab2df4f891b3bb2c3d1f1aad6dc5bbdb1", null ],
       [ "data", "structgpu_1_1xetla_1_1tf32.html#a6331427c18efd8a27d90ac6a1912f0b7", null ]
     ] ],
+    [ "gpu::xetla::is_host_callable< T, typename >", "structgpu_1_1xetla_1_1is__host__callable.html", null ],
+    [ "gpu::xetla::is_host_callable< T, std::enable_if_t< T::host_callable==true > >", "structgpu_1_1xetla_1_1is__host__callable_3_01T_00_01std_1_1enable__if__t_3_01T_1_1host__callable_0a_0atrue_01_4_01_4.html", null ],
     [ "gpu::xetla::is_internal_type< T >", "structgpu_1_1xetla_1_1is__internal__type.html", null ],
     [ "gpu::xetla::native_type< T >", "structgpu_1_1xetla_1_1native__type.html", [
       [ "type", "structgpu_1_1xetla_1_1native__type.html#aa86a47f2656c054f4009542e6a04f813", null ]

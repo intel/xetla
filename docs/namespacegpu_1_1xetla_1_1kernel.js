@@ -1,5 +1,9 @@
 var namespacegpu_1_1xetla_1_1kernel =
 [
+    [ "detail", "namespacegpu_1_1xetla_1_1kernel_1_1detail.html", [
+      [ "check_2d_block_restriction", "namespacegpu_1_1xetla_1_1kernel_1_1detail.html#a1d52bea610d13653ddffcc76511ad671", null ],
+      [ "check_dw_align", "namespacegpu_1_1xetla_1_1kernel_1_1detail.html#ad2e07413ef822986bb2ecff40f31240e", null ]
+    ] ],
     [ "data_transformer_attr_t", "structgpu_1_1xetla_1_1kernel_1_1data__transformer__attr__t.html", null ],
     [ "dispatch_policy_default", "structgpu_1_1xetla_1_1kernel_1_1dispatch__policy__default.html", null ],
     [ "dispatch_policy_kslicing", "structgpu_1_1xetla_1_1kernel_1_1dispatch__policy__kslicing.html", null ],

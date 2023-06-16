@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>XeTLA: gpu::xetla::group::brgemm_selector_t&lt; dtype_a, dtype_b, mem_layout_a, mem_layout_b, mem_space_a, mem_space_b, alignment_a, alignment_b, dtype_acc, tile_shape, accum_step, engine, arch, stages, sync_freq, enable &gt; Class Template Reference</title>
+<title>XeTLA: gpu::xetla::group::brgemm_selector_t&lt; dtype_a, dtype_b, mem_layout_a, mem_layout_b, mem_space_a, mem_space_b, alignment_a, alignment_b, dtype_acc, tile_shape, k_stride, engine, arch, stages, sync_freq, enable &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.1</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.2</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -103,7 +103,7 @@ $(document).ready(function(){initNavTree('classgpu_1_1xetla_1_1group_1_1brgemm__
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">gpu::xetla::group::brgemm_selector_t&lt; dtype_a, dtype_b, mem_layout_a, mem_layout_b, mem_space_a, mem_space_b, alignment_a, alignment_b, dtype_acc, tile_shape, accum_step, engine, arch, stages, sync_freq, enable &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__xetla__brgemm.html">XeTLA BRGEMM</a></div></div></div>
+  <div class="headertitle"><div class="title">gpu::xetla::group::brgemm_selector_t&lt; dtype_a, dtype_b, mem_layout_a, mem_layout_b, mem_space_a, mem_space_b, alignment_a, alignment_b, dtype_acc, tile_shape, k_stride, engine, arch, stages, sync_freq, enable &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__xetla__brgemm.html">XeTLA BRGEMM</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -112,8 +112,8 @@ $(document).ready(function(){initNavTree('classgpu_1_1xetla_1_1group_1_1brgemm__
 
 <p><code>#include &lt;<a class="el" href="group_2brgemm_2api_8hpp_source.html">api.hpp</a>&gt;</code></p>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;typename dtype_a, typename dtype_b, <a class="el" href="namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561">mem_layout</a> mem_layout_a, <a class="el" href="namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561">mem_layout</a> mem_layout_b, <a class="el" href="namespacegpu_1_1xetla.html#a7f225ed816e841c1d31414d872dae59d">mem_space</a> mem_space_a, <a class="el" href="namespacegpu_1_1xetla.html#a7f225ed816e841c1d31414d872dae59d">mem_space</a> mem_space_b, int alignment_a, int alignment_b, typename dtype_acc, typename tile_shape, int accum_step, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4">mma_engine</a> engine, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch, int stages = 3, int sync_freq = 0, class enable = void&gt;<br />
-class gpu::xetla::group::brgemm_selector_t&lt; dtype_a, dtype_b, mem_layout_a, mem_layout_b, mem_space_a, mem_space_b, alignment_a, alignment_b, dtype_acc, tile_shape, accum_step, engine, arch, stages, sync_freq, enable &gt;</div><p >Brgemm selection functor. </p>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename dtype_a, typename dtype_b, <a class="el" href="namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561">mem_layout</a> mem_layout_a, <a class="el" href="namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561">mem_layout</a> mem_layout_b, <a class="el" href="namespacegpu_1_1xetla.html#a7f225ed816e841c1d31414d872dae59d">mem_space</a> mem_space_a, <a class="el" href="namespacegpu_1_1xetla.html#a7f225ed816e841c1d31414d872dae59d">mem_space</a> mem_space_b, int alignment_a, int alignment_b, typename dtype_acc, typename tile_shape, int k_stride, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4">mma_engine</a> engine, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch, int stages = 3, int sync_freq = 0, class enable = void&gt;<br />
+class gpu::xetla::group::brgemm_selector_t&lt; dtype_a, dtype_b, mem_layout_a, mem_layout_b, mem_space_a, mem_space_b, alignment_a, alignment_b, dtype_acc, tile_shape, k_stride, engine, arch, stages, sync_freq, enable &gt;</div><p >Brgemm selection functor. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">dtype_a</td><td>Is the memory data type of matA. </td></tr>
@@ -126,7 +126,7 @@ class gpu::xetla::group::brgemm_selector_t&lt; dtype_a, dtype_b, mem_layout_a, m
     <tr><td class="paramname">alignment_b</td><td>Is the memory alignment of matB. </td></tr>
     <tr><td class="paramname">dtype_acc</td><td>Is the compute data type. </td></tr>
     <tr><td class="paramname">tile_shape</td><td>Is the workgroup-level tile shape. </td></tr>
-    <tr><td class="paramname">accum_step</td><td>Is the accumulate stride along k-dim. </td></tr>
+    <tr><td class="paramname">k_stride</td><td>Is the accumulate stride along k-dim. </td></tr>
     <tr><td class="paramname">engine</td><td>Is the compute engine type. </td></tr>
     <tr><td class="paramname">arch</td><td>Is the HW architecture. </td></tr>
     <tr><td class="paramname">stages</td><td>Is the prefetch distance. </td></tr>

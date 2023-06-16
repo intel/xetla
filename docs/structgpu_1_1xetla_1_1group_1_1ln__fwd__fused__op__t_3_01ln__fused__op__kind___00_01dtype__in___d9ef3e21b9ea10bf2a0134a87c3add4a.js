@@ -4,7 +4,7 @@ var structgpu_1_1xetla_1_1group_1_1ln__fwd__fused__op__t_3_01ln__fused__op__kind
     [ "dtype_acc", "structgpu_1_1xetla_1_1group_1_1ln__fwd__fused__op__t_3_01ln__fused__op__kind___00_01dtype__in___d9ef3e21b9ea10bf2a0134a87c3add4a.html#aa4a4205ae7f99f930b90ec2e1c3c47c5", null ],
     [ "dtype_in", "structgpu_1_1xetla_1_1group_1_1ln__fwd__fused__op__t_3_01ln__fused__op__kind___00_01dtype__in___d9ef3e21b9ea10bf2a0134a87c3add4a.html#a3e13f410258a0bf25fd5eec2cb786b1f", null ],
     [ "dtype_out", "structgpu_1_1xetla_1_1group_1_1ln__fwd__fused__op__t_3_01ln__fused__op__kind___00_01dtype__in___d9ef3e21b9ea10bf2a0134a87c3add4a.html#a5cf0eaabd2816ea91c6bfded3d176022", null ],
-    [ "init", "structgpu_1_1xetla_1_1group_1_1ln__fwd__fused__op__t_3_01ln__fused__op__kind___00_01dtype__in___d9ef3e21b9ea10bf2a0134a87c3add4a.html#a5baabc659c6b52fbb6145f5166e36953", null ],
-    [ "post_op", "structgpu_1_1xetla_1_1group_1_1ln__fwd__fused__op__t_3_01ln__fused__op__kind___00_01dtype__in___d9ef3e21b9ea10bf2a0134a87c3add4a.html#a7ba0a2b5d3add0c438637a147635062e", null ],
-    [ "pre_op", "structgpu_1_1xetla_1_1group_1_1ln__fwd__fused__op__t_3_01ln__fused__op__kind___00_01dtype__in___d9ef3e21b9ea10bf2a0134a87c3add4a.html#afed58dcdf4e8a8ec5b9af072d8029e97", null ]
+    [ "init", "structgpu_1_1xetla_1_1group_1_1ln__fwd__fused__op__t_3_01ln__fused__op__kind___00_01dtype__in___d9ef3e21b9ea10bf2a0134a87c3add4a.html#a641be2ae7a812e920fd4fa20c1a5660a", null ],
+    [ "post_op", "structgpu_1_1xetla_1_1group_1_1ln__fwd__fused__op__t_3_01ln__fused__op__kind___00_01dtype__in___d9ef3e21b9ea10bf2a0134a87c3add4a.html#a76ec9e3412a972a502b376c213ca2dd4", null ],
+    [ "pre_op", "structgpu_1_1xetla_1_1group_1_1ln__fwd__fused__op__t_3_01ln__fused__op__kind___00_01dtype__in___d9ef3e21b9ea10bf2a0134a87c3add4a.html#a1b2b12ca71a7a74c6ba18c85cc44ae28", null ]
 ];

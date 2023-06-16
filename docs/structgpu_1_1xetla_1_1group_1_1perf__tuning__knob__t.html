@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>XeTLA: gpu::xetla::group::perf_tuning_knob_t&lt; accum_step_, stages_, sync_freq_ &gt; Struct Template Reference</title>
+<title>XeTLA: gpu::xetla::group::perf_tuning_knob_t&lt; k_stride_, stages_, sync_freq_ &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.1</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.2</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -106,7 +106,7 @@ $(document).ready(function(){initNavTree('structgpu_1_1xetla_1_1group_1_1perf__t
   <div class="summary">
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="structgpu_1_1xetla_1_1group_1_1perf__tuning__knob__t-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">gpu::xetla::group::perf_tuning_knob_t&lt; accum_step_, stages_, sync_freq_ &gt; Struct Template Reference</div></div>
+  <div class="headertitle"><div class="title">gpu::xetla::group::perf_tuning_knob_t&lt; k_stride_, stages_, sync_freq_ &gt; Struct Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -117,38 +117,38 @@ $(document).ready(function(){initNavTree('structgpu_1_1xetla_1_1group_1_1perf__t
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:aaf51c98ea976f40aeb98c58eec58c4d0"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1group_1_1perf__tuning__knob__t.html#aaf51c98ea976f40aeb98c58eec58c4d0">accum_step</a> = accum_step_</td></tr>
-<tr class="separator:aaf51c98ea976f40aeb98c58eec58c4d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68ca419145ee4f3c1b0fb85e36225e15"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1group_1_1perf__tuning__knob__t.html#a68ca419145ee4f3c1b0fb85e36225e15">stages</a> = stages_</td></tr>
-<tr class="separator:a68ca419145ee4f3c1b0fb85e36225e15"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4df5a46544148a3cee7912f9577c183d"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1group_1_1perf__tuning__knob__t.html#a4df5a46544148a3cee7912f9577c183d">sync_freq</a> = sync_freq_</td></tr>
-<tr class="separator:a4df5a46544148a3cee7912f9577c183d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9562d6b6f7440c6dfd1940cb7b2e067f"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1group_1_1perf__tuning__knob__t.html#a9562d6b6f7440c6dfd1940cb7b2e067f">k_stride</a> = k_stride_</td></tr>
+<tr class="separator:a9562d6b6f7440c6dfd1940cb7b2e067f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11761ee128d41763cdac7b3ac1fa96a4"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1group_1_1perf__tuning__knob__t.html#a11761ee128d41763cdac7b3ac1fa96a4">stages</a> = stages_</td></tr>
+<tr class="separator:a11761ee128d41763cdac7b3ac1fa96a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8803afb22d5347c7c3068fce80f36fd2"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1group_1_1perf__tuning__knob__t.html#a8803afb22d5347c7c3068fce80f36fd2">sync_freq</a> = sync_freq_</td></tr>
+<tr class="separator:a8803afb22d5347c7c3068fce80f36fd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;int accum_step_ = 8, int stages_ = 3, int sync_freq_ = 0&gt;<br />
-struct gpu::xetla::group::perf_tuning_knob_t&lt; accum_step_, stages_, sync_freq_ &gt;</div><p >Fine-tune knobs for brgemm. </p>
+<div class="textblock"><div class="compoundTemplParams">template&lt;int k_stride_ = 8, int stages_ = 3, int sync_freq_ = 0&gt;<br />
+struct gpu::xetla::group::perf_tuning_knob_t&lt; k_stride_, stages_, sync_freq_ &gt;</div><p >Fine-tune knobs for brgemm. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">accum_step_</td><td>Is the accumulate stride along k-dim. </td></tr>
+    <tr><td class="paramname">k_stride_</td><td>Is the accumulate stride along k-dim. </td></tr>
     <tr><td class="paramname">stages_</td><td>Is the prefetch distance. </td></tr>
     <tr><td class="paramname">sync_freq_</td><td>Is the group sync frequency. </td></tr>
   </table>
   </dd>
 </dl>
 </div><h2 class="groupheader">Member Data Documentation</h2>
-<a id="aaf51c98ea976f40aeb98c58eec58c4d0" name="aaf51c98ea976f40aeb98c58eec58c4d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaf51c98ea976f40aeb98c58eec58c4d0">&#9670;&#160;</a></span>accum_step</h2>
+<a id="a9562d6b6f7440c6dfd1940cb7b2e067f" name="a9562d6b6f7440c6dfd1940cb7b2e067f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9562d6b6f7440c6dfd1940cb7b2e067f">&#9670;&#160;</a></span>k_stride</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int accum_step_ = 8, int stages_ = 3, int sync_freq_ = 0&gt; </div>
+template&lt;int k_stride_ = 8, int stages_ = 3, int sync_freq_ = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr int <a class="el" href="structgpu_1_1xetla_1_1group_1_1perf__tuning__knob__t.html">gpu::xetla::group::perf_tuning_knob_t</a>&lt; accum_step_, stages_, sync_freq_ &gt;::accum_step = accum_step_</td>
+          <td class="memname">constexpr int <a class="el" href="structgpu_1_1xetla_1_1group_1_1perf__tuning__knob__t.html">gpu::xetla::group::perf_tuning_knob_t</a>&lt; k_stride_, stages_, sync_freq_ &gt;::k_stride = k_stride_</td>
         </tr>
       </table>
   </td>
@@ -160,19 +160,19 @@ template&lt;int accum_step_ = 8, int stages_ = 3, int sync_freq_ = 0&gt; </div>
 
 </div>
 </div>
-<a id="a68ca419145ee4f3c1b0fb85e36225e15" name="a68ca419145ee4f3c1b0fb85e36225e15"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a68ca419145ee4f3c1b0fb85e36225e15">&#9670;&#160;</a></span>stages</h2>
+<a id="a11761ee128d41763cdac7b3ac1fa96a4" name="a11761ee128d41763cdac7b3ac1fa96a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11761ee128d41763cdac7b3ac1fa96a4">&#9670;&#160;</a></span>stages</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int accum_step_ = 8, int stages_ = 3, int sync_freq_ = 0&gt; </div>
+template&lt;int k_stride_ = 8, int stages_ = 3, int sync_freq_ = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr int <a class="el" href="structgpu_1_1xetla_1_1group_1_1perf__tuning__knob__t.html">gpu::xetla::group::perf_tuning_knob_t</a>&lt; accum_step_, stages_, sync_freq_ &gt;::stages = stages_</td>
+          <td class="memname">constexpr int <a class="el" href="structgpu_1_1xetla_1_1group_1_1perf__tuning__knob__t.html">gpu::xetla::group::perf_tuning_knob_t</a>&lt; k_stride_, stages_, sync_freq_ &gt;::stages = stages_</td>
         </tr>
       </table>
   </td>
@@ -184,19 +184,19 @@ template&lt;int accum_step_ = 8, int stages_ = 3, int sync_freq_ = 0&gt; </div>
 
 </div>
 </div>
-<a id="a4df5a46544148a3cee7912f9577c183d" name="a4df5a46544148a3cee7912f9577c183d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4df5a46544148a3cee7912f9577c183d">&#9670;&#160;</a></span>sync_freq</h2>
+<a id="a8803afb22d5347c7c3068fce80f36fd2" name="a8803afb22d5347c7c3068fce80f36fd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8803afb22d5347c7c3068fce80f36fd2">&#9670;&#160;</a></span>sync_freq</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int accum_step_ = 8, int stages_ = 3, int sync_freq_ = 0&gt; </div>
+template&lt;int k_stride_ = 8, int stages_ = 3, int sync_freq_ = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr int <a class="el" href="structgpu_1_1xetla_1_1group_1_1perf__tuning__knob__t.html">gpu::xetla::group::perf_tuning_knob_t</a>&lt; accum_step_, stages_, sync_freq_ &gt;::sync_freq = sync_freq_</td>
+          <td class="memname">constexpr int <a class="el" href="structgpu_1_1xetla_1_1group_1_1perf__tuning__knob__t.html">gpu::xetla::group::perf_tuning_knob_t</a>&lt; k_stride_, stages_, sync_freq_ &gt;::sync_freq = sync_freq_</td>
         </tr>
       </table>
   </td>

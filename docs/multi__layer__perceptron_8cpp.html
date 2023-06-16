@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.1</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.2</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -171,9 +171,9 @@ Include dependency graph for multi_layer_perceptron.cpp:</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a10db28df81cf4c47f7bcb9950d14ca59"><td class="memTemplParams" colspan="2">template&lt;typename data_type_a , typename data_type_b , typename data_type_c , typename data_type_w , typename data_type_v , typename data_type_acc  = float&gt; </td></tr>
-<tr class="memitem:a10db28df81cf4c47f7bcb9950d14ca59"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="multi__layer__perceptron_8cpp.html#a10db28df81cf4c47f7bcb9950d14ca59">mlp_result_validate</a> (data_type_a *A, data_type_b *<a class="el" href="multi__head__attention_8cpp.html#a111da81ae5883147168bbb8366377b10">B</a>, data_type_c *C, data_type_w *W, data_type_v *V, uint32_t m, uint32_t k, uint32_t n, uint32_t l, <a class="el" href="namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561">mem_layout</a> mem_layout_a_=mem_layout::row_major, <a class="el" href="namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561">mem_layout</a> mem_layout_w_=mem_layout::row_major, <a class="el" href="namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561">mem_layout</a> mem_layout_v_=mem_layout::row_major)</td></tr>
-<tr class="separator:a10db28df81cf4c47f7bcb9950d14ca59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac156f9adad9ce695803424592d93db35"><td class="memTemplParams" colspan="2">template&lt;typename data_type_a , typename data_type_b , typename data_type_c , typename data_type_w , typename data_type_v , typename data_type_acc  = float&gt; </td></tr>
+<tr class="memitem:ac156f9adad9ce695803424592d93db35"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="multi__layer__perceptron_8cpp.html#ac156f9adad9ce695803424592d93db35">mlp_result_validate</a> (data_type_a *A_device, data_type_b *B_device, data_type_c *C_device, data_type_w *W_device, data_type_v *V_device, uint32_t m, uint32_t k, uint32_t n, uint32_t l, sycl::queue &amp;queue, <a class="el" href="namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561">mem_layout</a> mem_layout_a_=mem_layout::row_major, <a class="el" href="namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561">mem_layout</a> mem_layout_w_=mem_layout::row_major, <a class="el" href="namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561">mem_layout</a> mem_layout_v_=mem_layout::row_major)</td></tr>
+<tr class="separator:ac156f9adad9ce695803424592d93db35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1123cca5c409adeb235258f69d4a311a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="multi__layer__perceptron_8cpp.html#a1123cca5c409adeb235258f69d4a311a">mlp_run</a> (uint32_t iter)</td></tr>
 <tr class="separator:a1123cca5c409adeb235258f69d4a311a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="multi__layer__perceptron_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
@@ -197,8 +197,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a10db28df81cf4c47f7bcb9950d14ca59" name="a10db28df81cf4c47f7bcb9950d14ca59"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a10db28df81cf4c47f7bcb9950d14ca59">&#9670;&#160;</a></span>mlp_result_validate()</h2>
+<a id="ac156f9adad9ce695803424592d93db35" name="ac156f9adad9ce695803424592d93db35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac156f9adad9ce695803424592d93db35">&#9670;&#160;</a></span>mlp_result_validate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -209,31 +209,31 @@ template&lt;typename data_type_a , typename data_type_b , typename data_type_c ,
           <td class="memname">int mlp_result_validate </td>
           <td>(</td>
           <td class="paramtype">data_type_a *&#160;</td>
-          <td class="paramname"><em>A</em>, </td>
+          <td class="paramname"><em>A_device</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">data_type_b *&#160;</td>
-          <td class="paramname"><em>B</em>, </td>
+          <td class="paramname"><em>B_device</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">data_type_c *&#160;</td>
-          <td class="paramname"><em>C</em>, </td>
+          <td class="paramname"><em>C_device</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">data_type_w *&#160;</td>
-          <td class="paramname"><em>W</em>, </td>
+          <td class="paramname"><em>W_device</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">data_type_v *&#160;</td>
-          <td class="paramname"><em>V</em>, </td>
+          <td class="paramname"><em>V_device</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -258,6 +258,12 @@ template&lt;typename data_type_a , typename data_type_b , typename data_type_c ,
           <td></td>
           <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">sycl::queue &amp;&#160;</td>
+          <td class="paramname"><em>queue</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

@@ -54,6 +54,8 @@ var namespacegpu_1_1xetla =
     [ "bf16", "structgpu_1_1xetla_1_1bf16.html", "structgpu_1_1xetla_1_1bf16" ],
     [ "dropout_fwd_t", "structgpu_1_1xetla_1_1dropout__fwd__t.html", "structgpu_1_1xetla_1_1dropout__fwd__t" ],
     [ "get_uint_type", "structgpu_1_1xetla_1_1get__uint__type.html", "structgpu_1_1xetla_1_1get__uint__type" ],
+    [ "is_host_callable", "structgpu_1_1xetla_1_1is__host__callable.html", null ],
+    [ "is_host_callable< T, std::enable_if_t< T::host_callable==true > >", "structgpu_1_1xetla_1_1is__host__callable_3_01T_00_01std_1_1enable__if__t_3_01T_1_1host__callable_0a_0atrue_01_4_01_4.html", null ],
     [ "is_internal_type", "structgpu_1_1xetla_1_1is__internal__type.html", null ],
     [ "load_store_attr_t", "structgpu_1_1xetla_1_1load__store__attr__t.html", null ],
     [ "load_store_attr_t< gpu_arch::Xe >", "structgpu_1_1xetla_1_1load__store__attr__t_3_01gpu__arch_1_1Xe_01_4.html", null ],

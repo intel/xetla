@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.1</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.2</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -123,17 +123,17 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:ab8c31b17c76d9e26f3a705072134ed3d"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1uint__type.html#ab8c31b17c76d9e26f3a705072134ed3d">is_uint8</a> = sizeof(<a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>) == 1</td></tr>
+<tr class="memitem:ab8c31b17c76d9e26f3a705072134ed3d"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1uint__type.html#ab8c31b17c76d9e26f3a705072134ed3d">is_uint8</a> = sizeof(T) == 1</td></tr>
 <tr class="separator:ab8c31b17c76d9e26f3a705072134ed3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1da1bd280e31a5b793b7fd9fe23a53a3"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1uint__type.html#a1da1bd280e31a5b793b7fd9fe23a53a3">is_uint16</a> = sizeof(<a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>) == 2</td></tr>
+<tr class="memitem:a1da1bd280e31a5b793b7fd9fe23a53a3"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1uint__type.html#a1da1bd280e31a5b793b7fd9fe23a53a3">is_uint16</a> = sizeof(T) == 2</td></tr>
 <tr class="separator:a1da1bd280e31a5b793b7fd9fe23a53a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad639eceefbba44fe579dcf0206d4046b"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1uint__type.html#ad639eceefbba44fe579dcf0206d4046b">is_uint32</a> = sizeof(<a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>) == 4</td></tr>
+<tr class="memitem:ad639eceefbba44fe579dcf0206d4046b"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1uint__type.html#ad639eceefbba44fe579dcf0206d4046b">is_uint32</a> = sizeof(T) == 4</td></tr>
 <tr class="separator:ad639eceefbba44fe579dcf0206d4046b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e4a44f662a68c7ad1e33a5616be7593"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1uint__type.html#a3e4a44f662a68c7ad1e33a5616be7593">is_uint64</a> = sizeof(<a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>) == 8</td></tr>
+<tr class="memitem:a3e4a44f662a68c7ad1e33a5616be7593"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1uint__type.html#a3e4a44f662a68c7ad1e33a5616be7593">is_uint64</a> = sizeof(T) == 8</td></tr>
 <tr class="separator:a3e4a44f662a68c7ad1e33a5616be7593"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;<br />
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
 struct gpu::xetla::uint_type&lt; T &gt;</div><p >Get the unit representation of type T. </p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a4b2dd3b5f3914ef85abb62b71ffaac9c" name="a4b2dd3b5f3914ef85abb62b71ffaac9c"></a>
@@ -142,10 +142,10 @@ struct gpu::xetla::uint_type&lt; T &gt;</div><p >Get the unit representation of 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1uint__type.html">gpu::xetla::uint_type</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::type =  typename std::conditional&lt;<a class="el" href="structgpu_1_1xetla_1_1uint__type.html#ab8c31b17c76d9e26f3a705072134ed3d">is_uint8</a>, uint8_t, typename std::conditional&lt;<a class="el" href="structgpu_1_1xetla_1_1uint__type.html#a1da1bd280e31a5b793b7fd9fe23a53a3">is_uint16</a>, uint16_t, typename std::conditional&lt;<a class="el" href="structgpu_1_1xetla_1_1uint__type.html#ad639eceefbba44fe579dcf0206d4046b">is_uint32</a>, uint32_t, typename std::conditional&lt;<a class="el" href="structgpu_1_1xetla_1_1uint__type.html#a3e4a44f662a68c7ad1e33a5616be7593">is_uint64</a>, uint64_t, void&gt;::type&gt;::type&gt;::type&gt;::type</td>
+          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1uint__type.html">gpu::xetla::uint_type</a>&lt; T &gt;::type =  typename std::conditional&lt;<a class="el" href="structgpu_1_1xetla_1_1uint__type.html#ab8c31b17c76d9e26f3a705072134ed3d">is_uint8</a>, uint8_t, typename std::conditional&lt;<a class="el" href="structgpu_1_1xetla_1_1uint__type.html#a1da1bd280e31a5b793b7fd9fe23a53a3">is_uint16</a>, uint16_t, typename std::conditional&lt;<a class="el" href="structgpu_1_1xetla_1_1uint__type.html#ad639eceefbba44fe579dcf0206d4046b">is_uint32</a>, uint32_t, typename std::conditional&lt;<a class="el" href="structgpu_1_1xetla_1_1uint__type.html#a3e4a44f662a68c7ad1e33a5616be7593">is_uint64</a>, uint64_t, void&gt;::type&gt;::type&gt;::type&gt;::type</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -159,13 +159,13 @@ template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb6
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr bool <a class="el" href="structgpu_1_1xetla_1_1uint__type.html">gpu::xetla::uint_type</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::is_uint16 = sizeof(<a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>) == 2</td>
+          <td class="memname">constexpr bool <a class="el" href="structgpu_1_1xetla_1_1uint__type.html">gpu::xetla::uint_type</a>&lt; T &gt;::is_uint16 = sizeof(T) == 2</td>
         </tr>
       </table>
   </td>
@@ -183,13 +183,13 @@ template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb6
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr bool <a class="el" href="structgpu_1_1xetla_1_1uint__type.html">gpu::xetla::uint_type</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::is_uint32 = sizeof(<a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>) == 4</td>
+          <td class="memname">constexpr bool <a class="el" href="structgpu_1_1xetla_1_1uint__type.html">gpu::xetla::uint_type</a>&lt; T &gt;::is_uint32 = sizeof(T) == 4</td>
         </tr>
       </table>
   </td>
@@ -207,13 +207,13 @@ template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb6
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr bool <a class="el" href="structgpu_1_1xetla_1_1uint__type.html">gpu::xetla::uint_type</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::is_uint64 = sizeof(<a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>) == 8</td>
+          <td class="memname">constexpr bool <a class="el" href="structgpu_1_1xetla_1_1uint__type.html">gpu::xetla::uint_type</a>&lt; T &gt;::is_uint64 = sizeof(T) == 8</td>
         </tr>
       </table>
   </td>
@@ -231,13 +231,13 @@ template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb6
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr bool <a class="el" href="structgpu_1_1xetla_1_1uint__type.html">gpu::xetla::uint_type</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::is_uint8 = sizeof(<a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>) == 1</td>
+          <td class="memname">constexpr bool <a class="el" href="structgpu_1_1xetla_1_1uint__type.html">gpu::xetla::uint_type</a>&lt; T &gt;::is_uint8 = sizeof(T) == 1</td>
         </tr>
       </table>
   </td>

@@ -2,7 +2,7 @@ var structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__bwd__t =
 [
     [ "arguments_t", "structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__bwd__t_1_1arguments__t.html", "structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__bwd__t_1_1arguments__t" ],
     [ "arch_attr", "structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__bwd__t.html#a56bb956d6f00e9bb323fb40c921f2b55", null ],
-    [ "bgm_perf_tuning_knob", "structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__bwd__t.html#ac3cfd3693aff2c91e626ffe7ec1ba61e", null ],
+    [ "bgm_perf_tuning_knob", "structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__bwd__t.html#a3de9910576dae4fa535335bdd2d42b55", null ],
     [ "brgemm_arguments_128x128", "structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__bwd__t.html#a453567cf5d743041312cbb8bf9ac9eb9", null ],
     [ "brgemm_arguments_128x256", "structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__bwd__t.html#acd0f39a94d69c26cb720947e83087e03", null ],
     [ "brgemm_arguments_128x64", "structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__bwd__t.html#a8e55149e2a2658e68133d9c9babc7964", null ],

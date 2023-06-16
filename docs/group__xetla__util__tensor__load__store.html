@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.1</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.2</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -160,11 +160,11 @@ Functions</h2></td></tr>
 <tr class="memdesc:gae779bb3a3626f9c8e36dbc330e269c39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the y coordinate in the given tensor descriptor.  <a href="group__xetla__util__tensor__load__store.html#gae779bb3a3626f9c8e36dbc330e269c39">More...</a><br /></td></tr>
 <tr class="separator:gae779bb3a3626f9c8e36dbc330e269c39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaeecc58189c2cb085251223db2f4737da"><td class="memTemplParams" colspan="2">template&lt;typename Ty , uint32_t N, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L1H = cache_hint::none, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L3H = cache_hint::none, bool transpose = false, bool transform = false&gt; </td></tr>
-<tr class="memitem:gaeecc58189c2cb085251223db2f4737da"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; Ty, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__xetla__util__tensor__load__store.html#gaeecc58189c2cb085251223db2f4737da">gpu::xetla::xetla_tload_global</a> (<a class="el" href="group__xetla__util__tensor__load__store.html#ga42f510141eb50c17c2b0d1aa1edaf40d">xetla_tdescriptor</a> tdesc)</td></tr>
+<tr class="memitem:gaeecc58189c2cb085251223db2f4737da"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; Ty, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__xetla__util__tensor__load__store.html#gaeecc58189c2cb085251223db2f4737da">gpu::xetla::xetla_tload_global</a> (<a class="el" href="group__xetla__util__tensor__load__store.html#ga42f510141eb50c17c2b0d1aa1edaf40d">xetla_tdescriptor</a> tdesc)</td></tr>
 <tr class="memdesc:gaeecc58189c2cb085251223db2f4737da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tensor load API.  <a href="group__xetla__util__tensor__load__store.html#gaeecc58189c2cb085251223db2f4737da">More...</a><br /></td></tr>
 <tr class="separator:gaeecc58189c2cb085251223db2f4737da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gadeb20d3aecaea1a2fa1c64e99f7c0919"><td class="memTemplParams" colspan="2">template&lt;typename Ty , uint32_t N, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L1H = cache_hint::none, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L3H = cache_hint::none&gt; </td></tr>
-<tr class="memitem:gadeb20d3aecaea1a2fa1c64e99f7c0919"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__xetla__util__tensor__load__store.html#gadeb20d3aecaea1a2fa1c64e99f7c0919">gpu::xetla::xetla_tstore_global</a> (<a class="el" href="group__xetla__util__tensor__load__store.html#ga42f510141eb50c17c2b0d1aa1edaf40d">xetla_tdescriptor</a> tdesc, <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; Ty, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt; data)</td></tr>
+<tr class="memitem:gadeb20d3aecaea1a2fa1c64e99f7c0919"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__xetla__util__tensor__load__store.html#gadeb20d3aecaea1a2fa1c64e99f7c0919">gpu::xetla::xetla_tstore_global</a> (<a class="el" href="group__xetla__util__tensor__load__store.html#ga42f510141eb50c17c2b0d1aa1edaf40d">xetla_tdescriptor</a> tdesc, <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; Ty, N &gt; data)</td></tr>
 <tr class="memdesc:gadeb20d3aecaea1a2fa1c64e99f7c0919"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tensor store API.  <a href="group__xetla__util__tensor__load__store.html#gadeb20d3aecaea1a2fa1c64e99f7c0919">More...</a><br /></td></tr>
 <tr class="separator:gadeb20d3aecaea1a2fa1c64e99f7c0919"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga20cb0deb00796b1e7099082c08c3c68c"><td class="memTemplParams" colspan="2">template&lt;typename Ty , <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L1H = cache_hint::cached, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L3H = cache_hint::cached&gt; </td></tr>
@@ -172,7 +172,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:ga20cb0deb00796b1e7099082c08c3c68c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tensor prefetch API.  <a href="group__xetla__util__tensor__load__store.html#ga20cb0deb00796b1e7099082c08c3c68c">More...</a><br /></td></tr>
 <tr class="separator:ga20cb0deb00796b1e7099082c08c3c68c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8bd042e28e68f5e0bed3f378d57d4223"><td class="memTemplParams" colspan="2">template&lt;typename Ty , uint32_t N, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L1H = cache_hint::none, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L3H = cache_hint::none, <a class="el" href="namespacegpu_1_1xetla.html#a98afdf633baaa5ce76b93f0a2ffbba66">atomic_op</a> Op&gt; </td></tr>
-<tr class="memitem:ga8bd042e28e68f5e0bed3f378d57d4223"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__xetla__util__tensor__load__store.html#ga8bd042e28e68f5e0bed3f378d57d4223">gpu::xetla::xetla_tatomic_store_global</a> (<a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint64_t, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt; address, <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; Ty, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt; data, <a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt; pred=1)</td></tr>
+<tr class="memitem:ga8bd042e28e68f5e0bed3f378d57d4223"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__xetla__util__tensor__load__store.html#ga8bd042e28e68f5e0bed3f378d57d4223">gpu::xetla::xetla_tatomic_store_global</a> (<a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint64_t, N &gt; address, <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; Ty, N &gt; data, <a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; N &gt; pred=1)</td></tr>
 <tr class="memdesc:ga8bd042e28e68f5e0bed3f378d57d4223"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tensor atomic store API.  <a href="group__xetla__util__tensor__load__store.html#ga8bd042e28e68f5e0bed3f378d57d4223">More...</a><br /></td></tr>
 <tr class="separator:ga8bd042e28e68f5e0bed3f378d57d4223"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -539,19 +539,19 @@ template&lt;typename Ty , uint32_t N, <a class="el" href="namespacegpu_1_1xetla.
         <tr>
           <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> void gpu::xetla::xetla_tatomic_store_global </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint64_t, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint64_t, N &gt;&#160;</td>
           <td class="paramname"><em>address</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; Ty, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; Ty, N &gt;&#160;</td>
           <td class="paramname"><em>data</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; N &gt;&#160;</td>
           <td class="paramname"><em>pred</em> = <code>1</code>&#160;</td>
         </tr>
         <tr>
@@ -593,7 +593,7 @@ template&lt;typename Ty , uint32_t N, <a class="el" href="namespacegpu_1_1xetla.
 template&lt;typename Ty , uint32_t N, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L1H = cache_hint::none, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L3H = cache_hint::none, bool transpose = false, bool transform = false&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; Ty, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt; gpu::xetla::xetla_tload_global </td>
+          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; Ty, N &gt; gpu::xetla::xetla_tload_global </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="group__xetla__util__tensor__load__store.html#ga42f510141eb50c17c2b0d1aa1edaf40d">xetla_tdescriptor</a>&#160;</td>
           <td class="paramname"><em>tdesc</em></td><td>)</td>
@@ -678,7 +678,7 @@ template&lt;typename Ty , uint32_t N, <a class="el" href="namespacegpu_1_1xetla.
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; Ty, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; Ty, N &gt;&#160;</td>
           <td class="paramname"><em>data</em>&#160;</td>
         </tr>
         <tr>

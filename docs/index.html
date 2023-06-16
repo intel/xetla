@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>XeTLA: Intel® Xe Templates for Linear Algebra @ref C:/Users/sijialou/pj/xetla/CHANGELOG.md &quot;v0.3.1&quot;</title>
+<title>XeTLA: Intel® Xe Templates for Linear Algebra</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.1</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.2</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -103,39 +103,43 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Intel® Xe Templates for Linear Algebra v0.3.1 </div></div>
+  <div class="headertitle"><div class="title">Intel® Xe Templates for Linear Algebra </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_README"></a>Intel® Xe Templates for Linear Algebra (Intel® XeTLA) is a collection of SYCL/eSIMD templates that enable high-performance General Matrix Multiply (GEMM), Convolution (CONV), and related computations on Intel Xe GPU architecture. Intel® XeTLA offers reusable C++ templates for subgroup, workgroup, and kernel levels, allowing developers to optimize and specialize kernels based on data types, tiling policies, algorithms, fusion policies, and more.</p>
+<div class="textblock"><p ><a class="anchor" id="md_README"></a> <em>Intel® XeTLA v0.3.2 - June 2023</em></p>
+<p >Intel® Xe Templates for Linear Algebra (Intel® XeTLA) is a collection of SYCL/ESIMD templates that enable high-performance General Matrix Multiply (GEMM), Convolution (CONV), and related computations on Intel Xe GPU architecture. Intel® XeTLA offers reusable C++ templates for kernel, work-group and sub-group levels, allowing developers to optimize and specialize kernels based on data types, tiling policies, algorithms, fusion policies, and more.</p>
 <p >One of the key features of Intel® XeTLA is its ability to abstract and hide details of Xe hardware implementations, particularly those related to matrix computations, such as the systolic array and other low level instructions. This ensures that SYCL/DPC++ developers can focus on leveraging the performance benefits of Intel® XeTLA without being burdened by hardware-specific instructions.</p>
 <h1><a class="anchor" id="autotoc_md1"></a>
 Features</h1>
-<h2><a class="anchor" id="autotoc_md2"></a>
-GEMM</h2>
 <ul>
-<li>Data type<ul>
+<li>GEMM<ul>
+<li>Data Type<ul>
 <li>Vector-engine-based: <code>fp32</code></li>
 <li>Matrix-engine-based: <code>tf32</code>, <code>fp16</code>, <code>bf16</code></li>
 </ul>
 </li>
-<li>Memory layout<ul>
-<li>Matrix A: row-major, col-major</li>
-<li>Matrix B: row-major, col-major</li>
-<li>Matrix C: row-major</li>
+<li>Memory Layout<ul>
+<li>Matrix A: <code>row-major</code>, <code>col-major</code></li>
+<li>Matrix B: <code>row-major</code>, <code>col-major</code></li>
+<li>Matrix C: <code>row-major</code></li>
+</ul>
+</li>
 </ul>
 </li>
 <li>Epilogue<ul>
-<li>Bias_add</li>
-<li>Relu</li>
-<li>Gelu forward + backward</li>
+<li>Bias Add</li>
+<li>GELU Forward</li>
+<li>GELU Backward</li>
+<li>RELU</li>
+<li>Residual Add</li>
 </ul>
 </li>
 </ul>
-<h1><a class="anchor" id="autotoc_md3"></a>
+<h1><a class="anchor" id="autotoc_md2"></a>
 Security</h1>
 <p >See Intel's <a href="https://www.intel.com/content/www/us/en/security-center/default.html">Security Center</a> for information on how to report a potential security issue or vulnerability.</p>
 <p >See also: Security Policy</p>
-<h1><a class="anchor" id="autotoc_md4"></a>
+<h1><a class="anchor" id="autotoc_md3"></a>
 Copyright</h1>
 <p >Copyright (c) 2022-2023 Intel Corporation Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at</p>
 <p ><a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></p>

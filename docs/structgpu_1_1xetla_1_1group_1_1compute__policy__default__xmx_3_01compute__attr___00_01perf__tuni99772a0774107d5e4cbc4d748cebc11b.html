@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.1</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.2</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -131,8 +131,8 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a29acfac46532f46fbdc888fe19e4c421"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__xmx_3_01compute__attr___00_01perf__tuni99772a0774107d5e4cbc4d748cebc11b.html#a29acfac46532f46fbdc888fe19e4c421">accum_step</a> = perf_tuning_knob::accum_step</td></tr>
-<tr class="separator:a29acfac46532f46fbdc888fe19e4c421"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b12c42bdd1744b273f7c62b877a7dad"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__xmx_3_01compute__attr___00_01perf__tuni99772a0774107d5e4cbc4d748cebc11b.html#a8b12c42bdd1744b273f7c62b877a7dad">k_stride</a> = perf_tuning_knob::k_stride</td></tr>
+<tr class="separator:a8b12c42bdd1744b273f7c62b877a7dad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca988f2ec8d6930051ab93c24fd97a1a"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__xmx_3_01compute__attr___00_01perf__tuni99772a0774107d5e4cbc4d748cebc11b.html#aca988f2ec8d6930051ab93c24fd97a1a">stages</a> = perf_tuning_knob::stages</td></tr>
 <tr class="separator:aca988f2ec8d6930051ab93c24fd97a1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa53c4a90336f84712f2d9d5a6c6b7543"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__xmx_3_01compute__attr___00_01perf__tuni99772a0774107d5e4cbc4d748cebc11b.html#aa53c4a90336f84712f2d9d5a6c6b7543">sync_freq</a> = perf_tuning_knob::sync_freq</td></tr>
@@ -233,30 +233,6 @@ template&lt;typename compute_attr_ , typename perf_tuning_knob_ &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a29acfac46532f46fbdc888fe19e4c421" name="a29acfac46532f46fbdc888fe19e4c421"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29acfac46532f46fbdc888fe19e4c421">&#9670;&#160;</a></span>accum_step</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename compute_attr_ , typename perf_tuning_knob_ &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr int <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__xmx.html">gpu::xetla::group::compute_policy_default_xmx</a>&lt; compute_attr_, perf_tuning_knob_, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;::accum_step = perf_tuning_knob::accum_step</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="abb0c7d0f8ec02fd95335b94333f8aa6d" name="abb0c7d0f8ec02fd95335b94333f8aa6d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abb0c7d0f8ec02fd95335b94333f8aa6d">&#9670;&#160;</a></span>arch_tag</h2>
 
@@ -366,6 +342,30 @@ template&lt;typename compute_attr_ , typename perf_tuning_knob_ &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__xmx.html">gpu::xetla::group::compute_policy_default_xmx</a>&lt; compute_attr_, perf_tuning_knob_, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;::block_size_y_a = 16</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8b12c42bdd1744b273f7c62b877a7dad" name="a8b12c42bdd1744b273f7c62b877a7dad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b12c42bdd1744b273f7c62b877a7dad">&#9670;&#160;</a></span>k_stride</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename compute_attr_ , typename perf_tuning_knob_ &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__xmx.html">gpu::xetla::group::compute_policy_default_xmx</a>&lt; compute_attr_, perf_tuning_knob_, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;::k_stride = perf_tuning_knob::k_stride</td>
         </tr>
       </table>
   </td>
