@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.1</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.2</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -124,7 +124,7 @@ Collaboration diagram for Memory access APIs:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ga4d89ab60cfe99dedda4f94185b13eed9"><td class="memTemplParams" colspan="2">template&lt;typename Ty , uint8_t NElts = 1, <a class="el" href="namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76">data_size</a> DS = data_size::default_size, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L1H = cache_hint::cached, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L3H = cache_hint::cached, int N&gt; </td></tr>
-<tr class="memitem:ga4d89ab60cfe99dedda4f94185b13eed9"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__xetla__core__memory.html#ga4d89ab60cfe99dedda4f94185b13eed9">gpu::xetla::xetla_prefetch_global</a> (Ty *p, <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt; offsets, <a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt; pred=1)</td></tr>
+<tr class="memitem:ga4d89ab60cfe99dedda4f94185b13eed9"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__xetla__core__memory.html#ga4d89ab60cfe99dedda4f94185b13eed9">gpu::xetla::xetla_prefetch_global</a> (Ty *p, <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, N &gt; offsets, <a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; N &gt; pred=1)</td></tr>
 <tr class="memdesc:ga4d89ab60cfe99dedda4f94185b13eed9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stateless scattered prefetch.  <a href="group__xetla__core__memory.html#ga4d89ab60cfe99dedda4f94185b13eed9">More...</a><br /></td></tr>
 <tr class="separator:ga4d89ab60cfe99dedda4f94185b13eed9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga12977e49695cb3cfd62359da9ccf2cf8"><td class="memTemplParams" colspan="2">template&lt;typename Ty , uint8_t NElts = 1, <a class="el" href="namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76">data_size</a> DS = data_size::default_size, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L1H = cache_hint::cached, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L3H = cache_hint::cached&gt; </td></tr>
@@ -132,7 +132,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:ga12977e49695cb3cfd62359da9ccf2cf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stateless block prefetch (transposed gather with 1 channel).  <a href="group__xetla__core__memory.html#ga12977e49695cb3cfd62359da9ccf2cf8">More...</a><br /></td></tr>
 <tr class="separator:ga12977e49695cb3cfd62359da9ccf2cf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga103379b76c960b4967704e057b7969ba"><td class="memTemplParams" colspan="2">template&lt;typename Ty , uint8_t NElts = 1, <a class="el" href="namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76">data_size</a> DS = data_size::default_size, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L1H = cache_hint::none, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L3H = cache_hint::none, int N&gt; </td></tr>
-<tr class="memitem:ga103379b76c960b4967704e057b7969ba"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; Ty, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> *NElts &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__xetla__core__memory.html#ga103379b76c960b4967704e057b7969ba">gpu::xetla::xetla_load_global</a> (Ty *p, <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt; offsets, <a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt; pred=1)</td></tr>
+<tr class="memitem:ga103379b76c960b4967704e057b7969ba"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; Ty, N *NElts &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__xetla__core__memory.html#ga103379b76c960b4967704e057b7969ba">gpu::xetla::xetla_load_global</a> (Ty *p, <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, N &gt; offsets, <a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; N &gt; pred=1)</td></tr>
 <tr class="memdesc:ga103379b76c960b4967704e057b7969ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stateless scattered load.  <a href="group__xetla__core__memory.html#ga103379b76c960b4967704e057b7969ba">More...</a><br /></td></tr>
 <tr class="separator:ga103379b76c960b4967704e057b7969ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6bc059e7ed30628a868a1033a2e626ee"><td class="memTemplParams" colspan="2">template&lt;typename Ty , uint8_t NElts = 1, <a class="el" href="namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76">data_size</a> DS = data_size::default_size, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L1H = cache_hint::none, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L3H = cache_hint::none&gt; </td></tr>
@@ -140,23 +140,23 @@ Functions</h2></td></tr>
 <tr class="memdesc:ga6bc059e7ed30628a868a1033a2e626ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stateless block load (transposed gather with 1 channel).  <a href="group__xetla__core__memory.html#ga6bc059e7ed30628a868a1033a2e626ee">More...</a><br /></td></tr>
 <tr class="separator:ga6bc059e7ed30628a868a1033a2e626ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga03572dc0e489ddc1e352f82914d8d4c9"><td class="memTemplParams" colspan="2">template&lt;typename Ty , uint8_t NElts = 1, <a class="el" href="namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76">data_size</a> DS = data_size::default_size, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L1H = cache_hint::none, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L3H = cache_hint::none, int N&gt; </td></tr>
-<tr class="memitem:ga03572dc0e489ddc1e352f82914d8d4c9"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__xetla__core__memory.html#ga03572dc0e489ddc1e352f82914d8d4c9">gpu::xetla::xetla_store_global</a> (Ty *p, <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt; offsets, <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; Ty, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> *NElts &gt; vals, <a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt; pred=1)</td></tr>
+<tr class="memitem:ga03572dc0e489ddc1e352f82914d8d4c9"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__xetla__core__memory.html#ga03572dc0e489ddc1e352f82914d8d4c9">gpu::xetla::xetla_store_global</a> (Ty *p, <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, N &gt; offsets, <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; Ty, N *NElts &gt; vals, <a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; N &gt; pred=1)</td></tr>
 <tr class="memdesc:ga03572dc0e489ddc1e352f82914d8d4c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stateless scattered store.  <a href="group__xetla__core__memory.html#ga03572dc0e489ddc1e352f82914d8d4c9">More...</a><br /></td></tr>
 <tr class="separator:ga03572dc0e489ddc1e352f82914d8d4c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad6f2ca1d7a16efedd55131e88f3642c9"><td class="memTemplParams" colspan="2">template&lt;typename Ty , uint8_t NElts = 1, <a class="el" href="namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76">data_size</a> DS = data_size::default_size, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L1H = cache_hint::none, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L3H = cache_hint::none&gt; </td></tr>
 <tr class="memitem:gad6f2ca1d7a16efedd55131e88f3642c9"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__xetla__core__memory.html#gad6f2ca1d7a16efedd55131e88f3642c9">gpu::xetla::xetla_store_global</a> (Ty *p, uint64_t offset, <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; Ty, NElts &gt; vals)</td></tr>
 <tr class="memdesc:gad6f2ca1d7a16efedd55131e88f3642c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stateless block store (transposed scatter with 1 channel).  <a href="group__xetla__core__memory.html#gad6f2ca1d7a16efedd55131e88f3642c9">More...</a><br /></td></tr>
 <tr class="separator:gad6f2ca1d7a16efedd55131e88f3642c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad0c0e26e34fa6bbdca0de3a76ddb8f5c"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a98afdf633baaa5ce76b93f0a2ffbba66">atomic_op</a> Op, typename <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , int N, <a class="el" href="namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76">data_size</a> DS = data_size::default_size, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L1H = cache_hint::none, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L3H = cache_hint::none&gt; </td></tr>
-<tr class="memitem:gad0c0e26e34fa6bbdca0de3a76ddb8f5c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__xetla__core__memory.html#gad0c0e26e34fa6bbdca0de3a76ddb8f5c">gpu::xetla::xetla_atomic_global</a> (<a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *p, <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt; offsets, <a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt; pred)</td></tr>
+<tr class="memitem:gad0c0e26e34fa6bbdca0de3a76ddb8f5c"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a98afdf633baaa5ce76b93f0a2ffbba66">atomic_op</a> Op, typename T , int N, <a class="el" href="namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76">data_size</a> DS = data_size::default_size, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L1H = cache_hint::none, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L3H = cache_hint::none&gt; </td></tr>
+<tr class="memitem:gad0c0e26e34fa6bbdca0de3a76ddb8f5c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__xetla__core__memory.html#gad0c0e26e34fa6bbdca0de3a76ddb8f5c">gpu::xetla::xetla_atomic_global</a> (T *p, <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, N &gt; offsets, <a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; N &gt; pred)</td></tr>
 <tr class="memdesc:gad0c0e26e34fa6bbdca0de3a76ddb8f5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stateless scattered atomic (0 src).  <a href="group__xetla__core__memory.html#gad0c0e26e34fa6bbdca0de3a76ddb8f5c">More...</a><br /></td></tr>
 <tr class="separator:gad0c0e26e34fa6bbdca0de3a76ddb8f5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5fc1f1948643e09670002ec57137f83b"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a98afdf633baaa5ce76b93f0a2ffbba66">atomic_op</a> Op, typename <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , int N, <a class="el" href="namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76">data_size</a> DS = data_size::default_size, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L1H = cache_hint::none, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L3H = cache_hint::none&gt; </td></tr>
-<tr class="memitem:ga5fc1f1948643e09670002ec57137f83b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__xetla__core__memory.html#ga5fc1f1948643e09670002ec57137f83b">gpu::xetla::xetla_atomic_global</a> (<a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *p, <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt; offsets, <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt; src0, <a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt; pred)</td></tr>
+<tr class="memitem:ga5fc1f1948643e09670002ec57137f83b"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a98afdf633baaa5ce76b93f0a2ffbba66">atomic_op</a> Op, typename T , int N, <a class="el" href="namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76">data_size</a> DS = data_size::default_size, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L1H = cache_hint::none, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L3H = cache_hint::none&gt; </td></tr>
+<tr class="memitem:ga5fc1f1948643e09670002ec57137f83b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__xetla__core__memory.html#ga5fc1f1948643e09670002ec57137f83b">gpu::xetla::xetla_atomic_global</a> (T *p, <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, N &gt; offsets, <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; T, N &gt; src0, <a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; N &gt; pred)</td></tr>
 <tr class="memdesc:ga5fc1f1948643e09670002ec57137f83b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stateless scattered atomic (1 src).  <a href="group__xetla__core__memory.html#ga5fc1f1948643e09670002ec57137f83b">More...</a><br /></td></tr>
 <tr class="separator:ga5fc1f1948643e09670002ec57137f83b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3aeec8413bd2e81ed58b2c54043a59ca"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a98afdf633baaa5ce76b93f0a2ffbba66">atomic_op</a> Op, typename <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , int N, <a class="el" href="namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76">data_size</a> DS = data_size::default_size, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L1H = cache_hint::none, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L3H = cache_hint::none&gt; </td></tr>
-<tr class="memitem:ga3aeec8413bd2e81ed58b2c54043a59ca"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__xetla__core__memory.html#ga3aeec8413bd2e81ed58b2c54043a59ca">gpu::xetla::xetla_atomic_global</a> (<a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *p, <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt; offsets, <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt; src0, <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt; src1, <a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt; pred)</td></tr>
+<tr class="memitem:ga3aeec8413bd2e81ed58b2c54043a59ca"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a98afdf633baaa5ce76b93f0a2ffbba66">atomic_op</a> Op, typename T , int N, <a class="el" href="namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76">data_size</a> DS = data_size::default_size, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L1H = cache_hint::none, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L3H = cache_hint::none&gt; </td></tr>
+<tr class="memitem:ga3aeec8413bd2e81ed58b2c54043a59ca"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__xetla__core__memory.html#ga3aeec8413bd2e81ed58b2c54043a59ca">gpu::xetla::xetla_atomic_global</a> (T *p, <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, N &gt; offsets, <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; T, N &gt; src0, <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; T, N &gt; src1, <a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; N &gt; pred)</td></tr>
 <tr class="memdesc:ga3aeec8413bd2e81ed58b2c54043a59ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stateless scattered atomic (2 src).  <a href="group__xetla__core__memory.html#ga3aeec8413bd2e81ed58b2c54043a59ca">More...</a><br /></td></tr>
 <tr class="separator:ga3aeec8413bd2e81ed58b2c54043a59ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga530064066727fd84339ed21a07ba973b"><td class="memTemplParams" colspan="2">template&lt;uint32_t SLMSize&gt; </td></tr>
@@ -164,7 +164,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:ga530064066727fd84339ed21a07ba973b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declare per-work-group slm size.  <a href="group__xetla__core__memory.html#ga530064066727fd84339ed21a07ba973b">More...</a><br /></td></tr>
 <tr class="separator:ga530064066727fd84339ed21a07ba973b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8ea747b34159e29f8feb9d2ce6f1ea81"><td class="memTemplParams" colspan="2">template&lt;typename Ty , uint8_t NElts = 1, <a class="el" href="namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76">data_size</a> DS = data_size::default_size, int N&gt; </td></tr>
-<tr class="memitem:ga8ea747b34159e29f8feb9d2ce6f1ea81"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; Ty, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> *NElts &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__xetla__core__memory.html#ga8ea747b34159e29f8feb9d2ce6f1ea81">gpu::xetla::xetla_load_local</a> (<a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt; offsets, <a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt; pred=1)</td></tr>
+<tr class="memitem:ga8ea747b34159e29f8feb9d2ce6f1ea81"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; Ty, N *NElts &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__xetla__core__memory.html#ga8ea747b34159e29f8feb9d2ce6f1ea81">gpu::xetla::xetla_load_local</a> (<a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, N &gt; offsets, <a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; N &gt; pred=1)</td></tr>
 <tr class="memdesc:ga8ea747b34159e29f8feb9d2ce6f1ea81"><td class="mdescLeft">&#160;</td><td class="mdescRight">SLM scattered load.  <a href="group__xetla__core__memory.html#ga8ea747b34159e29f8feb9d2ce6f1ea81">More...</a><br /></td></tr>
 <tr class="separator:ga8ea747b34159e29f8feb9d2ce6f1ea81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaf180b3b4d5e2ceec14e6c6ccb42a130b"><td class="memTemplParams" colspan="2">template&lt;typename Ty , uint8_t NElts = 1, <a class="el" href="namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76">data_size</a> DS = data_size::default_size&gt; </td></tr>
@@ -172,27 +172,27 @@ Functions</h2></td></tr>
 <tr class="memdesc:gaf180b3b4d5e2ceec14e6c6ccb42a130b"><td class="mdescLeft">&#160;</td><td class="mdescRight">SLM block load.  <a href="group__xetla__core__memory.html#gaf180b3b4d5e2ceec14e6c6ccb42a130b">More...</a><br /></td></tr>
 <tr class="separator:gaf180b3b4d5e2ceec14e6c6ccb42a130b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae5a98482c237779c19b8d32ad199e206"><td class="memTemplParams" colspan="2">template&lt;typename Ty , uint8_t NElts = 1, <a class="el" href="namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76">data_size</a> DS = data_size::default_size, int N&gt; </td></tr>
-<tr class="memitem:gae5a98482c237779c19b8d32ad199e206"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__xetla__core__memory.html#gae5a98482c237779c19b8d32ad199e206">gpu::xetla::xetla_store_local</a> (<a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt; offsets, <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; Ty, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> *NElts &gt; vals, <a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt; pred=1)</td></tr>
+<tr class="memitem:gae5a98482c237779c19b8d32ad199e206"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__xetla__core__memory.html#gae5a98482c237779c19b8d32ad199e206">gpu::xetla::xetla_store_local</a> (<a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, N &gt; offsets, <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; Ty, N *NElts &gt; vals, <a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; N &gt; pred=1)</td></tr>
 <tr class="memdesc:gae5a98482c237779c19b8d32ad199e206"><td class="mdescLeft">&#160;</td><td class="mdescRight">SLM scattered store.  <a href="group__xetla__core__memory.html#gae5a98482c237779c19b8d32ad199e206">More...</a><br /></td></tr>
 <tr class="separator:gae5a98482c237779c19b8d32ad199e206"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga1a340b34b3475ab665d68267fea50cd0"><td class="memTemplParams" colspan="2">template&lt;typename Ty , uint8_t NElts = 1, <a class="el" href="namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76">data_size</a> DS = data_size::default_size&gt; </td></tr>
 <tr class="memitem:ga1a340b34b3475ab665d68267fea50cd0"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__xetla__core__memory.html#ga1a340b34b3475ab665d68267fea50cd0">gpu::xetla::xetla_store_local</a> (uint32_t offset, <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; Ty, NElts &gt; vals)</td></tr>
 <tr class="memdesc:ga1a340b34b3475ab665d68267fea50cd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">SLM block store (transposed SLM scatter with 1 channel).  <a href="group__xetla__core__memory.html#ga1a340b34b3475ab665d68267fea50cd0">More...</a><br /></td></tr>
 <tr class="separator:ga1a340b34b3475ab665d68267fea50cd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0da945efe90b2fd829a59177340c7903"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a98afdf633baaa5ce76b93f0a2ffbba66">atomic_op</a> Op, typename <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , int N, <a class="el" href="namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76">data_size</a> DS = data_size::default_size&gt; </td></tr>
-<tr class="memitem:ga0da945efe90b2fd829a59177340c7903"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__xetla__core__memory.html#ga0da945efe90b2fd829a59177340c7903">gpu::xetla::xetla_atomic_local</a> (<a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt; offsets, <a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt; pred)</td></tr>
+<tr class="memitem:ga0da945efe90b2fd829a59177340c7903"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a98afdf633baaa5ce76b93f0a2ffbba66">atomic_op</a> Op, typename T , int N, <a class="el" href="namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76">data_size</a> DS = data_size::default_size&gt; </td></tr>
+<tr class="memitem:ga0da945efe90b2fd829a59177340c7903"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__xetla__core__memory.html#ga0da945efe90b2fd829a59177340c7903">gpu::xetla::xetla_atomic_local</a> (<a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, N &gt; offsets, <a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; N &gt; pred)</td></tr>
 <tr class="memdesc:ga0da945efe90b2fd829a59177340c7903"><td class="mdescLeft">&#160;</td><td class="mdescRight">SLM scattered atomic (0 src).  <a href="group__xetla__core__memory.html#ga0da945efe90b2fd829a59177340c7903">More...</a><br /></td></tr>
 <tr class="separator:ga0da945efe90b2fd829a59177340c7903"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gabe53caa69315b7dec3488f544a220727"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a98afdf633baaa5ce76b93f0a2ffbba66">atomic_op</a> Op, typename <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , int N, <a class="el" href="namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76">data_size</a> DS = data_size::default_size&gt; </td></tr>
-<tr class="memitem:gabe53caa69315b7dec3488f544a220727"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__xetla__core__memory.html#gabe53caa69315b7dec3488f544a220727">gpu::xetla::xetla_atomic_local</a> (<a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt; offsets, <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt; src0, <a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt; pred)</td></tr>
+<tr class="memitem:gabe53caa69315b7dec3488f544a220727"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a98afdf633baaa5ce76b93f0a2ffbba66">atomic_op</a> Op, typename T , int N, <a class="el" href="namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76">data_size</a> DS = data_size::default_size&gt; </td></tr>
+<tr class="memitem:gabe53caa69315b7dec3488f544a220727"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__xetla__core__memory.html#gabe53caa69315b7dec3488f544a220727">gpu::xetla::xetla_atomic_local</a> (<a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, N &gt; offsets, <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; T, N &gt; src0, <a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; N &gt; pred)</td></tr>
 <tr class="memdesc:gabe53caa69315b7dec3488f544a220727"><td class="mdescLeft">&#160;</td><td class="mdescRight">SLM scattered atomic (1 src).  <a href="group__xetla__core__memory.html#gabe53caa69315b7dec3488f544a220727">More...</a><br /></td></tr>
 <tr class="separator:gabe53caa69315b7dec3488f544a220727"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga040951eb98ed9c412266f8ab7535baa6"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a98afdf633baaa5ce76b93f0a2ffbba66">atomic_op</a> Op, typename <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , int N, <a class="el" href="namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76">data_size</a> DS = data_size::default_size&gt; </td></tr>
-<tr class="memitem:ga040951eb98ed9c412266f8ab7535baa6"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__xetla__core__memory.html#ga040951eb98ed9c412266f8ab7535baa6">gpu::xetla::xetla_atomic_local</a> (<a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt; offsets, <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt; src0, <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt; src1, <a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt; pred)</td></tr>
+<tr class="memitem:ga040951eb98ed9c412266f8ab7535baa6"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a98afdf633baaa5ce76b93f0a2ffbba66">atomic_op</a> Op, typename T , int N, <a class="el" href="namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76">data_size</a> DS = data_size::default_size&gt; </td></tr>
+<tr class="memitem:ga040951eb98ed9c412266f8ab7535baa6"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__xetla__core__memory.html#ga040951eb98ed9c412266f8ab7535baa6">gpu::xetla::xetla_atomic_local</a> (<a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, N &gt; offsets, <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; T, N &gt; src0, <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; T, N &gt; src1, <a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; N &gt; pred)</td></tr>
 <tr class="memdesc:ga040951eb98ed9c412266f8ab7535baa6"><td class="mdescLeft">&#160;</td><td class="mdescRight">SLM scattered atomic (2 src).  <a href="group__xetla__core__memory.html#ga040951eb98ed9c412266f8ab7535baa6">More...</a><br /></td></tr>
 <tr class="separator:ga040951eb98ed9c412266f8ab7535baa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga405ebabe993e0ba91b46e34a2731665a"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a56a2620546cb08dd7d850ee1251220b9">memory_kind</a> Kind = memory_kind::untyped_global, <a class="el" href="namespacegpu_1_1xetla.html#a4e759570d78bb1d0797c4e3dac86fed8">fence_op</a> FenceOp = fence_op::none, <a class="el" href="namespacegpu_1_1xetla.html#a52fa7b5d0cce636d18ddead7b3ef0072">fence_scope</a> Scope = fence_scope::group, int N = 16&gt; </td></tr>
-<tr class="memitem:ga405ebabe993e0ba91b46e34a2731665a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__xetla__core__memory.html#ga405ebabe993e0ba91b46e34a2731665a">gpu::xetla::xetla_fence</a> (<a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt; pred=1)</td></tr>
+<tr class="memitem:ga405ebabe993e0ba91b46e34a2731665a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__xetla__core__memory.html#ga405ebabe993e0ba91b46e34a2731665a">gpu::xetla::xetla_fence</a> (<a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; N &gt; pred=1)</td></tr>
 <tr class="memdesc:ga405ebabe993e0ba91b46e34a2731665a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Memory fence.  <a href="group__xetla__core__memory.html#ga405ebabe993e0ba91b46e34a2731665a">More...</a><br /></td></tr>
 <tr class="separator:ga405ebabe993e0ba91b46e34a2731665a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -205,24 +205,24 @@ Functions</h2></td></tr>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a98afdf633baaa5ce76b93f0a2ffbba66">atomic_op</a> Op, typename <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , int N, <a class="el" href="namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76">data_size</a> DS = data_size::default_size, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L1H = cache_hint::none, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L3H = cache_hint::none&gt; </div>
+template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a98afdf633baaa5ce76b93f0a2ffbba66">atomic_op</a> Op, typename T , int N, <a class="el" href="namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76">data_size</a> DS = data_size::default_size, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L1H = cache_hint::none, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L3H = cache_hint::none&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt; gpu::xetla::xetla_atomic_global </td>
+          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; T, N &gt; gpu::xetla::xetla_atomic_global </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *&#160;</td>
+          <td class="paramtype">T *&#160;</td>
           <td class="paramname"><em>p</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, N &gt;&#160;</td>
           <td class="paramname"><em>offsets</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; N &gt;&#160;</td>
           <td class="paramname"><em>pred</em>&#160;</td>
         </tr>
         <tr>
@@ -263,30 +263,30 @@ template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a98afdf633baaa5ce76b9
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a98afdf633baaa5ce76b93f0a2ffbba66">atomic_op</a> Op, typename <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , int N, <a class="el" href="namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76">data_size</a> DS = data_size::default_size, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L1H = cache_hint::none, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L3H = cache_hint::none&gt; </div>
+template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a98afdf633baaa5ce76b93f0a2ffbba66">atomic_op</a> Op, typename T , int N, <a class="el" href="namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76">data_size</a> DS = data_size::default_size, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L1H = cache_hint::none, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L3H = cache_hint::none&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt; gpu::xetla::xetla_atomic_global </td>
+          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; T, N &gt; gpu::xetla::xetla_atomic_global </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *&#160;</td>
+          <td class="paramtype">T *&#160;</td>
           <td class="paramname"><em>p</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, N &gt;&#160;</td>
           <td class="paramname"><em>offsets</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; T, N &gt;&#160;</td>
           <td class="paramname"><em>src0</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; N &gt;&#160;</td>
           <td class="paramname"><em>pred</em>&#160;</td>
         </tr>
         <tr>
@@ -328,36 +328,36 @@ template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a98afdf633baaa5ce76b9
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a98afdf633baaa5ce76b93f0a2ffbba66">atomic_op</a> Op, typename <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , int N, <a class="el" href="namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76">data_size</a> DS = data_size::default_size, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L1H = cache_hint::none, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L3H = cache_hint::none&gt; </div>
+template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a98afdf633baaa5ce76b93f0a2ffbba66">atomic_op</a> Op, typename T , int N, <a class="el" href="namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76">data_size</a> DS = data_size::default_size, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L1H = cache_hint::none, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L3H = cache_hint::none&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt; gpu::xetla::xetla_atomic_global </td>
+          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; T, N &gt; gpu::xetla::xetla_atomic_global </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *&#160;</td>
+          <td class="paramtype">T *&#160;</td>
           <td class="paramname"><em>p</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, N &gt;&#160;</td>
           <td class="paramname"><em>offsets</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; T, N &gt;&#160;</td>
           <td class="paramname"><em>src0</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; T, N &gt;&#160;</td>
           <td class="paramname"><em>src1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; N &gt;&#160;</td>
           <td class="paramname"><em>pred</em>&#160;</td>
         </tr>
         <tr>
@@ -400,18 +400,18 @@ template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a98afdf633baaa5ce76b9
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a98afdf633baaa5ce76b93f0a2ffbba66">atomic_op</a> Op, typename <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , int N, <a class="el" href="namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76">data_size</a> DS = data_size::default_size&gt; </div>
+template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a98afdf633baaa5ce76b93f0a2ffbba66">atomic_op</a> Op, typename T , int N, <a class="el" href="namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76">data_size</a> DS = data_size::default_size&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt; gpu::xetla::xetla_atomic_local </td>
+          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; T, N &gt; gpu::xetla::xetla_atomic_local </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, N &gt;&#160;</td>
           <td class="paramname"><em>offsets</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; N &gt;&#160;</td>
           <td class="paramname"><em>pred</em>&#160;</td>
         </tr>
         <tr>
@@ -449,24 +449,24 @@ template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a98afdf633baaa5ce76b9
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a98afdf633baaa5ce76b93f0a2ffbba66">atomic_op</a> Op, typename <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , int N, <a class="el" href="namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76">data_size</a> DS = data_size::default_size&gt; </div>
+template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a98afdf633baaa5ce76b93f0a2ffbba66">atomic_op</a> Op, typename T , int N, <a class="el" href="namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76">data_size</a> DS = data_size::default_size&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt; gpu::xetla::xetla_atomic_local </td>
+          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; T, N &gt; gpu::xetla::xetla_atomic_local </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, N &gt;&#160;</td>
           <td class="paramname"><em>offsets</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; T, N &gt;&#160;</td>
           <td class="paramname"><em>src0</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; N &gt;&#160;</td>
           <td class="paramname"><em>pred</em>&#160;</td>
         </tr>
         <tr>
@@ -505,30 +505,30 @@ template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a98afdf633baaa5ce76b9
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a98afdf633baaa5ce76b93f0a2ffbba66">atomic_op</a> Op, typename <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , int N, <a class="el" href="namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76">data_size</a> DS = data_size::default_size&gt; </div>
+template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a98afdf633baaa5ce76b93f0a2ffbba66">atomic_op</a> Op, typename T , int N, <a class="el" href="namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76">data_size</a> DS = data_size::default_size&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt; gpu::xetla::xetla_atomic_local </td>
+          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; T, N &gt; gpu::xetla::xetla_atomic_local </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, N &gt;&#160;</td>
           <td class="paramname"><em>offsets</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; T, N &gt;&#160;</td>
           <td class="paramname"><em>src0</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; T, N &gt;&#160;</td>
           <td class="paramname"><em>src1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; N &gt;&#160;</td>
           <td class="paramname"><em>pred</em>&#160;</td>
         </tr>
         <tr>
@@ -573,7 +573,7 @@ template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a56a2620546cb08dd7d85
         <tr>
           <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> void gpu::xetla::xetla_fence </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; N &gt;&#160;</td>
           <td class="paramname"><em>pred</em> = <code>1</code></td><td>)</td>
           <td></td>
         </tr>
@@ -662,7 +662,7 @@ template&lt;typename Ty , uint8_t NElts = 1, <a class="el" href="namespacegpu_1_
 template&lt;typename Ty , uint8_t NElts = 1, <a class="el" href="namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76">data_size</a> DS = data_size::default_size, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L1H = cache_hint::none, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L3H = cache_hint::none, int N&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; Ty, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> *NElts &gt; gpu::xetla::xetla_load_global </td>
+          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; Ty, N *NElts &gt; gpu::xetla::xetla_load_global </td>
           <td>(</td>
           <td class="paramtype">Ty *&#160;</td>
           <td class="paramname"><em>p</em>, </td>
@@ -670,13 +670,13 @@ template&lt;typename Ty , uint8_t NElts = 1, <a class="el" href="namespacegpu_1_
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, N &gt;&#160;</td>
           <td class="paramname"><em>offsets</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; N &gt;&#160;</td>
           <td class="paramname"><em>pred</em> = <code>1</code>&#160;</td>
         </tr>
         <tr>
@@ -763,15 +763,15 @@ template&lt;typename Ty , uint8_t NElts = 1, <a class="el" href="namespacegpu_1_
 template&lt;typename Ty , uint8_t NElts = 1, <a class="el" href="namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76">data_size</a> DS = data_size::default_size, int N&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; Ty, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> *NElts &gt; gpu::xetla::xetla_load_local </td>
+          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; Ty, N *NElts &gt; gpu::xetla::xetla_load_local </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, N &gt;&#160;</td>
           <td class="paramname"><em>offsets</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; N &gt;&#160;</td>
           <td class="paramname"><em>pred</em> = <code>1</code>&#160;</td>
         </tr>
         <tr>
@@ -902,13 +902,13 @@ template&lt;typename Ty , uint8_t NElts = 1, <a class="el" href="namespacegpu_1_
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, N &gt;&#160;</td>
           <td class="paramname"><em>offsets</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; N &gt;&#160;</td>
           <td class="paramname"><em>pred</em> = <code>1</code>&#160;</td>
         </tr>
         <tr>
@@ -1021,19 +1021,19 @@ template&lt;typename Ty , uint8_t NElts = 1, <a class="el" href="namespacegpu_1_
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, N &gt;&#160;</td>
           <td class="paramname"><em>offsets</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; Ty, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> *NElts &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; Ty, N *NElts &gt;&#160;</td>
           <td class="paramname"><em>vals</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; N &gt;&#160;</td>
           <td class="paramname"><em>pred</em> = <code>1</code>&#160;</td>
         </tr>
         <tr>
@@ -1132,19 +1132,19 @@ template&lt;typename Ty , uint8_t NElts = 1, <a class="el" href="namespacegpu_1_
         <tr>
           <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> void gpu::xetla::xetla_store_local </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, N &gt;&#160;</td>
           <td class="paramname"><em>offsets</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; Ty, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> *NElts &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; Ty, N *NElts &gt;&#160;</td>
           <td class="paramname"><em>vals</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask</a>&lt; N &gt;&#160;</td>
           <td class="paramname"><em>pred</em> = <code>1</code>&#160;</td>
         </tr>
         <tr>

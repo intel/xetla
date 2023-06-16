@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.1</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.2</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -170,9 +170,6 @@ Include dependency graph for basic_gemm.cpp:</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aee0d7cc109c38290eab64115fdd5a8e0"><td class="memTemplParams" colspan="2">template&lt;typename data_type_a , typename data_type_b , typename data_type_c , typename data_type_acc  = float&gt; </td></tr>
-<tr class="memitem:aee0d7cc109c38290eab64115fdd5a8e0"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="basic__gemm_8cpp.html#aee0d7cc109c38290eab64115fdd5a8e0">gemm_result_validate</a> (data_type_a *A, data_type_b *<a class="el" href="multi__head__attention_8cpp.html#a111da81ae5883147168bbb8366377b10">B</a>, data_type_c *C, uint32_t m, uint32_t k, uint32_t n, <a class="el" href="namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561">mem_layout</a> mem_layout_a_=mem_layout::row_major, <a class="el" href="namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561">mem_layout</a> mem_layout_b_=mem_layout::row_major)</td></tr>
-<tr class="separator:aee0d7cc109c38290eab64115fdd5a8e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a319a7053aa9cecaba6dba359a208c855"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="basic__gemm_8cpp.html#a319a7053aa9cecaba6dba359a208c855">basic_gemm_run</a> (uint32_t iter)</td></tr>
 <tr class="separator:a319a7053aa9cecaba6dba359a208c855"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="basic__gemm_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
@@ -191,72 +188,6 @@ Functions</h2></td></tr>
           <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>iter</em></td><td>)</td>
           <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aee0d7cc109c38290eab64115fdd5a8e0" name="aee0d7cc109c38290eab64115fdd5a8e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aee0d7cc109c38290eab64115fdd5a8e0">&#9670;&#160;</a></span>gemm_result_validate()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename data_type_a , typename data_type_b , typename data_type_c , typename data_type_acc  = float&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">int gemm_result_validate </td>
-          <td>(</td>
-          <td class="paramtype">data_type_a *&#160;</td>
-          <td class="paramname"><em>A</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">data_type_b *&#160;</td>
-          <td class="paramname"><em>B</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">data_type_c *&#160;</td>
-          <td class="paramname"><em>C</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>m</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>k</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>n</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561">mem_layout</a>&#160;</td>
-          <td class="paramname"><em>mem_layout_a_</em> = <code>mem_layout::row_major</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561">mem_layout</a>&#160;</td>
-          <td class="paramname"><em>mem_layout_b_</em> = <code>mem_layout::row_major</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">

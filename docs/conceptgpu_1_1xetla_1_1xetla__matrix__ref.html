@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.1</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.2</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -117,7 +117,7 @@ $(document).ready(function(){initNavTree('conceptgpu_1_1xetla_1_1xetla__matrix__
 <div class="line">                  <span class="keyword">typename</span> Ta::element_type, native_type_t&lt;Ty&gt;&gt; &amp;&amp;(N1</div>
 <div class="line">                  == __ESIMD_NS::shape_type&lt;Ta&gt;::type::Size_y)</div>
 <div class="line">        &amp;&amp; (N2 == __ESIMD_NS::shape_type&lt;Ta&gt;::type::Size_x)</div>
-<div class="ttc" id="aconceptgpu_1_1xetla_1_1xetla__matrix__ref_html"><div class="ttname"><a href="conceptgpu_1_1xetla_1_1xetla__matrix__ref.html">gpu::xetla::xetla_matrix_ref</a></div><div class="ttdoc">Workaround for ESIMD matrix(2D) ref type.</div><div class="ttdef"><b>Definition:</b> base_types.hpp:205</div></div>
+<div class="ttc" id="aconceptgpu_1_1xetla_1_1xetla__matrix__ref_html"><div class="ttname"><a href="conceptgpu_1_1xetla_1_1xetla__matrix__ref.html">gpu::xetla::xetla_matrix_ref</a></div><div class="ttdoc">Workaround for ESIMD matrix(2D) ref type.</div><div class="ttdef"><b>Definition:</b> base_types.hpp:211</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Workaround for ESIMD matrix(2D) ref type. </p>
 <p >Use C++20 <a href="https://en.cppreference.com/w/cpp/language/constraints">concept</a> to constrains the scope of auto. </p><dl class="section note"><dt>Note</dt><dd>Need to be used together with <code>__REF__</code>, i.e. <code>"xetla_matrix_ref __REF__"</code> is the full declaration of xetla matrix reference. </dd></dl>

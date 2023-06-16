@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.1</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.2</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -141,6 +141,10 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1tf32.html">gpu::xetla::tf32</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">xetla <a class="el" href="structgpu_1_1xetla_1_1tf32.html" title="xetla tf32 data type.">tf32</a> data type.  <a href="structgpu_1_1xetla_1_1tf32.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1is__host__callable.html">gpu::xetla::is_host_callable&lt; T, typename &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1is__host__callable_3_01T_00_01std_1_1enable__if__t_3_01T_1_1host__callable_0a_0atrue_01_4_01_4.html">gpu::xetla::is_host_callable&lt; T, std::enable_if_t&lt; T::host_callable==true &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1is__internal__type.html">gpu::xetla::is_internal_type&lt; T &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to check if the type is xetla internal data type.  <a href="structgpu_1_1xetla_1_1is__internal__type.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -170,12 +174,12 @@ Macros</h2></td></tr>
 Typedefs</h2></td></tr>
 <tr class="memitem:ga7148d7c2fc8e5ae5213b5ab5d0467d41"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__xetla__core__base__types.html#ga7148d7c2fc8e5ae5213b5ab5d0467d41">gpu::xetla::fp16</a> = sycl::half</td></tr>
 <tr class="separator:ga7148d7c2fc8e5ae5213b5ab5d0467d41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga867d57463cf5035ba65bc9ef2e6049b3"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </td></tr>
-<tr class="memitem:ga867d57463cf5035ba65bc9ef2e6049b3"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__xetla__core__base__types.html#ga867d57463cf5035ba65bc9ef2e6049b3">gpu::xetla::native_type_t</a> = typename <a class="el" href="structgpu_1_1xetla_1_1native__type.html">native_type</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::type</td></tr>
+<tr class="memitem:ga867d57463cf5035ba65bc9ef2e6049b3"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga867d57463cf5035ba65bc9ef2e6049b3"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__xetla__core__base__types.html#ga867d57463cf5035ba65bc9ef2e6049b3">gpu::xetla::native_type_t</a> = typename <a class="el" href="structgpu_1_1xetla_1_1native__type.html">native_type</a>&lt; T &gt;::type</td></tr>
 <tr class="memdesc:ga867d57463cf5035ba65bc9ef2e6049b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the native data type of T.  <a href="group__xetla__core__base__types.html#ga867d57463cf5035ba65bc9ef2e6049b3">More...</a><br /></td></tr>
 <tr class="separator:ga867d57463cf5035ba65bc9ef2e6049b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga91a3f78430a6bd2356e286df96846fba"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </td></tr>
-<tr class="memitem:ga91a3f78430a6bd2356e286df96846fba"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__xetla__core__base__types.html#ga91a3f78430a6bd2356e286df96846fba">gpu::xetla::uint_type_t</a> = typename <a class="el" href="structgpu_1_1xetla_1_1uint__type.html">uint_type</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::type</td></tr>
+<tr class="memitem:ga91a3f78430a6bd2356e286df96846fba"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga91a3f78430a6bd2356e286df96846fba"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__xetla__core__base__types.html#ga91a3f78430a6bd2356e286df96846fba">gpu::xetla::uint_type_t</a> = typename <a class="el" href="structgpu_1_1xetla_1_1uint__type.html">uint_type</a>&lt; T &gt;::type</td></tr>
 <tr class="memdesc:ga91a3f78430a6bd2356e286df96846fba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the uint representation of type T.  <a href="group__xetla__core__base__types.html#ga91a3f78430a6bd2356e286df96846fba">More...</a><br /></td></tr>
 <tr class="separator:ga91a3f78430a6bd2356e286df96846fba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4a9c083ae3716a7a7cb47400b30c536e"><td class="memTemplParams" colspan="2">template&lt;int Size&gt; </td></tr>
@@ -183,15 +187,15 @@ Typedefs</h2></td></tr>
 <tr class="memdesc:ga4a9c083ae3716a7a7cb47400b30c536e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the uint representation based on Size.  <a href="group__xetla__core__base__types.html#ga4a9c083ae3716a7a7cb47400b30c536e">More...</a><br /></td></tr>
 <tr class="separator:ga4a9c083ae3716a7a7cb47400b30c536e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8cf5d016d24c8870706e20c376287e04"><td class="memTemplParams" colspan="2">template&lt;typename Ty , uint32_t N&gt; </td></tr>
-<tr class="memitem:ga8cf5d016d24c8870706e20c376287e04"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">gpu::xetla::xetla_vector</a> = __ESIMD_NS::simd&lt; <a class="el" href="group__xetla__core__base__types.html#ga867d57463cf5035ba65bc9ef2e6049b3">native_type_t</a>&lt; Ty &gt;, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt;</td></tr>
+<tr class="memitem:ga8cf5d016d24c8870706e20c376287e04"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">gpu::xetla::xetla_vector</a> = __ESIMD_NS::simd&lt; <a class="el" href="group__xetla__core__base__types.html#ga867d57463cf5035ba65bc9ef2e6049b3">native_type_t</a>&lt; Ty &gt;, N &gt;</td></tr>
 <tr class="memdesc:ga8cf5d016d24c8870706e20c376287e04"><td class="mdescLeft">&#160;</td><td class="mdescRight">wrapper for xetla_vector.  <a href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">More...</a><br /></td></tr>
 <tr class="separator:ga8cf5d016d24c8870706e20c376287e04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaf7f6ada235a6c3ab30aa12c97f5d7459"><td class="memTemplParams" colspan="2">template&lt;uint32_t N&gt; </td></tr>
-<tr class="memitem:gaf7f6ada235a6c3ab30aa12c97f5d7459"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">gpu::xetla::xetla_mask</a> = __ESIMD_NS::simd_mask&lt; <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt;</td></tr>
+<tr class="memitem:gaf7f6ada235a6c3ab30aa12c97f5d7459"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">gpu::xetla::xetla_mask</a> = __ESIMD_NS::simd_mask&lt; N &gt;</td></tr>
 <tr class="memdesc:gaf7f6ada235a6c3ab30aa12c97f5d7459"><td class="mdescLeft">&#160;</td><td class="mdescRight">wrapper for xetla_mask.  <a href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">More...</a><br /></td></tr>
 <tr class="separator:gaf7f6ada235a6c3ab30aa12c97f5d7459"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga12efbb645d6aa25ef72da8f42f2316e9"><td class="memTemplParams" colspan="2">template&lt;uint32_t N&gt; </td></tr>
-<tr class="memitem:ga12efbb645d6aa25ef72da8f42f2316e9"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__xetla__core__base__types.html#ga12efbb645d6aa25ef72da8f42f2316e9">gpu::xetla::xetla_mask_int</a> = __ESIMD_NS::simd_mask&lt; <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a> &gt;</td></tr>
+<tr class="memitem:ga12efbb645d6aa25ef72da8f42f2316e9"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__xetla__core__base__types.html#ga12efbb645d6aa25ef72da8f42f2316e9">gpu::xetla::xetla_mask_int</a> = __ESIMD_NS::simd_mask&lt; N &gt;</td></tr>
 <tr class="memdesc:ga12efbb645d6aa25ef72da8f42f2316e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">wrapper for xetla_mask_int.  <a href="group__xetla__core__base__types.html#ga12efbb645d6aa25ef72da8f42f2316e9">More...</a><br /></td></tr>
 <tr class="separator:ga12efbb645d6aa25ef72da8f42f2316e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -254,10 +258,10 @@ template&lt;int Size&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="group__xetla__core__base__types.html#ga867d57463cf5035ba65bc9ef2e6049b3">gpu::xetla::native_type_t</a> = typedef typename <a class="el" href="structgpu_1_1xetla_1_1native__type.html">native_type</a>&lt;<a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;::type</td>
+          <td class="memname">using <a class="el" href="group__xetla__core__base__types.html#ga867d57463cf5035ba65bc9ef2e6049b3">gpu::xetla::native_type_t</a> = typedef typename <a class="el" href="structgpu_1_1xetla_1_1native__type.html">native_type</a>&lt;T&gt;::type</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -272,10 +276,10 @@ template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb6
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="group__xetla__core__base__types.html#ga91a3f78430a6bd2356e286df96846fba">gpu::xetla::uint_type_t</a> = typedef typename <a class="el" href="structgpu_1_1xetla_1_1uint__type.html">uint_type</a>&lt;<a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;::type</td>
+          <td class="memname">using <a class="el" href="group__xetla__core__base__types.html#ga91a3f78430a6bd2356e286df96846fba">gpu::xetla::uint_type_t</a> = typedef typename <a class="el" href="structgpu_1_1xetla_1_1uint__type.html">uint_type</a>&lt;T&gt;::type</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -293,7 +297,7 @@ template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb6
 template&lt;uint32_t N&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">gpu::xetla::xetla_mask</a> = typedef __ESIMD_NS::simd_mask&lt;<a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a>&gt;</td>
+          <td class="memname">using <a class="el" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">gpu::xetla::xetla_mask</a> = typedef __ESIMD_NS::simd_mask&lt;N&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -317,7 +321,7 @@ template&lt;uint32_t N&gt; </div>
 template&lt;uint32_t N&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="group__xetla__core__base__types.html#ga12efbb645d6aa25ef72da8f42f2316e9">gpu::xetla::xetla_mask_int</a> = typedef __ESIMD_NS::simd_mask&lt;<a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a>&gt;</td>
+          <td class="memname">using <a class="el" href="group__xetla__core__base__types.html#ga12efbb645d6aa25ef72da8f42f2316e9">gpu::xetla::xetla_mask_int</a> = typedef __ESIMD_NS::simd_mask&lt;N&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -341,7 +345,7 @@ template&lt;uint32_t N&gt; </div>
 template&lt;typename Ty , uint32_t N&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">gpu::xetla::xetla_vector</a> = typedef __ESIMD_NS::simd&lt;<a class="el" href="group__xetla__core__base__types.html#ga867d57463cf5035ba65bc9ef2e6049b3">native_type_t</a>&lt;Ty&gt;, <a class="el" href="multi__head__attention_8cpp.html#a0240ac851181b84ac374872dc5434ee4">N</a>&gt;</td>
+          <td class="memname">using <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">gpu::xetla::xetla_vector</a> = typedef __ESIMD_NS::simd&lt;<a class="el" href="group__xetla__core__base__types.html#ga867d57463cf5035ba65bc9ef2e6049b3">native_type_t</a>&lt;Ty&gt;, N&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.1</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.2</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -118,13 +118,13 @@ $(document).ready(function(){initNavTree('structgru__layer.html',''); initResiza
 Public Types</h2></td></tr>
 <tr class="memitem:ab2851adab058fbb91e494e1d53774994"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgru__layer.html#ab2851adab058fbb91e494e1d53774994">perf_tuning_knob</a> = <a class="el" href="structgpu_1_1xetla_1_1group_1_1perf__tuning__knob__t.html">perf_tuning_knob_t</a>&lt; sg_tile_k, <a class="el" href="structgru__layer.html#a718794eb9cbe3b98111ff19f19bbd256">prefetch_distance</a>, periodic_sync_interval &gt;</td></tr>
 <tr class="separator:ab2851adab058fbb91e494e1d53774994"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b6e22276a34d8544b78507fd68e13d7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgru__layer.html#a7b6e22276a34d8544b78507fd68e13d7">compute_attr</a> = <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__attr__t.html">group::compute_attr_t</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, Act_T &gt;</td></tr>
+<tr class="memitem:a7b6e22276a34d8544b78507fd68e13d7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgru__layer.html#a7b6e22276a34d8544b78507fd68e13d7">compute_attr</a> = <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__attr__t.html">group::compute_attr_t</a>&lt; T, T, Act_T &gt;</td></tr>
 <tr class="separator:a7b6e22276a34d8544b78507fd68e13d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4923cc646ffa67b8b00da15e0497e39a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgru__layer.html#a4923cc646ffa67b8b00da15e0497e39a">compute_policy</a> = <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__xmx.html">compute_policy_default_xmx</a>&lt; <a class="el" href="structgru__layer.html#a7b6e22276a34d8544b78507fd68e13d7">compute_attr</a>, <a class="el" href="structgru__layer.html#ab2851adab058fbb91e494e1d53774994">perf_tuning_knob</a>, gpu_arch::Xe &gt;</td></tr>
 <tr class="separator:a4923cc646ffa67b8b00da15e0497e39a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a751ec3476213cf73e2c3ea7c795d80b4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgru__layer.html#a751ec3476213cf73e2c3ea7c795d80b4">mem_desc_a_t</a> = <a class="el" href="structgpu_1_1xetla_1_1mem__desc__t.html">mem_desc_t</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, layout_input, mem_loc_input &gt;</td></tr>
+<tr class="memitem:a751ec3476213cf73e2c3ea7c795d80b4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgru__layer.html#a751ec3476213cf73e2c3ea7c795d80b4">mem_desc_a_t</a> = <a class="el" href="structgpu_1_1xetla_1_1mem__desc__t.html">mem_desc_t</a>&lt; T, layout_input, mem_loc_input &gt;</td></tr>
 <tr class="separator:a751ec3476213cf73e2c3ea7c795d80b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34c3c622b13a1857e84b0477602cfd37"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgru__layer.html#a34c3c622b13a1857e84b0477602cfd37">mem_desc_b_t</a> = <a class="el" href="structgpu_1_1xetla_1_1mem__desc__t.html">mem_desc_t</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, layout_weight, mem_loc_weight &gt;</td></tr>
+<tr class="memitem:a34c3c622b13a1857e84b0477602cfd37"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgru__layer.html#a34c3c622b13a1857e84b0477602cfd37">mem_desc_b_t</a> = <a class="el" href="structgpu_1_1xetla_1_1mem__desc__t.html">mem_desc_t</a>&lt; T, layout_weight, mem_loc_weight &gt;</td></tr>
 <tr class="separator:a34c3c622b13a1857e84b0477602cfd37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64dee4ab62d72d85d75eb38adc28b80b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgru__layer.html#a64dee4ab62d72d85d75eb38adc28b80b">tile_shape</a> = <a class="el" href="structgpu_1_1xetla_1_1group_1_1tile__shape__t.html">tile_shape_t</a>&lt; wg_tile_n, wg_tile_m, sg_tile_n, sg_tile_m &gt;</td></tr>
 <tr class="separator:a64dee4ab62d72d85d75eb38adc28b80b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -136,26 +136,26 @@ Public Types</h2></td></tr>
 <tr class="separator:a7fc65a4b330fd3b0d1c9aa2756a29bc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4f2c4a045e55f8b268251dc6b059329"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgru__layer.html#ab4f2c4a045e55f8b268251dc6b059329">matAcc_t</a> = typename brgemm_op::matAcc_t</td></tr>
 <tr class="separator:ab4f2c4a045e55f8b268251dc6b059329"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a720eef80488cc1b2e8cdbb118242fd38"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgru__layer.html#a720eef80488cc1b2e8cdbb118242fd38">mem_desc_c_t</a> = <a class="el" href="structgpu_1_1xetla_1_1mem__desc__t.html">mem_desc_t</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, layout_out, mem_loc_out &gt;</td></tr>
+<tr class="memitem:a720eef80488cc1b2e8cdbb118242fd38"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgru__layer.html#a720eef80488cc1b2e8cdbb118242fd38">mem_desc_c_t</a> = <a class="el" href="structgpu_1_1xetla_1_1mem__desc__t.html">mem_desc_t</a>&lt; T, layout_out, mem_loc_out &gt;</td></tr>
 <tr class="separator:a720eef80488cc1b2e8cdbb118242fd38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6744920473a3c26ee265afd1d36c108a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgru__layer.html#a6744920473a3c26ee265afd1d36c108a">epilogue_t</a> = <a class="el" href="structgru__layer.html#a6744920473a3c26ee265afd1d36c108a">epilogue_t</a>&lt; <a class="el" href="structgpu_1_1xetla_1_1group_1_1epilogue__policy__default.html">epilogue_policy_default</a>&lt; gpu_arch::Xe &gt;, <a class="el" href="structgru__layer.html#a64dee4ab62d72d85d75eb38adc28b80b">tile_shape</a>, <a class="el" href="structgru__layer.html#a720eef80488cc1b2e8cdbb118242fd38">mem_desc_c_t</a> &gt;</td></tr>
-<tr class="separator:a6744920473a3c26ee265afd1d36c108a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac934b9577529ff5831d61f729d2d893"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgru__layer.html#aac934b9577529ff5831d61f729d2d893">epilogue_t</a> = <a class="el" href="structgru__layer.html#aac934b9577529ff5831d61f729d2d893">epilogue_t</a>&lt; <a class="el" href="structgpu_1_1xetla_1_1group_1_1epilogue__policy__default.html">epilogue_policy_default</a>&lt; <a class="el" href="structgpu_1_1xetla_1_1result__overwrite.html">result_overwrite</a>, gpu_arch::Xe &gt;, <a class="el" href="structgru__layer.html#a64dee4ab62d72d85d75eb38adc28b80b">tile_shape</a>, <a class="el" href="structgru__layer.html#a720eef80488cc1b2e8cdbb118242fd38">mem_desc_c_t</a> &gt;</td></tr>
+<tr class="separator:aac934b9577529ff5831d61f729d2d893"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a350542bcb3e7055d82ff9e08fa0554d0"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgru__layer.html#a350542bcb3e7055d82ff9e08fa0554d0">epilogue_args_t</a> = typename epilogue_t::arguments_t</td></tr>
 <tr class="separator:a350542bcb3e7055d82ff9e08fa0554d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0134c4a4096d6d2e8b0d4118ea65d0f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgru__layer.html#ac0134c4a4096d6d2e8b0d4118ea65d0f">matC_tile_desc_t</a> = <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__desc__t.html">tile_desc_t</a>&lt; matAcc_t::tile_size_x, matAcc_t::tile_size_y, matAcc_t::block_size_x, matAcc_t::block_size_y, reg_layout::tiled &gt;</td></tr>
 <tr class="separator:ac0134c4a4096d6d2e8b0d4118ea65d0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a423c99a319a8c9666994ec9239bae156"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgru__layer.html#a423c99a319a8c9666994ec9239bae156">mat_hidden_t</a> = <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__t.html">tile_t</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="structgru__layer.html#ac0134c4a4096d6d2e8b0d4118ea65d0f">matC_tile_desc_t</a> &gt;</td></tr>
+<tr class="memitem:a423c99a319a8c9666994ec9239bae156"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgru__layer.html#a423c99a319a8c9666994ec9239bae156">mat_hidden_t</a> = <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__t.html">tile_t</a>&lt; T, <a class="el" href="structgru__layer.html#ac0134c4a4096d6d2e8b0d4118ea65d0f">matC_tile_desc_t</a> &gt;</td></tr>
 <tr class="separator:a423c99a319a8c9666994ec9239bae156"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaec8286f422976aa36bdf1ba4a90f49a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgru__layer.html#aaec8286f422976aa36bdf1ba4a90f49a">matC_t</a> = <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__t.html">tile_t</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="structgru__layer.html#ac0134c4a4096d6d2e8b0d4118ea65d0f">matC_tile_desc_t</a> &gt;</td></tr>
+<tr class="memitem:aaec8286f422976aa36bdf1ba4a90f49a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgru__layer.html#aaec8286f422976aa36bdf1ba4a90f49a">matC_t</a> = <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__t.html">tile_t</a>&lt; T, <a class="el" href="structgru__layer.html#ac0134c4a4096d6d2e8b0d4118ea65d0f">matC_tile_desc_t</a> &gt;</td></tr>
 <tr class="separator:aaec8286f422976aa36bdf1ba4a90f49a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c9893fa6381f6cf081e5e04ddabf5fa"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgru__layer.html#a5c9893fa6381f6cf081e5e04ddabf5fa">mat_hidden_payload_t</a> = <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t.html">mem_payload_t</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="structgru__layer.html#ac0134c4a4096d6d2e8b0d4118ea65d0f">matC_tile_desc_t</a>, msg_type_v&lt; <a class="el" href="structgru__layer.html#ac0134c4a4096d6d2e8b0d4118ea65d0f">matC_tile_desc_t</a>, mem_loc_input &gt;, layout_input, mem_loc_input, gpu_arch::Xe &gt;</td></tr>
+<tr class="memitem:a5c9893fa6381f6cf081e5e04ddabf5fa"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgru__layer.html#a5c9893fa6381f6cf081e5e04ddabf5fa">mat_hidden_payload_t</a> = <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t.html">mem_payload_t</a>&lt; T, <a class="el" href="structgru__layer.html#ac0134c4a4096d6d2e8b0d4118ea65d0f">matC_tile_desc_t</a>, msg_type_v&lt; <a class="el" href="structgru__layer.html#ac0134c4a4096d6d2e8b0d4118ea65d0f">matC_tile_desc_t</a>, mem_loc_input &gt;, layout_input, mem_loc_input, gpu_arch::Xe &gt;</td></tr>
 <tr class="separator:a5c9893fa6381f6cf081e5e04ddabf5fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2685cbca1e1e6aaece5fc1e38ec05cac"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgru__layer.html#a2685cbca1e1e6aaece5fc1e38ec05cac">matC_payload_t</a> = <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t.html">mem_payload_t</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="structgru__layer.html#ac0134c4a4096d6d2e8b0d4118ea65d0f">matC_tile_desc_t</a>, msg_type::block_2d, layout_out, mem_loc_out, gpu_arch::Xe &gt;</td></tr>
+<tr class="memitem:a2685cbca1e1e6aaece5fc1e38ec05cac"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgru__layer.html#a2685cbca1e1e6aaece5fc1e38ec05cac">matC_payload_t</a> = <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t.html">mem_payload_t</a>&lt; T, <a class="el" href="structgru__layer.html#ac0134c4a4096d6d2e8b0d4118ea65d0f">matC_tile_desc_t</a>, msg_type::block_2d, layout_out, mem_loc_out, gpu_arch::Xe &gt;</td></tr>
 <tr class="separator:a2685cbca1e1e6aaece5fc1e38ec05cac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a419aa8d6c74b725b7bd6bd2b254fa01e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgru__layer.html#a419aa8d6c74b725b7bd6bd2b254fa01e">call</a> (<a class="el" href="classgpu_1_1xetla_1_1xetla__exec__item.html">xetla_exec_item</a>&lt; 3 &gt; &amp;ei, <a class="el" href="structfused__config__t.html">fused_config_t</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; *args)</td></tr>
+<tr class="memitem:a419aa8d6c74b725b7bd6bd2b254fa01e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgru__layer.html#a419aa8d6c74b725b7bd6bd2b254fa01e">call</a> (<a class="el" href="classgpu_1_1xetla_1_1xetla__exec__item.html">xetla_exec_item</a>&lt; 3 &gt; &amp;ei, <a class="el" href="structfused__config__t.html">fused_config_t</a>&lt; T &gt; *args)</td></tr>
 <tr class="separator:a419aa8d6c74b725b7bd6bd2b254fa01e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
@@ -174,10 +174,10 @@ Static Public Attributes</h2></td></tr>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m, uint32_t sg_tile_n, uint32_t sg_tile_k, mem_layout layout_input = mem_layout::row_major, mem_layout layout_weight = mem_layout::row_major, mem_layout layout_out = mem_layout::row_major, mem_space mem_loc_input = mem_space::global, mem_space mem_loc_weight = mem_space::global, mem_space mem_loc_out = mem_space::global, uint32_t periodic_sync_interval = 0&gt; </div>
+template&lt;typename T , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m, uint32_t sg_tile_n, uint32_t sg_tile_k, mem_layout layout_input = mem_layout::row_major, mem_layout layout_weight = mem_layout::row_major, mem_layout layout_out = mem_layout::row_major, mem_space mem_loc_input = mem_space::global, mem_space mem_loc_weight = mem_space::global, mem_space mem_loc_out = mem_space::global, uint32_t periodic_sync_interval = 0&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structgru__layer.html">gru_layer</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;::brgemm_arguments =  typename brgemm_op::arguments_t</td>
+          <td class="memname">using <a class="el" href="structgru__layer.html">gru_layer</a>&lt; T, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;::brgemm_arguments =  typename brgemm_op::arguments_t</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -190,10 +190,10 @@ template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb6
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m, uint32_t sg_tile_n, uint32_t sg_tile_k, mem_layout layout_input = mem_layout::row_major, mem_layout layout_weight = mem_layout::row_major, mem_layout layout_out = mem_layout::row_major, mem_space mem_loc_input = mem_space::global, mem_space mem_loc_weight = mem_space::global, mem_space mem_loc_out = mem_space::global, uint32_t periodic_sync_interval = 0&gt; </div>
+template&lt;typename T , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m, uint32_t sg_tile_n, uint32_t sg_tile_k, mem_layout layout_input = mem_layout::row_major, mem_layout layout_weight = mem_layout::row_major, mem_layout layout_out = mem_layout::row_major, mem_space mem_loc_input = mem_space::global, mem_space mem_loc_weight = mem_space::global, mem_space mem_loc_out = mem_space::global, uint32_t periodic_sync_interval = 0&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structgru__layer.html">gru_layer</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;::brgemm_op =  <a class="el" href="classgpu_1_1xetla_1_1group_1_1brgemm__t.html">brgemm_t</a>&lt;<a class="el" href="structgru__layer.html#a4923cc646ffa67b8b00da15e0497e39a">compute_policy</a>, <a class="el" href="structgru__layer.html#a64dee4ab62d72d85d75eb38adc28b80b">tile_shape</a>, <a class="el" href="structgru__layer.html#a751ec3476213cf73e2c3ea7c795d80b4">mem_desc_a_t</a>, <a class="el" href="structgru__layer.html#a34c3c622b13a1857e84b0477602cfd37">mem_desc_b_t</a>&gt;</td>
+          <td class="memname">using <a class="el" href="structgru__layer.html">gru_layer</a>&lt; T, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;::brgemm_op =  <a class="el" href="classgpu_1_1xetla_1_1group_1_1brgemm__t.html">brgemm_t</a>&lt;<a class="el" href="structgru__layer.html#a4923cc646ffa67b8b00da15e0497e39a">compute_policy</a>, <a class="el" href="structgru__layer.html#a64dee4ab62d72d85d75eb38adc28b80b">tile_shape</a>, <a class="el" href="structgru__layer.html#a751ec3476213cf73e2c3ea7c795d80b4">mem_desc_a_t</a>, <a class="el" href="structgru__layer.html#a34c3c622b13a1857e84b0477602cfd37">mem_desc_b_t</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -206,10 +206,10 @@ template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb6
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m, uint32_t sg_tile_n, uint32_t sg_tile_k, mem_layout layout_input = mem_layout::row_major, mem_layout layout_weight = mem_layout::row_major, mem_layout layout_out = mem_layout::row_major, mem_space mem_loc_input = mem_space::global, mem_space mem_loc_weight = mem_space::global, mem_space mem_loc_out = mem_space::global, uint32_t periodic_sync_interval = 0&gt; </div>
+template&lt;typename T , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m, uint32_t sg_tile_n, uint32_t sg_tile_k, mem_layout layout_input = mem_layout::row_major, mem_layout layout_weight = mem_layout::row_major, mem_layout layout_out = mem_layout::row_major, mem_space mem_loc_input = mem_space::global, mem_space mem_loc_weight = mem_space::global, mem_space mem_loc_out = mem_space::global, uint32_t periodic_sync_interval = 0&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structgru__layer.html">gru_layer</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;::compute_attr =  <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__attr__t.html">group::compute_attr_t</a>&lt;<a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, Act_T&gt;</td>
+          <td class="memname">using <a class="el" href="structgru__layer.html">gru_layer</a>&lt; T, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;::compute_attr =  <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__attr__t.html">group::compute_attr_t</a>&lt;T, T, Act_T&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -222,10 +222,10 @@ template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb6
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m, uint32_t sg_tile_n, uint32_t sg_tile_k, mem_layout layout_input = mem_layout::row_major, mem_layout layout_weight = mem_layout::row_major, mem_layout layout_out = mem_layout::row_major, mem_space mem_loc_input = mem_space::global, mem_space mem_loc_weight = mem_space::global, mem_space mem_loc_out = mem_space::global, uint32_t periodic_sync_interval = 0&gt; </div>
+template&lt;typename T , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m, uint32_t sg_tile_n, uint32_t sg_tile_k, mem_layout layout_input = mem_layout::row_major, mem_layout layout_weight = mem_layout::row_major, mem_layout layout_out = mem_layout::row_major, mem_space mem_loc_input = mem_space::global, mem_space mem_loc_weight = mem_space::global, mem_space mem_loc_out = mem_space::global, uint32_t periodic_sync_interval = 0&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structgru__layer.html">gru_layer</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;::compute_policy =  <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__xmx.html">compute_policy_default_xmx</a>&lt;<a class="el" href="structgru__layer.html#a7b6e22276a34d8544b78507fd68e13d7">compute_attr</a>, <a class="el" href="structgru__layer.html#ab2851adab058fbb91e494e1d53774994">perf_tuning_knob</a>, gpu_arch::Xe&gt;</td>
+          <td class="memname">using <a class="el" href="structgru__layer.html">gru_layer</a>&lt; T, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;::compute_policy =  <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__xmx.html">compute_policy_default_xmx</a>&lt;<a class="el" href="structgru__layer.html#a7b6e22276a34d8544b78507fd68e13d7">compute_attr</a>, <a class="el" href="structgru__layer.html#ab2851adab058fbb91e494e1d53774994">perf_tuning_knob</a>, gpu_arch::Xe&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -238,26 +238,26 @@ template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb6
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m, uint32_t sg_tile_n, uint32_t sg_tile_k, mem_layout layout_input = mem_layout::row_major, mem_layout layout_weight = mem_layout::row_major, mem_layout layout_out = mem_layout::row_major, mem_space mem_loc_input = mem_space::global, mem_space mem_loc_weight = mem_space::global, mem_space mem_loc_out = mem_space::global, uint32_t periodic_sync_interval = 0&gt; </div>
+template&lt;typename T , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m, uint32_t sg_tile_n, uint32_t sg_tile_k, mem_layout layout_input = mem_layout::row_major, mem_layout layout_weight = mem_layout::row_major, mem_layout layout_out = mem_layout::row_major, mem_space mem_loc_input = mem_space::global, mem_space mem_loc_weight = mem_space::global, mem_space mem_loc_out = mem_space::global, uint32_t periodic_sync_interval = 0&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structgru__layer.html">gru_layer</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;::epilogue_args_t =  typename epilogue_t::arguments_t</td>
+          <td class="memname">using <a class="el" href="structgru__layer.html">gru_layer</a>&lt; T, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;::epilogue_args_t =  typename epilogue_t::arguments_t</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a6744920473a3c26ee265afd1d36c108a" name="a6744920473a3c26ee265afd1d36c108a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6744920473a3c26ee265afd1d36c108a">&#9670;&#160;</a></span>epilogue_t</h2>
+<a id="aac934b9577529ff5831d61f729d2d893" name="aac934b9577529ff5831d61f729d2d893"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac934b9577529ff5831d61f729d2d893">&#9670;&#160;</a></span>epilogue_t</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m, uint32_t sg_tile_n, uint32_t sg_tile_k, mem_layout layout_input = mem_layout::row_major, mem_layout layout_weight = mem_layout::row_major, mem_layout layout_out = mem_layout::row_major, mem_space mem_loc_input = mem_space::global, mem_space mem_loc_weight = mem_space::global, mem_space mem_loc_out = mem_space::global, uint32_t periodic_sync_interval = 0&gt; </div>
+template&lt;typename T , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m, uint32_t sg_tile_n, uint32_t sg_tile_k, mem_layout layout_input = mem_layout::row_major, mem_layout layout_weight = mem_layout::row_major, mem_layout layout_out = mem_layout::row_major, mem_space mem_loc_input = mem_space::global, mem_space mem_loc_weight = mem_space::global, mem_space mem_loc_out = mem_space::global, uint32_t periodic_sync_interval = 0&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structgru__layer.html">gru_layer</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;<a class="el" href="classgpu_1_1xetla_1_1group_1_1epilogue__t.html">::epilogue_t</a> =  <a class="el" href="structgru__layer.html#a6744920473a3c26ee265afd1d36c108a">epilogue_t</a>&lt;<a class="el" href="structgpu_1_1xetla_1_1group_1_1epilogue__policy__default.html">epilogue_policy_default</a>&lt;gpu_arch::Xe&gt;, <a class="el" href="structgru__layer.html#a64dee4ab62d72d85d75eb38adc28b80b">tile_shape</a>, <a class="el" href="structgru__layer.html#a720eef80488cc1b2e8cdbb118242fd38">mem_desc_c_t</a>&gt;</td>
+          <td class="memname">using <a class="el" href="structgru__layer.html">gru_layer</a>&lt; T, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;<a class="el" href="classgpu_1_1xetla_1_1group_1_1epilogue__t.html">::epilogue_t</a> =  <a class="el" href="structgru__layer.html#aac934b9577529ff5831d61f729d2d893">epilogue_t</a>&lt; <a class="el" href="structgpu_1_1xetla_1_1group_1_1epilogue__policy__default.html">epilogue_policy_default</a>&lt;<a class="el" href="structgpu_1_1xetla_1_1result__overwrite.html">result_overwrite</a>, gpu_arch::Xe&gt;, <a class="el" href="structgru__layer.html#a64dee4ab62d72d85d75eb38adc28b80b">tile_shape</a>, <a class="el" href="structgru__layer.html#a720eef80488cc1b2e8cdbb118242fd38">mem_desc_c_t</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -270,10 +270,10 @@ template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb6
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m, uint32_t sg_tile_n, uint32_t sg_tile_k, mem_layout layout_input = mem_layout::row_major, mem_layout layout_weight = mem_layout::row_major, mem_layout layout_out = mem_layout::row_major, mem_space mem_loc_input = mem_space::global, mem_space mem_loc_weight = mem_space::global, mem_space mem_loc_out = mem_space::global, uint32_t periodic_sync_interval = 0&gt; </div>
+template&lt;typename T , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m, uint32_t sg_tile_n, uint32_t sg_tile_k, mem_layout layout_input = mem_layout::row_major, mem_layout layout_weight = mem_layout::row_major, mem_layout layout_out = mem_layout::row_major, mem_space mem_loc_input = mem_space::global, mem_space mem_loc_weight = mem_space::global, mem_space mem_loc_out = mem_space::global, uint32_t periodic_sync_interval = 0&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structgru__layer.html">gru_layer</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;::mat_hidden_payload_t =  <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t.html">mem_payload_t</a>&lt;<a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="structgru__layer.html#ac0134c4a4096d6d2e8b0d4118ea65d0f">matC_tile_desc_t</a>, msg_type_v&lt;<a class="el" href="structgru__layer.html#ac0134c4a4096d6d2e8b0d4118ea65d0f">matC_tile_desc_t</a>, mem_loc_input&gt;, layout_input, mem_loc_input, gpu_arch::Xe&gt;</td>
+          <td class="memname">using <a class="el" href="structgru__layer.html">gru_layer</a>&lt; T, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;::mat_hidden_payload_t =  <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t.html">mem_payload_t</a>&lt;T, <a class="el" href="structgru__layer.html#ac0134c4a4096d6d2e8b0d4118ea65d0f">matC_tile_desc_t</a>, msg_type_v&lt;<a class="el" href="structgru__layer.html#ac0134c4a4096d6d2e8b0d4118ea65d0f">matC_tile_desc_t</a>, mem_loc_input&gt;, layout_input, mem_loc_input, gpu_arch::Xe&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -286,10 +286,10 @@ template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb6
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m, uint32_t sg_tile_n, uint32_t sg_tile_k, mem_layout layout_input = mem_layout::row_major, mem_layout layout_weight = mem_layout::row_major, mem_layout layout_out = mem_layout::row_major, mem_space mem_loc_input = mem_space::global, mem_space mem_loc_weight = mem_space::global, mem_space mem_loc_out = mem_space::global, uint32_t periodic_sync_interval = 0&gt; </div>
+template&lt;typename T , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m, uint32_t sg_tile_n, uint32_t sg_tile_k, mem_layout layout_input = mem_layout::row_major, mem_layout layout_weight = mem_layout::row_major, mem_layout layout_out = mem_layout::row_major, mem_space mem_loc_input = mem_space::global, mem_space mem_loc_weight = mem_space::global, mem_space mem_loc_out = mem_space::global, uint32_t periodic_sync_interval = 0&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structgru__layer.html">gru_layer</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;::mat_hidden_t =  <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__t.html">tile_t</a>&lt;<a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="structgru__layer.html#ac0134c4a4096d6d2e8b0d4118ea65d0f">matC_tile_desc_t</a>&gt;</td>
+          <td class="memname">using <a class="el" href="structgru__layer.html">gru_layer</a>&lt; T, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;::mat_hidden_t =  <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__t.html">tile_t</a>&lt;T, <a class="el" href="structgru__layer.html#ac0134c4a4096d6d2e8b0d4118ea65d0f">matC_tile_desc_t</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -302,10 +302,10 @@ template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb6
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m, uint32_t sg_tile_n, uint32_t sg_tile_k, mem_layout layout_input = mem_layout::row_major, mem_layout layout_weight = mem_layout::row_major, mem_layout layout_out = mem_layout::row_major, mem_space mem_loc_input = mem_space::global, mem_space mem_loc_weight = mem_space::global, mem_space mem_loc_out = mem_space::global, uint32_t periodic_sync_interval = 0&gt; </div>
+template&lt;typename T , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m, uint32_t sg_tile_n, uint32_t sg_tile_k, mem_layout layout_input = mem_layout::row_major, mem_layout layout_weight = mem_layout::row_major, mem_layout layout_out = mem_layout::row_major, mem_space mem_loc_input = mem_space::global, mem_space mem_loc_weight = mem_space::global, mem_space mem_loc_out = mem_space::global, uint32_t periodic_sync_interval = 0&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structgru__layer.html">gru_layer</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;::matAcc_t =  typename brgemm_op::matAcc_t</td>
+          <td class="memname">using <a class="el" href="structgru__layer.html">gru_layer</a>&lt; T, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;::matAcc_t =  typename brgemm_op::matAcc_t</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -318,10 +318,10 @@ template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb6
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m, uint32_t sg_tile_n, uint32_t sg_tile_k, mem_layout layout_input = mem_layout::row_major, mem_layout layout_weight = mem_layout::row_major, mem_layout layout_out = mem_layout::row_major, mem_space mem_loc_input = mem_space::global, mem_space mem_loc_weight = mem_space::global, mem_space mem_loc_out = mem_space::global, uint32_t periodic_sync_interval = 0&gt; </div>
+template&lt;typename T , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m, uint32_t sg_tile_n, uint32_t sg_tile_k, mem_layout layout_input = mem_layout::row_major, mem_layout layout_weight = mem_layout::row_major, mem_layout layout_out = mem_layout::row_major, mem_space mem_loc_input = mem_space::global, mem_space mem_loc_weight = mem_space::global, mem_space mem_loc_out = mem_space::global, uint32_t periodic_sync_interval = 0&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structgru__layer.html">gru_layer</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;::matC_payload_t =  <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t.html">mem_payload_t</a>&lt;<a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="structgru__layer.html#ac0134c4a4096d6d2e8b0d4118ea65d0f">matC_tile_desc_t</a>, msg_type::block_2d, layout_out, mem_loc_out, gpu_arch::Xe&gt;</td>
+          <td class="memname">using <a class="el" href="structgru__layer.html">gru_layer</a>&lt; T, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;::matC_payload_t =  <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t.html">mem_payload_t</a>&lt;T, <a class="el" href="structgru__layer.html#ac0134c4a4096d6d2e8b0d4118ea65d0f">matC_tile_desc_t</a>, msg_type::block_2d, layout_out, mem_loc_out, gpu_arch::Xe&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -334,10 +334,10 @@ template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb6
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m, uint32_t sg_tile_n, uint32_t sg_tile_k, mem_layout layout_input = mem_layout::row_major, mem_layout layout_weight = mem_layout::row_major, mem_layout layout_out = mem_layout::row_major, mem_space mem_loc_input = mem_space::global, mem_space mem_loc_weight = mem_space::global, mem_space mem_loc_out = mem_space::global, uint32_t periodic_sync_interval = 0&gt; </div>
+template&lt;typename T , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m, uint32_t sg_tile_n, uint32_t sg_tile_k, mem_layout layout_input = mem_layout::row_major, mem_layout layout_weight = mem_layout::row_major, mem_layout layout_out = mem_layout::row_major, mem_space mem_loc_input = mem_space::global, mem_space mem_loc_weight = mem_space::global, mem_space mem_loc_out = mem_space::global, uint32_t periodic_sync_interval = 0&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structgru__layer.html">gru_layer</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;::matC_t =  <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__t.html">tile_t</a>&lt;<a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="structgru__layer.html#ac0134c4a4096d6d2e8b0d4118ea65d0f">matC_tile_desc_t</a>&gt;</td>
+          <td class="memname">using <a class="el" href="structgru__layer.html">gru_layer</a>&lt; T, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;::matC_t =  <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__t.html">tile_t</a>&lt;T, <a class="el" href="structgru__layer.html#ac0134c4a4096d6d2e8b0d4118ea65d0f">matC_tile_desc_t</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -350,10 +350,10 @@ template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb6
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m, uint32_t sg_tile_n, uint32_t sg_tile_k, mem_layout layout_input = mem_layout::row_major, mem_layout layout_weight = mem_layout::row_major, mem_layout layout_out = mem_layout::row_major, mem_space mem_loc_input = mem_space::global, mem_space mem_loc_weight = mem_space::global, mem_space mem_loc_out = mem_space::global, uint32_t periodic_sync_interval = 0&gt; </div>
+template&lt;typename T , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m, uint32_t sg_tile_n, uint32_t sg_tile_k, mem_layout layout_input = mem_layout::row_major, mem_layout layout_weight = mem_layout::row_major, mem_layout layout_out = mem_layout::row_major, mem_space mem_loc_input = mem_space::global, mem_space mem_loc_weight = mem_space::global, mem_space mem_loc_out = mem_space::global, uint32_t periodic_sync_interval = 0&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structgru__layer.html">gru_layer</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;::matC_tile_desc_t =  <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__desc__t.html">tile_desc_t</a>&lt;matAcc_t::tile_size_x, matAcc_t::tile_size_y, matAcc_t::block_size_x, matAcc_t::block_size_y, reg_layout::tiled&gt;</td>
+          <td class="memname">using <a class="el" href="structgru__layer.html">gru_layer</a>&lt; T, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;::matC_tile_desc_t =  <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__desc__t.html">tile_desc_t</a>&lt;matAcc_t::tile_size_x, matAcc_t::tile_size_y, matAcc_t::block_size_x, matAcc_t::block_size_y, reg_layout::tiled&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -366,10 +366,10 @@ template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb6
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m, uint32_t sg_tile_n, uint32_t sg_tile_k, mem_layout layout_input = mem_layout::row_major, mem_layout layout_weight = mem_layout::row_major, mem_layout layout_out = mem_layout::row_major, mem_space mem_loc_input = mem_space::global, mem_space mem_loc_weight = mem_space::global, mem_space mem_loc_out = mem_space::global, uint32_t periodic_sync_interval = 0&gt; </div>
+template&lt;typename T , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m, uint32_t sg_tile_n, uint32_t sg_tile_k, mem_layout layout_input = mem_layout::row_major, mem_layout layout_weight = mem_layout::row_major, mem_layout layout_out = mem_layout::row_major, mem_space mem_loc_input = mem_space::global, mem_space mem_loc_weight = mem_space::global, mem_space mem_loc_out = mem_space::global, uint32_t periodic_sync_interval = 0&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structgru__layer.html">gru_layer</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;::mem_desc_a_t =  <a class="el" href="structgpu_1_1xetla_1_1mem__desc__t.html">mem_desc_t</a>&lt;<a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, layout_input, mem_loc_input&gt;</td>
+          <td class="memname">using <a class="el" href="structgru__layer.html">gru_layer</a>&lt; T, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;::mem_desc_a_t =  <a class="el" href="structgpu_1_1xetla_1_1mem__desc__t.html">mem_desc_t</a>&lt;T, layout_input, mem_loc_input&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -382,10 +382,10 @@ template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb6
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m, uint32_t sg_tile_n, uint32_t sg_tile_k, mem_layout layout_input = mem_layout::row_major, mem_layout layout_weight = mem_layout::row_major, mem_layout layout_out = mem_layout::row_major, mem_space mem_loc_input = mem_space::global, mem_space mem_loc_weight = mem_space::global, mem_space mem_loc_out = mem_space::global, uint32_t periodic_sync_interval = 0&gt; </div>
+template&lt;typename T , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m, uint32_t sg_tile_n, uint32_t sg_tile_k, mem_layout layout_input = mem_layout::row_major, mem_layout layout_weight = mem_layout::row_major, mem_layout layout_out = mem_layout::row_major, mem_space mem_loc_input = mem_space::global, mem_space mem_loc_weight = mem_space::global, mem_space mem_loc_out = mem_space::global, uint32_t periodic_sync_interval = 0&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structgru__layer.html">gru_layer</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;::mem_desc_b_t =  <a class="el" href="structgpu_1_1xetla_1_1mem__desc__t.html">mem_desc_t</a>&lt;<a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, layout_weight, mem_loc_weight&gt;</td>
+          <td class="memname">using <a class="el" href="structgru__layer.html">gru_layer</a>&lt; T, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;::mem_desc_b_t =  <a class="el" href="structgpu_1_1xetla_1_1mem__desc__t.html">mem_desc_t</a>&lt;T, layout_weight, mem_loc_weight&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -398,10 +398,10 @@ template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb6
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m, uint32_t sg_tile_n, uint32_t sg_tile_k, mem_layout layout_input = mem_layout::row_major, mem_layout layout_weight = mem_layout::row_major, mem_layout layout_out = mem_layout::row_major, mem_space mem_loc_input = mem_space::global, mem_space mem_loc_weight = mem_space::global, mem_space mem_loc_out = mem_space::global, uint32_t periodic_sync_interval = 0&gt; </div>
+template&lt;typename T , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m, uint32_t sg_tile_n, uint32_t sg_tile_k, mem_layout layout_input = mem_layout::row_major, mem_layout layout_weight = mem_layout::row_major, mem_layout layout_out = mem_layout::row_major, mem_space mem_loc_input = mem_space::global, mem_space mem_loc_weight = mem_space::global, mem_space mem_loc_out = mem_space::global, uint32_t periodic_sync_interval = 0&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structgru__layer.html">gru_layer</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;::mem_desc_c_t =  <a class="el" href="structgpu_1_1xetla_1_1mem__desc__t.html">mem_desc_t</a>&lt;<a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, layout_out, mem_loc_out&gt;</td>
+          <td class="memname">using <a class="el" href="structgru__layer.html">gru_layer</a>&lt; T, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;::mem_desc_c_t =  <a class="el" href="structgpu_1_1xetla_1_1mem__desc__t.html">mem_desc_t</a>&lt;T, layout_out, mem_loc_out&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -414,10 +414,10 @@ template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb6
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m, uint32_t sg_tile_n, uint32_t sg_tile_k, mem_layout layout_input = mem_layout::row_major, mem_layout layout_weight = mem_layout::row_major, mem_layout layout_out = mem_layout::row_major, mem_space mem_loc_input = mem_space::global, mem_space mem_loc_weight = mem_space::global, mem_space mem_loc_out = mem_space::global, uint32_t periodic_sync_interval = 0&gt; </div>
+template&lt;typename T , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m, uint32_t sg_tile_n, uint32_t sg_tile_k, mem_layout layout_input = mem_layout::row_major, mem_layout layout_weight = mem_layout::row_major, mem_layout layout_out = mem_layout::row_major, mem_space mem_loc_input = mem_space::global, mem_space mem_loc_weight = mem_space::global, mem_space mem_loc_out = mem_space::global, uint32_t periodic_sync_interval = 0&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structgru__layer.html">gru_layer</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;::perf_tuning_knob =  <a class="el" href="structgpu_1_1xetla_1_1group_1_1perf__tuning__knob__t.html">perf_tuning_knob_t</a>&lt;sg_tile_k, <a class="el" href="structgru__layer.html#a718794eb9cbe3b98111ff19f19bbd256">prefetch_distance</a>, periodic_sync_interval&gt;</td>
+          <td class="memname">using <a class="el" href="structgru__layer.html">gru_layer</a>&lt; T, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;::perf_tuning_knob =  <a class="el" href="structgpu_1_1xetla_1_1group_1_1perf__tuning__knob__t.html">perf_tuning_knob_t</a>&lt;sg_tile_k, <a class="el" href="structgru__layer.html#a718794eb9cbe3b98111ff19f19bbd256">prefetch_distance</a>, periodic_sync_interval&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -430,10 +430,10 @@ template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb6
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m, uint32_t sg_tile_n, uint32_t sg_tile_k, mem_layout layout_input = mem_layout::row_major, mem_layout layout_weight = mem_layout::row_major, mem_layout layout_out = mem_layout::row_major, mem_space mem_loc_input = mem_space::global, mem_space mem_loc_weight = mem_space::global, mem_space mem_loc_out = mem_space::global, uint32_t periodic_sync_interval = 0&gt; </div>
+template&lt;typename T , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m, uint32_t sg_tile_n, uint32_t sg_tile_k, mem_layout layout_input = mem_layout::row_major, mem_layout layout_weight = mem_layout::row_major, mem_layout layout_out = mem_layout::row_major, mem_space mem_loc_input = mem_space::global, mem_space mem_loc_weight = mem_space::global, mem_space mem_loc_out = mem_space::global, uint32_t periodic_sync_interval = 0&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structgru__layer.html">gru_layer</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;::tile_shape =  <a class="el" href="structgpu_1_1xetla_1_1group_1_1tile__shape__t.html">tile_shape_t</a>&lt;wg_tile_n, wg_tile_m, sg_tile_n, sg_tile_m&gt;</td>
+          <td class="memname">using <a class="el" href="structgru__layer.html">gru_layer</a>&lt; T, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;::tile_shape =  <a class="el" href="structgpu_1_1xetla_1_1group_1_1tile__shape__t.html">tile_shape_t</a>&lt;wg_tile_n, wg_tile_m, sg_tile_n, sg_tile_m&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -446,10 +446,10 @@ template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb6
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m, uint32_t sg_tile_n, uint32_t sg_tile_k, mem_layout layout_input = mem_layout::row_major, mem_layout layout_weight = mem_layout::row_major, mem_layout layout_out = mem_layout::row_major, mem_space mem_loc_input = mem_space::global, mem_space mem_loc_weight = mem_space::global, mem_space mem_loc_out = mem_space::global, uint32_t periodic_sync_interval = 0&gt; </div>
+template&lt;typename T , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m, uint32_t sg_tile_n, uint32_t sg_tile_k, mem_layout layout_input = mem_layout::row_major, mem_layout layout_weight = mem_layout::row_major, mem_layout layout_out = mem_layout::row_major, mem_space mem_loc_input = mem_space::global, mem_space mem_loc_weight = mem_space::global, mem_space mem_loc_out = mem_space::global, uint32_t periodic_sync_interval = 0&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structgru__layer.html">gru_layer</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;<a class="el" href="structgpu_1_1xetla_1_1work__group__t.html">::work_group_t</a> =  typename brgemm_op::work_group_t</td>
+          <td class="memname">using <a class="el" href="structgru__layer.html">gru_layer</a>&lt; T, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;<a class="el" href="structgpu_1_1xetla_1_1work__group__t.html">::work_group_t</a> =  typename brgemm_op::work_group_t</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -463,13 +463,13 @@ template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb6
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m, uint32_t sg_tile_n, uint32_t sg_tile_k, <a class="el" href="namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561">mem_layout</a> layout_input = mem_layout::row_major, <a class="el" href="namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561">mem_layout</a> layout_weight = mem_layout::row_major, <a class="el" href="namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561">mem_layout</a> layout_out = mem_layout::row_major, <a class="el" href="namespacegpu_1_1xetla.html#a7f225ed816e841c1d31414d872dae59d">mem_space</a> mem_loc_input = mem_space::global, <a class="el" href="namespacegpu_1_1xetla.html#a7f225ed816e841c1d31414d872dae59d">mem_space</a> mem_loc_weight = mem_space::global, <a class="el" href="namespacegpu_1_1xetla.html#a7f225ed816e841c1d31414d872dae59d">mem_space</a> mem_loc_out = mem_space::global, uint32_t periodic_sync_interval = 0&gt; </div>
+template&lt;typename T , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m, uint32_t sg_tile_n, uint32_t sg_tile_k, <a class="el" href="namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561">mem_layout</a> layout_input = mem_layout::row_major, <a class="el" href="namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561">mem_layout</a> layout_weight = mem_layout::row_major, <a class="el" href="namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561">mem_layout</a> layout_out = mem_layout::row_major, <a class="el" href="namespacegpu_1_1xetla.html#a7f225ed816e841c1d31414d872dae59d">mem_space</a> mem_loc_input = mem_space::global, <a class="el" href="namespacegpu_1_1xetla.html#a7f225ed816e841c1d31414d872dae59d">mem_space</a> mem_loc_weight = mem_space::global, <a class="el" href="namespacegpu_1_1xetla.html#a7f225ed816e841c1d31414d872dae59d">mem_space</a> mem_loc_out = mem_space::global, uint32_t periodic_sync_interval = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void <a class="el" href="structgru__layer.html">gru_layer</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;::call </td>
+          <td class="memname">static void <a class="el" href="structgru__layer.html">gru_layer</a>&lt; T, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;::call </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classgpu_1_1xetla_1_1xetla__exec__item.html">xetla_exec_item</a>&lt; 3 &gt; &amp;&#160;</td>
           <td class="paramname"><em>ei</em>, </td>
@@ -477,7 +477,7 @@ template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb6
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structfused__config__t.html">fused_config_t</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; *&#160;</td>
+          <td class="paramtype"><a class="el" href="structfused__config__t.html">fused_config_t</a>&lt; T &gt; *&#160;</td>
           <td class="paramname"><em>args</em>&#160;</td>
         </tr>
         <tr>
@@ -502,13 +502,13 @@ template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb6
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m, uint32_t sg_tile_n, uint32_t sg_tile_k, mem_layout layout_input = mem_layout::row_major, mem_layout layout_weight = mem_layout::row_major, mem_layout layout_out = mem_layout::row_major, mem_space mem_loc_input = mem_space::global, mem_space mem_loc_weight = mem_space::global, mem_space mem_loc_out = mem_space::global, uint32_t periodic_sync_interval = 0&gt; </div>
+template&lt;typename T , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m, uint32_t sg_tile_n, uint32_t sg_tile_k, mem_layout layout_input = mem_layout::row_major, mem_layout layout_weight = mem_layout::row_major, mem_layout layout_out = mem_layout::row_major, mem_space mem_loc_input = mem_space::global, mem_space mem_loc_weight = mem_space::global, mem_space mem_loc_out = mem_space::global, uint32_t periodic_sync_interval = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr bool <a class="el" href="structgru__layer.html">gru_layer</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;::is_col_major_a = layout_input == mem_layout::col_major</td>
+          <td class="memname">constexpr bool <a class="el" href="structgru__layer.html">gru_layer</a>&lt; T, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;::is_col_major_a = layout_input == mem_layout::col_major</td>
         </tr>
       </table>
   </td>
@@ -526,13 +526,13 @@ template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb6
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m, uint32_t sg_tile_n, uint32_t sg_tile_k, mem_layout layout_input = mem_layout::row_major, mem_layout layout_weight = mem_layout::row_major, mem_layout layout_out = mem_layout::row_major, mem_space mem_loc_input = mem_space::global, mem_space mem_loc_weight = mem_space::global, mem_space mem_loc_out = mem_space::global, uint32_t periodic_sync_interval = 0&gt; </div>
+template&lt;typename T , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m, uint32_t sg_tile_n, uint32_t sg_tile_k, mem_layout layout_input = mem_layout::row_major, mem_layout layout_weight = mem_layout::row_major, mem_layout layout_out = mem_layout::row_major, mem_space mem_loc_input = mem_space::global, mem_space mem_loc_weight = mem_space::global, mem_space mem_loc_out = mem_space::global, uint32_t periodic_sync_interval = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr bool <a class="el" href="structgru__layer.html">gru_layer</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;::is_col_major_b = layout_weight == mem_layout::col_major</td>
+          <td class="memname">constexpr bool <a class="el" href="structgru__layer.html">gru_layer</a>&lt; T, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;::is_col_major_b = layout_weight == mem_layout::col_major</td>
         </tr>
       </table>
   </td>
@@ -550,13 +550,13 @@ template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb6
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m, uint32_t sg_tile_n, uint32_t sg_tile_k, mem_layout layout_input = mem_layout::row_major, mem_layout layout_weight = mem_layout::row_major, mem_layout layout_out = mem_layout::row_major, mem_space mem_loc_input = mem_space::global, mem_space mem_loc_weight = mem_space::global, mem_space mem_loc_out = mem_space::global, uint32_t periodic_sync_interval = 0&gt; </div>
+template&lt;typename T , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m, uint32_t sg_tile_n, uint32_t sg_tile_k, mem_layout layout_input = mem_layout::row_major, mem_layout layout_weight = mem_layout::row_major, mem_layout layout_out = mem_layout::row_major, mem_space mem_loc_input = mem_space::global, mem_space mem_loc_weight = mem_space::global, mem_space mem_loc_out = mem_space::global, uint32_t periodic_sync_interval = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr uint32_t <a class="el" href="structgru__layer.html">gru_layer</a>&lt; <a class="el" href="multi__head__attention_8cpp.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;::prefetch_distance = 3</td>
+          <td class="memname">constexpr uint32_t <a class="el" href="structgru__layer.html">gru_layer</a>&lt; T, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;::prefetch_distance = 3</td>
         </tr>
       </table>
   </td>

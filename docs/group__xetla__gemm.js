@@ -20,7 +20,7 @@ var group__xetla__gemm =
         [ "matrix_m", "structgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__default_3_01gpu__arch_1_1Xe_01_4_0db93540e69047ebd206bbd99ad0d08b4.html#ae525bf1e4ee83041976740917e1d201e", null ],
         [ "matrix_n", "structgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__default_3_01gpu__arch_1_1Xe_01_4_0db93540e69047ebd206bbd99ad0d08b4.html#a03dbe4483a3b1147aeb4e24b4e04c747", null ]
       ] ],
-      [ "operator()", "classgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__default_3_01gpu__arch_1_1Xe_01_4_0051d16bedb91f5891d70e390cac9b64a4.html#a9552a1bb60a2b445d1816acceb5b69f2", null ]
+      [ "operator()", "classgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__default_3_01gpu__arch_1_1Xe_01_4_0051d16bedb91f5891d70e390cac9b64a4.html#a907dad09aa938812b462d2f18f1e9c4f", null ]
     ] ],
     [ "gpu::xetla::kernel::gemm_t< dispatch_policy_kslicing< global_kslicing_ratio_, local_kslicing_ratio_, gpu_arch::Xe >, brgemm_t_, epilogue_t_ >", "classgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__kslicing_3_01global__kslicing__ratiae9f80c882ba18776d69f655bbd0163d.html", [
       [ "arguments_t", "structgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__kslicing_3_01global__kslicing__rata2435eaf6b4dc1a469620cfab2d21f0a.html", [
@@ -39,6 +39,6 @@ var group__xetla__gemm =
         [ "matrix_m", "structgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__kslicing_3_01global__kslicing__rata2435eaf6b4dc1a469620cfab2d21f0a.html#a48858649f7cec7b00512564ab55be16f", null ],
         [ "matrix_n", "structgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__kslicing_3_01global__kslicing__rata2435eaf6b4dc1a469620cfab2d21f0a.html#a6d8f9a045da971109791dce0f83b2af5", null ]
       ] ],
-      [ "operator()", "classgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__kslicing_3_01global__kslicing__ratiae9f80c882ba18776d69f655bbd0163d.html#a207de8ebbb62a7cffe98b18eb5d20c15", null ]
+      [ "operator()", "classgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__kslicing_3_01global__kslicing__ratiae9f80c882ba18776d69f655bbd0163d.html#a16ab9223379f247d001339829c451fbe", null ]
     ] ]
 ];

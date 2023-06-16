@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.1</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.2</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -131,8 +131,8 @@ Public Types</h2></td></tr>
 <tr class="separator:a8ace19e82679a244741b912a540b0885"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71621078eb608495fcfa2abc35c07fb5"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#a71621078eb608495fcfa2abc35c07fb5">dtype_acc</a> = dtype_acc_</td></tr>
 <tr class="separator:a71621078eb608495fcfa2abc35c07fb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa354bdcf510e4387997caae63e5af084"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#aa354bdcf510e4387997caae63e5af084">bgm_perf_tuning_knob</a> = <a class="el" href="structgpu_1_1xetla_1_1group_1_1perf__tuning__knob__t.html">group::perf_tuning_knob_t</a>&lt; <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#a8089edeaa26ab698f8d7dee666774b83">accum_step</a>, <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#adc84e360ae81492cb3c2f72aead6aec0">prefetch_distance</a>, <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#a5f1df553d13b0e55d211f64a6124b347">periodic_sync_interval</a> &gt;</td></tr>
-<tr class="separator:aa354bdcf510e4387997caae63e5af084"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31977e17fd6033d19875fcc7034ed76c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#a31977e17fd6033d19875fcc7034ed76c">bgm_perf_tuning_knob</a> = <a class="el" href="structgpu_1_1xetla_1_1group_1_1perf__tuning__knob__t.html">group::perf_tuning_knob_t</a>&lt; <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#a77bc59e6f7b615194ef09413291eab85">k_stride</a>, <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#adc84e360ae81492cb3c2f72aead6aec0">prefetch_distance</a>, <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#a5f1df553d13b0e55d211f64a6124b347">periodic_sync_interval</a> &gt;</td></tr>
+<tr class="separator:a31977e17fd6033d19875fcc7034ed76c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa79081ce4c6e75ee5b29a3e1965e3f73"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#aa79081ce4c6e75ee5b29a3e1965e3f73">tile_attr_128x128</a> = <a class="el" href="structgpu_1_1xetla_1_1group_1_1tile__shape__t.html">group::tile_shape_t</a>&lt; 128, 128, 32, 16 &gt;</td></tr>
 <tr class="separator:aa79081ce4c6e75ee5b29a3e1965e3f73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac34ca008d04177069ca9d365ca387481"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#ac34ca008d04177069ca9d365ca387481">tile_attr_128x256</a> = <a class="el" href="structgpu_1_1xetla_1_1group_1_1tile__shape__t.html">group::tile_shape_t</a>&lt; 256, 128, 32, 32 &gt;</td></tr>
@@ -143,13 +143,13 @@ Public Types</h2></td></tr>
 <tr class="separator:a545fea10e93262a2f213d77ba659cb7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c564f31dc2ec6c73afa15a58d230515"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#a4c564f31dc2ec6c73afa15a58d230515">mem_desc_b_QKT</a> = <a class="el" href="structgpu_1_1xetla_1_1mem__desc__t.html">mem_desc_t</a>&lt; <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#af097a8e6c2ba0a8855467c217a82db21">dtype_bin</a>, <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#a6a38991fc93aa30f00df8c8b2bed77b7">brgemm_mem_layout_QKT_b</a>, <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#abcfa08a757795a6dd1524c370b691467">brgemm_mem_space_b</a> &gt;</td></tr>
 <tr class="separator:a4c564f31dc2ec6c73afa15a58d230515"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c5f9461b800073c660ed07e93db589a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#a3c5f9461b800073c660ed07e93db589a">compute_policy_QKT</a> = <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__xmx.html">group::compute_policy_default_xmx</a>&lt; <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__attr__t.html">group::compute_attr_t</a>&lt; <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#af097a8e6c2ba0a8855467c217a82db21">dtype_bin</a>, <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#af097a8e6c2ba0a8855467c217a82db21">dtype_bin</a>, <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#a71621078eb608495fcfa2abc35c07fb5">dtype_acc</a> &gt;, <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#aa354bdcf510e4387997caae63e5af084">bgm_perf_tuning_knob</a>, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;</td></tr>
+<tr class="memitem:a3c5f9461b800073c660ed07e93db589a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#a3c5f9461b800073c660ed07e93db589a">compute_policy_QKT</a> = <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__xmx.html">group::compute_policy_default_xmx</a>&lt; <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__attr__t.html">group::compute_attr_t</a>&lt; <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#af097a8e6c2ba0a8855467c217a82db21">dtype_bin</a>, <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#af097a8e6c2ba0a8855467c217a82db21">dtype_bin</a>, <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#a71621078eb608495fcfa2abc35c07fb5">dtype_acc</a> &gt;, <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#a31977e17fd6033d19875fcc7034ed76c">bgm_perf_tuning_knob</a>, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;</td></tr>
 <tr class="separator:a3c5f9461b800073c660ed07e93db589a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3cb3d6ab7fea46597482e53fdfb9d254"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#a3cb3d6ab7fea46597482e53fdfb9d254">mem_desc_a_out</a> = <a class="el" href="structgpu_1_1xetla_1_1mem__desc__t.html">mem_desc_t</a>&lt; <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#a8ace19e82679a244741b912a540b0885">dtype_sfx</a>, <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#a499f6fe898df9b9dedb92704f7bd54e0">brgemm_mem_layout_a</a>, <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#a5fb17e6cd804aa5e0216fc479bcd15a5">brgemm_mem_space_a</a> &gt;</td></tr>
 <tr class="separator:a3cb3d6ab7fea46597482e53fdfb9d254"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a776a65d5546ebae21e9b1b836896096d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#a776a65d5546ebae21e9b1b836896096d">mem_desc_b_out</a> = <a class="el" href="structgpu_1_1xetla_1_1mem__desc__t.html">mem_desc_t</a>&lt; <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#af097a8e6c2ba0a8855467c217a82db21">dtype_bin</a>, <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#ace53b41acfe3e18fc6c98e297a5d693e">brgemm_mem_layout_out_b</a>, <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#abcfa08a757795a6dd1524c370b691467">brgemm_mem_space_b</a> &gt;</td></tr>
 <tr class="separator:a776a65d5546ebae21e9b1b836896096d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a896c1dd2a94bff8c0b7dc0e1a20854f3"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#a896c1dd2a94bff8c0b7dc0e1a20854f3">compute_policy_out</a> = <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__xmx.html">group::compute_policy_default_xmx</a>&lt; <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__attr__t.html">group::compute_attr_t</a>&lt; <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#a8ace19e82679a244741b912a540b0885">dtype_sfx</a>, <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#af097a8e6c2ba0a8855467c217a82db21">dtype_bin</a>, <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#a71621078eb608495fcfa2abc35c07fb5">dtype_acc</a> &gt;, <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#aa354bdcf510e4387997caae63e5af084">bgm_perf_tuning_knob</a>, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;</td></tr>
+<tr class="memitem:a896c1dd2a94bff8c0b7dc0e1a20854f3"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#a896c1dd2a94bff8c0b7dc0e1a20854f3">compute_policy_out</a> = <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__xmx.html">group::compute_policy_default_xmx</a>&lt; <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__attr__t.html">group::compute_attr_t</a>&lt; <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#a8ace19e82679a244741b912a540b0885">dtype_sfx</a>, <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#af097a8e6c2ba0a8855467c217a82db21">dtype_bin</a>, <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#a71621078eb608495fcfa2abc35c07fb5">dtype_acc</a> &gt;, <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#a31977e17fd6033d19875fcc7034ed76c">bgm_perf_tuning_knob</a>, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;</td></tr>
 <tr class="separator:a896c1dd2a94bff8c0b7dc0e1a20854f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a210ce0e225a44adec0c17728ad939abc"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#a210ce0e225a44adec0c17728ad939abc">arch_attr</a> = <a class="el" href="structgpu_1_1xetla_1_1arch__attr__t.html">arch_attr_t</a>&lt; <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;</td></tr>
 <tr class="separator:a210ce0e225a44adec0c17728ad939abc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -252,8 +252,8 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:a5f1df553d13b0e55d211f64a6124b347"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc84e360ae81492cb3c2f72aead6aec0"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#adc84e360ae81492cb3c2f72aead6aec0">prefetch_distance</a> = 3</td></tr>
 <tr class="separator:adc84e360ae81492cb3c2f72aead6aec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8089edeaa26ab698f8d7dee666774b83"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#a8089edeaa26ab698f8d7dee666774b83">accum_step</a> = 32 / sizeof(<a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#af097a8e6c2ba0a8855467c217a82db21">dtype_bin</a>)</td></tr>
-<tr class="separator:a8089edeaa26ab698f8d7dee666774b83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77bc59e6f7b615194ef09413291eab85"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#a77bc59e6f7b615194ef09413291eab85">k_stride</a> = 32 / sizeof(<a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#af097a8e6c2ba0a8855467c217a82db21">dtype_bin</a>)</td></tr>
+<tr class="separator:a77bc59e6f7b615194ef09413291eab85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8fe018b6129ea40bdf8fed299b709760"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#a8fe018b6129ea40bdf8fed299b709760">l3_kslicing</a> = 1</td></tr>
 <tr class="separator:a8fe018b6129ea40bdf8fed299b709760"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd7d8ad45da97cbeb10e57e4a10aa08c"><td class="memItemLeft" align="right" valign="top">static constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#abd7d8ad45da97cbeb10e57e4a10aa08c">sfx_type_size</a> = sizeof(<a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#a8ace19e82679a244741b912a540b0885">dtype_sfx</a>)</td></tr>
@@ -291,8 +291,8 @@ template&lt;typename dtype_bin_ , typename dtype_bot_ , typename dtype_sfx_ , ty
 
 </div>
 </div>
-<a id="aa354bdcf510e4387997caae63e5af084" name="aa354bdcf510e4387997caae63e5af084"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa354bdcf510e4387997caae63e5af084">&#9670;&#160;</a></span>bgm_perf_tuning_knob</h2>
+<a id="a31977e17fd6033d19875fcc7034ed76c" name="a31977e17fd6033d19875fcc7034ed76c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31977e17fd6033d19875fcc7034ed76c">&#9670;&#160;</a></span>bgm_perf_tuning_knob</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -300,7 +300,7 @@ template&lt;typename dtype_bin_ , typename dtype_bot_ , typename dtype_sfx_ , ty
 template&lt;typename dtype_bin_ , typename dtype_bot_ , typename dtype_sfx_ , typename dtype_acc_ , int HWThreadNum, bool Dopt_RandGenflag = true, uint16_t RandSIMD = 16, int Max_SeqLen = 512&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html">gpu::xetla::kernel::xetla_mha_core_attn_fwd_t</a>&lt; dtype_bin_, dtype_bot_, dtype_sfx_, dtype_acc_, HWThreadNum, Dopt_RandGenflag, RandSIMD, Max_SeqLen &gt;::bgm_perf_tuning_knob =  <a class="el" href="structgpu_1_1xetla_1_1group_1_1perf__tuning__knob__t.html">group::perf_tuning_knob_t</a>&lt;<a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#a8089edeaa26ab698f8d7dee666774b83">accum_step</a>, <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#adc84e360ae81492cb3c2f72aead6aec0">prefetch_distance</a>, <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#a5f1df553d13b0e55d211f64a6124b347">periodic_sync_interval</a>&gt;</td>
+          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html">gpu::xetla::kernel::xetla_mha_core_attn_fwd_t</a>&lt; dtype_bin_, dtype_bot_, dtype_sfx_, dtype_acc_, HWThreadNum, Dopt_RandGenflag, RandSIMD, Max_SeqLen &gt;::bgm_perf_tuning_knob =  <a class="el" href="structgpu_1_1xetla_1_1group_1_1perf__tuning__knob__t.html">group::perf_tuning_knob_t</a>&lt;<a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#a77bc59e6f7b615194ef09413291eab85">k_stride</a>, <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#adc84e360ae81492cb3c2f72aead6aec0">prefetch_distance</a>, <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#a5f1df553d13b0e55d211f64a6124b347">periodic_sync_interval</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -412,7 +412,7 @@ template&lt;typename dtype_bin_ , typename dtype_bot_ , typename dtype_sfx_ , ty
 template&lt;typename dtype_bin_ , typename dtype_bot_ , typename dtype_sfx_ , typename dtype_acc_ , int HWThreadNum, bool Dopt_RandGenflag = true, uint16_t RandSIMD = 16, int Max_SeqLen = 512&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html">gpu::xetla::kernel::xetla_mha_core_attn_fwd_t</a>&lt; dtype_bin_, dtype_bot_, dtype_sfx_, dtype_acc_, HWThreadNum, Dopt_RandGenflag, RandSIMD, Max_SeqLen &gt;::compute_policy_out =  <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__xmx.html">group::compute_policy_default_xmx</a>&lt; <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__attr__t.html">group::compute_attr_t</a>&lt;<a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#a8ace19e82679a244741b912a540b0885">dtype_sfx</a>, <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#af097a8e6c2ba0a8855467c217a82db21">dtype_bin</a>, <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#a71621078eb608495fcfa2abc35c07fb5">dtype_acc</a>&gt;, <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#aa354bdcf510e4387997caae63e5af084">bgm_perf_tuning_knob</a>, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>&gt;</td>
+          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html">gpu::xetla::kernel::xetla_mha_core_attn_fwd_t</a>&lt; dtype_bin_, dtype_bot_, dtype_sfx_, dtype_acc_, HWThreadNum, Dopt_RandGenflag, RandSIMD, Max_SeqLen &gt;::compute_policy_out =  <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__xmx.html">group::compute_policy_default_xmx</a>&lt; <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__attr__t.html">group::compute_attr_t</a>&lt;<a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#a8ace19e82679a244741b912a540b0885">dtype_sfx</a>, <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#af097a8e6c2ba0a8855467c217a82db21">dtype_bin</a>, <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#a71621078eb608495fcfa2abc35c07fb5">dtype_acc</a>&gt;, <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#a31977e17fd6033d19875fcc7034ed76c">bgm_perf_tuning_knob</a>, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -428,7 +428,7 @@ template&lt;typename dtype_bin_ , typename dtype_bot_ , typename dtype_sfx_ , ty
 template&lt;typename dtype_bin_ , typename dtype_bot_ , typename dtype_sfx_ , typename dtype_acc_ , int HWThreadNum, bool Dopt_RandGenflag = true, uint16_t RandSIMD = 16, int Max_SeqLen = 512&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html">gpu::xetla::kernel::xetla_mha_core_attn_fwd_t</a>&lt; dtype_bin_, dtype_bot_, dtype_sfx_, dtype_acc_, HWThreadNum, Dopt_RandGenflag, RandSIMD, Max_SeqLen &gt;::compute_policy_QKT =  <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__xmx.html">group::compute_policy_default_xmx</a>&lt; <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__attr__t.html">group::compute_attr_t</a>&lt;<a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#af097a8e6c2ba0a8855467c217a82db21">dtype_bin</a>, <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#af097a8e6c2ba0a8855467c217a82db21">dtype_bin</a>, <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#a71621078eb608495fcfa2abc35c07fb5">dtype_acc</a>&gt;, <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#aa354bdcf510e4387997caae63e5af084">bgm_perf_tuning_knob</a>, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>&gt;</td>
+          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html">gpu::xetla::kernel::xetla_mha_core_attn_fwd_t</a>&lt; dtype_bin_, dtype_bot_, dtype_sfx_, dtype_acc_, HWThreadNum, Dopt_RandGenflag, RandSIMD, Max_SeqLen &gt;::compute_policy_QKT =  <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__xmx.html">group::compute_policy_default_xmx</a>&lt; <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__attr__t.html">group::compute_attr_t</a>&lt;<a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#af097a8e6c2ba0a8855467c217a82db21">dtype_bin</a>, <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#af097a8e6c2ba0a8855467c217a82db21">dtype_bin</a>, <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#a71621078eb608495fcfa2abc35c07fb5">dtype_acc</a>&gt;, <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#a31977e17fd6033d19875fcc7034ed76c">bgm_perf_tuning_knob</a>, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1014,30 +1014,6 @@ template&lt;typename dtype_bin_ , typename dtype_bot_ , typename dtype_sfx_ , ty
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a8089edeaa26ab698f8d7dee666774b83" name="a8089edeaa26ab698f8d7dee666774b83"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8089edeaa26ab698f8d7dee666774b83">&#9670;&#160;</a></span>accum_step</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename dtype_bin_ , typename dtype_bot_ , typename dtype_sfx_ , typename dtype_acc_ , int HWThreadNum, bool Dopt_RandGenflag = true, uint16_t RandSIMD = 16, int Max_SeqLen = 512&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html">gpu::xetla::kernel::xetla_mha_core_attn_fwd_t</a>&lt; dtype_bin_, dtype_bot_, dtype_sfx_, dtype_acc_, HWThreadNum, Dopt_RandGenflag, RandSIMD, Max_SeqLen &gt;::accum_step = 32 / sizeof(<a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#af097a8e6c2ba0a8855467c217a82db21">dtype_bin</a>)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a499f6fe898df9b9dedb92704f7bd54e0" name="a499f6fe898df9b9dedb92704f7bd54e0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a499f6fe898df9b9dedb92704f7bd54e0">&#9670;&#160;</a></span>brgemm_mem_layout_a</h2>
 
@@ -1147,6 +1123,30 @@ template&lt;typename dtype_bin_ , typename dtype_bot_ , typename dtype_sfx_ , ty
       <table class="memname">
         <tr>
           <td class="memname">constexpr <a class="el" href="namespacegpu_1_1xetla.html#a7f225ed816e841c1d31414d872dae59d">mem_space</a> <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html">gpu::xetla::kernel::xetla_mha_core_attn_fwd_t</a>&lt; dtype_bin_, dtype_bot_, dtype_sfx_, dtype_acc_, HWThreadNum, Dopt_RandGenflag, RandSIMD, Max_SeqLen &gt;::brgemm_mem_space_b = <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#a60d90651f832776fd2741a7c0f79fc80">mem_space_b</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a77bc59e6f7b615194ef09413291eab85" name="a77bc59e6f7b615194ef09413291eab85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77bc59e6f7b615194ef09413291eab85">&#9670;&#160;</a></span>k_stride</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename dtype_bin_ , typename dtype_bot_ , typename dtype_sfx_ , typename dtype_acc_ , int HWThreadNum, bool Dopt_RandGenflag = true, uint16_t RandSIMD = 16, int Max_SeqLen = 512&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html">gpu::xetla::kernel::xetla_mha_core_attn_fwd_t</a>&lt; dtype_bin_, dtype_bot_, dtype_sfx_, dtype_acc_, HWThreadNum, Dopt_RandGenflag, RandSIMD, Max_SeqLen &gt;::k_stride = 32 / sizeof(<a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#af097a8e6c2ba0a8855467c217a82db21">dtype_bin</a>)</td>
         </tr>
       </table>
   </td>

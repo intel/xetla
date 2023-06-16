@@ -5,7 +5,7 @@ var structgru__layer =
     [ "compute_attr", "structgru__layer.html#a7b6e22276a34d8544b78507fd68e13d7", null ],
     [ "compute_policy", "structgru__layer.html#a4923cc646ffa67b8b00da15e0497e39a", null ],
     [ "epilogue_args_t", "structgru__layer.html#a350542bcb3e7055d82ff9e08fa0554d0", null ],
-    [ "epilogue_t", "structgru__layer.html#a6744920473a3c26ee265afd1d36c108a", null ],
+    [ "epilogue_t", "structgru__layer.html#aac934b9577529ff5831d61f729d2d893", null ],
     [ "mat_hidden_payload_t", "structgru__layer.html#a5c9893fa6381f6cf081e5e04ddabf5fa", null ],
     [ "mat_hidden_t", "structgru__layer.html#a423c99a319a8c9666994ec9239bae156", null ],
     [ "matAcc_t", "structgru__layer.html#ab4f2c4a045e55f8b268251dc6b059329", null ],

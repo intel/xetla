@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>XeTLA: gpu::xetla::kernel::layer_norm_attr_t&lt; wg_tile_n_, wg_tile_m_, sg_tile_n_, sg_tile_m_, wg_num_m_, wg_num_n_ &gt; Struct Template Reference</title>
+<title>XeTLA: gpu::xetla::kernel::layer_norm_attr_t&lt; wg_tile_n_, wg_tile_m_, sg_tile_n_, sg_tile_m_, wg_num_m_, wg_num_n_, chunk_size_ &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.1</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.2</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -106,7 +106,7 @@ $(document).ready(function(){initNavTree('structgpu_1_1xetla_1_1kernel_1_1layer_
   <div class="summary">
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="structgpu_1_1xetla_1_1kernel_1_1layer__norm__attr__t-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">gpu::xetla::kernel::layer_norm_attr_t&lt; wg_tile_n_, wg_tile_m_, sg_tile_n_, sg_tile_m_, wg_num_m_, wg_num_n_ &gt; Struct Template Reference</div></div>
+  <div class="headertitle"><div class="title">gpu::xetla::kernel::layer_norm_attr_t&lt; wg_tile_n_, wg_tile_m_, sg_tile_n_, sg_tile_m_, wg_num_m_, wg_num_n_, chunk_size_ &gt; Struct Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -117,22 +117,24 @@ $(document).ready(function(){initNavTree('structgpu_1_1xetla_1_1kernel_1_1layer_
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:ad6fe88da31387eac02da5addce2d0d90"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1layer__norm__attr__t.html#ad6fe88da31387eac02da5addce2d0d90">wg_tile_m</a> = wg_tile_m_</td></tr>
-<tr class="separator:ad6fe88da31387eac02da5addce2d0d90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8b26a688e34b49bad63935da91715ba"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1layer__norm__attr__t.html#ac8b26a688e34b49bad63935da91715ba">wg_tile_n</a> = wg_tile_n_</td></tr>
-<tr class="separator:ac8b26a688e34b49bad63935da91715ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aadf56627c933278ad1ac3fad89c5c6c2"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1layer__norm__attr__t.html#aadf56627c933278ad1ac3fad89c5c6c2">sg_tile_m</a> = sg_tile_m_</td></tr>
-<tr class="separator:aadf56627c933278ad1ac3fad89c5c6c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d00f02d10aff764ea500c3789924a13"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1layer__norm__attr__t.html#a0d00f02d10aff764ea500c3789924a13">sg_tile_n</a> = sg_tile_n_</td></tr>
-<tr class="separator:a0d00f02d10aff764ea500c3789924a13"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b117c04f91064277242654e65516de2"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1layer__norm__attr__t.html#a2b117c04f91064277242654e65516de2">wg_num_m</a> = wg_num_m_</td></tr>
-<tr class="separator:a2b117c04f91064277242654e65516de2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6897ed4da39f5fd0535395158a37bc1d"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1layer__norm__attr__t.html#a6897ed4da39f5fd0535395158a37bc1d">wg_num_n</a> = wg_num_n_</td></tr>
-<tr class="separator:a6897ed4da39f5fd0535395158a37bc1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d642c4cd3b84308e4672c52897e079f"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1layer__norm__attr__t.html#a9d642c4cd3b84308e4672c52897e079f">wg_tile_m</a> = wg_tile_m_</td></tr>
+<tr class="separator:a9d642c4cd3b84308e4672c52897e079f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65151e349e080ca8958d7bf1c555a2fd"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1layer__norm__attr__t.html#a65151e349e080ca8958d7bf1c555a2fd">wg_tile_n</a> = wg_tile_n_</td></tr>
+<tr class="separator:a65151e349e080ca8958d7bf1c555a2fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88d9604b474102590c43d7f37344b98a"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1layer__norm__attr__t.html#a88d9604b474102590c43d7f37344b98a">sg_tile_m</a> = sg_tile_m_</td></tr>
+<tr class="separator:a88d9604b474102590c43d7f37344b98a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98907c9eaedc6fa3dbcf583e8cde1d57"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1layer__norm__attr__t.html#a98907c9eaedc6fa3dbcf583e8cde1d57">sg_tile_n</a> = sg_tile_n_</td></tr>
+<tr class="separator:a98907c9eaedc6fa3dbcf583e8cde1d57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a982bb376743ca0fef7eb0c438420c838"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1layer__norm__attr__t.html#a982bb376743ca0fef7eb0c438420c838">wg_num_m</a> = wg_num_m_</td></tr>
+<tr class="separator:a982bb376743ca0fef7eb0c438420c838"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1aa7158b5d55f1f78d6a3a72f7fe597e"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1layer__norm__attr__t.html#a1aa7158b5d55f1f78d6a3a72f7fe597e">wg_num_n</a> = wg_num_n_</td></tr>
+<tr class="separator:a1aa7158b5d55f1f78d6a3a72f7fe597e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a894a0e5662386d0c85cb87184d478a1b"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1layer__norm__attr__t.html#a894a0e5662386d0c85cb87184d478a1b">chunk_size</a> = chunk_size_</td></tr>
+<tr class="separator:a894a0e5662386d0c85cb87184d478a1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_ = 1, uint32_t wg_num_m_ = 1, uint32_t wg_num_n_ = 1&gt;<br />
-struct gpu::xetla::kernel::layer_norm_attr_t&lt; wg_tile_n_, wg_tile_m_, sg_tile_n_, sg_tile_m_, wg_num_m_, wg_num_n_ &gt;</div><p >Sets up attribute of the layer norm. </p>
+<div class="textblock"><div class="compoundTemplParams">template&lt;uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_ = 1, uint32_t wg_num_m_ = 1, uint32_t wg_num_n_ = 1, uint32_t chunk_size_ = 1&gt;<br />
+struct gpu::xetla::kernel::layer_norm_attr_t&lt; wg_tile_n_, wg_tile_m_, sg_tile_n_, sg_tile_m_, wg_num_m_, wg_num_n_, chunk_size_ &gt;</div><p >Sets up attribute of the layer norm. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">wg_tile_n_</td><td>Is the num of cols processed by one workgroup. Should equal to matrix_n in the current design. </td></tr>
@@ -141,23 +143,24 @@ struct gpu::xetla::kernel::layer_norm_attr_t&lt; wg_tile_n_, wg_tile_m_, sg_tile
     <tr><td class="paramname">sg_tile_m_</td><td>Is the num of rows processed by one subgroup in each inner loop. Mainly used for row reduction in the BWD path </td></tr>
     <tr><td class="paramname">wg_num_m_</td><td>Is the num of total workgroups launched in y direction, will be used in static persistent thread mode. </td></tr>
     <tr><td class="paramname">wg_num_n_</td><td>Is the num of total workgroups launched in x direction. Currently, it should be 1. </td></tr>
+    <tr><td class="paramname">chunk_size_</td><td>Is the size of chunks when processing n dimenstion. sg_tile_n % chunk_size == 0. Used only in FWD pass. Should be used when kernels have spills. </td></tr>
   </table>
   </dd>
 </dl>
 </div><h2 class="groupheader">Member Data Documentation</h2>
-<a id="aadf56627c933278ad1ac3fad89c5c6c2" name="aadf56627c933278ad1ac3fad89c5c6c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aadf56627c933278ad1ac3fad89c5c6c2">&#9670;&#160;</a></span>sg_tile_m</h2>
+<a id="a894a0e5662386d0c85cb87184d478a1b" name="a894a0e5662386d0c85cb87184d478a1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a894a0e5662386d0c85cb87184d478a1b">&#9670;&#160;</a></span>chunk_size</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_ = 1, uint32_t wg_num_m_ = 1, uint32_t wg_num_n_ = 1&gt; </div>
+template&lt;uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_ = 1, uint32_t wg_num_m_ = 1, uint32_t wg_num_n_ = 1, uint32_t chunk_size_ = 1&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1layer__norm__attr__t.html">gpu::xetla::kernel::layer_norm_attr_t</a>&lt; wg_tile_n_, wg_tile_m_, sg_tile_n_, sg_tile_m_, wg_num_m_, wg_num_n_ &gt;::sg_tile_m = sg_tile_m_</td>
+          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1layer__norm__attr__t.html">gpu::xetla::kernel::layer_norm_attr_t</a>&lt; wg_tile_n_, wg_tile_m_, sg_tile_n_, sg_tile_m_, wg_num_m_, wg_num_n_, chunk_size_ &gt;::chunk_size = chunk_size_</td>
         </tr>
       </table>
   </td>
@@ -169,19 +172,19 @@ template&lt;uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint3
 
 </div>
 </div>
-<a id="a0d00f02d10aff764ea500c3789924a13" name="a0d00f02d10aff764ea500c3789924a13"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0d00f02d10aff764ea500c3789924a13">&#9670;&#160;</a></span>sg_tile_n</h2>
+<a id="a88d9604b474102590c43d7f37344b98a" name="a88d9604b474102590c43d7f37344b98a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88d9604b474102590c43d7f37344b98a">&#9670;&#160;</a></span>sg_tile_m</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_ = 1, uint32_t wg_num_m_ = 1, uint32_t wg_num_n_ = 1&gt; </div>
+template&lt;uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_ = 1, uint32_t wg_num_m_ = 1, uint32_t wg_num_n_ = 1, uint32_t chunk_size_ = 1&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1layer__norm__attr__t.html">gpu::xetla::kernel::layer_norm_attr_t</a>&lt; wg_tile_n_, wg_tile_m_, sg_tile_n_, sg_tile_m_, wg_num_m_, wg_num_n_ &gt;::sg_tile_n = sg_tile_n_</td>
+          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1layer__norm__attr__t.html">gpu::xetla::kernel::layer_norm_attr_t</a>&lt; wg_tile_n_, wg_tile_m_, sg_tile_n_, sg_tile_m_, wg_num_m_, wg_num_n_, chunk_size_ &gt;::sg_tile_m = sg_tile_m_</td>
         </tr>
       </table>
   </td>
@@ -193,19 +196,19 @@ template&lt;uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint3
 
 </div>
 </div>
-<a id="a2b117c04f91064277242654e65516de2" name="a2b117c04f91064277242654e65516de2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2b117c04f91064277242654e65516de2">&#9670;&#160;</a></span>wg_num_m</h2>
+<a id="a98907c9eaedc6fa3dbcf583e8cde1d57" name="a98907c9eaedc6fa3dbcf583e8cde1d57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98907c9eaedc6fa3dbcf583e8cde1d57">&#9670;&#160;</a></span>sg_tile_n</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_ = 1, uint32_t wg_num_m_ = 1, uint32_t wg_num_n_ = 1&gt; </div>
+template&lt;uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_ = 1, uint32_t wg_num_m_ = 1, uint32_t wg_num_n_ = 1, uint32_t chunk_size_ = 1&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1layer__norm__attr__t.html">gpu::xetla::kernel::layer_norm_attr_t</a>&lt; wg_tile_n_, wg_tile_m_, sg_tile_n_, sg_tile_m_, wg_num_m_, wg_num_n_ &gt;::wg_num_m = wg_num_m_</td>
+          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1layer__norm__attr__t.html">gpu::xetla::kernel::layer_norm_attr_t</a>&lt; wg_tile_n_, wg_tile_m_, sg_tile_n_, sg_tile_m_, wg_num_m_, wg_num_n_, chunk_size_ &gt;::sg_tile_n = sg_tile_n_</td>
         </tr>
       </table>
   </td>
@@ -217,19 +220,19 @@ template&lt;uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint3
 
 </div>
 </div>
-<a id="a6897ed4da39f5fd0535395158a37bc1d" name="a6897ed4da39f5fd0535395158a37bc1d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6897ed4da39f5fd0535395158a37bc1d">&#9670;&#160;</a></span>wg_num_n</h2>
+<a id="a982bb376743ca0fef7eb0c438420c838" name="a982bb376743ca0fef7eb0c438420c838"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a982bb376743ca0fef7eb0c438420c838">&#9670;&#160;</a></span>wg_num_m</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_ = 1, uint32_t wg_num_m_ = 1, uint32_t wg_num_n_ = 1&gt; </div>
+template&lt;uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_ = 1, uint32_t wg_num_m_ = 1, uint32_t wg_num_n_ = 1, uint32_t chunk_size_ = 1&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1layer__norm__attr__t.html">gpu::xetla::kernel::layer_norm_attr_t</a>&lt; wg_tile_n_, wg_tile_m_, sg_tile_n_, sg_tile_m_, wg_num_m_, wg_num_n_ &gt;::wg_num_n = wg_num_n_</td>
+          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1layer__norm__attr__t.html">gpu::xetla::kernel::layer_norm_attr_t</a>&lt; wg_tile_n_, wg_tile_m_, sg_tile_n_, sg_tile_m_, wg_num_m_, wg_num_n_, chunk_size_ &gt;::wg_num_m = wg_num_m_</td>
         </tr>
       </table>
   </td>
@@ -241,19 +244,19 @@ template&lt;uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint3
 
 </div>
 </div>
-<a id="ad6fe88da31387eac02da5addce2d0d90" name="ad6fe88da31387eac02da5addce2d0d90"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad6fe88da31387eac02da5addce2d0d90">&#9670;&#160;</a></span>wg_tile_m</h2>
+<a id="a1aa7158b5d55f1f78d6a3a72f7fe597e" name="a1aa7158b5d55f1f78d6a3a72f7fe597e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1aa7158b5d55f1f78d6a3a72f7fe597e">&#9670;&#160;</a></span>wg_num_n</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_ = 1, uint32_t wg_num_m_ = 1, uint32_t wg_num_n_ = 1&gt; </div>
+template&lt;uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_ = 1, uint32_t wg_num_m_ = 1, uint32_t wg_num_n_ = 1, uint32_t chunk_size_ = 1&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1layer__norm__attr__t.html">gpu::xetla::kernel::layer_norm_attr_t</a>&lt; wg_tile_n_, wg_tile_m_, sg_tile_n_, sg_tile_m_, wg_num_m_, wg_num_n_ &gt;::wg_tile_m = wg_tile_m_</td>
+          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1layer__norm__attr__t.html">gpu::xetla::kernel::layer_norm_attr_t</a>&lt; wg_tile_n_, wg_tile_m_, sg_tile_n_, sg_tile_m_, wg_num_m_, wg_num_n_, chunk_size_ &gt;::wg_num_n = wg_num_n_</td>
         </tr>
       </table>
   </td>
@@ -265,19 +268,43 @@ template&lt;uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint3
 
 </div>
 </div>
-<a id="ac8b26a688e34b49bad63935da91715ba" name="ac8b26a688e34b49bad63935da91715ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac8b26a688e34b49bad63935da91715ba">&#9670;&#160;</a></span>wg_tile_n</h2>
+<a id="a9d642c4cd3b84308e4672c52897e079f" name="a9d642c4cd3b84308e4672c52897e079f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d642c4cd3b84308e4672c52897e079f">&#9670;&#160;</a></span>wg_tile_m</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_ = 1, uint32_t wg_num_m_ = 1, uint32_t wg_num_n_ = 1&gt; </div>
+template&lt;uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_ = 1, uint32_t wg_num_m_ = 1, uint32_t wg_num_n_ = 1, uint32_t chunk_size_ = 1&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1layer__norm__attr__t.html">gpu::xetla::kernel::layer_norm_attr_t</a>&lt; wg_tile_n_, wg_tile_m_, sg_tile_n_, sg_tile_m_, wg_num_m_, wg_num_n_ &gt;::wg_tile_n = wg_tile_n_</td>
+          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1layer__norm__attr__t.html">gpu::xetla::kernel::layer_norm_attr_t</a>&lt; wg_tile_n_, wg_tile_m_, sg_tile_n_, sg_tile_m_, wg_num_m_, wg_num_n_, chunk_size_ &gt;::wg_tile_m = wg_tile_m_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a65151e349e080ca8958d7bf1c555a2fd" name="a65151e349e080ca8958d7bf1c555a2fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65151e349e080ca8958d7bf1c555a2fd">&#9670;&#160;</a></span>wg_tile_n</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_ = 1, uint32_t wg_num_m_ = 1, uint32_t wg_num_n_ = 1, uint32_t chunk_size_ = 1&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1layer__norm__attr__t.html">gpu::xetla::kernel::layer_norm_attr_t</a>&lt; wg_tile_n_, wg_tile_m_, sg_tile_n_, sg_tile_m_, wg_num_m_, wg_num_n_, chunk_size_ &gt;::wg_tile_n = wg_tile_n_</td>
         </tr>
       </table>
   </td>

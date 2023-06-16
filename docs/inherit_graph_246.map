@@ -1,3 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structxetla__softmax__fwd__t.html" title=" " alt="" coords="5,5,221,89"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,74,108,99"/>
+<area shape="rect" id="node2" href="$structgpu_1_1xetla_1_1is__host__callable_3_01T_00_01std_1_1enable__if__t_3_01T_1_1host__callable_0a_0atrue_01_4_01_4.html" title=" " alt="" coords="166,5,330,75"/>
+<area shape="rect" id="node3" href="$structsycl_1_1is__device__copyable_3_01T_00_01std_1_1enable__if__t_3_01gpu_1_1xetla_1_1is__host_cf13af5cc49ff51c2d56dc67f2e77257.html" title=" " alt="" coords="156,99,340,168"/>
 </map>

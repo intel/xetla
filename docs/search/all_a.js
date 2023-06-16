@@ -1,14 +1,15 @@
 var searchData=
 [
-  ['kernel_2ehpp_0',['kernel.hpp',['../experimental_2kernel_2kernel_8hpp.html',1,'(Global Namespace)'],['../kernel_2kernel_8hpp.html',1,'(Global Namespace)']]],
-  ['kernel_5ffunc_1',['KERNEL_FUNC',['../group__xetla__core.html#gafb2a0442e367d71b79a2f932d0d39c8b',1,'common.hpp']]],
-  ['kernel_5ffunc_2ehpp_2',['kernel_func.hpp',['../kernel__func_8hpp.html',1,'']]],
-  ['kernel_5fmain_3',['KERNEL_MAIN',['../group__xetla__core.html#ga83d8d7bf7b1fc063767128b839bddb97',1,'common.hpp']]],
-  ['kernel_5fxcoder_5fgru_5ffusion_4',['kernel_xcoder_gru_fusion',['../structkernel__xcoder__gru__fusion.html',1,'']]],
-  ['key_5',['key',['../structgpu_1_1xetla_1_1xetla__rand__t.html#a4d86fe3bb013e53024074b81f9e62654',1,'gpu::xetla::xetla_rand_t']]],
-  ['kphilox10a_6',['kPhilox10A',['../structgpu_1_1xetla_1_1xetla__rand__t.html#a2fc70252c4889e527456d57cd3d625cc',1,'gpu::xetla::xetla_rand_t']]],
-  ['kphilox10b_7',['kPhilox10B',['../structgpu_1_1xetla_1_1xetla__rand__t.html#aff857ade14aef547af32465e118e37ec',1,'gpu::xetla::xetla_rand_t']]],
-  ['kphiloxsa_8',['kPhiloxSA',['../structgpu_1_1xetla_1_1xetla__rand__t.html#a2ccac717cf40fdcb958e2604bd69b01e',1,'gpu::xetla::xetla_rand_t']]],
-  ['kphiloxsb_9',['kPhiloxSB',['../structgpu_1_1xetla_1_1xetla__rand__t.html#aa92fc4b7d75839a04e9d4a1ef317319c',1,'gpu::xetla::xetla_rand_t']]],
-  ['kslicing_5fxe_2ehpp_10',['kslicing_xe.hpp',['../kslicing__xe_8hpp.html',1,'']]]
+  ['k_5fstride_0',['k_stride',['../group__xetla__softmax.html#ga29f1e81ad25f2ef5d3a3b62e9c909f40',1,'gpu::xetla::kernel::xetla_mha_attn_reg_fwd_t::k_stride()'],['../group__xetla__softmax.html#ga829b4ad8eeabf06c6631c7f91c661bb2',1,'gpu::xetla::kernel::xetla_mha_attn_reg_bwd_t::k_stride()'],['../structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#a77bc59e6f7b615194ef09413291eab85',1,'gpu::xetla::kernel::xetla_mha_core_attn_fwd_t::k_stride()'],['../structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__bwd__t.html#a8220ab650cb14104f09fd36ea71f47d1',1,'gpu::xetla::kernel::xetla_mha_core_attn_bwd_t::k_stride()'],['../structgpu_1_1xetla_1_1group_1_1perf__tuning__knob__t.html#a9562d6b6f7440c6dfd1940cb7b2e067f',1,'gpu::xetla::group::perf_tuning_knob_t::k_stride()'],['../structgpu_1_1xetla_1_1group_1_1compute__policy__default__xmx_3_01compute__attr___00_01perf__tuni99772a0774107d5e4cbc4d748cebc11b.html#a8b12c42bdd1744b273f7c62b877a7dad',1,'gpu::xetla::group::compute_policy_default_xmx&lt; compute_attr_, perf_tuning_knob_, gpu_arch::Xe &gt;::k_stride()'],['../structgpu_1_1xetla_1_1group_1_1compute__policy__default__fpu_3_01compute__attr___00_01perf__tuni47256acf2d5985beff28b2772c102b96.html#aa1b9ee3ebe9598b9215131858a979db4',1,'gpu::xetla::group::compute_policy_default_fpu&lt; compute_attr_, perf_tuning_knob_, gpu_arch::Xe &gt;::k_stride()'],['../classgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__default__fpu_3_01compute__attr___00e6ff7d3616a116a3ac4e9e017b87087d.html#aa3caf3b3358d63898f600bd7fd11ece1',1,'gpu::xetla::group::brgemm_t&lt; compute_policy_default_fpu&lt; compute_attr_, perf_tuning_knob_, gpu_arch::Xe &gt;, tile_shape_, mem_desc_a_t_, mem_desc_b_t_, pre_processing_t_ &gt;::k_stride()'],['../classgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__default__xmx_3_01compute__attr___00cfb0805f04374331c75878919ee17cda.html#a0d7385864f82980c1911aa52dbf03e07',1,'gpu::xetla::group::brgemm_t&lt; compute_policy_default_xmx&lt; compute_attr_, perf_tuning_knob_, gpu_arch::Xe &gt;, tile_shape_, mem_desc_a_t_, mem_desc_b_t_, pre_processing_t_ &gt;::k_stride()']]],
+  ['kernel_2ehpp_1',['kernel.hpp',['../experimental_2kernel_2kernel_8hpp.html',1,'(Global Namespace)'],['../kernel_2kernel_8hpp.html',1,'(Global Namespace)']]],
+  ['kernel_5ffunc_2',['KERNEL_FUNC',['../group__xetla__core.html#gafb2a0442e367d71b79a2f932d0d39c8b',1,'common.hpp']]],
+  ['kernel_5ffunc_2ehpp_3',['kernel_func.hpp',['../kernel__func_8hpp.html',1,'']]],
+  ['kernel_5fmain_4',['KERNEL_MAIN',['../group__xetla__core.html#ga83d8d7bf7b1fc063767128b839bddb97',1,'common.hpp']]],
+  ['kernel_5fxcoder_5fgru_5ffusion_5',['kernel_xcoder_gru_fusion',['../structkernel__xcoder__gru__fusion.html',1,'']]],
+  ['key_6',['key',['../structgpu_1_1xetla_1_1xetla__rand__t.html#a4d86fe3bb013e53024074b81f9e62654',1,'gpu::xetla::xetla_rand_t']]],
+  ['kphilox10a_7',['kPhilox10A',['../structgpu_1_1xetla_1_1xetla__rand__t.html#a2fc70252c4889e527456d57cd3d625cc',1,'gpu::xetla::xetla_rand_t']]],
+  ['kphilox10b_8',['kPhilox10B',['../structgpu_1_1xetla_1_1xetla__rand__t.html#aff857ade14aef547af32465e118e37ec',1,'gpu::xetla::xetla_rand_t']]],
+  ['kphiloxsa_9',['kPhiloxSA',['../structgpu_1_1xetla_1_1xetla__rand__t.html#a2ccac717cf40fdcb958e2604bd69b01e',1,'gpu::xetla::xetla_rand_t']]],
+  ['kphiloxsb_10',['kPhiloxSB',['../structgpu_1_1xetla_1_1xetla__rand__t.html#aa92fc4b7d75839a04e9d4a1ef317319c',1,'gpu::xetla::xetla_rand_t']]],
+  ['kslicing_5fxe_2ehpp_11',['kslicing_xe.hpp',['../kslicing__xe_8hpp.html',1,'']]]
 ];

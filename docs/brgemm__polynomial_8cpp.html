@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.1</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.2</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -172,9 +172,9 @@ Include dependency graph for brgemm_polynomial.cpp:</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a0b36a71ef15f0d98b0d5c15c1cda19a9"><td class="memTemplParams" colspan="2">template&lt;typename data_type_a , typename data_type_b , typename data_type_c , typename data_type_acc  = float&gt; </td></tr>
-<tr class="memitem:a0b36a71ef15f0d98b0d5c15c1cda19a9"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="brgemm__polynomial_8cpp.html#a0b36a71ef15f0d98b0d5c15c1cda19a9">gemm_polynomial_result_validate</a> (data_type_a *A, data_type_b *<a class="el" href="multi__head__attention_8cpp.html#a111da81ae5883147168bbb8366377b10">B</a>, data_type_c *C, int m, int k, int n, <a class="el" href="namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561">mem_layout</a> mem_layout_a_=mem_layout::row_major, <a class="el" href="namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561">mem_layout</a> mem_layout_b_=mem_layout::row_major)</td></tr>
-<tr class="separator:a0b36a71ef15f0d98b0d5c15c1cda19a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba9865cd43a03fb928bcc0db62517c31"><td class="memTemplParams" colspan="2">template&lt;typename data_type_a , typename data_type_b , typename data_type_c , typename data_type_acc  = float&gt; </td></tr>
+<tr class="memitem:aba9865cd43a03fb928bcc0db62517c31"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="brgemm__polynomial_8cpp.html#aba9865cd43a03fb928bcc0db62517c31">gemm_polynomial_result_validate</a> (data_type_a *A_device, data_type_b *B_device, data_type_c *C_device, int m, int k, int n, sycl::queue &amp;queue, <a class="el" href="namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561">mem_layout</a> mem_layout_a_=mem_layout::row_major, <a class="el" href="namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561">mem_layout</a> mem_layout_b_=mem_layout::row_major)</td></tr>
+<tr class="separator:aba9865cd43a03fb928bcc0db62517c31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5cb98ba7cf64890073b7539f45777e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="brgemm__polynomial_8cpp.html#ac5cb98ba7cf64890073b7539f45777e7">brgemm_polynomial_run</a> (int iter)</td></tr>
 <tr class="separator:ac5cb98ba7cf64890073b7539f45777e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="brgemm__polynomial_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
@@ -199,8 +199,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a0b36a71ef15f0d98b0d5c15c1cda19a9" name="a0b36a71ef15f0d98b0d5c15c1cda19a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0b36a71ef15f0d98b0d5c15c1cda19a9">&#9670;&#160;</a></span>gemm_polynomial_result_validate()</h2>
+<a id="aba9865cd43a03fb928bcc0db62517c31" name="aba9865cd43a03fb928bcc0db62517c31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba9865cd43a03fb928bcc0db62517c31">&#9670;&#160;</a></span>gemm_polynomial_result_validate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -211,19 +211,19 @@ template&lt;typename data_type_a , typename data_type_b , typename data_type_c ,
           <td class="memname">int gemm_polynomial_result_validate </td>
           <td>(</td>
           <td class="paramtype">data_type_a *&#160;</td>
-          <td class="paramname"><em>A</em>, </td>
+          <td class="paramname"><em>A_device</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">data_type_b *&#160;</td>
-          <td class="paramname"><em>B</em>, </td>
+          <td class="paramname"><em>B_device</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">data_type_c *&#160;</td>
-          <td class="paramname"><em>C</em>, </td>
+          <td class="paramname"><em>C_device</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -242,6 +242,12 @@ template&lt;typename data_type_a , typename data_type_b , typename data_type_c ,
           <td></td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">sycl::queue &amp;&#160;</td>
+          <td class="paramname"><em>queue</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
