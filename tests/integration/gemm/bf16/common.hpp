@@ -37,6 +37,7 @@ public:
                 + mem_layout_a_str + "_" + mem_layout_b_str;
         return name;
     }
+    static constexpr mma_engine engine = mma_engine::xmx;
 };
 
 class Test0 : public TestBase {
@@ -294,4 +295,5 @@ template <class Test, typename dtype_a, typename dtype_b, typename dtype_c,
         typename dtype_acc>
 using bgemm_func = bgemm_test_func<dtype_a, dtype_b, dtype_c, dtype_acc,
         Test::wg_m, Test::wg_n, Test::sg_m, Test::sg_n, Test::sg_k,
-        Test::layout_a, Test::layout_b, Test::l3_kslicing, Test::slm_kslicing>;
+        Test::layout_a, Test::layout_b, Test::l3_kslicing, Test::slm_kslicing,
+        Test::engine>;

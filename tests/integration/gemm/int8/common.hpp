@@ -41,6 +41,8 @@ public:
                 + mem_layout_a_str + "_" + mem_layout_b_str;
         return name;
     }
+
+    static constexpr mma_engine engine = mma_engine::xmx;
 };
 
 class Test0 : public TestBase {
@@ -187,7 +189,7 @@ template <class Test, typename data_type_a, typename data_type_b,
 using int8_gemm_func = int8gemm_test_func<data_type_a, data_type_b, data_type_c,
         data_type_acc, Test::wg_m, Test::wg_n, Test::sg_m, Test::sg_n,
         Test::sg_k, Test::layout_a, Test::layout_b, Test::l3_kslicing,
-        Test::slm_kslicing>;
+        Test::slm_kslicing, Test::engine>;
 
 template <class Test, typename data_type_a, typename data_type_b,
         typename data_type_c, typename data_type_acc>
