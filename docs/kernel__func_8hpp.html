@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.2</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.3</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -245,8 +245,8 @@ Macros</h2></td></tr>
 <div class="line">            {boundary_n, boundary_k_##id, \</div>
 <div class="line">                    is_col_major_b ? matrix_k_##id : matrix_n}, \</div>
 <div class="line">            {start_x_b, start_y_b}); \</div>
-<div class="line">    brgemm_arg.init(mem_desc_a, mem_desc_b, inner_loop_count_##<span class="keywordtype">id</span>); \</div>
-<div class="line">    op(g, matAcc_##acc_id, brgemm_arg); \</div>
+<div class="line">    brgemm_args.init(mem_desc_a, mem_desc_b, inner_loop_count_##<span class="keywordtype">id</span>); \</div>
+<div class="line">    op(g, matAcc_##acc_id, brgemm_args); \</div>
 <div class="line">    SW_BARRIER();</div>
 </div><!-- fragment -->
 </div>

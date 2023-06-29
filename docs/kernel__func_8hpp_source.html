@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.2</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.3</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -182,8 +182,8 @@ $(document).ready(function(){initNavTree('kernel__func_8hpp_source.html',''); in
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="preprocessor">            {boundary_n, boundary_k_##id, \</span></div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">                    is_col_major_b ? matrix_k_##id : matrix_n}, \</span></div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="preprocessor">            {start_x_b, start_y_b}); \</span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">    brgemm_arg.init(mem_desc_a, mem_desc_b, inner_loop_count_##id); \</span></div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="preprocessor">    op(g, matAcc_##acc_id, brgemm_arg); \</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">    brgemm_args.init(mem_desc_a, mem_desc_b, inner_loop_count_##id); \</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="preprocessor">    op(g, matAcc_##acc_id, brgemm_args); \</span></div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="preprocessor">    SW_BARRIER();</span></div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="kernel__func_8hpp.html#af430564fa4eb832aab83f7b14d8772c8">   87</a></span><span class="preprocessor">#define MATC_STORE(ptr_c) \</span></div>
@@ -253,7 +253,7 @@ $(document).ready(function(){initNavTree('kernel__func_8hpp_source.html',''); in
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        <a class="code hl_typedef" href="structgru__layer.html#ab4f2c4a045e55f8b268251dc6b059329">matAcc_t</a> matAcc_0, matAcc_1;</div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        <a class="code hl_struct" href="structgpu_1_1xetla_1_1subgroup_1_1tile__t.html">matC_t</a> matC;</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        <a class="code hl_struct" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t.html">matC_payload_t</a> matC_payload;</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        <a class="code hl_typedef" href="structgru__layer.html#a7fc65a4b330fd3b0d1c9aa2756a29bc1">brgemm_arguments</a> brgemm_arg;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        <a class="code hl_typedef" href="structgru__layer.html#a7fc65a4b330fd3b0d1c9aa2756a29bc1">brgemm_arguments</a> brgemm_args;</div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        <a class="code hl_struct" href="structgpu_1_1xetla_1_1subgroup_1_1tile__t.html">mat_hidden_t</a> mat_hidden;</div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        <a class="code hl_struct" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t.html">mat_hidden_payload_t</a> mat_hidden_payload;</div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        <a class="code hl_struct" href="structgpu_1_1xetla_1_1mem__desc__t.html">mem_desc_a_t</a> mem_desc_a;</div>
