@@ -23,10 +23,10 @@ using namespace gpu::xetla;
 template <typename dtype_a, typename dtype_b, typename dtype_c,
         typename dtype_acc, uint32_t wg_m, uint32_t wg_n, uint32_t sg_m,
         uint32_t sg_n, uint32_t sg_k, mem_layout layout_a, mem_layout layout_b,
-        uint32_t l3_kslicing, uint32_t slm_kslicing>
-struct bgemm_test_func {
+        uint32_t l3_kslicing, uint32_t slm_kslicing, mma_engine engine>
+struct bf16_gemm_test_func {
 
-    static const char *func_name() { return "bgemm_test_func"; }
+    static const char *func_name() { return "bf16_gemm_test_func"; }
 
     static inline void run(xetla_exec_item<3> &ei, dtype_a *A, dtype_b *B,
             dtype_c *C, uint32_t mat_m, uint32_t mat_n, uint32_t mat_k) {
