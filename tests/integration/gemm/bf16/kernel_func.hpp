@@ -38,8 +38,8 @@ struct bf16_gemm_test_func {
         static constexpr uint32_t prefetch_distance = 3;
         using brgemm_t = typename brgemm_selector_t<dtype_a, dtype_b, layout_a,
                 layout_b, mem_space::global, mem_space::global, 8, 8, dtype_acc,
-                tile_shape, sg_k, mma_engine::xmx, gpu_arch::Xe,
-                prefetch_distance, periodic_sync_interval>::brgemm;
+                tile_shape, sg_k, engine, gpu_arch::Xe, prefetch_distance,
+                periodic_sync_interval>::brgemm;
 
         using update_method = typename std::conditional<(l3_kslicing > 1),
                 result_reduce_sum, result_overwrite>::type;
