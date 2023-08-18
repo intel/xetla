@@ -1,7 +1,4 @@
 <map id="include/kernel/gemm/api.hpp" name="include/kernel/gemm/api.hpp">
-<area shape="rect" id="node1" title="C++ API." alt="" coords="167,5,309,45"/>
-<area shape="rect" id="node2" href="$kernel_2gemm_2common_8hpp.html" title="C++ API." alt="" coords="150,93,326,119"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,167,156,192"/>
-<area shape="rect" id="node4" title=" " alt="" coords="181,167,295,192"/>
-<area shape="rect" id="node5" title=" " alt="" coords="319,167,477,192"/>
+<area shape="rect" id="node1" title="C++ API." alt="" coords="22,5,165,45"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,93,181,119"/>
 </map>

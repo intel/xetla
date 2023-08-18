@@ -5,6 +5,8 @@ var common_2core_2common_8hpp =
     [ "__ESIMD_ENS", "common_2core_2common_8hpp.html#ace517c88613872db52c5b6cdc339e26a", null ],
     [ "__ESIMD_NS", "common_2core_2common_8hpp.html#a2cc603b8de1c7e2a083db975423dc9fe", null ],
     [ "__XETLA_API", "common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765", null ],
+    [ "DEVICE_ASSERT", "common_2core_2common_8hpp.html#a74bb62574ab90245bc499d3f1c7984c3", null ],
+    [ "DEVICE_PRINTF", "common_2core_2common_8hpp.html#aa58e292c9fe9e9dc6b464fdc10495fff", null ],
     [ "KERNEL_FUNC", "group__xetla__core.html#gafb2a0442e367d71b79a2f932d0d39c8b", null ],
     [ "KERNEL_MAIN", "group__xetla__core.html#ga83d8d7bf7b1fc063767128b839bddb97", null ],
     [ "SW_BARRIER", "common_2core_2common_8hpp.html#a4894ef2f787a454434527ed8416177d9", null ],

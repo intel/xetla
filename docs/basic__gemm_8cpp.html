@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.3</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.4</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -104,6 +104,7 @@ $(document).ready(function(){initNavTree('basic__gemm_8cpp.html',''); initResiza
 
 <div class="header">
   <div class="summary">
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">basic_gemm.cpp File Reference</div></div>
 </div><!--header-->
@@ -115,21 +116,21 @@ Include dependency graph for basic_gemm.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="basic__gemm_8cpp__incl.png" border="0" usemap="#aexamples_201__basic__gemm_2basic__gemm_8cpp" alt=""/></div>
 <map name="aexamples_201__basic__gemm_2basic__gemm_8cpp" id="aexamples_201__basic__gemm_2basic__gemm_8cpp">
-<area shape="rect" title=" " alt="" coords="2360,5,2537,45"/>
-<area shape="rect" title=" " alt="" coords="2319,93,2451,119"/>
-<area shape="rect" href="xetla_8hpp.html" title="C++ API." alt="" coords="2475,93,2550,119"/>
+<area shape="rect" title=" " alt="" coords="3023,5,3200,45"/>
+<area shape="rect" title=" " alt="" coords="2981,93,3113,119"/>
+<area shape="rect" href="xetla_8hpp.html" title="C++ API." alt="" coords="3138,93,3213,119"/>
 <area shape="rect" href="common_2common_8hpp.html" title="C++ API." alt="" coords="1271,167,1421,192"/>
-<area shape="rect" href="experimental_8hpp.html" title="C++ API." alt="" coords="2413,167,2612,192"/>
-<area shape="rect" href="group_2group_8hpp.html" title="C++ API." alt="" coords="3009,167,3123,192"/>
-<area shape="rect" href="kernel_2kernel_8hpp.html" title="C++ API." alt="" coords="3381,167,3503,192"/>
-<area shape="rect" href="subgroup_2subgroup_8hpp.html" title="C++ API." alt="" coords="1881,167,2038,192"/>
+<area shape="rect" href="experimental_8hpp.html" title="C++ API." alt="" coords="2607,167,2805,192"/>
+<area shape="rect" href="group_2group_8hpp.html" title="C++ API." alt="" coords="3365,167,3479,192"/>
+<area shape="rect" href="kernel_2kernel_8hpp.html" title="C++ API." alt="" coords="3679,167,3800,192"/>
+<area shape="rect" href="subgroup_2subgroup_8hpp.html" title="C++ API." alt="" coords="3097,167,3254,192"/>
 <area shape="rect" href="core_8hpp.html" title="C++ API." alt="" coords="1002,592,1157,617"/>
 <area shape="rect" href="utils_8hpp.html" title=" " alt="" coords="737,247,891,273"/>
 <area shape="rect" href="arch__config_8hpp.html" title="C++ API." alt="" coords="5,673,201,698"/>
 <area shape="rect" href="barrier_8hpp.html" title="C++ API." alt="" coords="225,673,392,698"/>
 <area shape="rect" href="base__consts_8hpp.html" title="C++ API." alt="" coords="416,673,620,698"/>
 <area shape="rect" href="base__ops_8hpp.html" title="C++ API." alt="" coords="955,841,1142,867"/>
-<area shape="rect" href="base__types_8hpp.html" title="C++ API." alt="" coords="1378,841,1575,867"/>
+<area shape="rect" href="common_2core_2base__types_8hpp.html" title="C++ API." alt="" coords="1378,841,1575,867"/>
 <area shape="rect" href="bit__mask__manipulation_8hpp.html" title="C++ API." alt="" coords="1841,753,2000,793"/>
 <area shape="rect" href="explicit__conv_8hpp.html" title="C++ API." alt="" coords="1006,665,1153,705"/>
 <area shape="rect" href="math__general_8hpp.html" title="C++ API." alt="" coords="1086,761,1294,786"/>
@@ -146,41 +147,80 @@ Include dependency graph for basic_gemm.cpp:</div>
 <area shape="rect" href="rand_8hpp.html" title="C++ API." alt="" coords="737,438,891,463"/>
 <area shape="rect" href="raw__send__nbarrier_8hpp.html" title="C++ API." alt="" coords="916,431,1075,471"/>
 <area shape="rect" href="work__group_8hpp.html" title="C++ API." alt="" coords="102,438,297,463"/>
-<area shape="rect" href="experimental_2common_2common_8hpp.html" title="C++ API." alt="" coords="2697,240,2848,280"/>
-<area shape="rect" href="experimental_2group_2group_8hpp.html" title="C++ API." alt="" coords="1807,240,1939,280"/>
-<area shape="rect" href="experimental_2kernel_2kernel_8hpp.html" title="C++ API." alt="" coords="2361,240,2496,280"/>
-<area shape="rect" href="experimental_2subgroup_2subgroup_8hpp.html" title="C++ API." alt="" coords="2520,240,2673,280"/>
-<area shape="rect" href="dropout__mask__gen_8hpp.html" title="C++ API." alt="" coords="1792,335,1953,375"/>
-<area shape="rect" href="fused__op_8hpp.html" title="C++ API." alt="" coords="1977,335,2136,375"/>
-<area shape="rect" href="experimental_2group_2reduction_2reduction_8hpp.html" title="C++ API." alt="" coords="1435,335,1596,375"/>
-<area shape="rect" href="include_2experimental_2group_2softmax_2softmax_8hpp.html" title="C++ API." alt="" coords="1621,335,1767,375"/>
-<area shape="rect" href="tile_8hpp.html" title="C++ API." alt="" coords="1593,438,1736,463"/>
-<area shape="rect" href="data__transformer_8hpp.html" title="C++ API." alt="" coords="2161,328,2313,383"/>
-<area shape="rect" href="layer__norm_8hpp.html" title="C++ API." alt="" coords="2337,335,2520,375"/>
-<area shape="rect" href="mha__attn__reg_8hpp.html" title=" " alt="" coords="2544,328,2684,383"/>
-<area shape="rect" href="mha__core__attn_8hpp.html" title=" " alt="" coords="2708,328,2848,383"/>
-<area shape="rect" href="experimental_2kernel_2reduction_2reduction_8hpp.html" title="C++ API." alt="" coords="2872,335,3033,375"/>
-<area shape="rect" href="tile__broadcast__op_8hpp.html" title="C++ API." alt="" coords="3057,335,3211,375"/>
-<area shape="rect" href="brgemm_8hpp.html" title="C++ API." alt="" coords="2873,247,3054,273"/>
-<area shape="rect" href="cooperative__reduction__xe_8hpp.html" title="C++ API." alt="" coords="3079,240,3261,280"/>
-<area shape="rect" href="epilogue_8hpp.html" title="C++ API." alt="" coords="3285,247,3468,273"/>
-<area shape="rect" href="gemm_8hpp.html" title="C++ API." alt="" coords="3493,247,3655,273"/>
+<area shape="rect" href="experimental_2common_2common_8hpp.html" title="C++ API." alt="" coords="2373,240,2524,280"/>
+<area shape="rect" href="experimental_2group_2group_8hpp.html" title="C++ API." alt="" coords="1835,240,1967,280"/>
+<area shape="rect" href="experimental_2kernel_2kernel_8hpp.html" title="C++ API." alt="" coords="2639,240,2773,280"/>
+<area shape="rect" href="experimental_2subgroup_2subgroup_8hpp.html" title="C++ API." alt="" coords="2797,240,2951,280"/>
+<area shape="rect" href="experimental_2common_2base__types_8hpp.html" title="C++ API." alt="" coords="2281,335,2432,375"/>
+<area shape="rect" href="experimental_2group_2brgemm_2brgemm_8hpp.html" title="C++ API." alt="" coords="1554,335,1703,375"/>
+<area shape="rect" href="dropout__mask__gen_8hpp.html" title="C++ API." alt="" coords="1728,335,1889,375"/>
+<area shape="rect" href="fused__op_8hpp.html" title="C++ API." alt="" coords="1913,335,2072,375"/>
+<area shape="rect" href="experimental_2group_2reduction_2reduction_8hpp.html" title="C++ API." alt="" coords="2096,335,2257,375"/>
+<area shape="rect" href="include_2experimental_2group_2softmax_2softmax_8hpp.html" title="C++ API." alt="" coords="1383,335,1530,375"/>
+<area shape="rect" href="tile_8hpp.html" title="C++ API." alt="" coords="2420,438,2563,463"/>
+<area shape="rect" href="data__transformer_8hpp.html" title="C++ API." alt="" coords="2986,328,3138,383"/>
+<area shape="rect" href="experimental_2kernel_2gemm_2gemm_8hpp.html" title="C++ API." alt="" coords="2456,335,2591,375"/>
+<area shape="rect" href="layer__norm_8hpp.html" title="C++ API." alt="" coords="2615,335,2797,375"/>
+<area shape="rect" href="mha__attn__reg_8hpp.html" title=" " alt="" coords="2821,328,2961,383"/>
+<area shape="rect" title=" " alt="" coords="3213,247,3394,273"/>
+<area shape="rect" href="cooperative__reduction__xe_8hpp.html" title="C++ API." alt="" coords="3419,240,3601,280"/>
+<area shape="rect" href="epilogue_8hpp.html" title="C++ API." alt="" coords="3625,247,3808,273"/>
+<area shape="rect" title=" " alt="" coords="3833,247,3995,273"/>
 </map>
 </div>
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a69ec471fd653f0d2934e3d72f8438f87"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="basic__gemm_8cpp.html#a69ec471fd653f0d2934e3d72f8438f87">kslicing_impl_t</a> { <a class="el" href="basic__gemm_8cpp.html#a69ec471fd653f0d2934e3d72f8438f87a334c4a4c42fdb79d7ebc3e73b517e6f8">none</a> = 0
+, <a class="el" href="basic__gemm_8cpp.html#a69ec471fd653f0d2934e3d72f8438f87a9c70933aff6b2a6d08c687a6cbb6b765">global</a> = 1
+, <a class="el" href="basic__gemm_8cpp.html#a69ec471fd653f0d2934e3d72f8438f87af5ddaf0ca7929578b408c909429f68f2">local</a> = 2
+ }</td></tr>
+<tr class="separator:a69ec471fd653f0d2934e3d72f8438f87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a319a7053aa9cecaba6dba359a208c855"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="basic__gemm_8cpp.html#a319a7053aa9cecaba6dba359a208c855">basic_gemm_run</a> (uint32_t iter)</td></tr>
-<tr class="separator:a319a7053aa9cecaba6dba359a208c855"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28483b1b8a362734d27340531f61e244"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="basic__gemm_8cpp.html#a69ec471fd653f0d2934e3d72f8438f87">kslicing_impl_t</a> kslicing_type = kslicing_impl_t::none&gt; </td></tr>
+<tr class="memitem:a28483b1b8a362734d27340531f61e244"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="basic__gemm_8cpp.html#a28483b1b8a362734d27340531f61e244">basic_gemm_run</a> (uint32_t iter)</td></tr>
+<tr class="separator:a28483b1b8a362734d27340531f61e244"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="basic__gemm_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
 <tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a319a7053aa9cecaba6dba359a208c855" name="a319a7053aa9cecaba6dba359a208c855"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a319a7053aa9cecaba6dba359a208c855">&#9670;&#160;</a></span>basic_gemm_run()</h2>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a69ec471fd653f0d2934e3d72f8438f87" name="a69ec471fd653f0d2934e3d72f8438f87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69ec471fd653f0d2934e3d72f8438f87">&#9670;&#160;</a></span>kslicing_impl_t</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="basic__gemm_8cpp.html#a69ec471fd653f0d2934e3d72f8438f87">kslicing_impl_t</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a69ec471fd653f0d2934e3d72f8438f87a334c4a4c42fdb79d7ebc3e73b517e6f8" name="a69ec471fd653f0d2934e3d72f8438f87a334c4a4c42fdb79d7ebc3e73b517e6f8"></a>none&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a69ec471fd653f0d2934e3d72f8438f87a9c70933aff6b2a6d08c687a6cbb6b765" name="a69ec471fd653f0d2934e3d72f8438f87a9c70933aff6b2a6d08c687a6cbb6b765"></a>global&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a69ec471fd653f0d2934e3d72f8438f87af5ddaf0ca7929578b408c909429f68f2" name="a69ec471fd653f0d2934e3d72f8438f87af5ddaf0ca7929578b408c909429f68f2"></a>local&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a28483b1b8a362734d27340531f61e244" name="a28483b1b8a362734d27340531f61e244"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28483b1b8a362734d27340531f61e244">&#9670;&#160;</a></span>basic_gemm_run()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="basic__gemm_8cpp.html#a69ec471fd653f0d2934e3d72f8438f87">kslicing_impl_t</a> kslicing_type = kslicing_impl_t::none&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void basic_gemm_run </td>

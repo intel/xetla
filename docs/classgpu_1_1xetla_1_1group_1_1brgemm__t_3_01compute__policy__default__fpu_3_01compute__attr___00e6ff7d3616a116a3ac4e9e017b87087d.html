@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.3</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.4</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -167,10 +167,6 @@ Static Public Member Functions</h2></td></tr>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:aa3caf3b3358d63898f600bd7fd11ece1"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__default__fpu_3_01compute__attr___00e6ff7d3616a116a3ac4e9e017b87087d.html#aa3caf3b3358d63898f600bd7fd11ece1">k_stride</a> = compute_policy::k_stride</td></tr>
 <tr class="separator:aa3caf3b3358d63898f600bd7fd11ece1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a295e46edc6662f214e05fd6cac6b417f"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__default__fpu_3_01compute__attr___00e6ff7d3616a116a3ac4e9e017b87087d.html#a295e46edc6662f214e05fd6cac6b417f">wg_tile_m</a> = tile_shape::wg_tile_size_y</td></tr>
-<tr class="separator:a295e46edc6662f214e05fd6cac6b417f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07d2ecc29a338a95d2abd2369530f65f"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__default__fpu_3_01compute__attr___00e6ff7d3616a116a3ac4e9e017b87087d.html#a07d2ecc29a338a95d2abd2369530f65f">wg_tile_n</a> = tile_shape::wg_tile_size_x</td></tr>
-<tr class="separator:a07d2ecc29a338a95d2abd2369530f65f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80585cee12922b4617b2d38420ac5ac5"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__default__fpu_3_01compute__attr___00e6ff7d3616a116a3ac4e9e017b87087d.html#a80585cee12922b4617b2d38420ac5ac5">sg_tile_m</a> = tile_shape::sg_tile_size_y</td></tr>
 <tr class="separator:a80585cee12922b4617b2d38420ac5ac5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49a3f01cbc57dc27bc7d473ac9cf6c79"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__default__fpu_3_01compute__attr___00e6ff7d3616a116a3ac4e9e017b87087d.html#a49a3f01cbc57dc27bc7d473ac9cf6c79">sg_tile_n</a> = tile_shape::sg_tile_size_x</td></tr>
@@ -761,54 +757,6 @@ template&lt;typename compute_attr_ , typename perf_tuning_knob_ , typename tile_
       <table class="memname">
         <tr>
           <td class="memname">constexpr uint32_t <a class="el" href="classgpu_1_1xetla_1_1group_1_1brgemm__t.html">gpu::xetla::group::brgemm_t</a>&lt; <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__fpu.html">compute_policy_default_fpu</a>&lt; compute_attr_, perf_tuning_knob_, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;, tile_shape_, mem_desc_a_t_, mem_desc_b_t_, pre_processing_t_ &gt;::wg_size_y = tile_shape::wg_size_y</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a295e46edc6662f214e05fd6cac6b417f" name="a295e46edc6662f214e05fd6cac6b417f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a295e46edc6662f214e05fd6cac6b417f">&#9670;&#160;</a></span>wg_tile_m</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename compute_attr_ , typename perf_tuning_knob_ , typename tile_shape_ , typename mem_desc_a_t_ , typename mem_desc_b_t_ , typename pre_processing_t_ &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr uint32_t <a class="el" href="classgpu_1_1xetla_1_1group_1_1brgemm__t.html">gpu::xetla::group::brgemm_t</a>&lt; <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__fpu.html">compute_policy_default_fpu</a>&lt; compute_attr_, perf_tuning_knob_, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;, tile_shape_, mem_desc_a_t_, mem_desc_b_t_, pre_processing_t_ &gt;::wg_tile_m = tile_shape::wg_tile_size_y</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a07d2ecc29a338a95d2abd2369530f65f" name="a07d2ecc29a338a95d2abd2369530f65f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a07d2ecc29a338a95d2abd2369530f65f">&#9670;&#160;</a></span>wg_tile_n</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename compute_attr_ , typename perf_tuning_knob_ , typename tile_shape_ , typename mem_desc_a_t_ , typename mem_desc_b_t_ , typename pre_processing_t_ &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr uint32_t <a class="el" href="classgpu_1_1xetla_1_1group_1_1brgemm__t.html">gpu::xetla::group::brgemm_t</a>&lt; <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__fpu.html">compute_policy_default_fpu</a>&lt; compute_attr_, perf_tuning_knob_, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;, tile_shape_, mem_desc_a_t_, mem_desc_b_t_, pre_processing_t_ &gt;::wg_tile_n = tile_shape::wg_tile_size_x</td>
         </tr>
       </table>
   </td>

@@ -16,6 +16,8 @@ var structgru__layer =
     [ "mem_desc_b_t", "structgru__layer.html#a34c3c622b13a1857e84b0477602cfd37", null ],
     [ "mem_desc_c_t", "structgru__layer.html#a720eef80488cc1b2e8cdbb118242fd38", null ],
     [ "perf_tuning_knob", "structgru__layer.html#ab2851adab058fbb91e494e1d53774994", null ],
+    [ "sigmoid_t", "structgru__layer.html#a24e3c94971def2e9bb8734f897d81383", null ],
+    [ "tanh_t", "structgru__layer.html#a79ac04894b7623f90c871273e760fa5e", null ],
     [ "tile_shape", "structgru__layer.html#a64dee4ab62d72d85d75eb38adc28b80b", null ],
     [ "work_group_t", "structgru__layer.html#adcfa50cd9851458f662a8b9d5c9d7511", null ]
 ];

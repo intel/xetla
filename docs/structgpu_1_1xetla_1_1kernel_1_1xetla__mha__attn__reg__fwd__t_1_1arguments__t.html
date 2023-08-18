@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.3</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.4</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -106,7 +106,7 @@ $(document).ready(function(){initNavTree('structgpu_1_1xetla_1_1kernel_1_1xetla_
   <div class="summary">
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__attn__reg__fwd__t_1_1arguments__t-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">gpu::xetla::kernel::xetla_mha_attn_reg_fwd_t&lt; dtype_bin_, dtype_bot_, dtype_sfx_, dtype_acc_, HWThreadNum, Dopt_RandGenflag, RandSIMD, Max_SeqLen &gt;::arguments_t Struct Reference<div class="ingroups"><a class="el" href="group__xetla__softmax.html">xetla Fused Softmax</a></div></div></div>
+  <div class="headertitle"><div class="title">gpu::xetla::kernel::xetla_mha_attn_reg_fwd_t&lt; dtype_bin_, dtype_bot_, dtype_sfx_, dtype_acc_, HWThreadNum, Dopt_RandGenflag, RandSIMD, Max_SeqLen &gt;::arguments_t Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -117,36 +117,229 @@ $(document).ready(function(){initNavTree('structgpu_1_1xetla_1_1kernel_1_1xetla_
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:gab5088be7d30e4e1f0e63667715468c26"><td class="memItemLeft" align="right" valign="top">uint32_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__xetla__softmax.html#gab5088be7d30e4e1f0e63667715468c26">mList_ptr</a></td></tr>
-<tr class="separator:gab5088be7d30e4e1f0e63667715468c26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac08813ff8ef28577611dd1be800e93f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__xetla__softmax.html#ga539d9deb9fb20db3cebd64bfef3596d7">dtype_bin</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__xetla__softmax.html#gac08813ff8ef28577611dd1be800e93f9">matQ_ptr</a></td></tr>
-<tr class="separator:gac08813ff8ef28577611dd1be800e93f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gacb56b06859d8da0e711de3f4eaa21c2d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__xetla__softmax.html#ga539d9deb9fb20db3cebd64bfef3596d7">dtype_bin</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__xetla__softmax.html#gacb56b06859d8da0e711de3f4eaa21c2d">matK_ptr</a></td></tr>
-<tr class="separator:gacb56b06859d8da0e711de3f4eaa21c2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4d6c0f176dfa5107579b3b1a5e697fb7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__xetla__softmax.html#ga539d9deb9fb20db3cebd64bfef3596d7">dtype_bin</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__xetla__softmax.html#ga4d6c0f176dfa5107579b3b1a5e697fb7">matV_ptr</a></td></tr>
-<tr class="separator:ga4d6c0f176dfa5107579b3b1a5e697fb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa07f114d8952696e3957212c002af83c"><td class="memItemLeft" align="right" valign="top">uint32_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__xetla__softmax.html#gaa07f114d8952696e3957212c002af83c">matMkin_ptr</a></td></tr>
-<tr class="separator:gaa07f114d8952696e3957212c002af83c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga03b8b6a86ad1929bc67ae76b1744331b"><td class="memItemLeft" align="right" valign="top">uint32_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__xetla__softmax.html#ga03b8b6a86ad1929bc67ae76b1744331b">matMkdpot_ptr</a></td></tr>
-<tr class="separator:ga03b8b6a86ad1929bc67ae76b1744331b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga33c029e335796c6a4a115ba298c03881"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__xetla__softmax.html#ga8e9d329edb4884f09ed59d06419ac21f">dtype_sfx</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__xetla__softmax.html#ga33c029e335796c6a4a115ba298c03881">matQKT_ptr</a></td></tr>
-<tr class="separator:ga33c029e335796c6a4a115ba298c03881"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga038d1e7b36f9689cb36b81ef1e446f90"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__xetla__softmax.html#ga86ad336a5d63e00f45b1a21b1642b02c">dtype_bot</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__xetla__softmax.html#ga038d1e7b36f9689cb36b81ef1e446f90">matOut_ptr</a></td></tr>
-<tr class="separator:ga038d1e7b36f9689cb36b81ef1e446f90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4c5e49064bb769789c7b16950907e4f1"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__xetla__softmax.html#ga4c5e49064bb769789c7b16950907e4f1">Max_ptr</a></td></tr>
-<tr class="separator:ga4c5e49064bb769789c7b16950907e4f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga695ca94d00b4a1918b5f92005f2c0d05"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__xetla__softmax.html#ga695ca94d00b4a1918b5f92005f2c0d05">Sum_ptr</a></td></tr>
-<tr class="separator:ga695ca94d00b4a1918b5f92005f2c0d05"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6f6db5bc1535cf20ad42ed03b8f73537"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__xetla__softmax.html#ga6f6db5bc1535cf20ad42ed03b8f73537">Pinv</a></td></tr>
-<tr class="separator:ga6f6db5bc1535cf20ad42ed03b8f73537"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga501d30e57c968bdb7e3f2886dee11bdb"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__xetla__softmax.html#ga501d30e57c968bdb7e3f2886dee11bdb">Scaling</a></td></tr>
-<tr class="separator:ga501d30e57c968bdb7e3f2886dee11bdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5088be7d30e4e1f0e63667715468c26"><td class="memItemLeft" align="right" valign="top">uint32_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__attn__reg__fwd__t_1_1arguments__t.html#ab5088be7d30e4e1f0e63667715468c26">mList_ptr</a></td></tr>
+<tr class="separator:ab5088be7d30e4e1f0e63667715468c26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac08813ff8ef28577611dd1be800e93f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__attn__reg__fwd__t.html#a539d9deb9fb20db3cebd64bfef3596d7">dtype_bin</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__attn__reg__fwd__t_1_1arguments__t.html#ac08813ff8ef28577611dd1be800e93f9">matQ_ptr</a></td></tr>
+<tr class="separator:ac08813ff8ef28577611dd1be800e93f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb56b06859d8da0e711de3f4eaa21c2d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__attn__reg__fwd__t.html#a539d9deb9fb20db3cebd64bfef3596d7">dtype_bin</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__attn__reg__fwd__t_1_1arguments__t.html#acb56b06859d8da0e711de3f4eaa21c2d">matK_ptr</a></td></tr>
+<tr class="separator:acb56b06859d8da0e711de3f4eaa21c2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d6c0f176dfa5107579b3b1a5e697fb7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__attn__reg__fwd__t.html#a539d9deb9fb20db3cebd64bfef3596d7">dtype_bin</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__attn__reg__fwd__t_1_1arguments__t.html#a4d6c0f176dfa5107579b3b1a5e697fb7">matV_ptr</a></td></tr>
+<tr class="separator:a4d6c0f176dfa5107579b3b1a5e697fb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa07f114d8952696e3957212c002af83c"><td class="memItemLeft" align="right" valign="top">uint32_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__attn__reg__fwd__t_1_1arguments__t.html#aa07f114d8952696e3957212c002af83c">matMkin_ptr</a></td></tr>
+<tr class="separator:aa07f114d8952696e3957212c002af83c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03b8b6a86ad1929bc67ae76b1744331b"><td class="memItemLeft" align="right" valign="top">uint32_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__attn__reg__fwd__t_1_1arguments__t.html#a03b8b6a86ad1929bc67ae76b1744331b">matMkdpot_ptr</a></td></tr>
+<tr class="separator:a03b8b6a86ad1929bc67ae76b1744331b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33c029e335796c6a4a115ba298c03881"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__attn__reg__fwd__t.html#a8e9d329edb4884f09ed59d06419ac21f">dtype_sfx</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__attn__reg__fwd__t_1_1arguments__t.html#a33c029e335796c6a4a115ba298c03881">matQKT_ptr</a></td></tr>
+<tr class="separator:a33c029e335796c6a4a115ba298c03881"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a038d1e7b36f9689cb36b81ef1e446f90"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__attn__reg__fwd__t.html#a86ad336a5d63e00f45b1a21b1642b02c">dtype_bot</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__attn__reg__fwd__t_1_1arguments__t.html#a038d1e7b36f9689cb36b81ef1e446f90">matOut_ptr</a></td></tr>
+<tr class="separator:a038d1e7b36f9689cb36b81ef1e446f90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c5e49064bb769789c7b16950907e4f1"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__attn__reg__fwd__t_1_1arguments__t.html#a4c5e49064bb769789c7b16950907e4f1">Max_ptr</a></td></tr>
+<tr class="separator:a4c5e49064bb769789c7b16950907e4f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a695ca94d00b4a1918b5f92005f2c0d05"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__attn__reg__fwd__t_1_1arguments__t.html#a695ca94d00b4a1918b5f92005f2c0d05">Sum_ptr</a></td></tr>
+<tr class="separator:a695ca94d00b4a1918b5f92005f2c0d05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f6db5bc1535cf20ad42ed03b8f73537"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__attn__reg__fwd__t_1_1arguments__t.html#a6f6db5bc1535cf20ad42ed03b8f73537">Pinv</a></td></tr>
+<tr class="separator:a6f6db5bc1535cf20ad42ed03b8f73537"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a501d30e57c968bdb7e3f2886dee11bdb"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__attn__reg__fwd__t_1_1arguments__t.html#a501d30e57c968bdb7e3f2886dee11bdb">Scaling</a></td></tr>
+<tr class="separator:a501d30e57c968bdb7e3f2886dee11bdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename dtype_bin_, typename dtype_bot_, typename dtype_sfx_, typename dtype_acc_, int HWThreadNum, bool Dopt_RandGenflag = true, uint16_t RandSIMD = 16, int Max_SeqLen = 2048&gt;<br />
 struct gpu::xetla::kernel::xetla_mha_attn_reg_fwd_t&lt; dtype_bin_, dtype_bot_, dtype_sfx_, dtype_acc_, HWThreadNum, Dopt_RandGenflag, RandSIMD, Max_SeqLen &gt;::arguments_t</div><p >Arguments for xetla_softmax_fwd_t::run. </p>
 <p >User should prepare matQ_ptr, matK_ptr, matQKT_ptr, ... </p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="acb56b06859d8da0e711de3f4eaa21c2d" name="acb56b06859d8da0e711de3f4eaa21c2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb56b06859d8da0e711de3f4eaa21c2d">&#9670;&#160;</a></span>matK_ptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename dtype_bin_ , typename dtype_bot_ , typename dtype_sfx_ , typename dtype_acc_ , int HWThreadNum, bool Dopt_RandGenflag = true, uint16_t RandSIMD = 16, int Max_SeqLen = 2048&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__attn__reg__fwd__t.html#a539d9deb9fb20db3cebd64bfef3596d7">dtype_bin</a>* <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__attn__reg__fwd__t.html">gpu::xetla::kernel::xetla_mha_attn_reg_fwd_t</a>&lt; dtype_bin_, dtype_bot_, dtype_sfx_, dtype_acc_, HWThreadNum, Dopt_RandGenflag, RandSIMD, Max_SeqLen &gt;::arguments_t::matK_ptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a03b8b6a86ad1929bc67ae76b1744331b" name="a03b8b6a86ad1929bc67ae76b1744331b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03b8b6a86ad1929bc67ae76b1744331b">&#9670;&#160;</a></span>matMkdpot_ptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename dtype_bin_ , typename dtype_bot_ , typename dtype_sfx_ , typename dtype_acc_ , int HWThreadNum, bool Dopt_RandGenflag = true, uint16_t RandSIMD = 16, int Max_SeqLen = 2048&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t* <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__attn__reg__fwd__t.html">gpu::xetla::kernel::xetla_mha_attn_reg_fwd_t</a>&lt; dtype_bin_, dtype_bot_, dtype_sfx_, dtype_acc_, HWThreadNum, Dopt_RandGenflag, RandSIMD, Max_SeqLen &gt;::arguments_t::matMkdpot_ptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa07f114d8952696e3957212c002af83c" name="aa07f114d8952696e3957212c002af83c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa07f114d8952696e3957212c002af83c">&#9670;&#160;</a></span>matMkin_ptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename dtype_bin_ , typename dtype_bot_ , typename dtype_sfx_ , typename dtype_acc_ , int HWThreadNum, bool Dopt_RandGenflag = true, uint16_t RandSIMD = 16, int Max_SeqLen = 2048&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t* <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__attn__reg__fwd__t.html">gpu::xetla::kernel::xetla_mha_attn_reg_fwd_t</a>&lt; dtype_bin_, dtype_bot_, dtype_sfx_, dtype_acc_, HWThreadNum, Dopt_RandGenflag, RandSIMD, Max_SeqLen &gt;::arguments_t::matMkin_ptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a038d1e7b36f9689cb36b81ef1e446f90" name="a038d1e7b36f9689cb36b81ef1e446f90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a038d1e7b36f9689cb36b81ef1e446f90">&#9670;&#160;</a></span>matOut_ptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename dtype_bin_ , typename dtype_bot_ , typename dtype_sfx_ , typename dtype_acc_ , int HWThreadNum, bool Dopt_RandGenflag = true, uint16_t RandSIMD = 16, int Max_SeqLen = 2048&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__attn__reg__fwd__t.html#a86ad336a5d63e00f45b1a21b1642b02c">dtype_bot</a>* <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__attn__reg__fwd__t.html">gpu::xetla::kernel::xetla_mha_attn_reg_fwd_t</a>&lt; dtype_bin_, dtype_bot_, dtype_sfx_, dtype_acc_, HWThreadNum, Dopt_RandGenflag, RandSIMD, Max_SeqLen &gt;::arguments_t::matOut_ptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac08813ff8ef28577611dd1be800e93f9" name="ac08813ff8ef28577611dd1be800e93f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac08813ff8ef28577611dd1be800e93f9">&#9670;&#160;</a></span>matQ_ptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename dtype_bin_ , typename dtype_bot_ , typename dtype_sfx_ , typename dtype_acc_ , int HWThreadNum, bool Dopt_RandGenflag = true, uint16_t RandSIMD = 16, int Max_SeqLen = 2048&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__attn__reg__fwd__t.html#a539d9deb9fb20db3cebd64bfef3596d7">dtype_bin</a>* <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__attn__reg__fwd__t.html">gpu::xetla::kernel::xetla_mha_attn_reg_fwd_t</a>&lt; dtype_bin_, dtype_bot_, dtype_sfx_, dtype_acc_, HWThreadNum, Dopt_RandGenflag, RandSIMD, Max_SeqLen &gt;::arguments_t::matQ_ptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a33c029e335796c6a4a115ba298c03881" name="a33c029e335796c6a4a115ba298c03881"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33c029e335796c6a4a115ba298c03881">&#9670;&#160;</a></span>matQKT_ptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename dtype_bin_ , typename dtype_bot_ , typename dtype_sfx_ , typename dtype_acc_ , int HWThreadNum, bool Dopt_RandGenflag = true, uint16_t RandSIMD = 16, int Max_SeqLen = 2048&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__attn__reg__fwd__t.html#a8e9d329edb4884f09ed59d06419ac21f">dtype_sfx</a>* <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__attn__reg__fwd__t.html">gpu::xetla::kernel::xetla_mha_attn_reg_fwd_t</a>&lt; dtype_bin_, dtype_bot_, dtype_sfx_, dtype_acc_, HWThreadNum, Dopt_RandGenflag, RandSIMD, Max_SeqLen &gt;::arguments_t::matQKT_ptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4d6c0f176dfa5107579b3b1a5e697fb7" name="a4d6c0f176dfa5107579b3b1a5e697fb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d6c0f176dfa5107579b3b1a5e697fb7">&#9670;&#160;</a></span>matV_ptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename dtype_bin_ , typename dtype_bot_ , typename dtype_sfx_ , typename dtype_acc_ , int HWThreadNum, bool Dopt_RandGenflag = true, uint16_t RandSIMD = 16, int Max_SeqLen = 2048&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__attn__reg__fwd__t.html#a539d9deb9fb20db3cebd64bfef3596d7">dtype_bin</a>* <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__attn__reg__fwd__t.html">gpu::xetla::kernel::xetla_mha_attn_reg_fwd_t</a>&lt; dtype_bin_, dtype_bot_, dtype_sfx_, dtype_acc_, HWThreadNum, Dopt_RandGenflag, RandSIMD, Max_SeqLen &gt;::arguments_t::matV_ptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4c5e49064bb769789c7b16950907e4f1" name="a4c5e49064bb769789c7b16950907e4f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c5e49064bb769789c7b16950907e4f1">&#9670;&#160;</a></span>Max_ptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename dtype_bin_ , typename dtype_bot_ , typename dtype_sfx_ , typename dtype_acc_ , int HWThreadNum, bool Dopt_RandGenflag = true, uint16_t RandSIMD = 16, int Max_SeqLen = 2048&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">float* <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__attn__reg__fwd__t.html">gpu::xetla::kernel::xetla_mha_attn_reg_fwd_t</a>&lt; dtype_bin_, dtype_bot_, dtype_sfx_, dtype_acc_, HWThreadNum, Dopt_RandGenflag, RandSIMD, Max_SeqLen &gt;::arguments_t::Max_ptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab5088be7d30e4e1f0e63667715468c26" name="ab5088be7d30e4e1f0e63667715468c26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5088be7d30e4e1f0e63667715468c26">&#9670;&#160;</a></span>mList_ptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename dtype_bin_ , typename dtype_bot_ , typename dtype_sfx_ , typename dtype_acc_ , int HWThreadNum, bool Dopt_RandGenflag = true, uint16_t RandSIMD = 16, int Max_SeqLen = 2048&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t* <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__attn__reg__fwd__t.html">gpu::xetla::kernel::xetla_mha_attn_reg_fwd_t</a>&lt; dtype_bin_, dtype_bot_, dtype_sfx_, dtype_acc_, HWThreadNum, Dopt_RandGenflag, RandSIMD, Max_SeqLen &gt;::arguments_t::mList_ptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6f6db5bc1535cf20ad42ed03b8f73537" name="a6f6db5bc1535cf20ad42ed03b8f73537"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f6db5bc1535cf20ad42ed03b8f73537">&#9670;&#160;</a></span>Pinv</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename dtype_bin_ , typename dtype_bot_ , typename dtype_sfx_ , typename dtype_acc_ , int HWThreadNum, bool Dopt_RandGenflag = true, uint16_t RandSIMD = 16, int Max_SeqLen = 2048&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">float <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__attn__reg__fwd__t.html">gpu::xetla::kernel::xetla_mha_attn_reg_fwd_t</a>&lt; dtype_bin_, dtype_bot_, dtype_sfx_, dtype_acc_, HWThreadNum, Dopt_RandGenflag, RandSIMD, Max_SeqLen &gt;::arguments_t::Pinv</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a501d30e57c968bdb7e3f2886dee11bdb" name="a501d30e57c968bdb7e3f2886dee11bdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a501d30e57c968bdb7e3f2886dee11bdb">&#9670;&#160;</a></span>Scaling</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename dtype_bin_ , typename dtype_bot_ , typename dtype_sfx_ , typename dtype_acc_ , int HWThreadNum, bool Dopt_RandGenflag = true, uint16_t RandSIMD = 16, int Max_SeqLen = 2048&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">float <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__attn__reg__fwd__t.html">gpu::xetla::kernel::xetla_mha_attn_reg_fwd_t</a>&lt; dtype_bin_, dtype_bot_, dtype_sfx_, dtype_acc_, HWThreadNum, Dopt_RandGenflag, RandSIMD, Max_SeqLen &gt;::arguments_t::Scaling</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a695ca94d00b4a1918b5f92005f2c0d05" name="a695ca94d00b4a1918b5f92005f2c0d05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a695ca94d00b4a1918b5f92005f2c0d05">&#9670;&#160;</a></span>Sum_ptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename dtype_bin_ , typename dtype_bot_ , typename dtype_sfx_ , typename dtype_acc_ , int HWThreadNum, bool Dopt_RandGenflag = true, uint16_t RandSIMD = 16, int Max_SeqLen = 2048&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">float* <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__mha__attn__reg__fwd__t.html">gpu::xetla::kernel::xetla_mha_attn_reg_fwd_t</a>&lt; dtype_bin_, dtype_bot_, dtype_sfx_, dtype_acc_, HWThreadNum, Dopt_RandGenflag, RandSIMD, Max_SeqLen &gt;::arguments_t::Sum_ptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

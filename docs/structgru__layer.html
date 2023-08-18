@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.3</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.4</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -152,6 +152,10 @@ Public Types</h2></td></tr>
 <tr class="separator:a5c9893fa6381f6cf081e5e04ddabf5fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2685cbca1e1e6aaece5fc1e38ec05cac"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgru__layer.html#a2685cbca1e1e6aaece5fc1e38ec05cac">matC_payload_t</a> = <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t.html">mem_payload_t</a>&lt; T, <a class="el" href="structgru__layer.html#ac0134c4a4096d6d2e8b0d4118ea65d0f">matC_tile_desc_t</a>, msg_type::block_2d, layout_out, mem_loc_out, gpu_arch::Xe &gt;</td></tr>
 <tr class="separator:a2685cbca1e1e6aaece5fc1e38ec05cac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24e3c94971def2e9bb8734f897d81383"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgru__layer.html#a24e3c94971def2e9bb8734f897d81383">sigmoid_t</a> = typename <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1sigmoid__op__t.html">subgroup::sigmoid_op_t</a></td></tr>
+<tr class="separator:a24e3c94971def2e9bb8734f897d81383"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79ac04894b7623f90c871273e760fa5e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgru__layer.html#a79ac04894b7623f90c871273e760fa5e">tanh_t</a> = typename <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tanh__op__t.html">subgroup::tanh_op_t</a></td></tr>
+<tr class="separator:a79ac04894b7623f90c871273e760fa5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -418,6 +422,38 @@ template&lt;typename T , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n
       <table class="memname">
         <tr>
           <td class="memname">using <a class="el" href="structgru__layer.html">gru_layer</a>&lt; T, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;::perf_tuning_knob =  <a class="el" href="structgpu_1_1xetla_1_1group_1_1perf__tuning__knob__t.html">perf_tuning_knob_t</a>&lt;sg_tile_k, <a class="el" href="structgru__layer.html#a718794eb9cbe3b98111ff19f19bbd256">prefetch_distance</a>, periodic_sync_interval&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a24e3c94971def2e9bb8734f897d81383" name="a24e3c94971def2e9bb8734f897d81383"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24e3c94971def2e9bb8734f897d81383">&#9670;&#160;</a></span>sigmoid_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m, uint32_t sg_tile_n, uint32_t sg_tile_k, mem_layout layout_input = mem_layout::row_major, mem_layout layout_weight = mem_layout::row_major, mem_layout layout_out = mem_layout::row_major, mem_space mem_loc_input = mem_space::global, mem_space mem_loc_weight = mem_space::global, mem_space mem_loc_out = mem_space::global, uint32_t periodic_sync_interval = 0&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structgru__layer.html">gru_layer</a>&lt; T, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;::sigmoid_t =  typename <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1sigmoid__op__t.html">subgroup::sigmoid_op_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a79ac04894b7623f90c871273e760fa5e" name="a79ac04894b7623f90c871273e760fa5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79ac04894b7623f90c871273e760fa5e">&#9670;&#160;</a></span>tanh_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m, uint32_t sg_tile_n, uint32_t sg_tile_k, mem_layout layout_input = mem_layout::row_major, mem_layout layout_weight = mem_layout::row_major, mem_layout layout_out = mem_layout::row_major, mem_space mem_loc_input = mem_space::global, mem_space mem_loc_weight = mem_space::global, mem_space mem_loc_out = mem_space::global, uint32_t periodic_sync_interval = 0&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structgru__layer.html">gru_layer</a>&lt; T, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;::tanh_t =  typename <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tanh__op__t.html">subgroup::tanh_op_t</a></td>
         </tr>
       </table>
 </div><div class="memdoc">

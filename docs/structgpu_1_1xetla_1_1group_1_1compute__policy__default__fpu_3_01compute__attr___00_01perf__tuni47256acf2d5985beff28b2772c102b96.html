@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.3</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.4</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -114,7 +114,7 @@ $(document).ready(function(){initNavTree('structgpu_1_1xetla_1_1group_1_1compute
 <p>Specialized for Xe architecture.  
  <a href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__fpu_3_01compute__attr___00_01perf__tuni47256acf2d5985beff28b2772c102b96.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="compute__policy_8hpp_source.html">compute_policy.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="group_2brgemm_2compute__policy_8hpp_source.html">compute_policy.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -139,13 +139,17 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:afa3844d0dfaa1063ed493736c45eb9ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc0f5ff32b9a3e1f41a942db92538467"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__fpu_3_01compute__attr___00_01perf__tuni47256acf2d5985beff28b2772c102b96.html#acc0f5ff32b9a3e1f41a942db92538467">arch_tag</a> = <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a></td></tr>
 <tr class="separator:acc0f5ff32b9a3e1f41a942db92538467"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeaa80c658199c731d773d08c41c7ae71"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__fpu_3_01compute__attr___00_01perf__tuni47256acf2d5985beff28b2772c102b96.html#aeaa80c658199c731d773d08c41c7ae71">block_bytes_x_a</a> = 64</td></tr>
+<tr class="memitem:aeaa80c658199c731d773d08c41c7ae71"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__fpu_3_01compute__attr___00_01perf__tuni47256acf2d5985beff28b2772c102b96.html#aeaa80c658199c731d773d08c41c7ae71">block_bytes_x_a</a> = 32</td></tr>
 <tr class="separator:aeaa80c658199c731d773d08c41c7ae71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4c5a11a04b67a3082a59d02d432f311"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__fpu_3_01compute__attr___00_01perf__tuni47256acf2d5985beff28b2772c102b96.html#aa4c5a11a04b67a3082a59d02d432f311">block_size_x_a</a> = <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__fpu_3_01compute__attr___00_01perf__tuni47256acf2d5985beff28b2772c102b96.html#aeaa80c658199c731d773d08c41c7ae71">block_bytes_x_a</a> / sizeof(<a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__fpu_3_01compute__attr___00_01perf__tuni47256acf2d5985beff28b2772c102b96.html#af362232d777e43a5cefc093afeefc410">dtype_mma_a</a>)</td></tr>
+<tr class="separator:aa4c5a11a04b67a3082a59d02d432f311"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a231feb3d21013072feaef688f8565999"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__fpu_3_01compute__attr___00_01perf__tuni47256acf2d5985beff28b2772c102b96.html#a231feb3d21013072feaef688f8565999">block_size_y_a</a> = 16</td></tr>
 <tr class="separator:a231feb3d21013072feaef688f8565999"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8b02f5b8d9c26ec9b42b02cd547a7e2"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__fpu_3_01compute__attr___00_01perf__tuni47256acf2d5985beff28b2772c102b96.html#ac8b02f5b8d9c26ec9b42b02cd547a7e2">block_bytes_x_b</a> = 64</td></tr>
 <tr class="separator:ac8b02f5b8d9c26ec9b42b02cd547a7e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe4be4ff47474f8992f6f398af1f6828"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__fpu_3_01compute__attr___00_01perf__tuni47256acf2d5985beff28b2772c102b96.html#afe4be4ff47474f8992f6f398af1f6828">block_size_y_b</a> = 16</td></tr>
+<tr class="memitem:a2c7fd329881b459c8168f05b35c90647"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__fpu_3_01compute__attr___00_01perf__tuni47256acf2d5985beff28b2772c102b96.html#a2c7fd329881b459c8168f05b35c90647">block_size_x_b</a> = <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__fpu_3_01compute__attr___00_01perf__tuni47256acf2d5985beff28b2772c102b96.html#ac8b02f5b8d9c26ec9b42b02cd547a7e2">block_bytes_x_b</a> / sizeof(<a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__fpu_3_01compute__attr___00_01perf__tuni47256acf2d5985beff28b2772c102b96.html#acc87c6fd60924bde60b8673eb038e2a7">dtype_mma_b</a>)</td></tr>
+<tr class="separator:a2c7fd329881b459c8168f05b35c90647"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe4be4ff47474f8992f6f398af1f6828"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__fpu_3_01compute__attr___00_01perf__tuni47256acf2d5985beff28b2772c102b96.html#afe4be4ff47474f8992f6f398af1f6828">block_size_y_b</a> = <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__fpu_3_01compute__attr___00_01perf__tuni47256acf2d5985beff28b2772c102b96.html#aa4c5a11a04b67a3082a59d02d432f311">block_size_x_a</a></td></tr>
 <tr class="separator:afe4be4ff47474f8992f6f398af1f6828"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -269,7 +273,7 @@ template&lt;typename compute_attr_ , typename perf_tuning_knob_ &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__fpu.html">gpu::xetla::group::compute_policy_default_fpu</a>&lt; compute_attr_, perf_tuning_knob_, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;::block_bytes_x_a = 64</td>
+          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__fpu.html">gpu::xetla::group::compute_policy_default_fpu</a>&lt; compute_attr_, perf_tuning_knob_, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;::block_bytes_x_a = 32</td>
         </tr>
       </table>
   </td>
@@ -294,6 +298,54 @@ template&lt;typename compute_attr_ , typename perf_tuning_knob_ &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__fpu.html">gpu::xetla::group::compute_policy_default_fpu</a>&lt; compute_attr_, perf_tuning_knob_, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;::block_bytes_x_b = 64</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa4c5a11a04b67a3082a59d02d432f311" name="aa4c5a11a04b67a3082a59d02d432f311"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4c5a11a04b67a3082a59d02d432f311">&#9670;&#160;</a></span>block_size_x_a</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename compute_attr_ , typename perf_tuning_knob_ &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__fpu.html">gpu::xetla::group::compute_policy_default_fpu</a>&lt; compute_attr_, perf_tuning_knob_, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;::block_size_x_a = <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__fpu_3_01compute__attr___00_01perf__tuni47256acf2d5985beff28b2772c102b96.html#aeaa80c658199c731d773d08c41c7ae71">block_bytes_x_a</a> / sizeof(<a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__fpu_3_01compute__attr___00_01perf__tuni47256acf2d5985beff28b2772c102b96.html#af362232d777e43a5cefc093afeefc410">dtype_mma_a</a>)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2c7fd329881b459c8168f05b35c90647" name="a2c7fd329881b459c8168f05b35c90647"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c7fd329881b459c8168f05b35c90647">&#9670;&#160;</a></span>block_size_x_b</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename compute_attr_ , typename perf_tuning_knob_ &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__fpu.html">gpu::xetla::group::compute_policy_default_fpu</a>&lt; compute_attr_, perf_tuning_knob_, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;::block_size_x_b = <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__fpu_3_01compute__attr___00_01perf__tuni47256acf2d5985beff28b2772c102b96.html#ac8b02f5b8d9c26ec9b42b02cd547a7e2">block_bytes_x_b</a> / sizeof(<a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__fpu_3_01compute__attr___00_01perf__tuni47256acf2d5985beff28b2772c102b96.html#acc87c6fd60924bde60b8673eb038e2a7">dtype_mma_b</a>)</td>
         </tr>
       </table>
   </td>
@@ -341,7 +393,7 @@ template&lt;typename compute_attr_ , typename perf_tuning_knob_ &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__fpu.html">gpu::xetla::group::compute_policy_default_fpu</a>&lt; compute_attr_, perf_tuning_knob_, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;::block_size_y_b = 16</td>
+          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__fpu.html">gpu::xetla::group::compute_policy_default_fpu</a>&lt; compute_attr_, perf_tuning_knob_, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;::block_size_y_b = <a class="el" href="structgpu_1_1xetla_1_1group_1_1compute__policy__default__fpu_3_01compute__attr___00_01perf__tuni47256acf2d5985beff28b2772c102b96.html#aa4c5a11a04b67a3082a59d02d432f311">block_size_x_a</a></td>
         </tr>
       </table>
   </td>

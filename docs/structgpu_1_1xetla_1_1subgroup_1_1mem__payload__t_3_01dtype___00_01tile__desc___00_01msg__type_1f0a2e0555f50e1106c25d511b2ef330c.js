@@ -12,7 +12,5 @@ var structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__des
     [ "operator=", "structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_1f0a2e0555f50e1106c25d511b2ef330c.html#a06a345aac83e0956d2fbcc2085866922", null ],
     [ "update_tdesc", "structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_1f0a2e0555f50e1106c25d511b2ef330c.html#a80e9acf7c632b89148294937ef02670f", null ],
     [ "address", "structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_1f0a2e0555f50e1106c25d511b2ef330c.html#af38460a6d93657d074904bd4f6bf41c9", null ],
-    [ "base_addr", "structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_1f0a2e0555f50e1106c25d511b2ef330c.html#acf1c49b9f622a9b2182e73adb03ede84", null ],
-    [ "base_offset", "structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_1f0a2e0555f50e1106c25d511b2ef330c.html#a2c33bedc0377c1583d22791daa4372dd", null ],
     [ "pitch_in_bytes", "structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_1f0a2e0555f50e1106c25d511b2ef330c.html#ab2d83188e87c59caf57375c8f6d9e728", null ]
 ];

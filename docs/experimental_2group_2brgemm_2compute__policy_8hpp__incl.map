@@ -1,0 +1,11 @@
+<map id="include/experimental/group/brgemm/compute_policy.hpp" name="include/experimental/group/brgemm/compute_policy.hpp">
+<area shape="rect" id="node1" title="C++ API." alt="" coords="233,5,395,60"/>
+<area shape="rect" id="node2" href="$experimental_2group_2brgemm_2common_8hpp.html" title="C++ API." alt="" coords="238,108,390,148"/>
+<area shape="rect" id="node3" href="$experimental_2common_2common_8hpp.html" title="C++ API." alt="" coords="5,196,156,236"/>
+<area shape="rect" id="node6" href="$experimental_2subgroup_2subgroup_8hpp.html" title="C++ API." alt="" coords="180,196,333,236"/>
+<area shape="rect" id="node8" title=" " alt="" coords="237,372,394,397"/>
+<area shape="rect" id="node9" title=" " alt="" coords="409,203,523,229"/>
+<area shape="rect" id="node4" href="$experimental_2common_2base__types_8hpp.html" title="C++ API." alt="" coords="5,284,156,324"/>
+<area shape="rect" id="node5" title=" " alt="" coords="5,372,156,397"/>
+<area shape="rect" id="node7" href="$tile__broadcast__op_8hpp.html" title="C++ API." alt="" coords="180,284,333,324"/>
+</map>

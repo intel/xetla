@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.3</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.4</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -148,6 +148,20 @@ Public Attributes</h2></td></tr>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a146c1ebfbe01781f88d23683749cc656"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mad5d1adea938e137c96761a4611a4c7d3.html#a146c1ebfbe01781f88d23683749cc656">arch_tag</a> = <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a></td></tr>
 <tr class="separator:a146c1ebfbe01781f88d23683749cc656"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5e5e388660d24d7305deb464e2895a5"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mad5d1adea938e137c96761a4611a4c7d3.html#aa5e5e388660d24d7305deb464e2895a5">coop_num_y</a></td></tr>
+<tr class="separator:aa5e5e388660d24d7305deb464e2895a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a789e62e317c4ab689313a9c5085ec260"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mad5d1adea938e137c96761a4611a4c7d3.html#a789e62e317c4ab689313a9c5085ec260">coop_remain_num_x</a> = num_cooperative_wg / <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mad5d1adea938e137c96761a4611a4c7d3.html#aa5e5e388660d24d7305deb464e2895a5">coop_num_y</a></td></tr>
+<tr class="separator:a789e62e317c4ab689313a9c5085ec260"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaa83e276450e71c503ad251ea9575bd"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mad5d1adea938e137c96761a4611a4c7d3.html#adaa83e276450e71c503ad251ea9575bd">has_redundant_wg</a> = (<a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mad5d1adea938e137c96761a4611a4c7d3.html#a789e62e317c4ab689313a9c5085ec260">coop_remain_num_x</a> * 16) &gt; sg_tile_n</td></tr>
+<tr class="separator:adaa83e276450e71c503ad251ea9575bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ece5e7c13ff81f8761a89235f9e202b"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mad5d1adea938e137c96761a4611a4c7d3.html#a5ece5e7c13ff81f8761a89235f9e202b">tile_size_y</a> = sg_tile_m / <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mad5d1adea938e137c96761a4611a4c7d3.html#aa5e5e388660d24d7305deb464e2895a5">coop_num_y</a></td></tr>
+<tr class="separator:a5ece5e7c13ff81f8761a89235f9e202b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3001e1619776172a031c9a673501474b"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mad5d1adea938e137c96761a4611a4c7d3.html#a3001e1619776172a031c9a673501474b">tile_size_x</a> = <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mad5d1adea938e137c96761a4611a4c7d3.html#adaa83e276450e71c503ad251ea9575bd">has_redundant_wg</a> ? 16 : sg_tile_n / <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mad5d1adea938e137c96761a4611a4c7d3.html#a789e62e317c4ab689313a9c5085ec260">coop_remain_num_x</a></td></tr>
+<tr class="separator:a3001e1619776172a031c9a673501474b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07278a6d3f680e8b3ee3bc04cd3879f1"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mad5d1adea938e137c96761a4611a4c7d3.html#a07278a6d3f680e8b3ee3bc04cd3879f1">coop_num_x</a> = sg_tile_n / <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mad5d1adea938e137c96761a4611a4c7d3.html#a3001e1619776172a031c9a673501474b">tile_size_x</a></td></tr>
+<tr class="separator:a07278a6d3f680e8b3ee3bc04cd3879f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada1d8ca9379c852ab13b1ef1abe26dcf"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mad5d1adea938e137c96761a4611a4c7d3.html#ada1d8ca9379c852ab13b1ef1abe26dcf">num_reduce_wg</a> = <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mad5d1adea938e137c96761a4611a4c7d3.html#a07278a6d3f680e8b3ee3bc04cd3879f1">coop_num_x</a> * <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mad5d1adea938e137c96761a4611a4c7d3.html#aa5e5e388660d24d7305deb464e2895a5">coop_num_y</a></td></tr>
+<tr class="separator:ada1d8ca9379c852ab13b1ef1abe26dcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30abd3276aecaa151ddfc36b081d0d1c"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mad5d1adea938e137c96761a4611a4c7d3.html#a30abd3276aecaa151ddfc36b081d0d1c">barrier_count</a> = work_group_size</td></tr>
 <tr class="separator:a30abd3276aecaa151ddfc36b081d0d1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96cce99298caa45f962836714a7f5a2a"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mad5d1adea938e137c96761a4611a4c7d3.html#a96cce99298caa45f962836714a7f5a2a">slm_size</a> = wg_tile_size * num_cooperative_wg</td></tr>
@@ -290,7 +304,8 @@ template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a725172
 </div><div class="memdoc">
 
 <p>Cooperative workgroup reduction. </p>
-<p >1) each workgroup stores tile data to local memory -&gt; 2) cross workgroup (but still within a group) sync -&gt; 3) each workgroup loads slice of tile data, do the reduction. </p><dl class="params"><dt>Parameters</dt><dd>
+<p >1) each workgroup stores tile data to local memory -&gt; 2) cross workgroup (but still within a group) sync -&gt; 3) workgroups loads slice of tile data, do the reduction. </p><dl class="section note"><dt>Note</dt><dd>only workgroups with coop_id_x &lt; coop_num_x have valid data. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">g</td><td>Is the workgroup of the current tile. </td></tr>
     <tr><td class="paramname">mat_slice</td><td>Is the output of the reduction. Each workgroup only keeps part of the tile data. </td></tr>
@@ -400,6 +415,129 @@ template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a725172
 
 </div>
 </div>
+<a id="a07278a6d3f680e8b3ee3bc04cd3879f1" name="a07278a6d3f680e8b3ee3bc04cd3879f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07278a6d3f680e8b3ee3bc04cd3879f1">&#9670;&#160;</a></span>coop_num_x</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename tile_shape_ , typename matAcc_t , uint32_t num_cooperative_wg&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr uint32_t <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t.html">gpu::xetla::group::cooperative_reduce_t</a>&lt; reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;::coop_num_x = sg_tile_n / <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mad5d1adea938e137c96761a4611a4c7d3.html#a3001e1619776172a031c9a673501474b">tile_size_x</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa5e5e388660d24d7305deb464e2895a5" name="aa5e5e388660d24d7305deb464e2895a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5e5e388660d24d7305deb464e2895a5">&#9670;&#160;</a></span>coop_num_y</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename tile_shape_ , typename matAcc_t , uint32_t num_cooperative_wg&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr uint32_t <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t.html">gpu::xetla::group::cooperative_reduce_t</a>&lt; reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;::coop_num_y</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= <a class="code hl_struct" href="structgpu_1_1xetla_1_1subgroup_1_1detail_1_1gcd.html">gpu::xetla::subgroup::detail::gcd</a>&lt;num_cooperative_wg,</div>
+<div class="line">                    sg_tile_m&gt;::value</div>
+<div class="ttc" id="astructgpu_1_1xetla_1_1subgroup_1_1detail_1_1gcd_html"><div class="ttname"><a href="structgpu_1_1xetla_1_1subgroup_1_1detail_1_1gcd.html">gpu::xetla::subgroup::detail::gcd</a></div><div class="ttdef"><b>Definition:</b> common.hpp:80</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a789e62e317c4ab689313a9c5085ec260" name="a789e62e317c4ab689313a9c5085ec260"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a789e62e317c4ab689313a9c5085ec260">&#9670;&#160;</a></span>coop_remain_num_x</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename tile_shape_ , typename matAcc_t , uint32_t num_cooperative_wg&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr uint32_t <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t.html">gpu::xetla::group::cooperative_reduce_t</a>&lt; reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;::coop_remain_num_x = num_cooperative_wg / <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mad5d1adea938e137c96761a4611a4c7d3.html#aa5e5e388660d24d7305deb464e2895a5">coop_num_y</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adaa83e276450e71c503ad251ea9575bd" name="adaa83e276450e71c503ad251ea9575bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adaa83e276450e71c503ad251ea9575bd">&#9670;&#160;</a></span>has_redundant_wg</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename tile_shape_ , typename matAcc_t , uint32_t num_cooperative_wg&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t.html">gpu::xetla::group::cooperative_reduce_t</a>&lt; reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;::has_redundant_wg = (<a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mad5d1adea938e137c96761a4611a4c7d3.html#a789e62e317c4ab689313a9c5085ec260">coop_remain_num_x</a> * 16) &gt; sg_tile_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ada1d8ca9379c852ab13b1ef1abe26dcf" name="ada1d8ca9379c852ab13b1ef1abe26dcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada1d8ca9379c852ab13b1ef1abe26dcf">&#9670;&#160;</a></span>num_reduce_wg</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename tile_shape_ , typename matAcc_t , uint32_t num_cooperative_wg&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr uint32_t <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t.html">gpu::xetla::group::cooperative_reduce_t</a>&lt; reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;::num_reduce_wg = <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mad5d1adea938e137c96761a4611a4c7d3.html#a07278a6d3f680e8b3ee3bc04cd3879f1">coop_num_x</a> * <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mad5d1adea938e137c96761a4611a4c7d3.html#aa5e5e388660d24d7305deb464e2895a5">coop_num_y</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a96cce99298caa45f962836714a7f5a2a" name="a96cce99298caa45f962836714a7f5a2a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a96cce99298caa45f962836714a7f5a2a">&#9670;&#160;</a></span>slm_size</h2>
 
@@ -413,6 +551,54 @@ template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a725172
       <table class="memname">
         <tr>
           <td class="memname">constexpr uint32_t <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t.html">gpu::xetla::group::cooperative_reduce_t</a>&lt; reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;::slm_size = wg_tile_size * num_cooperative_wg</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3001e1619776172a031c9a673501474b" name="a3001e1619776172a031c9a673501474b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3001e1619776172a031c9a673501474b">&#9670;&#160;</a></span>tile_size_x</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename tile_shape_ , typename matAcc_t , uint32_t num_cooperative_wg&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr uint32_t <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t.html">gpu::xetla::group::cooperative_reduce_t</a>&lt; reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;::tile_size_x = <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mad5d1adea938e137c96761a4611a4c7d3.html#adaa83e276450e71c503ad251ea9575bd">has_redundant_wg</a> ? 16 : sg_tile_n / <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mad5d1adea938e137c96761a4611a4c7d3.html#a789e62e317c4ab689313a9c5085ec260">coop_remain_num_x</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5ece5e7c13ff81f8761a89235f9e202b" name="a5ece5e7c13ff81f8761a89235f9e202b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ece5e7c13ff81f8761a89235f9e202b">&#9670;&#160;</a></span>tile_size_y</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename tile_shape_ , typename matAcc_t , uint32_t num_cooperative_wg&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr uint32_t <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t.html">gpu::xetla::group::cooperative_reduce_t</a>&lt; reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;::tile_size_y = sg_tile_m / <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mad5d1adea938e137c96761a4611a4c7d3.html#aa5e5e388660d24d7305deb464e2895a5">coop_num_y</a></td>
         </tr>
       </table>
   </td>

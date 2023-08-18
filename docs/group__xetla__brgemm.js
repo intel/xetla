@@ -1,5 +1,33 @@
 var group__xetla__brgemm =
 [
+    [ "gpu::xetla::group::brgemm_t< compute_policy_int4_dequantize_xmx< compute_attr_, perf_tuning_knob_, dtype_scale_, dtype_zero_pt_, dequant_s_, gpu_arch::Xe >, tile_shape_, mem_desc_a_t_, mem_desc_b_t_, pre_processing_t_ >", "classgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__int4__dequantize__xmx_3_01compute__24f3c78d093451e94a933a805396fcda.html", [
+      [ "arguments_t", "structgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__int4__dequantize__xmx_3_01compute_d1cf2ec59a1d5a4c47d94ec1d1a51d15.html", [
+        [ "arguments_t", "structgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__int4__dequantize__xmx_3_01compute_d1cf2ec59a1d5a4c47d94ec1d1a51d15.html#a28739d80cb3ef8d161ce5c2e4c4fef29", null ],
+        [ "arguments_t", "structgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__int4__dequantize__xmx_3_01compute_d1cf2ec59a1d5a4c47d94ec1d1a51d15.html#ae4afb3912ce049e72cd820b1f520f87e", null ],
+        [ "arguments_t", "structgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__int4__dequantize__xmx_3_01compute_d1cf2ec59a1d5a4c47d94ec1d1a51d15.html#af6ceacc258c51ba1b8ecf688568beb1e", null ],
+        [ "init", "structgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__int4__dequantize__xmx_3_01compute_d1cf2ec59a1d5a4c47d94ec1d1a51d15.html#a32ea9f16058b2a5f3fbb9e133e413687", null ],
+        [ "operator=", "structgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__int4__dequantize__xmx_3_01compute_d1cf2ec59a1d5a4c47d94ec1d1a51d15.html#a3de1c69b2919e5f63dfb2ba1aa9aa9a6", null ],
+        [ "inner_loop_count", "structgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__int4__dequantize__xmx_3_01compute_d1cf2ec59a1d5a4c47d94ec1d1a51d15.html#a68dcd5716d8a8572e1915e34b692ae89", null ],
+        [ "matA_base_desc", "structgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__int4__dequantize__xmx_3_01compute_d1cf2ec59a1d5a4c47d94ec1d1a51d15.html#a9015946a9b4d710a997e5a9216c2e7ba", null ],
+        [ "matB_base_desc", "structgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__int4__dequantize__xmx_3_01compute_d1cf2ec59a1d5a4c47d94ec1d1a51d15.html#a8a8c84d9dd276dc0012ccad203fdba7b", null ],
+        [ "scale_base_desc", "structgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__int4__dequantize__xmx_3_01compute_d1cf2ec59a1d5a4c47d94ec1d1a51d15.html#ab3f28f284fe4e12fb7631e6f91de4d46", null ],
+        [ "zero_pt_base_desc", "structgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__int4__dequantize__xmx_3_01compute_d1cf2ec59a1d5a4c47d94ec1d1a51d15.html#a9f3beda83d89fa2a20086040335b20f6", null ]
+      ] ],
+      [ "compute_policy", "classgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__int4__dequantize__xmx_3_01compute__24f3c78d093451e94a933a805396fcda.html#a4493c90065032eb98b6b3f17c30a77b9", null ],
+      [ "dtype_b", "classgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__int4__dequantize__xmx_3_01compute__24f3c78d093451e94a933a805396fcda.html#a4292e8de23da369e74e60ad675cd65c9", null ],
+      [ "dtype_zero_pt", "classgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__int4__dequantize__xmx_3_01compute__24f3c78d093451e94a933a805396fcda.html#a486454621c01618b698f3774a74a3b3f", null ],
+      [ "matAcc_t", "classgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__int4__dequantize__xmx_3_01compute__24f3c78d093451e94a933a805396fcda.html#a9f8896b5e13f58d2a351b65fa49d11e3", null ],
+      [ "matAcc_tile_desc_t", "classgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__int4__dequantize__xmx_3_01compute__24f3c78d093451e94a933a805396fcda.html#a67cbc53ef77281e47d598004bbc4dd13", null ],
+      [ "mem_desc_a_t", "classgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__int4__dequantize__xmx_3_01compute__24f3c78d093451e94a933a805396fcda.html#aed7780efb2c8e14f125d8ec3cbf91584", null ],
+      [ "mem_desc_b_t", "classgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__int4__dequantize__xmx_3_01compute__24f3c78d093451e94a933a805396fcda.html#a41197e79cb947e3ddb59893e0e44d99a", null ],
+      [ "mem_desc_scale_t", "classgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__int4__dequantize__xmx_3_01compute__24f3c78d093451e94a933a805396fcda.html#a5019e36899a3544d02aca14d7c6ab4c7", null ],
+      [ "mem_desc_zero_pt_t", "classgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__int4__dequantize__xmx_3_01compute__24f3c78d093451e94a933a805396fcda.html#a6845094d0925f811af2b8cce7dd78838", null ],
+      [ "pre_processing_t", "classgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__int4__dequantize__xmx_3_01compute__24f3c78d093451e94a933a805396fcda.html#a9f914b7e8957b9c0374440c63e1e8e83", null ],
+      [ "tile_shape", "classgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__int4__dequantize__xmx_3_01compute__24f3c78d093451e94a933a805396fcda.html#a8d4cefb778c562198fc1f272fcfb1fb8", null ],
+      [ "work_group_t", "classgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__int4__dequantize__xmx_3_01compute__24f3c78d093451e94a933a805396fcda.html#a3ed6ca860c291cdd6f11ed78a2b09748", null ],
+      [ "operator()", "classgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__int4__dequantize__xmx_3_01compute__24f3c78d093451e94a933a805396fcda.html#a08dd2b5b9a9769ed411f1612b8892bd1", null ],
+      [ "XETLA_MARKER", "classgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__int4__dequantize__xmx_3_01compute__24f3c78d093451e94a933a805396fcda.html#a175a0b4c8fb6017bf2d558620d0179be", null ]
+    ] ],
     [ "gpu::xetla::group::pre_processing_default_t< tile_shape, arch >", "structgpu_1_1xetla_1_1group_1_1pre__processing__default__t.html", null ],
     [ "gpu::xetla::group::pre_processing_matA_neg_filter_t< tile_shape, arch >", "structgpu_1_1xetla_1_1group_1_1pre__processing__matA__neg__filter__t.html", null ],
     [ "gpu::xetla::group::brgemm_t< compute_policy, tile_shape, mem_desc_a, mem_desc_b, pre_processing >", "classgpu_1_1xetla_1_1group_1_1brgemm__t.html", null ],

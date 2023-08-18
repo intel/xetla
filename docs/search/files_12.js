@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['xetla_2ehpp_0',['xetla.hpp',['../xetla_8hpp.html',1,'']]]
+  ['work_5fgroup_2ehpp_0',['work_group.hpp',['../work__group_8hpp.html',1,'']]]
 ];

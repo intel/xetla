@@ -1,0 +1,21 @@
+var structgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__int4__dequantize__kslicing_3_01glo578670014460a3636cef366d919a987f =
+[
+    [ "arguments_t", "structgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__int4__dequantize__kslicing_3_01glo578670014460a3636cef366d919a987f.html#a080ad92633e4bdd6f1ab47e5a11ad69c", null ],
+    [ "arguments_t", "structgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__int4__dequantize__kslicing_3_01glo578670014460a3636cef366d919a987f.html#a45abafea5d15db737f309a547c55f801", null ],
+    [ "arguments_t", "structgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__int4__dequantize__kslicing_3_01glo578670014460a3636cef366d919a987f.html#a699c5e5274d0f65d5e0919e1079dc0b5", null ],
+    [ "operator=", "structgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__int4__dequantize__kslicing_3_01glo578670014460a3636cef366d919a987f.html#a84269bd9e4e2c8e2282bb8a9feb754fd", null ],
+    [ "epilogue_args", "structgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__int4__dequantize__kslicing_3_01glo578670014460a3636cef366d919a987f.html#abd47b46faea2042d79f8d630a78a6972", null ],
+    [ "matA_base", "structgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__int4__dequantize__kslicing_3_01glo578670014460a3636cef366d919a987f.html#ab9985e7418201ba73e3daf7a7c4245b9", null ],
+    [ "matA_ld", "structgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__int4__dequantize__kslicing_3_01glo578670014460a3636cef366d919a987f.html#a688e867585cfa464189b0f0612c5b939", null ],
+    [ "matB_base", "structgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__int4__dequantize__kslicing_3_01glo578670014460a3636cef366d919a987f.html#aff74905b7b4b43a6f66489344e37fbe1", null ],
+    [ "matB_ld", "structgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__int4__dequantize__kslicing_3_01glo578670014460a3636cef366d919a987f.html#aaef26a0533d21596c1fb3c90482fc43a", null ],
+    [ "matC_base", "structgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__int4__dequantize__kslicing_3_01glo578670014460a3636cef366d919a987f.html#a911c1e838b605ef0be2745cd9825f4ce", null ],
+    [ "matC_ld", "structgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__int4__dequantize__kslicing_3_01glo578670014460a3636cef366d919a987f.html#ae598ac4c6e8afb14c0e98d91d1ba3aab", null ],
+    [ "matrix_k", "structgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__int4__dequantize__kslicing_3_01glo578670014460a3636cef366d919a987f.html#ab0d80339e249d36879a70e865cc7e624", null ],
+    [ "matrix_m", "structgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__int4__dequantize__kslicing_3_01glo578670014460a3636cef366d919a987f.html#a9b088d33a18249dbdc1ac35d6915f654", null ],
+    [ "matrix_n", "structgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__int4__dequantize__kslicing_3_01glo578670014460a3636cef366d919a987f.html#a7e50704dea3ef31c1a4fdfbb20454fb3", null ],
+    [ "scale_base", "structgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__int4__dequantize__kslicing_3_01glo578670014460a3636cef366d919a987f.html#a9053e6a91dd090f5c6b51cef32a97b81", null ],
+    [ "scale_ld", "structgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__int4__dequantize__kslicing_3_01glo578670014460a3636cef366d919a987f.html#ab02e5c3587fa9ff01f7208658c7b8fe8", null ],
+    [ "zero_pt_base", "structgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__int4__dequantize__kslicing_3_01glo578670014460a3636cef366d919a987f.html#a03b4ac596bb0e43c7f79dcbed0f7e831", null ],
+    [ "zero_pt_ld", "structgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__int4__dequantize__kslicing_3_01glo578670014460a3636cef366d919a987f.html#ab9ba2846e64bae3a4311e2f212d4cd92", null ]
+];
