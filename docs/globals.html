@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.3</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.4</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -115,10 +115,10 @@ $(document).ready(function(){initNavTree('globals.html',''); initResizable(); })
 
 <h3><a id="index_b" name="index_b"></a>- b -</h3><ul>
 <li>basic_brgemm_run()&#160;:&#160;<a class="el" href="basic__brgemm_8cpp.html#a62d3430fb6cabadaf29510b315b0f79a">basic_brgemm.cpp</a></li>
-<li>basic_gemm_run()&#160;:&#160;<a class="el" href="basic__gemm_8cpp.html#a319a7053aa9cecaba6dba359a208c855">basic_gemm.cpp</a></li>
+<li>basic_gemm_run()&#160;:&#160;<a class="el" href="basic__gemm_8cpp.html#a28483b1b8a362734d27340531f61e244">basic_gemm.cpp</a></li>
 <li>batch_gemm_run()&#160;:&#160;<a class="el" href="batch__gemm_8cpp.html#a4a0cd5eeceb6cf1d3cfd77aa584d9068">batch_gemm.cpp</a></li>
 <li>batch_impl_t&#160;:&#160;<a class="el" href="batch__gemm_8cpp.html#adf130ac911fa889d62ba0cfdc63e7d65">batch_gemm.cpp</a></li>
-<li>batch_num&#160;:&#160;<a class="el" href="scaled__dot__production__attention_8cpp.html#a1ee0ac0d5cda1148036cf1b62b3a45ab">scaled_dot_production_attention.cpp</a></li>
+<li>batch_num&#160;:&#160;<a class="el" href="scaled__dot__product__attention_8cpp.html#a1ee0ac0d5cda1148036cf1b62b3a45ab">scaled_dot_product_attention.cpp</a></li>
 <li>BRGEMM_CALL&#160;:&#160;<a class="el" href="kernel__func_8hpp.html#a0f9bb82fc173740d47e639c54998f9fb">kernel_func.hpp</a></li>
 <li>brgemm_polynomial_run()&#160;:&#160;<a class="el" href="brgemm__polynomial_8cpp.html#ac5cb98ba7cf64890073b7539f45777e7">brgemm_polynomial.cpp</a></li>
 </ul>
@@ -126,6 +126,12 @@ $(document).ready(function(){initNavTree('globals.html',''); initResizable(); })
 
 <h3><a id="index_c" name="index_c"></a>- c -</h3><ul>
 <li>CONFIG_SETTING&#160;:&#160;<a class="el" href="kernel__func_8hpp.html#ada4424e9a8f5d9d90513f703850565ed">kernel_func.hpp</a></li>
+</ul>
+
+
+<h3><a id="index_d" name="index_d"></a>- d -</h3><ul>
+<li>DEVICE_ASSERT&#160;:&#160;<a class="el" href="common_2core_2common_8hpp.html#a74bb62574ab90245bc499d3f1c7984c3">common.hpp</a></li>
+<li>DEVICE_PRINTF&#160;:&#160;<a class="el" href="common_2core_2common_8hpp.html#aa58e292c9fe9e9dc6b464fdc10495fff">common.hpp</a></li>
 </ul>
 
 
@@ -140,8 +146,8 @@ $(document).ready(function(){initNavTree('globals.html',''); initResizable(); })
 
 
 <h3><a id="index_h" name="index_h"></a>- h -</h3><ul>
-<li>head_num&#160;:&#160;<a class="el" href="scaled__dot__production__attention_8cpp.html#ab5425c41e4ad1056cc927caba97955ce">scaled_dot_production_attention.cpp</a></li>
-<li>head_size&#160;:&#160;<a class="el" href="scaled__dot__production__attention_8cpp.html#ac1501e40a2e9682d2a7b78efe5fd887c">scaled_dot_production_attention.cpp</a></li>
+<li>head_num&#160;:&#160;<a class="el" href="scaled__dot__product__attention_8cpp.html#ab5425c41e4ad1056cc927caba97955ce">scaled_dot_product_attention.cpp</a></li>
+<li>head_size&#160;:&#160;<a class="el" href="scaled__dot__product__attention_8cpp.html#ac1501e40a2e9682d2a7b78efe5fd887c">scaled_dot_product_attention.cpp</a></li>
 </ul>
 
 
@@ -153,16 +159,17 @@ $(document).ready(function(){initNavTree('globals.html',''); initResizable(); })
 <h3><a id="index_k" name="index_k"></a>- k -</h3><ul>
 <li>KERNEL_FUNC&#160;:&#160;<a class="el" href="group__xetla__core.html#gafb2a0442e367d71b79a2f932d0d39c8b">common.hpp</a></li>
 <li>KERNEL_MAIN&#160;:&#160;<a class="el" href="group__xetla__core.html#ga83d8d7bf7b1fc063767128b839bddb97">common.hpp</a></li>
+<li>kslicing_impl_t&#160;:&#160;<a class="el" href="basic__gemm_8cpp.html#a69ec471fd653f0d2934e3d72f8438f87">basic_gemm.cpp</a></li>
 </ul>
 
 
 <h3><a id="index_l" name="index_l"></a>- l -</h3><ul>
-<li>list_width&#160;:&#160;<a class="el" href="group__xetla__softmax.html#ga3f45da0f42ea8b62ef09b76d78fa4ef7">mha_attn_reg.hpp</a>, <a class="el" href="mha__core__attn_8hpp.html#a3f45da0f42ea8b62ef09b76d78fa4ef7">mha_core_attn.hpp</a></li>
+<li>list_width&#160;:&#160;<a class="el" href="mha__attn__reg_8hpp.html#a3f45da0f42ea8b62ef09b76d78fa4ef7">mha_attn_reg.hpp</a>, <a class="el" href="mha__core__attn_8hpp.html#a3f45da0f42ea8b62ef09b76d78fa4ef7">mha_core_attn.hpp</a></li>
 </ul>
 
 
 <h3><a id="index_m" name="index_m"></a>- m -</h3><ul>
-<li>main()&#160;:&#160;<a class="el" href="basic__gemm_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">basic_gemm.cpp</a>, <a class="el" href="basic__brgemm_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">basic_brgemm.cpp</a>, <a class="el" href="gemm__relu__bias_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">gemm_relu_bias.cpp</a>, <a class="el" href="brgemm__polynomial_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">brgemm_polynomial.cpp</a>, <a class="el" href="batch__gemm_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">batch_gemm.cpp</a>, <a class="el" href="splitk__brgemm_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">splitk_brgemm.cpp</a>, <a class="el" href="gemm__softmax_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">gemm_softmax.cpp</a>, <a class="el" href="multi__layer__perceptron_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">multi_layer_perceptron.cpp</a>, <a class="el" href="scaled__dot__production__attention_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">scaled_dot_production_attention.cpp</a>, <a class="el" href="gate__recurrent__unit_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">gate_recurrent_unit.cpp</a></li>
+<li>main()&#160;:&#160;<a class="el" href="basic__gemm_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">basic_gemm.cpp</a>, <a class="el" href="basic__brgemm_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">basic_brgemm.cpp</a>, <a class="el" href="gemm__relu__bias_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">gemm_relu_bias.cpp</a>, <a class="el" href="brgemm__polynomial_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">brgemm_polynomial.cpp</a>, <a class="el" href="batch__gemm_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">batch_gemm.cpp</a>, <a class="el" href="splitk__brgemm_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">splitk_brgemm.cpp</a>, <a class="el" href="gemm__softmax_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">gemm_softmax.cpp</a>, <a class="el" href="multi__layer__perceptron_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">multi_layer_perceptron.cpp</a>, <a class="el" href="scaled__dot__product__attention_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">scaled_dot_product_attention.cpp</a>, <a class="el" href="gate__recurrent__unit_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">gate_recurrent_unit.cpp</a></li>
 <li>MATC_STORE&#160;:&#160;<a class="el" href="kernel__func_8hpp.html#af430564fa4eb832aab83f7b14d8772c8">kernel_func.hpp</a></li>
 <li>mlp_result_validate()&#160;:&#160;<a class="el" href="multi__layer__perceptron_8cpp.html#ac156f9adad9ce695803424592d93db35">multi_layer_perceptron.cpp</a></li>
 <li>mlp_run()&#160;:&#160;<a class="el" href="multi__layer__perceptron_8cpp.html#a1123cca5c409adeb235258f69d4a311a">multi_layer_perceptron.cpp</a></li>
@@ -170,20 +177,20 @@ $(document).ready(function(){initNavTree('globals.html',''); initResizable(); })
 
 
 <h3><a id="index_r" name="index_r"></a>- r -</h3><ul>
-<li>rand_threshold_const&#160;:&#160;<a class="el" href="group__xetla__softmax.html#ga2d9e08055323a5f600e6e91b4152fd08">mha_attn_reg.hpp</a>, <a class="el" href="mha__core__attn_8hpp.html#a2d9e08055323a5f600e6e91b4152fd08">mha_core_attn.hpp</a></li>
+<li>rand_threshold_const&#160;:&#160;<a class="el" href="mha__attn__reg_8hpp.html#a2d9e08055323a5f600e6e91b4152fd08">mha_attn_reg.hpp</a>, <a class="el" href="mha__core__attn_8hpp.html#a2d9e08055323a5f600e6e91b4152fd08">mha_core_attn.hpp</a></li>
 <li>remove_const_t&#160;:&#160;<a class="el" href="common_2core_2common_8hpp.html#a31ee6e9231fa50c7fdd7292f0c45f13e">common.hpp</a></li>
 </ul>
 
 
 <h3><a id="index_s" name="index_s"></a>- s -</h3><ul>
-<li>sdp_fwd_result_validate()&#160;:&#160;<a class="el" href="scaled__dot__production__attention_8cpp.html#aee0f9d4df3da8abdb2ea621e84cac1d6">scaled_dot_production_attention.cpp</a></li>
-<li>sdp_fwd_run()&#160;:&#160;<a class="el" href="scaled__dot__production__attention_8cpp.html#a1842acfc4899cc7a812706acd63c1abc">scaled_dot_production_attention.cpp</a></li>
-<li>sequence_len&#160;:&#160;<a class="el" href="scaled__dot__production__attention_8cpp.html#aeec87659144a57079d7995e11e1c34ed">scaled_dot_production_attention.cpp</a></li>
+<li>sdp_fwd_result_validate()&#160;:&#160;<a class="el" href="scaled__dot__product__attention_8cpp.html#aee0f9d4df3da8abdb2ea621e84cac1d6">scaled_dot_product_attention.cpp</a></li>
+<li>sdp_fwd_run()&#160;:&#160;<a class="el" href="scaled__dot__product__attention_8cpp.html#a1842acfc4899cc7a812706acd63c1abc">scaled_dot_product_attention.cpp</a></li>
+<li>sequence_len&#160;:&#160;<a class="el" href="scaled__dot__product__attention_8cpp.html#aeec87659144a57079d7995e11e1c34ed">scaled_dot_product_attention.cpp</a></li>
 <li>set()&#160;:&#160;<a class="el" href="01__basic__gemm_2CMakeLists_8txt.html#a0eb99194aa17186b6b1e9f7f480a2a37">CMakeLists.txt</a></li>
-<li>SIGN_BIT_B8&#160;:&#160;<a class="el" href="group__xetla__softmax.html#gac284be450c72124b93279c75716fd2c6">mha_attn_reg.hpp</a>, <a class="el" href="mha__core__attn_8hpp.html#ac284be450c72124b93279c75716fd2c6">mha_core_attn.hpp</a></li>
-<li>SIGN_BIT_DW&#160;:&#160;<a class="el" href="group__xetla__softmax.html#gae9c7f5fe18d9d9cff69456b319509e10">mha_attn_reg.hpp</a>, <a class="el" href="mha__core__attn_8hpp.html#ae9c7f5fe18d9d9cff69456b319509e10">mha_core_attn.hpp</a></li>
-<li>SIGN_BIT_W16&#160;:&#160;<a class="el" href="group__xetla__softmax.html#ga94aa45418daebca02aa97e0c809b8d02">mha_attn_reg.hpp</a>, <a class="el" href="mha__core__attn_8hpp.html#a94aa45418daebca02aa97e0c809b8d02">mha_core_attn.hpp</a></li>
-<li>SIMD&#160;:&#160;<a class="el" href="gemm__softmax_8cpp.html#ad1ab836291a12a078c0b378699e1de73">gemm_softmax.cpp</a>, <a class="el" href="scaled__dot__production__attention_8cpp.html#ad1ab836291a12a078c0b378699e1de73">scaled_dot_production_attention.cpp</a></li>
+<li>SIGN_BIT_B8&#160;:&#160;<a class="el" href="mha__attn__reg_8hpp.html#ac284be450c72124b93279c75716fd2c6">mha_attn_reg.hpp</a>, <a class="el" href="mha__core__attn_8hpp.html#ac284be450c72124b93279c75716fd2c6">mha_core_attn.hpp</a></li>
+<li>SIGN_BIT_DW&#160;:&#160;<a class="el" href="mha__attn__reg_8hpp.html#ae9c7f5fe18d9d9cff69456b319509e10">mha_attn_reg.hpp</a>, <a class="el" href="mha__core__attn_8hpp.html#ae9c7f5fe18d9d9cff69456b319509e10">mha_core_attn.hpp</a></li>
+<li>SIGN_BIT_W16&#160;:&#160;<a class="el" href="mha__attn__reg_8hpp.html#a94aa45418daebca02aa97e0c809b8d02">mha_attn_reg.hpp</a>, <a class="el" href="mha__core__attn_8hpp.html#a94aa45418daebca02aa97e0c809b8d02">mha_core_attn.hpp</a></li>
+<li>SIMD&#160;:&#160;<a class="el" href="gemm__softmax_8cpp.html#ad1ab836291a12a078c0b378699e1de73">gemm_softmax.cpp</a>, <a class="el" href="scaled__dot__product__attention_8cpp.html#ad1ab836291a12a078c0b378699e1de73">scaled_dot_product_attention.cpp</a></li>
 <li>splitk_brgemm_run()&#160;:&#160;<a class="el" href="splitk__brgemm_8cpp.html#a63e1d584707b3df320bbf661506d80c7">splitk_brgemm.cpp</a></li>
 <li>SW_BARRIER&#160;:&#160;<a class="el" href="common_2core_2common_8hpp.html#a4894ef2f787a454434527ed8416177d9">common.hpp</a></li>
 </ul>

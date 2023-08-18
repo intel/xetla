@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.3</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.4</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -113,7 +113,7 @@ $(document).ready(function(){initNavTree('structxetla__softmax__fwd__t.html','')
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="examples_209__scaled__dot__production__attention_2softmax_8hpp_source.html">softmax.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="examples_209__scaled__dot__product__attention_2softmax_8hpp_source.html">softmax.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -150,14 +150,18 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:acf008af9af2736b9f9c4dfa26eb6d2b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f5f42f50a0bc0a38d6b69b92525cc73"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="namespacegpu_1_1xetla.html#a7f225ed816e841c1d31414d872dae59d">mem_space</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structxetla__softmax__fwd__t.html#a3f5f42f50a0bc0a38d6b69b92525cc73">mem_space_out</a> = mem_space_out_</td></tr>
 <tr class="separator:a3f5f42f50a0bc0a38d6b69b92525cc73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fee74c8ef035fdb69b10f85b844ed9a"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structxetla__softmax__fwd__t.html#a5fee74c8ef035fdb69b10f85b844ed9a">wg_tile_m</a> = tile_shape::wg_tile_size_y</td></tr>
-<tr class="separator:a5fee74c8ef035fdb69b10f85b844ed9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae32c56dfe6cd17e8dac00581966fb2cd"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structxetla__softmax__fwd__t.html#ae32c56dfe6cd17e8dac00581966fb2cd">wg_tile_n</a> = tile_shape::wg_tile_size_x</td></tr>
-<tr class="separator:ae32c56dfe6cd17e8dac00581966fb2cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e220643a72ef30374b32c975fac03c3"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structxetla__softmax__fwd__t.html#a9e220643a72ef30374b32c975fac03c3">sg_tile_m</a> = tile_shape::sg_tile_size_y</td></tr>
 <tr class="separator:a9e220643a72ef30374b32c975fac03c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57b6469aad64c069c7b3c3a6c5395bc3"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structxetla__softmax__fwd__t.html#a57b6469aad64c069c7b3c3a6c5395bc3">sg_tile_n</a> = tile_shape::sg_tile_size_x</td></tr>
 <tr class="separator:a57b6469aad64c069c7b3c3a6c5395bc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1adb841e0cf5a1f9aa97e13c89c57a14"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structxetla__softmax__fwd__t.html#a1adb841e0cf5a1f9aa97e13c89c57a14">wg_size_x</a> = tile_shape::wg_size_x</td></tr>
+<tr class="separator:a1adb841e0cf5a1f9aa97e13c89c57a14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf4eff856f35a075fbbf8b3ea9ebceb4"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structxetla__softmax__fwd__t.html#abf4eff856f35a075fbbf8b3ea9ebceb4">wg_size_y</a> = tile_shape::wg_size_y</td></tr>
+<tr class="separator:abf4eff856f35a075fbbf8b3ea9ebceb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fee74c8ef035fdb69b10f85b844ed9a"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structxetla__softmax__fwd__t.html#a5fee74c8ef035fdb69b10f85b844ed9a">wg_tile_m</a> = <a class="el" href="structxetla__softmax__fwd__t.html#a9e220643a72ef30374b32c975fac03c3">sg_tile_m</a> * <a class="el" href="structxetla__softmax__fwd__t.html#abf4eff856f35a075fbbf8b3ea9ebceb4">wg_size_y</a></td></tr>
+<tr class="separator:a5fee74c8ef035fdb69b10f85b844ed9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae32c56dfe6cd17e8dac00581966fb2cd"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structxetla__softmax__fwd__t.html#ae32c56dfe6cd17e8dac00581966fb2cd">wg_tile_n</a> = <a class="el" href="structxetla__softmax__fwd__t.html#a57b6469aad64c069c7b3c3a6c5395bc3">sg_tile_n</a> * <a class="el" href="structxetla__softmax__fwd__t.html#a1adb841e0cf5a1f9aa97e13c89c57a14">wg_size_x</a></td></tr>
+<tr class="separator:ae32c56dfe6cd17e8dac00581966fb2cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65cb56cbdbab09719dd07cb030245bc7"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structxetla__softmax__fwd__t.html#a65cb56cbdbab09719dd07cb030245bc7">SIMD</a> = SIMD_</td></tr>
 <tr class="separator:a65cb56cbdbab09719dd07cb030245bc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a806359bb5937b204543c5f6d8fd07f0f"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structxetla__softmax__fwd__t.html#a806359bb5937b204543c5f6d8fd07f0f">thread_num</a> = thread_num_</td></tr>
@@ -528,6 +532,54 @@ template&lt;typename dtype_in_ , typename dtype_out_ , typename tile_shape_ , me
 
 </div>
 </div>
+<a id="a1adb841e0cf5a1f9aa97e13c89c57a14" name="a1adb841e0cf5a1f9aa97e13c89c57a14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1adb841e0cf5a1f9aa97e13c89c57a14">&#9670;&#160;</a></span>wg_size_x</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename dtype_in_ , typename dtype_out_ , typename tile_shape_ , mem_space mem_space_in_, mem_space mem_space_out_, uint32_t SIMD_, uint32_t thread_num_, uint32_t softmax_size_&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr uint32_t <a class="el" href="structxetla__softmax__fwd__t.html">xetla_softmax_fwd_t</a>&lt; dtype_in_, dtype_out_, tile_shape_, mem_space_in_, mem_space_out_, SIMD_, thread_num_, softmax_size_ &gt;::wg_size_x = tile_shape::wg_size_x</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abf4eff856f35a075fbbf8b3ea9ebceb4" name="abf4eff856f35a075fbbf8b3ea9ebceb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf4eff856f35a075fbbf8b3ea9ebceb4">&#9670;&#160;</a></span>wg_size_y</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename dtype_in_ , typename dtype_out_ , typename tile_shape_ , mem_space mem_space_in_, mem_space mem_space_out_, uint32_t SIMD_, uint32_t thread_num_, uint32_t softmax_size_&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr uint32_t <a class="el" href="structxetla__softmax__fwd__t.html">xetla_softmax_fwd_t</a>&lt; dtype_in_, dtype_out_, tile_shape_, mem_space_in_, mem_space_out_, SIMD_, thread_num_, softmax_size_ &gt;::wg_size_y = tile_shape::wg_size_y</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a5fee74c8ef035fdb69b10f85b844ed9a" name="a5fee74c8ef035fdb69b10f85b844ed9a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5fee74c8ef035fdb69b10f85b844ed9a">&#9670;&#160;</a></span>wg_tile_m</h2>
 
@@ -540,7 +592,7 @@ template&lt;typename dtype_in_ , typename dtype_out_ , typename tile_shape_ , me
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr uint32_t <a class="el" href="structxetla__softmax__fwd__t.html">xetla_softmax_fwd_t</a>&lt; dtype_in_, dtype_out_, tile_shape_, mem_space_in_, mem_space_out_, SIMD_, thread_num_, softmax_size_ &gt;::wg_tile_m = tile_shape::wg_tile_size_y</td>
+          <td class="memname">constexpr uint32_t <a class="el" href="structxetla__softmax__fwd__t.html">xetla_softmax_fwd_t</a>&lt; dtype_in_, dtype_out_, tile_shape_, mem_space_in_, mem_space_out_, SIMD_, thread_num_, softmax_size_ &gt;::wg_tile_m = <a class="el" href="structxetla__softmax__fwd__t.html#a9e220643a72ef30374b32c975fac03c3">sg_tile_m</a> * <a class="el" href="structxetla__softmax__fwd__t.html#abf4eff856f35a075fbbf8b3ea9ebceb4">wg_size_y</a></td>
         </tr>
       </table>
   </td>
@@ -564,7 +616,7 @@ template&lt;typename dtype_in_ , typename dtype_out_ , typename tile_shape_ , me
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr uint32_t <a class="el" href="structxetla__softmax__fwd__t.html">xetla_softmax_fwd_t</a>&lt; dtype_in_, dtype_out_, tile_shape_, mem_space_in_, mem_space_out_, SIMD_, thread_num_, softmax_size_ &gt;::wg_tile_n = tile_shape::wg_tile_size_x</td>
+          <td class="memname">constexpr uint32_t <a class="el" href="structxetla__softmax__fwd__t.html">xetla_softmax_fwd_t</a>&lt; dtype_in_, dtype_out_, tile_shape_, mem_space_in_, mem_space_out_, SIMD_, thread_num_, softmax_size_ &gt;::wg_tile_n = <a class="el" href="structxetla__softmax__fwd__t.html#a57b6469aad64c069c7b3c3a6c5395bc3">sg_tile_n</a> * <a class="el" href="structxetla__softmax__fwd__t.html#a1adb841e0cf5a1f9aa97e13c89c57a14">wg_size_x</a></td>
         </tr>
       </table>
   </td>

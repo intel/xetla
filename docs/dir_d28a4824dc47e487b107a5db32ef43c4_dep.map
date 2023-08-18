@@ -1,24 +1,24 @@
 <map id="examples" name="examples">
-<area shape="rect" id="node2" href="dir_7000d8b3dedc983b745d8f3ca9109166.html" title="01_basic_gemm" alt="" coords="1552,34,1669,59"/>
-<area shape="rect" id="node12" href="dir_d44c64559bbebec7f509842c48db8b23.html" title="include" alt="" coords="865,115,927,140"/>
-<area shape="rect" id="edge1-headlabel" href="dir_000000_000027.html" title="1" alt="" coords="942,125,950,140"/>
-<area shape="rect" id="node3" href="dir_9096bf8ab21748699c3810efbaf32570.html" title="02_basic_brgemm" alt="" coords="1400,34,1528,59"/>
-<area shape="rect" id="edge2-headlabel" href="dir_000001_000027.html" title="1" alt="" coords="942,127,950,141"/>
-<area shape="rect" id="node4" href="dir_7c18b7cf5ea6144422c4b66b1a4ced35.html" title="03_gemm_relu_bias" alt="" coords="1237,34,1376,59"/>
-<area shape="rect" id="edge3-headlabel" href="dir_000002_000027.html" title="1" alt="" coords="943,123,951,138"/>
-<area shape="rect" id="node5" href="dir_1f23154e4c4bf5968a9167c200007e49.html" title="04_brgemm_polynomial" alt="" coords="1054,34,1213,59"/>
-<area shape="rect" id="edge4-headlabel" href="dir_000003_000027.html" title="2" alt="" coords="944,111,952,125"/>
-<area shape="rect" id="node6" href="dir_d4603d82303418bb1f8af54c8a8b42a5.html" title="05_batch_gemm" alt="" coords="911,34,1030,59"/>
-<area shape="rect" id="edge5-headlabel" href="dir_000004_000027.html" title="1" alt="" coords="922,100,930,115"/>
-<area shape="rect" id="node7" href="dir_a73d4fe09356272591a9edd16a71294b.html" title="06_splitk_brgemm" alt="" coords="759,34,887,59"/>
-<area shape="rect" id="edge6-headlabel" href="dir_000005_000027.html" title="1" alt="" coords="875,88,883,103"/>
-<area shape="rect" id="node8" href="dir_0241e33954847d2c765a5a726bc305e9.html" title="07_gemm_softmax" alt="" coords="602,34,734,59"/>
-<area shape="rect" id="edge7-headlabel" href="dir_000006_000027.html" title="1" alt="" coords="846,95,854,110"/>
-<area shape="rect" id="node9" href="dir_63b11d69aec6806a1f8c81e488f4fc19.html" title="08_multi_layer_perceptron" alt="" coords="403,34,578,59"/>
-<area shape="rect" id="edge8-headlabel" href="dir_000007_000027.html" title="1" alt="" coords="843,104,851,119"/>
-<area shape="rect" id="node10" href="dir_6d90bee2a4d6c456dabd19d524857061.html" title="09_scaled_dot_production\l_attention" alt="" coords="205,27,379,67"/>
-<area shape="rect" id="edge9-headlabel" href="dir_000008_000027.html" title="1" alt="" coords="843,109,851,123"/>
+<area shape="rect" id="node2" href="dir_7000d8b3dedc983b745d8f3ca9109166.html" title="01_basic_gemm" alt="" coords="1535,34,1652,59"/>
+<area shape="rect" id="node12" href="dir_d44c64559bbebec7f509842c48db8b23.html" title="include" alt="" coords="847,115,910,140"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000000_000031.html" title="1" alt="" coords="925,125,933,140"/>
+<area shape="rect" id="node3" href="dir_9096bf8ab21748699c3810efbaf32570.html" title="02_basic_brgemm" alt="" coords="1383,34,1511,59"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000001_000031.html" title="1" alt="" coords="925,127,933,141"/>
+<area shape="rect" id="node4" href="dir_7c18b7cf5ea6144422c4b66b1a4ced35.html" title="03_gemm_relu_bias" alt="" coords="1220,34,1359,59"/>
+<area shape="rect" id="edge3-headlabel" href="dir_000002_000031.html" title="1" alt="" coords="925,123,933,138"/>
+<area shape="rect" id="node5" href="dir_1f23154e4c4bf5968a9167c200007e49.html" title="04_brgemm_polynomial" alt="" coords="1037,34,1195,59"/>
+<area shape="rect" id="edge4-headlabel" href="dir_000003_000031.html" title="2" alt="" coords="926,111,934,125"/>
+<area shape="rect" id="node6" href="dir_d4603d82303418bb1f8af54c8a8b42a5.html" title="05_batch_gemm" alt="" coords="894,34,1013,59"/>
+<area shape="rect" id="edge5-headlabel" href="dir_000004_000031.html" title="1" alt="" coords="904,100,912,115"/>
+<area shape="rect" id="node7" href="dir_a73d4fe09356272591a9edd16a71294b.html" title="06_splitk_brgemm" alt="" coords="741,34,869,59"/>
+<area shape="rect" id="edge6-headlabel" href="dir_000005_000031.html" title="1" alt="" coords="858,88,866,103"/>
+<area shape="rect" id="node8" href="dir_0241e33954847d2c765a5a726bc305e9.html" title="07_gemm_softmax" alt="" coords="585,34,717,59"/>
+<area shape="rect" id="edge7-headlabel" href="dir_000006_000031.html" title="1" alt="" coords="828,95,836,110"/>
+<area shape="rect" id="node9" href="dir_63b11d69aec6806a1f8c81e488f4fc19.html" title="08_multi_layer_perceptron" alt="" coords="386,34,561,59"/>
+<area shape="rect" id="edge8-headlabel" href="dir_000007_000031.html" title="1" alt="" coords="826,104,834,119"/>
+<area shape="rect" id="node10" href="dir_7804e15143d6710e84178d51534e5067.html" title="09_scaled_dot_product\l_attention" alt="" coords="206,27,362,67"/>
+<area shape="rect" id="edge9-headlabel" href="dir_000008_000031.html" title="1" alt="" coords="825,109,833,124"/>
 <area shape="rect" id="node11" href="dir_8b645a42403edbc753b8319a22d46b8a.html" title="10_gate_recurrent_unit" alt="" coords="27,34,181,59"/>
-<area shape="rect" id="edge10-headlabel" href="dir_000009_000027.html" title="1" alt="" coords="842,111,850,126"/>
-<area shape="rect" id="clust1" href="dir_d28a4824dc47e487b107a5db32ef43c4.html" alt="" coords="16,16,1784,77"/>
+<area shape="rect" id="edge10-headlabel" href="dir_000009_000031.html" title="1" alt="" coords="825,111,833,125"/>
+<area shape="rect" id="clust1" href="dir_d28a4824dc47e487b107a5db32ef43c4.html" alt="" coords="16,16,1767,77"/>
 </map>

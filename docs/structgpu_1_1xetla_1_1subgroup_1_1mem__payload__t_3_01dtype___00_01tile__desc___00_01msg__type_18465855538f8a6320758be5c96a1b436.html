@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.3</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.4</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -166,9 +166,13 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:a26b0233f43931517db1c5263ab8edfb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a560d4d67ebf31b6716199649b426695f"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aa">reg_layout</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_18465855538f8a6320758be5c96a1b436.html#a560d4d67ebf31b6716199649b426695f">register_layout</a> = tile_desc::register_layout</td></tr>
 <tr class="separator:a560d4d67ebf31b6716199649b426695f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b1eb1480599793d83e4f9e0c4d138fd"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_18465855538f8a6320758be5c96a1b436.html#a3b1eb1480599793d83e4f9e0c4d138fd">reg_transpose</a> = <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_18465855538f8a6320758be5c96a1b436.html#a560d4d67ebf31b6716199649b426695f">register_layout</a> == <a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa790a2d945934924db5b508c7f46846b6">reg_layout::transpose_tiled</a></td></tr>
+<tr class="separator:a3b1eb1480599793d83e4f9e0c4d138fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcf79ee8e97ec6a7f3422fd4d8a242d7"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_18465855538f8a6320758be5c96a1b436.html#afcf79ee8e97ec6a7f3422fd4d8a242d7">trans</a> = <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_18465855538f8a6320758be5c96a1b436.html#a26b0233f43931517db1c5263ab8edfb2">mem_transpose</a> ^ <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_18465855538f8a6320758be5c96a1b436.html#a3b1eb1480599793d83e4f9e0c4d138fd">reg_transpose</a></td></tr>
+<tr class="separator:afcf79ee8e97ec6a7f3422fd4d8a242d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc928ce51aa199dbb5053e2cfdd1e870"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_18465855538f8a6320758be5c96a1b436.html#afc928ce51aa199dbb5053e2cfdd1e870">mem_transform</a></td></tr>
 <tr class="separator:afc928ce51aa199dbb5053e2cfdd1e870"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8dd8f8c72ea225a060384bea2386f32a"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_18465855538f8a6320758be5c96a1b436.html#a8dd8f8c72ea225a060384bea2386f32a">mem_dword_transpose</a></td></tr>
+<tr class="memitem:a8dd8f8c72ea225a060384bea2386f32a"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_18465855538f8a6320758be5c96a1b436.html#a8dd8f8c72ea225a060384bea2386f32a">mem_dword_transpose</a> = (sizeof(<a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_18465855538f8a6320758be5c96a1b436.html#ac28b0609ab3465444668c5734ab55340">dtype</a>) &lt; 4) &amp;&amp; <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_18465855538f8a6320758be5c96a1b436.html#afcf79ee8e97ec6a7f3422fd4d8a242d7">trans</a></td></tr>
 <tr class="separator:a8dd8f8c72ea225a060384bea2386f32a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6dc9dd51d7a0ab0cef5db53689b78932"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_18465855538f8a6320758be5c96a1b436.html#a6dc9dd51d7a0ab0cef5db53689b78932">scale_factor</a> = sizeof(<a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_18465855538f8a6320758be5c96a1b436.html#af651806eef2c5501152d85d8b0f663c6">mem_dtype</a>) / sizeof(<a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_18465855538f8a6320758be5c96a1b436.html#ac28b0609ab3465444668c5734ab55340">dtype</a>)</td></tr>
 <tr class="separator:a6dc9dd51d7a0ab0cef5db53689b78932"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -565,7 +569,7 @@ template&lt;typename dtype_ , typename tile_desc_ , <a class="el" href="namespac
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr bool <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t.html">gpu::xetla::subgroup::mem_payload_t</a>&lt; dtype_, tile_desc_, <a class="el" href="namespacegpu_1_1xetla.html#aa8afe1d12e7777419fb6ea09534a0aa7af359df7632214793e086fdf1885d5db6">msg_type::block_2d</a>, mem_layout_, <a class="el" href="namespacegpu_1_1xetla.html#a7f225ed816e841c1d31414d872dae59da9c70933aff6b2a6d08c687a6cbb6b765">mem_space::global</a>, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;::mem_dword_transpose</td>
+          <td class="memname">constexpr bool <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t.html">gpu::xetla::subgroup::mem_payload_t</a>&lt; dtype_, tile_desc_, <a class="el" href="namespacegpu_1_1xetla.html#aa8afe1d12e7777419fb6ea09534a0aa7af359df7632214793e086fdf1885d5db6">msg_type::block_2d</a>, mem_layout_, <a class="el" href="namespacegpu_1_1xetla.html#a7f225ed816e841c1d31414d872dae59da9c70933aff6b2a6d08c687a6cbb6b765">mem_space::global</a>, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;::mem_dword_transpose = (sizeof(<a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_18465855538f8a6320758be5c96a1b436.html#ac28b0609ab3465444668c5734ab55340">dtype</a>) &lt; 4) &amp;&amp; <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_18465855538f8a6320758be5c96a1b436.html#afcf79ee8e97ec6a7f3422fd4d8a242d7">trans</a></td>
         </tr>
       </table>
   </td>
@@ -574,13 +578,7 @@ template&lt;typename dtype_ , typename tile_desc_ , <a class="el" href="namespac
   </tr>
 </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= <span class="keyword">sizeof</span>(<a class="code hl_typedef" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_18465855538f8a6320758be5c96a1b436.html#ac28b0609ab3465444668c5734ab55340">dtype</a>) &lt; 4</div>
-<div class="line">            &amp;&amp; <a class="code hl_variable" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_18465855538f8a6320758be5c96a1b436.html#a26b0233f43931517db1c5263ab8edfb2">mem_transpose</a> &amp;&amp; (<a class="code hl_variable" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_18465855538f8a6320758be5c96a1b436.html#a560d4d67ebf31b6716199649b426695f">register_layout</a> == <a class="code hl_enumvalue" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa9c072496656f07aeb105a1bc09a218b5">reg_layout::vnni_tiled</a>)</div>
-<div class="ttc" id="anamespacegpu_1_1xetla_html_a51137fd81d0d9d2156525a1e279432aaa9c072496656f07aeb105a1bc09a218b5"><div class="ttname"><a href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa9c072496656f07aeb105a1bc09a218b5">gpu::xetla::reg_layout::vnni_tiled</a></div><div class="ttdeci">@ vnni_tiled</div></div>
-<div class="ttc" id="astructgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_18465855538f8a6320758be5c96a1b436_html_a26b0233f43931517db1c5263ab8edfb2"><div class="ttname"><a href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_18465855538f8a6320758be5c96a1b436.html#a26b0233f43931517db1c5263ab8edfb2">gpu::xetla::subgroup::mem_payload_t&lt; dtype_, tile_desc_, msg_type::block_2d, mem_layout_, mem_space::global, gpu_arch::Xe &gt;::mem_transpose</a></div><div class="ttdeci">static constexpr bool mem_transpose</div><div class="ttdef"><b>Definition:</b> payload_xe.hpp:58</div></div>
-<div class="ttc" id="astructgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_18465855538f8a6320758be5c96a1b436_html_a560d4d67ebf31b6716199649b426695f"><div class="ttname"><a href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_18465855538f8a6320758be5c96a1b436.html#a560d4d67ebf31b6716199649b426695f">gpu::xetla::subgroup::mem_payload_t&lt; dtype_, tile_desc_, msg_type::block_2d, mem_layout_, mem_space::global, gpu_arch::Xe &gt;::register_layout</a></div><div class="ttdeci">static constexpr reg_layout register_layout</div><div class="ttdef"><b>Definition:</b> payload_xe.hpp:60</div></div>
-<div class="ttc" id="astructgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_18465855538f8a6320758be5c96a1b436_html_ac28b0609ab3465444668c5734ab55340"><div class="ttname"><a href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_18465855538f8a6320758be5c96a1b436.html#ac28b0609ab3465444668c5734ab55340">gpu::xetla::subgroup::mem_payload_t&lt; dtype_, tile_desc_, msg_type::block_2d, mem_layout_, mem_space::global, gpu_arch::Xe &gt;::dtype</a></div><div class="ttdeci">dtype_ dtype</div><div class="ttdef"><b>Definition:</b> payload_xe.hpp:40</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afc928ce51aa199dbb5053e2cfdd1e870" name="afc928ce51aa199dbb5053e2cfdd1e870"></a>
@@ -608,6 +606,10 @@ template&lt;typename dtype_ , typename tile_desc_ , <a class="el" href="namespac
 <div class="line">            &amp;&amp; (<a class="code hl_variable" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_18465855538f8a6320758be5c96a1b436.html#a560d4d67ebf31b6716199649b426695f">register_layout</a> == <a class="code hl_enumvalue" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa9c072496656f07aeb105a1bc09a218b5">reg_layout::vnni_tiled</a></div>
 <div class="line">                    || <a class="code hl_variable" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_18465855538f8a6320758be5c96a1b436.html#a560d4d67ebf31b6716199649b426695f">register_layout</a> == <a class="code hl_enumvalue" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa6eb72c4242a34cbbdbe6ba17f3555556">reg_layout::vnni_tiled_col_major</a>)</div>
 <div class="ttc" id="anamespacegpu_1_1xetla_html_a51137fd81d0d9d2156525a1e279432aaa6eb72c4242a34cbbdbe6ba17f3555556"><div class="ttname"><a href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa6eb72c4242a34cbbdbe6ba17f3555556">gpu::xetla::reg_layout::vnni_tiled_col_major</a></div><div class="ttdeci">@ vnni_tiled_col_major</div><div class="ttdoc">this is vnni tiled format, but for each block, they are stored in col major order</div></div>
+<div class="ttc" id="anamespacegpu_1_1xetla_html_a51137fd81d0d9d2156525a1e279432aaa9c072496656f07aeb105a1bc09a218b5"><div class="ttname"><a href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa9c072496656f07aeb105a1bc09a218b5">gpu::xetla::reg_layout::vnni_tiled</a></div><div class="ttdeci">@ vnni_tiled</div></div>
+<div class="ttc" id="astructgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_18465855538f8a6320758be5c96a1b436_html_a26b0233f43931517db1c5263ab8edfb2"><div class="ttname"><a href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_18465855538f8a6320758be5c96a1b436.html#a26b0233f43931517db1c5263ab8edfb2">gpu::xetla::subgroup::mem_payload_t&lt; dtype_, tile_desc_, msg_type::block_2d, mem_layout_, mem_space::global, gpu_arch::Xe &gt;::mem_transpose</a></div><div class="ttdeci">static constexpr bool mem_transpose</div><div class="ttdef"><b>Definition:</b> payload_xe.hpp:58</div></div>
+<div class="ttc" id="astructgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_18465855538f8a6320758be5c96a1b436_html_a560d4d67ebf31b6716199649b426695f"><div class="ttname"><a href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_18465855538f8a6320758be5c96a1b436.html#a560d4d67ebf31b6716199649b426695f">gpu::xetla::subgroup::mem_payload_t&lt; dtype_, tile_desc_, msg_type::block_2d, mem_layout_, mem_space::global, gpu_arch::Xe &gt;::register_layout</a></div><div class="ttdeci">static constexpr reg_layout register_layout</div><div class="ttdef"><b>Definition:</b> payload_xe.hpp:60</div></div>
+<div class="ttc" id="astructgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_18465855538f8a6320758be5c96a1b436_html_ac28b0609ab3465444668c5734ab55340"><div class="ttname"><a href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_18465855538f8a6320758be5c96a1b436.html#ac28b0609ab3465444668c5734ab55340">gpu::xetla::subgroup::mem_payload_t&lt; dtype_, tile_desc_, msg_type::block_2d, mem_layout_, mem_space::global, gpu_arch::Xe &gt;::dtype</a></div><div class="ttdeci">dtype_ dtype</div><div class="ttdef"><b>Definition:</b> payload_xe.hpp:40</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -723,6 +725,30 @@ template&lt;typename dtype_ , typename tile_desc_ , <a class="el" href="namespac
 
 </div>
 </div>
+<a id="a3b1eb1480599793d83e4f9e0c4d138fd" name="a3b1eb1480599793d83e4f9e0c4d138fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b1eb1480599793d83e4f9e0c4d138fd">&#9670;&#160;</a></span>reg_transpose</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename dtype_ , typename tile_desc_ , <a class="el" href="namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561">mem_layout</a> mem_layout_&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t.html">gpu::xetla::subgroup::mem_payload_t</a>&lt; dtype_, tile_desc_, <a class="el" href="namespacegpu_1_1xetla.html#aa8afe1d12e7777419fb6ea09534a0aa7af359df7632214793e086fdf1885d5db6">msg_type::block_2d</a>, mem_layout_, <a class="el" href="namespacegpu_1_1xetla.html#a7f225ed816e841c1d31414d872dae59da9c70933aff6b2a6d08c687a6cbb6b765">mem_space::global</a>, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;::reg_transpose = <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_18465855538f8a6320758be5c96a1b436.html#a560d4d67ebf31b6716199649b426695f">register_layout</a> == <a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa790a2d945934924db5b508c7f46846b6">reg_layout::transpose_tiled</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a560d4d67ebf31b6716199649b426695f" name="a560d4d67ebf31b6716199649b426695f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a560d4d67ebf31b6716199649b426695f">&#9670;&#160;</a></span>register_layout</h2>
 
@@ -760,6 +786,30 @@ template&lt;typename dtype_ , typename tile_desc_ , <a class="el" href="namespac
       <table class="memname">
         <tr>
           <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t.html">gpu::xetla::subgroup::mem_payload_t</a>&lt; dtype_, tile_desc_, <a class="el" href="namespacegpu_1_1xetla.html#aa8afe1d12e7777419fb6ea09534a0aa7af359df7632214793e086fdf1885d5db6">msg_type::block_2d</a>, mem_layout_, <a class="el" href="namespacegpu_1_1xetla.html#a7f225ed816e841c1d31414d872dae59da9c70933aff6b2a6d08c687a6cbb6b765">mem_space::global</a>, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;::scale_factor = sizeof(<a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_18465855538f8a6320758be5c96a1b436.html#af651806eef2c5501152d85d8b0f663c6">mem_dtype</a>) / sizeof(<a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_18465855538f8a6320758be5c96a1b436.html#ac28b0609ab3465444668c5734ab55340">dtype</a>)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afcf79ee8e97ec6a7f3422fd4d8a242d7" name="afcf79ee8e97ec6a7f3422fd4d8a242d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcf79ee8e97ec6a7f3422fd4d8a242d7">&#9670;&#160;</a></span>trans</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename dtype_ , typename tile_desc_ , <a class="el" href="namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561">mem_layout</a> mem_layout_&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t.html">gpu::xetla::subgroup::mem_payload_t</a>&lt; dtype_, tile_desc_, <a class="el" href="namespacegpu_1_1xetla.html#aa8afe1d12e7777419fb6ea09534a0aa7af359df7632214793e086fdf1885d5db6">msg_type::block_2d</a>, mem_layout_, <a class="el" href="namespacegpu_1_1xetla.html#a7f225ed816e841c1d31414d872dae59da9c70933aff6b2a6d08c687a6cbb6b765">mem_space::global</a>, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;::trans = <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_18465855538f8a6320758be5c96a1b436.html#a26b0233f43931517db1c5263ab8edfb2">mem_transpose</a> ^ <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_18465855538f8a6320758be5c96a1b436.html#a3b1eb1480599793d83e4f9e0c4d138fd">reg_transpose</a></td>
         </tr>
       </table>
   </td>

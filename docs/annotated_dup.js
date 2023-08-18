@@ -3,25 +3,20 @@ var annotated_dup =
     [ "gpu", "namespacegpu.html", [
       [ "xetla", "namespacegpu_1_1xetla.html", [
         [ "group", "namespacegpu_1_1xetla_1_1group.html", [
-          [ "detail", "namespacegpu_1_1xetla_1_1group_1_1detail.html", [
-            [ "check_dtype_default_fpu_xe", "structgpu_1_1xetla_1_1group_1_1detail_1_1check__dtype__default__fpu__xe.html", null ],
-            [ "check_dtype_default_xmx_xe", "structgpu_1_1xetla_1_1group_1_1detail_1_1check__dtype__default__xmx__xe.html", null ],
-            [ "check_memory_default_fpu_xe", "structgpu_1_1xetla_1_1group_1_1detail_1_1check__memory__default__fpu__xe.html", null ],
-            [ "check_memory_default_xmx_xe", "structgpu_1_1xetla_1_1group_1_1detail_1_1check__memory__default__xmx__xe.html", null ],
-            [ "check_tile_size_default_fpu_xe", "structgpu_1_1xetla_1_1group_1_1detail_1_1check__tile__size__default__fpu__xe.html", "structgpu_1_1xetla_1_1group_1_1detail_1_1check__tile__size__default__fpu__xe" ],
-            [ "check_tile_size_default_xmx_xe", "structgpu_1_1xetla_1_1group_1_1detail_1_1check__tile__size__default__xmx__xe.html", "structgpu_1_1xetla_1_1group_1_1detail_1_1check__tile__size__default__xmx__xe" ]
-          ] ],
           [ "brgemm_selector_t", "classgpu_1_1xetla_1_1group_1_1brgemm__selector__t.html", null ],
           [ "brgemm_selector_t< dtype_a, dtype_b, mem_layout_a, mem_layout_b, mem_space_a, mem_space_b, alignment_a, alignment_b, dtype_acc, tile_shape, k_stride, mma_engine::fpu, gpu_arch::Xe, stages, sync_freq, std::enable_if_t<((sizeof(dtype_a) *alignment_a) % detail::alignment_bytes_xe==0) &&((sizeof(dtype_b) *alignment_b) % detail::alignment_bytes_xe==0)> >", "classgpu_1_1xetla_1_1group_1_1brgemm__selector__t_3_01dtype__a_00_01dtype__b_00_01mem__layout__a386cb0b79347ebe3b83ae4c1287ebfe6.html", "classgpu_1_1xetla_1_1group_1_1brgemm__selector__t_3_01dtype__a_00_01dtype__b_00_01mem__layout__a386cb0b79347ebe3b83ae4c1287ebfe6" ],
           [ "brgemm_selector_t< dtype_a, dtype_b, mem_layout_a, mem_layout_b, mem_space_a, mem_space_b, alignment_a, alignment_b, dtype_acc, tile_shape, k_stride, mma_engine::xmx, gpu_arch::Xe, stages, sync_freq, std::enable_if_t<((sizeof(dtype_a) *alignment_a) % detail::alignment_bytes_xe==0) &&((sizeof(dtype_b) *alignment_b) % detail::alignment_bytes_xe==0)> >", "classgpu_1_1xetla_1_1group_1_1brgemm__selector__t_3_01dtype__a_00_01dtype__b_00_01mem__layout__ab0bba904540e3123bc567c0c77d1dc34.html", "classgpu_1_1xetla_1_1group_1_1brgemm__selector__t_3_01dtype__a_00_01dtype__b_00_01mem__layout__ab0bba904540e3123bc567c0c77d1dc34" ],
           [ "brgemm_t", "classgpu_1_1xetla_1_1group_1_1brgemm__t.html", null ],
           [ "brgemm_t< compute_policy_default_fpu< compute_attr_, perf_tuning_knob_, gpu_arch::Xe >, tile_shape_, mem_desc_a_t_, mem_desc_b_t_, pre_processing_t_ >", "classgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__default__fpu_3_01compute__attr___00e6ff7d3616a116a3ac4e9e017b87087d.html", "classgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__default__fpu_3_01compute__attr___00e6ff7d3616a116a3ac4e9e017b87087d" ],
           [ "brgemm_t< compute_policy_default_xmx< compute_attr_, perf_tuning_knob_, gpu_arch::Xe >, tile_shape_, mem_desc_a_t_, mem_desc_b_t_, pre_processing_t_ >", "classgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__default__xmx_3_01compute__attr___00cfb0805f04374331c75878919ee17cda.html", "classgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__default__xmx_3_01compute__attr___00cfb0805f04374331c75878919ee17cda" ],
+          [ "brgemm_t< compute_policy_int4_dequantize_xmx< compute_attr_, perf_tuning_knob_, dtype_scale_, dtype_zero_pt_, dequant_s_, gpu_arch::Xe >, tile_shape_, mem_desc_a_t_, mem_desc_b_t_, pre_processing_t_ >", "classgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__int4__dequantize__xmx_3_01compute__24f3c78d093451e94a933a805396fcda.html", "classgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__int4__dequantize__xmx_3_01compute__24f3c78d093451e94a933a805396fcda" ],
           [ "compute_attr_t", "structgpu_1_1xetla_1_1group_1_1compute__attr__t.html", "structgpu_1_1xetla_1_1group_1_1compute__attr__t" ],
           [ "compute_policy_default_fpu", "structgpu_1_1xetla_1_1group_1_1compute__policy__default__fpu.html", null ],
           [ "compute_policy_default_fpu< compute_attr_, perf_tuning_knob_, gpu_arch::Xe >", "structgpu_1_1xetla_1_1group_1_1compute__policy__default__fpu_3_01compute__attr___00_01perf__tuni47256acf2d5985beff28b2772c102b96.html", "structgpu_1_1xetla_1_1group_1_1compute__policy__default__fpu_3_01compute__attr___00_01perf__tuni47256acf2d5985beff28b2772c102b96" ],
           [ "compute_policy_default_xmx", "structgpu_1_1xetla_1_1group_1_1compute__policy__default__xmx.html", null ],
           [ "compute_policy_default_xmx< compute_attr_, perf_tuning_knob_, gpu_arch::Xe >", "structgpu_1_1xetla_1_1group_1_1compute__policy__default__xmx_3_01compute__attr___00_01perf__tuni99772a0774107d5e4cbc4d748cebc11b.html", "structgpu_1_1xetla_1_1group_1_1compute__policy__default__xmx_3_01compute__attr___00_01perf__tuni99772a0774107d5e4cbc4d748cebc11b" ],
+          [ "compute_policy_int4_dequantize_xmx", "structgpu_1_1xetla_1_1group_1_1compute__policy__int4__dequantize__xmx.html", null ],
+          [ "compute_policy_int4_dequantize_xmx< compute_attr_, perf_tuning_knob_, dtype_scale_, dtype_zero_pt_, dequant_s_, gpu_arch::Xe >", "structgpu_1_1xetla_1_1group_1_1compute__policy__int4__dequantize__xmx_3_01compute__attr___00_01p7b1e16dedc509103289b93f481925e4b.html", "structgpu_1_1xetla_1_1group_1_1compute__policy__int4__dequantize__xmx_3_01compute__attr___00_01p7b1e16dedc509103289b93f481925e4b" ],
           [ "cooperative_reduce_t", "classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t.html", null ],
           [ "cooperative_reduce_t< reduce_kind, tile_shape_, matAcc_t, 1, gpu_arch::Xe >", "classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01ma142eceda8d4b0cef3b9990847430423a.html", "classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01ma142eceda8d4b0cef3b9990847430423a" ],
           [ "cooperative_reduce_t< reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, gpu_arch::Xe >", "classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mad5d1adea938e137c96761a4611a4c7d3.html", "classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mad5d1adea938e137c96761a4611a4c7d3" ],
@@ -72,9 +67,11 @@ var annotated_dup =
         [ "kernel", "namespacegpu_1_1xetla_1_1kernel.html", [
           [ "data_transformer_attr_t", "structgpu_1_1xetla_1_1kernel_1_1data__transformer__attr__t.html", null ],
           [ "dispatch_policy_default", "structgpu_1_1xetla_1_1kernel_1_1dispatch__policy__default.html", null ],
+          [ "dispatch_policy_int4_dequantize_kslicing", "structgpu_1_1xetla_1_1kernel_1_1dispatch__policy__int4__dequantize__kslicing.html", null ],
           [ "dispatch_policy_kslicing", "structgpu_1_1xetla_1_1kernel_1_1dispatch__policy__kslicing.html", null ],
           [ "gemm_t", "classgpu_1_1xetla_1_1kernel_1_1gemm__t.html", null ],
           [ "gemm_t< dispatch_policy_default< gpu_arch::Xe >, brgemm_t_, epilogue_t_ >", "classgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__default_3_01gpu__arch_1_1Xe_01_4_0051d16bedb91f5891d70e390cac9b64a4.html", "classgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__default_3_01gpu__arch_1_1Xe_01_4_0051d16bedb91f5891d70e390cac9b64a4" ],
+          [ "gemm_t< dispatch_policy_int4_dequantize_kslicing< global_kslicing_ratio_, local_kslicing_ratio_, gpu_arch::Xe >, brgemm_t_, epilogue_t_ >", "classgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__int4__dequantize__kslicing_3_01globb5991c0fff6e7db542248941f8142704.html", "classgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__int4__dequantize__kslicing_3_01globb5991c0fff6e7db542248941f8142704" ],
           [ "gemm_t< dispatch_policy_kslicing< global_kslicing_ratio_, local_kslicing_ratio_, gpu_arch::Xe >, brgemm_t_, epilogue_t_ >", "classgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__kslicing_3_01global__kslicing__ratiae9f80c882ba18776d69f655bbd0163d.html", "classgpu_1_1xetla_1_1kernel_1_1gemm__t_3_01dispatch__policy__kslicing_3_01global__kslicing__ratiae9f80c882ba18776d69f655bbd0163d" ],
           [ "layer_norm_attr_t", "structgpu_1_1xetla_1_1kernel_1_1layer__norm__attr__t.html", null ],
           [ "layer_norm_bwd_t", "structgpu_1_1xetla_1_1kernel_1_1layer__norm__bwd__t.html", null ],
@@ -90,6 +87,20 @@ var annotated_dup =
           [ "xetla_mha_core_attn_fwd_t", "structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html", "structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t" ],
           [ "xetla_row_reduction_t", "structgpu_1_1xetla_1_1kernel_1_1xetla__row__reduction__t.html", null ],
           [ "xetla_row_reduction_t< dtype_in_, dtype_out_, dtype_acc_, reduction_attr_, gpu_arch::Xe, fused_op_t_ >", "structgpu_1_1xetla_1_1kernel_1_1xetla__row__reduction__t_3_01dtype__in___00_01dtype__out___00_01cd72c8b824c01ad6c9039a9957986bd1.html", "structgpu_1_1xetla_1_1kernel_1_1xetla__row__reduction__t_3_01dtype__in___00_01dtype__out___00_01cd72c8b824c01ad6c9039a9957986bd1" ]
+        ] ],
+        [ "limitation", "namespacegpu_1_1xetla_1_1limitation.html", [
+          [ "brgemm", "namespacegpu_1_1xetla_1_1limitation_1_1brgemm.html", [
+            [ "default_fpu", "namespacegpu_1_1xetla_1_1limitation_1_1brgemm_1_1default__fpu.html", [
+              [ "check_dtype_default_fpu_xe", "structgpu_1_1xetla_1_1limitation_1_1brgemm_1_1default__fpu_1_1check__dtype__default__fpu__xe.html", null ],
+              [ "check_memory_default_fpu_xe", "structgpu_1_1xetla_1_1limitation_1_1brgemm_1_1default__fpu_1_1check__memory__default__fpu__xe.html", null ],
+              [ "check_tile_size_default_fpu_xe", "structgpu_1_1xetla_1_1limitation_1_1brgemm_1_1default__fpu_1_1check__tile__size__default__fpu__xe.html", "structgpu_1_1xetla_1_1limitation_1_1brgemm_1_1default__fpu_1_1check__tile__size__default__fpu__xe" ]
+            ] ],
+            [ "default_xmx", "namespacegpu_1_1xetla_1_1limitation_1_1brgemm_1_1default__xmx.html", [
+              [ "check_dtype_default_xmx_xe", "structgpu_1_1xetla_1_1limitation_1_1brgemm_1_1default__xmx_1_1check__dtype__default__xmx__xe.html", null ],
+              [ "check_memory_default_xmx_xe", "structgpu_1_1xetla_1_1limitation_1_1brgemm_1_1default__xmx_1_1check__memory__default__xmx__xe.html", null ],
+              [ "check_tile_size_default_xmx_xe", "structgpu_1_1xetla_1_1limitation_1_1brgemm_1_1default__xmx_1_1check__tile__size__default__xmx__xe.html", "structgpu_1_1xetla_1_1limitation_1_1brgemm_1_1default__xmx_1_1check__tile__size__default__xmx__xe" ]
+            ] ]
+          ] ]
         ] ],
         [ "subgroup", "namespacegpu_1_1xetla_1_1subgroup.html", [
           [ "detail", "namespacegpu_1_1xetla_1_1subgroup_1_1detail.html", [
@@ -141,12 +152,14 @@ var annotated_dup =
           [ "rng_dropout_op_t< dtype_mask_, gpu_arch::Xe >", "structgpu_1_1xetla_1_1subgroup_1_1rng__dropout__op__t_3_01dtype__mask___00_01gpu__arch_1_1Xe_01_4.html", "structgpu_1_1xetla_1_1subgroup_1_1rng__dropout__op__t_3_01dtype__mask___00_01gpu__arch_1_1Xe_01_4" ],
           [ "scalar_mul_op_t", "structgpu_1_1xetla_1_1subgroup_1_1scalar__mul__op__t.html", null ],
           [ "scalar_mul_op_t< dtype_in_, gpu_arch::Xe >", "structgpu_1_1xetla_1_1subgroup_1_1scalar__mul__op__t_3_01dtype__in___00_01gpu__arch_1_1Xe_01_4.html", "structgpu_1_1xetla_1_1subgroup_1_1scalar__mul__op__t_3_01dtype__in___00_01gpu__arch_1_1Xe_01_4" ],
+          [ "sigmoid_op_t", "structgpu_1_1xetla_1_1subgroup_1_1sigmoid__op__t.html", "structgpu_1_1xetla_1_1subgroup_1_1sigmoid__op__t" ],
+          [ "tanh_op_t", "structgpu_1_1xetla_1_1subgroup_1_1tanh__op__t.html", "structgpu_1_1xetla_1_1subgroup_1_1tanh__op__t" ],
           [ "tile_desc_t", "structgpu_1_1xetla_1_1subgroup_1_1tile__desc__t.html", null ],
           [ "tile_div", "structgpu_1_1xetla_1_1subgroup_1_1tile__div.html", null ],
           [ "tile_minus", "structgpu_1_1xetla_1_1subgroup_1_1tile__minus.html", null ],
           [ "tile_mma_t", "structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html", null ],
-          [ "tile_mma_t< matA_t_, matB_t_, matAcc_src_t_, matAcc_dst_t_, mma_engine::fpu, gpu_arch::Xe >", "structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t_3_01matA__t___00_01matB__t___00_01matAcc__src__t_5e326f93053a5dc419a1202cd6d31c87.html", "structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t_3_01matA__t___00_01matB__t___00_01matAcc__src__t_5e326f93053a5dc419a1202cd6d31c87" ],
-          [ "tile_mma_t< matA_t_, matB_t_, matAcc_src_t_, matAcc_dst_t_, mma_engine::xmx, gpu_arch::Xe >", "structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t_3_01matA__t___00_01matB__t___00_01matAcc__src__t_7f67d172949e9727b2f7953429f66a95.html", "structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t_3_01matA__t___00_01matB__t___00_01matAcc__src__t_7f67d172949e9727b2f7953429f66a95" ],
+          [ "tile_mma_t< matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, mma_engine::fpu, gpu_arch::Xe >", "structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t_3_01matAcc__dst__t___00_01matAcc__src__t___00_01m844ec3bc6e507a60cbd6eca3f5605736.html", "structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t_3_01matAcc__dst__t___00_01matAcc__src__t___00_01m844ec3bc6e507a60cbd6eca3f5605736" ],
+          [ "tile_mma_t< matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, mma_engine::xmx, gpu_arch::Xe >", "structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t_3_01matAcc__dst__t___00_01matAcc__src__t___00_01m24ae4cce8b7a7db2ae764a802b330219.html", "structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t_3_01matAcc__dst__t___00_01matAcc__src__t___00_01m24ae4cce8b7a7db2ae764a802b330219" ],
           [ "tile_op_arg_helper_t", "structgpu_1_1xetla_1_1subgroup_1_1tile__op__arg__helper__t.html", "structgpu_1_1xetla_1_1subgroup_1_1tile__op__arg__helper__t" ],
           [ "tile_t", "structgpu_1_1xetla_1_1subgroup_1_1tile__t.html", "structgpu_1_1xetla_1_1subgroup_1_1tile__t" ]
         ] ],
@@ -154,9 +167,11 @@ var annotated_dup =
         [ "bf16", "structgpu_1_1xetla_1_1bf16.html", "structgpu_1_1xetla_1_1bf16" ],
         [ "dropout_fwd_t", "structgpu_1_1xetla_1_1dropout__fwd__t.html", "structgpu_1_1xetla_1_1dropout__fwd__t" ],
         [ "get_uint_type", "structgpu_1_1xetla_1_1get__uint__type.html", "structgpu_1_1xetla_1_1get__uint__type" ],
+        [ "int4x2", "structgpu_1_1xetla_1_1int4x2.html", "structgpu_1_1xetla_1_1int4x2" ],
         [ "is_host_callable", "structgpu_1_1xetla_1_1is__host__callable.html", null ],
         [ "is_host_callable< T, std::enable_if_t< T::host_callable==true > >", "structgpu_1_1xetla_1_1is__host__callable_3_01T_00_01std_1_1enable__if__t_3_01T_1_1host__callable_0a_0atrue_01_4_01_4.html", null ],
         [ "is_internal_type", "structgpu_1_1xetla_1_1is__internal__type.html", null ],
+        [ "is_internal_type< int4x2 >", "structgpu_1_1xetla_1_1is__internal__type_3_01int4x2_01_4.html", null ],
         [ "load_store_attr_t", "structgpu_1_1xetla_1_1load__store__attr__t.html", null ],
         [ "load_store_attr_t< gpu_arch::Xe >", "structgpu_1_1xetla_1_1load__store__attr__t_3_01gpu__arch_1_1Xe_01_4.html", null ],
         [ "mem_base_t", "structgpu_1_1xetla_1_1mem__base__t.html", null ],
@@ -172,6 +187,7 @@ var annotated_dup =
         [ "mma_attr_t< gpu_arch::Xe >", "structgpu_1_1xetla_1_1mma__attr__t_3_01gpu__arch_1_1Xe_01_4.html", null ],
         [ "native_type", "structgpu_1_1xetla_1_1native__type.html", "structgpu_1_1xetla_1_1native__type" ],
         [ "native_type< bf16 >", "structgpu_1_1xetla_1_1native__type_3_01bf16_01_4.html", "structgpu_1_1xetla_1_1native__type_3_01bf16_01_4" ],
+        [ "native_type< int4x2 >", "structgpu_1_1xetla_1_1native__type_3_01int4x2_01_4.html", "structgpu_1_1xetla_1_1native__type_3_01int4x2_01_4" ],
         [ "native_type< tf32 >", "structgpu_1_1xetla_1_1native__type_3_01tf32_01_4.html", "structgpu_1_1xetla_1_1native__type_3_01tf32_01_4" ],
         [ "register_attr_t", "structgpu_1_1xetla_1_1register__attr__t.html", null ],
         [ "register_attr_t< gpu_arch::Xe, grf_mode::double_grf >", "structgpu_1_1xetla_1_1register__attr__t_3_01gpu__arch_1_1Xe_00_01grf__mode_1_1double__grf_01_4.html", null ],

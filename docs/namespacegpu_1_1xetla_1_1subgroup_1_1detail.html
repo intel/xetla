@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.3</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.4</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -106,7 +106,8 @@ $(document).ready(function(){initNavTree('namespacegpu_1_1xetla_1_1subgroup_1_1d
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">gpu::xetla::subgroup::detail Namespace Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -157,15 +158,26 @@ Functions</h2></td></tr>
 <tr class="memitem:a710c411e9b5519c0246823f2734b6550"><td class="memTemplParams" colspan="2">template&lt;uint32_t remained_len, uint32_t base_len, <a class="el" href="namespacegpu_1_1xetla_1_1subgroup_1_1detail.html#a781ffea4fb72a41d8b13391ae86e7f1c">process_flag</a> flag, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L1, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L3, typename payload_t , typename <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__t.html">tile_t</a> &gt; </td></tr>
 <tr class="memitem:a710c411e9b5519c0246823f2734b6550"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> std::enable_if_t&lt; base_len !=0 &amp;&amp;payload_t::memory_space==<a class="el" href="namespacegpu_1_1xetla.html#a7f225ed816e841c1d31414d872dae59daf5ddaf0ca7929578b408c909429f68f2">mem_space::local</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegpu_1_1xetla_1_1subgroup_1_1detail.html#a710c411e9b5519c0246823f2734b6550">process_1d_tail</a> (<a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__t.html">tile_t</a> &amp;<a class="el" href="namespacegpu_1_1xetla.html#a52fa7b5d0cce636d18ddead7b3ef0072a13181d8cc01e390bf64c9e4b0d7a79f3">tile</a>, payload_t &amp;payload, uint32_t offset)</td></tr>
 <tr class="separator:a710c411e9b5519c0246823f2734b6550"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08c0e750fa634acc3411bdd2712b6946"><td class="memTemplParams" colspan="2">template&lt;uint32_t remained_len, uint32_t base_len, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L1, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L3, typename payload_t &gt; </td></tr>
-<tr class="memitem:a08c0e750fa634acc3411bdd2712b6946"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> std::enable_if_t&lt; base_len&lt; 8 &gt; process_1d_tail(payload_t &amp;payload, uint32_t offset) {}template&lt; uint32_t remained_len, uint32_t base_len, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L1, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L3, typename payload_t &gt;<a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> typename std::enable_if_t&lt; base_len &gt;=8 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegpu_1_1xetla_1_1subgroup_1_1detail.html#a08c0e750fa634acc3411bdd2712b6946">process_1d_tail</a> (payload_t &amp;payload, uint32_t offset)</td></tr>
-<tr class="separator:a08c0e750fa634acc3411bdd2712b6946"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2710a9973aafe6e62aa39747ac8e630c"><td class="memTemplParams" colspan="2">template&lt;uint32_t remained_len, uint32_t base_len, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L1, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L3, typename payload_t &gt; </td></tr>
+<tr class="memitem:a2710a9973aafe6e62aa39747ac8e630c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> std::enable_if_t&lt;(base_len&lt; 8)&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegpu_1_1xetla_1_1subgroup_1_1detail.html#a2710a9973aafe6e62aa39747ac8e630c">process_1d_tail</a> (payload_t &amp;payload, uint32_t offset)</td></tr>
+<tr class="separator:a2710a9973aafe6e62aa39747ac8e630c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4f11b848ce571258ddb9744831c847b"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__t.html">tile_t</a> , typename payload_t &gt; </td></tr>
 <tr class="memitem:ad4f11b848ce571258ddb9744831c847b"><td class="memTemplItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegpu_1_1xetla_1_1subgroup_1_1detail.html#ad4f11b848ce571258ddb9744831c847b">check_load_condition</a> ()</td></tr>
 <tr class="separator:ad4f11b848ce571258ddb9744831c847b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afbf8e9b6b607fc1f3871ca3a94e31a47"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__t.html">tile_t</a> , typename payload_t &gt; </td></tr>
 <tr class="memitem:afbf8e9b6b607fc1f3871ca3a94e31a47"><td class="memTemplItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegpu_1_1xetla_1_1subgroup_1_1detail.html#afbf8e9b6b607fc1f3871ca3a94e31a47">check_store_condition</a> ()</td></tr>
 <tr class="separator:afbf8e9b6b607fc1f3871ca3a94e31a47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:afaff163e32dfdb788eeb9b5a38c4ba77"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegpu_1_1xetla_1_1subgroup_1_1detail.html#afaff163e32dfdb788eeb9b5a38c4ba77">size_x</a></td></tr>
+<tr class="separator:afaff163e32dfdb788eeb9b5a38c4ba77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65cc09c46f3a88a4f353c95da33f442d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> uint32_t uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegpu_1_1xetla_1_1subgroup_1_1detail.html#a65cc09c46f3a88a4f353c95da33f442d">size_y</a></td></tr>
+<tr class="separator:a65cc09c46f3a88a4f353c95da33f442d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95b30cd6e883c0553039ceb83324a253"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> uint32_t uint32_t uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegpu_1_1xetla_1_1subgroup_1_1detail.html#a95b30cd6e883c0553039ceb83324a253">scale_factor</a></td></tr>
+<tr class="separator:a95b30cd6e883c0553039ceb83324a253"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e654a2fb9d4dcfaceb007855a4920f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> uint32_t uint32_t uint32_t uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegpu_1_1xetla_1_1subgroup_1_1detail.html#a8e654a2fb9d4dcfaceb007855a4920f4">arr_len</a></td></tr>
+<tr class="separator:a8e654a2fb9d4dcfaceb007855a4920f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="a781ffea4fb72a41d8b13391ae86e7f1c" name="a781ffea4fb72a41d8b13391ae86e7f1c"></a>
@@ -321,8 +333,8 @@ template&lt;&gt; </div>
 
 </div>
 </div>
-<a id="a08c0e750fa634acc3411bdd2712b6946" name="a08c0e750fa634acc3411bdd2712b6946"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08c0e750fa634acc3411bdd2712b6946">&#9670;&#160;</a></span>process_1d_tail() <span class="overload">[1/4]</span></h2>
+<a id="a2710a9973aafe6e62aa39747ac8e630c" name="a2710a9973aafe6e62aa39747ac8e630c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2710a9973aafe6e62aa39747ac8e630c">&#9670;&#160;</a></span>process_1d_tail() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -330,7 +342,7 @@ template&lt;&gt; </div>
 template&lt;uint32_t remained_len, uint32_t base_len, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L1, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L3, typename payload_t &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> std::enable_if_t&lt; base_len&lt; 8 &gt; process_1d_tail(payload_t &amp;payload, uint32_t offset) {}template&lt; uint32_t remained_len, uint32_t base_len, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L1, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L3, typename payload_t &gt;<a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> typename std::enable_if_t&lt; base_len &gt;=8 &gt; gpu::xetla::subgroup::detail::process_1d_tail </td>
+          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> std::enable_if_t&lt;(base_len&lt; 8)&gt; gpu::xetla::subgroup::detail::process_1d_tail </td>
           <td>(</td>
           <td class="paramtype">payload_t &amp;&#160;</td>
           <td class="paramname"><em>payload</em>, </td>
@@ -453,6 +465,63 @@ template&lt;uint32_t remained_len, uint32_t base_len, <a class="el" href="namesp
           <td></td>
           <td>)</td>
           <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a8e654a2fb9d4dcfaceb007855a4920f4" name="a8e654a2fb9d4dcfaceb007855a4920f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e654a2fb9d4dcfaceb007855a4920f4">&#9670;&#160;</a></span>arr_len</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> uint32_t uint32_t uint32_t uint8_t gpu::xetla::subgroup::detail::arr_len</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a95b30cd6e883c0553039ceb83324a253" name="a95b30cd6e883c0553039ceb83324a253"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95b30cd6e883c0553039ceb83324a253">&#9670;&#160;</a></span>scale_factor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> uint32_t uint32_t uint32_t gpu::xetla::subgroup::detail::scale_factor</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afaff163e32dfdb788eeb9b5a38c4ba77" name="afaff163e32dfdb788eeb9b5a38c4ba77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afaff163e32dfdb788eeb9b5a38c4ba77">&#9670;&#160;</a></span>size_x</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> uint32_t gpu::xetla::subgroup::detail::size_x</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a65cc09c46f3a88a4f353c95da33f442d" name="a65cc09c46f3a88a4f353c95da33f442d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65cc09c46f3a88a4f353c95da33f442d">&#9670;&#160;</a></span>size_y</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> uint32_t uint32_t gpu::xetla::subgroup::detail::size_y</td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.3</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.4</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -112,18 +112,16 @@ $(document).ready(function(){initNavTree('default__fpu__xe_8hpp.html',''); initR
 
 <p>C++ API.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="group_2brgemm_2common_8hpp_source.html">group/brgemm/common.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="compute__policy_8hpp_source.html">group/brgemm/compute_policy.hpp</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;group/brgemm/common.hpp&quot;</code><br />
+<code>#include &quot;group/brgemm/compute_policy.hpp&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for default_fpu_xe.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="default__fpu__xe_8hpp__incl.png" border="0" usemap="#ainclude_2group_2brgemm_2impl_2default__fpu__xe_8hpp" alt=""/></div>
 <map name="ainclude_2group_2brgemm_2impl_2default__fpu__xe_8hpp" id="ainclude_2group_2brgemm_2impl_2default__fpu__xe_8hpp">
-<area shape="rect" title="C++ API." alt="" coords="89,5,251,45"/>
-<area shape="rect" href="group_2brgemm_2common_8hpp.html" title="C++ API." alt="" coords="78,181,262,207"/>
-<area shape="rect" href="compute__policy_8hpp.html" title="C++ API." alt="" coords="149,93,308,133"/>
-<area shape="rect" title=" " alt="" coords="5,255,156,280"/>
-<area shape="rect" title=" " alt="" coords="181,255,338,280"/>
+<area shape="rect" title="C++ API." alt="" coords="113,5,276,45"/>
+<area shape="rect" title=" " alt="" coords="5,101,189,126"/>
+<area shape="rect" title=" " alt="" coords="214,93,373,133"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -131,23 +129,8 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="default__fpu__xe_8hpp__dep__incl.png" border="0" usemap="#ainclude_2group_2brgemm_2impl_2default__fpu__xe_8hppdep" alt=""/></div>
 <map name="ainclude_2group_2brgemm_2impl_2default__fpu__xe_8hppdep" id="ainclude_2group_2brgemm_2impl_2default__fpu__xe_8hppdep">
-<area shape="rect" title="C++ API." alt="" coords="941,5,1103,45"/>
-<area shape="rect" href="brgemm_8hpp.html" title="C++ API." alt="" coords="947,93,1097,133"/>
-<area shape="rect" href="group_2group_8hpp.html" title="C++ API." alt="" coords="942,181,1102,207"/>
-<area shape="rect" href="xetla_8hpp.html" title="C++ API." alt="" coords="962,255,1082,280"/>
-<area shape="rect" href="basic__gemm_8cpp.html" title=" " alt="" coords="5,335,183,375"/>
-<area shape="rect" href="basic__brgemm_8cpp.html" title=" " alt="" coords="207,335,395,375"/>
-<area shape="rect" href="gemm__relu__bias_8cpp.html" title=" " alt="" coords="419,335,596,375"/>
-<area shape="rect" href="brgemm__polynomial_8cpp.html" title=" " alt="" coords="595,438,831,478"/>
-<area shape="rect" href="brgemm__polynomial_8hpp.html" title=" " alt="" coords="672,335,908,375"/>
-<area shape="rect" href="batch__gemm_8cpp.html" title=" " alt="" coords="933,335,1111,375"/>
-<area shape="rect" href="splitk__brgemm_8cpp.html" title=" " alt="" coords="1136,335,1327,375"/>
-<area shape="rect" href="gemm__softmax_8cpp.html" title=" " alt="" coords="1351,335,1543,375"/>
-<area shape="rect" href="multi__layer__perceptron_8cpp.html" title=" " alt="" coords="1568,328,1735,383"/>
-<area shape="rect" href="examples_209__scaled__dot__production__attention_2softmax_8hpp.html" title=" " alt="" coords="1759,328,1930,383"/>
-<area shape="rect" href="kernel__func_8hpp.html" title=" " alt="" coords="1971,335,2158,375"/>
-<area shape="rect" href="scaled__dot__production__attention_8cpp.html" title=" " alt="" coords="1716,431,1955,485"/>
-<area shape="rect" href="gate__recurrent__unit_8cpp.html" title=" " alt="" coords="1979,438,2169,478"/>
+<area shape="rect" title="C++ API." alt="" coords="5,5,168,45"/>
+<area shape="rect" href="group_2brgemm_2brgemm_8hpp.html" title="C++ API." alt="" coords="11,93,162,133"/>
 </map>
 </div>
 </div>
@@ -155,12 +138,6 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1group_1_1detail_1_1check__dtype__default__fpu__xe.html">gpu::xetla::group::detail::check_dtype_default_fpu_xe&lt; dtype_a, dtype_b, dtype_mma_a, dtype_mma_b, dtype_mma_acc &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1group_1_1detail_1_1check__memory__default__fpu__xe.html">gpu::xetla::group::detail::check_memory_default_fpu_xe&lt; mem_layout_a, mem_layout_b, mem_space_a, mem_space_b &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1group_1_1detail_1_1check__tile__size__default__fpu__xe.html">gpu::xetla::group::detail::check_tile_size_default_fpu_xe&lt; arch_attr, dtype_mma, tile_size_x_a, tile_size_y_a, block_size_x_a, block_size_y_a, tile_size_x_b, tile_size_y_b, block_size_x_b, block_size_y_b &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__default__fpu_3_01compute__attr___00e6ff7d3616a116a3ac4e9e017b87087d.html">gpu::xetla::group::brgemm_t&lt; compute_policy_default_fpu&lt; compute_attr_, perf_tuning_knob_, gpu_arch::Xe &gt;, tile_shape_, mem_desc_a_t_, mem_desc_b_t_, pre_processing_t_ &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the brgemm functor for Xe architecture and vector engine.  <a href="classgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__default__fpu_3_01compute__attr___00e6ff7d3616a116a3ac4e9e017b87087d.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -175,8 +152,6 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespacegpu_1_1xetla"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegpu_1_1xetla.html">gpu::xetla</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacegpu_1_1xetla_1_1group"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegpu_1_1xetla_1_1group.html">gpu::xetla::group</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacegpu_1_1xetla_1_1group_1_1detail"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegpu_1_1xetla_1_1group_1_1detail.html">gpu::xetla::group::detail</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>

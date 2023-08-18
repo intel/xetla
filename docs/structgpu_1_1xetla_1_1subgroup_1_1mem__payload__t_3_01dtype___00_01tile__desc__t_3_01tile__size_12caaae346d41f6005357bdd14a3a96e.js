@@ -12,7 +12,6 @@ var structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__des
     [ "operator=", "structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc__t_3_01tile__size_12caaae346d41f6005357bdd14a3a96e.html#abd37e6867b46de122cc7a2835791ee7d", null ],
     [ "update_tdesc", "structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc__t_3_01tile__size_12caaae346d41f6005357bdd14a3a96e.html#a97beaa9320ba6b1abd92fba18d7a1d70", null ],
     [ "address", "structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc__t_3_01tile__size_12caaae346d41f6005357bdd14a3a96e.html#afd3bc230e2f4ff86c73697865d61ef50", null ],
-    [ "base_address", "structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc__t_3_01tile__size_12caaae346d41f6005357bdd14a3a96e.html#afbbb2ddc0e3aa30f72b524251d7944ae", null ],
     [ "cyclic_count", "structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc__t_3_01tile__size_12caaae346d41f6005357bdd14a3a96e.html#a948d2dca2cbdb6e13793ee58601855ad", null ],
     [ "pitch_in_bytes", "structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc__t_3_01tile__size_12caaae346d41f6005357bdd14a3a96e.html#a95c884a63524c12ba794a40c6c4fba23", null ],
     [ "wg_height_in_elems", "structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc__t_3_01tile__size_12caaae346d41f6005357bdd14a3a96e.html#aa569d42738d8e6e44900dce44c5d7264", null ],

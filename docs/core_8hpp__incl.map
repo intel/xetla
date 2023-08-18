@@ -1,19 +1,20 @@
 <map id="include/common/core/core.hpp" name="include/common/core/core.hpp">
-<area shape="rect" id="node1" title="C++ API." alt="" coords="882,5,1029,45"/>
+<area shape="rect" id="node1" title="C++ API." alt="" coords="789,5,935,45"/>
 <area shape="rect" id="node2" href="$arch__config_8hpp.html" title="C++ API." alt="" coords="5,269,201,295"/>
-<area shape="rect" id="node6" href="$barrier_8hpp.html" title="C++ API." alt="" coords="156,101,323,126"/>
-<area shape="rect" id="node7" href="$base__consts_8hpp.html" title="C++ API." alt="" coords="277,269,481,295"/>
-<area shape="rect" id="node8" href="$base__ops_8hpp.html" title="C++ API." alt="" coords="850,269,1037,295"/>
-<area shape="rect" id="node9" href="$base__types_8hpp.html" title="C++ API." alt="" coords="1111,269,1309,295"/>
-<area shape="rect" id="node10" href="$bit__mask__manipulation_8hpp.html" title="C++ API." alt="" coords="1691,181,1849,221"/>
-<area shape="rect" id="node11" href="$explicit__conv_8hpp.html" title="C++ API." alt="" coords="721,93,867,133"/>
-<area shape="rect" id="node12" href="$math__general_8hpp.html" title="C++ API." alt="" coords="710,189,918,214"/>
-<area shape="rect" id="node13" href="$math__fma_8hpp.html" title="C++ API." alt="" coords="449,189,635,214"/>
-<area shape="rect" id="node14" href="$math__mma_8hpp.html" title="C++ API." alt="" coords="1777,101,1971,126"/>
-<area shape="rect" id="node15" href="$memory_8hpp.html" title="C++ API." alt="" coords="993,189,1171,214"/>
-<area shape="rect" id="node16" href="$core_2misc_8hpp.html" title="C++ API." alt="" coords="1247,189,1405,214"/>
-<area shape="rect" id="node17" href="$raw__send_8hpp.html" title="C++ API." alt="" coords="1429,189,1615,214"/>
-<area shape="rect" id="node3" href="$common_2core_2common_8hpp.html" title="C++ API." alt="" coords="853,343,1033,368"/>
-<area shape="rect" id="node4" title=" " alt="" coords="830,416,921,441"/>
-<area shape="rect" id="node5" title=" " alt="" coords="945,416,1077,441"/>
+<area shape="rect" id="node6" href="$barrier_8hpp.html" title="C++ API." alt="" coords="141,101,308,126"/>
+<area shape="rect" id="node7" href="$base__consts_8hpp.html" title="C++ API." alt="" coords="332,101,536,126"/>
+<area shape="rect" id="node8" href="$base__ops_8hpp.html" title="C++ API." alt="" coords="1178,269,1365,295"/>
+<area shape="rect" id="node9" href="$common_2core_2base__types_8hpp.html" title="C++ API." alt="" coords="805,269,1002,295"/>
+<area shape="rect" id="node10" href="$bit__mask__manipulation_8hpp.html" title="C++ API." alt="" coords="328,181,487,221"/>
+<area shape="rect" id="node11" href="$explicit__conv_8hpp.html" title="C++ API." alt="" coords="678,93,825,133"/>
+<area shape="rect" id="node12" href="$math__general_8hpp.html" title="C++ API." alt="" coords="663,189,871,214"/>
+<area shape="rect" id="node13" href="$math__fma_8hpp.html" title="C++ API." alt="" coords="1339,189,1526,214"/>
+<area shape="rect" id="node14" href="$math__mma_8hpp.html" title="C++ API." alt="" coords="1702,101,1897,126"/>
+<area shape="rect" id="node15" href="$memory_8hpp.html" title="C++ API." alt="" coords="1601,189,1779,214"/>
+<area shape="rect" id="node17" href="$core_2misc_8hpp.html" title="C++ API." alt="" coords="896,189,1055,214"/>
+<area shape="rect" id="node18" href="$raw__send_8hpp.html" title="C++ API." alt="" coords="1079,189,1264,214"/>
+<area shape="rect" id="node3" href="$common_2core_2common_8hpp.html" title="C++ API." alt="" coords="881,343,1061,368"/>
+<area shape="rect" id="node4" title=" " alt="" coords="858,416,949,441"/>
+<area shape="rect" id="node5" title=" " alt="" coords="973,416,1105,441"/>
+<area shape="rect" id="node16" href="$limitation_8hpp.html" title="C++ API." alt="" coords="1574,269,1755,295"/>
 </map>

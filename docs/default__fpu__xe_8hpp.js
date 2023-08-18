@@ -1,7 +1,4 @@
 var default__fpu__xe_8hpp =
 [
-    [ "gpu::xetla::group::detail::check_dtype_default_fpu_xe< dtype_a, dtype_b, dtype_mma_a, dtype_mma_b, dtype_mma_acc >", "structgpu_1_1xetla_1_1group_1_1detail_1_1check__dtype__default__fpu__xe.html", null ],
-    [ "gpu::xetla::group::detail::check_memory_default_fpu_xe< mem_layout_a, mem_layout_b, mem_space_a, mem_space_b >", "structgpu_1_1xetla_1_1group_1_1detail_1_1check__memory__default__fpu__xe.html", null ],
-    [ "gpu::xetla::group::detail::check_tile_size_default_fpu_xe< arch_attr, dtype_mma, tile_size_x_a, tile_size_y_a, block_size_x_a, block_size_y_a, tile_size_x_b, tile_size_y_b, block_size_x_b, block_size_y_b >", "structgpu_1_1xetla_1_1group_1_1detail_1_1check__tile__size__default__fpu__xe.html", "structgpu_1_1xetla_1_1group_1_1detail_1_1check__tile__size__default__fpu__xe" ],
     [ "gpu::xetla::group::brgemm_t< compute_policy_default_fpu< compute_attr_, perf_tuning_knob_, gpu_arch::Xe >, tile_shape_, mem_desc_a_t_, mem_desc_b_t_, pre_processing_t_ >::arguments_t", "structgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__default__fpu_3_01compute__attr___090dc711a7784dd6c98fd990032c93cff.html", "structgpu_1_1xetla_1_1group_1_1brgemm__t_3_01compute__policy__default__fpu_3_01compute__attr___090dc711a7784dd6c98fd990032c93cff" ]
 ];

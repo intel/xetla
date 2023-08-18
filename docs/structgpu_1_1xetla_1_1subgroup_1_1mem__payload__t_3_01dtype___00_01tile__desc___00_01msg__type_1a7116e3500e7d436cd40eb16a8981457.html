@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.3</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.4</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -151,8 +151,6 @@ Public Member Functions</h2></td></tr>
 Public Attributes</h2></td></tr>
 <tr class="memitem:aaf91e6158e42637d46f99e39ad7b7a3d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_1a7116e3500e7d436cd40eb16a8981457.html#a1ce80a6ff766bc5623cfaf0492a8d32d">num_channel</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_1a7116e3500e7d436cd40eb16a8981457.html#aaf91e6158e42637d46f99e39ad7b7a3d">address</a></td></tr>
 <tr class="separator:aaf91e6158e42637d46f99e39ad7b7a3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97a36689b8af1d70f26e00e062ed5ce6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_1a7116e3500e7d436cd40eb16a8981457.html#a1ce80a6ff766bc5623cfaf0492a8d32d">num_channel</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_1a7116e3500e7d436cd40eb16a8981457.html#a97a36689b8af1d70f26e00e062ed5ce6">base_address</a></td></tr>
-<tr class="separator:a97a36689b8af1d70f26e00e062ed5ce6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3d99c3e4bf0671895ac524e0dd1410e"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_1a7116e3500e7d436cd40eb16a8981457.html#aa3d99c3e4bf0671895ac524e0dd1410e">pitch_in_bytes</a></td></tr>
 <tr class="separator:aa3d99c3e4bf0671895ac524e0dd1410e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8e3710bf924c530da2dd86b8c0bb2ae"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_1a7116e3500e7d436cd40eb16a8981457.html#aa8e3710bf924c530da2dd86b8c0bb2ae">wg_width_in_bytes</a></td></tr>
@@ -584,22 +582,6 @@ template&lt;typename dtype_ , typename tile_desc_ &gt; </div>
 
 </div>
 </div>
-<a id="a97a36689b8af1d70f26e00e062ed5ce6" name="a97a36689b8af1d70f26e00e062ed5ce6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a97a36689b8af1d70f26e00e062ed5ce6">&#9670;&#160;</a></span>base_address</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename dtype_ , typename tile_desc_ &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt;uint32_t, <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_1a7116e3500e7d436cd40eb16a8981457.html#a1ce80a6ff766bc5623cfaf0492a8d32d">num_channel</a>&gt; <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t.html">gpu::xetla::subgroup::mem_payload_t</a>&lt; dtype_, tile_desc_, <a class="el" href="namespacegpu_1_1xetla.html#aa8afe1d12e7777419fb6ea09534a0aa7a50894a237d9bcde0a18769af9a768baf">msg_type::scatter</a>, <a class="el" href="namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561a641fabb8e5e7d1d0333e2c9c384f959c">mem_layout::row_major</a>, <a class="el" href="namespacegpu_1_1xetla.html#a7f225ed816e841c1d31414d872dae59daf5ddaf0ca7929578b408c909429f68f2">mem_space::local</a>, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;::base_address</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="aadc8a0b86fc2e60cb55b1b6d003b61de" name="aadc8a0b86fc2e60cb55b1b6d003b61de"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aadc8a0b86fc2e60cb55b1b6d003b61de">&#9670;&#160;</a></span>block_bytes</h2>
 
@@ -768,9 +750,9 @@ template&lt;typename dtype_ , typename tile_desc_ &gt; </div>
 <b>Initial value:</b><div class="fragment"><div class="line">= ((<a class="code hl_variable" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_1a7116e3500e7d436cd40eb16a8981457.html#a93f2b06bac15fe6f5a4c2a63e4bca2dc">tile_bytes</a> % <a class="code hl_variable" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_1a7116e3500e7d436cd40eb16a8981457.html#af957cc6eaebae823f1eb17470f1c0941">max_bytes</a>) == 0 &amp;&amp; (<a class="code hl_variable" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_1a7116e3500e7d436cd40eb16a8981457.html#aadc8a0b86fc2e60cb55b1b6d003b61de">block_bytes</a> % <a class="code hl_variable" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_1a7116e3500e7d436cd40eb16a8981457.html#af957cc6eaebae823f1eb17470f1c0941">max_bytes</a>) == 0)</div>
 <div class="line">            ? 32</div>
 <div class="line">            : 16</div>
-<div class="ttc" id="astructgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_1a7116e3500e7d436cd40eb16a8981457_html_a93f2b06bac15fe6f5a4c2a63e4bca2dc"><div class="ttname"><a href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_1a7116e3500e7d436cd40eb16a8981457.html#a93f2b06bac15fe6f5a4c2a63e4bca2dc">gpu::xetla::subgroup::mem_payload_t&lt; dtype_, tile_desc_, msg_type::scatter, mem_layout::row_major, mem_space::local, gpu_arch::Xe &gt;::tile_bytes</a></div><div class="ttdeci">static constexpr uint32_t tile_bytes</div><div class="ttdef"><b>Definition:</b> payload_xe.hpp:585</div></div>
-<div class="ttc" id="astructgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_1a7116e3500e7d436cd40eb16a8981457_html_aadc8a0b86fc2e60cb55b1b6d003b61de"><div class="ttname"><a href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_1a7116e3500e7d436cd40eb16a8981457.html#aadc8a0b86fc2e60cb55b1b6d003b61de">gpu::xetla::subgroup::mem_payload_t&lt; dtype_, tile_desc_, msg_type::scatter, mem_layout::row_major, mem_space::local, gpu_arch::Xe &gt;::block_bytes</a></div><div class="ttdeci">static constexpr uint32_t block_bytes</div><div class="ttdef"><b>Definition:</b> payload_xe.hpp:587</div></div>
-<div class="ttc" id="astructgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_1a7116e3500e7d436cd40eb16a8981457_html_af957cc6eaebae823f1eb17470f1c0941"><div class="ttname"><a href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_1a7116e3500e7d436cd40eb16a8981457.html#af957cc6eaebae823f1eb17470f1c0941">gpu::xetla::subgroup::mem_payload_t&lt; dtype_, tile_desc_, msg_type::scatter, mem_layout::row_major, mem_space::local, gpu_arch::Xe &gt;::max_bytes</a></div><div class="ttdeci">static constexpr uint32_t max_bytes</div><div class="ttdef"><b>Definition:</b> payload_xe.hpp:595</div></div>
+<div class="ttc" id="astructgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_1a7116e3500e7d436cd40eb16a8981457_html_a93f2b06bac15fe6f5a4c2a63e4bca2dc"><div class="ttname"><a href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_1a7116e3500e7d436cd40eb16a8981457.html#a93f2b06bac15fe6f5a4c2a63e4bca2dc">gpu::xetla::subgroup::mem_payload_t&lt; dtype_, tile_desc_, msg_type::scatter, mem_layout::row_major, mem_space::local, gpu_arch::Xe &gt;::tile_bytes</a></div><div class="ttdeci">static constexpr uint32_t tile_bytes</div><div class="ttdef"><b>Definition:</b> payload_xe.hpp:577</div></div>
+<div class="ttc" id="astructgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_1a7116e3500e7d436cd40eb16a8981457_html_aadc8a0b86fc2e60cb55b1b6d003b61de"><div class="ttname"><a href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_1a7116e3500e7d436cd40eb16a8981457.html#aadc8a0b86fc2e60cb55b1b6d003b61de">gpu::xetla::subgroup::mem_payload_t&lt; dtype_, tile_desc_, msg_type::scatter, mem_layout::row_major, mem_space::local, gpu_arch::Xe &gt;::block_bytes</a></div><div class="ttdeci">static constexpr uint32_t block_bytes</div><div class="ttdef"><b>Definition:</b> payload_xe.hpp:579</div></div>
+<div class="ttc" id="astructgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_1a7116e3500e7d436cd40eb16a8981457_html_af957cc6eaebae823f1eb17470f1c0941"><div class="ttname"><a href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_1a7116e3500e7d436cd40eb16a8981457.html#af957cc6eaebae823f1eb17470f1c0941">gpu::xetla::subgroup::mem_payload_t&lt; dtype_, tile_desc_, msg_type::scatter, mem_layout::row_major, mem_space::local, gpu_arch::Xe &gt;::max_bytes</a></div><div class="ttdeci">static constexpr uint32_t max_bytes</div><div class="ttdef"><b>Definition:</b> payload_xe.hpp:587</div></div>
 </div><!-- fragment -->
 </div>
 </div>

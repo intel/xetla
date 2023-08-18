@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.3</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.4</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -151,10 +151,6 @@ Public Member Functions</h2></td></tr>
 Public Attributes</h2></td></tr>
 <tr class="memitem:af38460a6d93657d074904bd4f6bf41c9"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_1f0a2e0555f50e1106c25d511b2ef330c.html#af38460a6d93657d074904bd4f6bf41c9">address</a></td></tr>
 <tr class="separator:af38460a6d93657d074904bd4f6bf41c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf1c49b9f622a9b2182e73adb03ede84"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_1f0a2e0555f50e1106c25d511b2ef330c.html#acf1c49b9f622a9b2182e73adb03ede84">base_addr</a></td></tr>
-<tr class="separator:acf1c49b9f622a9b2182e73adb03ede84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c33bedc0377c1583d22791daa4372dd"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_1f0a2e0555f50e1106c25d511b2ef330c.html#a2c33bedc0377c1583d22791daa4372dd">base_offset</a></td></tr>
-<tr class="separator:a2c33bedc0377c1583d22791daa4372dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2d83188e87c59caf57375c8f6d9e728"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_1f0a2e0555f50e1106c25d511b2ef330c.html#ab2d83188e87c59caf57375c8f6d9e728">pitch_in_bytes</a></td></tr>
 <tr class="separator:ab2d83188e87c59caf57375c8f6d9e728"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -572,38 +568,6 @@ template&lt;typename dtype_ , typename tile_desc_ &gt; </div>
 <span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
   </tr>
 </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="acf1c49b9f622a9b2182e73adb03ede84" name="acf1c49b9f622a9b2182e73adb03ede84"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf1c49b9f622a9b2182e73adb03ede84">&#9670;&#160;</a></span>base_addr</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename dtype_ , typename tile_desc_ &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t.html">gpu::xetla::subgroup::mem_payload_t</a>&lt; dtype_, tile_desc_, <a class="el" href="namespacegpu_1_1xetla.html#aa8afe1d12e7777419fb6ea09534a0aa7a5baf9a1aba8e4b6fa44c20aafacc4233">msg_type::block_1d</a>, <a class="el" href="namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561a641fabb8e5e7d1d0333e2c9c384f959c">mem_layout::row_major</a>, <a class="el" href="namespacegpu_1_1xetla.html#a7f225ed816e841c1d31414d872dae59daf5ddaf0ca7929578b408c909429f68f2">mem_space::local</a>, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;::base_addr</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a2c33bedc0377c1583d22791daa4372dd" name="a2c33bedc0377c1583d22791daa4372dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c33bedc0377c1583d22791daa4372dd">&#9670;&#160;</a></span>base_offset</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename dtype_ , typename tile_desc_ &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t.html">gpu::xetla::subgroup::mem_payload_t</a>&lt; dtype_, tile_desc_, <a class="el" href="namespacegpu_1_1xetla.html#aa8afe1d12e7777419fb6ea09534a0aa7a5baf9a1aba8e4b6fa44c20aafacc4233">msg_type::block_1d</a>, <a class="el" href="namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561a641fabb8e5e7d1d0333e2c9c384f959c">mem_layout::row_major</a>, <a class="el" href="namespacegpu_1_1xetla.html#a7f225ed816e841c1d31414d872dae59daf5ddaf0ca7929578b408c909429f68f2">mem_space::local</a>, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;::base_offset</td>
-        </tr>
-      </table>
 </div><div class="memdoc">
 
 </div>

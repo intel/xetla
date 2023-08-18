@@ -1,0 +1,10 @@
+var structgpu_1_1xetla_1_1group_1_1compute__policy__int4__dequantize__xmx_3_01compute__attr___00_01p7b1e16dedc509103289b93f481925e4b =
+[
+    [ "compute_attr", "structgpu_1_1xetla_1_1group_1_1compute__policy__int4__dequantize__xmx_3_01compute__attr___00_01p7b1e16dedc509103289b93f481925e4b.html#a8fbfff688c4ade5fcc899ff6462429d5", null ],
+    [ "dtype_mma_a", "structgpu_1_1xetla_1_1group_1_1compute__policy__int4__dequantize__xmx_3_01compute__attr___00_01p7b1e16dedc509103289b93f481925e4b.html#af78da92ebcc0e76f2551e70e0c4b09a3", null ],
+    [ "dtype_mma_acc", "structgpu_1_1xetla_1_1group_1_1compute__policy__int4__dequantize__xmx_3_01compute__attr___00_01p7b1e16dedc509103289b93f481925e4b.html#a3b23fd3d455dcb256ebd77cc3fda7bc1", null ],
+    [ "dtype_mma_b", "structgpu_1_1xetla_1_1group_1_1compute__policy__int4__dequantize__xmx_3_01compute__attr___00_01p7b1e16dedc509103289b93f481925e4b.html#a7f3789e41015dadceb1323228671cba1", null ],
+    [ "dtype_scale", "structgpu_1_1xetla_1_1group_1_1compute__policy__int4__dequantize__xmx_3_01compute__attr___00_01p7b1e16dedc509103289b93f481925e4b.html#ae076729919b3204da6a94c853e938f10", null ],
+    [ "dtype_zero_pt", "structgpu_1_1xetla_1_1group_1_1compute__policy__int4__dequantize__xmx_3_01compute__attr___00_01p7b1e16dedc509103289b93f481925e4b.html#ad917848084afca10a8f2691f004c5c15", null ],
+    [ "perf_tuning_knob", "structgpu_1_1xetla_1_1group_1_1compute__policy__int4__dequantize__xmx_3_01compute__attr___00_01p7b1e16dedc509103289b93f481925e4b.html#aed722607d93f37516976d8e6ea9c93b0", null ]
+];

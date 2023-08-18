@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.3</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.4</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -227,6 +227,12 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1scalar__mul__op__t_3_01dtype__in___00_01gpu__arch_1_1Xe_01_4.html">scalar_mul_op_t&lt; dtype_in_, gpu_arch::Xe &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the scalar_multiply op functor, specialized for Xe architecture.  <a href="structgpu_1_1xetla_1_1subgroup_1_1scalar__mul__op__t_3_01dtype__in___00_01gpu__arch_1_1Xe_01_4.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1sigmoid__op__t.html">sigmoid_op_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the element-wise sigmoid op functor.  <a href="structgpu_1_1xetla_1_1subgroup_1_1sigmoid__op__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tanh__op__t.html">tanh_op_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the element-wise tanh op functor.  <a href="structgpu_1_1xetla_1_1subgroup_1_1tanh__op__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__desc__t.html">tile_desc_t</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is to illustrate the tile information about a sub matrix.  <a href="structgpu_1_1xetla_1_1subgroup_1_1tile__desc__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -237,11 +243,11 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">tile_mma_t</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the xetla tile mma operation definition API.  <a href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t_3_01matA__t___00_01matB__t___00_01matAcc__src__t_5e326f93053a5dc419a1202cd6d31c87.html">tile_mma_t&lt; matA_t_, matB_t_, matAcc_src_t_, matAcc_dst_t_, mma_engine::fpu, gpu_arch::Xe &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the tile mma operation functor, specialized for Xe and fpu engine.  <a href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t_3_01matA__t___00_01matB__t___00_01matAcc__src__t_5e326f93053a5dc419a1202cd6d31c87.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t_3_01matAcc__dst__t___00_01matAcc__src__t___00_01m844ec3bc6e507a60cbd6eca3f5605736.html">tile_mma_t&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, mma_engine::fpu, gpu_arch::Xe &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the tile mma operation functor, specialized for Xe and fpu engine.  <a href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t_3_01matAcc__dst__t___00_01matAcc__src__t___00_01m844ec3bc6e507a60cbd6eca3f5605736.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t_3_01matA__t___00_01matB__t___00_01matAcc__src__t_7f67d172949e9727b2f7953429f66a95.html">tile_mma_t&lt; matA_t_, matB_t_, matAcc_src_t_, matAcc_dst_t_, mma_engine::xmx, gpu_arch::Xe &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the tile mma operation functor, specialized for Xe and matrix engine.  <a href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t_3_01matA__t___00_01matB__t___00_01matAcc__src__t_7f67d172949e9727b2f7953429f66a95.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t_3_01matAcc__dst__t___00_01matAcc__src__t___00_01m24ae4cce8b7a7db2ae764a802b330219.html">tile_mma_t&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, mma_engine::xmx, gpu_arch::Xe &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the tile mma operation functor, specialized for Xe and matrix engine.  <a href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t_3_01matAcc__dst__t___00_01matAcc__src__t___00_01m24ae4cce8b7a7db2ae764a802b330219.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__op__arg__helper__t.html">tile_op_arg_helper_t</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -270,14 +276,14 @@ Functions</h2></td></tr>
 <tr class="memitem:a79cb1cc8488ef2bed589c9719b8b5713"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> std::enable_if_t&lt; <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1detail_1_1check__load__type.html">detail::check_load_type</a>&lt; <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__t.html">tile_t</a>, payload_t &gt;::is_local_block_1d_xe &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegpu_1_1xetla_1_1subgroup.html#a79cb1cc8488ef2bed589c9719b8b5713">tile_load</a> (<a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__t.html">tile_t</a> &amp;<a class="el" href="namespacegpu_1_1xetla.html#a52fa7b5d0cce636d18ddead7b3ef0072a13181d8cc01e390bf64c9e4b0d7a79f3">tile</a>, payload_t &amp;payload)</td></tr>
 <tr class="memdesc:a79cb1cc8488ef2bed589c9719b8b5713"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the data load func from shared local memory to register file, which supports the memory surface is 1d scenario.  <a href="namespacegpu_1_1xetla_1_1subgroup.html#a79cb1cc8488ef2bed589c9719b8b5713">More...</a><br /></td></tr>
 <tr class="separator:a79cb1cc8488ef2bed589c9719b8b5713"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b69b15b52946f9458d1ed844d7bd8d3"><td class="memTemplParams" colspan="2">template&lt;typename T_dst , typename T_src &gt; </td></tr>
-<tr class="memitem:a8b69b15b52946f9458d1ed844d7bd8d3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> std::enable_if_t&lt;(T_src::tile_desc::register_layout !=<a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa9a932b3cb396238423eb2f33ec17d6aa">reg_layout::linear</a>) &amp;&amp;(T_dst::tile_desc::register_layout !=<a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa9a932b3cb396238423eb2f33ec17d6aa">reg_layout::linear</a>) &amp;&amp;(T_src::tile_desc::block_size_y==T_dst::tile_desc::block_size_y) &amp;&amp;(T_src::tile_desc::block_size_x==T_dst::tile_desc::block_size_x) &amp;&amp;(T_src::tile_desc::tile_size_y==T_dst::tile_desc::tile_size_y) &amp;&amp;(T_src::tile_desc::tile_size_x==T_dst::tile_desc::tile_size_x)&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegpu_1_1xetla_1_1subgroup.html#a8b69b15b52946f9458d1ed844d7bd8d3">elemwise_cvt</a> (T_dst &amp;dst, T_src &amp;src)</td></tr>
-<tr class="memdesc:a8b69b15b52946f9458d1ed844d7bd8d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the element wise data conversion, the src and dst tile should have the same layout.  <a href="namespacegpu_1_1xetla_1_1subgroup.html#a8b69b15b52946f9458d1ed844d7bd8d3">More...</a><br /></td></tr>
-<tr class="separator:a8b69b15b52946f9458d1ed844d7bd8d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac81487253528fefbbbd9ca5b394ca2c4"><td class="memTemplParams" colspan="2">template&lt;typename T_dst , typename T_src &gt; </td></tr>
-<tr class="memitem:ac81487253528fefbbbd9ca5b394ca2c4"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> std::enable_if_t&lt;(T_src::tile_desc::register_layout !=<a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa9a932b3cb396238423eb2f33ec17d6aa">reg_layout::linear</a>) &amp;&amp;(T_dst::tile_desc::register_layout !=<a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa9a932b3cb396238423eb2f33ec17d6aa">reg_layout::linear</a>) &amp;&amp;(T_src::tile_desc::block_size_y==T_dst::tile_desc::block_size_y) &amp;&amp;(T_src::tile_desc::block_size_x==T_dst::tile_desc::block_size_x) &amp;&amp;(T_src::tile_desc::tile_size_y==T_dst::tile_desc::tile_size_y) &amp;&amp;(T_src::tile_desc::tile_size_x==T_dst::tile_desc::tile_size_x)&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegpu_1_1xetla_1_1subgroup.html#ac81487253528fefbbbd9ca5b394ca2c4">elemwise_cvt</a> (T_dst &amp;dst, T_src &amp;src, float scale)</td></tr>
-<tr class="memdesc:ac81487253528fefbbbd9ca5b394ca2c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">element wise data conversion with scaling, the src and dst tile should have the same layout.  <a href="namespacegpu_1_1xetla_1_1subgroup.html#ac81487253528fefbbbd9ca5b394ca2c4">More...</a><br /></td></tr>
-<tr class="separator:ac81487253528fefbbbd9ca5b394ca2c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22a0afd860b0ea831449e77c19f36a4b"><td class="memTemplParams" colspan="2">template&lt;typename T_dst , typename T_src &gt; </td></tr>
+<tr class="memitem:a22a0afd860b0ea831449e77c19f36a4b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> std::enable_if_t&lt;(T_src::register_layout !=<a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa9a932b3cb396238423eb2f33ec17d6aa">reg_layout::linear</a>) &amp;&amp;(T_dst::register_layout !=<a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa9a932b3cb396238423eb2f33ec17d6aa">reg_layout::linear</a>) &amp;&amp;(T_src::block_size_y==T_dst::block_size_y) &amp;&amp;(T_src::block_size_x==T_dst::block_size_x) &amp;&amp;(T_src::tile_size_y==T_dst::tile_size_y) &amp;&amp;(T_src::tile_size_x==T_dst::tile_size_x)&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegpu_1_1xetla_1_1subgroup.html#a22a0afd860b0ea831449e77c19f36a4b">elemwise_cvt</a> (T_dst &amp;dst, T_src &amp;src)</td></tr>
+<tr class="memdesc:a22a0afd860b0ea831449e77c19f36a4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the element wise data conversion, the src and dst tile should have the same layout.  <a href="namespacegpu_1_1xetla_1_1subgroup.html#a22a0afd860b0ea831449e77c19f36a4b">More...</a><br /></td></tr>
+<tr class="separator:a22a0afd860b0ea831449e77c19f36a4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2df8ebbc1db1e4c53c173384b86b22e"><td class="memTemplParams" colspan="2">template&lt;typename T_dst , typename T_src &gt; </td></tr>
+<tr class="memitem:ae2df8ebbc1db1e4c53c173384b86b22e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> std::enable_if_t&lt;(T_src::register_layout !=<a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa9a932b3cb396238423eb2f33ec17d6aa">reg_layout::linear</a>) &amp;&amp;(T_dst::register_layout !=<a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa9a932b3cb396238423eb2f33ec17d6aa">reg_layout::linear</a>) &amp;&amp;(T_src::block_size_y==T_dst::block_size_y) &amp;&amp;(T_src::block_size_x==T_dst::block_size_x) &amp;&amp;(T_src::tile_size_y==T_dst::tile_size_y) &amp;&amp;(T_src::tile_size_x==T_dst::tile_size_x)&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegpu_1_1xetla_1_1subgroup.html#ae2df8ebbc1db1e4c53c173384b86b22e">elemwise_cvt</a> (T_dst &amp;dst, T_src &amp;src, float scale)</td></tr>
+<tr class="memdesc:ae2df8ebbc1db1e4c53c173384b86b22e"><td class="mdescLeft">&#160;</td><td class="mdescRight">element wise data conversion with scaling, the src and dst tile should have the same layout.  <a href="namespacegpu_1_1xetla_1_1subgroup.html#ae2df8ebbc1db1e4c53c173384b86b22e">More...</a><br /></td></tr>
+<tr class="separator:ae2df8ebbc1db1e4c53c173384b86b22e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3dc58c46491bd67b07a6e930b909a552"><td class="memTemplParams" colspan="2">template&lt;typename T , <a class="el" href="namespacegpu_1_1xetla.html#a0952e84e7d047ac828bd9daef8273f98">post_kind</a> post_op&gt; </td></tr>
 <tr class="memitem:a3dc58c46491bd67b07a6e930b909a552"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> std::enable_if_t&lt; post_op==<a class="el" href="namespacegpu_1_1xetla.html#a0952e84e7d047ac828bd9daef8273f98abc5ce62b39aff2f661146911808eadc1">post_kind::relu</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegpu_1_1xetla_1_1subgroup.html#a3dc58c46491bd67b07a6e930b909a552">elemwise_op</a> (T &amp;mat_Acc)</td></tr>
 <tr class="memdesc:a3dc58c46491bd67b07a6e930b909a552"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the element wise op for relu.  <a href="namespacegpu_1_1xetla_1_1subgroup.html#a3dc58c46491bd67b07a6e930b909a552">More...</a><br /></td></tr>
@@ -290,18 +296,22 @@ Functions</h2></td></tr>
 <tr class="memitem:aa37e62fa495a0c8237930a4f39daece9"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> std::enable_if_t&lt; post_op==<a class="el" href="namespacegpu_1_1xetla.html#a0952e84e7d047ac828bd9daef8273f98a5c0dbba3a6ee4ac0eb26cfee75ccb8b4">post_kind::tanh</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegpu_1_1xetla_1_1subgroup.html#aa37e62fa495a0c8237930a4f39daece9">elemwise_op</a> (T &amp;mat_Acc)</td></tr>
 <tr class="memdesc:aa37e62fa495a0c8237930a4f39daece9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the element wise op for tanh.  <a href="namespacegpu_1_1xetla_1_1subgroup.html#aa37e62fa495a0c8237930a4f39daece9">More...</a><br /></td></tr>
 <tr class="separator:aa37e62fa495a0c8237930a4f39daece9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81b12c34ad3ef3de43d0b01c4e5e1134"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a81b12c34ad3ef3de43d0b01c4e5e1134"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> std::enable_if_t&lt; T::tile_desc::register_layout==<a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa9c072496656f07aeb105a1bc09a218b5">reg_layout::vnni_tiled</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegpu_1_1xetla_1_1subgroup.html#a81b12c34ad3ef3de43d0b01c4e5e1134">vnni_reverse</a> (T &amp;mat_Acc)</td></tr>
-<tr class="memdesc:a81b12c34ad3ef3de43d0b01c4e5e1134"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts vnni_tiled layout format to tiled layout.  <a href="namespacegpu_1_1xetla_1_1subgroup.html#a81b12c34ad3ef3de43d0b01c4e5e1134">More...</a><br /></td></tr>
-<tr class="separator:a81b12c34ad3ef3de43d0b01c4e5e1134"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62f0095d099fd6925beaf78858106ba7"><td class="memTemplParams" colspan="2">template&lt;typename T_dst , typename T_src &gt; </td></tr>
-<tr class="memitem:a62f0095d099fd6925beaf78858106ba7"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> std::enable_if_t&lt;(T_src::tile_desc::block_size_y==T_dst::tile_desc::block_size_y) &amp;&amp;(T_src::tile_desc::block_size_x==T_dst::tile_desc::block_size_x) &amp;&amp;(T_src::tile_desc::tile_size_y==T_dst::tile_desc::tile_size_y) &amp;&amp;(T_src::tile_desc::tile_size_x==T_dst::tile_desc::tile_size_x)&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegpu_1_1xetla_1_1subgroup.html#a62f0095d099fd6925beaf78858106ba7">vnni_transform</a> (T_dst &amp;dst, T_src &amp;src)</td></tr>
-<tr class="memdesc:a62f0095d099fd6925beaf78858106ba7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes vnni layout.  <a href="namespacegpu_1_1xetla_1_1subgroup.html#a62f0095d099fd6925beaf78858106ba7">More...</a><br /></td></tr>
-<tr class="separator:a62f0095d099fd6925beaf78858106ba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6a12cfd0a2d3621b16109bfe772558d"><td class="memTemplParams" colspan="2">template&lt;typename T_dst , typename T_src &gt; </td></tr>
-<tr class="memitem:af6a12cfd0a2d3621b16109bfe772558d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> std::enable_if_t&lt;(T_dst::tile_desc::register_layout==<a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa78506882d645395a052df8b01a927395">reg_layout::tiled</a>) &amp;&amp;(T_src::tile_desc::register_layout==<a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa78506882d645395a052df8b01a927395">reg_layout::tiled</a>) &amp;&amp;(T_src::tile_desc::tile_size_x==T_dst::tile_desc::tile_size_x) &amp;&amp;(T_src::tile_desc::tile_size_y==1)&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegpu_1_1xetla_1_1subgroup.html#af6a12cfd0a2d3621b16109bfe772558d">row_broadcast</a> (T_dst &amp;dst, T_src &amp;src)</td></tr>
-<tr class="memdesc:af6a12cfd0a2d3621b16109bfe772558d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Broadcasts 1d src tile to the entire 2d tile, as well as do the data conversion.  <a href="namespacegpu_1_1xetla_1_1subgroup.html#af6a12cfd0a2d3621b16109bfe772558d">More...</a><br /></td></tr>
-<tr class="separator:af6a12cfd0a2d3621b16109bfe772558d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ed9033bde7ac8bab3527f52b39889d1"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a4ed9033bde7ac8bab3527f52b39889d1"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> std::enable_if_t&lt; T::register_layout==<a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa78506882d645395a052df8b01a927395">reg_layout::tiled</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegpu_1_1xetla_1_1subgroup.html#a4ed9033bde7ac8bab3527f52b39889d1">vnni_reverse</a> (T &amp;mat_Acc)</td></tr>
+<tr class="memdesc:a4ed9033bde7ac8bab3527f52b39889d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts vnni_tiled layout format to tiled layout.  <a href="namespacegpu_1_1xetla_1_1subgroup.html#a4ed9033bde7ac8bab3527f52b39889d1">More...</a><br /></td></tr>
+<tr class="separator:a4ed9033bde7ac8bab3527f52b39889d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a418ba6f18b5915d69f59ec5b06d2a50c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a418ba6f18b5915d69f59ec5b06d2a50c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> std::enable_if_t&lt; T::register_layout==<a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa790a2d945934924db5b508c7f46846b6">reg_layout::transpose_tiled</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegpu_1_1xetla_1_1subgroup.html#a418ba6f18b5915d69f59ec5b06d2a50c">vnni_reverse</a> (T &amp;mat_Acc)</td></tr>
+<tr class="memdesc:a418ba6f18b5915d69f59ec5b06d2a50c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts vnni_tiled layout format to transpose_tiled layout.  <a href="namespacegpu_1_1xetla_1_1subgroup.html#a418ba6f18b5915d69f59ec5b06d2a50c">More...</a><br /></td></tr>
+<tr class="separator:a418ba6f18b5915d69f59ec5b06d2a50c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe3350c63d12dc44b15affbe4d5b5e90"><td class="memTemplParams" colspan="2">template&lt;typename T_dst , typename T_src &gt; </td></tr>
+<tr class="memitem:afe3350c63d12dc44b15affbe4d5b5e90"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> std::enable_if_t&lt;(T_src::block_size_y==T_dst::block_size_y) &amp;&amp;(T_src::block_size_x==T_dst::block_size_x) &amp;&amp;(T_src::tile_size_y==T_dst::tile_size_y) &amp;&amp;(T_src::tile_size_x==T_dst::tile_size_x)&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegpu_1_1xetla_1_1subgroup.html#afe3350c63d12dc44b15affbe4d5b5e90">vnni_transform</a> (T_dst &amp;dst, T_src &amp;src)</td></tr>
+<tr class="memdesc:afe3350c63d12dc44b15affbe4d5b5e90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes vnni layout.  <a href="namespacegpu_1_1xetla_1_1subgroup.html#afe3350c63d12dc44b15affbe4d5b5e90">More...</a><br /></td></tr>
+<tr class="separator:afe3350c63d12dc44b15affbe4d5b5e90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a549db39a75e9945a408c34245f3be873"><td class="memTemplParams" colspan="2">template&lt;typename T_dst , typename T_src &gt; </td></tr>
+<tr class="memitem:a549db39a75e9945a408c34245f3be873"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> std::enable_if_t&lt;(T_dst::register_layout==<a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa78506882d645395a052df8b01a927395">reg_layout::tiled</a>) &amp;&amp;(T_src::register_layout==<a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa78506882d645395a052df8b01a927395">reg_layout::tiled</a>) &amp;&amp;(T_src::tile_size_x==T_dst::tile_size_x) &amp;&amp;(T_src::tile_size_y==1)&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegpu_1_1xetla_1_1subgroup.html#a549db39a75e9945a408c34245f3be873">row_broadcast</a> (T_dst &amp;dst, T_src &amp;src)</td></tr>
+<tr class="memdesc:a549db39a75e9945a408c34245f3be873"><td class="mdescLeft">&#160;</td><td class="mdescRight">Broadcasts 1d src tile to the entire 2d tile, as well as do the data conversion.  <a href="namespacegpu_1_1xetla_1_1subgroup.html#a549db39a75e9945a408c34245f3be873">More...</a><br /></td></tr>
+<tr class="separator:a549db39a75e9945a408c34245f3be873"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaceb202d8614f8ac1526c8d6d81871af"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L1 = cache_hint::cached, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L3 = cache_hint::cached, typename payload_t &gt; </td></tr>
 <tr class="memitem:aaceb202d8614f8ac1526c8d6d81871af"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> std::enable_if_t&lt; <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1detail_1_1check__prefetch__type.html">detail::check_prefetch_type</a>&lt; payload_t &gt;::is_global_2d_xe &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegpu_1_1xetla_1_1subgroup.html#aaceb202d8614f8ac1526c8d6d81871af">tile_prefetch</a> (payload_t &amp;payload)</td></tr>
 <tr class="memdesc:aaceb202d8614f8ac1526c8d6d81871af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is prefetch data func, which data located in global memory is prefetched to cache, where has higher bandwidth.  <a href="namespacegpu_1_1xetla_1_1subgroup.html#aaceb202d8614f8ac1526c8d6d81871af">More...</a><br /></td></tr>
@@ -314,13 +324,16 @@ Functions</h2></td></tr>
 <tr class="memitem:ae231c0f2ba538dd630ff96861a796544"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> std::enable_if_t&lt; <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1detail_1_1check__prefetch__type.html">detail::check_prefetch_type</a>&lt; payload_t &gt;::is_local_xe &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegpu_1_1xetla_1_1subgroup.html#ae231c0f2ba538dd630ff96861a796544">tile_prefetch</a> (payload_t &amp;payload)</td></tr>
 <tr class="memdesc:ae231c0f2ba538dd630ff96861a796544"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is prefetch data func.  <a href="namespacegpu_1_1xetla_1_1subgroup.html#ae231c0f2ba538dd630ff96861a796544">More...</a><br /></td></tr>
 <tr class="separator:ae231c0f2ba538dd630ff96861a796544"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c36bfacc34c29c899bcbc53473148ac"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename mat_t , typename dtype_acc , int dim&gt; </td></tr>
-<tr class="memitem:a1c36bfacc34c29c899bcbc53473148ac"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> std::enable_if_t&lt;(dim==1), <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; typename mat_t::dtype, mat_t::tile_desc::tile_size_y &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegpu_1_1xetla_1_1subgroup.html#a1c36bfacc34c29c899bcbc53473148ac">tile_reduce</a> (mat_t &amp;src)</td></tr>
-<tr class="separator:a1c36bfacc34c29c899bcbc53473148ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb3737ab94d26bfe109fa71cfc8ca92c"><td class="memTemplParams" colspan="2">template&lt;typename T_dst , typename T_src , bool accumulate = true, typename dtype_acc  = float, uint32_t num_acc = 4&gt; </td></tr>
-<tr class="memitem:abb3737ab94d26bfe109fa71cfc8ca92c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> std::enable_if_t&lt;(T_dst::tile_desc::register_layout==<a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa78506882d645395a052df8b01a927395">reg_layout::tiled</a>) &amp;&amp;(T_src::tile_desc::register_layout==<a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa78506882d645395a052df8b01a927395">reg_layout::tiled</a>) &amp;&amp;(T_dst::tile_desc::tile_size_x==T_src::tile_desc::tile_size_x) &amp;&amp;(T_dst::tile_desc::tile_size_y==1)&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegpu_1_1xetla_1_1subgroup.html#abb3737ab94d26bfe109fa71cfc8ca92c">tile_row_reduce</a> (T_dst &amp;dst, T_src &amp;src)</td></tr>
-<tr class="memdesc:abb3737ab94d26bfe109fa71cfc8ca92c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reduce 2d src tile to the 1d tile, and output to 1d dst.  <a href="namespacegpu_1_1xetla_1_1subgroup.html#abb3737ab94d26bfe109fa71cfc8ca92c">More...</a><br /></td></tr>
-<tr class="separator:abb3737ab94d26bfe109fa71cfc8ca92c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff74a26ba150032a8a6ca874740c21b2"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename dtype_out , typename dtype_acc , int dim, typename mat_t &gt; </td></tr>
+<tr class="memitem:aff74a26ba150032a8a6ca874740c21b2"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> std::enable_if_t&lt;(dim==1), <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; dtype_out, mat_t::tile_size_y &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegpu_1_1xetla_1_1subgroup.html#aff74a26ba150032a8a6ca874740c21b2">tile_reduce</a> (mat_t &amp;src)</td></tr>
+<tr class="separator:aff74a26ba150032a8a6ca874740c21b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade02d9c71245454cf113f17499dbae7d"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename dtype_out , typename dtype_acc , int dim, typename mat_t &gt; </td></tr>
+<tr class="memitem:ade02d9c71245454cf113f17499dbae7d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> std::enable_if_t&lt;(dim==0), <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; dtype_out, mat_t::tile_size_x &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegpu_1_1xetla_1_1subgroup.html#ade02d9c71245454cf113f17499dbae7d">tile_reduce</a> (mat_t &amp;src)</td></tr>
+<tr class="separator:ade02d9c71245454cf113f17499dbae7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5ffcb74b603ad68c1135fb6402ccfdf"><td class="memTemplParams" colspan="2">template&lt;typename T_dst , typename T_src , bool accumulate = true, typename dtype_acc  = float, uint32_t num_acc = 4&gt; </td></tr>
+<tr class="memitem:ad5ffcb74b603ad68c1135fb6402ccfdf"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegpu_1_1xetla_1_1subgroup.html#ad5ffcb74b603ad68c1135fb6402ccfdf">XETLA_MARKER</a> (&quot;This is only for reduce add, and will be deprecated in future. &quot; &quot;Please use <a class="el" href="namespacegpu_1_1xetla_1_1subgroup.html#aff74a26ba150032a8a6ca874740c21b2">tile_reduce</a> instead.&quot;) <a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> typename std</td></tr>
+<tr class="memdesc:ad5ffcb74b603ad68c1135fb6402ccfdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reduce 2d src tile to the 1d tile, and output to 1d dst.  <a href="namespacegpu_1_1xetla_1_1subgroup.html#ad5ffcb74b603ad68c1135fb6402ccfdf">More...</a><br /></td></tr>
+<tr class="separator:ad5ffcb74b603ad68c1135fb6402ccfdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca86d85d16cd70ce167a4819af5d29ef"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L1 = cache_hint::write_back, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L3 = cache_hint::write_back, typename <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__t.html">tile_t</a> , typename payload_t &gt; </td></tr>
 <tr class="memitem:aca86d85d16cd70ce167a4819af5d29ef"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> std::enable_if_t&lt; <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1detail_1_1check__store__type.html">detail::check_store_type</a>&lt; <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__t.html">tile_t</a>, payload_t &gt;::is_global_2d_xe &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegpu_1_1xetla_1_1subgroup.html#aca86d85d16cd70ce167a4819af5d29ef">tile_store</a> (<a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__t.html">tile_t</a> &amp;<a class="el" href="namespacegpu_1_1xetla.html#a52fa7b5d0cce636d18ddead7b3ef0072a13181d8cc01e390bf64c9e4b0d7a79f3">tile</a>, payload_t &amp;payload)</td></tr>
 <tr class="memdesc:aca86d85d16cd70ce167a4819af5d29ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the func storing data from register file to global memory.  <a href="namespacegpu_1_1xetla_1_1subgroup.html#aca86d85d16cd70ce167a4819af5d29ef">More...</a><br /></td></tr>
@@ -357,8 +370,8 @@ Variables</h2></td></tr>
 <tr class="separator:a1e9e69210058a1e1b63e722d4c3a40b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a8b69b15b52946f9458d1ed844d7bd8d3" name="a8b69b15b52946f9458d1ed844d7bd8d3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8b69b15b52946f9458d1ed844d7bd8d3">&#9670;&#160;</a></span>elemwise_cvt() <span class="overload">[1/2]</span></h2>
+<a id="a22a0afd860b0ea831449e77c19f36a4b" name="a22a0afd860b0ea831449e77c19f36a4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22a0afd860b0ea831449e77c19f36a4b">&#9670;&#160;</a></span>elemwise_cvt() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -366,7 +379,7 @@ Variables</h2></td></tr>
 template&lt;typename T_dst , typename T_src &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> std::enable_if_t&lt;(T_src::tile_desc::register_layout !=<a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa9a932b3cb396238423eb2f33ec17d6aa">reg_layout::linear</a>) &amp;&amp;(T_dst::tile_desc::register_layout !=<a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa9a932b3cb396238423eb2f33ec17d6aa">reg_layout::linear</a>) &amp;&amp;(T_src::tile_desc::block_size_y==T_dst::tile_desc::block_size_y) &amp;&amp;(T_src::tile_desc::block_size_x==T_dst::tile_desc::block_size_x) &amp;&amp;(T_src::tile_desc::tile_size_y==T_dst::tile_desc::tile_size_y) &amp;&amp;(T_src::tile_desc::tile_size_x==T_dst::tile_desc::tile_size_x)&gt; gpu::xetla::subgroup::elemwise_cvt </td>
+          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> std::enable_if_t&lt;(T_src::register_layout !=<a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa9a932b3cb396238423eb2f33ec17d6aa">reg_layout::linear</a>) &amp;&amp;(T_dst::register_layout !=<a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa9a932b3cb396238423eb2f33ec17d6aa">reg_layout::linear</a>) &amp;&amp;(T_src::block_size_y==T_dst::block_size_y) &amp;&amp;(T_src::block_size_x==T_dst::block_size_x) &amp;&amp;(T_src::tile_size_y==T_dst::tile_size_y) &amp;&amp;(T_src::tile_size_x==T_dst::tile_size_x)&gt; gpu::xetla::subgroup::elemwise_cvt </td>
           <td>(</td>
           <td class="paramtype">T_dst &amp;&#160;</td>
           <td class="paramname"><em>dst</em>, </td>
@@ -404,8 +417,8 @@ template&lt;typename T_dst , typename T_src &gt; </div>
 
 </div>
 </div>
-<a id="ac81487253528fefbbbd9ca5b394ca2c4" name="ac81487253528fefbbbd9ca5b394ca2c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac81487253528fefbbbd9ca5b394ca2c4">&#9670;&#160;</a></span>elemwise_cvt() <span class="overload">[2/2]</span></h2>
+<a id="ae2df8ebbc1db1e4c53c173384b86b22e" name="ae2df8ebbc1db1e4c53c173384b86b22e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2df8ebbc1db1e4c53c173384b86b22e">&#9670;&#160;</a></span>elemwise_cvt() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -413,7 +426,7 @@ template&lt;typename T_dst , typename T_src &gt; </div>
 template&lt;typename T_dst , typename T_src &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> std::enable_if_t&lt;(T_src::tile_desc::register_layout !=<a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa9a932b3cb396238423eb2f33ec17d6aa">reg_layout::linear</a>) &amp;&amp;(T_dst::tile_desc::register_layout !=<a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa9a932b3cb396238423eb2f33ec17d6aa">reg_layout::linear</a>) &amp;&amp;(T_src::tile_desc::block_size_y==T_dst::tile_desc::block_size_y) &amp;&amp;(T_src::tile_desc::block_size_x==T_dst::tile_desc::block_size_x) &amp;&amp;(T_src::tile_desc::tile_size_y==T_dst::tile_desc::tile_size_y) &amp;&amp;(T_src::tile_desc::tile_size_x==T_dst::tile_desc::tile_size_x)&gt; gpu::xetla::subgroup::elemwise_cvt </td>
+          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> std::enable_if_t&lt;(T_src::register_layout !=<a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa9a932b3cb396238423eb2f33ec17d6aa">reg_layout::linear</a>) &amp;&amp;(T_dst::register_layout !=<a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa9a932b3cb396238423eb2f33ec17d6aa">reg_layout::linear</a>) &amp;&amp;(T_src::block_size_y==T_dst::block_size_y) &amp;&amp;(T_src::block_size_x==T_dst::block_size_x) &amp;&amp;(T_src::tile_size_y==T_dst::tile_size_y) &amp;&amp;(T_src::tile_size_x==T_dst::tile_size_x)&gt; gpu::xetla::subgroup::elemwise_cvt </td>
           <td>(</td>
           <td class="paramtype">T_dst &amp;&#160;</td>
           <td class="paramname"><em>dst</em>, </td>
@@ -566,8 +579,8 @@ template&lt;typename T , <a class="el" href="namespacegpu_1_1xetla.html#a0952e84
 
 </div>
 </div>
-<a id="af6a12cfd0a2d3621b16109bfe772558d" name="af6a12cfd0a2d3621b16109bfe772558d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6a12cfd0a2d3621b16109bfe772558d">&#9670;&#160;</a></span>row_broadcast()</h2>
+<a id="a549db39a75e9945a408c34245f3be873" name="a549db39a75e9945a408c34245f3be873"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a549db39a75e9945a408c34245f3be873">&#9670;&#160;</a></span>row_broadcast()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -575,7 +588,7 @@ template&lt;typename T , <a class="el" href="namespacegpu_1_1xetla.html#a0952e84
 template&lt;typename T_dst , typename T_src &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> std::enable_if_t&lt;(T_dst::tile_desc::register_layout==<a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa78506882d645395a052df8b01a927395">reg_layout::tiled</a>) &amp;&amp;(T_src::tile_desc::register_layout==<a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa78506882d645395a052df8b01a927395">reg_layout::tiled</a>) &amp;&amp;(T_src::tile_desc::tile_size_x==T_dst::tile_desc::tile_size_x) &amp;&amp;(T_src::tile_desc::tile_size_y==1)&gt; gpu::xetla::subgroup::row_broadcast </td>
+          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> std::enable_if_t&lt;(T_dst::register_layout==<a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa78506882d645395a052df8b01a927395">reg_layout::tiled</a>) &amp;&amp;(T_src::register_layout==<a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa78506882d645395a052df8b01a927395">reg_layout::tiled</a>) &amp;&amp;(T_src::tile_size_x==T_dst::tile_size_x) &amp;&amp;(T_src::tile_size_y==1)&gt; gpu::xetla::subgroup::row_broadcast </td>
           <td>(</td>
           <td class="paramtype">T_dst &amp;&#160;</td>
           <td class="paramname"><em>dst</em>, </td>
@@ -955,16 +968,16 @@ template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb6336063
 
 </div>
 </div>
-<a id="a1c36bfacc34c29c899bcbc53473148ac" name="a1c36bfacc34c29c899bcbc53473148ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c36bfacc34c29c899bcbc53473148ac">&#9670;&#160;</a></span>tile_reduce()</h2>
+<a id="aff74a26ba150032a8a6ca874740c21b2" name="aff74a26ba150032a8a6ca874740c21b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff74a26ba150032a8a6ca874740c21b2">&#9670;&#160;</a></span>tile_reduce() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename mat_t , typename dtype_acc , int dim&gt; </div>
+template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename dtype_out , typename dtype_acc , int dim, typename mat_t &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> std::enable_if_t&lt;(dim==1), <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; typename mat_t::dtype, mat_t::tile_desc::tile_size_y &gt; &gt; gpu::xetla::subgroup::tile_reduce </td>
+          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> std::enable_if_t&lt;(dim==1), <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; dtype_out, mat_t::tile_size_y &gt; &gt; gpu::xetla::subgroup::tile_reduce </td>
           <td>(</td>
           <td class="paramtype">mat_t &amp;&#160;</td>
           <td class="paramname"><em>src</em></td><td>)</td>
@@ -972,58 +985,28 @@ template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a725172
         </tr>
       </table>
 </div><div class="memdoc">
-<p >The idea is 1) allocate a temp buffer; 2) accumulate the entire tile into temp buffer; 3) reduce within temp buffer</p>
+<p >The idea is 1) allocate a temp buffer; 2) reduce the entire tile into temp buffer; 3) reduce within temp buffer</p>
 
 </div>
 </div>
-<a id="abb3737ab94d26bfe109fa71cfc8ca92c" name="abb3737ab94d26bfe109fa71cfc8ca92c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb3737ab94d26bfe109fa71cfc8ca92c">&#9670;&#160;</a></span>tile_row_reduce()</h2>
+<a id="ade02d9c71245454cf113f17499dbae7d" name="ade02d9c71245454cf113f17499dbae7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade02d9c71245454cf113f17499dbae7d">&#9670;&#160;</a></span>tile_reduce() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T_dst , typename T_src , bool accumulate = true, typename dtype_acc  = float, uint32_t num_acc = 4&gt; </div>
+template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename dtype_out , typename dtype_acc , int dim, typename mat_t &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> std::enable_if_t&lt;(T_dst::tile_desc::register_layout==<a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa78506882d645395a052df8b01a927395">reg_layout::tiled</a>) &amp;&amp;(T_src::tile_desc::register_layout==<a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa78506882d645395a052df8b01a927395">reg_layout::tiled</a>) &amp;&amp;(T_dst::tile_desc::tile_size_x==T_src::tile_desc::tile_size_x) &amp;&amp;(T_dst::tile_desc::tile_size_y==1)&gt; gpu::xetla::subgroup::tile_row_reduce </td>
+          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> std::enable_if_t&lt;(dim==0), <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; dtype_out, mat_t::tile_size_x &gt; &gt; gpu::xetla::subgroup::tile_reduce </td>
           <td>(</td>
-          <td class="paramtype">T_dst &amp;&#160;</td>
-          <td class="paramname"><em>dst</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">mat_t &amp;&#160;</td>
+          <td class="paramname"><em>src</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">T_src &amp;&#160;</td>
-          <td class="paramname"><em>src</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Reduce 2d src tile to the 1d tile, and output to 1d dst. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T_dst</td><td>Is the destination tile data type, interpreted as 1d data. </td></tr>
-    <tr><td class="paramname">T_src</td><td>Is the source tile data type, interpreted as 2d data. </td></tr>
-    <tr><td class="paramname">accumulate</td><td>is to accumulate the old value or not. </td></tr>
-    <tr><td class="paramname">dtype_acc</td><td>Is the accumulation data type, src ==&gt; convert to dtype_acc ==&gt; reduction + accumulation ==&gt; convert to dtype_dst. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dst</td><td>Is the reference of the destination tile object. </td></tr>
-    <tr><td class="paramname">src</td><td>Is the reference of the destination tile object. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>No return, in-place update in the destination tile. </dd></dl>
-<p >Here we rely on compiler to generate mixed mode for <a class="el" href="structgpu_1_1xetla_1_1bf16.html" title="xetla bf16 data type.">bf16</a></p>
-<p >The idea is 1) allocate a temp buffer; 2) accumulate the entire tile into temp buffer; 3) reduce within temp buffer This will introduce additional instructions to initialize the temp buffer, but will have more parallelism</p>
+<p >The idea is 1) allocate a temp buffer; 2) reduce the entire tile into temp buffer; 3) reduce within temp buffer This will introduce additional instructions to initialize the temp buffer, but will have more parallelism</p>
 
 </div>
 </div>
@@ -1363,8 +1346,8 @@ template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb6336063
 
 </div>
 </div>
-<a id="a81b12c34ad3ef3de43d0b01c4e5e1134" name="a81b12c34ad3ef3de43d0b01c4e5e1134"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a81b12c34ad3ef3de43d0b01c4e5e1134">&#9670;&#160;</a></span>vnni_reverse()</h2>
+<a id="a4ed9033bde7ac8bab3527f52b39889d1" name="a4ed9033bde7ac8bab3527f52b39889d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ed9033bde7ac8bab3527f52b39889d1">&#9670;&#160;</a></span>vnni_reverse() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1372,7 +1355,7 @@ template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb6336063
 template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> std::enable_if_t&lt; T::tile_desc::register_layout==<a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa9c072496656f07aeb105a1bc09a218b5">reg_layout::vnni_tiled</a> &gt; gpu::xetla::subgroup::vnni_reverse </td>
+          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> std::enable_if_t&lt; T::register_layout==<a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa78506882d645395a052df8b01a927395">reg_layout::tiled</a> &gt; gpu::xetla::subgroup::vnni_reverse </td>
           <td>(</td>
           <td class="paramtype">T &amp;&#160;</td>
           <td class="paramname"><em>mat_Acc</em></td><td>)</td>
@@ -1398,8 +1381,43 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a62f0095d099fd6925beaf78858106ba7" name="a62f0095d099fd6925beaf78858106ba7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a62f0095d099fd6925beaf78858106ba7">&#9670;&#160;</a></span>vnni_transform()</h2>
+<a id="a418ba6f18b5915d69f59ec5b06d2a50c" name="a418ba6f18b5915d69f59ec5b06d2a50c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a418ba6f18b5915d69f59ec5b06d2a50c">&#9670;&#160;</a></span>vnni_reverse() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> std::enable_if_t&lt; T::register_layout==<a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa790a2d945934924db5b508c7f46846b6">reg_layout::transpose_tiled</a> &gt; gpu::xetla::subgroup::vnni_reverse </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&#160;</td>
+          <td class="paramname"><em>mat_Acc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts vnni_tiled layout format to transpose_tiled layout. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Is the tile data type. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mat_Acc</td><td>Is the reference of the tile object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>No return, update the data in-place. </dd></dl>
+
+</div>
+</div>
+<a id="afe3350c63d12dc44b15affbe4d5b5e90" name="afe3350c63d12dc44b15affbe4d5b5e90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe3350c63d12dc44b15affbe4d5b5e90">&#9670;&#160;</a></span>vnni_transform()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1407,7 +1425,7 @@ template&lt;typename T &gt; </div>
 template&lt;typename T_dst , typename T_src &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> std::enable_if_t&lt;(T_src::tile_desc::block_size_y==T_dst::tile_desc::block_size_y) &amp;&amp;(T_src::tile_desc::block_size_x==T_dst::tile_desc::block_size_x) &amp;&amp;(T_src::tile_desc::tile_size_y==T_dst::tile_desc::tile_size_y) &amp;&amp;(T_src::tile_desc::tile_size_x==T_dst::tile_desc::tile_size_x)&gt; gpu::xetla::subgroup::vnni_transform </td>
+          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> std::enable_if_t&lt;(T_src::block_size_y==T_dst::block_size_y) &amp;&amp;(T_src::block_size_x==T_dst::block_size_x) &amp;&amp;(T_src::tile_size_y==T_dst::tile_size_y) &amp;&amp;(T_src::tile_size_x==T_dst::tile_size_x)&gt; gpu::xetla::subgroup::vnni_transform </td>
           <td>(</td>
           <td class="paramtype">T_dst &amp;&#160;</td>
           <td class="paramname"><em>dst</em>, </td>
@@ -1442,6 +1460,58 @@ template&lt;typename T_dst , typename T_src &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>No return, in-place update in the destination tile. </dd></dl>
+
+</div>
+</div>
+<a id="ad5ffcb74b603ad68c1135fb6402ccfdf" name="ad5ffcb74b603ad68c1135fb6402ccfdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5ffcb74b603ad68c1135fb6402ccfdf">&#9670;&#160;</a></span>XETLA_MARKER()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T_dst , typename T_src , bool accumulate = true, typename dtype_acc  = float, uint32_t num_acc = 4&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">gpu::xetla::subgroup::XETLA_MARKER </td>
+          <td>(</td>
+          <td class="paramtype">&quot;This is only for reduce&#160;</td>
+          <td class="paramname"><em>add</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">and will be deprecated in future. &quot; &quot;Please use <a class="el" href="namespacegpu_1_1xetla_1_1subgroup.html#aff74a26ba150032a8a6ca874740c21b2">tile_reduce</a> instead.&quot;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reduce 2d src tile to the 1d tile, and output to 1d dst. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T_dst</td><td>Is the destination tile data type, interpreted as 1d data. </td></tr>
+    <tr><td class="paramname">T_src</td><td>Is the source tile data type, interpreted as 2d data. </td></tr>
+    <tr><td class="paramname">accumulate</td><td>is to accumulate the old value or not. </td></tr>
+    <tr><td class="paramname">dtype_acc</td><td>Is the accumulation data type, src ==&gt; convert to dtype_acc ==&gt; reduction + accumulation ==&gt; convert to dtype_dst. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst</td><td>Is the reference of the destination tile object. </td></tr>
+    <tr><td class="paramname">src</td><td>Is the reference of the destination tile object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>No return, in-place update in the destination tile. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This is only for reduce add, and will be deprecated in future. Please use tile_reduce instead. </dd></dl>
+<p >Here we rely on compiler to generate mixed mode for <a class="el" href="structgpu_1_1xetla_1_1bf16.html" title="xetla bf16 data type.">bf16</a></p>
+<p >The idea is 1) allocate a temp buffer; 2) accumulate the entire tile into temp buffer; 3) reduce within temp buffer This will introduce additional instructions to initialize the temp buffer, but will have more parallelism</p>
 
 </div>
 </div>

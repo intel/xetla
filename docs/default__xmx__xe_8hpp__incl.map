@@ -1,7 +1,5 @@
 <map id="include/group/brgemm/impl/default_xmx_xe.hpp" name="include/group/brgemm/impl/default_xmx_xe.hpp">
-<area shape="rect" id="node1" title="C++ API." alt="" coords="85,5,255,45"/>
-<area shape="rect" id="node2" href="$group_2brgemm_2common_8hpp.html" title="C++ API." alt="" coords="78,181,262,207"/>
-<area shape="rect" id="node5" href="$compute__policy_8hpp.html" title="C++ API." alt="" coords="149,93,308,133"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,255,156,280"/>
-<area shape="rect" id="node4" title=" " alt="" coords="181,255,338,280"/>
+<area shape="rect" id="node1" title="C++ API." alt="" coords="109,5,280,45"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,101,189,126"/>
+<area shape="rect" id="node3" title=" " alt="" coords="214,93,373,133"/>
 </map>

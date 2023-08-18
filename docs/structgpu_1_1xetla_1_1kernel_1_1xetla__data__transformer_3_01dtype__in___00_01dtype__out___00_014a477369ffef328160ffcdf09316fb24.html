@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.3</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.4</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -208,13 +208,11 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:a6a6603a4b7cfc8d57cf72d8b378a0693"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a874efc4990c790e0aebd03e0dd1946ed"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_014a477369ffef328160ffcdf09316fb24.html#a874efc4990c790e0aebd03e0dd1946ed">block_size_x</a> = <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1detail_1_1gcd.html">gpu::xetla::subgroup::detail::gcd</a>&lt;<a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_014a477369ffef328160ffcdf09316fb24.html#ae534479fd82d6e94ca5bcf03d66be452">load_size_x</a>, <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_014a477369ffef328160ffcdf09316fb24.html#a6a6603a4b7cfc8d57cf72d8b378a0693">st_size_x</a>&gt;::value</td></tr>
 <tr class="separator:a874efc4990c790e0aebd03e0dd1946ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a563808da382f9df678da84da7ababa3e"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_014a477369ffef328160ffcdf09316fb24.html#a563808da382f9df678da84da7ababa3e">is_vnni_tiled_in</a> = (sizeof(<a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_014a477369ffef328160ffcdf09316fb24.html#a3c2321679c76e539d219ebdb5143a56a">dtype_in</a>) &lt; sizeof(uint32_t)) &amp;&amp; <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_014a477369ffef328160ffcdf09316fb24.html#afb563eab5f47b931a25ddfc05d7eb38d">is_col_major_in</a></td></tr>
-<tr class="separator:a563808da382f9df678da84da7ababa3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90e75f6dfa6c0565e9df34619315956a"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_014a477369ffef328160ffcdf09316fb24.html#a90e75f6dfa6c0565e9df34619315956a">block_size_y_limit</a> = <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_014a477369ffef328160ffcdf09316fb24.html#afb563eab5f47b931a25ddfc05d7eb38d">is_col_major_in</a> ? <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_014a477369ffef328160ffcdf09316fb24.html#a648df06e6e7eda08f04bd4124754bd76">max_trans_block_width</a> : <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_014a477369ffef328160ffcdf09316fb24.html#a0ececaa8d9dd0e966e091524065ca86c">max_load_height_in_elem</a></td></tr>
 <tr class="separator:a90e75f6dfa6c0565e9df34619315956a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37ba839c3c8861425c84780e44bebedf"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_014a477369ffef328160ffcdf09316fb24.html#a37ba839c3c8861425c84780e44bebedf">block_size_y</a></td></tr>
 <tr class="separator:a37ba839c3c8861425c84780e44bebedf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7abb240131d1decbea7c12033acfb06b"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aa">reg_layout</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_014a477369ffef328160ffcdf09316fb24.html#a7abb240131d1decbea7c12033acfb06b">in_reg_layout</a> = <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_014a477369ffef328160ffcdf09316fb24.html#a563808da382f9df678da84da7ababa3e">is_vnni_tiled_in</a> ? <a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa9c072496656f07aeb105a1bc09a218b5">reg_layout::vnni_tiled</a> : <a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa78506882d645395a052df8b01a927395">reg_layout::tiled</a></td></tr>
+<tr class="memitem:a7abb240131d1decbea7c12033acfb06b"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aa">reg_layout</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_014a477369ffef328160ffcdf09316fb24.html#a7abb240131d1decbea7c12033acfb06b">in_reg_layout</a> = <a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa78506882d645395a052df8b01a927395">reg_layout::tiled</a></td></tr>
 <tr class="separator:a7abb240131d1decbea7c12033acfb06b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -570,7 +568,7 @@ template&lt;typename dtype_in_ , typename dtype_out_ , typename dtype_compute_ ,
 <b>Initial value:</b><div class="fragment"><div class="line">= <a class="code hl_variable" href="structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_014a477369ffef328160ffcdf09316fb24.html#a90e75f6dfa6c0565e9df34619315956a">block_size_y_limit</a> &gt; <a class="code hl_variable" href="structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_014a477369ffef328160ffcdf09316fb24.html#ab36846316218d6562ce120954831bbab">tile_size_y</a></div>
 <div class="line">            ? <a class="code hl_variable" href="structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_014a477369ffef328160ffcdf09316fb24.html#ab36846316218d6562ce120954831bbab">tile_size_y</a></div>
 <div class="line">            : <a class="code hl_variable" href="structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_014a477369ffef328160ffcdf09316fb24.html#a90e75f6dfa6c0565e9df34619315956a">block_size_y_limit</a></div>
-<div class="ttc" id="astructgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_014a477369ffef328160ffcdf09316fb24_html_a90e75f6dfa6c0565e9df34619315956a"><div class="ttname"><a href="structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_014a477369ffef328160ffcdf09316fb24.html#a90e75f6dfa6c0565e9df34619315956a">gpu::xetla::kernel::xetla_data_transformer&lt; dtype_in_, dtype_out_, dtype_compute_, data_transformer_attr_, mem_layout_in_, need_fp8_op, gpu_arch::Xe &gt;::block_size_y_limit</a></div><div class="ttdeci">static constexpr uint32_t block_size_y_limit</div><div class="ttdef"><b>Definition:</b> data_transformer_xe.hpp:102</div></div>
+<div class="ttc" id="astructgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_014a477369ffef328160ffcdf09316fb24_html_a90e75f6dfa6c0565e9df34619315956a"><div class="ttname"><a href="structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_014a477369ffef328160ffcdf09316fb24.html#a90e75f6dfa6c0565e9df34619315956a">gpu::xetla::kernel::xetla_data_transformer&lt; dtype_in_, dtype_out_, dtype_compute_, data_transformer_attr_, mem_layout_in_, need_fp8_op, gpu_arch::Xe &gt;::block_size_y_limit</a></div><div class="ttdeci">static constexpr uint32_t block_size_y_limit</div><div class="ttdef"><b>Definition:</b> data_transformer_xe.hpp:99</div></div>
 <div class="ttc" id="astructgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_014a477369ffef328160ffcdf09316fb24_html_ab36846316218d6562ce120954831bbab"><div class="ttname"><a href="structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_014a477369ffef328160ffcdf09316fb24.html#ab36846316218d6562ce120954831bbab">gpu::xetla::kernel::xetla_data_transformer&lt; dtype_in_, dtype_out_, dtype_compute_, data_transformer_attr_, mem_layout_in_, need_fp8_op, gpu_arch::Xe &gt;::tile_size_y</a></div><div class="ttdeci">static constexpr uint32_t tile_size_y</div><div class="ttdef"><b>Definition:</b> data_transformer_xe.hpp:59</div></div>
 </div><!-- fragment -->
 </div>
@@ -611,7 +609,7 @@ template&lt;typename dtype_in_ , typename dtype_out_ , typename dtype_compute_ ,
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr <a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aa">reg_layout</a> <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer.html">gpu::xetla::kernel::xetla_data_transformer</a>&lt; dtype_in_, dtype_out_, dtype_compute_, data_transformer_attr_, mem_layout_in_, need_fp8_op, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;::in_reg_layout = <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_014a477369ffef328160ffcdf09316fb24.html#a563808da382f9df678da84da7ababa3e">is_vnni_tiled_in</a> ? <a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa9c072496656f07aeb105a1bc09a218b5">reg_layout::vnni_tiled</a> : <a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa78506882d645395a052df8b01a927395">reg_layout::tiled</a></td>
+          <td class="memname">constexpr <a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aa">reg_layout</a> <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer.html">gpu::xetla::kernel::xetla_data_transformer</a>&lt; dtype_in_, dtype_out_, dtype_compute_, data_transformer_attr_, mem_layout_in_, need_fp8_op, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;::in_reg_layout = <a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa78506882d645395a052df8b01a927395">reg_layout::tiled</a></td>
         </tr>
       </table>
   </td>
@@ -636,30 +634,6 @@ template&lt;typename dtype_in_ , typename dtype_out_ , typename dtype_compute_ ,
       <table class="memname">
         <tr>
           <td class="memname">constexpr bool <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer.html">gpu::xetla::kernel::xetla_data_transformer</a>&lt; dtype_in_, dtype_out_, dtype_compute_, data_transformer_attr_, mem_layout_in_, need_fp8_op, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;::is_col_major_in = <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_014a477369ffef328160ffcdf09316fb24.html#a945888184a0995ab17bd0321299136eb">mem_layout_in</a> == <a class="el" href="namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561a55e5bef9f48cf4e944a16a034eac0704">mem_layout::col_major</a></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a563808da382f9df678da84da7ababa3e" name="a563808da382f9df678da84da7ababa3e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a563808da382f9df678da84da7ababa3e">&#9670;&#160;</a></span>is_vnni_tiled_in</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename dtype_in_ , typename dtype_out_ , typename dtype_compute_ , typename data_transformer_attr_ , <a class="el" href="namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561">mem_layout</a> mem_layout_in_, int need_fp8_op&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr bool <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer.html">gpu::xetla::kernel::xetla_data_transformer</a>&lt; dtype_in_, dtype_out_, dtype_compute_, data_transformer_attr_, mem_layout_in_, need_fp8_op, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;::is_vnni_tiled_in = (sizeof(<a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_014a477369ffef328160ffcdf09316fb24.html#a3c2321679c76e539d219ebdb5143a56a">dtype_in</a>) &lt; sizeof(uint32_t)) &amp;&amp; <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_014a477369ffef328160ffcdf09316fb24.html#afb563eab5f47b931a25ddfc05d7eb38d">is_col_major_in</a></td>
         </tr>
       </table>
   </td>

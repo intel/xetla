@@ -4,7 +4,7 @@ var dir_55c6aacdd19a444dac43fdec2e233557 =
     [ "barrier.hpp", "barrier_8hpp.html", "barrier_8hpp" ],
     [ "base_consts.hpp", "base__consts_8hpp.html", null ],
     [ "base_ops.hpp", "base__ops_8hpp.html", "base__ops_8hpp" ],
-    [ "base_types.hpp", "base__types_8hpp.html", "base__types_8hpp" ],
+    [ "base_types.hpp", "common_2core_2base__types_8hpp.html", "common_2core_2base__types_8hpp" ],
     [ "bit_mask_manipulation.hpp", "bit__mask__manipulation_8hpp.html", "bit__mask__manipulation_8hpp" ],
     [ "common.hpp", "common_2core_2common_8hpp.html", "common_2core_2common_8hpp" ],
     [ "core.hpp", "core_8hpp.html", null ],
