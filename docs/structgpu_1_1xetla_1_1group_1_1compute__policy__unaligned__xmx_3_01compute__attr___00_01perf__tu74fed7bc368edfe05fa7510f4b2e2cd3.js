@@ -1,0 +1,8 @@
+var structgpu_1_1xetla_1_1group_1_1compute__policy__unaligned__xmx_3_01compute__attr___00_01perf__tu74fed7bc368edfe05fa7510f4b2e2cd3 =
+[
+    [ "compute_attr", "structgpu_1_1xetla_1_1group_1_1compute__policy__unaligned__xmx_3_01compute__attr___00_01perf__tu74fed7bc368edfe05fa7510f4b2e2cd3.html#a9a5cc36e5b7dcd7cf4700fb87298e93f", null ],
+    [ "dtype_mma_a", "structgpu_1_1xetla_1_1group_1_1compute__policy__unaligned__xmx_3_01compute__attr___00_01perf__tu74fed7bc368edfe05fa7510f4b2e2cd3.html#a059c1f54d98a5d79d5adacb2f69c4245", null ],
+    [ "dtype_mma_acc", "structgpu_1_1xetla_1_1group_1_1compute__policy__unaligned__xmx_3_01compute__attr___00_01perf__tu74fed7bc368edfe05fa7510f4b2e2cd3.html#a0b771e30e23b76aebd304d02a7bd895e", null ],
+    [ "dtype_mma_b", "structgpu_1_1xetla_1_1group_1_1compute__policy__unaligned__xmx_3_01compute__attr___00_01perf__tu74fed7bc368edfe05fa7510f4b2e2cd3.html#a3d8cb1c8f21b42a0eb6cb507ee05f13e", null ],
+    [ "perf_tuning_knob", "structgpu_1_1xetla_1_1group_1_1compute__policy__unaligned__xmx_3_01compute__attr___00_01perf__tu74fed7bc368edfe05fa7510f4b2e2cd3.html#ad7df7af870d8ad40de07d4f97c52a89e", null ]
+];

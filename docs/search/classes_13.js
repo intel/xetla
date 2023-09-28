@@ -16,7 +16,7 @@ var searchData=
   ['xetla_5frow_5freduction_5ffused_5fop_5farguments_5ft_13',['xetla_row_reduction_fused_op_arguments_t',['../structgpu_1_1xetla_1_1group_1_1xetla__row__reduction__fused__op__arguments__t.html',1,'gpu::xetla::group']]],
   ['xetla_5frow_5freduction_5ft_14',['xetla_row_reduction_t',['../structgpu_1_1xetla_1_1kernel_1_1xetla__row__reduction__t.html',1,'gpu::xetla::kernel']]],
   ['xetla_5frow_5freduction_5ft_3c_20dtype_5fin_5f_2c_20dtype_5fout_5f_2c_20dtype_5facc_5f_2c_20reduction_5fattr_5f_2c_20gpu_5farch_3a_3axe_2c_20fused_5fop_5ft_5f_20_3e_15',['xetla_row_reduction_t&lt; dtype_in_, dtype_out_, dtype_acc_, reduction_attr_, gpu_arch::Xe, fused_op_t_ &gt;',['../structgpu_1_1xetla_1_1kernel_1_1xetla__row__reduction__t_3_01dtype__in___00_01dtype__out___00_01cd72c8b824c01ad6c9039a9957986bd1.html',1,'gpu::xetla::kernel']]],
-  ['xetla_5fsoftmax_5ffwd_5ft_16',['xetla_softmax_fwd_t',['../structxetla__softmax__fwd__t.html',1,'']]],
-  ['xettp_5fsaturation_5foff_5ftag_17',['xettp_saturation_off_tag',['../classgpu_1_1xetla_1_1xettp__saturation__off__tag.html',1,'gpu::xetla']]],
-  ['xettp_5fsaturation_5fon_5ftag_18',['xettp_saturation_on_tag',['../classgpu_1_1xetla_1_1xettp__saturation__on__tag.html',1,'gpu::xetla']]]
+  ['xetla_5fsaturation_5foff_5ftag_16',['xetla_saturation_off_tag',['../classgpu_1_1xetla_1_1xetla__saturation__off__tag.html',1,'gpu::xetla']]],
+  ['xetla_5fsaturation_5fon_5ftag_17',['xetla_saturation_on_tag',['../classgpu_1_1xetla_1_1xetla__saturation__on__tag.html',1,'gpu::xetla']]],
+  ['xetla_5fsoftmax_5ffwd_5ft_18',['xetla_softmax_fwd_t',['../structxetla__softmax__fwd__t.html',1,'']]]
 ];

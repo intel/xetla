@@ -1,0 +1,9 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node0 [id="Node000000",label="gpu::xetla::subgroup\l::mem_payload_t\< dtype\l_, tile_desc_, msg_type\l::block_1d, mem_layout::\lrow_major, mem_space::local,\l arch_tag_, std::enable_if\l_t\<(arch_tag_==gpu_arch::Xe)\> \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_1609fac76bb4ec98fffe268fabb64ba60.html",tooltip="Is to describe the shared local memory surface for block-1d load/store."];
+}

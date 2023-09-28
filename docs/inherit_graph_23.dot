@@ -1,0 +1,9 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node0 [id="Node000000",label="gpu::xetla::group::\ldetail::check_2d_block\l_pitch_alignment\< dtype\l_a, dtype_b, alignment_a,\l alignment_b, arch_tag \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classgpu_1_1xetla_1_1group_1_1detail_1_1check__2d__block__pitch__alignment.html",tooltip=" "];
+}

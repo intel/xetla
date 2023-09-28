@@ -9,6 +9,8 @@ var subgroup_2tile_2common_8hpp =
     [ "gpu::xetla::subgroup::get_load_block_size_auto< dtype, tile_size_x, tile_size_y, gpu_arch::Xe, mem_layout::row_major, reg_layout::tiled >", "structgpu_1_1xetla_1_1subgroup_1_1get__load__block__size__auto_3_01dtype_00_01tile__size__x_00_043561ddbe884fdfdc5805813b0293052.html", null ],
     [ "gpu::xetla::subgroup::get_store_block_size_auto< dtype, tile_size_x, tile_size_y, arch_tag, mem_layout_, reg_layout_ >", "structgpu_1_1xetla_1_1subgroup_1_1get__store__block__size__auto.html", null ],
     [ "gpu::xetla::subgroup::get_store_block_size_auto< dtype, tile_size_x, tile_size_y, gpu_arch::Xe, mem_layout::row_major, reg_layout::tiled >", "structgpu_1_1xetla_1_1subgroup_1_1get__store__block__size__auto_3_01dtype_00_01tile__size__x_00_7188bde0744e02dc2363bd5e8a330d24.html", null ],
+    [ "gpu::xetla::subgroup::global_atomic_oob_check_on_tag", "structgpu_1_1xetla_1_1subgroup_1_1global__atomic__oob__check__on__tag.html", null ],
+    [ "gpu::xetla::subgroup::global_atomic_oob_check_off_tag", "structgpu_1_1xetla_1_1subgroup_1_1global__atomic__oob__check__off__tag.html", null ],
     [ "process_flag", "subgroup_2tile_2common_8hpp.html#a781ffea4fb72a41d8b13391ae86e7f1c", [
       [ "load", "subgroup_2tile_2common_8hpp.html#a781ffea4fb72a41d8b13391ae86e7f1caec4d1eb36b22d19728e9d1d23ca84d1c", null ],
       [ "store", "subgroup_2tile_2common_8hpp.html#a781ffea4fb72a41d8b13391ae86e7f1ca8cd892b7b97ef9489ae4479d3f4ef0fc", null ]

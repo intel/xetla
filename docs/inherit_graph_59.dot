@@ -1,0 +1,9 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node0 [id="Node000000",label="gpu::xetla::group::\lgemm_t\< compute_policy\l_unaligned_xmx\< compute\l_attr_, perf_tuning_knob\l_, arch_tag_ \>, tile_shape\l_, mem_desc_a_t_, mem_desc\l_b_t_, pre_processing_t_, std\l::enable_if_t\<(arch_tag_==gpu\l_arch::Xe)\> \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classgpu_1_1xetla_1_1group_1_1gemm__t_3_01compute__policy__unaligned__xmx_3_01compute__attr___001f70dc8874f6d153a9abd6d3c8897351.html",tooltip="Is the gemm functor for unaligned input, Xe architecture and matrix engine."];
+}

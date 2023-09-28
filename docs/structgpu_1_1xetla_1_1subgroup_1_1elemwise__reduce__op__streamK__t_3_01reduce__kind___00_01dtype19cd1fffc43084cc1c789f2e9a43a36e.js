@@ -1,0 +1,7 @@
+var structgpu_1_1xetla_1_1subgroup_1_1elemwise__reduce__op__streamK__t_3_01reduce__kind___00_01dtype19cd1fffc43084cc1c789f2e9a43a36e =
+[
+    [ "arguments_t", "structgpu_1_1xetla_1_1subgroup_1_1elemwise__reduce__op__streamK__t_3_01reduce__kind___00_01dtype19cd1fffc43084cc1c789f2e9a43a36e.html#a14e84034ac58210456a1ccf17b53a1af", null ],
+    [ "arguments_t", "structgpu_1_1xetla_1_1subgroup_1_1elemwise__reduce__op__streamK__t_3_01reduce__kind___00_01dtype19cd1fffc43084cc1c789f2e9a43a36e.html#a57306aca3ac048cedcb05731d9772572", null ],
+    [ "base", "structgpu_1_1xetla_1_1subgroup_1_1elemwise__reduce__op__streamK__t_3_01reduce__kind___00_01dtype19cd1fffc43084cc1c789f2e9a43a36e.html#a3533a15d81ae171643590bbe04698dc2", null ],
+    [ "shape", "structgpu_1_1xetla_1_1subgroup_1_1elemwise__reduce__op__streamK__t_3_01reduce__kind___00_01dtype19cd1fffc43084cc1c789f2e9a43a36e.html#a5b85d8ac430f6178fcaf3396acf0631e", null ]
+];

@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['x_5fdir_0',['x_dir',['../namespacegpu_1_1xetla.html#acd7865b31b59cd433a5ff11bd6729628a69d8003dc168eaaa90874ead1a8f74b9',1,'gpu::xetla']]],
-  ['xe_1',['Xe',['../group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130',1,'gpu::xetla']]],
-  ['xe2_2',['Xe2',['../group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a98c3b4a61aacc5c58f61df1ef65ed5e4',1,'gpu::xetla']]],
-  ['xmx_3',['xmx',['../namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4ad3542ece75d3114721fa3a34198aae2a',1,'gpu::xetla']]]
+  ['workgroup_0',['workgroup',['../namespacegpu_1_1xetla.html#a945be63bd94c779178b4cd9c145c2276a9fcaf08b0a5fe04690e3714d83aa57e3',1,'gpu::xetla']]],
+  ['write_5fback_1',['write_back',['../namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30aa9c64c25d98516dabbeaa44fa4b798fe',1,'gpu::xetla']]],
+  ['write_5fthrough_2',['write_through',['../namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30a99f2e1bde3d240b180ae0b0b9ccfc135',1,'gpu::xetla']]]
 ];

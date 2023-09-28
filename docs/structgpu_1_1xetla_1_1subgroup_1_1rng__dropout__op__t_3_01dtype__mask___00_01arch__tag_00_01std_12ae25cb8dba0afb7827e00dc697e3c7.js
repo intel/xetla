@@ -1,0 +1,10 @@
+var structgpu_1_1xetla_1_1subgroup_1_1rng__dropout__op__t_3_01dtype__mask___00_01arch__tag_00_01std_12ae25cb8dba0afb7827e00dc697e3c7 =
+[
+    [ "arguments_t", "structgpu_1_1xetla_1_1subgroup_1_1rng__dropout__op__t_3_01dtype__mask___00_01arch__tag_00_01std_12ae25cb8dba0afb7827e00dc697e3c7.html#a9720ff43d72dbdc050724f446903fa88", null ],
+    [ "arguments_t", "structgpu_1_1xetla_1_1subgroup_1_1rng__dropout__op__t_3_01dtype__mask___00_01arch__tag_00_01std_12ae25cb8dba0afb7827e00dc697e3c7.html#a8f934fc89e888f49acd23d60f67797da", null ],
+    [ "mask_base", "structgpu_1_1xetla_1_1subgroup_1_1rng__dropout__op__t_3_01dtype__mask___00_01arch__tag_00_01std_12ae25cb8dba0afb7827e00dc697e3c7.html#a7fc11a5b44f0f09d22b9e8be28a4a55e", null ],
+    [ "mask_shape", "structgpu_1_1xetla_1_1subgroup_1_1rng__dropout__op__t_3_01dtype__mask___00_01arch__tag_00_01std_12ae25cb8dba0afb7827e00dc697e3c7.html#ab7528e378fd9ab197b67f2fc759330b2", null ],
+    [ "prob", "structgpu_1_1xetla_1_1subgroup_1_1rng__dropout__op__t_3_01dtype__mask___00_01arch__tag_00_01std_12ae25cb8dba0afb7827e00dc697e3c7.html#a53399f95b9dda8cb779f76c778d1d039", null ],
+    [ "rand_offset_ptr", "structgpu_1_1xetla_1_1subgroup_1_1rng__dropout__op__t_3_01dtype__mask___00_01arch__tag_00_01std_12ae25cb8dba0afb7827e00dc697e3c7.html#abc74d8a6f79b6d854d67b93252cc78fc", null ],
+    [ "rand_seed", "structgpu_1_1xetla_1_1subgroup_1_1rng__dropout__op__t_3_01dtype__mask___00_01arch__tag_00_01std_12ae25cb8dba0afb7827e00dc697e3c7.html#ae96f82c6179bf8c57803b643954f1a4d", null ]
+];

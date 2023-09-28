@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['kslicing_5fimpl_5ft_0',['kslicing_impl_t',['../basic__gemm_8cpp.html#a69ec471fd653f0d2934e3d72f8438f87',1,'basic_gemm.cpp']]]
+  ['ln_5fbwd_5ffused_5fkind_0',['ln_bwd_fused_kind',['../namespacegpu_1_1xetla.html#aacf5f0d7a8241d58320b4a95e0f7592b',1,'gpu::xetla']]],
+  ['ln_5ffwd_5ffused_5fkind_1',['ln_fwd_fused_kind',['../namespacegpu_1_1xetla.html#a71633e89354f0f1d0badcd0d90dea7ec',1,'gpu::xetla']]],
+  ['lsc_5faction_2',['lsc_action',['../namespacegpu_1_1xetla.html#abb5a3893da6b1edf6e4222a8b9112645',1,'gpu::xetla']]]
 ];

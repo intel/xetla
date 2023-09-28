@@ -1,0 +1,9 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node0 [id="Node000000",label="gpu::xetla::group::\lmask_gen_t\< dtype_mask\l_, wg_tile_n_, wg_tile\l_m_, sg_tile_n_, sg_tile\l_m_, random_simd_, arch_ \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1group_1_1mask__gen__t.html",tooltip=" "];
+}

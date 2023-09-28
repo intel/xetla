@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['read_5finvalidate_0',['read_invalidate',['../namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30a2f45cbd63698443b09ad479d71ae024c',1,'gpu::xetla']]],
-  ['relu_1',['relu',['../namespacegpu_1_1xetla.html#a0952e84e7d047ac828bd9daef8273f98abc5ce62b39aff2f661146911808eadc1',1,'gpu::xetla']]],
-  ['res_5fadd_2',['res_add',['../namespacegpu_1_1xetla.html#a84516612f2134871f48f064c43427ffbabae7bcc3e2c799c3ad3bdc30a222aae4',1,'gpu::xetla']]],
-  ['row_5fmajor_3',['row_major',['../namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561a641fabb8e5e7d1d0333e2c9c384f959c',1,'gpu::xetla']]]
+  ['prefetch_0',['prefetch',['../namespacegpu_1_1xetla.html#abb5a3893da6b1edf6e4222a8b9112645a4c203b76e2847e3b6e1bdf7bf2ad63a2',1,'gpu::xetla']]],
+  ['prod_1',['prod',['../namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609ad6e4a9b6646c62fc48baa6dd6150d1f7',1,'gpu::xetla']]],
+  ['producer_2',['producer',['../group__xetla__util__named__barrier.html#ggaad562941909edcd788dd091e31841fe1af18122ddebc4341b4ed758b3f0817da8',1,'gpu::xetla']]],
+  ['producer_5fconsumer_3',['producer_consumer',['../group__xetla__util__named__barrier.html#ggaad562941909edcd788dd091e31841fe1a4c44b0011c9c00f486a2d65f1293de8f',1,'gpu::xetla']]]
 ];

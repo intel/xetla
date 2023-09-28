@@ -12,8 +12,6 @@ var namespacegpu_1_1xetla_1_1subgroup_1_1detail =
       [ "load", "namespacegpu_1_1xetla_1_1subgroup_1_1detail.html#a781ffea4fb72a41d8b13391ae86e7f1caec4d1eb36b22d19728e9d1d23ca84d1c", null ],
       [ "store", "namespacegpu_1_1xetla_1_1subgroup_1_1detail.html#a781ffea4fb72a41d8b13391ae86e7f1ca8cd892b7b97ef9489ae4479d3f4ef0fc", null ]
     ] ],
-    [ "check_load_condition", "namespacegpu_1_1xetla_1_1subgroup_1_1detail.html#ad4f11b848ce571258ddb9744831c847b", null ],
-    [ "check_store_condition", "namespacegpu_1_1xetla_1_1subgroup_1_1detail.html#afbf8e9b6b607fc1f3871ca3a94e31a47", null ],
     [ "getNextPowerOf2", "namespacegpu_1_1xetla_1_1subgroup_1_1detail.html#a7b22094665504923bed32b8f52f19f08", null ],
     [ "getNextPowerOf2< 0 >", "namespacegpu_1_1xetla_1_1subgroup_1_1detail.html#ae0eb6dc31c7f0294f9dbf48c6a13cc2c", null ],
     [ "process_1d_tail", "namespacegpu_1_1xetla_1_1subgroup_1_1detail.html#a2710a9973aafe6e62aa39747ac8e630c", null ],

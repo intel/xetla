@@ -6,5 +6,6 @@ var searchData=
   ['col_5fmajor_3',['col_major',['../namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561a55e5bef9f48cf4e944a16a034eac0704',1,'gpu::xetla']]],
   ['const_5foffset_4',['const_offset',['../namespacegpu_1_1xetla.html#ae4215d7926db8261054d992dca253d8fa17b02615330335527127c0a4cd15a320',1,'gpu::xetla']]],
   ['consumer_5',['consumer',['../group__xetla__util__named__barrier.html#ggaad562941909edcd788dd091e31841fe1a1005b14bd29466723ace30d26f602f5b',1,'gpu::xetla']]],
-  ['cyclic_5foffset_6',['cyclic_offset',['../namespacegpu_1_1xetla.html#ae4215d7926db8261054d992dca253d8fa4277f018cd199c8ac31fc6c7a90960be',1,'gpu::xetla']]]
+  ['core_6',['core',['../namespacegpu_1_1xetla.html#a945be63bd94c779178b4cd9c145c2276aa74ad8dfacd4f985eb3977517615ce25',1,'gpu::xetla']]],
+  ['cyclic_5foffset_7',['cyclic_offset',['../namespacegpu_1_1xetla.html#ae4215d7926db8261054d992dca253d8fa4277f018cd199c8ac31fc6c7a90960be',1,'gpu::xetla']]]
 ];

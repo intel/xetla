@@ -1,0 +1,9 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node0 [id="Node000000",label="gpu::xetla::subgroup\l::prefetch_payload_t\l\< dtype_, tile_desc_t\l\< tile_size_x_, tile_size\l_y_, block_size_x_, block\l_size_y_, reg_layout_ \>, mem\l_layout_, mem_space::global,\l num_coop_sg_, arch_tag_, std\l::enable_if_t\<(arch_tag_==gpu\l_arch::Xe)\> \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1subgroup_1_1prefetch__payload__t_3_01dtype___00_01tile__desc__t_3_01tile__8127dc13de69bdcf85d9743a98c4d20a.html",tooltip="Is to describe the global memory surface to prefetch data to cache data in global memory will be pref..."];
+}

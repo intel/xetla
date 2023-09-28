@@ -1,0 +1,9 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node0 [id="Node000000",label="gpu::xetla::group::\lgroup_row_reduce_store\l_t\< dtype_acc, dtype_out,\l row_size, wg_size_x, wg\l_size_y, max_simd_len, arch_ \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1group_1_1group__row__reduce__store__t.html",tooltip="This is the group row reduction(reduce_sum) + cooperative write out."];
+}

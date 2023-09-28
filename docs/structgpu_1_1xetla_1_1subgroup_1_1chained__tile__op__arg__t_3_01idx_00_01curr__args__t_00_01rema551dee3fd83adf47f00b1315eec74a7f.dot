@@ -1,0 +1,13 @@
+digraph "gpu::xetla::subgroup::chained_tile_op_arg_t&lt; idx, curr_args_t, remain_args_t... &gt;"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="gpu::xetla::subgroup\l::chained_tile_op_arg\l_t\< idx, curr_args_t,\l remain_args_t... \>",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="gpu::xetla::subgroup\l::tile_op_arg_helper\l_t\< idx, curr_args_t \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1subgroup_1_1tile__op__arg__helper__t.html",tooltip=" "];
+  Node3 -> Node1 [id="edge2_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="gpu::xetla::subgroup\l::chained_tile_op_arg\l_t\< idx+1, remain_args\l_t... \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1subgroup_1_1chained__tile__op__arg__t.html",tooltip=" "];
+}

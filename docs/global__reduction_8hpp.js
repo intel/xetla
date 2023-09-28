@@ -1,0 +1,6 @@
+var global__reduction_8hpp =
+[
+    [ "gpu::xetla::group::global_reduce_t< reduce_kind, tile_shape_acc, tile_shape_cnt, mem_desc_acc_t, mem_desc_cnt_t, num_group_reduction, counter_size, arch_tag, enable >", "classgpu_1_1xetla_1_1group_1_1global__reduce__t.html", null ],
+    [ "gpu::xetla::group::global_reduce_t< reduce_op::sum, tile_shape_acc_, tile_shape_cnt_, mem_desc_acc_t_, mem_desc_cnt_t_, num_group_reduction, counter_size, arch_tag_, std::enable_if_t<(arch_tag_==gpu_arch::Xe)> >", "classgpu_1_1xetla_1_1group_1_1global__reduce__t_3_01reduce__op_1_1sum_00_01tile__shape__acc___0028bb5985022f807549f0ba9db49ff505.html", "classgpu_1_1xetla_1_1group_1_1global__reduce__t_3_01reduce__op_1_1sum_00_01tile__shape__acc___0028bb5985022f807549f0ba9db49ff505" ],
+    [ "gpu::xetla::group::global_reduce_t< reduce_op::sum, tile_shape_acc_, tile_shape_cnt_, mem_desc_acc_t_, mem_desc_cnt_t_, 1, counter_size_, arch_tag_, std::enable_if_t<(arch_tag_==gpu_arch::Xe)> >", "classgpu_1_1xetla_1_1group_1_1global__reduce__t_3_01reduce__op_1_1sum_00_01tile__shape__acc___0020b1b0c7949684410e683d16f56c4ce4.html", "classgpu_1_1xetla_1_1group_1_1global__reduce__t_3_01reduce__op_1_1sum_00_01tile__shape__acc___0020b1b0c7949684410e683d16f56c4ce4" ]
+];

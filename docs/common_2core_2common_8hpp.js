@@ -1,12 +1,10 @@
 var common_2core_2common_8hpp =
 [
-    [ "gpu::xetla::xettp_saturation_on_tag", "classgpu_1_1xetla_1_1xettp__saturation__on__tag.html", "classgpu_1_1xetla_1_1xettp__saturation__on__tag" ],
-    [ "gpu::xetla::xettp_saturation_off_tag", "classgpu_1_1xetla_1_1xettp__saturation__off__tag.html", "classgpu_1_1xetla_1_1xettp__saturation__off__tag" ],
+    [ "gpu::xetla::xetla_saturation_on_tag", "classgpu_1_1xetla_1_1xetla__saturation__on__tag.html", "classgpu_1_1xetla_1_1xetla__saturation__on__tag" ],
+    [ "gpu::xetla::xetla_saturation_off_tag", "classgpu_1_1xetla_1_1xetla__saturation__off__tag.html", "classgpu_1_1xetla_1_1xetla__saturation__off__tag" ],
     [ "__ESIMD_ENS", "common_2core_2common_8hpp.html#ace517c88613872db52c5b6cdc339e26a", null ],
     [ "__ESIMD_NS", "common_2core_2common_8hpp.html#a2cc603b8de1c7e2a083db975423dc9fe", null ],
     [ "__XETLA_API", "common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765", null ],
-    [ "DEVICE_ASSERT", "common_2core_2common_8hpp.html#a74bb62574ab90245bc499d3f1c7984c3", null ],
-    [ "DEVICE_PRINTF", "common_2core_2common_8hpp.html#aa58e292c9fe9e9dc6b464fdc10495fff", null ],
     [ "KERNEL_FUNC", "group__xetla__core.html#gafb2a0442e367d71b79a2f932d0d39c8b", null ],
     [ "KERNEL_MAIN", "group__xetla__core.html#ga83d8d7bf7b1fc063767128b839bddb97", null ],
     [ "SW_BARRIER", "common_2core_2common_8hpp.html#a4894ef2f787a454434527ed8416177d9", null ],
@@ -75,7 +73,7 @@ var common_2core_2common_8hpp =
       [ "invalidate", "common_2core_2common_8hpp.html#a4e759570d78bb1d0797c4e3dac86fed8ac9ef7a446d9608ed2229ef347d13af7e", null ],
       [ "discard", "common_2core_2common_8hpp.html#a4e759570d78bb1d0797c4e3dac86fed8a70f68bb2f748b85de6526bfe236ea1e9", null ],
       [ "clean", "common_2core_2common_8hpp.html#a4e759570d78bb1d0797c4e3dac86fed8a123402c04dcfb6625f688f771a5fc05d", null ],
-      [ "flushl3", "common_2core_2common_8hpp.html#a4e759570d78bb1d0797c4e3dac86fed8a8ddfd9c7a3f453bf7de52349816e87ec", null ]
+      [ "flushl2", "common_2core_2common_8hpp.html#a4e759570d78bb1d0797c4e3dac86fed8a6ccbf3d45ceae94796305c5b2b93133d", null ]
     ] ],
     [ "fence_scope", "common_2core_2common_8hpp.html#a52fa7b5d0cce636d18ddead7b3ef0072", [
       [ "group", "common_2core_2common_8hpp.html#a52fa7b5d0cce636d18ddead7b3ef0072adb0f6f37ebeb6ea09489124345af2a45", null ],
@@ -110,7 +108,8 @@ var common_2core_2common_8hpp =
       [ "block_2d", "common_2core_2common_8hpp.html#aa8afe1d12e7777419fb6ea09534a0aa7af359df7632214793e086fdf1885d5db6", null ],
       [ "block_1d", "common_2core_2common_8hpp.html#aa8afe1d12e7777419fb6ea09534a0aa7a5baf9a1aba8e4b6fa44c20aafacc4233", null ],
       [ "scatter", "common_2core_2common_8hpp.html#aa8afe1d12e7777419fb6ea09534a0aa7a50894a237d9bcde0a18769af9a768baf", null ],
-      [ "atomic_add", "common_2core_2common_8hpp.html#aa8afe1d12e7777419fb6ea09534a0aa7a482b36a4abeb767ddd4d552020cf2174", null ]
+      [ "atomic_add", "common_2core_2common_8hpp.html#aa8afe1d12e7777419fb6ea09534a0aa7a482b36a4abeb767ddd4d552020cf2174", null ],
+      [ "unaligned_2d", "common_2core_2common_8hpp.html#aa8afe1d12e7777419fb6ea09534a0aa7a1fcd9767078d24d0fa3e5cec3234026b", null ]
     ] ],
     [ "reduce_op", "common_2core_2common_8hpp.html#a7bbd70f1164d3a7251729e89fffc0609", [
       [ "sum", "common_2core_2common_8hpp.html#a7bbd70f1164d3a7251729e89fffc0609a1d623b89683f9ce4e074de1676d12416", null ],
@@ -119,6 +118,8 @@ var common_2core_2common_8hpp =
       [ "max", "common_2core_2common_8hpp.html#a7bbd70f1164d3a7251729e89fffc0609a2ffe4e77325d9a7152f7086ea7aa5114", null ]
     ] ],
     [ "check_lsc_cache_hint", "common_2core_2common_8hpp.html#a24a643b2f929baf9f66ced1e2977907d", null ],
+    [ "xetla_get_hw_thread_id", "common_2core_2common_8hpp.html#aaaa272a41f66be5b8d2c98e0fb050d96", null ],
+    [ "xetla_get_subdevice_id", "common_2core_2common_8hpp.html#a428721cf41093057d9903cb4fd664102", null ],
     [ "XETLA_PRINT", "common_2core_2common_8hpp.html#a5f6cf4a3d010c6b7682faa719ed1e894", null ],
     [ "xetla_wait", "common_2core_2common_8hpp.html#aa8bdf9d65206f850195b0dfb058a14b0", null ]
 ];

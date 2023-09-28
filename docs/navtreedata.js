@@ -25,11 +25,7 @@
 var NAVTREE =
 [
   [ "XeTLA", "index.html", [
-    [ "Intel® Xe Templates for Linear Algebra", "index.html", [
-      [ "Features", "index.html#autotoc_md1", null ],
-      [ "Security", "index.html#autotoc_md2", null ],
-      [ "Copyright", "index.html#autotoc_md3", null ]
-    ] ],
+    [ "Intel® Xe Templates for Linear Algebra", "index.html", "index" ],
     [ "Modules", "modules.html", "modules" ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
@@ -69,22 +65,23 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"common_2core_2common_8hpp.html#a5f6cf4a3d010c6b7682faa719ed1e894",
-"functions_func_f.html",
-"group__xetla__util__tensor__load__store.html#gae779bb3a3626f9c8e36dbc330e269c39",
-"namespacegpu_1_1xetla.html#af261b382f6c28635f6389d533cc6688e",
-"store__xe_8hpp.html",
-"structgpu_1_1xetla_1_1group_1_1ln__bwd__fused__op__arguments__t.html#a5ca6fd69a759b2b68a6f1e047a4486fa",
-"structgpu_1_1xetla_1_1group_1_1ln__fwd__fused__op__t_3_01ln__fwd__fused__kind_1_1bias__dropout__7bd6ac5d5274c089bfc0bfda44480c4d.html#a6d497418df492c5a4a98c772001522e6",
-"structgpu_1_1xetla_1_1group_1_1row__reduction__fused__op__t_3_01reduction__fused__kind_1_1bias__6377f80bb195328d444af2dd5e7849c7.html#ac75ac5276e11df314a257d2fe1179396",
-"structgpu_1_1xetla_1_1kernel_1_1layer__norm__fwd__t_3_01dtype__x___00_01dtype__y___00_01dtype__wd08696fa56c321e029984c701d4f5730.html",
-"structgpu_1_1xetla_1_1kernel_1_1xetla__mha__attn__reg__bwd__t.html#aa0c5b15634d941d8506700f6d932c0cb",
-"structgpu_1_1xetla_1_1kernel_1_1xetla__mha__attn__reg__fwd__t.html#ac3ccbb62580dc53fe45d2a8fdd337078",
-"structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html#a162433e0bbfb018d8c40992f51e8624a",
-"structgpu_1_1xetla_1_1mem__desc__t_3_01dtype___00_01layout___00_01space___00_012_01_4.html#ab8a0bcf6e65f8ef07a2d15b0930174a6",
-"structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_147e897667466bee4b1df4af591b57456.html#aa2ecff128226b013c140256279495f74",
-"structgpu_1_1xetla_1_1subgroup_1_1prefetch__payload__t_3_01dtype___00_01tile__desc__t_3_01tile__eae11e2a5dc03b57aba8e7fbf8cb8116.html#ab96ea09a187105f93ba00307f7c56e12",
-"structxetla__softmax__fwd__t_1_1arguments__t.html"
+"classgpu_1_1xetla_1_1xetla__exec__item.html#a4eeddcd662d3a988c4493359cbf155af",
+"dir_bc2b440969f8d4a827d947db5f8c461f.html",
+"group__xetla__core__bit__manipulation.html",
+"mha__core__attn_8hpp.html#a3f45da0f42ea8b62ef09b76d78fa4ef7",
+"namespacegpu_1_1xetla_1_1subgroup.html#ad5ffcb74b603ad68c1135fb6402ccfdf",
+"structgpu_1_1xetla_1_1group_1_1epilogue__streamK__t.html#a7b33fcd2c29ac96651eca8437bc605eb",
+"structgpu_1_1xetla_1_1group_1_1ln__bwd__fused__op__t_3_01ln__bwd__fused__kind_1_1bias__dropout__cb4d0474e0a28c140fa444d1da09a494.html#a89258990a57f99c0607ae5b193c7dce8",
+"structgpu_1_1xetla_1_1group_1_1ln__fwd__fused__op__t_3_01ln__fwd__fused__kind_1_1bias__rng__dropf3eeeee8529b0a6363a01d09fe71097b.html#a42a29f9c6e8dae3c5b0f2f5b37a81e56",
+"structgpu_1_1xetla_1_1group_1_1tile__shape__t.html",
+"structgpu_1_1xetla_1_1kernel_1_1layer__norm__fwd__t_3_01dtype__x___00_01dtype__y___00_01dtype__w1fae1b1d7e31ebc935e4665707a2f860.html",
+"structgpu_1_1xetla_1_1kernel_1_1xetla__mha__attn__reg__bwd__t.html#a91209c41ce9e9a14aad8949be556dfad",
+"structgpu_1_1xetla_1_1kernel_1_1xetla__mha__attn__reg__fwd__t.html#ac1e78cf55fb3cdcb3e612955bf591185",
+"structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__bwd__t_1_1arguments__t.html#ad676edd2fb3672f1beb744af1c03c6ee",
+"structgpu_1_1xetla_1_1mem__desc__t_3_01dtype___00_01layout___00_01space___00_012_01_4.html#ac6beb04664d5e3be2fa98077acf25df2",
+"structgpu_1_1xetla_1_1subgroup_1_1gelu__fwd__op__t_1_1arguments__t.html",
+"structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc__t_3_01tile__size_db7b20d0bf35c2dd224837af6b201855.html#a556caee700052a75964f03551abf028f",
+"structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t_3_01matAcc__dst__t___00_01matAcc__src__t___00_01mf2b8fccee2805b888b5b9c50ef3404e9.html#a6ccfdd26a82c7581bbc2376d59b7f181"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

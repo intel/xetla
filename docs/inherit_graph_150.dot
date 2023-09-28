@@ -1,0 +1,9 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node0 [id="Node000000",label="gpu::xetla::kernel\l::row_reduction_attr\l_t\< wg_tile_n_, wg_tile\l_m_, sg_tile_n_, sg_tile\l_m_, is_dynamic_job_ \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1kernel_1_1row__reduction__attr__t.html",tooltip="Sets up attribute of the row reduction."];
+}

@@ -1,5 +1,7 @@
 var utils_2misc_8hpp =
 [
+    [ "cacheline_align_up", "utils_2misc_8hpp.html#afd2ebc2bb1756e8c35eee6fb8a2cd676", null ],
+    [ "div_round_up", "utils_2misc_8hpp.html#a953184395f82fbc026383b49cb8e8dcd", null ],
     [ "drop_out", "utils_2misc_8hpp.html#ga13988a16188330fd21ea0724dd1bb797", null ],
     [ "get_time_stamp", "utils_2misc_8hpp.html#ga22d18fb3710da7ef004c8a3e5c53d365", null ],
     [ "recur_col_reduce", "utils_2misc_8hpp.html#ga3219128559cd3b13670888fc3302c0ea", null ],

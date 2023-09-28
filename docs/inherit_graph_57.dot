@@ -1,0 +1,9 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node0 [id="Node000000",label="gpu::xetla::group::\lgemm_t\< compute_policy\l_int4_dequantize_xmx\<\l compute_attr_, perf_tuning\l_knob_, dtype_scale_, dtype\l_zero_pt_, dequant_s_, gpu_arch\l::Xe \>, tile_shape_, mem_desc_a\l_t_, mem_desc_b_t_, pre_processing_t_ \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classgpu_1_1xetla_1_1group_1_1gemm__t_3_01compute__policy__int4__dequantize__xmx_3_01compute__at39fee55bd55562861c58529b7fe30902.html",tooltip="Is the gemm functor for Xe architecture and matrix engine."];
+}

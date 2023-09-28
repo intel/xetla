@@ -1,0 +1,15 @@
+var classgpu_1_1xetla_1_1group_1_1gemm__t_3_01compute__policy__default__xmx_3_01compute__attr___00_0d5831ad38f25a1b5f2e834de3d6956d5 =
+[
+    [ "arguments_t", "structgpu_1_1xetla_1_1group_1_1gemm__t_3_01compute__policy__default__xmx_3_01compute__attr___00_599262ccf18f04e133d74c4a974d06bd.html", "structgpu_1_1xetla_1_1group_1_1gemm__t_3_01compute__policy__default__xmx_3_01compute__attr___00_599262ccf18f04e133d74c4a974d06bd" ],
+    [ "compute_policy", "classgpu_1_1xetla_1_1group_1_1gemm__t_3_01compute__policy__default__xmx_3_01compute__attr___00_0d5831ad38f25a1b5f2e834de3d6956d5.html#aa0277a1ef62709c8c1cccf716ee379c2", null ],
+    [ "matAcc_t", "classgpu_1_1xetla_1_1group_1_1gemm__t_3_01compute__policy__default__xmx_3_01compute__attr___00_0d5831ad38f25a1b5f2e834de3d6956d5.html#acfb3b0495f688f1bc9aba5458beaff39", null ],
+    [ "matAcc_tile_desc_t", "classgpu_1_1xetla_1_1group_1_1gemm__t_3_01compute__policy__default__xmx_3_01compute__attr___00_0d5831ad38f25a1b5f2e834de3d6956d5.html#abb9ff4359e0571625efb92ab9c6f9ee9", null ],
+    [ "mem_desc_a_t", "classgpu_1_1xetla_1_1group_1_1gemm__t_3_01compute__policy__default__xmx_3_01compute__attr___00_0d5831ad38f25a1b5f2e834de3d6956d5.html#ae8d136fcdf6b1170b2512e6c742db013", null ],
+    [ "mem_desc_b_t", "classgpu_1_1xetla_1_1group_1_1gemm__t_3_01compute__policy__default__xmx_3_01compute__attr___00_0d5831ad38f25a1b5f2e834de3d6956d5.html#a3576cd4114bdc26d08163f52e2b6fbc7", null ],
+    [ "pre_processing_arg_t", "classgpu_1_1xetla_1_1group_1_1gemm__t_3_01compute__policy__default__xmx_3_01compute__attr___00_0d5831ad38f25a1b5f2e834de3d6956d5.html#aa047fb1a10474c7c89e8cab081e5cd27", null ],
+    [ "pre_processing_t", "classgpu_1_1xetla_1_1group_1_1gemm__t_3_01compute__policy__default__xmx_3_01compute__attr___00_0d5831ad38f25a1b5f2e834de3d6956d5.html#a734ae9c8d5cb098b7e5615d7c29129ac", null ],
+    [ "tile_shape", "classgpu_1_1xetla_1_1group_1_1gemm__t_3_01compute__policy__default__xmx_3_01compute__attr___00_0d5831ad38f25a1b5f2e834de3d6956d5.html#ad5cb3b98a7e1d96788fff3cebd537981", null ],
+    [ "work_group_t", "classgpu_1_1xetla_1_1group_1_1gemm__t_3_01compute__policy__default__xmx_3_01compute__attr___00_0d5831ad38f25a1b5f2e834de3d6956d5.html#aeda1c9b29b21aa87eb7a87af39f00a1e", null ],
+    [ "operator()", "classgpu_1_1xetla_1_1group_1_1gemm__t_3_01compute__policy__default__xmx_3_01compute__attr___00_0d5831ad38f25a1b5f2e834de3d6956d5.html#a41b89e738e5e727eb983e5a7a1bd5329", null ],
+    [ "XETLA_MARKER", "classgpu_1_1xetla_1_1group_1_1gemm__t_3_01compute__policy__default__xmx_3_01compute__attr___00_0d5831ad38f25a1b5f2e834de3d6956d5.html#a305d63e2a6214dc5836ec1717909a257", null ]
+];

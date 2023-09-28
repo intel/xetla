@@ -1,0 +1,9 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node0 [id="Node000000",label="gpu::xetla::kernel\l::gemm_universal_t\<\l dispatch_policy_kslicing\l\< num_global_kslicing_,\l num_local_kslicing_, arch\l_tag_ \>, gemm_t_, epilogue\l_t_, std::enable_if_t\<(arch\l_tag_==gpu_arch::Xe)\> \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__kslicing_3_01num__globaladc6b615b75ea587a2e6de4e1736d7d2.html",tooltip="Is the gemm_universal functor, specialized in kslicing dispatch policy and Xe architecture."];
+}

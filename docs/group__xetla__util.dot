@@ -1,0 +1,19 @@
+digraph "XeTLA Utility"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir=LR;
+  Node1 [id="Node000001",label="XeTLA Utility",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="This is low level API wrapper for utility functions."];
+  Node5 [id="Node000005",label="XeTLA Group",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$group__xetla__util__group.html",tooltip="This is a group API to define operation scope."];
+  Node3 [id="Node000003",label="Util misc API",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$group__xetla__util__misc.html",tooltip="Implements some useful and commonly used APIs, such as vector generation API."];
+  Node6 [id="Node000006",label="Named barrier API",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$group__xetla__util__named__barrier.html",tooltip="This is a raw_send based named barrier API."];
+  Node4 [id="Node000004",label="Random number generator API",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$group__xetla__util__rand.html",tooltip="Philox rng, will generate 4 uint32_t random number per call."];
+  Node2 [id="Node000002",label="Tensor load store API",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$group__xetla__util__tensor__load__store.html",tooltip="Implements the tensor load store functionality using raw send instructions."];
+  Node1->Node2 [shape=plaintext, dir="back", style="solid"];
+  Node1->Node3 [shape=plaintext, dir="back", style="solid"];
+  Node1->Node4 [shape=plaintext, dir="back", style="solid"];
+  Node1->Node5 [shape=plaintext, dir="back", style="solid"];
+  Node1->Node6 [shape=plaintext, dir="back", style="solid"];
+}

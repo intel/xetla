@@ -1,0 +1,13 @@
+digraph "gpu::xetla::group::gemm_t&lt; compute_policy_int4_dequantize_xmx&lt; compute_attr_, perf_tuning_knob_, dtype_scale_, dtype_zero_pt_, dequant_s_, gpu_arch::Xe &gt;, tile_shape_, mem_desc_a_t_, mem_desc_b_t_, pre_processing_t_ &gt;::arguments_t"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="gpu::xetla::group::\lgemm_t\< compute_policy\l_int4_dequantize_xmx\<\l compute_attr_, perf_tuning\l_knob_, dtype_scale_, dtype\l_zero_pt_, dequant_s_, gpu_arch\l::Xe \>, tile_shape_, mem_desc_a\l_t_, mem_desc_b_t_, pre_processing\l_t_ \>::arguments_t",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Arguments for gemm."];
+  Node2 -> Node1 [id="edge1_Node000001_Node000002",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" scale_base_desc",fontcolor="grey" ];
+  Node2 [id="Node000002",label="gpu::xetla::mem_desc\l_t\< dtype_scale, mem\l_layout::row_major, mem\l_space::global \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1mem__desc__t.html",tooltip=" "];
+  Node3 -> Node1 [id="edge2_Node000001_Node000003",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" zero_pt_base_desc",fontcolor="grey" ];
+  Node3 [id="Node000003",label="gpu::xetla::mem_desc\l_t\< dtype_zero_pt, mem\l_layout::row_major, mem\l_space::global \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1mem__desc__t.html",tooltip=" "];
+}

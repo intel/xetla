@@ -1,0 +1,9 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node0 [id="Node000000",label="gpu::xetla::group::\lcooperative_reduce_t\l\< reduce_kind, tile_shape\l_, matAcc_t, 1, arch_tag\l_, std::enable_if_t\<(arch\l_tag_==gpu_arch::Xe)\> \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01maf870da62a66a97645bea3be36350f7fb.html",tooltip="Workgroups to do the cooperative reduction."];
+}

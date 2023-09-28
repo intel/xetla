@@ -1,19 +1,9 @@
 var searchData=
 [
-  ['u1_0',['U1',['../namespacegpu_1_1xetla.html#ad437c5605bdaef6fae80e6b099a54f5faf89412c11bdc0ab44f99f92d5e9a3c5e',1,'gpu::xetla']]],
-  ['u16_1',['u16',['../namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76ade59a481c9d8ace262670bda2b39cb1f',1,'gpu::xetla']]],
-  ['u16u32_2',['u16u32',['../namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76ab4bce9967afc33faa1555f0b3e5d5e7a',1,'gpu::xetla']]],
-  ['u16u32h_3',['u16u32h',['../namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76a80183f786c01dfd7ba108c789d57472e',1,'gpu::xetla']]],
-  ['u2_4',['U2',['../namespacegpu_1_1xetla.html#ad437c5605bdaef6fae80e6b099a54f5fa4684821448f0ae2437312daece9d1cd9',1,'gpu::xetla']]],
-  ['u32_5',['u32',['../namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76aa311a831b48d59687cf0822a612c9032',1,'gpu::xetla']]],
-  ['u4_6',['U4',['../namespacegpu_1_1xetla.html#ad437c5605bdaef6fae80e6b099a54f5fa7a7e060fbac468049775df37d8dfa511',1,'gpu::xetla']]],
-  ['u64_7',['u64',['../namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76a476bf781fb66b23778b1004edc3a1028',1,'gpu::xetla']]],
-  ['u8_8',['U8',['../namespacegpu_1_1xetla.html#ad437c5605bdaef6fae80e6b099a54f5fa6669348b484e3008dca2bfa8e85e40b5',1,'gpu::xetla']]],
-  ['u8_9',['u8',['../namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76a077393852be20e37026d6281827662f2',1,'gpu::xetla']]],
-  ['u8u32_10',['u8u32',['../namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76ad2981f2caa06d6d029ad139601e2928c',1,'gpu::xetla']]],
-  ['umax_11',['umax',['../namespacegpu_1_1xetla.html#a98afdf633baaa5ce76b93f0a2ffbba66a82c1089b8c973b65be6d620f765ed1f5',1,'gpu::xetla']]],
-  ['umin_12',['umin',['../namespacegpu_1_1xetla.html#a98afdf633baaa5ce76b93f0a2ffbba66a017163727bc806385f1453c130b4fce3',1,'gpu::xetla']]],
-  ['uncached_13',['uncached',['../namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30aaf9f686f9eb416162d298446a94cfafb',1,'gpu::xetla']]],
-  ['untyped_5fglobal_14',['untyped_global',['../namespacegpu_1_1xetla.html#a56a2620546cb08dd7d850ee1251220b9a1725ff8fe60fe83a4752dc8a770beabe',1,'gpu::xetla']]],
-  ['untyped_5fglobal_5flow_5fpri_15',['untyped_global_low_pri',['../namespacegpu_1_1xetla.html#a56a2620546cb08dd7d850ee1251220b9a2c550e2c91bbef2f2b91ef6a0e3b4adf',1,'gpu::xetla']]]
+  ['tanh_0',['tanh',['../namespacegpu_1_1xetla.html#a0952e84e7d047ac828bd9daef8273f98a5c0dbba3a6ee4ac0eb26cfee75ccb8b4',1,'gpu::xetla']]],
+  ['tf32_1',['TF32',['../namespacegpu_1_1xetla.html#ad437c5605bdaef6fae80e6b099a54f5fa7af37e98489130cf59da22f2f9b3c2d6',1,'gpu::xetla']]],
+  ['tile_2',['tile',['../namespacegpu_1_1xetla.html#a52fa7b5d0cce636d18ddead7b3ef0072a13181d8cc01e390bf64c9e4b0d7a79f3',1,'gpu::xetla']]],
+  ['tiled_3',['tiled',['../namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa78506882d645395a052df8b01a927395',1,'gpu::xetla']]],
+  ['transpose_5ftiled_4',['transpose_tiled',['../namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa790a2d945934924db5b508c7f46846b6',1,'gpu::xetla']]],
+  ['typed_5fglobal_5',['typed_global',['../namespacegpu_1_1xetla.html#a56a2620546cb08dd7d850ee1251220b9a21eb9cb6283b8d3b6fc60609304e2834',1,'gpu::xetla']]]
 ];

@@ -1,0 +1,9 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node0 [id="Node000000",label="gpu::xetla::kernel\l::gemm_universal_t\<\l dispatch_policy_block\l\< wg_num_n_, arch_tag_\l \>, gemm_t_, epilogue_t\l_, std::enable_if_t\<(arch\l_tag_==gpu_arch::Xe)\> \>::arguments_t",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__block_3_01wg__num__n___d1b29b02735459ddd3d8f4d9fabc49d6.html",tooltip="GEMM_UNIVERSAL arguments."];
+}

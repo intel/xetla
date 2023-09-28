@@ -6,6 +6,7 @@ var op__function_8hpp =
     [ "elemwise_op", "op__function_8hpp.html#ad1c2f3de3e4f22840cb553cc3a09408c", null ],
     [ "elemwise_op", "op__function_8hpp.html#aa37e62fa495a0c8237930a4f39daece9", null ],
     [ "row_broadcast", "op__function_8hpp.html#a549db39a75e9945a408c34245f3be873", null ],
+    [ "vnni_convert", "op__function_8hpp.html#a0e6b59d3af183c100c3be8e0084fbb25", null ],
     [ "vnni_reverse", "op__function_8hpp.html#a4ed9033bde7ac8bab3527f52b39889d1", null ],
     [ "vnni_reverse", "op__function_8hpp.html#a418ba6f18b5915d69f59ec5b06d2a50c", null ],
     [ "vnni_transform", "op__function_8hpp.html#afe3350c63d12dc44b15affbe4d5b5e90", null ]

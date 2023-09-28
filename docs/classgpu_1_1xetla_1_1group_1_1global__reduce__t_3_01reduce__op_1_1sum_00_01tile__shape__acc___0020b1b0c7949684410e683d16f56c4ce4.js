@@ -1,0 +1,10 @@
+var classgpu_1_1xetla_1_1group_1_1global__reduce__t_3_01reduce__op_1_1sum_00_01tile__shape__acc___0020b1b0c7949684410e683d16f56c4ce4 =
+[
+    [ "dtype_acc", "classgpu_1_1xetla_1_1group_1_1global__reduce__t_3_01reduce__op_1_1sum_00_01tile__shape__acc___0020b1b0c7949684410e683d16f56c4ce4.html#a7e45a754b6ee03a0834ddb2724e1d55e", null ],
+    [ "mem_desc_acc_t", "classgpu_1_1xetla_1_1group_1_1global__reduce__t_3_01reduce__op_1_1sum_00_01tile__shape__acc___0020b1b0c7949684410e683d16f56c4ce4.html#a2db892e8c8c415d2f5137d0ea0179e28", null ],
+    [ "mem_desc_cnt_t", "classgpu_1_1xetla_1_1group_1_1global__reduce__t_3_01reduce__op_1_1sum_00_01tile__shape__acc___0020b1b0c7949684410e683d16f56c4ce4.html#a1f05c94dc2cacae8b1410093d1a6c5e4", null ],
+    [ "tile_shape_acc", "classgpu_1_1xetla_1_1group_1_1global__reduce__t_3_01reduce__op_1_1sum_00_01tile__shape__acc___0020b1b0c7949684410e683d16f56c4ce4.html#a3848c39801467e4e2468d97e9e026c0c", null ],
+    [ "tile_shape_cnt", "classgpu_1_1xetla_1_1group_1_1global__reduce__t_3_01reduce__op_1_1sum_00_01tile__shape__acc___0020b1b0c7949684410e683d16f56c4ce4.html#ae3526077a07232ef10401dab651f0782", null ],
+    [ "is_last_group", "classgpu_1_1xetla_1_1group_1_1global__reduce__t_3_01reduce__op_1_1sum_00_01tile__shape__acc___0020b1b0c7949684410e683d16f56c4ce4.html#a5241ef82d44f9fba2122d56f899bdd41", null ],
+    [ "operator()", "classgpu_1_1xetla_1_1group_1_1global__reduce__t_3_01reduce__op_1_1sum_00_01tile__shape__acc___0020b1b0c7949684410e683d16f56c4ce4.html#a14a08d7c05c92c88aebf20a8d7ad4a33", null ]
+];

@@ -1,0 +1,9 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node0 [id="Node000000",label="gpu::xetla::subgroup\l::tile_desc_t\< tile_size\l_x_, tile_size_y_, block\l_size_x_, block_size_y_,\l reg_layout_ \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1subgroup_1_1tile__desc__t.html",tooltip="Is to illustrate the tile information about a sub matrix."];
+}

@@ -1,0 +1,9 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node0 [id="Node000000",label="gpu::xetla::kernel\l::xetla_mha_attn_reg\l_bwd_t\< dtype_bwd_bin\l_, dtype_bwd_bot_, dtype\l_bwd_sfx_, dtype_bwd_acc\l_, HWThreadNum, Dopt_RandGenflag,\l Mkin_flag, Max_SeqLen \>::arguments_t",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1kernel_1_1xetla__mha__attn__reg__bwd__t_1_1arguments__t.html",tooltip="Arguments for xetla_softmax_bwd_t::run."];
+}

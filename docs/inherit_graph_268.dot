@@ -1,0 +1,9 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node0 [id="Node000000",label="gpu::xetla::subgroup\l::prefetch_payload_t\l\< dtype_, tile_desc_,\l mem_layout_, mem_space\l_, cooperative_num_, arch\l_tag, enable \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1subgroup_1_1prefetch__payload__t.html",tooltip="Is to illustrate the memory information to prefetch data to cache."];
+}

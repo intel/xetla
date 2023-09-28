@@ -8,6 +8,7 @@ var dir_55c6aacdd19a444dac43fdec2e233557 =
     [ "bit_mask_manipulation.hpp", "bit__mask__manipulation_8hpp.html", "bit__mask__manipulation_8hpp" ],
     [ "common.hpp", "common_2core_2common_8hpp.html", "common_2core_2common_8hpp" ],
     [ "core.hpp", "core_8hpp.html", null ],
+    [ "debug.hpp", "debug_8hpp.html", "debug_8hpp" ],
     [ "explicit_conv.hpp", "explicit__conv_8hpp.html", "explicit__conv_8hpp" ],
     [ "math_fma.hpp", "math__fma_8hpp.html", null ],
     [ "math_general.hpp", "math__general_8hpp.html", "math__general_8hpp" ],

@@ -1,0 +1,9 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node0 [id="Node000000",label="gpu::xetla::subgroup\l::tile_mma_t\< matAcc\l_dst_t_, matAcc_src_t\l_, matB_t_, matA_t_, mma\l_engine::fpu, arch_tag_,\l std::enable_if_t\<(arch_tag\l_==gpu_arch::Xe)\> \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t_3_01matAcc__dst__t___00_01matAcc__src__t___00_01m06b88c4e579b298664a350bfbec02f8f.html",tooltip="Is the tile mma operation functor, specialized for Xe and fpu engine."];
+}

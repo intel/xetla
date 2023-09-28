@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['batch_5fimpl_5ft_0',['batch_impl_t',['../batch__gemm_8cpp.html#adf130ac911fa889d62ba0cfdc63e7d65',1,'batch_gemm.cpp']]]
+  ['cache_5fhint_0',['cache_hint',['../namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30',1,'gpu::xetla']]]
 ];

@@ -1,0 +1,9 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node0 [id="Node000000",label="gpu::xetla::subgroup\l::check_store\< gpu_arch\l::Xe, dtype, mem_dtype\l \>::global_atomic\< tile\l_bytes, min_store_bytes,\l block_bytes, num_channel\l_x, num_channel \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1subgroup_1_1check__store_3_01gpu__arch_1_1Xe_00_01dtype_00_01mem__dtype_01_4_1_1global__atomic.html",tooltip=" "];
+}

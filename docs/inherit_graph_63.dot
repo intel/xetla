@@ -1,0 +1,9 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node0 [id="Node000000",label="gpu::xetla::group::\lglobal_reduce_t\< reduce\l_op::sum, tile_shape_acc\l_, tile_shape_cnt_, mem_desc\l_acc_t_, mem_desc_cnt_t_, num\l_group_reduction, counter_size,\l arch_tag_, std::enable_if_t\<(arch\l_tag_==gpu_arch::Xe)\> \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classgpu_1_1xetla_1_1group_1_1global__reduce__t_3_01reduce__op_1_1sum_00_01tile__shape__acc___0028bb5985022f807549f0ba9db49ff505.html",tooltip="Cross group global reduction. Specialized for reduce_op::sum and Xe architecture."];
+}

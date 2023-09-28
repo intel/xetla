@@ -1,0 +1,12 @@
+var classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01maf870da62a66a97645bea3be36350f7fb =
+[
+    [ "dtype", "classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01maf870da62a66a97645bea3be36350f7fb.html#ada6aaed86a5a7342ae7db510ca80b065", null ],
+    [ "mat_slice_t", "classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01maf870da62a66a97645bea3be36350f7fb.html#a5a57cf60dac8a511bec26361c86c33f4", null ],
+    [ "tile_shape", "classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01maf870da62a66a97645bea3be36350f7fb.html#ac0d08cb7e74c8dc9f2dc98778c2d2cf1", null ],
+    [ "cooperative_reduce_t", "classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01maf870da62a66a97645bea3be36350f7fb.html#ac663dbf17a7ebb30785fb94373da996c", null ],
+    [ "is_valid_post_process_wg", "classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01maf870da62a66a97645bea3be36350f7fb.html#a52cb67126b6b4f59b962ba5ef7f280b6", null ],
+    [ "operator()", "classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01maf870da62a66a97645bea3be36350f7fb.html#a8192e914346523f5db815e9c9ff4babe", null ],
+    [ "coop_id", "classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01maf870da62a66a97645bea3be36350f7fb.html#a93f7e0bd4a59ea4901c5c582ced8e4df", null ],
+    [ "coop_id_x", "classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01maf870da62a66a97645bea3be36350f7fb.html#a57082c27566384077831372e1b78073a", null ],
+    [ "coop_id_y", "classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01maf870da62a66a97645bea3be36350f7fb.html#a907d40160879fb2c778056e3abd8f5c5", null ]
+];

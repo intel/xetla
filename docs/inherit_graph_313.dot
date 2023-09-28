@@ -1,0 +1,15 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node0 [id="Node000000",label="std::true_type",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node0 -> Node1 [id="edge13_Node000000_Node000001",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 [id="Node000001",label="gpu::xetla::is_host\l_callable\< T, std::enable\l_if_t\< T::host_callable\l==true \> \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1is__host__callable_3_01T_00_01std_1_1enable__if__t_3_01T_1_1host__callable_0a_0atrue_01_4_01_4.html",tooltip=" "];
+  Node0 -> Node2 [id="edge14_Node000000_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="gpu::xetla::subgroup\l::global_atomic_oob_check\l_on_tag",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1subgroup_1_1global__atomic__oob__check__on__tag.html",tooltip=" "];
+  Node0 -> Node3 [id="edge15_Node000000_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="sycl::is_device_copyable\l\< T, std::enable_if_t\<\l gpu::xetla::is_host_callable\l\< T \>::value \> \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structsycl_1_1is__device__copyable_3_01T_00_01std_1_1enable__if__t_3_01gpu_1_1xetla_1_1is__host_cf13af5cc49ff51c2d56dc67f2e77257.html",tooltip=" "];
+}
