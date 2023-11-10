@@ -1,5 +1,0 @@
-<map id="gpu::xetla::group::row_reduction_fused_op_t&lt; reduction_fused_kind::bias_gelu_w_bwd, dtype_in_, dtype_out_, dtype_acc_, reduction_attr_, gpu_arch::Xe &gt;" name="gpu::xetla::group::row_reduction_fused_op_t&lt; reduction_fused_kind::bias_gelu_w_bwd, dtype_in_, dtype_out_, dtype_acc_, reduction_attr_, gpu_arch::Xe &gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="352,30,532,143"/>
-<area shape="rect" id="node2" href="$structgpu_1_1xetla_1_1mem__desc__t.html" title=" " alt="" coords="8,5,184,75"/>
-<area shape="rect" id="node3" href="$structgpu_1_1xetla_1_1mem__desc__t.html" title=" " alt="" coords="5,99,187,168"/>
-</map>

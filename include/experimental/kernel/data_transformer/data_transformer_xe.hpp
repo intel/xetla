@@ -19,10 +19,10 @@
 
 #pragma once
 
-#include "experimental/group/reduction/reduction_xe.hpp"
 #include "experimental/kernel/data_transformer/api.hpp"
 #include "experimental/kernel/data_transformer/common.hpp"
 #include "experimental/kernel/data_transformer/config.hpp"
+#include "group/reduction/reduction_xe.hpp"
 
 namespace gpu::xetla::kernel {
 
@@ -63,8 +63,8 @@ struct xetla_data_transformer<dtype_in_, dtype_out_, dtype_compute_,
     static constexpr uint32_t wg_size_y
             = (wg_tile_m + sg_tile_m - 1) / sg_tile_m;
 
-    using arch_attr = arch_attr_t<gpu_arch::Xe>;
-    using load_store_attr = arch_attr::load_store_attr;
+    using load_store_attr = typename arch_attr_t<
+            gpu_arch::Xe>::template load_store_attr<msg_type::block_2d>;
     static constexpr uint32_t max_load_height_in_elem
             = load_store_attr::max_load_height_in_elem;
     static constexpr uint32_t max_load_width_in_bytes
@@ -95,9 +95,6 @@ struct xetla_data_transformer<dtype_in_, dtype_out_, dtype_compute_,
     static constexpr uint32_t block_size_x
             = gpu::xetla::subgroup::detail::gcd<load_size_x, st_size_x>::value;
 
-    static constexpr bool is_vnni_tiled_in
-            = (sizeof(dtype_in) < sizeof(uint32_t)) && is_col_major_in;
-
     static constexpr uint32_t block_size_y_limit
             = is_col_major_in ? max_trans_block_width : max_load_height_in_elem;
 
@@ -105,23 +102,23 @@ struct xetla_data_transformer<dtype_in_, dtype_out_, dtype_compute_,
             ? tile_size_y
             : block_size_y_limit;
 
-    static constexpr reg_layout in_reg_layout
-            = is_vnni_tiled_in ? reg_layout::vnni_tiled : reg_layout::tiled;
+    static constexpr reg_layout in_reg_layout = reg_layout::tiled;
 
     using global_ld_tile_desc_t = subgroup::tile_desc_t<tile_size_x,
             tile_size_y, block_size_x, block_size_y, in_reg_layout>;
     using global_ld_t = subgroup::tile_t<dtype_in, global_ld_tile_desc_t>;
-    using global_ld_payload_t = subgroup::mem_payload_t<dtype_in,
+    using global_ld_payload_t = subgroup::mem_payload_t<
+            mem_desc_t<dtype_in, mem_layout_in, mem_space::global>,
             global_ld_tile_desc_t,
             subgroup::msg_type_v<global_ld_tile_desc_t, mem_space::global>,
-            mem_layout_in, mem_space::global, gpu_arch::Xe>;
+            gpu_arch::Xe>;
 
     using global_st_tile_desc_t = subgroup::tile_desc_t<tile_size_x,
             tile_size_y, block_size_x, block_size_y, reg_layout::tiled>;
     using global_st_t = subgroup::tile_t<dtype_out, global_st_tile_desc_t>;
-    using global_st_payload_t = subgroup::mem_payload_t<dtype_out,
-            global_st_tile_desc_t, msg_type::block_2d, mem_layout::row_major,
-            mem_space::global, gpu_arch::Xe>;
+    using global_st_payload_t = subgroup::mem_payload_t<
+            mem_desc_t<dtype_out, mem_layout::row_major, mem_space::global>,
+            global_st_tile_desc_t, msg_type::block_2d, gpu_arch::Xe>;
     using global_compute_tile_desc = subgroup::tile_desc_t<tile_size_x,
             tile_size_y, block_size_x, block_size_y, reg_layout::tiled>;
     using global_compute_t
@@ -167,13 +164,13 @@ struct xetla_data_transformer<dtype_in_, dtype_out_, dtype_compute_,
 
     /// @brief Main execution function for data_transformer.
     /// The basic process is load data -> data_transformer -> write out.
-    /// @param ei
+    /// @param item Is the sycl::nd_item.
     /// @param args Includes base pointer and matrix size.
     /// @return
-    __XETLA_API static void call(xetla_exec_item<3> &ei, arguments_t *args) {
-        int tid_x = ei.get_local_id(2);
-        int tid_y = ei.get_local_id(1);
-        uint32_t sg_id = ei.get_local_linear_id();
+    __XETLA_API static void call(sycl::nd_item<3> &item, arguments_t *args) {
+        int tid_x = item.get_local_id(2);
+        int tid_y = item.get_local_id(1);
+        uint32_t sg_id = item.get_local_linear_id();
 
         global_ld_t mat_global_ld;
         global_ld_payload_t global_ld_payload;
@@ -211,10 +208,6 @@ struct xetla_data_transformer<dtype_in_, dtype_out_, dtype_compute_,
                 global_st_start_y);
 
         subgroup::tile_load(mat_global_ld, global_ld_payload);
-        //If the data type is fp16 or bf8, it is necessary to use vnni_reverse to rearrange the data
-        if constexpr (is_vnni_tiled_in) {
-            subgroup::vnni_reverse(mat_global_ld);
-        }
 
         if constexpr (need_fp8_op) {
             subgroup::elemwise_cvt(mat_global_compute, mat_global_ld);
@@ -251,9 +244,8 @@ struct xetla_data_transformer<dtype_in_, dtype_out_, dtype_compute_,
 
             xetla_tatomic_store_global<dtype_compute, simd,
                     cache_hint::uncached, cache_hint::write_back,
-                    atomic_op::fmax>(
-                    offsets * sizeof(dtype_compute) + (uint64_t)args->amax_ptr,
-                    local_max, pred);
+                    atomic_op::fmax>((uint64_t)args->amax_ptr,
+                    offsets * sizeof(dtype_compute), local_max, pred);
         } else {
             subgroup::elemwise_cvt(mat_global_st, mat_global_ld);
         }

@@ -5,5 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="gpu::xetla::subgroup\l::detail::NextPowerOf2\l\< N, K, K_gt_eq_N \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1subgroup_1_1detail_1_1NextPowerOf2.html",tooltip="Compute next power of 2 of a constexpr with guaranteed compile-time evaluation."];
+  Node0 [id="Node000000",label="gpu::xetla::kernel\l::xetla_mha_core_attn\l_fwd_t\< dtype_bin_, dtype\l_bot_, dtype_sfx_, dtype\l_acc_, HWThreadNum, Dopt_RandGenflag,\l RandSIMD, Max_SeqLen \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html",tooltip=" "];
 }

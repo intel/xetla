@@ -7,11 +7,11 @@ var structgpu_1_1xetla_1_1kernel_1_1layer__norm__bwd__t_3_01dtype__x___00_01dtyp
     [ "dtype_weight", "structgpu_1_1xetla_1_1kernel_1_1layer__norm__bwd__t_3_01dtype__x___00_01dtype__y___00_01dtype__w5e223ea0bd3a3851e47c460f10bccc84.html#a6e3963e378066c5d245fe66f74738797", null ],
     [ "dtype_x", "structgpu_1_1xetla_1_1kernel_1_1layer__norm__bwd__t_3_01dtype__x___00_01dtype__y___00_01dtype__w5e223ea0bd3a3851e47c460f10bccc84.html#ace04ac4e6f750e6dc131157a3250d5b3", null ],
     [ "dtype_y", "structgpu_1_1xetla_1_1kernel_1_1layer__norm__bwd__t_3_01dtype__x___00_01dtype__y___00_01dtype__w5e223ea0bd3a3851e47c460f10bccc84.html#a65c0ca9026ee5e6887929571e292c927", null ],
-    [ "dx_out_payload_t", "structgpu_1_1xetla_1_1kernel_1_1layer__norm__bwd__t_3_01dtype__x___00_01dtype__y___00_01dtype__w5e223ea0bd3a3851e47c460f10bccc84.html#a2b98d2cb045bdd5be0732612d0adbc86", null ],
+    [ "dx_out_payload_t", "structgpu_1_1xetla_1_1kernel_1_1layer__norm__bwd__t_3_01dtype__x___00_01dtype__y___00_01dtype__w5e223ea0bd3a3851e47c460f10bccc84.html#a76befa0f6e5884b2e95df488f1ce780f", null ],
     [ "dx_out_t", "structgpu_1_1xetla_1_1kernel_1_1layer__norm__bwd__t_3_01dtype__x___00_01dtype__y___00_01dtype__w5e223ea0bd3a3851e47c460f10bccc84.html#a4d0483865997c4db80dc50aaed79dc8c", null ],
-    [ "dy_in_payload_t", "structgpu_1_1xetla_1_1kernel_1_1layer__norm__bwd__t_3_01dtype__x___00_01dtype__y___00_01dtype__w5e223ea0bd3a3851e47c460f10bccc84.html#af898e3b363f782a5a2713f3b377351d8", null ],
+    [ "dy_in_payload_t", "structgpu_1_1xetla_1_1kernel_1_1layer__norm__bwd__t_3_01dtype__x___00_01dtype__y___00_01dtype__w5e223ea0bd3a3851e47c460f10bccc84.html#adf84abff0162221170a48d595c32e6bb", null ],
     [ "dy_in_t", "structgpu_1_1xetla_1_1kernel_1_1layer__norm__bwd__t_3_01dtype__x___00_01dtype__y___00_01dtype__w5e223ea0bd3a3851e47c460f10bccc84.html#add61cc0691c45d3c9019565ccb336d69", null ],
-    [ "gamma_in_payload_t", "structgpu_1_1xetla_1_1kernel_1_1layer__norm__bwd__t_3_01dtype__x___00_01dtype__y___00_01dtype__w5e223ea0bd3a3851e47c460f10bccc84.html#a2f05c10d0be4dc98b6aab412c922a0a4", null ],
+    [ "gamma_in_payload_t", "structgpu_1_1xetla_1_1kernel_1_1layer__norm__bwd__t_3_01dtype__x___00_01dtype__y___00_01dtype__w5e223ea0bd3a3851e47c460f10bccc84.html#a59d6bb4cfbca982fcc56b25c6ecdf94a", null ],
     [ "gamma_in_t", "structgpu_1_1xetla_1_1kernel_1_1layer__norm__bwd__t_3_01dtype__x___00_01dtype__y___00_01dtype__w5e223ea0bd3a3851e47c460f10bccc84.html#ac8f8804762c357730f2b9d49377c8486", null ],
     [ "layer_norm_attr", "structgpu_1_1xetla_1_1kernel_1_1layer__norm__bwd__t_3_01dtype__x___00_01dtype__y___00_01dtype__w5e223ea0bd3a3851e47c460f10bccc84.html#a6643584dccd935324777d22721c9e924", null ],
     [ "ln_bwd_fused_op", "structgpu_1_1xetla_1_1kernel_1_1layer__norm__bwd__t_3_01dtype__x___00_01dtype__y___00_01dtype__w5e223ea0bd3a3851e47c460f10bccc84.html#abb73d94fccf7341dd998753a3a6978c2", null ],
@@ -19,6 +19,6 @@ var structgpu_1_1xetla_1_1kernel_1_1layer__norm__bwd__t_3_01dtype__x___00_01dtyp
     [ "ln_fused_op_arguments_t", "structgpu_1_1xetla_1_1kernel_1_1layer__norm__bwd__t_3_01dtype__x___00_01dtype__y___00_01dtype__w5e223ea0bd3a3851e47c460f10bccc84.html#a856d703aca448075c793a40d821d87ca", null ],
     [ "ln_group_row_reduce_store_t", "structgpu_1_1xetla_1_1kernel_1_1layer__norm__bwd__t_3_01dtype__x___00_01dtype__y___00_01dtype__w5e223ea0bd3a3851e47c460f10bccc84.html#ac86328b2cecc88f01c67b37649e8703d", null ],
     [ "work_group_t", "structgpu_1_1xetla_1_1kernel_1_1layer__norm__bwd__t_3_01dtype__x___00_01dtype__y___00_01dtype__w5e223ea0bd3a3851e47c460f10bccc84.html#ab8f68b77c72bf88647ee8f0f4194b86f", null ],
-    [ "x_in_payload_t", "structgpu_1_1xetla_1_1kernel_1_1layer__norm__bwd__t_3_01dtype__x___00_01dtype__y___00_01dtype__w5e223ea0bd3a3851e47c460f10bccc84.html#a0650614bd474bd69affffef2ed39d4ae", null ],
+    [ "x_in_payload_t", "structgpu_1_1xetla_1_1kernel_1_1layer__norm__bwd__t_3_01dtype__x___00_01dtype__y___00_01dtype__w5e223ea0bd3a3851e47c460f10bccc84.html#ae69beef3a1c24c777b2928bea7cba169", null ],
     [ "x_in_t", "structgpu_1_1xetla_1_1kernel_1_1layer__norm__bwd__t_3_01dtype__x___00_01dtype__y___00_01dtype__w5e223ea0bd3a3851e47c460f10bccc84.html#a30925312d8fbb91257bfafad218a8435", null ]
 ];

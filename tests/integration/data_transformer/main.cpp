@@ -42,41 +42,49 @@ static void data_transformer_run() {
 
     //Turn on the enable_profiling property to facilitate subsequent profiling
     sycl::property_list properties {sycl::property::queue::enable_profiling()};
-    auto Queue = queue(properties);
-    auto Context = Queue.get_info<info::queue::context>();
-    auto Device = Queue.get_info<info::queue::device>();
+    auto queue = sycl::queue(properties);
+    auto context = queue.get_info<info::queue::context>();
+    auto device = queue.get_info<info::queue::device>();
 
-    std::cout << "Running on " << Device.get_info<info::device::name>() << "\n";
+    std::cout << "Running on " << device.get_info<info::device::name>() << "\n";
 
     int size = matrix_m * matrix_n;
 
-    data_type_in *buffer_in = static_cast<data_type_in *>(
-            malloc_shared(size * sizeof(data_type_in), Device, Context));
-    data_type_out *buffer_out = static_cast<data_type_out *>(
-            malloc_shared(size * sizeof(data_type_out), Device, Context));
+    auto buffer_in = alloc_device_and_init<data_type_in>(
+            size,
+            [](data_type_in *data, size_t idx) {
+                data[idx] = static_cast<data_type_in>(
+                        (random_float() - 0.5) * 10);
+            },
+            queue, device, context);
+    auto buffer_out = alloc_device_and_init<data_type_out>(
+            size,
+            [](data_type_out *data, size_t idx) {
+                data[idx] = static_cast<data_type_out>(0);
+            },
+            queue, device, context);
+    auto amax_ptr = alloc_device_and_init<data_type_acc>(
+            1,
+            [](data_type_acc *data, size_t idx) {
+                data[idx] = static_cast<data_type_acc>(0);
+            },
+            queue, device, context);
+    auto scale = alloc_device_and_init<data_type_acc>(
+            1,
+            [](data_type_acc *data, size_t idx) {
+                data[idx] = static_cast<data_type_acc>(0.8);
+            },
+            queue, device, context);
 
-    data_type_acc *amax_ptr = static_cast<data_type_acc *>(
-            malloc_shared(sizeof(data_type_acc), Device, Context));
-    data_type_acc *scale = static_cast<data_type_acc *>(
-            malloc_shared(sizeof(data_type_acc), Device, Context));
-
-    amax_ptr[0] = (data_type_acc)(0);
-    scale[0] = (data_type_acc)(0.8);
-
-    for (unsigned i = 0; i < size; ++i) {
-        buffer_in[i] = (random_float() - 0.5) * 10;
-        buffer_out[i] = 0;
-    }
-
-    cl::sycl::range<3> GroupRange {1, (matrix_m + wg_tile_m - 1) / wg_tile_m,
+    cl::sycl::range<3> group_range {1, (matrix_m + wg_tile_m - 1) / wg_tile_m,
             (matrix_n + wg_tile_n - 1) / wg_tile_n};
-    cl::sycl::range<3> LocalRange {1, (wg_tile_m + sg_tile_m - 1) / sg_tile_m,
+    cl::sycl::range<3> local_range {1, (wg_tile_m + sg_tile_m - 1) / sg_tile_m,
             (wg_tile_n + sg_tile_n - 1) / sg_tile_n};
-    cl::sycl::nd_range<3> Range(GroupRange * LocalRange, LocalRange);
+    cl::sycl::nd_range<3> nd_range(group_range * local_range, local_range);
 
     std::vector<kernel_id> kernelId = {get_kernel_id<Test>()};
     auto inputBundle
-            = get_kernel_bundle<bundle_state::input>(Context, kernelId);
+            = get_kernel_bundle<bundle_state::input>(context, kernelId);
     setenv("SYCL_PROGRAM_COMPILE_OPTIONS",
             " -vc-codegen -Xfinalizer ' "
             "-printregusage -enableBCR  "
@@ -86,10 +94,10 @@ static void data_transformer_run() {
     unsetenv("SYCL_PROGRAM_COMPILE_OPTIONS");
 
     try {
-        auto e_esimd = Queue.submit([&](handler &cgh) {
+        auto e_esimd = queue.submit([&](handler &cgh) {
             cgh.use_kernel_bundle(exeBundle);
             cgh.parallel_for<
-                    Test>(Range, [=](nd_item<3> item) SYCL_ESIMD_KERNEL {
+                    Test>(nd_range, [=](nd_item<3> item) SYCL_ESIMD_KERNEL {
                 using data_transformer_attr
                         = gpu::xetla::kernel::data_transformer_attr_t<wg_tile_n,
                                 wg_tile_m, sg_tile_n, sg_tile_m>;
@@ -108,11 +116,11 @@ static void data_transformer_run() {
                 constexpr uint32_t slm_size
                         = data_transformer::get_slm_size::size;
                 if constexpr (slm_size != 0) { xetla_local_init<slm_size>(); }
-                xetla_exec_item<3> ei(item);
+
                 data_transformer_func<data_type_in, data_type_out,
                         data_type_acc, wg_tile_n, wg_tile_m, sg_tile_n,
-                        sg_tile_m, Test::layout_in, need_fp8_op>(ei, buffer_in,
-                        buffer_out, matrix_m, matrix_n, matrix_in_ld,
+                        sg_tile_m, Test::layout_in, need_fp8_op>(item,
+                        buffer_in, buffer_out, matrix_m, matrix_n, matrix_in_ld,
                         matrix_out_ld, scale, amax_ptr);
             });
         });
@@ -128,12 +136,12 @@ static void data_transformer_run() {
     ASSERT_EQ(0,
             (data_transformer_result_validate<data_type_in, data_type_out>(
                     buffer_in, buffer_out, Test::mat_m, Test::mat_n,
-                    is_transposed, need_fp8_op, amax_ptr, scale)));
+                    is_transposed, need_fp8_op, amax_ptr, scale, queue)));
 
-    free(buffer_in, Context);
-    free(buffer_out, Context);
-    free(amax_ptr, Context);
-    free(scale, Context);
+    free(buffer_in, context);
+    free(buffer_out, context);
+    free(amax_ptr, context);
+    free(scale, context);
 }
 
 TEST(TestBase, esimd) {

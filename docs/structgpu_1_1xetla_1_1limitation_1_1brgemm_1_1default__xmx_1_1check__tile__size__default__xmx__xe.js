@@ -1,4 +1,0 @@
-var structgpu_1_1xetla_1_1limitation_1_1brgemm_1_1default__xmx_1_1check__tile__size__default__xmx__xe =
-[
-    [ "mma_attr", "structgpu_1_1xetla_1_1limitation_1_1brgemm_1_1default__xmx_1_1check__tile__size__default__xmx__xe.html#a3afc228169b2041d5cbc5893f1b4580a", null ]
-];

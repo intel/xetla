@@ -26,7 +26,7 @@ template <typename dtypeA, typename dtypeB, typename dtypeC, typename dtypeAcc,
         uint32_t m, uint32_t n, uint32_t k>
 struct tile_mma_func {
     static KERNEL_FUNC inline void run(
-            xetla_exec_item<1> *ei, dtypeA *a, dtypeB *b, dtypeC *c) {
+            sycl::nd_item<1> *item, dtypeA *a, dtypeB *b, dtypeC *c) {
 
         int width_a = k;
         int height_a = m;
@@ -48,19 +48,21 @@ struct tile_mma_func {
         using matA_t = tile_t<dtypeA, matA_tile_desc_t>;
         using matB_t = tile_t<dtypeB, matB_tile_desc_t>;
         using matC_t = tile_t<dtypeC, matC_tile_desc_t>;
-        using matA_payload_t = mem_payload_t<dtypeA, matA_tile_desc_t,
-                msg_type_v<matA_tile_desc_t, mem_space::global>,
-                mem_layout::row_major, mem_space::global, gpu_arch::Xe>;
-        using matB_payload_t = mem_payload_t<dtypeB, matB_tile_desc_t,
-                msg_type_v<matB_tile_desc_t, mem_space::global>,
-                mem_layout::row_major, mem_space::global, gpu_arch::Xe>;
-        using matC_payload_t
-                = mem_payload_t<dtypeC, matC_tile_desc_t, msg_type::block_2d,
-                        mem_layout::row_major, mem_space::global, gpu_arch::Xe>;
+        using matA_payload_t = mem_payload_t<
+                mem_desc_t<dtypeA, mem_layout::row_major, mem_space::global>,
+                matA_tile_desc_t,
+                msg_type_v<matA_tile_desc_t, mem_space::global>, gpu_arch::Xe>;
+        using matB_payload_t = mem_payload_t<
+                mem_desc_t<dtypeB, mem_layout::row_major, mem_space::global>,
+                matB_tile_desc_t,
+                msg_type_v<matB_tile_desc_t, mem_space::global>, gpu_arch::Xe>;
+        using matC_payload_t = mem_payload_t<
+                mem_desc_t<dtypeC, mem_layout::row_major, mem_space::global>,
+                matC_tile_desc_t, msg_type::block_2d, gpu_arch::Xe>;
         using matAcc_t
                 = tile_t<dtypeAcc, tile_desc_t<n, m, 16, 8, reg_layout::tiled>>;
 
-        using tile_mma = tile_mma_t<matA_t, matB_t, matAcc_t, matAcc_t,
+        using tile_mma = tile_mma_t<matAcc_t, matAcc_t, matB_t, matA_t,
                 mma_engine::xmx, gpu_arch::Xe>;
 
         matA_t matA;
@@ -82,7 +84,7 @@ struct tile_mma_func {
         subgroup::tile_load<cache_hint::cached, cache_hint::cached>(
                 matB, matB_payload);
         SW_BARRIER();
-        tile_mma::mma(matA, matB, matAcc, matAcc);
+        tile_mma::mma(matAcc, matAcc, matB, matA);
         SW_BARRIER();
         matC.reg = xetla_cvt<dtypeC, dtypeAcc, matAcc_t::tile_desc::tile_elems>(
                 matAcc.reg);

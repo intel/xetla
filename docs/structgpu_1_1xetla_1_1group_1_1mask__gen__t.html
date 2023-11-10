@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.5</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.6</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -130,8 +130,8 @@ Public Types</h2></td></tr>
 <tr class="separator:a96748d5e32ebc4e69622ac242119de45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab17d624acf4636cdf4a493e7e366b4cc"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1group_1_1mask__gen__t.html#ab17d624acf4636cdf4a493e7e366b4cc">mask_out_tile_t</a> = <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__t.html">subgroup::tile_t</a>&lt; <a class="el" href="structgpu_1_1xetla_1_1group_1_1mask__gen__t.html#a58e5f084370bd7244d505446558e09a8">dtype_mask</a>, <a class="el" href="structgpu_1_1xetla_1_1group_1_1mask__gen__t.html#a96748d5e32ebc4e69622ac242119de45">mask_out_tile_desc_t</a> &gt;</td></tr>
 <tr class="separator:ab17d624acf4636cdf4a493e7e366b4cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73e5da8a6d0ba6f26dd7ea0a468c376c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1group_1_1mask__gen__t.html#a73e5da8a6d0ba6f26dd7ea0a468c376c">mask_out_payload_t</a> = <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t.html">subgroup::mem_payload_t</a>&lt; <a class="el" href="structgpu_1_1xetla_1_1group_1_1mask__gen__t.html#a58e5f084370bd7244d505446558e09a8">dtype_mask</a>, <a class="el" href="structgpu_1_1xetla_1_1group_1_1mask__gen__t.html#a96748d5e32ebc4e69622ac242119de45">mask_out_tile_desc_t</a>,(<a class="el" href="structgpu_1_1xetla_1_1group_1_1mask__gen__t.html#a25255a5e8c82922eeb61cb31e8a86690">sg_tile_m</a>==1) ? <a class="el" href="namespacegpu_1_1xetla.html#aa8afe1d12e7777419fb6ea09534a0aa7a5baf9a1aba8e4b6fa44c20aafacc4233">msg_type::block_1d</a> :<a class="el" href="namespacegpu_1_1xetla.html#aa8afe1d12e7777419fb6ea09534a0aa7af359df7632214793e086fdf1885d5db6">msg_type::block_2d</a>, <a class="el" href="namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561a641fabb8e5e7d1d0333e2c9c384f959c">mem_layout::row_major</a>, <a class="el" href="namespacegpu_1_1xetla.html#a7f225ed816e841c1d31414d872dae59da9c70933aff6b2a6d08c687a6cbb6b765">mem_space::global</a>, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;</td></tr>
-<tr class="separator:a73e5da8a6d0ba6f26dd7ea0a468c376c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b472229b7a7ad9af737ed39310ab535"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1group_1_1mask__gen__t.html#a9b472229b7a7ad9af737ed39310ab535">mask_out_payload_t</a> = <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t.html">subgroup::mem_payload_t</a>&lt; <a class="el" href="structgpu_1_1xetla_1_1mem__desc__t.html">mem_desc_t</a>&lt; <a class="el" href="structgpu_1_1xetla_1_1group_1_1mask__gen__t.html#a58e5f084370bd7244d505446558e09a8">dtype_mask</a>, <a class="el" href="namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561a641fabb8e5e7d1d0333e2c9c384f959c">mem_layout::row_major</a>, <a class="el" href="namespacegpu_1_1xetla.html#a7f225ed816e841c1d31414d872dae59da9c70933aff6b2a6d08c687a6cbb6b765">mem_space::global</a> &gt;, <a class="el" href="structgpu_1_1xetla_1_1group_1_1mask__gen__t.html#a96748d5e32ebc4e69622ac242119de45">mask_out_tile_desc_t</a>,(<a class="el" href="structgpu_1_1xetla_1_1group_1_1mask__gen__t.html#a25255a5e8c82922eeb61cb31e8a86690">sg_tile_m</a>==1) ? <a class="el" href="namespacegpu_1_1xetla.html#aa8afe1d12e7777419fb6ea09534a0aa7a5baf9a1aba8e4b6fa44c20aafacc4233">msg_type::block_1d</a> :<a class="el" href="namespacegpu_1_1xetla.html#aa8afe1d12e7777419fb6ea09534a0aa7af359df7632214793e086fdf1885d5db6">msg_type::block_2d</a>, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;</td></tr>
+<tr class="separator:a9b472229b7a7ad9af737ed39310ab535"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -172,7 +172,7 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:a68c050a4456ef3c3a1b94e8a28df7338"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;typename dtype_mask_, uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_, uint32_t random_simd_ = 16, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_ = gpu_arch::Xe&gt;<br />
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename dtype_mask_, uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_, uint32_t random_simd_ = 16, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_ = gpu_arch::Xe&gt;<br />
 struct gpu::xetla::group::mask_gen_t&lt; dtype_mask_, wg_tile_n_, wg_tile_m_, sg_tile_n_, sg_tile_m_, random_simd_, arch_ &gt;</div><dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">dtype_mask_</td><td></td></tr>
@@ -192,7 +192,7 @@ struct gpu::xetla::group::mask_gen_t&lt; dtype_mask_, wg_tile_n_, wg_tile_m_, sg
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_, uint32_t random_simd_ = 16, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_ = gpu_arch::Xe&gt; </div>
+template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_, uint32_t random_simd_ = 16, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_ = gpu_arch::Xe&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1group_1_1mask__gen__t.html">gpu::xetla::group::mask_gen_t</a>&lt; dtype_mask_, wg_tile_n_, wg_tile_m_, sg_tile_n_, sg_tile_m_, random_simd_, arch_ &gt;::dtype_mask =  dtype_mask_</td>
@@ -208,7 +208,7 @@ template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uin
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_, uint32_t random_simd_ = 16, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_ = gpu_arch::Xe&gt; </div>
+template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_, uint32_t random_simd_ = 16, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_ = gpu_arch::Xe&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1group_1_1mask__gen__t.html">gpu::xetla::group::mask_gen_t</a>&lt; dtype_mask_, wg_tile_n_, wg_tile_m_, sg_tile_n_, sg_tile_m_, random_simd_, arch_ &gt;::load_store_attr =  typename <a class="el" href="structgpu_1_1xetla_1_1arch__attr__t.html">arch_attr_t</a>&lt; arch_&gt;::template <a class="el" href="structgpu_1_1xetla_1_1group_1_1mask__gen__t.html#a4dc6904765cefbdc2d0173a99ed591ca">load_store_attr</a>&lt;<a class="el" href="namespacegpu_1_1xetla.html#aa8afe1d12e7777419fb6ea09534a0aa7af359df7632214793e086fdf1885d5db6">msg_type::block_2d</a>&gt;</td>
@@ -218,16 +218,16 @@ template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uin
 
 </div>
 </div>
-<a id="a73e5da8a6d0ba6f26dd7ea0a468c376c" name="a73e5da8a6d0ba6f26dd7ea0a468c376c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a73e5da8a6d0ba6f26dd7ea0a468c376c">&#9670;&#160;</a></span>mask_out_payload_t</h2>
+<a id="a9b472229b7a7ad9af737ed39310ab535" name="a9b472229b7a7ad9af737ed39310ab535"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b472229b7a7ad9af737ed39310ab535">&#9670;&#160;</a></span>mask_out_payload_t</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_, uint32_t random_simd_ = 16, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_ = gpu_arch::Xe&gt; </div>
+template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_, uint32_t random_simd_ = 16, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_ = gpu_arch::Xe&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1group_1_1mask__gen__t.html">gpu::xetla::group::mask_gen_t</a>&lt; dtype_mask_, wg_tile_n_, wg_tile_m_, sg_tile_n_, sg_tile_m_, random_simd_, arch_ &gt;::mask_out_payload_t =  <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t.html">subgroup::mem_payload_t</a>&lt;<a class="el" href="structgpu_1_1xetla_1_1group_1_1mask__gen__t.html#a58e5f084370bd7244d505446558e09a8">dtype_mask</a>, <a class="el" href="structgpu_1_1xetla_1_1group_1_1mask__gen__t.html#a96748d5e32ebc4e69622ac242119de45">mask_out_tile_desc_t</a>, (<a class="el" href="structgpu_1_1xetla_1_1group_1_1mask__gen__t.html#a25255a5e8c82922eeb61cb31e8a86690">sg_tile_m</a> == 1) ? <a class="el" href="namespacegpu_1_1xetla.html#aa8afe1d12e7777419fb6ea09534a0aa7a5baf9a1aba8e4b6fa44c20aafacc4233">msg_type::block_1d</a> : <a class="el" href="namespacegpu_1_1xetla.html#aa8afe1d12e7777419fb6ea09534a0aa7af359df7632214793e086fdf1885d5db6">msg_type::block_2d</a>, <a class="el" href="namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561a641fabb8e5e7d1d0333e2c9c384f959c">mem_layout::row_major</a>, <a class="el" href="namespacegpu_1_1xetla.html#a7f225ed816e841c1d31414d872dae59da9c70933aff6b2a6d08c687a6cbb6b765">mem_space::global</a>, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>&gt;</td>
+          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1group_1_1mask__gen__t.html">gpu::xetla::group::mask_gen_t</a>&lt; dtype_mask_, wg_tile_n_, wg_tile_m_, sg_tile_n_, sg_tile_m_, random_simd_, arch_ &gt;::mask_out_payload_t =  <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t.html">subgroup::mem_payload_t</a>&lt; <a class="el" href="structgpu_1_1xetla_1_1mem__desc__t.html">mem_desc_t</a>&lt;<a class="el" href="structgpu_1_1xetla_1_1group_1_1mask__gen__t.html#a58e5f084370bd7244d505446558e09a8">dtype_mask</a>, <a class="el" href="namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561a641fabb8e5e7d1d0333e2c9c384f959c">mem_layout::row_major</a>, <a class="el" href="namespacegpu_1_1xetla.html#a7f225ed816e841c1d31414d872dae59da9c70933aff6b2a6d08c687a6cbb6b765">mem_space::global</a>&gt;, <a class="el" href="structgpu_1_1xetla_1_1group_1_1mask__gen__t.html#a96748d5e32ebc4e69622ac242119de45">mask_out_tile_desc_t</a>, (<a class="el" href="structgpu_1_1xetla_1_1group_1_1mask__gen__t.html#a25255a5e8c82922eeb61cb31e8a86690">sg_tile_m</a> == 1) ? <a class="el" href="namespacegpu_1_1xetla.html#aa8afe1d12e7777419fb6ea09534a0aa7a5baf9a1aba8e4b6fa44c20aafacc4233">msg_type::block_1d</a> : <a class="el" href="namespacegpu_1_1xetla.html#aa8afe1d12e7777419fb6ea09534a0aa7af359df7632214793e086fdf1885d5db6">msg_type::block_2d</a>, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -240,7 +240,7 @@ template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uin
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_, uint32_t random_simd_ = 16, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_ = gpu_arch::Xe&gt; </div>
+template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_, uint32_t random_simd_ = 16, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_ = gpu_arch::Xe&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1group_1_1mask__gen__t.html">gpu::xetla::group::mask_gen_t</a>&lt; dtype_mask_, wg_tile_n_, wg_tile_m_, sg_tile_n_, sg_tile_m_, random_simd_, arch_ &gt;::mask_out_tile_desc_t =  <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__desc__t.html">subgroup::tile_desc_t</a>&lt;<a class="el" href="structgpu_1_1xetla_1_1group_1_1mask__gen__t.html#a0a2eb5a1d8f0e66d310cc65c20776dee">tile_size_x</a>, <a class="el" href="structgpu_1_1xetla_1_1group_1_1mask__gen__t.html#a414a297e148a3e944b91249342659375">tile_size_y</a>, <a class="el" href="structgpu_1_1xetla_1_1group_1_1mask__gen__t.html#a08d570bc6c5d4ec069c0450d818a98c9">block_size_x</a>, <a class="el" href="structgpu_1_1xetla_1_1group_1_1mask__gen__t.html#a69e52e34a49cb7472a24b021b49b8c15">block_size_y</a>, <a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa78506882d645395a052df8b01a927395">reg_layout::tiled</a>&gt;</td>
@@ -256,7 +256,7 @@ template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uin
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_, uint32_t random_simd_ = 16, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_ = gpu_arch::Xe&gt; </div>
+template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_, uint32_t random_simd_ = 16, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_ = gpu_arch::Xe&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1group_1_1mask__gen__t.html">gpu::xetla::group::mask_gen_t</a>&lt; dtype_mask_, wg_tile_n_, wg_tile_m_, sg_tile_n_, sg_tile_m_, random_simd_, arch_ &gt;::mask_out_tile_t =  <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__t.html">subgroup::tile_t</a>&lt;<a class="el" href="structgpu_1_1xetla_1_1group_1_1mask__gen__t.html#a58e5f084370bd7244d505446558e09a8">dtype_mask</a>, <a class="el" href="structgpu_1_1xetla_1_1group_1_1mask__gen__t.html#a96748d5e32ebc4e69622ac242119de45">mask_out_tile_desc_t</a>&gt;</td>
@@ -273,7 +273,7 @@ template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uin
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_, uint32_t random_simd_ = 16, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_ = gpu_arch::Xe&gt; </div>
+template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_, uint32_t random_simd_ = 16, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_ = gpu_arch::Xe&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -348,7 +348,7 @@ template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uin
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_, uint32_t random_simd_ = 16, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_ = gpu_arch::Xe&gt; </div>
+template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_, uint32_t random_simd_ = 16, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_ = gpu_arch::Xe&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -378,7 +378,7 @@ template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uin
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_, uint32_t random_simd_ = 16, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_ = gpu_arch::Xe&gt; </div>
+template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_, uint32_t random_simd_ = 16, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_ = gpu_arch::Xe&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -406,7 +406,7 @@ template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uin
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_, uint32_t random_simd_ = 16, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_ = gpu_arch::Xe&gt; </div>
+template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_, uint32_t random_simd_ = 16, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_ = gpu_arch::Xe&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -430,7 +430,7 @@ template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uin
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_, uint32_t random_simd_ = 16, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_ = gpu_arch::Xe&gt; </div>
+template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_, uint32_t random_simd_ = 16, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_ = gpu_arch::Xe&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -454,7 +454,7 @@ template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uin
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_, uint32_t random_simd_ = 16, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_ = gpu_arch::Xe&gt; </div>
+template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_, uint32_t random_simd_ = 16, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_ = gpu_arch::Xe&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -478,7 +478,7 @@ template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uin
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_, uint32_t random_simd_ = 16, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_ = gpu_arch::Xe&gt; </div>
+template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_, uint32_t random_simd_ = 16, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_ = gpu_arch::Xe&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -502,7 +502,7 @@ template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uin
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_, uint32_t random_simd_ = 16, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_ = gpu_arch::Xe&gt; </div>
+template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_, uint32_t random_simd_ = 16, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_ = gpu_arch::Xe&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -526,7 +526,7 @@ template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uin
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_, uint32_t random_simd_ = 16, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_ = gpu_arch::Xe&gt; </div>
+template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_, uint32_t random_simd_ = 16, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_ = gpu_arch::Xe&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -550,7 +550,7 @@ template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uin
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_, uint32_t random_simd_ = 16, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_ = gpu_arch::Xe&gt; </div>
+template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_, uint32_t random_simd_ = 16, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_ = gpu_arch::Xe&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -574,7 +574,7 @@ template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uin
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_, uint32_t random_simd_ = 16, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_ = gpu_arch::Xe&gt; </div>
+template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_, uint32_t random_simd_ = 16, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_ = gpu_arch::Xe&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -598,7 +598,7 @@ template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uin
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_, uint32_t random_simd_ = 16, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_ = gpu_arch::Xe&gt; </div>
+template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_, uint32_t random_simd_ = 16, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_ = gpu_arch::Xe&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -622,7 +622,7 @@ template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uin
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_, uint32_t random_simd_ = 16, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_ = gpu_arch::Xe&gt; </div>
+template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_, uint32_t random_simd_ = 16, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_ = gpu_arch::Xe&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -646,7 +646,7 @@ template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uin
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_, uint32_t random_simd_ = 16, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_ = gpu_arch::Xe&gt; </div>
+template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_, uint32_t random_simd_ = 16, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_ = gpu_arch::Xe&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -670,7 +670,7 @@ template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uin
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_, uint32_t random_simd_ = 16, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_ = gpu_arch::Xe&gt; </div>
+template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_, uint32_t random_simd_ = 16, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_ = gpu_arch::Xe&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -694,7 +694,7 @@ template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uin
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_, uint32_t random_simd_ = 16, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_ = gpu_arch::Xe&gt; </div>
+template&lt;typename dtype_mask_ , uint32_t wg_tile_n_, uint32_t wg_tile_m_, uint32_t sg_tile_n_, uint32_t sg_tile_m_, uint32_t random_simd_ = 16, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_ = gpu_arch::Xe&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">

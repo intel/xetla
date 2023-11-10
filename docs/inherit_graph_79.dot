@@ -5,5 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="gpu::xetla::group::\lln_fwd_fused_op_t\< ln\l_fused_op_kind_, dtype\l_in_, dtype_out_, dtype\l_acc_, layer_norm_attr_,\l gpu_arch::Xe \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1group_1_1ln__fwd__fused__op__t_3_01ln__fused__op__kind___00_01dtype__in___d9ef3e21b9ea10bf2a0134a87c3add4a.html",tooltip=" "];
+  Node0 [id="Node000000",label="gpu::xetla::group::\lepilogue_policy_default\l\< arch_tag_ \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1group_1_1epilogue__policy__default.html",tooltip="Default epilogue policy for store C."];
 }

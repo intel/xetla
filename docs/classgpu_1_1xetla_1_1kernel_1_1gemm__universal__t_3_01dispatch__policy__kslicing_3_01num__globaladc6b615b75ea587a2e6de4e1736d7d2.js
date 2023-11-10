@@ -1,5 +1,0 @@
-var classgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__kslicing_3_01num__globaladc6b615b75ea587a2e6de4e1736d7d2 =
-[
-    [ "arguments_t", "structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__kslicing_3_01num__globa1fdc35b3a7d351203962b58c0b2b4043.html", "structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__kslicing_3_01num__globa1fdc35b3a7d351203962b58c0b2b4043" ],
-    [ "operator()", "classgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__kslicing_3_01num__globaladc6b615b75ea587a2e6de4e1736d7d2.html#af3fe0fd9f9d2ea3781e2ff6e4d4eccc1", null ]
-];

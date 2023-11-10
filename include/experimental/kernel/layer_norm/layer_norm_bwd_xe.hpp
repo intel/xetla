@@ -86,19 +86,24 @@ struct layer_norm_bwd_t<dtype_x_, dtype_y_, dtype_weight_, dtype_acc_,
     using gamma_in_t = subgroup::tile_t<dtype_weight, ln_bwd_tile_desc_t>;
     using dx_out_t = subgroup::tile_t<dtype_x, ln_bwd_tile_desc_t>;
 
-    using dy_in_payload_t = subgroup::mem_payload_t<dtype_y, ln_bwd_tile_desc_t,
+    using dy_in_payload_t = subgroup::mem_payload_t<
+            mem_desc_t<dtype_y, mem_layout::row_major, mem_space::global>,
+            ln_bwd_tile_desc_t,
             subgroup::msg_type_v<ln_bwd_tile_desc_t, mem_space::global>,
-            mem_layout::row_major, mem_space::global, gpu_arch::Xe>;
-    using x_in_payload_t = subgroup::mem_payload_t<dtype_x, ln_bwd_tile_desc_t,
+            gpu_arch::Xe>;
+    using x_in_payload_t = subgroup::mem_payload_t<
+            mem_desc_t<dtype_x, mem_layout::row_major, mem_space::global>,
+            ln_bwd_tile_desc_t,
             subgroup::msg_type_v<ln_bwd_tile_desc_t, mem_space::global>,
-            mem_layout::row_major, mem_space::global, gpu_arch::Xe>;
-    using gamma_in_payload_t
-            = subgroup::mem_payload_t<dtype_weight, ln_bwd_tile_desc_t,
-                    subgroup::msg_type_v<ln_bwd_tile_desc_t, mem_space::global>,
-                    mem_layout::row_major, mem_space::global, gpu_arch::Xe>;
-    using dx_out_payload_t = subgroup::mem_payload_t<dtype_x,
-            ln_bwd_tile_desc_t, msg_type::block_1d, mem_layout::row_major,
-            mem_space::global, gpu_arch::Xe>;
+            gpu_arch::Xe>;
+    using gamma_in_payload_t = subgroup::mem_payload_t<
+            mem_desc_t<dtype_weight, mem_layout::row_major, mem_space::global>,
+            ln_bwd_tile_desc_t,
+            subgroup::msg_type_v<ln_bwd_tile_desc_t, mem_space::global>,
+            gpu_arch::Xe>;
+    using dx_out_payload_t = subgroup::mem_payload_t<
+            mem_desc_t<dtype_x, mem_layout::row_major, mem_space::global>,
+            ln_bwd_tile_desc_t, msg_type::block_1d, gpu_arch::Xe>;
 
     using ln_group_row_reduce_store_t
             = group::group_row_reduce_store_t<dtype_acc, dtype_acc, sg_tile_n,
@@ -233,15 +238,15 @@ private:
             reduce_op::sum, wg_size_x, wg_size_y, gpu_arch::Xe>;
 
 public:
-    __XETLA_API static void call(xetla_exec_item<3> &ei, arguments_t *args,
+    __XETLA_API static void call(sycl::nd_item<3> &item, arguments_t *args,
             uint32_t slm_base = 0, uint32_t nbarrier_base = 0,
             ln_fused_op_arguments_t *fused_op_args = nullptr) {
         work_group_t g;
-        g.init(ei.get_local_linear_id());
+        g.init(item.get_local_linear_id());
         uint32_t sg_idx = g.get_id() % wg_size_x;
         uint32_t sg_idy = g.get_id() / wg_size_x;
-        uint32_t wg_idx = ei.get_group(2);
-        uint32_t wg_idy = ei.get_group(1);
+        uint32_t wg_idx = item.get_group(2);
+        uint32_t wg_idy = item.get_group(1);
         int start_n = wg_idx * wg_tile_n + sg_idx * sg_tile_n;
         int start_m = wg_idy * wg_tile_m + sg_idy * sg_tile_m;
 

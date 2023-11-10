@@ -47,28 +47,26 @@ struct dropout_func_t {
             block_size_x, block_size_y, reg_layout::tiled>;
     using matAcc_t = subgroup::tile_t<dtype_acc, tile_desc_t>;
     using mat_in_t = subgroup::tile_t<dtype_in, tile_desc_t>;
-    using mat_in_payload_t = subgroup::mem_payload_t<dtype_in, tile_desc_t,
-            subgroup::msg_type_v<tile_desc_t, mem_space::global>,
-            mem_layout::row_major, mem_space::global, gpu_arch::Xe>;
+    using mat_in_payload_t = subgroup::mem_payload_t<mem_desc_in_t, tile_desc_t,
+            subgroup::msg_type_v<tile_desc_t, mem_space::global>, gpu_arch::Xe>;
 
     using tile_op_t =
             typename std::conditional<dropout_kind == dropout_op::normal,
                     subgroup::dropout_op_t<uint8_t, gpu_arch::Xe>,
                     subgroup::rng_dropout_op_t<uint8_t, gpu_arch::Xe>>::type;
 
-    using epilogue_t
-            = group::epilogue_t<group::epilogue_policy_tile_op<tile_op_t,
-                                        result_overwrite, gpu_arch::Xe>,
-                    tile_shape, mem_desc_out_t>;
+    using epilogue_t = group::epilogue_t<
+            group::epilogue_policy_tile_op<tile_op_t, gpu_arch::Xe>, tile_shape,
+            mem_desc_out_t>;
     using epilogue_args_t = typename epilogue_t::arguments_t;
 
-    static inline void run(xetla_exec_item<3> &ei, dtype_in *mat_in_ptr,
+    static inline void run(sycl::nd_item<3> &item, dtype_in *mat_in_ptr,
             uint8_t *mask_ptr, dtype_out *mat_out_ptr,
             uint64_t *rand_offset_ptr, uint32_t mat_m, uint32_t mat_n,
             uint32_t mat_ld, float dropout_prob, float dropout_scale) {
-        work_group_t g(ei.get_local_linear_id());
-        int start_n = ei.get_group(2) * wg_n;
-        int start_m = ei.get_group(1) * wg_m;
+        work_group_t g(item.get_local_linear_id());
+        int start_n = item.get_group(2) * wg_n;
+        int start_m = item.get_group(1) * wg_m;
         uint32_t boundary_n
                 = (start_n + wg_n) > mat_n ? mat_n : (start_n + wg_n);
         uint32_t boundary_m

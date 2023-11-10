@@ -5,5 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="gpu::xetla::group::\lrow_reduction_fused\l_op_t\< fused_op_kind\l_, dtype_in_, dtype_out\l_, dtype_acc_, reduction\l_attr_, arch_ \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1group_1_1row__reduction__fused__op__t.html",tooltip="Additional Ops that can be fused with row reduction processing flow."];
+  Node0 [id="Node000000",label="gpu::xetla::group::\lgemm\< arch \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1group_1_1gemm.html",tooltip=" "];
 }

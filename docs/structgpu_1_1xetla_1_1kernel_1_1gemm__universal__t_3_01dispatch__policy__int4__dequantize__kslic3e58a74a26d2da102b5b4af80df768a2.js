@@ -1,0 +1,23 @@
+var structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__int4__dequantize__kslic3e58a74a26d2da102b5b4af80df768a2 =
+[
+    [ "arguments_t", "structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__int4__dequantize__kslic3e58a74a26d2da102b5b4af80df768a2.html#a8b5985a6bc5464d63b7418ddab3a0ea0", null ],
+    [ "arguments_t", "structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__int4__dequantize__kslic3e58a74a26d2da102b5b4af80df768a2.html#a4674498988eadc272e233cd12f769019", null ],
+    [ "arguments_t", "structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__int4__dequantize__kslic3e58a74a26d2da102b5b4af80df768a2.html#a4912ef6c0b6c582826f2936d30509ac2", null ],
+    [ "operator=", "structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__int4__dequantize__kslic3e58a74a26d2da102b5b4af80df768a2.html#a512db84ef47aa8403e4485b53fcd92fc", null ],
+    [ "acc_base", "structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__int4__dequantize__kslic3e58a74a26d2da102b5b4af80df768a2.html#adf2c0fc9550339866d577b6125c33954", null ],
+    [ "cnt_base", "structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__int4__dequantize__kslic3e58a74a26d2da102b5b4af80df768a2.html#ab53eaed463a5d46180c0463a626aba08", null ],
+    [ "epilogue_args", "structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__int4__dequantize__kslic3e58a74a26d2da102b5b4af80df768a2.html#af378db1c89845bcde9962ce959fc0f94", null ],
+    [ "matA_base", "structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__int4__dequantize__kslic3e58a74a26d2da102b5b4af80df768a2.html#a79212654f5f7b0c65bc749993ae85873", null ],
+    [ "matA_ld", "structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__int4__dequantize__kslic3e58a74a26d2da102b5b4af80df768a2.html#accf3a2a754cfac9a1406ffe16175949e", null ],
+    [ "matB_base", "structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__int4__dequantize__kslic3e58a74a26d2da102b5b4af80df768a2.html#a5186c52166948a7753f22d57c3e5692a", null ],
+    [ "matB_ld", "structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__int4__dequantize__kslic3e58a74a26d2da102b5b4af80df768a2.html#ad206a7ef9f0834734f775d64177b7c3d", null ],
+    [ "matC_base", "structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__int4__dequantize__kslic3e58a74a26d2da102b5b4af80df768a2.html#af1c26011db02d96d69fdc8b2cb40d1d9", null ],
+    [ "matC_ld", "structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__int4__dequantize__kslic3e58a74a26d2da102b5b4af80df768a2.html#a7f0af4ffcdb54c2bea0bc8434cb25aac", null ],
+    [ "matrix_k", "structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__int4__dequantize__kslic3e58a74a26d2da102b5b4af80df768a2.html#aeadd0da5331f8d62ad6726c6ad9677b5", null ],
+    [ "matrix_m", "structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__int4__dequantize__kslic3e58a74a26d2da102b5b4af80df768a2.html#a83e97f17c1fa85dce8e9afb5c9887b61", null ],
+    [ "matrix_n", "structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__int4__dequantize__kslic3e58a74a26d2da102b5b4af80df768a2.html#ac26d61e562a5ba01f9785209ec4569d9", null ],
+    [ "scale_base", "structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__int4__dequantize__kslic3e58a74a26d2da102b5b4af80df768a2.html#a76718222f32231a92710cb9345a14b50", null ],
+    [ "scale_ld", "structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__int4__dequantize__kslic3e58a74a26d2da102b5b4af80df768a2.html#ab3d42a213216ce6c94d5885278b2f3e3", null ],
+    [ "zero_pt_base", "structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__int4__dequantize__kslic3e58a74a26d2da102b5b4af80df768a2.html#a91634aff7cd12c631be0d46fc88466c0", null ],
+    [ "zero_pt_ld", "structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__int4__dequantize__kslic3e58a74a26d2da102b5b4af80df768a2.html#ab4d79776a47d744de899cd98e8bed1ce", null ]
+];

@@ -20,27 +20,11 @@
 
 using namespace gpu::xetla;
 
-template <uint32_t element_size>
-constexpr uint32_t get_execSize_code() {
-    static_assert(element_size == 1 || element_size == 2 || element_size == 4
-                    || element_size == 8 || element_size == 16
-                    || element_size == 32,
-            "element_size not supported!");
-    switch (element_size) {
-        case 1: return 0;
-        case 2: return 1;
-        case 4: return 2;
-        case 8: return 3;
-        case 16: return 4;
-        case 32: return 5;
-    }
-}
-
 template <typename dtype, int SIMD>
 struct raw_send_with_2_source_and_1_destination_func {
     static KERNEL_FUNC inline void run(
-            xetla_exec_item<1> *ei, dtype *a, dtype *b, dtype *c) {
-        uint64_t offset = sizeof(int) * SIMD * ei->get_group(0);
+            sycl::nd_item<1> *item, dtype *a, dtype *b, dtype *c) {
+        uint64_t offset = sizeof(int) * SIMD * item->get_group(0);
         xetla_vector<uint32_t, SIMD> offsets
                 = xetla_vector_gen<uint32_t, SIMD>(0, 1);
         offsets *= sizeof(dtype);
@@ -66,7 +50,8 @@ struct raw_send_with_2_source_and_1_destination_func {
         constexpr uint32_t numSrc1 = size;
         constexpr uint32_t numSrc0 = addr_size;
         constexpr uint32_t numDst = size;
-        constexpr uint32_t execSize = get_execSize_code<SIMD>();
+        constexpr uint32_t execSize
+                = gpu::xetla::detail::get_execSize_code<SIMD>();
 
         xetla_raw_send<dtype, SIMD, uint64_t, SIMD, dtype, SIMD, execSize, sfid,
                 numSrc0, numSrc1, numDst>(

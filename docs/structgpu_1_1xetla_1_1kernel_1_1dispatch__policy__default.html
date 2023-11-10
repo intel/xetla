@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.7"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>XeTLA: gpu::xetla::kernel::dispatch_policy_default&lt; arch_tag_ &gt; Struct Template Reference</title>
+<title>XeTLA: gpu::xetla::kernel::dispatch_policy_default&lt; group_swizzle_policy_ &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.5</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.6</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -104,9 +104,10 @@ $(document).ready(function(){initNavTree('structgpu_1_1xetla_1_1kernel_1_1dispat
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="structgpu_1_1xetla_1_1kernel_1_1dispatch__policy__default-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">gpu::xetla::kernel::dispatch_policy_default&lt; arch_tag_ &gt; Struct Template Reference<div class="ingroups"><a class="el" href="group__xetla__gemm__universal.html">XeTLA GEMM_UNIVERSAL</a></div></div></div>
+  <div class="headertitle"><div class="title">gpu::xetla::kernel::dispatch_policy_default&lt; group_swizzle_policy_ &gt; Struct Template Reference<div class="ingroups"><a class="el" href="group__xetla__gemm__universal.html">XeTLA GEMM_UNIVERSAL</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -115,34 +116,56 @@ $(document).ready(function(){initNavTree('structgpu_1_1xetla_1_1kernel_1_1dispat
 
 <p><code>#include &lt;<a class="el" href="kernel_2gemm_2dispatch__policy_8hpp_source.html">dispatch_policy.hpp</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a60a835b549bbf55b4f5da5f859121d08"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1dispatch__policy__default.html#a60a835b549bbf55b4f5da5f859121d08">group_swizzle_policy</a> = group_swizzle_policy_</td></tr>
+<tr class="separator:a60a835b549bbf55b4f5da5f859121d08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a3da871d8ecc024256565ff4220d57d38"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1dispatch__policy__default.html#a3da871d8ecc024256565ff4220d57d38">arch_tag</a> = arch_tag_</td></tr>
-<tr class="separator:a3da871d8ecc024256565ff4220d57d38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7b6180fdcb6a9532d23eb587f1321a4"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1dispatch__policy__default.html#aa7b6180fdcb6a9532d23eb587f1321a4">arch_tag</a> = group_swizzle_policy::arch_tag</td></tr>
+<tr class="separator:aa7b6180fdcb6a9532d23eb587f1321a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt;<br />
-struct gpu::xetla::kernel::dispatch_policy_default&lt; arch_tag_ &gt;</div><p>Default GEMM_UNIVERSAL implementation. </p>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename group_swizzle_policy_&gt;<br />
+struct gpu::xetla::kernel::dispatch_policy_default&lt; group_swizzle_policy_ &gt;</div><p>Default GEMM_UNIVERSAL implementation. </p>
 <p>A general GEMM_UNIVERSAL implementation to provide a composition point of gemm_universal and epilogue. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">arch_tag_</td><td>Is the HW architecture. </td></tr>
   </table>
   </dd>
 </dl>
-</div><h2 class="groupheader">Member Data Documentation</h2>
-<a id="a3da871d8ecc024256565ff4220d57d38" name="a3da871d8ecc024256565ff4220d57d38"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3da871d8ecc024256565ff4220d57d38">&#9670;&#160;</a></span>arch_tag</h2>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a60a835b549bbf55b4f5da5f859121d08" name="a60a835b549bbf55b4f5da5f859121d08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60a835b549bbf55b4f5da5f859121d08">&#9670;&#160;</a></span>group_swizzle_policy</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename group_swizzle_policy_ &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1dispatch__policy__default.html">gpu::xetla::kernel::dispatch_policy_default</a>&lt; group_swizzle_policy_ &gt;::group_swizzle_policy =  group_swizzle_policy_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="aa7b6180fdcb6a9532d23eb587f1321a4" name="aa7b6180fdcb6a9532d23eb587f1321a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7b6180fdcb6a9532d23eb587f1321a4">&#9670;&#160;</a></span>arch_tag</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename group_swizzle_policy_ &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1dispatch__policy__default.html">gpu::xetla::kernel::dispatch_policy_default</a>&lt; arch_tag_ &gt;::arch_tag = arch_tag_</td>
+          <td class="memname">constexpr <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1dispatch__policy__default.html">gpu::xetla::kernel::dispatch_policy_default</a>&lt; group_swizzle_policy_ &gt;::arch_tag = group_swizzle_policy::arch_tag</td>
         </tr>
       </table>
   </td>

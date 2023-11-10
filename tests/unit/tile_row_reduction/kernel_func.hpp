@@ -27,19 +27,21 @@ template <typename dtype, int swidth, int sheight, int spitch, int twidth,
         bool transpose = false>
 struct tile_row_reduction_func {
     static KERNEL_FUNC inline void run(
-            xetla_exec_item<1> *ei, dtype *a, dtype *b, dtype *c) {
+            sycl::nd_item<1> *item, dtype *a, dtype *b, dtype *c) {
         using matA_tile_desc_t = tile_desc_t<twidth, theight, bwidth, bheight,
                 reg_layout::tiled>;
         using matC_tile_desc_t
                 = tile_desc_t<twidth, 1, bwidth, 1, reg_layout::tiled>;
         using matA_t = tile_t<dtype, matA_tile_desc_t>;
         using matC_t = tile_t<dtype, matC_tile_desc_t>;
-        using matA_payload_t = mem_payload_t<dtype, matA_tile_desc_t,
-                msg_type_v<matA_tile_desc_t, mem_space::global>,
-                mem_layout::row_major, mem_space::global, gpu_arch::Xe>;
-        using matC_payload_t = mem_payload_t<dtype, matC_tile_desc_t,
-                msg_type_v<matC_tile_desc_t, mem_space::global>,
-                mem_layout::row_major, mem_space::global, gpu_arch::Xe>;
+        using matA_payload_t = mem_payload_t<
+                mem_desc_t<dtype, mem_layout::row_major, mem_space::global>,
+                matA_tile_desc_t,
+                msg_type_v<matA_tile_desc_t, mem_space::global>, gpu_arch::Xe>;
+        using matC_payload_t = mem_payload_t<
+                mem_desc_t<dtype, mem_layout::row_major, mem_space::global>,
+                matC_tile_desc_t,
+                msg_type_v<matC_tile_desc_t, mem_space::global>, gpu_arch::Xe>;
         matA_t matA;
         matC_t matC;
         matA_payload_t matA_payload(a, swidth, sheight, spitch, 0, 0);
@@ -47,7 +49,7 @@ struct tile_row_reduction_func {
         matC.init(0);
         subgroup::tile_load<cache_hint::cached, cache_hint::cached>(
                 matA, matA_payload);
-        subgroup::tile_row_reduce(matC, matA);
+        matC.reg = subgroup::tile_reduce<reduce_op::sum, dtype, dtype, 0>(matA);
         tile_store(matC, matC_payload);
     }
 };

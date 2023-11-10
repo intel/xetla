@@ -5,5 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="gpu::xetla::kernel\l::gemm_universal_t\<\l dispatch_policy_kslicing\l\< num_global_kslicing_,\l num_local_kslicing_, arch\l_tag_ \>, gemm_t_, epilogue\l_t_, std::enable_if_t\<(arch\l_tag_==gpu_arch::Xe)\> \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__kslicing_3_01num__globaladc6b615b75ea587a2e6de4e1736d7d2.html",tooltip="Is the gemm_universal functor, specialized in kslicing dispatch policy and Xe architecture."];
+  Node0 [id="Node000000",label="gpu::xetla::group::\lln_bwd_fused_op_t\< ln\l_bwd_fused_kind::ln_dropout\l_gradAdd, dtype_in_, dtype\l_out_, dtype_acc_, layer_norm\l_attr_, gpu_arch::Xe \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1group_1_1ln__bwd__fused__op__t_3_01ln__bwd__fused__kind_1_1ln__dropout__gra92c7b1e7d0db3d047617e99aa09b9df.html",tooltip=" "];
 }

@@ -1,0 +1,16 @@
+var dummy__policy_8hpp =
+[
+    [ "gpu::xetla::dummy_optimizer< tag_, dict_t_, candidates_t >", "structgpu_1_1xetla_1_1dummy__optimizer.html", "structgpu_1_1xetla_1_1dummy__optimizer" ],
+    [ "gpu::xetla::dummy_optimizer< tag_, dict_t_, candidates_t >::impl", "structgpu_1_1xetla_1_1dummy__optimizer_1_1impl.html", "structgpu_1_1xetla_1_1dummy__optimizer_1_1impl" ],
+    [ "gpu::xetla::dummy_optimizer< tag_, dict_t_, candidates_t >::impl::param_distance_eval_fcn< key_, T, U, eval_tag::TYPE >", "structgpu_1_1xetla_1_1dummy__optimizer_1_1impl_1_1param__distance__eval__fcn_3_01key___00_01T_003d54679d2f89840a28b75f612282d629.html", null ],
+    [ "gpu::xetla::dummy_optimizer< tag_, dict_t_, candidates_t >::impl::param_distance_eval_fcn< key_, T, U, eval_tag::DELTA >", "structgpu_1_1xetla_1_1dummy__optimizer_1_1impl_1_1param__distance__eval__fcn_3_01key___00_01T_0082b1f7d198f165c5d7854a0866163719.html", null ],
+    [ "gpu::xetla::dummy_optimizer< tag_, dict_t_, candidates_t >::impl::param_distance_eval_fcn< key_, T, U, eval_tag::LINEAR >", "structgpu_1_1xetla_1_1dummy__optimizer_1_1impl_1_1param__distance__eval__fcn_3_01key___00_01T_00989f20ef9b16977838e5c839b6197129.html", null ],
+    [ "gpu::xetla::dummy_optimizer< tag_, dict_t_, candidates_t >::impl::param_distance_eval_fcn< key_, T, U, eval_tag::SQUARE >", "structgpu_1_1xetla_1_1dummy__optimizer_1_1impl_1_1param__distance__eval__fcn_3_01key___00_01T_00a37914fa388560171a38c280e64c0b51.html", null ],
+    [ "gpu::xetla::dummy_optimizer< tag_, dict_t_, candidates_t >::impl::param_distance_eval< key_, T, U >", "structgpu_1_1xetla_1_1dummy__optimizer_1_1impl_1_1param__distance__eval.html", null ],
+    [ "gpu::xetla::dummy_optimizer< tag_, dict_t_, candidates_t >::impl::param_distance_eval< tune_key::WG_TILE_SHAPE, T, U >", "structgpu_1_1xetla_1_1dummy__optimizer_1_1impl_1_1param__distance__eval_3_01tune__key_1_1WG__TILE__SHAPE_00_01T_00_01U_01_4.html", null ],
+    [ "gpu::xetla::dummy_optimizer< tag_, dict_t_, candidates_t >::impl::param_distance_eval< tune_key::SG_TILE_SHAPE, T, U >", "structgpu_1_1xetla_1_1dummy__optimizer_1_1impl_1_1param__distance__eval_3_01tune__key_1_1SG__TILE__SHAPE_00_01T_00_01U_01_4.html", null ],
+    [ "gpu::xetla::dummy_optimizer< tag_, dict_t_, candidates_t >::impl::param_distance< T, U >", "structgpu_1_1xetla_1_1dummy__optimizer_1_1impl_1_1param__distance.html", null ],
+    [ "gpu::xetla::dummy_optimizer< tag_, dict_t_, candidates_t >::impl::finder_impl< opt_val_, opt_t_ >", "structgpu_1_1xetla_1_1dummy__optimizer_1_1impl_1_1finder__impl_3_01opt__val___00_01opt__t___01_4.html", "structgpu_1_1xetla_1_1dummy__optimizer_1_1impl_1_1finder__impl_3_01opt__val___00_01opt__t___01_4" ],
+    [ "gpu::xetla::dummy_optimizer< tag_, dict_t_, candidates_t >::impl::finder_impl< opt_val_, opt_t_, elem_, elems... >", "structgpu_1_1xetla_1_1dummy__optimizer_1_1impl_1_1finder__impl_3_01opt__val___00_01opt__t___00_01elem___00_01elems_8_8_8_01_4.html", "structgpu_1_1xetla_1_1dummy__optimizer_1_1impl_1_1finder__impl_3_01opt__val___00_01opt__t___00_01elem___00_01elems_8_8_8_01_4" ],
+    [ "gpu::xetla::dummy_optimizer< tag_, dict_t_, candidates_t >::impl::finder_impl_helper< opt_t_, elems >", "structgpu_1_1xetla_1_1dummy__optimizer_1_1impl_1_1finder__impl__helper.html", null ]
+];

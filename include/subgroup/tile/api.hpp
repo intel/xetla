@@ -24,37 +24,32 @@
 namespace gpu::xetla::subgroup {
 
 /// @brief Is the xetla tile mma operation definition API.
-/// @tparam matA_t Is the tile type for matA.
-/// @tparam matB_t Is the tile type for matB.
-/// @tparam matAcc_src_t Is the tile type for src data of matC.
 /// @tparam matAcc_dst_t Is the tile type for dst data of matC.
+/// @tparam matAcc_src_t Is the tile type for src data of matC.
+/// @tparam matB_t Is the tile type for matB.
+/// @tparam matA_t Is the tile type for matA.
 /// @tparam engine Is the compute engine, fpu or xmx.
 /// @tparam arch_tag Is the hardware architecture tag.
-template <typename matA_t, typename matB_t, typename matAcc_src_t,
-        typename matAcc_dst_t, mma_engine engine, gpu_arch arch_tag>
+template <typename matAcc_dst_t, typename matAcc_src_t, typename matB_t,
+        typename matA_t, mma_engine engine, gpu_arch arch_tag,
+        typename enable = void>
 struct tile_mma_t {};
 
 /// @brief Is to illustrate the memory information
-/// @tparam  dtype Is the data type
+/// @tparam  mem_desc Is the memory descriptor
 /// @tparam  tile_desc Is the tile descriptor
 /// @tparam  message_type Is the form will be used to load/store
-/// @tparam  memory_space Is the data location
-/// @tparam  memory_layout Is the memory layout
-template <typename dtype, typename tile_desc, msg_type message_type,
-        mem_layout memory_layout, mem_space memory_space,
-        gpu_arch arch_tag = gpu_arch::Xe>
+template <typename mem_desc, typename tile_desc, msg_type message_type,
+        gpu_arch arch_tag, typename enable = void>
 struct mem_payload_t {};
 
 /// @brief Is to illustrate the memory information to prefetch data to cache.
-/// @tparam dtype_ Is the data type.
+/// @tparam mem_desc Is the memory descriptor
 /// @tparam tile_desc_ Is the tile descriptor.
-/// @tparam mem_layout_ Is the memory data layout.
-/// @tparam mem_space_ Is the memory space.
 /// @tparam cooperative_num_ Is the thread nums to prefetch data.
 /// @tparam arch_tag Is the hardware architecture tag.
-template <typename dtype_, typename tile_desc_, mem_layout mem_layout_,
-        mem_space mem_space_, uint32_t cooperative_num_,
-        gpu_arch arch_tag = gpu_arch::Xe>
+template <typename mem_desc_, typename tile_desc_, uint32_t cooperative_num_,
+        gpu_arch arch_tag, typename enable = void>
 struct prefetch_payload_t {};
 
 /// @brief Is to illustrate the tile information about a sub matrix.

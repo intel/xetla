@@ -1,0 +1,9 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node0 [id="Node000000",label="gpu::xetla::subgroup\l::mem_payload_t\< mem\l_desc_t\< dtype_, mem_layout\l_, mem_space::global, alignment\l_ \>, tile_desc_, msg_type::unaligned\l_2d, arch_tag_, std::enable_if_t\<\l(arch_tag_==gpu_arch::Xe)\> \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01mem__desc__t_3_01dtype___00_01mem__layout_29a82a88151a814f1aad96e4652b32ca.html",tooltip="Is to describe the global memory surface for unaligned-2d load/store for each block in one tile,..."];
+}

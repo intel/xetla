@@ -38,7 +38,8 @@ enum class nbarrier_role : uint8_t {
 /// @tparam num_producers is the number of subgroups participating the barrier as producer.
 /// @tparam num_consumers is the number of subgroups participating the barrier as consumer.
 ///
-template <uint8_t num_producers = 1, uint8_t num_consumers = 1>
+template <uint8_t num_producers = 1, uint8_t num_consumers = 1,
+        gpu_arch arch_tag = gpu_arch::Xe>
 struct xetla_nbarrier_t {
     ///
     /// @brief Description of named barrier objection.
@@ -77,13 +78,8 @@ struct xetla_nbarrier_t {
     /// @brief named barrier signal from subgroup.
     ///
     __XETLA_API void arrive_wait() {
-        constexpr uint32_t sfid = 0x3;
-        constexpr uint32_t exDesc = sfid;
-        constexpr uint32_t msg_desc = 0x2000004;
-        constexpr uint32_t execSize = 0;
-
-        xetla_raw_send<uint32_t, 16, execSize, sfid, 1>(nbar, exDesc, msg_desc);
-        named_barrier_wait(barrier_id);
+        arrive();
+        wait();
     }
 };
 

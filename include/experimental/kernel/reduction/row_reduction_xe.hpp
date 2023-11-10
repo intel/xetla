@@ -59,8 +59,8 @@ struct xetla_row_reduction_t<dtype_in_, dtype_out_, dtype_acc_, reduction_attr_,
             = (wg_tile_m + sg_tile_m - 1) / sg_tile_m;
     using work_group_t = work_group_t<wg_size_x * wg_size_y>;
     static constexpr bool use_dynamic_job = is_dynamic_job && (wg_size_y > 1);
-    using arch_attr = arch_attr_t<gpu_arch::Xe>;
-    using load_store_attr = arch_attr::load_store_attr;
+    using load_store_attr = typename arch_attr_t<
+            gpu_arch::Xe>::template load_store_attr<msg_type::block_2d>;
     static constexpr uint32_t max_load_height_in_elem
             = load_store_attr::max_load_height_in_elem;
     static constexpr uint32_t max_load_width_in_bytes
@@ -95,10 +95,11 @@ struct xetla_row_reduction_t<dtype_in_, dtype_out_, dtype_acc_, reduction_attr_,
     using global_ld_tile_desc_t = subgroup::tile_desc_t<tile_size_x,
             tile_size_y, block_size_x, block_size_y, reg_layout::tiled>;
     using global_ld_t = subgroup::tile_t<dtype_in, global_ld_tile_desc_t>;
-    using global_ld_payload_t = subgroup::mem_payload_t<dtype_in,
+    using global_ld_payload_t = subgroup::mem_payload_t<
+            mem_desc_t<dtype_in, mem_layout::row_major, mem_space::global>,
             global_ld_tile_desc_t,
             subgroup::msg_type_v<global_ld_tile_desc_t, mem_space::global>,
-            mem_layout::row_major, mem_space::global, gpu_arch::Xe>;
+            gpu_arch::Xe>;
     using mat_buffer_t = subgroup::tile_t<dtype_acc,
             subgroup::tile_desc_t<tile_size_x, 1, block_size_x, 1,
                     reg_layout::tiled>>;
@@ -143,18 +144,18 @@ struct xetla_row_reduction_t<dtype_in_, dtype_out_, dtype_acc_, reduction_attr_,
     /// @param slm_base
     /// @param nbarrier_base
     /// @return
-    __XETLA_API static void call(xetla_exec_item<3> &ei, arguments_t *args,
+    __XETLA_API static void call(sycl::nd_item<3> &item, arguments_t *args,
             fused_op_arguments_t *fused_op_args = nullptr,
             uint32_t slm_base = 0, uint32_t nbarrier_base = 0) {
         work_group_t g;
-        g.init(ei.get_local_linear_id());
+        g.init(item.get_local_linear_id());
         int sg_idx = g.get_id() % wg_size_x;
         int sg_idy = g.get_id() / wg_size_x;
 
         int global_start_x_in
-                = ei.get_group(2) * wg_tile_n + sg_idx * sg_tile_n;
+                = item.get_group(2) * wg_tile_n + sg_idx * sg_tile_n;
         int global_start_y_in = sg_idy * sg_tile_m;
-        xetla_nbarrier_t<wg_size_y, wg_size_y> nbarrier;
+        xetla_nbarrier_t<wg_size_y, wg_size_y, gpu_arch::Xe> nbarrier;
         nbarrier.init_nbarrier(
                 nbarrier_base + sg_idx, nbarrier_role::producer_consumer);
         if constexpr (use_dynamic_job) {
@@ -195,7 +196,8 @@ struct xetla_row_reduction_t<dtype_in_, dtype_out_, dtype_acc_, reduction_attr_,
                 subgroup::elemwise_cvt<matAcc_t, global_ld_t>(
                         matAcc, mat_global_ld);
                 fused_op(matAcc);
-                subgroup::tile_row_reduce(mat_buffer, matAcc);
+                mat_buffer.reg += subgroup::tile_reduce<reduce_op::sum,
+                        dtype_acc, dtype_acc, 0>(matAcc);
                 mat_global_ld_payload
                         .template update_tdesc<tdesc_update_dir::y_dir>(
                                 (next_job[0] - job_id) * tile_size_y);
@@ -210,7 +212,8 @@ struct xetla_row_reduction_t<dtype_in_, dtype_out_, dtype_acc_, reduction_attr_,
                 subgroup::elemwise_cvt<matAcc_t, global_ld_t>(
                         matAcc, mat_global_ld);
                 fused_op(matAcc);
-                subgroup::tile_row_reduce(mat_buffer, matAcc);
+                mat_buffer.reg += subgroup::tile_reduce<reduce_op::sum,
+                        dtype_acc, dtype_acc, 0>(matAcc);
                 fused_op.update_tdesc(0, wg_size_y * tile_size_y);
                 mat_global_ld_payload
                         .template update_tdesc<tdesc_update_dir::y_dir>(

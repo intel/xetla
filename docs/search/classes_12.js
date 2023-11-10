@@ -1,5 +1,12 @@
 var searchData=
 [
-  ['work_5fgroup_5ft_0',['work_group_t',['../structgpu_1_1xetla_1_1work__group__t.html',1,'gpu::xetla']]],
-  ['workgroupsplitstreamk_5ft_1',['WorkgroupSplitStreamK_t',['../structgpu_1_1xetla_1_1kernel_1_1WorkgroupSplitStreamK__t.html',1,'gpu::xetla::kernel']]]
+  ['uint_5ftype_0',['uint_type',['../structgpu_1_1xetla_1_1uint__type.html',1,'gpu::xetla']]],
+  ['unaligned_5f2d_1',['unaligned_2d',['../structgpu_1_1xetla_1_1subgroup_1_1check__load_3_01gpu__arch_1_1Xe_00_01dtype_00_01mem__dtype_01_4_1_1unaligned__2d.html',1,'gpu::xetla::subgroup::check_load&lt; gpu_arch::Xe, dtype, mem_dtype &gt;::unaligned_2d&lt; mem_transform, block_size_x &gt;'],['../structgpu_1_1xetla_1_1subgroup_1_1check__store_3_01gpu__arch_1_1Xe_00_01dtype_00_01mem__dtype_01_4_1_1unaligned__2d.html',1,'gpu::xetla::subgroup::check_store&lt; gpu_arch::Xe, dtype, mem_dtype &gt;::unaligned_2d&lt; block_size_x &gt;']]],
+  ['update_5fconfig_5fimpl_2',['update_config_impl',['../structgpu_1_1xetla_1_1decision__tree__rule_1_1kslicing__handler_1_1impl_1_1update__config__impl.html',1,'gpu::xetla::decision_tree_rule::kslicing_handler&lt; dict_t_ &gt;::impl::update_config_impl'],['../structgpu_1_1xetla_1_1decision__tree__rule_1_1tile__shape__handler_1_1impl_1_1update__config__impl.html',1,'gpu::xetla::decision_tree_rule::tile_shape_handler&lt; dict_t_ &gt;::impl::update_config_impl']]],
+  ['update_5fdict_5fimpl_3',['update_dict_impl',['../structgpu_1_1xetla_1_1dict__t_1_1impl_1_1update__dict__impl.html',1,'gpu::xetla::dict_t::impl']]],
+  ['update_5fdict_5fimpl_3c_20dict_5ft_5f_2c_20dict_5ft_3c_20e_5f_2c_20elems_2e_2e_2e_20_3e_20_3e_4',['update_dict_impl&lt; dict_t_, dict_t&lt; e_, Elems... &gt; &gt;',['../structgpu_1_1xetla_1_1dict__t_1_1impl_1_1update__dict__impl_3_01dict__t___00_01dict__t_3_01e___00_01Elems_8_8_8_01_4_01_4.html',1,'gpu::xetla::dict_t::impl']]],
+  ['update_5fdict_5fimpl_3c_20dict_5ft_5f_2c_20e_5f_20_3e_5',['update_dict_impl&lt; dict_t_, e_ &gt;',['../structgpu_1_1xetla_1_1dict__t_1_1impl_1_1update__dict__impl_3_01dict__t___00_01e___01_4.html',1,'gpu::xetla::dict_t::impl']]],
+  ['update_5fdict_5fimpl_3c_20dict_5ft_5f_2c_20e_5f_2c_20elems_2e_2e_2e_20_3e_6',['update_dict_impl&lt; dict_t_, e_, Elems... &gt;',['../structgpu_1_1xetla_1_1dict__t_1_1impl_1_1update__dict__impl_3_01dict__t___00_01e___00_01Elems_8_8_8_01_4.html',1,'gpu::xetla::dict_t::impl']]],
+  ['update_5fdict_5fimpl_3c_20update_5fdict_5fimpl_3c_20dict_5ft_5f_2c_20e_5f_20_3e_3a_3atype_2c_20elems_2e_2e_2e_20_3e_7',['update_dict_impl&lt; update_dict_impl&lt; dict_t_, e_ &gt;::type, Elems... &gt;',['../structgpu_1_1xetla_1_1dict__t_1_1impl_1_1update__dict__impl.html',1,'gpu::xetla::dict_t::impl']]],
+  ['update_5fgenerator_5fimpl_8',['update_generator_impl',['../structgpu_1_1xetla_1_1dict__t_1_1impl_1_1update__generator__impl.html',1,'gpu::xetla::dict_t::impl']]]
 ];

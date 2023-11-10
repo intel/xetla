@@ -5,5 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="gpu::xetla::kernel\l::xetla_mha_attn_reg\l_fwd_t\< dtype_bin_, dtype\l_bot_, dtype_sfx_, dtype\l_acc_, HWThreadNum, Dopt\l_RandGenflag, RandSIMD, Max\l_SeqLen \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1kernel_1_1xetla__mha__attn__reg__fwd__t.html",tooltip=" "];
+  Node0 [id="Node000000",label="gpu::xetla::group::\lsoftmax_t\< softmax_policy\l_fwd\< dtype_acc_, gpu_arch\l::Xe \>, tile_shape_ \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classgpu_1_1xetla_1_1group_1_1softmax__t_3_01softmax__policy__fwd_3_01dtype__acc___00_01gpu__arc90582f6f8cb5a09b900a35996a4b06fd.html",tooltip=" "];
 }

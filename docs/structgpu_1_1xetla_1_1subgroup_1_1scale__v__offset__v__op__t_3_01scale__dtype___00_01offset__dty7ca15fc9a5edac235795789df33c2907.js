@@ -1,0 +1,9 @@
+var structgpu_1_1xetla_1_1subgroup_1_1scale__v__offset__v__op__t_3_01scale__dtype___00_01offset__dty7ca15fc9a5edac235795789df33c2907 =
+[
+    [ "arguments_t", "structgpu_1_1xetla_1_1subgroup_1_1scale__v__offset__v__op__t_3_01scale__dtype___00_01offset__dty7ca15fc9a5edac235795789df33c2907.html#a1a6b51d378744813cf00383b143efaea", null ],
+    [ "arguments_t", "structgpu_1_1xetla_1_1subgroup_1_1scale__v__offset__v__op__t_3_01scale__dtype___00_01offset__dty7ca15fc9a5edac235795789df33c2907.html#ae72f4e2d571994f4f89a3931a125830a", null ],
+    [ "offset_base", "structgpu_1_1xetla_1_1subgroup_1_1scale__v__offset__v__op__t_3_01scale__dtype___00_01offset__dty7ca15fc9a5edac235795789df33c2907.html#ac7c75a5f8685e2790d4c342c7dc79a9c", null ],
+    [ "offset_shape", "structgpu_1_1xetla_1_1subgroup_1_1scale__v__offset__v__op__t_3_01scale__dtype___00_01offset__dty7ca15fc9a5edac235795789df33c2907.html#aab698bf33383239476e3dc032dbdbfce", null ],
+    [ "scale_base", "structgpu_1_1xetla_1_1subgroup_1_1scale__v__offset__v__op__t_3_01scale__dtype___00_01offset__dty7ca15fc9a5edac235795789df33c2907.html#a0e235cc338b6875414e562c7fb771b8d", null ],
+    [ "scale_shape", "structgpu_1_1xetla_1_1subgroup_1_1scale__v__offset__v__op__t_3_01scale__dtype___00_01offset__dty7ca15fc9a5edac235795789df33c2907.html#a4059416892081afe5edca53b0e3e620e", null ]
+];

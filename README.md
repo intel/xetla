@@ -1,53 +1,51 @@
-# Intel® Xe Templates for Linear Algebra [v0.3.1](./CHANGELOG.md)
-Intel® Xe Templates for Linear Algebra (Intel® XeTLA) is a collection of SYCL/eSIMD templates that enable high-performance General Matrix Multiply (GEMM), Convolution (CONV), and related computations on Intel Xe GPU architecture. Intel® XeTLA offers reusable C++ templates for subgroup, workgroup, and kernel levels, allowing developers to optimize and specialize kernels based on data types, tiling policies, algorithms, fusion policies, and more. 
+# Intel® Xe Templates for Linear Algebra
+
+_Intel® XeTLA [v0.3.6](/CHANGELOG.md) - November 2023_
+
+Intel® Xe Templates for Linear Algebra (Intel® XeTLA) is a collection of SYCL/ESIMD templates that enable high-performance General Matrix Multiply (GEMM), Convolution (CONV), and related computations on Intel Xe GPU architecture. Intel® XeTLA offers reusable C++ templates for kernel, group and subgroup levels, allowing developers to optimize and specialize kernels based on data types, tiling policies, algorithms, fusion policies, and more.
 
 One of the key features of Intel® XeTLA is its ability to abstract and hide details of Xe hardware implementations, particularly those related to matrix computations, such as the systolic array and other low level instructions. This ensures that SYCL/DPC++ developers can focus on leveraging the performance benefits of Intel® XeTLA without being burdened by hardware-specific instructions.
 
 <!-- @cond -->
 ## Compatibility
 
-### Hardware
-Intel® Data Center GPU Max Series, Driver Version: [602](https://dgpu-docs.intel.com/releases/stable_602_20230323.html)
-
-### Software
-Intel® XeTLA requires a C++20 host compiler.
-
-- Operating Systems
-
-    Ubuntu 22.04(64-bit)
-
-- Package
-    |Package|Version|Installation|
-    |-|-|-|
-    |Intel GPU driver|[602](https://dgpu-docs.intel.com/releases/stable_602_20230323.html)|[Install Intel GPU driver](https://dgpu-docs.intel.com/installation-guides/index.html#intel-data-center-gpu-max-series)|
-    |Intel® oneAPI Base Toolkit|[2023.1](https://www.intel.com/content/www/us/en/developer/tools/oneapi/base-toolkit-download.html)|[Install Intel® oneAPI Base Toolkit](https://www.intel.com/content/www/us/en/developer/tools/oneapi/base-toolkit-download.html)|
+  |Category|Requirement|Installation|
+  |-|-|-|
+  |OS|Ubuntu [22.04](http://releases.ubuntu.com/22.04/)| [Install Ubuntu](https://ubuntu.com/tutorials)|
+  |GPU Card | Intel® Data Center GPU Max Series |N/A|
+  |GPU Driver | [Stable 647](https://dgpu-docs.intel.com/releases/stable_647_21_20230714.html) or later|[Install Intel GPU driver](https://dgpu-docs.intel.com/installation-guides/index.html#intel-data-center-gpu-max-series)|
+  |Toolchain |Intel® oneAPI Base Toolkit [2023.2](https://www.intel.com/content/www/us/en/developer/tools/oneapi/base-toolkit-download.html) or later|[Install Intel® oneAPI Base Toolkit](https://www.intel.com/content/www/us/en/developer/tools/oneapi/base-toolkit-download.html)|
 
 <!-- @endcond -->
 
 ## Features
 
-### GEMM
-- Data type
+- GEMM
+  - Data Type
     - Vector-engine-based: `fp32`
-    - Matrix-engine-based: `tf32`, `fp16`, `bf16`
-- Memory layout
-    - Matrix A: row-major, col-major
-    - Matrix B: row-major, col-major
-    - Matrix C: row-major
+    - Matrix-engine-based: `tf32`, `fp16`, `bf16`, `int8`
+  - Memory Layout
+    - Matrix A: `row-major`, `col-major`
+    - Matrix B: `row-major`, `col-major`
+    - Matrix C: `row-major`
 - Epilogue
-    - Bias_add
-    - Relu
-    - Gelu forward + backward
+  - Bias Add
+  - GELU Forward
+  - GELU Backward
+  - RELU
+  - Residual Add
 
 <!-- @cond -->
 
 ## Documentation
 
-- [Quick Start](media/docs/quick_start.md) introduces how to build and run tests/examples.
-- [API Reference](https://silver-eureka-80eaaa34.pages.github.io/) provides a comprehensive reference of the library APIs.
-- [Programming Guidelines](./media/docs/programming_guidelines.md) explains programming model, functionalities, implementation details, and annotated examples.
-- [Terminology](./media/docs/terminology.md) describes terms used in the project.
-- [Release Notes](./CHANGELOG.md) describes new features and known issues.
+- [Quick Start](/media/docs/quick_start.md) introduces how to build and run tests/examples.
+- [Functionality](/media/docs/functionality.md) describes kernel-level API feature list.
+- [API Reference](https://intel.github.io/xetla) provides a comprehensive reference of the library APIs.
+- [Programming Guidelines](/media/docs/programming_guidelines.md) explains programming model, functionalities, implementation details, and annotated examples.
+- [Construct a High Performance GEMM](/media/docs/construct_a_gemm.md) describes how to construct a high performance GEMM.
+- [Terminology](/media/docs/terminology.md) describes terms used in the project.
+- [Changelog](/CHANGELOG.md) detailed listing of releases and updates.
  
 ## Project Structure
 
@@ -74,12 +72,12 @@ media/                         # Documents
 
 ## Contributing
 
-Refer to [Contributing Guidelines](./CONTRIBUTING.md).
+Refer to [Contributing Guidelines](/CONTRIBUTING.md).
 
 
 ## Limitations
 
-Refer to [Limitations](./media/docs/limitations.md).
+Refer to [Limitations](/media/docs/limitations.md).
 
 <!-- @endcond -->
 
@@ -88,7 +86,7 @@ Refer to [Limitations](./media/docs/limitations.md).
 See Intel's [Security Center](https://www.intel.com/content/www/us/en/security-center/default.html)
 for information on how to report a potential security issue or vulnerability.
 
-See also: [Security Policy](SECURITY.md)
+See also: [Security Policy](/SECURITY.md)
 
 ## Copyright
 

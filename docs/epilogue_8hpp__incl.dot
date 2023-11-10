@@ -30,7 +30,7 @@ digraph "include/group/epilogue/epilogue.hpp"
   Node9 -> Node3 [id="edge15_Node000009_Node000003",color="steelblue1",style="solid",tooltip=" "];
   Node9 -> Node7 [id="edge16_Node000009_Node000007",color="steelblue1",style="solid",tooltip=" "];
   Node1 -> Node10 [id="edge17_Node000001_Node000010",color="steelblue1",style="solid",tooltip=" "];
-  Node10 [id="Node000010",label="group/epilogue/impl\l/streamK_op_xe.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$streamK__op__xe_8hpp.html",tooltip="C++ API."];
+  Node10 [id="Node000010",label="group/epilogue/impl\l/stream_k_op_xe.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$stream__k__op__xe_8hpp.html",tooltip="C++ API."];
   Node10 -> Node2 [id="edge18_Node000010_Node000002",color="steelblue1",style="solid",tooltip=" "];
   Node10 -> Node3 [id="edge19_Node000010_Node000003",color="steelblue1",style="solid",tooltip=" "];
   Node10 -> Node7 [id="edge20_Node000010_Node000007",color="steelblue1",style="solid",tooltip=" "];

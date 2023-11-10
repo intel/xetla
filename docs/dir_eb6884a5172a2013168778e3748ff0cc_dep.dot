@@ -1,0 +1,17 @@
+digraph "include/group/softmax"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_a9a5b087e2fab9b66c5792b9867db3d8 {
+    graph [ bgcolor="#e4eaf8", pencolor="grey50", label="group", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_a9a5b087e2fab9b66c5792b9867db3d8.html",tooltip=""]
+  subgraph clusterdir_eb6884a5172a2013168778e3748ff0cc {
+    graph [ bgcolor="#e4eaf8", pencolor="grey25", label="", fontname=Helvetica,fontsize=10 style="filled,bold", URL="dir_eb6884a5172a2013168778e3748ff0cc.html",tooltip=""]
+    dir_eb6884a5172a2013168778e3748ff0cc [shape=plaintext, label="softmax"];
+  dir_fbf2d922d4b93c0a1a640a2759653749 [label="impl", fillcolor="#7a9bdc", color="grey25", style="filled", URL="dir_fbf2d922d4b93c0a1a640a2759653749.html",tooltip=""];
+  }
+  }
+  dir_eb6884a5172a2013168778e3748ff0cc->dir_fbf2d922d4b93c0a1a640a2759653749 [headlabel="2", labeldistance=1.5 headhref="dir_000041_000030.html" color="steelblue1" fontcolor="steelblue1"];
+}

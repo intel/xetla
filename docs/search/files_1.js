@@ -7,6 +7,5 @@ var searchData=
   ['basic_5fgemm_2ecpp_4',['basic_gemm.cpp',['../basic__gemm_8cpp.html',1,'']]],
   ['batch_5fgemm_2ecpp_5',['batch_gemm.cpp',['../batch__gemm_8cpp.html',1,'']]],
   ['batch_5fgemm_2ehpp_6',['batch_gemm.hpp',['../batch__gemm_8hpp.html',1,'']]],
-  ['bit_5fmask_5fmanipulation_2ehpp_7',['bit_mask_manipulation.hpp',['../bit__mask__manipulation_8hpp.html',1,'']]],
-  ['block_5fxe_2ehpp_8',['block_xe.hpp',['../block__xe_8hpp.html',1,'']]]
+  ['bit_5fmask_5fmanipulation_2ehpp_7',['bit_mask_manipulation.hpp',['../bit__mask__manipulation_8hpp.html',1,'']]]
 ];

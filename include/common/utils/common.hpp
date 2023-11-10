@@ -43,16 +43,66 @@ constexpr uint32_t get_element_size_code() {
     }
 }
 
-template <cache_hint L1H, cache_hint L3H>
-constexpr uint32_t get_load_cache_hint_code() {
-    check_lsc_cache_hint<lsc_action::load, L1H, L3H>();
-    if (L1H == cache_hint::none && L3H == cache_hint::none) {
+enum class lsc_action { prefetch, load, store, atomic };
+
+template <lsc_action Action, cache_hint L1H, cache_hint L2H, gpu_arch arch_tag>
+constexpr std::enable_if_t<arch_tag == gpu_arch::Xe, void>
+check_lsc_cache_hint() {
+    if constexpr (Action == lsc_action::prefetch) {
+        // https://gfxspecs.intel.com/Predator/Home/Index/53560
+        static_assert(
+                ((L2H == cache_hint::uncached || L2H == cache_hint::cached)
+                        && (L1H == cache_hint::uncached
+                                || L1H == cache_hint::cached
+                                || L1H == cache_hint::streaming)),
+                "cache hint type not supported!");
+    } else if constexpr (Action == lsc_action::load) {
+        // https://gfxspecs.intel.com/Predator/Home/Index/53560
+        static_assert((L1H == cache_hint::none && L2H == cache_hint::none)
+                        || ((L2H == cache_hint::uncached)
+                                && (L1H == cache_hint::uncached
+                                        || L1H == cache_hint::cached
+                                        || L1H == cache_hint::streaming))
+                        || ((L2H == cache_hint::cached)
+                                && (L1H == cache_hint::uncached
+                                        || L1H == cache_hint::cached
+                                        || L1H == cache_hint::streaming
+                                        || L1H == cache_hint::read_invalidate)),
+                "unsupported cache hint!");
+    } else if constexpr (Action == lsc_action::store) {
+        // https://gfxspecs.intel.com/Predator/Home/Index/53561
+        static_assert((L1H == cache_hint::none && L2H == cache_hint::none)
+                        || ((L2H == cache_hint::uncached)
+                                && (L1H == cache_hint::uncached
+                                        || L1H == cache_hint::write_through
+                                        || L1H == cache_hint::streaming))
+                        || ((L2H == cache_hint::write_back)
+                                && (L1H == cache_hint::uncached
+                                        || L1H == cache_hint::write_through
+                                        || L1H == cache_hint::streaming
+                                        || L1H == cache_hint::write_back)),
+                "unsupported cache hint!");
+    } else if constexpr (Action == lsc_action::atomic) {
+        // https://gfxspecs.intel.com/Predator/Home/Index/53561
+        static_assert((L1H == cache_hint::none && L2H == cache_hint::none)
+                        || (L1H == cache_hint::uncached
+                                && (L2H == cache_hint::uncached
+                                        || L2H == cache_hint::write_back)),
+                "unsupported cache hint!");
+    }
+}
+
+template <cache_hint L1H, cache_hint L2H, gpu_arch arch_tag>
+constexpr std::enable_if_t<arch_tag == gpu_arch::Xe, uint32_t>
+get_load_cache_hint_code() {
+    check_lsc_cache_hint<lsc_action::load, L1H, L2H, arch_tag>();
+    if (L1H == cache_hint::none && L2H == cache_hint::none) {
         return 0;
-    } else if (L3H == cache_hint::uncached) {
+    } else if (L2H == cache_hint::uncached) {
         if (L1H == cache_hint::uncached) { return 1; }
         if (L1H == cache_hint::cached) { return 3; }
         if (L1H == cache_hint::streaming) { return 5; }
-    } else if (L3H == cache_hint::cached) {
+    } else if (L2H == cache_hint::cached) {
         if (L1H == cache_hint::uncached) { return 2; }
         if (L1H == cache_hint::cached) { return 4; }
         if (L1H == cache_hint::streaming) { return 6; }
@@ -60,30 +110,32 @@ constexpr uint32_t get_load_cache_hint_code() {
     }
 }
 
-template <cache_hint L1H, cache_hint L3H>
-constexpr uint32_t get_prefetch_cache_hint_code() {
-    check_lsc_cache_hint<lsc_action::prefetch, L1H, L3H>();
-    if (L3H == cache_hint::uncached) {
+template <cache_hint L1H, cache_hint L2H, gpu_arch arch_tag>
+constexpr std::enable_if_t<arch_tag == gpu_arch::Xe, uint32_t>
+get_prefetch_cache_hint_code() {
+    check_lsc_cache_hint<lsc_action::prefetch, L1H, L2H, arch_tag>();
+    if (L2H == cache_hint::uncached) {
         if (L1H == cache_hint::uncached) { return 1; }
         if (L1H == cache_hint::cached) { return 3; }
         if (L1H == cache_hint::streaming) { return 5; }
-    } else if (L3H == cache_hint::cached) {
+    } else if (L2H == cache_hint::cached) {
         if (L1H == cache_hint::uncached) { return 2; }
         if (L1H == cache_hint::cached) { return 4; }
         if (L1H == cache_hint::streaming) { return 6; }
     }
 }
 
-template <cache_hint L1H, cache_hint L3H>
-constexpr uint32_t get_store_cache_hint_code() {
-    check_lsc_cache_hint<lsc_action::store, L1H, L3H>();
-    if (L1H == cache_hint::none && L3H == cache_hint::none) {
+template <cache_hint L1H, cache_hint L2H, gpu_arch arch_tag>
+constexpr std::enable_if_t<arch_tag == gpu_arch::Xe, uint32_t>
+get_store_cache_hint_code() {
+    check_lsc_cache_hint<lsc_action::store, L1H, L2H, arch_tag>();
+    if (L1H == cache_hint::none && L2H == cache_hint::none) {
         return 0;
-    } else if (L3H == cache_hint::uncached) {
+    } else if (L2H == cache_hint::uncached) {
         if (L1H == cache_hint::uncached) { return 1; }
         if (L1H == cache_hint::write_through) { return 3; }
         if (L1H == cache_hint::streaming) { return 5; }
-    } else if (L3H == cache_hint::write_back) {
+    } else if (L2H == cache_hint::write_back) {
         if (L1H == cache_hint::uncached) { return 2; }
         if (L1H == cache_hint::write_through) { return 4; }
         if (L1H == cache_hint::streaming) { return 6; }
@@ -91,16 +143,17 @@ constexpr uint32_t get_store_cache_hint_code() {
     }
 }
 
-template <cache_hint L1H, cache_hint L3H>
-constexpr uint32_t get_atomic_cache_hint_code() {
-    check_lsc_cache_hint<lsc_action::atomic, L1H, L3H>();
-    if (L1H == cache_hint::none && L3H == cache_hint::none) {
+template <cache_hint L1H, cache_hint L2H, gpu_arch arch_tag>
+constexpr std::enable_if_t<arch_tag == gpu_arch::Xe, uint32_t>
+get_atomic_cache_hint_code() {
+    check_lsc_cache_hint<lsc_action::atomic, L1H, L2H, arch_tag>();
+    if (L1H == cache_hint::none && L2H == cache_hint::none) {
         return 0;
-    } else if (L3H == cache_hint::uncached) {
+    } else if (L2H == cache_hint::uncached) {
         if (L1H == cache_hint::uncached) { return 1; }
         if (L1H == cache_hint::write_through) { return 3; }
         if (L1H == cache_hint::streaming) { return 5; }
-    } else if (L3H == cache_hint::write_back) {
+    } else if (L2H == cache_hint::write_back) {
         if (L1H == cache_hint::uncached) { return 2; }
         if (L1H == cache_hint::write_through) { return 4; }
         if (L1H == cache_hint::streaming) { return 6; }
@@ -187,14 +240,6 @@ enum class offset_mode : uint8_t {
     cyclic_offset = 1,
     acyclic_offset = 2
 };
-
-/// @brief Result will be overwritten.
-///
-struct result_overwrite {};
-
-/// @brief Result will be summed up with old data in memory.
-///
-struct result_reduce_sum {};
 
 /// @brief Initial the local memory size and named barrier count with kernel_t.
 /// @tparam kernel_t Is XeTLA kernel level functor.

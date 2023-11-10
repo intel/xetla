@@ -5,5 +5,11 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="gpu::xetla::subgroup\l::mem_payload_t\< dtype\l_mask, ln_bwd_tile_desc\l_t, msg_type::block_1d,\l mem_layout::row_major, mem\l_space::global, gpu_arch::Xe \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t.html",tooltip=" "];
+  Node0 [id="Node000000",label="gpu::xetla::param_adaptor\l\< tag_, dict_t_ \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1param__adaptor.html",tooltip=" "];
+  Node0 -> Node1 [id="edge20_Node000000_Node000001",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 [id="Node000001",label="gpu::xetla::group::\ldefault_epilogue_selector\l_config_t\< dtype_c, mem\l_layout_c, alignment_c, mem\l_space_c, wg_shape, wg_tile\l_k, gpu_arch_tag, tune_option \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1group_1_1default__epilogue__selector__config__t.html",tooltip=" "];
+  Node0 -> Node2 [id="edge21_Node000000_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="gpu::xetla::group::\ldefault_gemm_selector\l_config_t\< dtype_a, mem\l_layout_a, alignment_a,\l mem_space_a, dtype_b, mem\l_layout_b, alignment_b, mem\l_space_b, dtype_acc, wg_shape,\l wg_tile_k, gpu_arch_tag, tune_option \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1group_1_1default__gemm__selector__config__t.html",tooltip=" "];
+  Node0 -> Node3 [id="edge22_Node000000_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="gpu::xetla::kernel\l::default_gemm_config\l_t\< dtype_a, mem_layout\l_a, alignment_a, dtype_b,\l mem_layout_b, alignment\l_b, dtype_c, mem_layout_c,\l alignment_c, dtype_acc, gpu\l_arch_tag, tune_option \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1kernel_1_1default__gemm__config__t.html",tooltip=" "];
 }

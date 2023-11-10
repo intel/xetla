@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['wait_0',['wait',['../structgpu_1_1xetla_1_1xetla__nbarrier__t.html#aadcb3c9fab48cd482e554357fdef4ae0',1,'gpu::xetla::xetla_nbarrier_t']]],
-  ['work_5fgroup_5ft_1',['work_group_t',['../structgpu_1_1xetla_1_1work__group__t.html#a41edcbe649e11ff5520ab916075875e2',1,'gpu::xetla::work_group_t::work_group_t(uint32_t id)'],['../structgpu_1_1xetla_1_1work__group__t.html#ae53d9343b5fa715ac4fe9f820783ed5c',1,'gpu::xetla::work_group_t::work_group_t()=default']]],
-  ['workgroupsplitstreamk_5ft_2',['WorkgroupSplitStreamK_t',['../group__xetla__gemm.html#gaaaeb2db3152a873c80fe686b66ec3a03',1,'gpu::xetla::kernel::WorkgroupSplitStreamK_t::WorkgroupSplitStreamK_t()=default'],['../group__xetla__gemm.html#gac0ea1d78a4b0f1c66992c09452695859',1,'gpu::xetla::kernel::WorkgroupSplitStreamK_t::WorkgroupSplitStreamK_t(uint32_t matrix_m_, uint32_t matrix_k_, uint32_t matrix_n_, uint32_t wg_tile_m_, uint32_t wg_tile_k_, uint32_t wg_tile_n_, uint32_t sg_tile_m_, uint32_t sg_tile_n_, uint32_t avail_xecores_)']]]
+  ['validation_0',['validation',['../gate__recurrent__unit_8cpp.html#aa7877b8603e962196a58e6fbb63dbc93',1,'gate_recurrent_unit.cpp']]],
+  ['vnni_5fconvert_1',['vnni_convert',['../namespacegpu_1_1xetla_1_1subgroup.html#a0e6b59d3af183c100c3be8e0084fbb25',1,'gpu::xetla::subgroup']]],
+  ['vnni_5freverse_2',['vnni_reverse',['../namespacegpu_1_1xetla_1_1subgroup.html#a4ed9033bde7ac8bab3527f52b39889d1',1,'gpu::xetla::subgroup::vnni_reverse(T &amp;mat_Acc)'],['../namespacegpu_1_1xetla_1_1subgroup.html#a418ba6f18b5915d69f59ec5b06d2a50c',1,'gpu::xetla::subgroup::vnni_reverse(T &amp;mat_Acc)']]],
+  ['vnni_5ftransform_3',['vnni_transform',['../namespacegpu_1_1xetla_1_1subgroup.html#a5ae1577f162b9f57c9a5e0b344b4ce84',1,'gpu::xetla::subgroup']]]
 ];

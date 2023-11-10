@@ -1,0 +1,25 @@
+var structgpu_1_1xetla_1_1kernel_1_1multi__layer__perceptron__t_1_1arguments__t =
+[
+    [ "arguments_t", "structgpu_1_1xetla_1_1kernel_1_1multi__layer__perceptron__t_1_1arguments__t.html#a9c071518dfdda52addd7e79d65d9fdc7", null ],
+    [ "arguments_t", "structgpu_1_1xetla_1_1kernel_1_1multi__layer__perceptron__t_1_1arguments__t.html#aa1dcfc0edb3bd7d1a0a6d53a8ea398c6", null ],
+    [ "arguments_t", "structgpu_1_1xetla_1_1kernel_1_1multi__layer__perceptron__t_1_1arguments__t.html#a323dba496f3d94bd6393803363f5495b", null ],
+    [ "operator=", "structgpu_1_1xetla_1_1kernel_1_1multi__layer__perceptron__t_1_1arguments__t.html#a5b8234058a0fc53b828fe8a5b775c745", null ],
+    [ "epilogue_layer1_args", "structgpu_1_1xetla_1_1kernel_1_1multi__layer__perceptron__t_1_1arguments__t.html#af4a6d92bdba7adad25528260c153f7e4", null ],
+    [ "epilogue_layer2_args", "structgpu_1_1xetla_1_1kernel_1_1multi__layer__perceptron__t_1_1arguments__t.html#a33bf79d6189b6435980c78dae1800e79", null ],
+    [ "matA_base", "structgpu_1_1xetla_1_1kernel_1_1multi__layer__perceptron__t_1_1arguments__t.html#a5fda77606fe58b5d53d550ed34b4a2d4", null ],
+    [ "matA_ld", "structgpu_1_1xetla_1_1kernel_1_1multi__layer__perceptron__t_1_1arguments__t.html#aba9580be6af8992d25ff3437f8843a77", null ],
+    [ "matB_base", "structgpu_1_1xetla_1_1kernel_1_1multi__layer__perceptron__t_1_1arguments__t.html#ad3105ce6a4045eac6e0551109e9cacb5", null ],
+    [ "matB_ld", "structgpu_1_1xetla_1_1kernel_1_1multi__layer__perceptron__t_1_1arguments__t.html#a4a637946c29de864d58c6480f025db5a", null ],
+    [ "matC_base", "structgpu_1_1xetla_1_1kernel_1_1multi__layer__perceptron__t_1_1arguments__t.html#a435cad40919fa0fe6754c73bf9a33e97", null ],
+    [ "matC_ld", "structgpu_1_1xetla_1_1kernel_1_1multi__layer__perceptron__t_1_1arguments__t.html#ad69534113c5b5152fa8a138747f7d495", null ],
+    [ "matrix_k_layer1", "structgpu_1_1xetla_1_1kernel_1_1multi__layer__perceptron__t_1_1arguments__t.html#aead83a750ccc88a178cdc1042e0cfce0", null ],
+    [ "matrix_k_layer2", "structgpu_1_1xetla_1_1kernel_1_1multi__layer__perceptron__t_1_1arguments__t.html#a3976a9380912899d97166e975f1bb890", null ],
+    [ "matrix_m_layer1", "structgpu_1_1xetla_1_1kernel_1_1multi__layer__perceptron__t_1_1arguments__t.html#ab3c792d427920ed20cb402bc8223ae29", null ],
+    [ "matrix_m_layer2", "structgpu_1_1xetla_1_1kernel_1_1multi__layer__perceptron__t_1_1arguments__t.html#aef9efcc59fb1bbe7467b18b9c08e4d33", null ],
+    [ "matrix_n_layer1", "structgpu_1_1xetla_1_1kernel_1_1multi__layer__perceptron__t_1_1arguments__t.html#a335aecaba47cae65a1cd8b31f1661b9e", null ],
+    [ "matrix_n_layer2", "structgpu_1_1xetla_1_1kernel_1_1multi__layer__perceptron__t_1_1arguments__t.html#ac1ac28d34fa31ab762db419d06ab0ae9", null ],
+    [ "matV_base", "structgpu_1_1xetla_1_1kernel_1_1multi__layer__perceptron__t_1_1arguments__t.html#a2eda487e9bfcdad56512b65457b86e04", null ],
+    [ "matV_ld", "structgpu_1_1xetla_1_1kernel_1_1multi__layer__perceptron__t_1_1arguments__t.html#a2366ad40e00748c1b2073188ae99bae2", null ],
+    [ "matW_base", "structgpu_1_1xetla_1_1kernel_1_1multi__layer__perceptron__t_1_1arguments__t.html#af4548433ffc312572582aa9e2c03a951", null ],
+    [ "matW_ld", "structgpu_1_1xetla_1_1kernel_1_1multi__layer__perceptron__t_1_1arguments__t.html#a45270a4a4503907ba01eddafd9c782cf", null ]
+];

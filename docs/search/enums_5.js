@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['kslicing_5fimpl_5ft_0',['kslicing_impl_t',['../gemm__universal_8cpp.html#a69ec471fd653f0d2934e3d72f8438f87',1,'gemm_universal.cpp']]]
+  ['gpu_5farch_0',['gpu_arch',['../namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1',1,'gpu::xetla']]],
+  ['grf_5fmode_1',['grf_mode',['../namespacegpu_1_1xetla.html#a7feb5ab690922ff814907dc8a1e2cc0f',1,'gpu::xetla']]]
 ];

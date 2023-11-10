@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.5</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.6</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -198,7 +198,7 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:a0d21198754d25c5346115e5f1c73b56f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;typename matAcc_dst_t_, typename matAcc_src_t_, typename matB_t_, typename matA_t_, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt;<br />
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename matAcc_dst_t_, typename matAcc_src_t_, typename matB_t_, typename matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt;<br />
 struct gpu::xetla::subgroup::tile_mma_t&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, mma_engine::fpu, arch_tag_, std::enable_if_t&lt;(arch_tag_==gpu_arch::Xe)&gt; &gt;</div><p>Is the tile mma operation functor, specialized for Xe and fpu engine. </p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a33bb22b8e526f4809bf3c38bf00249e3" name="a33bb22b8e526f4809bf3c38bf00249e3"></a>
@@ -207,10 +207,10 @@ struct gpu::xetla::subgroup::tile_mma_t&lt; matAcc_dst_t_, matAcc_src_t_, matB_t
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::dtype_a =  typename matA_t::dtype</td>
+          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::dtype_a =  typename matA_t::dtype</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -223,10 +223,10 @@ template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ ,
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::dtype_b =  typename matB_t::dtype</td>
+          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::dtype_b =  typename matB_t::dtype</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -239,10 +239,10 @@ template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ ,
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::dtype_dst =  typename matDst_t::dtype</td>
+          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::dtype_dst =  typename matDst_t::dtype</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -255,10 +255,10 @@ template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ ,
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::dtype_src =  typename matSrc_t::dtype</td>
+          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::dtype_src =  typename matSrc_t::dtype</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -271,10 +271,10 @@ template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ ,
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::matA_t =  matA_t_</td>
+          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::matA_t =  matA_t_</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -287,10 +287,10 @@ template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ ,
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::matB_t =  matB_t_</td>
+          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::matB_t =  matB_t_</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -303,10 +303,10 @@ template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ ,
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::matDst_t =  matAcc_dst_t_</td>
+          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::matDst_t =  matAcc_dst_t_</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -319,10 +319,10 @@ template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ ,
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::matSrc_t =  matAcc_src_t_</td>
+          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::matSrc_t =  matAcc_src_t_</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -335,10 +335,10 @@ template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ ,
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::register_attr =  typename <a class="el" href="structgpu_1_1xetla_1_1arch__attr__t.html">arch_attr_t</a>&lt;arch_tag_&gt;::template <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t_3_01matAcc__dst__t___00_01matAcc__src__t___00_01m06b88c4e579b298664a350bfbec02f8f.html#a6718ed6f3304a37108a168a21bb93961">register_attr</a>&lt;&gt;</td>
+          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::register_attr =  typename <a class="el" href="structgpu_1_1xetla_1_1arch__attr__t.html">arch_attr_t</a>&lt;arch_tag_&gt;::template <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t_3_01matAcc__dst__t___00_01matAcc__src__t___00_01m06b88c4e579b298664a350bfbec02f8f.html#a6718ed6f3304a37108a168a21bb93961">register_attr</a>&lt;&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -352,13 +352,13 @@ template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ ,
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> void <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::mma </td>
+          <td class="memname">static <a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> void <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::mma </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t_3_01matAcc__dst__t___00_01matAcc__src__t___00_01m06b88c4e579b298664a350bfbec02f8f.html#a8f2330c49c75a9067ff54447ace71dfd">matDst_t</a> &amp;&#160;</td>
           <td class="paramname"><em>dst</em>, </td>
@@ -402,7 +402,7 @@ template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ ,
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
 <div class="memtemplate">
 template&lt;int blk_m, int blk_n, int blk_k&gt; </div>
 <table class="mlabels">
@@ -410,7 +410,7 @@ template&lt;int blk_m, int blk_n, int blk_k&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> void <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::mma_core </td>
+          <td class="memname">static <a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> void <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::mma_core </td>
           <td>(</td>
           <td class="paramtype">xetla_vector_ref&lt; <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t_3_01matAcc__dst__t___00_01matAcc__src__t___00_01m06b88c4e579b298664a350bfbec02f8f.html#aaceff36206e292663b1adc22f19b2380">dtype_dst</a>, blk_m *blk_n &gt; <a class="el" href="group__xetla__core__base__types.html#ga126a6fcae520c421efd2419512e9bf70">__REF__</a>&#160;</td>
           <td class="paramname"><em>dst</em>, </td>
@@ -455,13 +455,13 @@ template&lt;int blk_m, int blk_n, int blk_k&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::a_block_elems = matA_t::block_elems</td>
+          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::a_block_elems = matA_t::block_elems</td>
         </tr>
       </table>
   </td>
@@ -479,13 +479,13 @@ template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ ,
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::a_block_size_h = matA_t::block_size_x</td>
+          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::a_block_size_h = matA_t::block_size_x</td>
         </tr>
       </table>
   </td>
@@ -503,13 +503,13 @@ template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ ,
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::a_block_size_w = matA_t::block_size_y</td>
+          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::a_block_size_w = matA_t::block_size_y</td>
         </tr>
       </table>
   </td>
@@ -527,13 +527,13 @@ template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ ,
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::a_tile_elems = matA_t::tile_elems</td>
+          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::a_tile_elems = matA_t::tile_elems</td>
         </tr>
       </table>
   </td>
@@ -551,13 +551,13 @@ template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ ,
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::a_tile_size_x = matA_t::tile_size_x</td>
+          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::a_tile_size_x = matA_t::tile_size_x</td>
         </tr>
       </table>
   </td>
@@ -575,13 +575,13 @@ template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ ,
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::a_tile_size_y = matA_t::tile_size_y</td>
+          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::a_tile_size_y = matA_t::tile_size_y</td>
         </tr>
       </table>
   </td>
@@ -599,13 +599,13 @@ template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ ,
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::b_block_elems = matB_t::block_elems</td>
+          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::b_block_elems = matB_t::block_elems</td>
         </tr>
       </table>
   </td>
@@ -623,13 +623,13 @@ template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ ,
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::b_block_size_x = matB_t::block_size_x</td>
+          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::b_block_size_x = matB_t::block_size_x</td>
         </tr>
       </table>
   </td>
@@ -647,13 +647,13 @@ template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ ,
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::b_block_size_y = matB_t::block_size_y</td>
+          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::b_block_size_y = matB_t::block_size_y</td>
         </tr>
       </table>
   </td>
@@ -671,13 +671,13 @@ template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ ,
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::b_tile_elems = matB_t::tile_elems</td>
+          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::b_tile_elems = matB_t::tile_elems</td>
         </tr>
       </table>
   </td>
@@ -695,13 +695,13 @@ template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ ,
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::b_tile_size_x = matB_t::tile_size_x</td>
+          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::b_tile_size_x = matB_t::tile_size_x</td>
         </tr>
       </table>
   </td>
@@ -719,13 +719,13 @@ template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ ,
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::b_tile_size_y = matB_t::tile_size_y</td>
+          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::b_tile_size_y = matB_t::tile_size_y</td>
         </tr>
       </table>
   </td>
@@ -743,13 +743,13 @@ template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ ,
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::block_elems = <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t_3_01matAcc__dst__t___00_01matAcc__src__t___00_01m06b88c4e579b298664a350bfbec02f8f.html#ae0c2d6d77318fdd1104ac777c378689d">block_size_m</a> * <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t_3_01matAcc__dst__t___00_01matAcc__src__t___00_01m06b88c4e579b298664a350bfbec02f8f.html#aee789d13eb93d8cc81dd4df5ff4f1320">block_size_n</a></td>
+          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::block_elems = <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t_3_01matAcc__dst__t___00_01matAcc__src__t___00_01m06b88c4e579b298664a350bfbec02f8f.html#ae0c2d6d77318fdd1104ac777c378689d">block_size_m</a> * <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t_3_01matAcc__dst__t___00_01matAcc__src__t___00_01m06b88c4e579b298664a350bfbec02f8f.html#aee789d13eb93d8cc81dd4df5ff4f1320">block_size_n</a></td>
         </tr>
       </table>
   </td>
@@ -767,13 +767,13 @@ template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ ,
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::block_size_k = <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t_3_01matAcc__dst__t___00_01matAcc__src__t___00_01m06b88c4e579b298664a350bfbec02f8f.html#a7fa6f5c0b874b2cad85a34481c69e673">a_block_size_h</a></td>
+          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::block_size_k = <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t_3_01matAcc__dst__t___00_01matAcc__src__t___00_01m06b88c4e579b298664a350bfbec02f8f.html#a7fa6f5c0b874b2cad85a34481c69e673">a_block_size_h</a></td>
         </tr>
       </table>
   </td>
@@ -791,13 +791,13 @@ template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ ,
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::block_size_m = matDst_t::block_size_y</td>
+          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::block_size_m = matDst_t::block_size_y</td>
         </tr>
       </table>
   </td>
@@ -815,13 +815,13 @@ template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ ,
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::block_size_n = matDst_t::block_size_x</td>
+          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::block_size_n = matDst_t::block_size_x</td>
         </tr>
       </table>
   </td>
@@ -839,13 +839,13 @@ template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ ,
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr int32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::mma_m</td>
+          <td class="memname">constexpr int32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::mma_m</td>
         </tr>
       </table>
   </td>
@@ -867,13 +867,13 @@ template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ ,
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr int32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::num_block_k = <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t_3_01matAcc__dst__t___00_01matAcc__src__t___00_01m06b88c4e579b298664a350bfbec02f8f.html#a4ce71340173e0d1e22caf835a6e294a9">tile_size_k</a> / <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t_3_01matAcc__dst__t___00_01matAcc__src__t___00_01m06b88c4e579b298664a350bfbec02f8f.html#a665ecca550863b57df8cb6c02da2ebf6">block_size_k</a></td>
+          <td class="memname">constexpr int32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::num_block_k = <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t_3_01matAcc__dst__t___00_01matAcc__src__t___00_01m06b88c4e579b298664a350bfbec02f8f.html#a4ce71340173e0d1e22caf835a6e294a9">tile_size_k</a> / <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t_3_01matAcc__dst__t___00_01matAcc__src__t___00_01m06b88c4e579b298664a350bfbec02f8f.html#a665ecca550863b57df8cb6c02da2ebf6">block_size_k</a></td>
         </tr>
       </table>
   </td>
@@ -891,13 +891,13 @@ template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ ,
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr int32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::num_block_m = matDst_t::num_block_y</td>
+          <td class="memname">constexpr int32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::num_block_m = matDst_t::num_block_y</td>
         </tr>
       </table>
   </td>
@@ -915,13 +915,13 @@ template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ ,
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr int32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::num_block_n = matDst_t::num_block_x</td>
+          <td class="memname">constexpr int32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::num_block_n = matDst_t::num_block_x</td>
         </tr>
       </table>
   </td>
@@ -939,13 +939,13 @@ template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ ,
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::tile_elems = <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t_3_01matAcc__dst__t___00_01matAcc__src__t___00_01m06b88c4e579b298664a350bfbec02f8f.html#a5e9f025710cc4d69b9c940d5e9719dcd">tile_size_m</a> * <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t_3_01matAcc__dst__t___00_01matAcc__src__t___00_01m06b88c4e579b298664a350bfbec02f8f.html#acc3503f2e5cbd380e0134a55bbdaad78">tile_size_n</a></td>
+          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::tile_elems = <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t_3_01matAcc__dst__t___00_01matAcc__src__t___00_01m06b88c4e579b298664a350bfbec02f8f.html#a5e9f025710cc4d69b9c940d5e9719dcd">tile_size_m</a> * <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t_3_01matAcc__dst__t___00_01matAcc__src__t___00_01m06b88c4e579b298664a350bfbec02f8f.html#acc3503f2e5cbd380e0134a55bbdaad78">tile_size_n</a></td>
         </tr>
       </table>
   </td>
@@ -963,13 +963,13 @@ template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ ,
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::tile_size_k = <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t_3_01matAcc__dst__t___00_01matAcc__src__t___00_01m06b88c4e579b298664a350bfbec02f8f.html#a6f3fe038fd5406f0dd56f242ccb15e47">a_tile_size_x</a></td>
+          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::tile_size_k = <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t_3_01matAcc__dst__t___00_01matAcc__src__t___00_01m06b88c4e579b298664a350bfbec02f8f.html#a6f3fe038fd5406f0dd56f242ccb15e47">a_tile_size_x</a></td>
         </tr>
       </table>
   </td>
@@ -987,13 +987,13 @@ template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ ,
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::tile_size_m = matDst_t::tile_size_y</td>
+          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::tile_size_m = matDst_t::tile_size_y</td>
         </tr>
       </table>
   </td>
@@ -1011,13 +1011,13 @@ template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ ,
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename matAcc_dst_t_ , typename matAcc_src_t_ , typename matB_t_ , typename matA_t_ , <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::tile_size_n = matDst_t::tile_size_x</td>
+          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html">gpu::xetla::subgroup::tile_mma_t</a>&lt; matAcc_dst_t_, matAcc_src_t_, matB_t_, matA_t_, <a class="el" href="namespacegpu_1_1xetla.html#a832cfdf6b64648b0f624ac1b636776d4a0075ab5617d7f0d01c017e92e8a46e22">mma_engine::fpu</a>, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::tile_size_n = matDst_t::tile_size_x</td>
         </tr>
       </table>
   </td>

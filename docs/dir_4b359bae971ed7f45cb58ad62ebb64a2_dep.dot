@@ -15,7 +15,7 @@ digraph "include/experimental/group/gemm"
   }
   dir_4d3106a75df04f1e8e08f7fdd7e68f7e [label="common", fillcolor="#e4eaf8", color="grey50", style="filled", URL="dir_4d3106a75df04f1e8e08f7fdd7e68f7e.html",tooltip=""];
   dir_7158ba01021871150c6825fce9de9714 [label="subgroup", fillcolor="#e4eaf8", color="grey50", style="filled", URL="dir_7158ba01021871150c6825fce9de9714.html",tooltip=""];
-  dir_4b359bae971ed7f45cb58ad62ebb64a2->dir_4d3106a75df04f1e8e08f7fdd7e68f7e [headlabel="1", labeldistance=1.5 headhref="dir_000019_000012.html" color="steelblue1" fontcolor="steelblue1"];
-  dir_4b359bae971ed7f45cb58ad62ebb64a2->dir_7158ba01021871150c6825fce9de9714 [headlabel="1", labeldistance=1.5 headhref="dir_000019_000040.html" color="steelblue1" fontcolor="steelblue1"];
-  dir_4b359bae971ed7f45cb58ad62ebb64a2->dir_97dc087ac2f02b6e015306b309e8b1b7 [headlabel="1", labeldistance=1.5 headhref="dir_000019_000025.html" color="steelblue1" fontcolor="steelblue1"];
+  dir_4b359bae971ed7f45cb58ad62ebb64a2->dir_4d3106a75df04f1e8e08f7fdd7e68f7e [headlabel="1", labeldistance=1.5 headhref="dir_000020_000012.html" color="steelblue1" fontcolor="steelblue1"];
+  dir_4b359bae971ed7f45cb58ad62ebb64a2->dir_7158ba01021871150c6825fce9de9714 [headlabel="1", labeldistance=1.5 headhref="dir_000020_000042.html" color="steelblue1" fontcolor="steelblue1"];
+  dir_4b359bae971ed7f45cb58ad62ebb64a2->dir_97dc087ac2f02b6e015306b309e8b1b7 [headlabel="1", labeldistance=1.5 headhref="dir_000020_000026.html" color="steelblue1" fontcolor="steelblue1"];
 }

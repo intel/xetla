@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.5</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.6</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -111,12 +111,12 @@ $(document).ready(function(){initNavTree('kernel_2gemm_2gemm_8hpp.html',''); ini
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="kernel_2gemm_2api_8hpp_source.html">kernel/gemm/api.hpp</a>&quot;</code><br />
 <code>#include &quot;kernel/gemm/common.hpp&quot;</code><br />
+<code>#include &quot;<a class="el" href="default__gemm_8hpp_source.html">kernel/gemm/default_gemm.hpp</a>&quot;</code><br />
 <code>#include &quot;kernel/gemm/dispatch_policy.hpp&quot;</code><br />
-<code>#include &quot;<a class="el" href="block__xe_8hpp_source.html">kernel/gemm/impl/block_xe.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="gemm__preset_8hpp_source.html">kernel/gemm/gemm_preset.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="kernel_2gemm_2impl_2default__xe_8hpp_source.html">kernel/gemm/impl/default_xe.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="kslicing__xe_8hpp_source.html">kernel/gemm/impl/kslicing_xe.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="streamK__xe_8hpp_source.html">kernel/gemm/impl/streamK_xe.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="workgroup__split__streamK_8hpp_source.html">kernel/gemm/impl/workgroup_split_streamK.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="stream__k__xe_8hpp_source.html">kernel/gemm/impl/stream_k_xe.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for gemm.hpp:</div>
 <div class="dyncontent">

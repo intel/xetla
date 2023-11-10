@@ -23,10 +23,16 @@ using namespace gpu;
 
 template <typename data_type_a, typename data_type_b, typename data_type_c,
         typename data_type_d, typename data_type_acc = float>
-int gemm_relu_bias_result_validate(data_type_a *A, data_type_b *B,
-        data_type_c *C, data_type_d *D, uint32_t m, uint32_t k, uint32_t n,
+int gemm_relu_bias_result_validate(data_type_a *A_device, data_type_b *B_device,
+        data_type_c *C_device, data_type_d *D_device, uint32_t m, uint32_t k,
+        uint32_t n, sycl::queue &queue,
         mem_layout mem_layout_a_ = mem_layout::row_major,
         mem_layout mem_layout_b_ = mem_layout::row_major) {
+    auto A = alloc_host_and_copy<data_type_a>(A_device, m * k, queue);
+    auto B = alloc_host_and_copy<data_type_b>(B_device, k * n, queue);
+    auto C = alloc_host_and_copy<data_type_c>(C_device, m * n, queue);
+    auto D = alloc_host_and_copy<data_type_d>(D_device, n, queue);
+
     bool is_col_major_a = mem_layout_a_ == mem_layout::col_major;
     bool is_col_major_b = mem_layout_b_ == mem_layout::col_major;
     buff_cmp::buff_vals<data_type_c> data(C, m, n, n);
@@ -46,6 +52,11 @@ int gemm_relu_bias_result_validate(data_type_a *A, data_type_b *B,
 
     bool result = buff_cmp::xetla_buff_cmp(
             data, other, "gemm_relu_bias validation");
+
+    free(A);
+    free(B);
+    free(C);
+    free(D);
 
     std::cout << (!result ? "FAILED\n" : "PASSED\n");
     return result ? 0 : 1;
@@ -76,73 +87,41 @@ void gemm_relu_bias_run(uint32_t iter) {
     sycl::property_list properties {sycl::property::queue::enable_profiling()};
 
     //Define SYCL queue, context and device
-    auto Queue = queue(properties);
-    auto Context = Queue.get_info<info::queue::context>();
-    auto Device = Queue.get_info<info::queue::device>();
+    auto queue = sycl::queue(properties);
+    auto context = queue.get_info<info::queue::context>();
+    auto device = queue.get_info<info::queue::device>();
 
-    std::cout << "Running on " << Device.get_info<info::device::name>() << "\n";
+    std::cout << "Running on " << device.get_info<info::device::name>() << "\n";
 
-    //Define and initialize the data required for the calculation
-    //Use shared data which will be migrated automatically between  both CPU and GPU
-    data_type_a *A = static_cast<data_type_a *>(
-            malloc_shared(size_a * sizeof(data_type_a), Device, Context));
-    data_type_b *B = static_cast<data_type_b *>(
-            malloc_shared(size_b * sizeof(data_type_b), Device, Context));
-    data_type_c *C = static_cast<data_type_c *>(
-            malloc_shared(size_c * sizeof(data_type_c), Device, Context));
-    //[ReLuBias] The pouint32_ter D is used for BiasAdd that is passed to epilogue_t
-    //The datatype is chosen to be identical to accumulator data type
-    data_type_d *D = static_cast<data_type_d *>(
-            malloc_shared(size_d * sizeof(data_type_d), Device, Context));
+    auto A = alloc_device_and_init<data_type_a>(
+            size_a,
+            [](data_type_a *data, size_t idx) {
+                data[idx] = static_cast<data_type_a>(random_float());
+            },
+            queue, device, context);
+    auto B = alloc_device_and_init<data_type_b>(
+            size_b,
+            [](data_type_b *data, size_t idx) {
+                data[idx] = static_cast<data_type_b>(random_float());
+            },
+            queue, device, context);
+    auto C = alloc_device_and_init<data_type_c>(
+            size_c,
+            [](data_type_c *data, size_t idx) {
+                data[idx] = static_cast<data_type_c>(0.0f);
+            },
+            queue, device, context);
+    auto D = alloc_device_and_init<data_type_d>(
+            size_d,
+            [](data_type_d *data, size_t idx) {
+                data[idx] = static_cast<data_type_d>(random_float());
+            },
+            queue, device, context);
 
-    //Init data in GEMM A, B and C
-    for (uint32_t i = 0; i < size_a; ++i) {
-        A[i] = static_cast<data_type_a>(random_float());
-    }
-    for (uint32_t i = 0; i < size_b; ++i) {
-        B[i] = static_cast<data_type_b>(random_float());
-    }
-    for (uint32_t i = 0; i < size_c; ++i) {
-        C[i] = static_cast<data_type_c>(0.0f);
-    }
-    //[ReLuBias] Init data D for BiasAdd
-    for (uint32_t i = 0; i < size_d; ++i) {
-        D[i] = static_cast<data_type_d>(random_float());
-    }
-
-    //Define the shape of workgroup and subgroup
+    //Define the shape of workgroup
     //It's tunable parameters based on different input shape and hardware for better performance
     constexpr uint32_t wg_tile_m = 256;
     constexpr uint32_t wg_tile_n = 256;
-    constexpr uint32_t sg_tile_m = 32;
-    constexpr uint32_t sg_tile_n = 64;
-
-    //There are implicit requirement for sg_tile_k range
-    constexpr uint32_t sg_tile_k = 32;
-
-    // Org the compute shape for sub-matrix
-    using tile_shape
-            = xetla::group::tile_shape_t<wg_tile_n, // workgroup size in N dim
-                    wg_tile_m, //	workgroup size in M dim
-                    sg_tile_n, //	subgroup size in N dim
-                    sg_tile_m>; //	subgroup size in M dim
-
-    // Mirco-kernel configuration
-    using brgemm_config = xetla::group::brgemm_selector_t<
-            data_type_a, // input datatype for A
-            data_type_b, // input datatype for B
-            mem_layout::row_major, // memory layout for A
-            mem_layout::row_major, // memory layout for B
-            mem_space::global, // memory reading from global mem for A
-            mem_space::global, // memory reading from global mem for B
-            8, // buffer alignment for A, in unit of element
-            8, // buffer alignment for A, in unit of element
-            data_type_acc, // accumulator data type for intermediate resutls
-            tile_shape, // computation tile shape
-            sg_tile_k, // elements in each iteration
-            mma_engine::xmx, // compute engine
-            gpu_arch::Xe> // GPU arch
-            ::brgemm;
 
     // [ReLuBias] Chain multiple elementwise op in chained_tile_op_t<>: relu_op_t, bias_add_op_t
     using bias_op_t = xetla::subgroup::bias_add_op_t<float, gpu_arch::Xe>;
@@ -156,18 +135,50 @@ void gemm_relu_bias_run(uint32_t iter) {
     // is already calculated.
     // Mathematically epilogue_t is a map that applies to each element:
     //   epilogue_t: [m, n] -> [m, n], C_acc |-> tile_op_t(C_acc)
-    using mem_desc_output_t
-            = mem_desc_t<data_type_c, mem_layout::row_major, mem_space::global>;
-    using epilogue_t = xetla::group::epilogue_t<
-            xetla::group::epilogue_policy_tile_op<tile_op_t, result_overwrite,
-                    gpu_arch::Xe>,
-            tile_shape, mem_desc_output_t>;
+    using epilogue_policy
+            = xetla::group::epilogue_policy_tile_op<tile_op_t, gpu_arch::Xe>;
 
-    using gemm_op_t = xetla::kernel::gemm_t<
-            xetla::kernel::dispatch_policy_default<gpu_arch::Xe>, brgemm_config,
-            epilogue_t>;
+    // Mirco-kernel configuration
+    using tune_option = dict_t<
+            elem_v_t<tune_key::PARAM_OPTIMZER_TYPE,
+                    tune_key_value::PARAM_OPTIMZER_DECISION_TREE>,
+            elem_t_t<tune_key::EPILOGUE_POLICY, epilogue_policy>,
+            elem_t_t<tune_key::WG_TILE_SHAPE, shape<wg_tile_n, wg_tile_m>>>;
+    using default_config_t = gpu::xetla::kernel::default_gemm_config_t<
+            data_type_a, // input datatype for A
+            mem_layout::row_major, // memory layout for A
+            8, // leading dimension alignment for A, in unit of element
+            data_type_b, // input datatype for B
+            mem_layout::row_major, // memory layout for B
+            8, // leading dimension alignment for B, in unit of element
+            data_type_c, // output datatype for C
+            mem_layout::row_major, // memory layout for C
+            8, // leading dimension alignment for C, in unit of element
+            data_type_acc, // accumulator data type for intermediate resutls
+            gpu_arch::Xe, // GPU arch
+            tune_option>;
+    using gemm_op_t = typename default_config_t::type;
 
-    cl::sycl::nd_range<3> NDRange = gemm_op_t::get_nd_range(matrix_m, matrix_n);
+    // [ReLuBias] define the shape of bias matrix D, which should be identitcal to C
+    bias_op_t::shape_t bias_add_shape(matrix_n, 1, matrix_n);
+    // [ReLuBias] pass arguments of chained_tile_op_t<> to epilogue_args
+    using epilogue_args_t = typename default_config_t::epilogue_t::arguments_t;
+    epilogue_args_t epilogue_args({//epilogue_args init list
+            // [ReLuBias] 1. relu_op_t
+            // ReLU accepts no arguments
+            {},
+            // [ReLuBias] 2. bias_add_op_t
+            // It accepts the base pointer to matrix D, and its dimensions
+            {D, bias_add_shape}});
+    // [ReLuBias] assign epilogue_args to gemm_op_t::arguments_t
+    typename gemm_op_t::arguments_t arg(matrix_m, matrix_k, matrix_n, A,
+            matrix_k, B, matrix_n, C, matrix_n, epilogue_args);
+    cl::sycl::nd_range<3> nd_range = gemm_op_t::get_nd_range(arg);
+    if (!gemm_op_t::can_implement(arg)) {
+        std::cout << "The arguments cannot be supported, aborting ... "
+                  << std::endl;
+        FAIL();
+    }
 
     constexpr uint32_t warmup = 10;
     long ops = 2 * static_cast<long>(matrix_m) * matrix_n * matrix_k
@@ -175,30 +186,13 @@ void gemm_relu_bias_run(uint32_t iter) {
     profiling_helper prof("gemm_relu_bias_run", ops, "gflops");
     for (uint32_t i = 0; i < iter + warmup; i++) {
         if (i >= warmup) { prof.cpu_start(); }
-        auto gpu_event = Queue.submit([&](handler &cgh) {
+        auto gpu_event = queue.submit([&](handler &cgh) {
             // GPU kernel
-            cgh.parallel_for(NDRange, [=](nd_item<3> item) SYCL_ESIMD_KERNEL {
-                xetla_exec_item<3> ei(item);
-
-                gemm_op_t gemm_op;
+            cgh.parallel_for(nd_range, [=](nd_item<3> item) SYCL_ESIMD_KERNEL {
                 // allocate slm and nbarrier resource
                 slm_barrier_init<gemm_op_t>();
-                // [ReLuBias] define the shape of bias matrix D, which should be identitcal to C
-                bias_op_t::shape_t bias_add_shape(matrix_n, 1, matrix_n);
-                // [ReLuBias] pass arguments of chained_tile_op_t<> to epilogue_args
-                using epilogue_args_t = epilogue_t::arguments_t;
-                epilogue_args_t epilogue_args({//epilogue_args init list
-                        // [ReLuBias] 1. relu_op_t
-                        // ReLU accepts no arguments
-                        {},
-                        // [ReLuBias] 2. bias_add_op_t
-                        // It accepts the base pointer to matrix D, and its dimensions
-                        {D, bias_add_shape}});
-                // [ReLuBias] assign epilogue_args to gemm_op_t::arguments_t
-                typename gemm_op_t::arguments_t arg(matrix_m, matrix_k,
-                        matrix_n, A, matrix_k, B, matrix_n, C, matrix_n,
-                        epilogue_args);
-                gemm_op(ei, arg);
+                gemm_op_t gemm_op;
+                gemm_op(item, arg);
             });
         });
         gpu_event.wait();
@@ -211,15 +205,16 @@ void gemm_relu_bias_run(uint32_t iter) {
 
     ASSERT_EQ(0,
             gemm_relu_bias_result_validate(A, B, C, D, matrix_m, matrix_k,
-                    matrix_n, mem_layout::row_major, mem_layout::row_major));
+                    matrix_n, queue, mem_layout::row_major,
+                    mem_layout::row_major));
 
     //performance
     prof.print_profiling_result(profiling_selector::GPU);
 
-    free(A, Context);
-    free(B, Context);
-    free(C, Context);
-    free(D, Context);
+    free(A, context);
+    free(B, context);
+    free(C, context);
+    free(D, context);
 }
 
 int main() {
@@ -246,8 +241,6 @@ int main() {
     // Here provides some possible configurations using epilogue_t:
     // - GEMM
     //   C  = A x B
-    // - update_method=result_reduce_sum
-    //   C += A x B
     // - tile_op_t=relu_op_t
     //   C = ReLU(A x B)
     // - tile_op_t=[relu_op_t, bias_add_op_t]

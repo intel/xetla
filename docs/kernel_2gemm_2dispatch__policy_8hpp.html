@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.5</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.6</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -123,17 +123,20 @@ Include dependency graph for dispatch_policy.hpp:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1dispatch__policy__default.html">gpu::xetla::kernel::dispatch_policy_default&lt; arch_tag_ &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1group__swizzle__default.html">gpu::xetla::kernel::group_swizzle_default&lt; arch_tag_ &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default GROUP_SWIZZLE implementation.  <a href="structgpu_1_1xetla_1_1kernel_1_1group__swizzle__default.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1group__swizzle__snake.html">gpu::xetla::kernel::group_swizzle_snake&lt; wg_num_n_, arch_tag_ &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">GROUP_SWIZZLE implementation of snake curve.  <a href="structgpu_1_1xetla_1_1kernel_1_1group__swizzle__snake.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1dispatch__policy__default.html">gpu::xetla::kernel::dispatch_policy_default&lt; group_swizzle_policy_ &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default GEMM_UNIVERSAL implementation.  <a href="structgpu_1_1xetla_1_1kernel_1_1dispatch__policy__default.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1dispatch__policy__kslicing.html">gpu::xetla::kernel::dispatch_policy_kslicing&lt; num_global_kslicing_, num_local_kslicing_, arch_tag_ &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1dispatch__policy__kslicing.html">gpu::xetla::kernel::dispatch_policy_kslicing&lt; group_swizzle_policy_, global_ratio_, local_ratio_ &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kslicing GEMM_UNIVERSAL implementation.  <a href="structgpu_1_1xetla_1_1kernel_1_1dispatch__policy__kslicing.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1dispatch__policy__streamK.html">gpu::xetla::kernel::dispatch_policy_streamK&lt; arch_tag_ &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">StreamK GEMM implementation.  <a href="structgpu_1_1xetla_1_1kernel_1_1dispatch__policy__streamK.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1dispatch__policy__block.html">gpu::xetla::kernel::dispatch_policy_block&lt; wg_num_n_, arch_tag_ &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blocked dispatch GEMM_UNIVERSAL implementation.  <a href="structgpu_1_1xetla_1_1kernel_1_1dispatch__policy__block.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1dispatch__policy__stream__k.html">gpu::xetla::kernel::dispatch_policy_stream_k&lt; arch_tag_ &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">StreamK GEMM implementation.  <a href="structgpu_1_1xetla_1_1kernel_1_1dispatch__policy__stream__k.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>

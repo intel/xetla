@@ -10,5 +10,5 @@ digraph "include/experimental/kernel/layer_norm"
   dir_142ba5024da2864de75251985ba3a4cc [label="layer_norm", fillcolor="#e4eaf8", color="grey25", style="filled,bold", URL="dir_142ba5024da2864de75251985ba3a4cc.html",tooltip=""];
   }
   dir_6cebb349e4d63b3d4aebac2b846d4ac3 [label="group", fillcolor="#e4eaf8", color="red", style="filled,dashed", URL="dir_6cebb349e4d63b3d4aebac2b846d4ac3.html",tooltip=""];
-  dir_142ba5024da2864de75251985ba3a4cc->dir_6cebb349e4d63b3d4aebac2b846d4ac3 [headlabel="2", labeldistance=1.5 headhref="dir_000035_000023.html" color="steelblue1" fontcolor="steelblue1"];
+  dir_142ba5024da2864de75251985ba3a4cc->dir_6cebb349e4d63b3d4aebac2b846d4ac3 [headlabel="2", labeldistance=1.5 headhref="dir_000036_000024.html" color="steelblue1" fontcolor="steelblue1"];
 }

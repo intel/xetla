@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.5</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.6</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -130,7 +130,7 @@ $(document).ready(function(){initNavTree('experimental_2kernel_2reduction_2api_8
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacegpu_1_1xetla_1_1kernel.html">gpu::xetla::kernel</a> {</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> dtype_in_, <span class="keyword">typename</span> dtype_out_, <span class="keyword">typename</span> dtype_acc_,</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keyword">typename</span> reduction_attr_, <a class="code hl_enumeration" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_,</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keyword">typename</span> reduction_attr_, <a class="code hl_enumeration" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_,</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keyword">typename</span> fused_op_t_</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        = group::row_reduction_fused_op_t&lt;<a class="code hl_enumvalue" href="namespacegpu_1_1xetla.html#af261b382f6c28635f6389d533cc6688ea334c4a4c42fdb79d7ebc3e73b517e6f8">reduction_fused_kind::none</a>, dtype_in_,</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                dtype_out_, dtype_acc_, reduction_attr_, arch_&gt;&gt;</div>
@@ -138,8 +138,8 @@ $(document).ready(function(){initNavTree('experimental_2kernel_2reduction_2api_8
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>} <span class="comment">// namespace gpu::xetla::kernel</span></div>
 <div class="ttc" id="aexperimental_2kernel_2reduction_2common_8hpp_html"><div class="ttname"><a href="experimental_2kernel_2reduction_2common_8hpp.html">common.hpp</a></div><div class="ttdoc">C++ API.</div></div>
-<div class="ttc" id="agroup__xetla__core__arch__config_html_gaa5a2713edb27d6fed88a3c61673556f1"><div class="ttname"><a href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu::xetla::gpu_arch</a></div><div class="ttdeci">gpu_arch</div><div class="ttdef"><b>Definition</b> arch_config.hpp:28</div></div>
 <div class="ttc" id="anamespacegpu_1_1xetla_1_1kernel_html"><div class="ttname"><a href="namespacegpu_1_1xetla_1_1kernel.html">gpu::xetla::kernel</a></div><div class="ttdef"><b>Definition</b> limitation.hpp:734</div></div>
+<div class="ttc" id="anamespacegpu_1_1xetla_html_aa5a2713edb27d6fed88a3c61673556f1"><div class="ttname"><a href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu::xetla::gpu_arch</a></div><div class="ttdeci">gpu_arch</div><div class="ttdef"><b>Definition</b> common.hpp:73</div></div>
 <div class="ttc" id="anamespacegpu_1_1xetla_html_af261b382f6c28635f6389d533cc6688ea334c4a4c42fdb79d7ebc3e73b517e6f8"><div class="ttname"><a href="namespacegpu_1_1xetla.html#af261b382f6c28635f6389d533cc6688ea334c4a4c42fdb79d7ebc3e73b517e6f8">gpu::xetla::reduction_fused_kind::none</a></div><div class="ttdeci">@ none</div></div>
 <div class="ttc" id="astructgpu_1_1xetla_1_1kernel_1_1xetla__row__reduction__t_html"><div class="ttname"><a href="structgpu_1_1xetla_1_1kernel_1_1xetla__row__reduction__t.html">gpu::xetla::kernel::xetla_row_reduction_t</a></div><div class="ttdoc">Is the row_reduction functor.</div><div class="ttdef"><b>Definition</b> api.hpp:39</div></div>
 </div><!-- fragment --></div><!-- contents -->

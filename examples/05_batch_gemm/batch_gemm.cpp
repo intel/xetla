@@ -14,11 +14,9 @@
 * limitations under the License.
 *******************************************************************************/
 #include "tests/utils/utils.hpp"
-#include "xetla.hpp"
 
-enum class batch_impl_t { for_loop = 0, nd_range = 1 };
+#include "batch_gemm.hpp"
 
-template <batch_impl_t batch_impl = batch_impl_t::for_loop>
 void batch_gemm_run(uint32_t iter) {
     // Tips, the example demonstrates programming kernel with XeTLA, it works as expected with current configurations.
     // Please make sure you fully understand these configurations before you do any modifications, incomplete changes may lead to unexpected behaviors.
@@ -51,31 +49,30 @@ void batch_gemm_run(uint32_t iter) {
     sycl::property_list properties {sycl::property::queue::enable_profiling()};
 
     //Define SYCL queue, context and device
-    auto Queue = queue(properties);
-    auto Context = Queue.get_info<info::queue::context>();
-    auto Device = Queue.get_info<info::queue::device>();
+    auto queue = sycl::queue(properties);
+    auto context = queue.get_info<info::queue::context>();
+    auto device = queue.get_info<info::queue::device>();
 
-    std::cout << "Running on " << Device.get_info<info::device::name>() << "\n";
+    std::cout << "Running on " << device.get_info<info::device::name>() << "\n";
 
-    //Define and initialize the data required for the calculation
-    //Use shared data which will be migrated automatically between  both CPU and GPU
-    data_type_a *A = static_cast<data_type_a *>(
-            malloc_shared(size_a * sizeof(data_type_a), Device, Context));
-    data_type_b *B = static_cast<data_type_b *>(
-            malloc_shared(size_b * sizeof(data_type_b), Device, Context));
-    data_type_c *C = static_cast<data_type_c *>(
-            malloc_shared(size_c * sizeof(data_type_c), Device, Context));
-
-    //Init data in GEMM A, B and C
-    for (uint32_t i = 0; i < size_a; ++i) {
-        A[i] = static_cast<data_type_a>(random_float());
-    }
-    for (uint32_t i = 0; i < size_b; ++i) {
-        B[i] = static_cast<data_type_b>(random_float());
-    }
-    for (uint32_t i = 0; i < size_c; ++i) {
-        C[i] = static_cast<data_type_c>(0.0f);
-    }
+    auto A = alloc_device_and_init<data_type_a>(
+            size_a,
+            [](data_type_a *data, size_t idx) {
+                data[idx] = static_cast<data_type_a>(random_float());
+            },
+            queue, device, context);
+    auto B = alloc_device_and_init<data_type_b>(
+            size_b,
+            [](data_type_b *data, size_t idx) {
+                data[idx] = static_cast<data_type_b>(random_float());
+            },
+            queue, device, context);
+    auto C = alloc_device_and_init<data_type_c>(
+            size_c,
+            [](data_type_c *data, size_t idx) {
+                data[idx] = static_cast<data_type_c>(0.0f);
+            },
+            queue, device, context);
 
     //Define the shape of workgroup and subgroup
     //It's tunable parameters based on different input shape and hardware for better performance
@@ -84,94 +81,77 @@ void batch_gemm_run(uint32_t iter) {
     constexpr uint32_t sg_tile_m = 32;
     constexpr uint32_t sg_tile_n = 64;
 
-    //There are implicit requirement for sg_tile_k range
-    constexpr uint32_t sg_tile_k = 32;
+    //There are implicit requirement for wg_tile_k range
+    constexpr uint32_t wg_tile_k = 32;
+    constexpr uint32_t sync_freq = 8;
+    constexpr uint32_t stages = 3;
 
     // Org the compute shape for sub-matrix
-    using tile_shape
-            = xetla::group::tile_shape_t<wg_tile_n, // workgroup size in dim0
-                    wg_tile_m, //	workgroup size in dim1
-                    sg_tile_n, //	subgroup size in dim0
-                    sg_tile_m>; //	subgroup size in dim1
+    using wg_shape = shape<wg_tile_n, wg_tile_m>;
+    using sg_shape = shape<sg_tile_n, sg_tile_m>;
 
     // Mirco-kernel configuration
-    using brgemm_config = xetla::group::brgemm_selector_t<
+    using tune_option
+            = dict_t<elem_v_t<tune_key::PARAM_OPTIMZER_TYPE,
+                             tune_key_value::PARAM_OPTIMZER_DECISION_TREE>,
+                    elem_t_t<tune_key::SG_TILE_SHAPE, sg_shape>,
+                    elem_v_t<tune_key::PREFETCH_DISTANCE, stages>,
+                    elem_v_t<tune_key::PERIODIC_SYNC_INTERVAL, sync_freq>>;
+    using gemm_t = xetla::group::default_gemm_selector_t<
             data_type_a, // input datatype for A
-            data_type_b, // input datatype for B
             mem_layout::row_major, // memory layout for A
-            mem_layout::row_major, // memory layout for B
+            8, // leading dimension for A, in unit of element
             mem_space::global, // memory reading from global mem for A
+            data_type_b, // input datatype for B
+            mem_layout::row_major, // memory layout for B
+            8, // leading dimension for B, in unit of element
             mem_space::global, // memory reading from global mem for B
-            8, // buffer alignment for A, in unit of element
-            8, // buffer alignment for B, in unit of element
             data_type_acc, // accumulator data type for intermediate resutls
-            tile_shape, // computation tile shape
-            sg_tile_k, // elements in each iteration
-            mma_engine::xmx, // compute engine
-            gpu_arch::Xe> // GPU arch
-            ::brgemm;
+            wg_shape, // computation tile shape
+            wg_tile_k, // elements in each iteration
+            gpu_arch::Xe, // GPU arch
+            tune_option>;
 
-    using epilogue_t = xetla::group::epilogue_t<
-            xetla::group::epilogue_policy_default<gpu_arch::Xe>, tile_shape,
-            mem_desc_t<data_type_c, mem_layout::row_major, mem_space::global>>;
+    using epilogue_t = xetla::group::default_epilogue_selector_t<
+            data_type_c, // onput datatype for C
+            mem_layout::row_major, // memory layout for C
+            8, // leading dimension for C, in unit of element
+            mem_space::global, // memory writing to global mem for C
+            wg_shape, // computation tile shape
+            wg_tile_k, // elements in each iteration
+            gpu_arch::Xe, // GPU arch
+            tune_option>;
 
-    using gemm_op_t = xetla::kernel::gemm_t<
-            xetla::kernel::dispatch_policy_default<gpu_arch::Xe>, brgemm_config,
-            epilogue_t>;
+    using batch_gemm_op_t
+            = xetla::kernel::batch_gemm_t<gemm_t, epilogue_t, gpu_arch::Xe>;
 
-    //Ndrange and workgroup shape
-    cl::sycl::range<3> GroupRange
-            = gemm_op_t::get_group_range(matrix_m, matrix_n);
-    cl::sycl::range<3> LocalRange = gemm_op_t::get_local_range();
+    // set up gemm_universal arguments
+    typename batch_gemm_op_t::arguments_t gemm_arg(batch_size, matrix_m,
+            matrix_k, matrix_n, A, matrix_k, B, matrix_n, C, matrix_n);
 
-    // [Batch] Extend index space, the z dimension corresponds to batch
-    // dimension
-    try {
-        if constexpr (batch_impl == batch_impl_t::nd_range) {
-            GroupRange[0] = batch_size;
-        }
-    } catch (sycl::exception const &e) {
-        sycl::free(A, Context);
-        sycl::free(B, Context);
-        sycl::free(C, Context);
-        std::cout << "invalid parameter: " << e.what() << '\n';
-        return;
+    cl::sycl::nd_range<3> nd_range = batch_gemm_op_t::get_nd_range(gemm_arg);
+    if (!batch_gemm_op_t::can_implement(gemm_arg)) {
+        std::cout << "The arguments cannot be supported, aborting ... "
+                  << std::endl;
+        free(A, context);
+        free(B, context);
+        free(C, context);
+        FAIL();
     }
 
-    cl::sycl::nd_range<3> NDRange(GroupRange * LocalRange, LocalRange);
-
     uint32_t warmup = 10;
-    long ops = batch_size * 2 * static_cast<long>(matrix_m) * matrix_n
+    size_t ops = batch_size * 2 * static_cast<size_t>(matrix_m) * matrix_n
             * matrix_k;
     profiling_helper prof("batch_gemm", ops, "gflops");
     for (uint32_t i = 0; i < iter + warmup; i++) {
         if (i >= warmup) { prof.cpu_start(); }
-        auto gpu_event = Queue.submit([&](handler &cgh) {
+        auto gpu_event = queue.submit([&](handler &cgh) {
             // GPU kernel
-            cgh.parallel_for(NDRange, [=](nd_item<3> item) SYCL_ESIMD_KERNEL {
-                xetla_exec_item<3> ei(item);
-                slm_barrier_init<gemm_op_t>();
-                gemm_op_t gemm_op;
-                if constexpr (batch_impl == batch_impl_t::for_loop) {
-                    // [Batch] One work-item computes all slices in the
-                    // batch dimension
-                    for (uint32_t batch = 0; batch < batch_size; batch++) {
-                        typename gemm_op_t::arguments_t arg(matrix_m, matrix_k,
-                                matrix_n, A + size_a_slice * batch, matrix_k,
-                                B + size_b_slice * batch, matrix_n,
-                                C + size_c_slice * batch, matrix_n);
-                        gemm_op(ei, arg);
-                    }
-                } else {
-                    // [Batch] Get batch index from GroupRange
-                    // One work-item is responsible for one slice only
-                    uint32_t batch = ei.get_group(0);
-                    typename gemm_op_t::arguments_t arg(matrix_m, matrix_k,
-                            matrix_n, A + size_a_slice * batch, matrix_k,
-                            B + size_b_slice * batch, matrix_n,
-                            C + size_c_slice * batch, matrix_n);
-                    gemm_op(ei, arg);
-                }
+            cgh.parallel_for(nd_range, [=](nd_item<3> item) SYCL_ESIMD_KERNEL {
+                // allocate slm and nbarrier resource
+                slm_barrier_init<batch_gemm_op_t>();
+                batch_gemm_op_t batch_gemm_op;
+                batch_gemm_op(item, gemm_arg);
             });
         });
         gpu_event.wait();
@@ -184,34 +164,26 @@ void batch_gemm_run(uint32_t iter) {
 
     ASSERT_EQ(0,
             gemm_result_validate(A, B, C, batch_size, matrix_m, matrix_k,
-                    matrix_n, mem_layout::row_major, mem_layout::row_major));
+                    matrix_n, queue, mem_layout::row_major,
+                    mem_layout::row_major));
 
     //performance
     prof.print_profiling_result(profiling_selector::GPU);
 
-    free(A, Context);
-    free(B, Context);
-    free(C, Context);
+    free(A, context);
+    free(B, context);
+    free(C, context);
 }
 
 int main() {
     // The purpose of this example is to demonstrate how to calculate matrix
     // multiplication of high order.
-    //   C = A x B
+    //   C[i] = A[i] x B[i] for i in range(0, batch_size)
     // where:
-    //   shape(A) = [batch_size, m, k]
-    //   shape(B) = [batch_size, k, n]
-    //   shape(C) = [batch_size, m, n]
+    //   shape(A) = [batch_size x m, k]
+    //   shape(B) = [batch_size x k, n]
+    //   shape(C) = [batch_size x m, n]
 
-    // This example provides two implementation,
-    // - batch_impl_t::for_loop shows the basic usage
-    //   of varying base pointer inside the kernel
-    // - batch_impl_t::nd_range shows the idiomatic
-    //   mapping of task decomposition to index space
-
-    // Note:
-    //   - comments related to batch will have the "[Batch]" prefix
-    // batch_gemm_run<batch_impl_t::for_loop>(10);
-    batch_gemm_run<batch_impl_t::nd_range>(10);
+    batch_gemm_run(10);
     return (0);
 }

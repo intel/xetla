@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.5</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.6</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -105,7 +105,8 @@ $(document).ready(function(){initNavTree('namespacegpu_1_1xetla_1_1group.html','
 <div class="header">
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle"><div class="title">gpu::xetla::group Namespace Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -151,6 +152,14 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mac02497fd2f41eaf843c8266c909e0dbe.html">cooperative_reduce_t&lt; reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, arch_tag_, std::enable_if_t&lt;(arch_tag_==gpu_arch::Xe)&gt; &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Workgroups to do the cooperative reduction. Specialized for Xe architecture.  <a href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mac02497fd2f41eaf843c8266c909e0dbe.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1group_1_1default__epilogue__selector__config__t.html">default_epilogue_selector_config_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1group_1_1default__epilogue__selector__t.html">default_epilogue_selector_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1group_1_1default__gemm__selector__config__t.html">default_gemm_selector_config_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1group_1_1default__gemm__selector__t.html">default_gemm_selector_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1group_1_1epilogue__policy__default.html">epilogue_policy_default</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default epilogue policy for store C.  <a href="structgpu_1_1xetla_1_1group_1_1epilogue__policy__default.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -163,8 +172,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1group_1_1epilogue__policy__unaligned.html">epilogue_policy_unaligned</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Epilogue policy for store unaligned C.  <a href="structgpu_1_1xetla_1_1group_1_1epilogue__policy__unaligned.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1group_1_1epilogue__streamK__t.html">epilogue_streamK_t</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the epilogue functor specialized for streamK.  <a href="structgpu_1_1xetla_1_1group_1_1epilogue__streamK__t.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1group_1_1epilogue__stream__k__t.html">epilogue_stream_k_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the epilogue functor specialized for stream_k.  <a href="structgpu_1_1xetla_1_1group_1_1epilogue__stream__k__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1group_1_1epilogue__t.html">epilogue_t</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the epilogue functor.  <a href="classgpu_1_1xetla_1_1group_1_1epilogue__t.html#details">More...</a><br /></td></tr>
@@ -172,8 +181,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1group_1_1epilogue__t_3_01epilogue__policy__default_3_01arch__tag___01_4_00_3da973e4eeb6c3d1f9850a29fc2742a3.html">epilogue_t&lt; epilogue_policy_default&lt; arch_tag_ &gt;, tile_shape_, mem_desc_c_t_, std::enable_if_t&lt;((arch_tag_==gpu_arch::Xe))&gt; &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the epilogue functor specialized for <a class="el" href="structgpu_1_1xetla_1_1group_1_1epilogue__policy__default.html" title="Default epilogue policy for store C.">epilogue_policy_default</a> and Xe architecture.  <a href="classgpu_1_1xetla_1_1group_1_1epilogue__t_3_01epilogue__policy__default_3_01arch__tag___01_4_00_3da973e4eeb6c3d1f9850a29fc2742a3.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1group_1_1epilogue__t_3_01epilogue__policy__quant__op_3_01tile__op__t___00_06b663aba960061f97b173f444bae37fc.html">epilogue_t&lt; epilogue_policy_quant_op&lt; tile_op_t_, quant_op_t_, arch_tag_ &gt;, tile_shape_, mem_desc_c_t_, std::enable_if_t&lt;(arch_tag_==gpu_arch::Xe)&gt; &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the epilogue functor specialized for <a class="el" href="structgpu_1_1xetla_1_1group_1_1epilogue__policy__quant__op.html" title="Epilogue functor, specialized for quantization operator.">epilogue_policy_quant_op</a> and Xe architecture.  <a href="classgpu_1_1xetla_1_1group_1_1epilogue__t_3_01epilogue__policy__quant__op_3_01tile__op__t___00_06b663aba960061f97b173f444bae37fc.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1group_1_1epilogue__t_3_01epilogue__policy__quant__op_3_01dequant__op__t___074b0f306937555be4c3ea6afc9383a35.html">epilogue_t&lt; epilogue_policy_quant_op&lt; dequant_op_t_, tile_op_t_, quant_op_t_, arch_tag_, dtype_dequant_ &gt;, tile_shape_, mem_desc_c_t_, std::enable_if_t&lt;(arch_tag_==gpu_arch::Xe)&gt; &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the epilogue functor specialized for <a class="el" href="structgpu_1_1xetla_1_1group_1_1epilogue__policy__quant__op.html" title="Epilogue functor, specialized for quantization operator.">epilogue_policy_quant_op</a> and Xe architecture.  <a href="classgpu_1_1xetla_1_1group_1_1epilogue__t_3_01epilogue__policy__quant__op_3_01dequant__op__t___074b0f306937555be4c3ea6afc9383a35.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1group_1_1epilogue__t_3_01epilogue__policy__tile__op_3_01tile__op__t___00_012baad58cf2049dd9c5a08e4c33c824b1.html">epilogue_t&lt; epilogue_policy_tile_op&lt; tile_op_t_, arch_tag_ &gt;, tile_shape_, mem_desc_c_t_, std::enable_if_t&lt;(arch_tag_==gpu_arch::Xe)&gt; &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the epilogue functor specialized for <a class="el" href="structgpu_1_1xetla_1_1group_1_1epilogue__policy__tile__op.html" title="Epilogue policy for tile_op + store C fusion.">epilogue_policy_tile_op</a> and Xe architecture.  <a href="classgpu_1_1xetla_1_1group_1_1epilogue__t_3_01epilogue__policy__tile__op_3_01tile__op__t___00_012baad58cf2049dd9c5a08e4c33c824b1.html#details">More...</a><br /></td></tr>
@@ -302,7 +311,27 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1group_1_1xetla__row__reduction__fused__op__arguments__t.html">xetla_row_reduction_fused_op_arguments_t</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ac6347e7d215287c556e3f5df03d0035e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegpu_1_1xetla_1_1group.html#ac6347e7d215287c556e3f5df03d0035e">param_dict1_wg_t</a> = default_param_t::template update_t&lt; <a class="el" href="structgpu_1_1xetla_1_1elem__t__t.html">elem_t_t</a>&lt; <a class="el" href="namespacegpu_1_1xetla.html#a5636a4588add568d236bd2c22f21c341ac78263b8951d5b60f42dcb2f0174631d">tune_key::DATA_TYPE_ACC</a>, float &gt;, <a class="el" href="structgpu_1_1xetla_1_1elem__t__t.html">elem_t_t</a>&lt; <a class="el" href="namespacegpu_1_1xetla.html#a5636a4588add568d236bd2c22f21c341a55159a4cd8dcce11dbee7ba2e6f6bdaa">tune_key::WG_TILE_SHAPE</a>, <a class="el" href="structgpu_1_1xetla_1_1shape.html">shape</a>&lt; 256, 256 &gt; &gt;, <a class="el" href="structgpu_1_1xetla_1_1elem__v__t.html">elem_v_t</a>&lt; <a class="el" href="namespacegpu_1_1xetla.html#a5636a4588add568d236bd2c22f21c341a9876821d0d69bc7cae7ad178e257061d">tune_key::WG_TILE_K</a>, 32UL, uint32_t &gt;, <a class="el" href="structgpu_1_1xetla_1_1elem__t__t.html">elem_t_t</a>&lt; <a class="el" href="namespacegpu_1_1xetla.html#a5636a4588add568d236bd2c22f21c341a9e5ac95978677125c7ad4fd463693e73">tune_key::SG_TILE_SHAPE</a>, <a class="el" href="structgpu_1_1xetla_1_1shape.html">shape</a>&lt; 64, 32 &gt; &gt;, <a class="el" href="structgpu_1_1xetla_1_1elem__v__t.html">elem_v_t</a>&lt; <a class="el" href="namespacegpu_1_1xetla.html#a5636a4588add568d236bd2c22f21c341a520d31d53559e3259d9f6ad1f702a038">tune_key::PREFETCH_DISTANCE</a>, 3UL, uint32_t &gt;, <a class="el" href="structgpu_1_1xetla_1_1elem__v__t.html">elem_v_t</a>&lt; <a class="el" href="namespacegpu_1_1xetla.html#a5636a4588add568d236bd2c22f21c341a2cb49c058776d329936d30b953174d5d">tune_key::PERIODIC_SYNC_INTERVAL</a>, 8UL, uint32_t &gt;, <a class="el" href="structgpu_1_1xetla_1_1elem__t__t.html">elem_t_t</a>&lt; <a class="el" href="namespacegpu_1_1xetla.html#a5636a4588add568d236bd2c22f21c341ab4e2b32a119978be47443381618b5301">tune_key::EPILOGUE_POLICY</a>, <a class="el" href="structgpu_1_1xetla_1_1group_1_1epilogue__policy__default.html">group::epilogue_policy_default</a>&lt; <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt; &gt; &gt;</td></tr>
+<tr class="separator:ac6347e7d215287c556e3f5df03d0035e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="ac6347e7d215287c556e3f5df03d0035e" name="ac6347e7d215287c556e3f5df03d0035e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6347e7d215287c556e3f5df03d0035e">&#9670;&#160;</a></span>param_dict1_wg_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacegpu_1_1xetla_1_1group.html#ac6347e7d215287c556e3f5df03d0035e">gpu::xetla::group::param_dict1_wg_t</a> = typedef default_param_t::template update_t&lt; <a class="el" href="structgpu_1_1xetla_1_1elem__t__t.html">elem_t_t</a>&lt;<a class="el" href="namespacegpu_1_1xetla.html#a5636a4588add568d236bd2c22f21c341ac78263b8951d5b60f42dcb2f0174631d">tune_key::DATA_TYPE_ACC</a>, float&gt;, <a class="el" href="structgpu_1_1xetla_1_1elem__t__t.html">elem_t_t</a>&lt;<a class="el" href="namespacegpu_1_1xetla.html#a5636a4588add568d236bd2c22f21c341a55159a4cd8dcce11dbee7ba2e6f6bdaa">tune_key::WG_TILE_SHAPE</a>, <a class="el" href="structgpu_1_1xetla_1_1shape.html">shape</a>&lt;256, 256&gt; &gt;, <a class="el" href="structgpu_1_1xetla_1_1elem__v__t.html">elem_v_t</a>&lt;<a class="el" href="namespacegpu_1_1xetla.html#a5636a4588add568d236bd2c22f21c341a9876821d0d69bc7cae7ad178e257061d">tune_key::WG_TILE_K</a>, 32UL, uint32_t&gt;, <a class="el" href="structgpu_1_1xetla_1_1elem__t__t.html">elem_t_t</a>&lt;<a class="el" href="namespacegpu_1_1xetla.html#a5636a4588add568d236bd2c22f21c341a9e5ac95978677125c7ad4fd463693e73">tune_key::SG_TILE_SHAPE</a>, <a class="el" href="structgpu_1_1xetla_1_1shape.html">shape</a>&lt;64, 32&gt; &gt;, <a class="el" href="structgpu_1_1xetla_1_1elem__v__t.html">elem_v_t</a>&lt;<a class="el" href="namespacegpu_1_1xetla.html#a5636a4588add568d236bd2c22f21c341a520d31d53559e3259d9f6ad1f702a038">tune_key::PREFETCH_DISTANCE</a>, 3UL, uint32_t&gt;, <a class="el" href="structgpu_1_1xetla_1_1elem__v__t.html">elem_v_t</a>&lt;<a class="el" href="namespacegpu_1_1xetla.html#a5636a4588add568d236bd2c22f21c341a2cb49c058776d329936d30b953174d5d">tune_key::PERIODIC_SYNC_INTERVAL</a>, 8UL, uint32_t&gt;, <a class="el" href="structgpu_1_1xetla_1_1elem__t__t.html">elem_t_t</a>&lt;<a class="el" href="namespacegpu_1_1xetla.html#a5636a4588add568d236bd2c22f21c341ab4e2b32a119978be47443381618b5301">tune_key::EPILOGUE_POLICY</a>, <a class="el" href="structgpu_1_1xetla_1_1group_1_1epilogue__policy__default.html">group::epilogue_policy_default</a>&lt;<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>&gt; &gt;&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

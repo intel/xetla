@@ -1,0 +1,9 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node0 [id="Node000000",label="kernel_xcoder_gru_fusion\l\< input_T, Act_T, wg_tile\l_m_t, wg_tile_n_t, sg_tile\l_m_t, sg_tile_n_t, sg_tile_k_t \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structkernel__xcoder__gru__fusion.html",tooltip=" "];
+}

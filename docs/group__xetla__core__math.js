@@ -27,6 +27,7 @@ var group__xetla__core__math =
     [ "gpu::xetla::xetla_rnde", "group__xetla__core__math.html#gaf884f51daedc0fb2adaa8e9edb8953b4", null ],
     [ "gpu::xetla::xetla_rsqrt", "group__xetla__core__math.html#ga172b8ff88603dd1c241d71c4540abdb2", null ],
     [ "gpu::xetla::xetla_rsqrt", "group__xetla__core__math.html#gaabd5a2631196ee6ae503c6b051ef8290", null ],
+    [ "gpu::xetla::xetla_sat", "group__xetla__core__math.html#ga6b988fbdca923ae12db3935fda297744", null ],
     [ "gpu::xetla::xetla_sqrt", "group__xetla__core__math.html#ga549d6c50a78b64cea44657f2cfd834d1", null ],
     [ "gpu::xetla::xetla_sqrt", "group__xetla__core__math.html#ga717f8239997256ff3138a9b3df859a02", null ],
     [ "gpu::xetla::xetla_sqrt_ieee", "group__xetla__core__math.html#ga0b6b295e825c39c5070b63ce574dffc4", null ],

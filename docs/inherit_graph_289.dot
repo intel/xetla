@@ -5,5 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="gpu::xetla::subgroup\l::tile_mma_t\< matAcc\l_dst_t, matAcc_src_t,\l matB_t, matA_t, engine,\l arch_tag, enable \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t.html",tooltip="Is the xetla tile mma operation definition API."];
+  Node0 [id="Node000000",label="gpu::xetla::subgroup\l::check_store\< gpu_arch\l::Xe, dtype, mem_dtype\l \>::local_1d",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1subgroup_1_1check__store_3_01gpu__arch_1_1Xe_00_01dtype_00_01mem__dtype_01_4_1_1local__1d.html",tooltip=" "];
 }

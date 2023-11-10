@@ -1,0 +1,9 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node0 [id="Node000000",label="gpu::xetla::subgroup\l::quant_op_t\< tile_op\l_t_, arch_tag, std::enable\l_if_t\<(arch_tag==gpu_arch\l::Xe)\> \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1subgroup_1_1quant__op__t_3_01tile__op__t___00_01arch__tag_00_01std_1_1enabd9d5e9d31459572b2a3ef8e77b523f00.html",tooltip="Is the quantization op functor, specialized for Xe architecture."];
+}

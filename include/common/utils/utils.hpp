@@ -40,10 +40,12 @@
 
 /// @} xetla_util
 #include "common/utils/common.hpp"
-#include "common/utils/execution_item.hpp"
+#include "common/utils/dict.hpp"
+#include "common/utils/fastmath.hpp"
 #include "common/utils/memory_descriptor.hpp"
 #include "common/utils/misc.hpp"
 #include "common/utils/rand.hpp"
 #include "common/utils/raw_send_load_store.hpp"
 #include "common/utils/raw_send_nbarrier.hpp"
+#include "common/utils/tensor_descriptor.hpp"
 #include "common/utils/work_group.hpp"

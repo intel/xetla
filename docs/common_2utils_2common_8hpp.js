@@ -1,5 +1,11 @@
 var common_2utils_2common_8hpp =
 [
+    [ "lsc_action", "common_2utils_2common_8hpp.html#ad610b6521a5d057ad9d283160f02a99c", [
+      [ "prefetch", "common_2utils_2common_8hpp.html#ad610b6521a5d057ad9d283160f02a99ca4c203b76e2847e3b6e1bdf7bf2ad63a2", null ],
+      [ "load", "common_2utils_2common_8hpp.html#ad610b6521a5d057ad9d283160f02a99caec4d1eb36b22d19728e9d1d23ca84d1c", null ],
+      [ "store", "common_2utils_2common_8hpp.html#ad610b6521a5d057ad9d283160f02a99ca8cd892b7b97ef9489ae4479d3f4ef0fc", null ],
+      [ "atomic", "common_2utils_2common_8hpp.html#ad610b6521a5d057ad9d283160f02a99ca23d33884d600e542d097cd3933df2ae4", null ]
+    ] ],
     [ "memory_op", "common_2utils_2common_8hpp.html#ac3c82ab1fff7b92d83bbc94ae1afb626", [
       [ "load", "common_2utils_2common_8hpp.html#ac3c82ab1fff7b92d83bbc94ae1afb626aec4d1eb36b22d19728e9d1d23ca84d1c", null ],
       [ "store", "common_2utils_2common_8hpp.html#ac3c82ab1fff7b92d83bbc94ae1afb626a8cd892b7b97ef9489ae4479d3f4ef0fc", null ]
@@ -44,13 +50,14 @@ var common_2utils_2common_8hpp =
       [ "x_dir", "common_2utils_2common_8hpp.html#acd7865b31b59cd433a5ff11bd6729628a69d8003dc168eaaa90874ead1a8f74b9", null ],
       [ "y_dir", "common_2utils_2common_8hpp.html#acd7865b31b59cd433a5ff11bd6729628a49c3c2d550aee86a32f48cc7036f300b", null ]
     ] ],
-    [ "get_atomic_cache_hint_code", "common_2utils_2common_8hpp.html#a8b95fda216330c565191303032d9de30", null ],
+    [ "check_lsc_cache_hint", "common_2utils_2common_8hpp.html#a9147ae97e635c9b798530f1a20e7ad71", null ],
+    [ "get_atomic_cache_hint_code", "common_2utils_2common_8hpp.html#a47ec70946460fb5700ac5679dd0e1b68", null ],
     [ "get_atomic_opcode", "common_2utils_2common_8hpp.html#a9176c8922d99e6c6d35b0460fd907bd2", null ],
     [ "get_element_size_code", "common_2utils_2common_8hpp.html#ae6f14e7fa22d9e013272adb60199848e", null ],
     [ "get_execSize_code", "common_2utils_2common_8hpp.html#a07675934b8a8496b3d7f469518bb9f2f", null ],
-    [ "get_load_cache_hint_code", "common_2utils_2common_8hpp.html#acc526feffe1dcd609e5509a71a5c34df", null ],
-    [ "get_prefetch_cache_hint_code", "common_2utils_2common_8hpp.html#acf7d652f0fd4716704ecd8c3b5c62b4b", null ],
-    [ "get_store_cache_hint_code", "common_2utils_2common_8hpp.html#a0ec9df1eeeac1c187f5e5b270d72d431", null ],
+    [ "get_load_cache_hint_code", "common_2utils_2common_8hpp.html#a4a3fc3154d7d79b4f86462349c26fb2e", null ],
+    [ "get_prefetch_cache_hint_code", "common_2utils_2common_8hpp.html#a5ff89d33909db0b40d0024bb3b7a6666", null ],
+    [ "get_store_cache_hint_code", "common_2utils_2common_8hpp.html#a0adf6e796cb9ddab838fff320414c1b8", null ],
     [ "slm_barrier_init", "common_2utils_2common_8hpp.html#af761fe36aa222bcbf6ab9f126eb1fc2a", null ],
     [ "slm_barrier_init", "common_2utils_2common_8hpp.html#a85b9054c131871728e16b598a84685ff", null ]
 ];

@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.5</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.6</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -149,7 +149,7 @@ Public Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a1ba6fb9d30baa68ea6ce4a9fcb2c2bde"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1group_1_1global__reduce__t_3_01reduce__op_1_1sum_00_01tile__shape__acc___0028bb5985022f807549f0ba9db49ff505.html#a1ba6fb9d30baa68ea6ce4a9fcb2c2bde">arch_tag</a> = arch_tag_</td></tr>
+<tr class="memitem:a1ba6fb9d30baa68ea6ce4a9fcb2c2bde"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1group_1_1global__reduce__t_3_01reduce__op_1_1sum_00_01tile__shape__acc___0028bb5985022f807549f0ba9db49ff505.html#a1ba6fb9d30baa68ea6ce4a9fcb2c2bde">arch_tag</a> = arch_tag_</td></tr>
 <tr class="separator:a1ba6fb9d30baa68ea6ce4a9fcb2c2bde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3bd2174b868676ec9993cefb9cf97b5"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1group_1_1global__reduce__t_3_01reduce__op_1_1sum_00_01tile__shape__acc___0028bb5985022f807549f0ba9db49ff505.html#ad3bd2174b868676ec9993cefb9cf97b5">barrier_count</a> = 0</td></tr>
 <tr class="separator:ad3bd2174b868676ec9993cefb9cf97b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -157,7 +157,7 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:a7fdd76b66d5a5bf1f45cde19b42b5c9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;typename tile_shape_acc_, typename tile_shape_cnt_, typename mem_desc_acc_t_, typename mem_desc_cnt_t_, uint32_t num_group_reduction, uint32_t counter_size, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt;<br />
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename tile_shape_acc_, typename tile_shape_cnt_, typename mem_desc_acc_t_, typename mem_desc_cnt_t_, uint32_t num_group_reduction, uint32_t counter_size, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt;<br />
 class gpu::xetla::group::global_reduce_t&lt; reduce_op::sum, tile_shape_acc_, tile_shape_cnt_, mem_desc_acc_t_, mem_desc_cnt_t_, num_group_reduction, counter_size, arch_tag_, std::enable_if_t&lt;(arch_tag_==gpu_arch::Xe)&gt; &gt;</div><p>Cross group global reduction. Specialized for <a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609a1d623b89683f9ce4e074de1676d12416">reduce_op::sum</a> and Xe architecture. </p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="acbc5b3169525a7f586e3548ab899d59d" name="acbc5b3169525a7f586e3548ab899d59d"></a>
@@ -166,10 +166,10 @@ class gpu::xetla::group::global_reduce_t&lt; reduce_op::sum, tile_shape_acc_, ti
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename tile_shape_acc_ , typename tile_shape_cnt_ , typename mem_desc_acc_t_ , typename mem_desc_cnt_t_ , uint32_t num_group_reduction, uint32_t counter_size, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename tile_shape_acc_ , typename tile_shape_cnt_ , typename mem_desc_acc_t_ , typename mem_desc_cnt_t_ , uint32_t num_group_reduction, uint32_t counter_size, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classgpu_1_1xetla_1_1group_1_1global__reduce__t.html">gpu::xetla::group::global_reduce_t</a>&lt; <a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609a1d623b89683f9ce4e074de1676d12416">reduce_op::sum</a>, tile_shape_acc_, tile_shape_cnt_, mem_desc_acc_t_, mem_desc_cnt_t_, num_group_reduction, counter_size, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::dtype_acc =  typename mem_desc_acc_t::dtype</td>
+          <td class="memname">using <a class="el" href="classgpu_1_1xetla_1_1group_1_1global__reduce__t.html">gpu::xetla::group::global_reduce_t</a>&lt; <a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609a1d623b89683f9ce4e074de1676d12416">reduce_op::sum</a>, tile_shape_acc_, tile_shape_cnt_, mem_desc_acc_t_, mem_desc_cnt_t_, num_group_reduction, counter_size, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::dtype_acc =  typename mem_desc_acc_t::dtype</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -182,10 +182,10 @@ template&lt;typename tile_shape_acc_ , typename tile_shape_cnt_ , typename mem_d
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename tile_shape_acc_ , typename tile_shape_cnt_ , typename mem_desc_acc_t_ , typename mem_desc_cnt_t_ , uint32_t num_group_reduction, uint32_t counter_size, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename tile_shape_acc_ , typename tile_shape_cnt_ , typename mem_desc_acc_t_ , typename mem_desc_cnt_t_ , uint32_t num_group_reduction, uint32_t counter_size, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classgpu_1_1xetla_1_1group_1_1global__reduce__t.html">gpu::xetla::group::global_reduce_t</a>&lt; <a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609a1d623b89683f9ce4e074de1676d12416">reduce_op::sum</a>, tile_shape_acc_, tile_shape_cnt_, mem_desc_acc_t_, mem_desc_cnt_t_, num_group_reduction, counter_size, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::dtype_cnt =  typename mem_desc_cnt_t::dtype</td>
+          <td class="memname">using <a class="el" href="classgpu_1_1xetla_1_1group_1_1global__reduce__t.html">gpu::xetla::group::global_reduce_t</a>&lt; <a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609a1d623b89683f9ce4e074de1676d12416">reduce_op::sum</a>, tile_shape_acc_, tile_shape_cnt_, mem_desc_acc_t_, mem_desc_cnt_t_, num_group_reduction, counter_size, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::dtype_cnt =  typename mem_desc_cnt_t::dtype</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -198,10 +198,10 @@ template&lt;typename tile_shape_acc_ , typename tile_shape_cnt_ , typename mem_d
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename tile_shape_acc_ , typename tile_shape_cnt_ , typename mem_desc_acc_t_ , typename mem_desc_cnt_t_ , uint32_t num_group_reduction, uint32_t counter_size, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename tile_shape_acc_ , typename tile_shape_cnt_ , typename mem_desc_acc_t_ , typename mem_desc_cnt_t_ , uint32_t num_group_reduction, uint32_t counter_size, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classgpu_1_1xetla_1_1group_1_1global__reduce__t.html">gpu::xetla::group::global_reduce_t</a>&lt; <a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609a1d623b89683f9ce4e074de1676d12416">reduce_op::sum</a>, tile_shape_acc_, tile_shape_cnt_, mem_desc_acc_t_, mem_desc_cnt_t_, num_group_reduction, counter_size, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::mem_desc_acc_t =  mem_desc_acc_t_</td>
+          <td class="memname">using <a class="el" href="classgpu_1_1xetla_1_1group_1_1global__reduce__t.html">gpu::xetla::group::global_reduce_t</a>&lt; <a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609a1d623b89683f9ce4e074de1676d12416">reduce_op::sum</a>, tile_shape_acc_, tile_shape_cnt_, mem_desc_acc_t_, mem_desc_cnt_t_, num_group_reduction, counter_size, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::mem_desc_acc_t =  mem_desc_acc_t_</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -214,10 +214,10 @@ template&lt;typename tile_shape_acc_ , typename tile_shape_cnt_ , typename mem_d
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename tile_shape_acc_ , typename tile_shape_cnt_ , typename mem_desc_acc_t_ , typename mem_desc_cnt_t_ , uint32_t num_group_reduction, uint32_t counter_size, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename tile_shape_acc_ , typename tile_shape_cnt_ , typename mem_desc_acc_t_ , typename mem_desc_cnt_t_ , uint32_t num_group_reduction, uint32_t counter_size, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classgpu_1_1xetla_1_1group_1_1global__reduce__t.html">gpu::xetla::group::global_reduce_t</a>&lt; <a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609a1d623b89683f9ce4e074de1676d12416">reduce_op::sum</a>, tile_shape_acc_, tile_shape_cnt_, mem_desc_acc_t_, mem_desc_cnt_t_, num_group_reduction, counter_size, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::mem_desc_cnt_t =  mem_desc_cnt_t_</td>
+          <td class="memname">using <a class="el" href="classgpu_1_1xetla_1_1group_1_1global__reduce__t.html">gpu::xetla::group::global_reduce_t</a>&lt; <a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609a1d623b89683f9ce4e074de1676d12416">reduce_op::sum</a>, tile_shape_acc_, tile_shape_cnt_, mem_desc_acc_t_, mem_desc_cnt_t_, num_group_reduction, counter_size, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::mem_desc_cnt_t =  mem_desc_cnt_t_</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -230,10 +230,10 @@ template&lt;typename tile_shape_acc_ , typename tile_shape_cnt_ , typename mem_d
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename tile_shape_acc_ , typename tile_shape_cnt_ , typename mem_desc_acc_t_ , typename mem_desc_cnt_t_ , uint32_t num_group_reduction, uint32_t counter_size, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename tile_shape_acc_ , typename tile_shape_cnt_ , typename mem_desc_acc_t_ , typename mem_desc_cnt_t_ , uint32_t num_group_reduction, uint32_t counter_size, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classgpu_1_1xetla_1_1group_1_1global__reduce__t.html">gpu::xetla::group::global_reduce_t</a>&lt; <a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609a1d623b89683f9ce4e074de1676d12416">reduce_op::sum</a>, tile_shape_acc_, tile_shape_cnt_, mem_desc_acc_t_, mem_desc_cnt_t_, num_group_reduction, counter_size, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::tile_shape_acc =  tile_shape_acc_</td>
+          <td class="memname">using <a class="el" href="classgpu_1_1xetla_1_1group_1_1global__reduce__t.html">gpu::xetla::group::global_reduce_t</a>&lt; <a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609a1d623b89683f9ce4e074de1676d12416">reduce_op::sum</a>, tile_shape_acc_, tile_shape_cnt_, mem_desc_acc_t_, mem_desc_cnt_t_, num_group_reduction, counter_size, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::tile_shape_acc =  tile_shape_acc_</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -246,10 +246,10 @@ template&lt;typename tile_shape_acc_ , typename tile_shape_cnt_ , typename mem_d
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename tile_shape_acc_ , typename tile_shape_cnt_ , typename mem_desc_acc_t_ , typename mem_desc_cnt_t_ , uint32_t num_group_reduction, uint32_t counter_size, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename tile_shape_acc_ , typename tile_shape_cnt_ , typename mem_desc_acc_t_ , typename mem_desc_cnt_t_ , uint32_t num_group_reduction, uint32_t counter_size, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classgpu_1_1xetla_1_1group_1_1global__reduce__t.html">gpu::xetla::group::global_reduce_t</a>&lt; <a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609a1d623b89683f9ce4e074de1676d12416">reduce_op::sum</a>, tile_shape_acc_, tile_shape_cnt_, mem_desc_acc_t_, mem_desc_cnt_t_, num_group_reduction, counter_size, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::tile_shape_cnt =  tile_shape_cnt_</td>
+          <td class="memname">using <a class="el" href="classgpu_1_1xetla_1_1group_1_1global__reduce__t.html">gpu::xetla::group::global_reduce_t</a>&lt; <a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609a1d623b89683f9ce4e074de1676d12416">reduce_op::sum</a>, tile_shape_acc_, tile_shape_cnt_, mem_desc_acc_t_, mem_desc_cnt_t_, num_group_reduction, counter_size, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::tile_shape_cnt =  tile_shape_cnt_</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -263,13 +263,13 @@ template&lt;typename tile_shape_acc_ , typename tile_shape_cnt_ , typename mem_d
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename tile_shape_acc_ , typename tile_shape_cnt_ , typename mem_desc_acc_t_ , typename mem_desc_cnt_t_ , uint32_t num_group_reduction, uint32_t counter_size, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename tile_shape_acc_ , typename tile_shape_cnt_ , typename mem_desc_acc_t_ , typename mem_desc_cnt_t_ , uint32_t num_group_reduction, uint32_t counter_size, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classgpu_1_1xetla_1_1group_1_1global__reduce__t.html">gpu::xetla::group::global_reduce_t</a>&lt; <a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609a1d623b89683f9ce4e074de1676d12416">reduce_op::sum</a>, tile_shape_acc_, tile_shape_cnt_, mem_desc_acc_t_, mem_desc_cnt_t_, num_group_reduction, counter_size, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::is_last_group </td>
+          <td class="memname">bool <a class="el" href="classgpu_1_1xetla_1_1group_1_1global__reduce__t.html">gpu::xetla::group::global_reduce_t</a>&lt; <a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609a1d623b89683f9ce4e074de1676d12416">reduce_op::sum</a>, tile_shape_acc_, tile_shape_cnt_, mem_desc_acc_t_, mem_desc_cnt_t_, num_group_reduction, counter_size, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::is_last_group </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -290,7 +290,7 @@ template&lt;typename tile_shape_acc_ , typename tile_shape_cnt_ , typename mem_d
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename tile_shape_acc_ , typename tile_shape_cnt_ , typename mem_desc_acc_t_ , typename mem_desc_cnt_t_ , uint32_t num_group_reduction, uint32_t counter_size, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename tile_shape_acc_ , typename tile_shape_cnt_ , typename mem_desc_acc_t_ , typename mem_desc_cnt_t_ , uint32_t num_group_reduction, uint32_t counter_size, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
 <div class="memtemplate">
 template&lt;typename matAcc_t &gt; </div>
 <table class="mlabels">
@@ -298,7 +298,7 @@ template&lt;typename matAcc_t &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core.html#gafb2a0442e367d71b79a2f932d0d39c8b">KERNEL_FUNC</a> void <a class="el" href="classgpu_1_1xetla_1_1group_1_1global__reduce__t.html">gpu::xetla::group::global_reduce_t</a>&lt; <a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609a1d623b89683f9ce4e074de1676d12416">reduce_op::sum</a>, tile_shape_acc_, tile_shape_cnt_, mem_desc_acc_t_, mem_desc_cnt_t_, num_group_reduction, counter_size, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::operator() </td>
+          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core.html#gafb2a0442e367d71b79a2f932d0d39c8b">KERNEL_FUNC</a> void <a class="el" href="classgpu_1_1xetla_1_1group_1_1global__reduce__t.html">gpu::xetla::group::global_reduce_t</a>&lt; <a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609a1d623b89683f9ce4e074de1676d12416">reduce_op::sum</a>, tile_shape_acc_, tile_shape_cnt_, mem_desc_acc_t_, mem_desc_cnt_t_, num_group_reduction, counter_size, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::operator() </td>
           <td>(</td>
           <td class="paramtype">work_group_t &amp;&#160;</td>
           <td class="paramname"><em>g</em>, </td>
@@ -369,13 +369,13 @@ template&lt;typename matAcc_t &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename tile_shape_acc_ , typename tile_shape_cnt_ , typename mem_desc_acc_t_ , typename mem_desc_cnt_t_ , uint32_t num_group_reduction, uint32_t counter_size, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename tile_shape_acc_ , typename tile_shape_cnt_ , typename mem_desc_acc_t_ , typename mem_desc_cnt_t_ , uint32_t num_group_reduction, uint32_t counter_size, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> <a class="el" href="classgpu_1_1xetla_1_1group_1_1global__reduce__t.html">gpu::xetla::group::global_reduce_t</a>&lt; <a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609a1d623b89683f9ce4e074de1676d12416">reduce_op::sum</a>, tile_shape_acc_, tile_shape_cnt_, mem_desc_acc_t_, mem_desc_cnt_t_, num_group_reduction, counter_size, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::arch_tag = arch_tag_</td>
+          <td class="memname">constexpr <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> <a class="el" href="classgpu_1_1xetla_1_1group_1_1global__reduce__t.html">gpu::xetla::group::global_reduce_t</a>&lt; <a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609a1d623b89683f9ce4e074de1676d12416">reduce_op::sum</a>, tile_shape_acc_, tile_shape_cnt_, mem_desc_acc_t_, mem_desc_cnt_t_, num_group_reduction, counter_size, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::arch_tag = arch_tag_</td>
         </tr>
       </table>
   </td>
@@ -393,13 +393,13 @@ template&lt;typename tile_shape_acc_ , typename tile_shape_cnt_ , typename mem_d
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename tile_shape_acc_ , typename tile_shape_cnt_ , typename mem_desc_acc_t_ , typename mem_desc_cnt_t_ , uint32_t num_group_reduction, uint32_t counter_size, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename tile_shape_acc_ , typename tile_shape_cnt_ , typename mem_desc_acc_t_ , typename mem_desc_cnt_t_ , uint32_t num_group_reduction, uint32_t counter_size, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr uint32_t <a class="el" href="classgpu_1_1xetla_1_1group_1_1global__reduce__t.html">gpu::xetla::group::global_reduce_t</a>&lt; <a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609a1d623b89683f9ce4e074de1676d12416">reduce_op::sum</a>, tile_shape_acc_, tile_shape_cnt_, mem_desc_acc_t_, mem_desc_cnt_t_, num_group_reduction, counter_size, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::barrier_count = 0</td>
+          <td class="memname">constexpr uint32_t <a class="el" href="classgpu_1_1xetla_1_1group_1_1global__reduce__t.html">gpu::xetla::group::global_reduce_t</a>&lt; <a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609a1d623b89683f9ce4e074de1676d12416">reduce_op::sum</a>, tile_shape_acc_, tile_shape_cnt_, mem_desc_acc_t_, mem_desc_cnt_t_, num_group_reduction, counter_size, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::barrier_count = 0</td>
         </tr>
       </table>
   </td>
@@ -417,10 +417,10 @@ template&lt;typename tile_shape_acc_ , typename tile_shape_cnt_ , typename mem_d
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename tile_shape_acc_ , typename tile_shape_cnt_ , typename mem_desc_acc_t_ , typename mem_desc_cnt_t_ , uint32_t num_group_reduction, uint32_t counter_size, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename tile_shape_acc_ , typename tile_shape_cnt_ , typename mem_desc_acc_t_ , typename mem_desc_cnt_t_ , uint32_t num_group_reduction, uint32_t counter_size, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t <a class="el" href="classgpu_1_1xetla_1_1group_1_1global__reduce__t.html">gpu::xetla::group::global_reduce_t</a>&lt; <a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609a1d623b89683f9ce4e074de1676d12416">reduce_op::sum</a>, tile_shape_acc_, tile_shape_cnt_, mem_desc_acc_t_, mem_desc_cnt_t_, num_group_reduction, counter_size, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::reduce_id = 0</td>
+          <td class="memname">uint32_t <a class="el" href="classgpu_1_1xetla_1_1group_1_1global__reduce__t.html">gpu::xetla::group::global_reduce_t</a>&lt; <a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609a1d623b89683f9ce4e074de1676d12416">reduce_op::sum</a>, tile_shape_acc_, tile_shape_cnt_, mem_desc_acc_t_, mem_desc_cnt_t_, num_group_reduction, counter_size, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::reduce_id = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -433,13 +433,13 @@ template&lt;typename tile_shape_acc_ , typename tile_shape_cnt_ , typename mem_d
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename tile_shape_acc_ , typename tile_shape_cnt_ , typename mem_desc_acc_t_ , typename mem_desc_cnt_t_ , uint32_t num_group_reduction, uint32_t counter_size, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename tile_shape_acc_ , typename tile_shape_cnt_ , typename mem_desc_acc_t_ , typename mem_desc_cnt_t_ , uint32_t num_group_reduction, uint32_t counter_size, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr uint32_t <a class="el" href="classgpu_1_1xetla_1_1group_1_1global__reduce__t.html">gpu::xetla::group::global_reduce_t</a>&lt; <a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609a1d623b89683f9ce4e074de1676d12416">reduce_op::sum</a>, tile_shape_acc_, tile_shape_cnt_, mem_desc_acc_t_, mem_desc_cnt_t_, num_group_reduction, counter_size, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::slm_size = 0</td>
+          <td class="memname">constexpr uint32_t <a class="el" href="classgpu_1_1xetla_1_1group_1_1global__reduce__t.html">gpu::xetla::group::global_reduce_t</a>&lt; <a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609a1d623b89683f9ce4e074de1676d12416">reduce_op::sum</a>, tile_shape_acc_, tile_shape_cnt_, mem_desc_acc_t_, mem_desc_cnt_t_, num_group_reduction, counter_size, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::slm_size = 0</td>
         </tr>
       </table>
   </td>

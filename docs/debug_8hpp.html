@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.5</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.6</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -105,9 +105,7 @@ $(document).ready(function(){initNavTree('debug_8hpp.html',''); initResizable();
 <div class="header">
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#define-members">Macros</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
-<a href="#enum-members">Enumerations</a>  </div>
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle"><div class="title">debug.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -133,35 +131,15 @@ Namespaces</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacegpu_1_1xetla"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegpu_1_1xetla.html">gpu::xetla</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacegpu_1_1xetla_1_1debug__ctx"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegpu_1_1xetla_1_1debug__ctx.html">gpu::xetla::debug_ctx</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacegpu_1_1xetla_1_1debug__ctx_1_1nd__item"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegpu_1_1xetla_1_1debug__ctx_1_1nd__item.html">gpu::xetla::debug_ctx::nd_item</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a721fcdb9215dce9921bb769e033c4697"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hpp.html#a721fcdb9215dce9921bb769e033c4697">STR_APPEND</a>(a,  b,  c)&#160;&#160;&#160;a b c</td></tr>
-<tr class="separator:a721fcdb9215dce9921bb769e033c4697"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7c080c06b10223ec92d900e2867b671"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hpp.html#aa7c080c06b10223ec92d900e2867b671">XETLA_PRINTF</a>(s, ...)</td></tr>
 <tr class="separator:aa7c080c06b10223ec92d900e2867b671"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbdfc1867d15313a5273de0fd18eb74a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hpp.html#abbdfc1867d15313a5273de0fd18eb74a">XETLA_ASSERT</a>(c,  s, ...)</td></tr>
 <tr class="separator:abbdfc1867d15313a5273de0fd18eb74a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f89892f753561a0c42599b836557de5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hpp.html#a6f89892f753561a0c42599b836557de5">DEBUG_INVOKE</a>(level, ...)</td></tr>
 <tr class="separator:a6f89892f753561a0c42599b836557de5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a04798def122346406c33bf73b80f2d13"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegpu_1_1xetla_1_1debug__ctx_1_1nd__item.html#a04798def122346406c33bf73b80f2d13">gpu::xetla::debug_ctx::nd_item::element_type</a> = uint16_t</td></tr>
-<tr class="separator:a04798def122346406c33bf73b80f2d13"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:a945be63bd94c779178b4cd9c145c2276"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegpu_1_1xetla.html#a945be63bd94c779178b4cd9c145c2276">gpu::xetla::dbg_level</a> : uint8_t { <a class="el" href="namespacegpu_1_1xetla.html#a945be63bd94c779178b4cd9c145c2276a50484c19f1afdaf3841a0d821ed393d2">gpu::xetla::kernel</a> = 0
-, <a class="el" href="namespacegpu_1_1xetla.html#a945be63bd94c779178b4cd9c145c2276a9fcaf08b0a5fe04690e3714d83aa57e3">gpu::xetla::workgroup</a> = 1
-, <a class="el" href="namespacegpu_1_1xetla.html#a945be63bd94c779178b4cd9c145c2276aff90800b1b198e93f60b292ace3ffb00">gpu::xetla::subgroup</a> = 2
-, <a class="el" href="namespacegpu_1_1xetla.html#a945be63bd94c779178b4cd9c145c2276aa74ad8dfacd4f985eb3977517615ce25">gpu::xetla::core</a> = 3
- }</td></tr>
-<tr class="separator:a945be63bd94c779178b4cd9c145c2276"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a6f89892f753561a0c42599b836557de5" name="a6f89892f753561a0c42599b836557de5"></a>
@@ -192,40 +170,6 @@ Enumerations</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">do</span> { \</div>
 <div class="line">    } <span class="keywordflow">while</span> (0)</div>
 </div><!-- fragment -->
-</div>
-</div>
-<a id="a721fcdb9215dce9921bb769e033c4697" name="a721fcdb9215dce9921bb769e033c4697"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a721fcdb9215dce9921bb769e033c4697">&#9670;&#160;</a></span>STR_APPEND</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define STR_APPEND</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">a, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">b, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">c&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td>&#160;&#160;&#160;a b c</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
 </div>
 </div>
 <a id="abbdfc1867d15313a5273de0fd18eb74a" name="abbdfc1867d15313a5273de0fd18eb74a"></a>
@@ -290,10 +234,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">do</span> { \</div>
-<div class="line">        <span class="keyword">const</span> <span class="keywordtype">char</span> *f = <a class="code hl_define" href="debug_8hpp.html#a721fcdb9215dce9921bb769e033c4697">STR_APPEND</a>(<span class="stringliteral">&quot;[XeTLA] [HOST] : &quot;</span>, s, <span class="stringliteral">&quot;\n&quot;</span>); \</div>
-<div class="line">        printf(f, ##__VA_ARGS__); \</div>
 <div class="line">    } <span class="keywordflow">while</span> (0)</div>
-<div class="ttc" id="adebug_8hpp_html_a721fcdb9215dce9921bb769e033c4697"><div class="ttname"><a href="debug_8hpp.html#a721fcdb9215dce9921bb769e033c4697">STR_APPEND</a></div><div class="ttdeci">#define STR_APPEND(a, b, c)</div><div class="ttdef"><b>Definition</b> debug.hpp:89</div></div>
 </div><!-- fragment -->
 </div>
 </div>

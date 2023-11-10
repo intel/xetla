@@ -5,5 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="gpu::xetla::group::\lgemm_t\< compute_policy\l_default_fpu\< compute\l_attr_, perf_tuning_knob\l_, arch_tag_ \>, tile_shape\l_, mem_desc_a_t_, mem_desc\l_b_t_, pre_processing_t_, std\l::enable_if_t\<(arch_tag_==gpu\l_arch::Xe)\> \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classgpu_1_1xetla_1_1group_1_1gemm__t_3_01compute__policy__default__fpu_3_01compute__attr___00_0607d15755d432fd8d4c7e418a2e9cbf4.html",tooltip="Is the gemm functor for Xe architecture and vector engine."];
+  Node0 [id="Node000000",label="gpu::xetla::dummy_optimizer\l\< tag_, dict_t_, candidates\l_t \>::impl::param_distance\l_eval\< tune_key::SG_TILE_SHAPE, T, U \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1dummy__optimizer_1_1impl_1_1param__distance__eval_3_01tune__key_1_1SG__TILE__SHAPE_00_01T_00_01U_01_4.html",tooltip=" "];
 }

@@ -23,4 +23,7 @@
 #include "group/group.hpp"
 #include "subgroup/subgroup.hpp"
 
-namespace gpu::xetla::kernel {} // namespace gpu::xetla::kernel
+namespace gpu::xetla::kernel {
+namespace detail {} // namespace detail
+
+} // namespace gpu::xetla::kernel

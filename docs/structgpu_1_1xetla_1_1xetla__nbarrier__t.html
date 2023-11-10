@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.7"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>XeTLA: gpu::xetla::xetla_nbarrier_t&lt; num_producers, num_consumers &gt; Struct Template Reference</title>
+<title>XeTLA: gpu::xetla::xetla_nbarrier_t&lt; num_producers, num_consumers, arch_tag &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.5</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.6</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -107,7 +107,7 @@ $(document).ready(function(){initNavTree('structgpu_1_1xetla_1_1xetla__nbarrier_
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="structgpu_1_1xetla_1_1xetla__nbarrier__t-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">gpu::xetla::xetla_nbarrier_t&lt; num_producers, num_consumers &gt; Struct Template Reference<div class="ingroups"><a class="el" href="group__xetla__util.html">XeTLA Utility</a> &raquo; <a class="el" href="group__xetla__util__named__barrier.html">Named barrier API</a></div></div></div>
+  <div class="headertitle"><div class="title">gpu::xetla::xetla_nbarrier_t&lt; num_producers, num_consumers, arch_tag &gt; Struct Template Reference<div class="ingroups"><a class="el" href="group__xetla__util.html">XeTLA Utility</a> &raquo; <a class="el" href="group__xetla__util__named__barrier.html">Named barrier API</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -118,29 +118,29 @@ $(document).ready(function(){initNavTree('structgpu_1_1xetla_1_1xetla__nbarrier_
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae77b04d911300020ab3dff5f9d4f9d54"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1xetla__nbarrier__t.html#ae77b04d911300020ab3dff5f9d4f9d54">init_nbarrier</a> (uint8_t nbarrier_id, <a class="el" href="group__xetla__util__named__barrier.html#gaad562941909edcd788dd091e31841fe1">nbarrier_role</a> role=<a class="el" href="group__xetla__util__named__barrier.html#ggaad562941909edcd788dd091e31841fe1a4c44b0011c9c00f486a2d65f1293de8f">nbarrier_role::producer_consumer</a>)</td></tr>
-<tr class="separator:ae77b04d911300020ab3dff5f9d4f9d54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5d567e056aac620a2b7f0728ba5c490"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1xetla__nbarrier__t.html#af5d567e056aac620a2b7f0728ba5c490">arrive</a> ()</td></tr>
-<tr class="memdesc:af5d567e056aac620a2b7f0728ba5c490"><td class="mdescLeft">&#160;</td><td class="mdescRight">named barrier signal from subgroup.  <br /></td></tr>
-<tr class="separator:af5d567e056aac620a2b7f0728ba5c490"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aadcb3c9fab48cd482e554357fdef4ae0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1xetla__nbarrier__t.html#aadcb3c9fab48cd482e554357fdef4ae0">wait</a> ()</td></tr>
-<tr class="memdesc:aadcb3c9fab48cd482e554357fdef4ae0"><td class="mdescLeft">&#160;</td><td class="mdescRight">named barrier wait within subgroup.  <br /></td></tr>
-<tr class="separator:aadcb3c9fab48cd482e554357fdef4ae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28d22036b1843c45ba25cc070646dc00"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1xetla__nbarrier__t.html#a28d22036b1843c45ba25cc070646dc00">arrive_wait</a> ()</td></tr>
-<tr class="memdesc:a28d22036b1843c45ba25cc070646dc00"><td class="mdescLeft">&#160;</td><td class="mdescRight">named barrier signal from subgroup.  <br /></td></tr>
-<tr class="separator:a28d22036b1843c45ba25cc070646dc00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a961229d92480c2b239e72d504c27db88"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1xetla__nbarrier__t.html#a961229d92480c2b239e72d504c27db88">init_nbarrier</a> (uint8_t nbarrier_id, <a class="el" href="group__xetla__util__named__barrier.html#gaad562941909edcd788dd091e31841fe1">nbarrier_role</a> role=<a class="el" href="group__xetla__util__named__barrier.html#ggaad562941909edcd788dd091e31841fe1a4c44b0011c9c00f486a2d65f1293de8f">nbarrier_role::producer_consumer</a>)</td></tr>
+<tr class="separator:a961229d92480c2b239e72d504c27db88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1da68dc186c272389a9d3c7b8bd3aa2f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1xetla__nbarrier__t.html#a1da68dc186c272389a9d3c7b8bd3aa2f">arrive</a> ()</td></tr>
+<tr class="memdesc:a1da68dc186c272389a9d3c7b8bd3aa2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">named barrier signal from subgroup.  <br /></td></tr>
+<tr class="separator:a1da68dc186c272389a9d3c7b8bd3aa2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe087e26b4ac29ed521787cad5069953"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1xetla__nbarrier__t.html#afe087e26b4ac29ed521787cad5069953">wait</a> ()</td></tr>
+<tr class="memdesc:afe087e26b4ac29ed521787cad5069953"><td class="mdescLeft">&#160;</td><td class="mdescRight">named barrier wait within subgroup.  <br /></td></tr>
+<tr class="separator:afe087e26b4ac29ed521787cad5069953"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49285611e6ecc26f0e301a373bb2ecfd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1xetla__nbarrier__t.html#a49285611e6ecc26f0e301a373bb2ecfd">arrive_wait</a> ()</td></tr>
+<tr class="memdesc:a49285611e6ecc26f0e301a373bb2ecfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">named barrier signal from subgroup.  <br /></td></tr>
+<tr class="separator:a49285611e6ecc26f0e301a373bb2ecfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a48fffc812c2fa54646373a54f333b28b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, 16 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1xetla__nbarrier__t.html#a48fffc812c2fa54646373a54f333b28b">nbar</a></td></tr>
-<tr class="memdesc:a48fffc812c2fa54646373a54f333b28b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Description of named barrier objection.  <br /></td></tr>
-<tr class="separator:a48fffc812c2fa54646373a54f333b28b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2fc68ce1eaeebe5bdfd840aec0f813d6"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1xetla__nbarrier__t.html#a2fc68ce1eaeebe5bdfd840aec0f813d6">barrier_id</a></td></tr>
-<tr class="separator:a2fc68ce1eaeebe5bdfd840aec0f813d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a563a9f860db5d3627ab3ed2008a9ee44"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, 16 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1xetla__nbarrier__t.html#a563a9f860db5d3627ab3ed2008a9ee44">nbar</a></td></tr>
+<tr class="memdesc:a563a9f860db5d3627ab3ed2008a9ee44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Description of named barrier objection.  <br /></td></tr>
+<tr class="separator:a563a9f860db5d3627ab3ed2008a9ee44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a598e727fd05ba185394c7c9578b97f6d"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1xetla__nbarrier__t.html#a598e727fd05ba185394c7c9578b97f6d">barrier_id</a></td></tr>
+<tr class="separator:a598e727fd05ba185394c7c9578b97f6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;uint8_t num_producers = 1, uint8_t num_consumers = 1&gt;<br />
-struct gpu::xetla::xetla_nbarrier_t&lt; num_producers, num_consumers &gt;</div><p>xetla nbarrier definition API. </p>
+<div class="textblock"><div class="compoundTemplParams">template&lt;uint8_t num_producers = 1, uint8_t num_consumers = 1, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag = gpu_arch::Xe&gt;<br />
+struct gpu::xetla::xetla_nbarrier_t&lt; num_producers, num_consumers, arch_tag &gt;</div><p>xetla nbarrier definition API. </p>
 <p>This is the API to define a named barrier within subgroup. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">num_producers</td><td>is the number of subgroups participating the barrier as producer. </td></tr>
@@ -149,19 +149,19 @@ struct gpu::xetla::xetla_nbarrier_t&lt; num_producers, num_consumers &gt;</div><
   </dd>
 </dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="af5d567e056aac620a2b7f0728ba5c490" name="af5d567e056aac620a2b7f0728ba5c490"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af5d567e056aac620a2b7f0728ba5c490">&#9670;&#160;</a></span>arrive()</h2>
+<a id="a1da68dc186c272389a9d3c7b8bd3aa2f" name="a1da68dc186c272389a9d3c7b8bd3aa2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1da68dc186c272389a9d3c7b8bd3aa2f">&#9670;&#160;</a></span>arrive()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;uint8_t num_producers = 1, uint8_t num_consumers = 1&gt; </div>
+template&lt;uint8_t num_producers = 1, uint8_t num_consumers = 1, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag = gpu_arch::Xe&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> void <a class="el" href="structgpu_1_1xetla_1_1xetla__nbarrier__t.html">gpu::xetla::xetla_nbarrier_t</a>&lt; num_producers, num_consumers &gt;::arrive </td>
+          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> void <a class="el" href="structgpu_1_1xetla_1_1xetla__nbarrier__t.html">gpu::xetla::xetla_nbarrier_t</a>&lt; num_producers, num_consumers, arch_tag &gt;::arrive </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -184,19 +184,19 @@ template&lt;uint8_t num_producers = 1, uint8_t num_consumers = 1&gt; </div>
 
 </div>
 </div>
-<a id="a28d22036b1843c45ba25cc070646dc00" name="a28d22036b1843c45ba25cc070646dc00"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a28d22036b1843c45ba25cc070646dc00">&#9670;&#160;</a></span>arrive_wait()</h2>
+<a id="a49285611e6ecc26f0e301a373bb2ecfd" name="a49285611e6ecc26f0e301a373bb2ecfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49285611e6ecc26f0e301a373bb2ecfd">&#9670;&#160;</a></span>arrive_wait()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;uint8_t num_producers = 1, uint8_t num_consumers = 1&gt; </div>
+template&lt;uint8_t num_producers = 1, uint8_t num_consumers = 1, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag = gpu_arch::Xe&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> void <a class="el" href="structgpu_1_1xetla_1_1xetla__nbarrier__t.html">gpu::xetla::xetla_nbarrier_t</a>&lt; num_producers, num_consumers &gt;::arrive_wait </td>
+          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> void <a class="el" href="structgpu_1_1xetla_1_1xetla__nbarrier__t.html">gpu::xetla::xetla_nbarrier_t</a>&lt; num_producers, num_consumers, arch_tag &gt;::arrive_wait </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -213,19 +213,19 @@ template&lt;uint8_t num_producers = 1, uint8_t num_consumers = 1&gt; </div>
 
 </div>
 </div>
-<a id="ae77b04d911300020ab3dff5f9d4f9d54" name="ae77b04d911300020ab3dff5f9d4f9d54"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae77b04d911300020ab3dff5f9d4f9d54">&#9670;&#160;</a></span>init_nbarrier()</h2>
+<a id="a961229d92480c2b239e72d504c27db88" name="a961229d92480c2b239e72d504c27db88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a961229d92480c2b239e72d504c27db88">&#9670;&#160;</a></span>init_nbarrier()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;uint8_t num_producers = 1, uint8_t num_consumers = 1&gt; </div>
+template&lt;uint8_t num_producers = 1, uint8_t num_consumers = 1, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag = gpu_arch::Xe&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> void <a class="el" href="structgpu_1_1xetla_1_1xetla__nbarrier__t.html">gpu::xetla::xetla_nbarrier_t</a>&lt; num_producers, num_consumers &gt;::init_nbarrier </td>
+          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> void <a class="el" href="structgpu_1_1xetla_1_1xetla__nbarrier__t.html">gpu::xetla::xetla_nbarrier_t</a>&lt; num_producers, num_consumers, arch_tag &gt;::init_nbarrier </td>
           <td>(</td>
           <td class="paramtype">uint8_t&#160;</td>
           <td class="paramname"><em>nbarrier_id</em>, </td>
@@ -258,19 +258,19 @@ template&lt;uint8_t num_producers = 1, uint8_t num_consumers = 1&gt; </div>
 
 </div>
 </div>
-<a id="aadcb3c9fab48cd482e554357fdef4ae0" name="aadcb3c9fab48cd482e554357fdef4ae0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aadcb3c9fab48cd482e554357fdef4ae0">&#9670;&#160;</a></span>wait()</h2>
+<a id="afe087e26b4ac29ed521787cad5069953" name="afe087e26b4ac29ed521787cad5069953"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe087e26b4ac29ed521787cad5069953">&#9670;&#160;</a></span>wait()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;uint8_t num_producers = 1, uint8_t num_consumers = 1&gt; </div>
+template&lt;uint8_t num_producers = 1, uint8_t num_consumers = 1, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag = gpu_arch::Xe&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> void <a class="el" href="structgpu_1_1xetla_1_1xetla__nbarrier__t.html">gpu::xetla::xetla_nbarrier_t</a>&lt; num_producers, num_consumers &gt;::wait </td>
+          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> void <a class="el" href="structgpu_1_1xetla_1_1xetla__nbarrier__t.html">gpu::xetla::xetla_nbarrier_t</a>&lt; num_producers, num_consumers, arch_tag &gt;::wait </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -288,32 +288,32 @@ template&lt;uint8_t num_producers = 1, uint8_t num_consumers = 1&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a2fc68ce1eaeebe5bdfd840aec0f813d6" name="a2fc68ce1eaeebe5bdfd840aec0f813d6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2fc68ce1eaeebe5bdfd840aec0f813d6">&#9670;&#160;</a></span>barrier_id</h2>
+<a id="a598e727fd05ba185394c7c9578b97f6d" name="a598e727fd05ba185394c7c9578b97f6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a598e727fd05ba185394c7c9578b97f6d">&#9670;&#160;</a></span>barrier_id</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;uint8_t num_producers = 1, uint8_t num_consumers = 1&gt; </div>
+template&lt;uint8_t num_producers = 1, uint8_t num_consumers = 1, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag = gpu_arch::Xe&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t <a class="el" href="structgpu_1_1xetla_1_1xetla__nbarrier__t.html">gpu::xetla::xetla_nbarrier_t</a>&lt; num_producers, num_consumers &gt;::barrier_id</td>
+          <td class="memname">uint32_t <a class="el" href="structgpu_1_1xetla_1_1xetla__nbarrier__t.html">gpu::xetla::xetla_nbarrier_t</a>&lt; num_producers, num_consumers, arch_tag &gt;::barrier_id</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a48fffc812c2fa54646373a54f333b28b" name="a48fffc812c2fa54646373a54f333b28b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a48fffc812c2fa54646373a54f333b28b">&#9670;&#160;</a></span>nbar</h2>
+<a id="a563a9f860db5d3627ab3ed2008a9ee44" name="a563a9f860db5d3627ab3ed2008a9ee44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a563a9f860db5d3627ab3ed2008a9ee44">&#9670;&#160;</a></span>nbar</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;uint8_t num_producers = 1, uint8_t num_consumers = 1&gt; </div>
+template&lt;uint8_t num_producers = 1, uint8_t num_consumers = 1, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag = gpu_arch::Xe&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt;uint32_t, 16&gt; <a class="el" href="structgpu_1_1xetla_1_1xetla__nbarrier__t.html">gpu::xetla::xetla_nbarrier_t</a>&lt; num_producers, num_consumers &gt;::nbar</td>
+          <td class="memname"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt;uint32_t, 16&gt; <a class="el" href="structgpu_1_1xetla_1_1xetla__nbarrier__t.html">gpu::xetla::xetla_nbarrier_t</a>&lt; num_producers, num_consumers, arch_tag &gt;::nbar</td>
         </tr>
       </table>
 </div><div class="memdoc">

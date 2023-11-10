@@ -1,5 +1,0 @@
-var streamK__xe_8hpp =
-[
-    [ "gpu::xetla::kernel::gemm_universal_t< dispatch_policy_streamK< gpu_arch::Xe >, gemm_t_, epilogue_t_ >::arguments_t", "structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__streamK_3_01gpu__arch_173a0e6728b2be9708191d190fc20e1d8.html", "structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__streamK_3_01gpu__arch_173a0e6728b2be9708191d190fc20e1d8" ],
-    [ "gpu::xetla::kernel::gemm_universal_t< dispatch_policy_streamK< gpu_arch::Xe >, gemm_t_, epilogue_t_ >::TileWorkDesc", "structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__streamK_3_01gpu__arch_117337bebbdab2e4d7df2b8a7f075b2df.html", "structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__streamK_3_01gpu__arch_117337bebbdab2e4d7df2b8a7f075b2df" ]
-];

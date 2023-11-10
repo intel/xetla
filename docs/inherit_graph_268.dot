@@ -5,5 +5,7 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="gpu::xetla::subgroup\l::prefetch_payload_t\l\< dtype_, tile_desc_,\l mem_layout_, mem_space\l_, cooperative_num_, arch\l_tag, enable \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1subgroup_1_1prefetch__payload__t.html",tooltip="Is to illustrate the memory information to prefetch data to cache."];
+  Node0 [id="Node000000",label="gpu::xetla::shape\<\l dims \>::impl::dim_impl\l\< i_, cur_+1, dims_... \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1shape_1_1impl_1_1dim__impl.html",tooltip=" "];
+  Node0 -> Node1 [id="edge27_Node000000_Node000001",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 [id="Node000001",label="gpu::xetla::shape\<\l dims \>::impl::dim_impl\l\< i_, cur_, dim, dims_... \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1shape_1_1impl_1_1dim__impl_3_01i___00_01cur___00_01dim_00_01dims___8_8_8_01_4.html",tooltip=" "];
 }

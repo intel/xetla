@@ -84,11 +84,12 @@ var common_2core_2common_8hpp =
       [ "system", "common_2core_2common_8hpp.html#a52fa7b5d0cce636d18ddead7b3ef0072a54b53072540eeeb8f8e9343e71f28176", null ],
       [ "sysacq", "common_2core_2common_8hpp.html#a52fa7b5d0cce636d18ddead7b3ef0072a3a6ed29e3926f4e0b0953936f24f06f1", null ]
     ] ],
-    [ "lsc_action", "common_2core_2common_8hpp.html#abb5a3893da6b1edf6e4222a8b9112645", [
-      [ "prefetch", "common_2core_2common_8hpp.html#abb5a3893da6b1edf6e4222a8b9112645a4c203b76e2847e3b6e1bdf7bf2ad63a2", null ],
-      [ "load", "common_2core_2common_8hpp.html#abb5a3893da6b1edf6e4222a8b9112645aec4d1eb36b22d19728e9d1d23ca84d1c", null ],
-      [ "store", "common_2core_2common_8hpp.html#abb5a3893da6b1edf6e4222a8b9112645a8cd892b7b97ef9489ae4479d3f4ef0fc", null ],
-      [ "atomic", "common_2core_2common_8hpp.html#abb5a3893da6b1edf6e4222a8b9112645a23d33884d600e542d097cd3933df2ae4", null ]
+    [ "gpu_arch", "common_2core_2common_8hpp.html#aa5a2713edb27d6fed88a3c61673556f1", [
+      [ "Xe", "common_2core_2common_8hpp.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130", null ]
+    ] ],
+    [ "grf_mode", "common_2core_2common_8hpp.html#a7feb5ab690922ff814907dc8a1e2cc0f", [
+      [ "normal", "common_2core_2common_8hpp.html#a7feb5ab690922ff814907dc8a1e2cc0fafea087517c26fadd409bd4b9dc642555", null ],
+      [ "double_grf", "common_2core_2common_8hpp.html#a7feb5ab690922ff814907dc8a1e2cc0faa56a6a7ef88192cd34ebc810e2b0d878", null ]
     ] ],
     [ "mem_layout", "common_2core_2common_8hpp.html#af4a355a1806510c5515fad16f5910561", [
       [ "row_major", "common_2core_2common_8hpp.html#af4a355a1806510c5515fad16f5910561a641fabb8e5e7d1d0333e2c9c384f959c", null ],
@@ -117,7 +118,6 @@ var common_2core_2common_8hpp =
       [ "min", "common_2core_2common_8hpp.html#a7bbd70f1164d3a7251729e89fffc0609ad8bd79cc131920d5de426f914d17405a", null ],
       [ "max", "common_2core_2common_8hpp.html#a7bbd70f1164d3a7251729e89fffc0609a2ffe4e77325d9a7152f7086ea7aa5114", null ]
     ] ],
-    [ "check_lsc_cache_hint", "common_2core_2common_8hpp.html#a24a643b2f929baf9f66ced1e2977907d", null ],
     [ "xetla_get_hw_thread_id", "common_2core_2common_8hpp.html#aaaa272a41f66be5b8d2c98e0fb050d96", null ],
     [ "xetla_get_subdevice_id", "common_2core_2common_8hpp.html#a428721cf41093057d9903cb4fd664102", null ],
     [ "XETLA_PRINT", "common_2core_2common_8hpp.html#a5f6cf4a3d010c6b7682faa719ed1e894", null ],

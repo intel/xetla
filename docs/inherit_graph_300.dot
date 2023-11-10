@@ -5,5 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="gpu::xetla::xetla_rand\l_t\< random_simd \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1xetla__rand__t.html",tooltip=" "];
+  Node0 [id="Node000000",label="gpu::xetla::subgroup\l::detail::check_prefetch\l_type\< payload_t \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1subgroup_1_1detail_1_1check__prefetch__type.html",tooltip=" "];
 }

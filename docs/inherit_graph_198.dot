@@ -5,9 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="gpu::xetla::subgroup\l::chained_tile_op_arg\l_t\< idx+1, remain_args\l_t... \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1subgroup_1_1chained__tile__op__arg__t.html",tooltip=" "];
-  Node0 -> Node1 [id="edge1_Node000000_Node000001",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node1 [id="Node000001",label="gpu::xetla::subgroup\l::chained_tile_op_arg\l_t\< idx, curr_args_t,\l remain_args_t... \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1subgroup_1_1chained__tile__op__arg__t_3_01idx_00_01curr__args__t_00_01remain__args__t_8_8_8_01_4.html",tooltip=" "];
-  Node2 [id="Node000002",label="gpu::xetla::subgroup\l::tile_op_arg_helper\l_t\< idx, curr_args_t \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1subgroup_1_1tile__op__arg__helper__t.html",tooltip=" "];
-  Node2 -> Node1 [id="edge2_Node000002_Node000001",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node0 [id="Node000000",label="gpu::xetla::kernel\l::layer_norm_bwd_t\<\l dtype_x_, dtype_y_,\l dtype_weight_, dtype\l_acc_, layer_norm_attr\l_, gpu_arch::Xe, ln_bwd\l_fused_op_ \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1kernel_1_1layer__norm__bwd__t_3_01dtype__x___00_01dtype__y___00_01dtype__w5e223ea0bd3a3851e47c460f10bccc84.html",tooltip=" "];
 }

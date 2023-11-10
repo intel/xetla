@@ -12,7 +12,7 @@ function(add_unit_test target kernel_func_file test_host)
     set_target_properties(${TARGET} PROPERTIES FOLDER tests/unit/)
 
     # Test time out, default 1 minutes
-    set(UNIT_TIMEOUT 120)
+    set(UNIT_TIMEOUT 500)
 
     # make test
     add_test(NAME ${TARGET} COMMAND ${TARGET})
@@ -35,6 +35,9 @@ add_subdirectory(add_c)
 add_subdirectory(imul)
 add_subdirectory(philox_rng)
 add_subdirectory(exp_inv_sqrt_tanh)
+add_subdirectory(reg_layout_conversion)
 add_subdirectory(reg_reduce)
 add_subdirectory(math_general)
 add_subdirectory(epilogue_tile_op)
+add_subdirectory(bit_mask_manipulation)
+

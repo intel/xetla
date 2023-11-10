@@ -1,0 +1,10 @@
+digraph "gpu::xetla::group::default_gemm_selector_config_t&lt; dtype_a, mem_layout_a, alignment_a, mem_space_a, dtype_b, mem_layout_b, alignment_b, mem_space_b, dtype_acc, wg_shape, wg_tile_k, gpu_arch_tag, tune_option &gt;"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [id="Node000001",label="gpu::xetla::group::\ldefault_gemm_selector\l_config_t\< dtype_a, mem\l_layout_a, alignment_a,\l mem_space_a, dtype_b, mem\l_layout_b, alignment_b, mem\l_space_b, dtype_acc, wg_shape,\l wg_tile_k, gpu_arch_tag, tune_option \>",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="gpu::xetla::param_adaptor\l\< tag_, dict_t_ \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1param__adaptor.html",tooltip=" "];
+}

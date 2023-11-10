@@ -5,5 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="gpu::xetla::subgroup\l::quant_op_t\< dtype_offset\l_scale_, arch_tag, std::enable\l_if_t\<(arch_tag==gpu_arch::Xe)\> \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1subgroup_1_1quant__op__t_3_01dtype__offset__scale___00_01arch__tag_00_01stfeac1ceeca115b5addb31791534a9f6a.html",tooltip="Is the quantization op functor, specialized for Xe architecture."];
+  Node0 [id="Node000000",label="gpu::xetla::subgroup\l::bias_add_op_t\< dtype\l_bias_, arch_tag, std::\lenable_if_t\<(arch_tag==gpu\l_arch::Xe)\> \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1subgroup_1_1bias__add__op__t_3_01dtype__bias___00_01arch__tag_00_01std_1_1dbcaa0c9d44a4c7046d7d326c9a41dfd.html",tooltip="Is the bias_add op functor, specialized for Xe architecture."];
 }

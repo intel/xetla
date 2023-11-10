@@ -118,22 +118,22 @@ __XETLA_API typename std::enable_if_t<std::is_same<T_dst, int8_t>::value
                 && std::is_same<T_src, int32_t>::value,
         xetla_vector<T_dst, N>>
 xetla_cvt(xetla_vector<T_src, N> src, float scaling_value) {
-    auto dst = xetla_vector<T_dst, N>(xetla_rnde<float>(scaling_value * src),
-            xettp_saturation_on_tag::value);
+    auto tmp = xetla_rnde<float>(scaling_value * src);
+    auto dst = __ESIMD_NS::saturate<T_dst, float, N>(tmp);
     return dst;
 }
 
 /// @brief xetpp explicit data conversion with scaling and quantization, float32->int8.
 /// @tparam T_dst is the int8 data type.
-/// @tparam T_src is the float16 data type.
+/// @tparam T_src is the float32 data type.
 /// @tparam N is the element number in xetla_vector.
 template <typename T_dst, typename T_src, int N>
 __XETLA_API typename std::enable_if_t<std::is_same<T_dst, int8_t>::value
                 && std::is_same<T_src, float>::value,
         xetla_vector<T_dst, N>>
 xetla_cvt(xetla_vector<T_src, N> src, float scaling_value) {
-    auto dst = xetla_vector<T_dst, N>(xetla_rnde<float>(scaling_value * src),
-            xettp_saturation_on_tag::value);
+    auto tmp = xetla_rnde<float>(scaling_value * src);
+    auto dst = __ESIMD_NS::saturate<T_dst, float, N>(tmp);
     return dst;
 }
 

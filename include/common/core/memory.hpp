@@ -22,6 +22,7 @@
 #include "common/core/base_ops.hpp"
 #include "common/core/base_types.hpp"
 #include "common/core/common.hpp"
+#include "common/utils/limitation.hpp"
 
 namespace gpu::xetla {
 
@@ -99,7 +100,7 @@ constexpr __ESIMD_ENS::lsc_fence_op get_fence_op(gpu::xetla::fence_op fo) {
             return __ESIMD_ENS::lsc_fence_op::discard;
         case gpu::xetla::fence_op::clean:
             return __ESIMD_ENS::lsc_fence_op::clean;
-        case gpu::xetla::fence_op::flushl3:
+        case gpu::xetla::fence_op::flushl2:
             return __ESIMD_ENS::lsc_fence_op::flushl3;
     }
 }
@@ -138,12 +139,15 @@ constexpr __ESIMD_NS::atomic_op get_atomic_op(gpu::xetla::atomic_op ao) {
         case gpu::xetla::atomic_op::umax: return __ESIMD_NS::atomic_op::umax;
         case gpu::xetla::atomic_op::cmpxchg:
             return __ESIMD_NS::atomic_op::cmpxchg;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
         case gpu::xetla::atomic_op::fadd: return __ESIMD_NS::atomic_op::fadd;
         case gpu::xetla::atomic_op::fsub: return __ESIMD_NS::atomic_op::fsub;
         case gpu::xetla::atomic_op::fmin: return __ESIMD_NS::atomic_op::fmin;
         case gpu::xetla::atomic_op::fmax: return __ESIMD_NS::atomic_op::fmax;
         case gpu::xetla::atomic_op::fcmpxchg:
             return __ESIMD_NS::atomic_op::fcmpwr;
+#pragma clang diagnostic pop
         case gpu::xetla::atomic_op::bit_and:
             return __ESIMD_NS::atomic_op::bit_and;
         case gpu::xetla::atomic_op::bit_or:
@@ -170,7 +174,7 @@ constexpr __ESIMD_NS::atomic_op get_atomic_op(gpu::xetla::atomic_op ao) {
 /// @tparam NElts is the number of elements to prefetch per address (i.e. vector_size per SIMD channel).
 /// @tparam DS is the data size.
 /// @tparam L1H is L1 cache hint.
-/// @tparam L3H is L3 cache hint.
+/// @tparam L2H is L2 cache hint.
 /// @tparam N is the number of SIMD channels (platform dependent).
 /// @param p       [in] is the base pointer.
 /// @param offsets [in] is the zero-based offsets in bytes.
@@ -179,13 +183,13 @@ constexpr __ESIMD_NS::atomic_op get_atomic_op(gpu::xetla::atomic_op ao) {
 template <typename Ty, uint8_t NElts = 1,
         data_size DS = data_size::default_size,
         cache_hint L1H = cache_hint::cached,
-        cache_hint L3H = cache_hint::cached, int N>
+        cache_hint L2H = cache_hint::cached, int N>
 __XETLA_API void xetla_prefetch_global(
         Ty *p, xetla_vector<uint32_t, N> offsets, xetla_mask<N> pred = 1) {
     using T = native_type_t<Ty>;
     __ESIMD_ENS::lsc_prefetch<T, NElts, gpu::xetla::detail::get_data_size(DS),
             gpu::xetla::detail::get_cache_hint(L1H),
-            gpu::xetla::detail::get_cache_hint(L3H), N>((T *)p, offsets, pred);
+            gpu::xetla::detail::get_cache_hint(L2H), N>((T *)p, offsets, pred);
 }
 
 /// @brief Stateless block prefetch (transposed gather with 1 channel).
@@ -199,19 +203,19 @@ __XETLA_API void xetla_prefetch_global(
 /// @tparam NElts is the number of elements to prefetch per address (i.e. vector_size per SIMD channel).
 /// @tparam DS is the data size.
 /// @tparam L1H is L1 cache hint.
-/// @tparam L3H is L3 cache hint.
+/// @tparam L2H is L2 cache hint.
 /// @param p      [in] is the base pointer.
 /// @param offset [in] is the zero-based offset in bytes.
 ///
 template <typename Ty, uint8_t NElts = 1,
         data_size DS = data_size::default_size,
         cache_hint L1H = cache_hint::cached,
-        cache_hint L3H = cache_hint::cached>
+        cache_hint L2H = cache_hint::cached>
 __XETLA_API void xetla_prefetch_global(Ty *p, uint64_t offset = 0) {
     using T = native_type_t<Ty>;
     __ESIMD_ENS::lsc_prefetch<T, NElts, gpu::xetla::detail::get_data_size(DS),
             gpu::xetla::detail::get_cache_hint(L1H),
-            gpu::xetla::detail::get_cache_hint(L3H)>(
+            gpu::xetla::detail::get_cache_hint(L2H)>(
             (T *)p + (offset / sizeof(T)));
 }
 
@@ -227,7 +231,7 @@ __XETLA_API void xetla_prefetch_global(Ty *p, uint64_t offset = 0) {
 /// @tparam NElts is the number of elements to load per address (i.e. vector_size per SIMD channel).
 /// @tparam DS is the data size.
 /// @tparam L1H is L1 cache hint.
-/// @tparam L3H is L3 cache hint.
+/// @tparam L2H is L2 cache hint.
 /// @tparam N is the number of SIMD channels (platform dependent).
 /// @param p       [in] is the base pointer.
 /// @param offsets [in] is the zero-based offsets in bytes.
@@ -236,15 +240,20 @@ __XETLA_API void xetla_prefetch_global(Ty *p, uint64_t offset = 0) {
 ///
 template <typename Ty, uint8_t NElts = 1,
         data_size DS = data_size::default_size,
-        cache_hint L1H = cache_hint::none, cache_hint L3H = cache_hint::none,
-        int N>
+        cache_hint L1H = cache_hint::none, cache_hint L2H = cache_hint::none,
+        int N, typename Toffset = uint32_t>
 __XETLA_API xetla_vector<Ty, N * NElts> xetla_load_global(
-        Ty *p, xetla_vector<uint32_t, N> offsets, xetla_mask<N> pred = 1) {
+        Ty *p, xetla_vector<Toffset, N> offsets, xetla_mask<N> pred = 1) {
     using T = native_type_t<Ty>;
+    DEBUG_INVOKE(dbg_level::core,
+            core::general_1d<gpu_arch::Xe,
+                    Ty>::template check_restriction<NElts, N>(offsets,
+                    (uint64_t)p));
+
     return __ESIMD_ENS::lsc_gather<T, NElts,
             gpu::xetla::detail::get_data_size(DS),
             gpu::xetla::detail::get_cache_hint(L1H),
-            gpu::xetla::detail::get_cache_hint(L3H), N>((T *)p, offsets, pred);
+            gpu::xetla::detail::get_cache_hint(L2H), N>((T *)p, offsets, pred);
 }
 
 /// @brief Stateless block load (transposed gather with 1 channel).
@@ -259,21 +268,26 @@ __XETLA_API xetla_vector<Ty, N * NElts> xetla_load_global(
 /// @tparam NElts is the number of elements to load per address (i.e. vector_size per SIMD channel).
 /// @tparam DS is the data size.
 /// @tparam L1H is L1 cache hint.
-/// @tparam L3H is L3 cache hint.
+/// @tparam L2H is L2 cache hint.
 /// @param p      [in] is the base pointer.
 /// @param offset [in] is the zero-based offset in bytes.
 /// @return is a xetla_vector of type T and size NElts.
 ///
 template <typename Ty, uint8_t NElts = 1,
         data_size DS = data_size::default_size,
-        cache_hint L1H = cache_hint::none, cache_hint L3H = cache_hint::none>
+        cache_hint L1H = cache_hint::none, cache_hint L2H = cache_hint::none>
 __XETLA_API xetla_vector<Ty, NElts> xetla_load_global(
         Ty *p, uint64_t offset = 0) {
     using T = native_type_t<Ty>;
+    DEBUG_INVOKE(dbg_level::core,
+            core::general_1d<gpu_arch::Xe,
+                    Ty>::template check_restriction<NElts>(offset,
+                    (uint64_t)p));
+
     return __ESIMD_ENS::lsc_block_load<T, NElts,
             gpu::xetla::detail::get_data_size(DS),
             gpu::xetla::detail::get_cache_hint(L1H),
-            gpu::xetla::detail::get_cache_hint(L3H)>(
+            gpu::xetla::detail::get_cache_hint(L2H)>(
             (T *)p + (offset / sizeof(T)));
 }
 
@@ -288,7 +302,7 @@ __XETLA_API xetla_vector<Ty, NElts> xetla_load_global(
 /// @tparam NElts is the number of elements to store per address (i.e. vector_size per SIMD channel).
 /// @tparam DS is the data size.
 /// @tparam L1H is L1 cache hint.
-/// @tparam L3H is L3 cache hint.
+/// @tparam L2H is L2 cache hint.
 /// @tparam N is the number of SIMD channels (platform dependent).
 /// @param p       [in] is the base pointer.
 /// @param offsets [in] is the zero-based offsets in bytes.
@@ -297,14 +311,14 @@ __XETLA_API xetla_vector<Ty, NElts> xetla_load_global(
 ///
 template <typename Ty, uint8_t NElts = 1,
         data_size DS = data_size::default_size,
-        cache_hint L1H = cache_hint::none, cache_hint L3H = cache_hint::none,
-        int N>
-__XETLA_API void xetla_store_global(Ty *p, xetla_vector<uint32_t, N> offsets,
+        cache_hint L1H = cache_hint::none, cache_hint L2H = cache_hint::none,
+        int N, typename Toffset = uint32_t>
+__XETLA_API void xetla_store_global(Ty *p, xetla_vector<Toffset, N> offsets,
         xetla_vector<Ty, N * NElts> vals, xetla_mask<N> pred = 1) {
     using T = native_type_t<Ty>;
     __ESIMD_ENS::lsc_scatter<T, NElts, gpu::xetla::detail::get_data_size(DS),
             gpu::xetla::detail::get_cache_hint(L1H),
-            gpu::xetla::detail::get_cache_hint(L3H), N>(
+            gpu::xetla::detail::get_cache_hint(L2H), N>(
             (T *)p, offsets, vals, pred);
 }
 
@@ -319,21 +333,21 @@ __XETLA_API void xetla_store_global(Ty *p, xetla_vector<uint32_t, N> offsets,
 /// @tparam NElts is the number of elements to store per address (i.e. vector_size per SIMD channel).
 /// @tparam DS is the data size.
 /// @tparam L1H is L1 cache hint.
-/// @tparam L3H is L3 cache hint.
+/// @tparam L2H is L2 cache hint.
 /// @param p      [in] is the base pointer.
 /// @param offset [in] is the zero-based offset in bytes.
 /// @param vals   [in] is values to store.
 ///
 template <typename Ty, uint8_t NElts = 1,
         data_size DS = data_size::default_size,
-        cache_hint L1H = cache_hint::none, cache_hint L3H = cache_hint::none>
+        cache_hint L1H = cache_hint::none, cache_hint L2H = cache_hint::none>
 __XETLA_API void xetla_store_global(
         Ty *p, uint64_t offset, xetla_vector<Ty, NElts> vals) {
     using T = native_type_t<Ty>;
     __ESIMD_ENS::lsc_block_store<T, NElts,
             gpu::xetla::detail::get_data_size(DS),
             gpu::xetla::detail::get_cache_hint(L1H),
-            gpu::xetla::detail::get_cache_hint(L3H)>(
+            gpu::xetla::detail::get_cache_hint(L2H)>(
             (T *)p + (offset / sizeof(T)), vals);
 }
 
@@ -346,14 +360,14 @@ __XETLA_API void xetla_store_global(
 /// @tparam N is the number of SIMD channels (platform dependent).
 /// @tparam DS is the data size.
 /// @tparam L1H is L1 cache hint.
-/// @tparam L3H is L3 cache hint.
+/// @tparam L2H is L2 cache hint.
 /// @param p       [in] is the base pointer.
 /// @param offsets [in] is the zero-based offsets.
 /// @param pred    [in] is predicates.
 ///
 template <atomic_op Op, typename T, int N,
         data_size DS = data_size::default_size,
-        cache_hint L1H = cache_hint::none, cache_hint L3H = cache_hint::none>
+        cache_hint L1H = cache_hint::none, cache_hint L2H = cache_hint::none>
 __XETLA_API xetla_vector<T, N> xetla_atomic_global(
         T *p, xetla_vector<uint32_t, N> offsets, xetla_mask<N> pred) {
     static_assert(!(is_internal_type<T>::value),
@@ -361,7 +375,7 @@ __XETLA_API xetla_vector<T, N> xetla_atomic_global(
     return __ESIMD_ENS::lsc_atomic_update<gpu::xetla::detail::get_atomic_op(Op),
             T, N, gpu::xetla::detail::get_data_size(DS),
             gpu::xetla::detail::get_cache_hint(L1H),
-            gpu::xetla::detail::get_cache_hint(L3H)>(p, offsets, pred);
+            gpu::xetla::detail::get_cache_hint(L2H)>(p, offsets, pred);
 }
 
 /// @brief Stateless scattered atomic (1 src).
@@ -373,7 +387,7 @@ __XETLA_API xetla_vector<T, N> xetla_atomic_global(
 /// @tparam N is the number of SIMD channels (platform dependent).
 /// @tparam DS is the data size.
 /// @tparam L1H is L1 cache hint.
-/// @tparam L3H is L3 cache hint.
+/// @tparam L2H is L2 cache hint.
 /// @param p       [in] is the base pointer.
 /// @param offsets [in] is the zero-based offsets.
 /// @param src0    [in] is the first atomic operand.
@@ -381,7 +395,7 @@ __XETLA_API xetla_vector<T, N> xetla_atomic_global(
 ///
 template <atomic_op Op, typename T, int N,
         data_size DS = data_size::default_size,
-        cache_hint L1H = cache_hint::none, cache_hint L3H = cache_hint::none>
+        cache_hint L1H = cache_hint::none, cache_hint L2H = cache_hint::none>
 __XETLA_API xetla_vector<T, N> xetla_atomic_global(T *p,
         xetla_vector<uint32_t, N> offsets, xetla_vector<T, N> src0,
         xetla_mask<N> pred) {
@@ -390,7 +404,7 @@ __XETLA_API xetla_vector<T, N> xetla_atomic_global(T *p,
     return __ESIMD_ENS::lsc_atomic_update<gpu::xetla::detail::get_atomic_op(Op),
             T, N, gpu::xetla::detail::get_data_size(DS),
             gpu::xetla::detail::get_cache_hint(L1H),
-            gpu::xetla::detail::get_cache_hint(L3H)>(p, offsets, src0, pred);
+            gpu::xetla::detail::get_cache_hint(L2H)>(p, offsets, src0, pred);
 }
 
 /// @brief Stateless scattered atomic (2 src).
@@ -402,7 +416,7 @@ __XETLA_API xetla_vector<T, N> xetla_atomic_global(T *p,
 /// @tparam N is the number of SIMD channels (platform dependent).
 /// @tparam DS is the data size.
 /// @tparam L1H is L1 cache hint.
-/// @tparam L3H is L3 cache hint.
+/// @tparam L2H is L2 cache hint.
 /// @param p       [in] is the base pointer.
 /// @param offsets [in] is the zero-based offsets.
 /// @param src0    [in] is the first atomic operand.
@@ -411,7 +425,7 @@ __XETLA_API xetla_vector<T, N> xetla_atomic_global(T *p,
 ///
 template <atomic_op Op, typename T, int N,
         data_size DS = data_size::default_size,
-        cache_hint L1H = cache_hint::none, cache_hint L3H = cache_hint::none>
+        cache_hint L1H = cache_hint::none, cache_hint L2H = cache_hint::none>
 __XETLA_API xetla_vector<T, N> xetla_atomic_global(T *p,
         xetla_vector<uint32_t, N> offsets, xetla_vector<T, N> src0,
         xetla_vector<T, N> src1, xetla_mask<N> pred) {
@@ -420,7 +434,7 @@ __XETLA_API xetla_vector<T, N> xetla_atomic_global(T *p,
     return __ESIMD_ENS::lsc_atomic_update<gpu::xetla::detail::get_atomic_op(Op),
             T, N, gpu::xetla::detail::get_data_size(DS),
             gpu::xetla::detail::get_cache_hint(L1H),
-            gpu::xetla::detail::get_cache_hint(L3H)>(
+            gpu::xetla::detail::get_cache_hint(L2H)>(
             p, offsets, src0, src1, pred);
 }
 /// @brief Declare per-work-group slm size.
@@ -450,8 +464,13 @@ template <typename Ty, uint8_t NElts = 1,
 __XETLA_API xetla_vector<Ty, N * NElts> xetla_load_local(
         xetla_vector<uint32_t, N> offsets, xetla_mask<N> pred = 1) {
     using T = native_type_t<Ty>;
+    DEBUG_INVOKE(dbg_level::core,
+            core::general_1d<gpu_arch::Xe,
+                    Ty>::template check_restriction<NElts, N>(offsets));
+
     return __ESIMD_ENS::lsc_slm_gather<T, NElts,
-            gpu::xetla::detail::get_data_size(DS), N>(offsets, pred);
+            gpu::xetla::detail::get_data_size(DS), N>(
+            xetla_cvt<uint64_t, uint32_t>(offsets), pred);
 }
 
 /// @brief SLM block load. (transposed gather with 1 channel).
@@ -471,6 +490,10 @@ template <typename Ty, uint8_t NElts = 1,
         data_size DS = data_size::default_size>
 __XETLA_API xetla_vector<Ty, NElts> xetla_load_local(uint32_t offset) {
     using T = native_type_t<Ty>;
+    DEBUG_INVOKE(dbg_level::core,
+            core::general_1d<gpu_arch::Xe,
+                    Ty>::template check_restriction<NElts>((uint64_t)offset));
+
     return __ESIMD_ENS::lsc_slm_block_load<T, NElts,
             gpu::xetla::detail::get_data_size(DS)>(offset);
 }
@@ -495,6 +518,10 @@ template <typename Ty, uint8_t NElts = 1,
 __XETLA_API void xetla_store_local(xetla_vector<uint32_t, N> offsets,
         xetla_vector<Ty, N * NElts> vals, xetla_mask<N> pred = 1) {
     using T = native_type_t<Ty>;
+    DEBUG_INVOKE(dbg_level::core,
+            core::general_1d<gpu_arch::Xe, Ty>::template check_restriction<
+                    NElts, N, uint32_t>(offsets));
+
     __ESIMD_ENS::lsc_slm_scatter<T, NElts,
             gpu::xetla::detail::get_data_size(DS), N>(offsets, vals, pred);
 }
@@ -517,6 +544,10 @@ template <typename Ty, uint8_t NElts = 1,
 __XETLA_API void xetla_store_local(
         uint32_t offset, xetla_vector<Ty, NElts> vals) {
     using T = native_type_t<Ty>;
+    DEBUG_INVOKE(dbg_level::core,
+            core::general_1d<gpu_arch::Xe,
+                    Ty>::template check_restriction<NElts>(offset));
+
     __ESIMD_ENS::lsc_slm_block_store<T, NElts,
             gpu::xetla::detail::get_data_size(DS)>(offset, vals);
 }

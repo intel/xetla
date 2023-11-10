@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.5</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.6</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -115,7 +115,7 @@ $(document).ready(function(){initNavTree('structgpu_1_1xetla_1_1subgroup_1_1gelu
 <p>Is the element-wise gelu backward op functor, specialized for Xe architecture.  
  <a href="structgpu_1_1xetla_1_1subgroup_1_1gelu__bwd__op__t_3_01dtype__in___00_01arch__tag_00_01std_1_1en7672939b47ac8b17b06b2adf4cf43de8.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="op__functor_8hpp_source.html">op_functor.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="tile__op__functor_8hpp_source.html">tile_op_functor.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -142,7 +142,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab4efe51ea1b7c109afd1b08d7527eb99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;typename dtype_in_, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag&gt;<br />
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename dtype_in_, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag&gt;<br />
 struct gpu::xetla::subgroup::gelu_bwd_op_t&lt; dtype_in_, arch_tag, std::enable_if_t&lt;(arch_tag==gpu_arch::Xe)&gt; &gt;</div><p>Is the element-wise gelu backward op functor, specialized for Xe architecture. </p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a99d9018209af45f0aa7b56c4e1898263" name="a99d9018209af45f0aa7b56c4e1898263"></a>
@@ -151,10 +151,10 @@ struct gpu::xetla::subgroup::gelu_bwd_op_t&lt; dtype_in_, arch_tag, std::enable_
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dtype_in_ , <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag&gt; </div>
+template&lt;typename dtype_in_ , <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1gelu__bwd__op__t.html">gpu::xetla::subgroup::gelu_bwd_op_t</a>&lt; dtype_in_, arch_tag, std::enable_if_t&lt;(arch_tag==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::base_t =  typename mem_desc_x_t::base_t</td>
+          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1gelu__bwd__op__t.html">gpu::xetla::subgroup::gelu_bwd_op_t</a>&lt; dtype_in_, arch_tag, std::enable_if_t&lt;(arch_tag==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::base_t =  typename mem_desc_x_t::base_t</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -167,10 +167,10 @@ template&lt;typename dtype_in_ , <a class="el" href="group__xetla__core__arch__c
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dtype_in_ , <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag&gt; </div>
+template&lt;typename dtype_in_ , <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1gelu__bwd__op__t.html">gpu::xetla::subgroup::gelu_bwd_op_t</a>&lt; dtype_in_, arch_tag, std::enable_if_t&lt;(arch_tag==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::coord_t =  typename mem_desc_x_t::coord_t</td>
+          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1gelu__bwd__op__t.html">gpu::xetla::subgroup::gelu_bwd_op_t</a>&lt; dtype_in_, arch_tag, std::enable_if_t&lt;(arch_tag==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::coord_t =  typename mem_desc_x_t::coord_t</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -183,10 +183,10 @@ template&lt;typename dtype_in_ , <a class="el" href="group__xetla__core__arch__c
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dtype_in_ , <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag&gt; </div>
+template&lt;typename dtype_in_ , <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1gelu__bwd__op__t.html">gpu::xetla::subgroup::gelu_bwd_op_t</a>&lt; dtype_in_, arch_tag, std::enable_if_t&lt;(arch_tag==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::dtype_in =  dtype_in_</td>
+          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1gelu__bwd__op__t.html">gpu::xetla::subgroup::gelu_bwd_op_t</a>&lt; dtype_in_, arch_tag, std::enable_if_t&lt;(arch_tag==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::dtype_in =  dtype_in_</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -199,10 +199,10 @@ template&lt;typename dtype_in_ , <a class="el" href="group__xetla__core__arch__c
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dtype_in_ , <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag&gt; </div>
+template&lt;typename dtype_in_ , <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1gelu__bwd__op__t.html">gpu::xetla::subgroup::gelu_bwd_op_t</a>&lt; dtype_in_, arch_tag, std::enable_if_t&lt;(arch_tag==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::mem_desc_x_t =  <a class="el" href="structgpu_1_1xetla_1_1mem__desc__t.html">mem_desc_t</a>&lt;<a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1gelu__bwd__op__t_3_01dtype__in___00_01arch__tag_00_01std_1_1en7672939b47ac8b17b06b2adf4cf43de8.html#a62fb9a804489d76bae30682b05e12037">dtype_in</a>, <a class="el" href="namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561a641fabb8e5e7d1d0333e2c9c384f959c">mem_layout::row_major</a>, <a class="el" href="namespacegpu_1_1xetla.html#a7f225ed816e841c1d31414d872dae59da9c70933aff6b2a6d08c687a6cbb6b765">mem_space::global</a>&gt;</td>
+          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1gelu__bwd__op__t.html">gpu::xetla::subgroup::gelu_bwd_op_t</a>&lt; dtype_in_, arch_tag, std::enable_if_t&lt;(arch_tag==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::mem_desc_x_t =  <a class="el" href="structgpu_1_1xetla_1_1mem__desc__t.html">mem_desc_t</a>&lt;<a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1gelu__bwd__op__t_3_01dtype__in___00_01arch__tag_00_01std_1_1en7672939b47ac8b17b06b2adf4cf43de8.html#a62fb9a804489d76bae30682b05e12037">dtype_in</a>, <a class="el" href="namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561a641fabb8e5e7d1d0333e2c9c384f959c">mem_layout::row_major</a>, <a class="el" href="namespacegpu_1_1xetla.html#a7f225ed816e841c1d31414d872dae59da9c70933aff6b2a6d08c687a6cbb6b765">mem_space::global</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -215,10 +215,10 @@ template&lt;typename dtype_in_ , <a class="el" href="group__xetla__core__arch__c
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dtype_in_ , <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag&gt; </div>
+template&lt;typename dtype_in_ , <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1gelu__bwd__op__t.html">gpu::xetla::subgroup::gelu_bwd_op_t</a>&lt; dtype_in_, arch_tag, std::enable_if_t&lt;(arch_tag==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::shape_t =  typename mem_desc_x_t::shape_t</td>
+          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1gelu__bwd__op__t.html">gpu::xetla::subgroup::gelu_bwd_op_t</a>&lt; dtype_in_, arch_tag, std::enable_if_t&lt;(arch_tag==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::shape_t =  typename mem_desc_x_t::shape_t</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -232,7 +232,7 @@ template&lt;typename dtype_in_ , <a class="el" href="group__xetla__core__arch__c
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename dtype_in_ , <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag&gt; </div>
+template&lt;typename dtype_in_ , <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag&gt; </div>
 <div class="memtemplate">
 template&lt;typename matAcc_t &gt; </div>
 <table class="mlabels">
@@ -240,7 +240,7 @@ template&lt;typename matAcc_t &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core.html#gafb2a0442e367d71b79a2f932d0d39c8b">KERNEL_FUNC</a> void <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1gelu__bwd__op__t.html">gpu::xetla::subgroup::gelu_bwd_op_t</a>&lt; dtype_in_, arch_tag, std::enable_if_t&lt;(arch_tag==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::operator() </td>
+          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core.html#gafb2a0442e367d71b79a2f932d0d39c8b">KERNEL_FUNC</a> void <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1gelu__bwd__op__t.html">gpu::xetla::subgroup::gelu_bwd_op_t</a>&lt; dtype_in_, arch_tag, std::enable_if_t&lt;(arch_tag==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::operator() </td>
           <td>(</td>
           <td class="paramtype">matAcc_t &amp;&#160;</td>
           <td class="paramname"><em>matAcc</em>, </td>

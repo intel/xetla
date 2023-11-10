@@ -5,5 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="gpu::xetla::group::\lrow_reduction_fused\l_op_t\< reduction_fused\l_kind::bias_dropout_bwd,\l dtype_in_, dtype_out_,\l dtype_acc_, reduction_attr\l_, gpu_arch::Xe \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1group_1_1row__reduction__fused__op__t_3_01reduction__fused__kind_1_1bias__6377f80bb195328d444af2dd5e7849c7.html",tooltip=" "];
+  Node0 [id="Node000000",label="gpu::xetla::group::\lgemm\< gpu_arch::Xe \>\l::default_fpu",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1group_1_1gemm_3_01gpu__arch_1_1Xe_01_4_1_1default__fpu.html",tooltip=" "];
 }

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.7"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>XeTLA: gpu::xetla::subgroup::mem_payload_t&lt; dtype, tile_desc, message_type, memory_layout, memory_space, arch_tag, enable &gt; Struct Template Reference</title>
+<title>XeTLA: gpu::xetla::subgroup::mem_payload_t&lt; mem_desc, tile_desc, message_type, arch_tag, enable &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.5</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.6</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -103,7 +103,7 @@ $(document).ready(function(){initNavTree('structgpu_1_1xetla_1_1subgroup_1_1mem_
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">gpu::xetla::subgroup::mem_payload_t&lt; dtype, tile_desc, message_type, memory_layout, memory_space, arch_tag, enable &gt; Struct Template Reference</div></div>
+  <div class="headertitle"><div class="title">gpu::xetla::subgroup::mem_payload_t&lt; mem_desc, tile_desc, message_type, arch_tag, enable &gt; Struct Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -112,15 +112,13 @@ $(document).ready(function(){initNavTree('structgpu_1_1xetla_1_1subgroup_1_1mem_
 
 <p><code>#include &lt;<a class="el" href="subgroup_2tile_2api_8hpp_source.html">api.hpp</a>&gt;</code></p>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;typename dtype, typename tile_desc, <a class="el" href="namespacegpu_1_1xetla.html#aa8afe1d12e7777419fb6ea09534a0aa7">msg_type</a> message_type, <a class="el" href="namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561">mem_layout</a> memory_layout, <a class="el" href="namespacegpu_1_1xetla.html#a7f225ed816e841c1d31414d872dae59d">mem_space</a> memory_space, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag, typename enable = void&gt;<br />
-struct gpu::xetla::subgroup::mem_payload_t&lt; dtype, tile_desc, message_type, memory_layout, memory_space, arch_tag, enable &gt;</div><p>Is to illustrate the memory information. </p>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename mem_desc, typename tile_desc, <a class="el" href="namespacegpu_1_1xetla.html#aa8afe1d12e7777419fb6ea09534a0aa7">msg_type</a> message_type, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag, typename enable = void&gt;<br />
+struct gpu::xetla::subgroup::mem_payload_t&lt; mem_desc, tile_desc, message_type, arch_tag, enable &gt;</div><p>Is to illustrate the memory information. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">dtype</td><td>Is the data type </td></tr>
+    <tr><td class="paramname">mem_desc</td><td>Is the memory descriptor </td></tr>
     <tr><td class="paramname">tile_desc</td><td>Is the tile descriptor </td></tr>
     <tr><td class="paramname">message_type</td><td>Is the form will be used to load/store </td></tr>
-    <tr><td class="paramname">memory_space</td><td>Is the data location </td></tr>
-    <tr><td class="paramname">memory_layout</td><td>Is the memory layout </td></tr>
   </table>
   </dd>
 </dl>

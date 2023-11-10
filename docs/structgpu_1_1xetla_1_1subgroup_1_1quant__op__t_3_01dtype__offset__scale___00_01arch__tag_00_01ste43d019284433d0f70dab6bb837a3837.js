@@ -1,8 +1,0 @@
-var structgpu_1_1xetla_1_1subgroup_1_1quant__op__t_3_01dtype__offset__scale___00_01arch__tag_00_01ste43d019284433d0f70dab6bb837a3837 =
-[
-    [ "arguments_t", "structgpu_1_1xetla_1_1subgroup_1_1quant__op__t_3_01dtype__offset__scale___00_01arch__tag_00_01ste43d019284433d0f70dab6bb837a3837.html#a6c1c54cc2e1b28e652d8260262bb14d1", null ],
-    [ "arguments_t", "structgpu_1_1xetla_1_1subgroup_1_1quant__op__t_3_01dtype__offset__scale___00_01arch__tag_00_01ste43d019284433d0f70dab6bb837a3837.html#a4a39a3464e79a268e48b21abcd725504", null ],
-    [ "base_offset", "structgpu_1_1xetla_1_1subgroup_1_1quant__op__t_3_01dtype__offset__scale___00_01arch__tag_00_01ste43d019284433d0f70dab6bb837a3837.html#afa3b3274332f46f777c9b67e60cb86cc", null ],
-    [ "base_scale", "structgpu_1_1xetla_1_1subgroup_1_1quant__op__t_3_01dtype__offset__scale___00_01arch__tag_00_01ste43d019284433d0f70dab6bb837a3837.html#ad009eb5914d5fdc3ada0968adfbfa4e1", null ],
-    [ "shape_offset_scale", "structgpu_1_1xetla_1_1subgroup_1_1quant__op__t_3_01dtype__offset__scale___00_01arch__tag_00_01ste43d019284433d0f70dab6bb837a3837.html#ab5f3c5ad150ba56796fb49537a0b789d", null ]
-];

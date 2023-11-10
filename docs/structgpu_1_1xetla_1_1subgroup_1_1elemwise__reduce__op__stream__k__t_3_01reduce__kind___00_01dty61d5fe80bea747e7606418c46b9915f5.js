@@ -1,0 +1,10 @@
+var structgpu_1_1xetla_1_1subgroup_1_1elemwise__reduce__op__stream__k__t_3_01reduce__kind___00_01dty61d5fe80bea747e7606418c46b9915f5 =
+[
+    [ "arguments_t", "structgpu_1_1xetla_1_1subgroup_1_1elemwise__reduce__op__stream__k__t_3_01reduce__kind___00_01dtyf5dcfb1fd31c571deb77c6e0dcb50b4c.html", "structgpu_1_1xetla_1_1subgroup_1_1elemwise__reduce__op__stream__k__t_3_01reduce__kind___00_01dtyf5dcfb1fd31c571deb77c6e0dcb50b4c" ],
+    [ "base_t", "structgpu_1_1xetla_1_1subgroup_1_1elemwise__reduce__op__stream__k__t_3_01reduce__kind___00_01dty61d5fe80bea747e7606418c46b9915f5.html#aa0024f943ff4b2ae932f842e62a6be57", null ],
+    [ "coord_t", "structgpu_1_1xetla_1_1subgroup_1_1elemwise__reduce__op__stream__k__t_3_01reduce__kind___00_01dty61d5fe80bea747e7606418c46b9915f5.html#afadf4e188fb560993d5928f96665df36", null ],
+    [ "dtype_in", "structgpu_1_1xetla_1_1subgroup_1_1elemwise__reduce__op__stream__k__t_3_01reduce__kind___00_01dty61d5fe80bea747e7606418c46b9915f5.html#acacf65cfb8a5848ddc8df36d645b1275", null ],
+    [ "mem_desc_in_t", "structgpu_1_1xetla_1_1subgroup_1_1elemwise__reduce__op__stream__k__t_3_01reduce__kind___00_01dty61d5fe80bea747e7606418c46b9915f5.html#a817d62287c4314abecf48f3e741d0a0c", null ],
+    [ "shape_t", "structgpu_1_1xetla_1_1subgroup_1_1elemwise__reduce__op__stream__k__t_3_01reduce__kind___00_01dty61d5fe80bea747e7606418c46b9915f5.html#ac952eb1fdf8d257cb3dcfc40a4cdcb03", null ],
+    [ "operator()", "structgpu_1_1xetla_1_1subgroup_1_1elemwise__reduce__op__stream__k__t_3_01reduce__kind___00_01dty61d5fe80bea747e7606418c46b9915f5.html#af92a1b9a16f460d9303694fb32b90bd9", null ]
+];

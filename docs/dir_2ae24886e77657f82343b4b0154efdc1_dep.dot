@@ -10,7 +10,9 @@ digraph "include/kernel"
   subgraph clusterdir_2ae24886e77657f82343b4b0154efdc1 {
     graph [ bgcolor="#e4eaf8", pencolor="grey25", label="", fontname=Helvetica,fontsize=10 style="filled,bold", URL="dir_2ae24886e77657f82343b4b0154efdc1.html",tooltip=""]
     dir_2ae24886e77657f82343b4b0154efdc1 [shape=plaintext, label="kernel"];
+  dir_9166f032870aa3325641edf85c01ecba [label="default_config", fillcolor="#7a9bdc", color="grey25", style="filled", URL="dir_9166f032870aa3325641edf85c01ecba.html",tooltip=""];
   dir_4f4af31cddd7a3f325e12f9dac348f44 [label="gemm", fillcolor="#7a9bdc", color="grey25", style="filled", URL="dir_4f4af31cddd7a3f325e12f9dac348f44.html",tooltip=""];
   }
   }
+  dir_4f4af31cddd7a3f325e12f9dac348f44->dir_9166f032870aa3325641edf85c01ecba [headlabel="2", labeldistance=1.5 headhref="dir_000023_000015.html" color="steelblue1" fontcolor="steelblue1"];
 }

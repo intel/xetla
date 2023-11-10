@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.5</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.6</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -148,10 +148,10 @@ Public Types</h2></td></tr>
 <tr class="separator:a423c99a319a8c9666994ec9239bae156"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaec8286f422976aa36bdf1ba4a90f49a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgru__layer.html#aaec8286f422976aa36bdf1ba4a90f49a">matC_t</a> = <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__t.html">tile_t</a>&lt; T, <a class="el" href="structgru__layer.html#ac0134c4a4096d6d2e8b0d4118ea65d0f">matC_tile_desc_t</a> &gt;</td></tr>
 <tr class="separator:aaec8286f422976aa36bdf1ba4a90f49a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c9893fa6381f6cf081e5e04ddabf5fa"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgru__layer.html#a5c9893fa6381f6cf081e5e04ddabf5fa">mat_hidden_payload_t</a> = <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t.html">mem_payload_t</a>&lt; T, <a class="el" href="structgru__layer.html#ac0134c4a4096d6d2e8b0d4118ea65d0f">matC_tile_desc_t</a>, msg_type_v&lt; <a class="el" href="structgru__layer.html#ac0134c4a4096d6d2e8b0d4118ea65d0f">matC_tile_desc_t</a>, mem_loc_input &gt;, layout_input, mem_loc_input, gpu_arch::Xe &gt;</td></tr>
-<tr class="separator:a5c9893fa6381f6cf081e5e04ddabf5fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2685cbca1e1e6aaece5fc1e38ec05cac"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgru__layer.html#a2685cbca1e1e6aaece5fc1e38ec05cac">matC_payload_t</a> = <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t.html">mem_payload_t</a>&lt; T, <a class="el" href="structgru__layer.html#ac0134c4a4096d6d2e8b0d4118ea65d0f">matC_tile_desc_t</a>, msg_type::block_2d, layout_out, mem_loc_out, gpu_arch::Xe &gt;</td></tr>
-<tr class="separator:a2685cbca1e1e6aaece5fc1e38ec05cac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae17038e3da814f66f91a94998831334e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgru__layer.html#ae17038e3da814f66f91a94998831334e">mat_hidden_payload_t</a> = <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t.html">mem_payload_t</a>&lt; <a class="el" href="structgru__layer.html#a751ec3476213cf73e2c3ea7c795d80b4">mem_desc_a_t</a>, <a class="el" href="structgru__layer.html#ac0134c4a4096d6d2e8b0d4118ea65d0f">matC_tile_desc_t</a>, msg_type_v&lt; <a class="el" href="structgru__layer.html#ac0134c4a4096d6d2e8b0d4118ea65d0f">matC_tile_desc_t</a>, mem_loc_input &gt;, gpu_arch::Xe &gt;</td></tr>
+<tr class="separator:ae17038e3da814f66f91a94998831334e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae24e97bec1ef8ad1ab36ec89da1d8fb2"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgru__layer.html#ae24e97bec1ef8ad1ab36ec89da1d8fb2">matC_payload_t</a> = <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t.html">mem_payload_t</a>&lt; <a class="el" href="structgru__layer.html#a720eef80488cc1b2e8cdbb118242fd38">mem_desc_c_t</a>, <a class="el" href="structgru__layer.html#ac0134c4a4096d6d2e8b0d4118ea65d0f">matC_tile_desc_t</a>, msg_type::block_2d, gpu_arch::Xe &gt;</td></tr>
+<tr class="separator:ae24e97bec1ef8ad1ab36ec89da1d8fb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24e3c94971def2e9bb8734f897d81383"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgru__layer.html#a24e3c94971def2e9bb8734f897d81383">sigmoid_t</a> = typename <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1sigmoid__op__t.html">subgroup::sigmoid_op_t</a></td></tr>
 <tr class="separator:a24e3c94971def2e9bb8734f897d81383"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79ac04894b7623f90c871273e760fa5e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgru__layer.html#a79ac04894b7623f90c871273e760fa5e">tanh_t</a> = typename <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tanh__op__t.html">subgroup::tanh_op_t</a></td></tr>
@@ -159,8 +159,8 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a419aa8d6c74b725b7bd6bd2b254fa01e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgru__layer.html#a419aa8d6c74b725b7bd6bd2b254fa01e">call</a> (<a class="el" href="classgpu_1_1xetla_1_1xetla__exec__item.html">xetla_exec_item</a>&lt; 3 &gt; &amp;ei, <a class="el" href="structfused__config__t.html">fused_config_t</a>&lt; T &gt; *args)</td></tr>
-<tr class="separator:a419aa8d6c74b725b7bd6bd2b254fa01e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6aec1ba6b5ee36d868bb9dc481ea563b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgru__layer.html#a6aec1ba6b5ee36d868bb9dc481ea563b">call</a> (sycl::nd_item&lt; 3 &gt; &amp;item, <a class="el" href="structfused__config__t.html">fused_config_t</a>&lt; T &gt; *args)</td></tr>
+<tr class="separator:a6aec1ba6b5ee36d868bb9dc481ea563b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -268,8 +268,8 @@ template&lt;typename T , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n
 
 </div>
 </div>
-<a id="a5c9893fa6381f6cf081e5e04ddabf5fa" name="a5c9893fa6381f6cf081e5e04ddabf5fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c9893fa6381f6cf081e5e04ddabf5fa">&#9670;&#160;</a></span>mat_hidden_payload_t</h2>
+<a id="ae17038e3da814f66f91a94998831334e" name="ae17038e3da814f66f91a94998831334e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae17038e3da814f66f91a94998831334e">&#9670;&#160;</a></span>mat_hidden_payload_t</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -277,7 +277,7 @@ template&lt;typename T , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n
 template&lt;typename T , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m, uint32_t sg_tile_n, uint32_t sg_tile_k, mem_layout layout_input = mem_layout::row_major, mem_layout layout_weight = mem_layout::row_major, mem_layout layout_out = mem_layout::row_major, mem_space mem_loc_input = mem_space::global, mem_space mem_loc_weight = mem_space::global, mem_space mem_loc_out = mem_space::global, uint32_t periodic_sync_interval = 0&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structgru__layer.html">gru_layer</a>&lt; T, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;::mat_hidden_payload_t =  <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t.html">mem_payload_t</a>&lt;T, <a class="el" href="structgru__layer.html#ac0134c4a4096d6d2e8b0d4118ea65d0f">matC_tile_desc_t</a>, msg_type_v&lt;<a class="el" href="structgru__layer.html#ac0134c4a4096d6d2e8b0d4118ea65d0f">matC_tile_desc_t</a>, mem_loc_input&gt;, layout_input, mem_loc_input, gpu_arch::Xe&gt;</td>
+          <td class="memname">using <a class="el" href="structgru__layer.html">gru_layer</a>&lt; T, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;::mat_hidden_payload_t =  <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t.html">mem_payload_t</a>&lt;<a class="el" href="structgru__layer.html#a751ec3476213cf73e2c3ea7c795d80b4">mem_desc_a_t</a>, <a class="el" href="structgru__layer.html#ac0134c4a4096d6d2e8b0d4118ea65d0f">matC_tile_desc_t</a>, msg_type_v&lt;<a class="el" href="structgru__layer.html#ac0134c4a4096d6d2e8b0d4118ea65d0f">matC_tile_desc_t</a>, mem_loc_input&gt;, gpu_arch::Xe&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -316,8 +316,8 @@ template&lt;typename T , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n
 
 </div>
 </div>
-<a id="a2685cbca1e1e6aaece5fc1e38ec05cac" name="a2685cbca1e1e6aaece5fc1e38ec05cac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2685cbca1e1e6aaece5fc1e38ec05cac">&#9670;&#160;</a></span>matC_payload_t</h2>
+<a id="ae24e97bec1ef8ad1ab36ec89da1d8fb2" name="ae24e97bec1ef8ad1ab36ec89da1d8fb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae24e97bec1ef8ad1ab36ec89da1d8fb2">&#9670;&#160;</a></span>matC_payload_t</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -325,7 +325,7 @@ template&lt;typename T , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n
 template&lt;typename T , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m, uint32_t sg_tile_n, uint32_t sg_tile_k, mem_layout layout_input = mem_layout::row_major, mem_layout layout_weight = mem_layout::row_major, mem_layout layout_out = mem_layout::row_major, mem_space mem_loc_input = mem_space::global, mem_space mem_loc_weight = mem_space::global, mem_space mem_loc_out = mem_space::global, uint32_t periodic_sync_interval = 0&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structgru__layer.html">gru_layer</a>&lt; T, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;::matC_payload_t =  <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t.html">mem_payload_t</a>&lt;T, <a class="el" href="structgru__layer.html#ac0134c4a4096d6d2e8b0d4118ea65d0f">matC_tile_desc_t</a>, msg_type::block_2d, layout_out, mem_loc_out, gpu_arch::Xe&gt;</td>
+          <td class="memname">using <a class="el" href="structgru__layer.html">gru_layer</a>&lt; T, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;::matC_payload_t =  <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t.html">mem_payload_t</a>&lt;<a class="el" href="structgru__layer.html#a720eef80488cc1b2e8cdbb118242fd38">mem_desc_c_t</a>, <a class="el" href="structgru__layer.html#ac0134c4a4096d6d2e8b0d4118ea65d0f">matC_tile_desc_t</a>, msg_type::block_2d, gpu_arch::Xe&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -493,8 +493,8 @@ template&lt;typename T , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a419aa8d6c74b725b7bd6bd2b254fa01e" name="a419aa8d6c74b725b7bd6bd2b254fa01e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a419aa8d6c74b725b7bd6bd2b254fa01e">&#9670;&#160;</a></span>call()</h2>
+<a id="a6aec1ba6b5ee36d868bb9dc481ea563b" name="a6aec1ba6b5ee36d868bb9dc481ea563b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6aec1ba6b5ee36d868bb9dc481ea563b">&#9670;&#160;</a></span>call()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -507,8 +507,8 @@ template&lt;typename T , typename Act_T , uint32_t wg_tile_m, uint32_t wg_tile_n
         <tr>
           <td class="memname">static void <a class="el" href="structgru__layer.html">gru_layer</a>&lt; T, Act_T, wg_tile_m, wg_tile_n, sg_tile_m, sg_tile_n, sg_tile_k, layout_input, layout_weight, layout_out, mem_loc_input, mem_loc_weight, mem_loc_out, periodic_sync_interval &gt;::call </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classgpu_1_1xetla_1_1xetla__exec__item.html">xetla_exec_item</a>&lt; 3 &gt; &amp;&#160;</td>
-          <td class="paramname"><em>ei</em>, </td>
+          <td class="paramtype">sycl::nd_item&lt; 3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>item</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

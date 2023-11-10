@@ -1,4 +1,0 @@
-<map id="Tensor load store API" name="Tensor load store API">
-<area shape="rect" id="node1" href="$group__xetla__util.html" title="This is low level API wrapper for utility functions." alt="" coords="5,5,101,31"/>
-<area shape="rect" id="node2" title="Implements the tensor load store functionality using raw send instructions." alt="" coords="149,5,296,31"/>
-</map>

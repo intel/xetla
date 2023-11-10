@@ -5,5 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="gpu::xetla::subgroup\l::tile_mma_t\< matAcc\l_dst_t_, matAcc_src_t\l_, matB_t_, matA_t_, mma\l_engine::xmx, arch_tag_,\l std::enable_if_t\<(arch_tag\l_==gpu_arch::Xe)\> \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t_3_01matAcc__dst__t___00_01matAcc__src__t___00_01mf2b8fccee2805b888b5b9c50ef3404e9.html",tooltip="Is the tile mma operation functor, specialized for Xe and matrix engine."];
+  Node0 [id="Node000000",label="gpu::xetla::subgroup\l::check_store\< gpu_arch\l::Xe, dtype, mem_dtype\l \>::local_scatter_vnni_col\l\< tile_bytes, min_store_bytes,\l block_bytes, num_channel_x,\l num_channel \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1subgroup_1_1check__store_3_01gpu__arch_1_1Xe_00_01dtype_00_01mem__dtype_01_4_1_1local__scatter__vnni__col.html",tooltip=" "];
 }

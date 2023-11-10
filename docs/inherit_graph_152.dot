@@ -5,5 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="gpu::xetla::kernel\l::xetla_data_transformer\l\< dtype_in_, dtype_out\l_, dtype_acc_, data_transformer\l_config_, mem_layout_in_, need\l_fp8_op, arch_ \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer.html",tooltip="Is the data_transformer functor."];
+  Node0 [id="Node000000",label="gpu::xetla::group::\lsoftmax_policy_bwd\<\l dtype_in, dtype_acc,\l arch_tag_ \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1group_1_1softmax__policy__bwd.html",tooltip=" "];
 }

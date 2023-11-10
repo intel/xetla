@@ -37,21 +37,9 @@ namespace gpu::xetla {
 /// For device side, we will automatically convert it to its native type.
 /// @see native_type_t
 ///
-struct bf16 {
-    uint16_t data;
-    operator float() const {
-        uint32_t temp = data;
-        temp = temp << 0x10;
-        return *reinterpret_cast<float *>(&temp);
-    }
-    bf16(float val) { data = (*reinterpret_cast<uint32_t *>(&val)) >> 0x10; }
+using bf16 = sycl::ext::oneapi::bfloat16;
 
-    bf16 &operator=(float val) {
-        this->data = (*reinterpret_cast<uint32_t *>(&val)) >> 0x10;
-        return *this;
-    }
-};
-
+/// @brief xetla fp16 data type.
 using fp16 = sycl::half;
 
 /// @brief xetla tf32 data type.
@@ -65,26 +53,13 @@ using fp16 = sycl::half;
 /// For device side, we will automatically convert it to its native type.
 /// @see native_type_t
 ///
-struct tf32 {
-    uint32_t data;
-    //#ifdef __SYCL_DEVICE_ONLY__
-    //    ///
-    //#else
-    operator float() const {
-        uint32_t temp = data;
-        return *reinterpret_cast<float *>(&temp);
-    }
-    tf32(float val) {
-        data = (*reinterpret_cast<uint32_t *>(&val)) & 0xFFFFE000;
-    }
+using tf32 = sycl::ext::intel::experimental::esimd::tfloat32;
 
-    tf32 &operator=(float val) {
-        this->data = (*reinterpret_cast<uint32_t *>(&val)) & 0xFFFFE000;
-        return *this;
-    }
-
-    //#endif
-};
+template <typename T, typename = void>
+struct is_host_callable : std::false_type {};
+template <typename T>
+struct is_host_callable<T, std::enable_if_t<T::host_callable == true>>
+    : std::true_type {};
 
 /// @brief Used to check if the type is xetla internal data type
 /// @tparam T is the data type
@@ -94,23 +69,36 @@ struct is_internal_type {
             || std::is_same<remove_const_t<T>, tf32>::value;
 };
 
+/// @brief Used to check if the type is floating_point.
+/// @tparam T is the data type
+template <typename T>
+struct is_floating_point {
+    static constexpr bool value = std::is_same<remove_const_t<T>, bf16>::value
+            || std::is_same<remove_const_t<T>, fp16>::value
+            || std::is_same<remove_const_t<T>, tf32>::value
+            || std::is_same<remove_const_t<T>, float>::value
+            || std::is_same<remove_const_t<T>, double>::value;
+};
+
+/// @brief Used to check if the type is floating_point.
+/// @tparam T is the data type
+template <typename T>
+struct is_integral {
+    static constexpr bool value = std::is_same<remove_const_t<T>, int8_t>::value
+            || std::is_same<remove_const_t<T>, uint8_t>::value
+            || std::is_same<remove_const_t<T>, int16_t>::value
+            || std::is_same<remove_const_t<T>, uint16_t>::value
+            || std::is_same<remove_const_t<T>, int32_t>::value
+            || std::is_same<remove_const_t<T>, uint32_t>::value
+            || std::is_same<remove_const_t<T>, int64_t>::value
+            || std::is_same<remove_const_t<T>, uint64_t>::value;
+};
+
 /// @brief Set the native data type of T
 /// @tparam T is the data type
 template <typename T>
 struct native_type {
     using type = T;
-};
-
-/// @brief Set bfloat16 as the native data type of bf16
-template <>
-struct native_type<bf16> {
-    using type = sycl::ext::oneapi::bfloat16;
-};
-
-/// @brief Set uint32_t as the native data type of tf32
-template <>
-struct native_type<tf32> {
-    using type = sycl::ext::intel::experimental::esimd::tfloat32;
 };
 
 /// @brief Return the native data type of T
@@ -159,6 +147,15 @@ using get_uint_type_t = typename get_uint_type<Size>::type;
 ///
 template <typename Ty, uint32_t N>
 using xetla_vector = __ESIMD_NS::simd<native_type_t<Ty>, N>;
+
+///
+/// @brief Description of nd tensor descriptor for load and store.
+/// Structure is defined in [here](https://gfxspecs.intel.com/Predator/Home/Index/63986).
+///
+using xetla_tdescriptor = xetla_vector<uint32_t, 16>;
+
+/// @brief Alias to xetla_vector<uint32_t, 16> reference.
+#define xetla_tdescriptor_ref xetla_vector_ref<uint32_t, 16> __REF__
 
 /// @brief wrapper for xetla_mask.
 /// Alias to ESIMD `__ESIMD_NS::simd_mask`.
@@ -210,3 +207,10 @@ concept xetla_matrix_ref
 /// @} xetla_core_base_types
 
 } // namespace gpu::xetla
+
+namespace sycl {
+template <typename T>
+struct is_device_copyable<T,
+        std::enable_if_t<gpu::xetla::is_host_callable<T>::value>>
+    : std::true_type {};
+} // namespace sycl

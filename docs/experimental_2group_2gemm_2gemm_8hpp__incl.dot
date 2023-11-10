@@ -15,18 +15,15 @@ digraph "include/experimental/group/gemm/gemm.hpp"
   Node5 [id="Node000005",label="common/common.hpp",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
   Node2 -> Node6 [id="edge5_Node000002_Node000006",color="steelblue1",style="solid",tooltip=" "];
   Node6 [id="Node000006",label="experimental/subgroup\l/subgroup.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$experimental_2subgroup_2subgroup_8hpp.html",tooltip="C++ API."];
-  Node6 -> Node7 [id="edge6_Node000006_Node000007",color="steelblue1",style="solid",tooltip=" "];
-  Node7 [id="Node000007",label="experimental/subgroup\l/tile_broadcast_op.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$tile__broadcast__op_8hpp.html",tooltip="C++ API."];
-  Node7 -> Node8 [id="edge7_Node000007_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node2 -> Node7 [id="edge6_Node000002_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="group/group.hpp",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node2 -> Node8 [id="edge7_Node000002_Node000008",color="steelblue1",style="solid",tooltip=" "];
   Node8 [id="Node000008",label="subgroup/subgroup.hpp",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
-  Node2 -> Node9 [id="edge8_Node000002_Node000009",color="steelblue1",style="solid",tooltip=" "];
-  Node9 [id="Node000009",label="group/group.hpp",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
-  Node2 -> Node8 [id="edge9_Node000002_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node9 [id="edge8_Node000001_Node000009",color="steelblue1",style="solid",tooltip=" "];
+  Node9 [id="Node000009",label="experimental/group\l/gemm/compute_policy.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$experimental_2group_2gemm_2compute__policy_8hpp.html",tooltip="C++ API."];
+  Node9 -> Node2 [id="edge9_Node000009_Node000002",color="steelblue1",style="solid",tooltip=" "];
   Node1 -> Node10 [id="edge10_Node000001_Node000010",color="steelblue1",style="solid",tooltip=" "];
-  Node10 [id="Node000010",label="experimental/group\l/gemm/compute_policy.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$experimental_2group_2gemm_2compute__policy_8hpp.html",tooltip="C++ API."];
+  Node10 [id="Node000010",label="experimental/group\l/gemm/impl/int4_dequantize\l_xmx_xe.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$int4__dequantize__xmx__xe_8hpp.html",tooltip="C++ API."];
   Node10 -> Node2 [id="edge11_Node000010_Node000002",color="steelblue1",style="solid",tooltip=" "];
-  Node1 -> Node11 [id="edge12_Node000001_Node000011",color="steelblue1",style="solid",tooltip=" "];
-  Node11 [id="Node000011",label="experimental/group\l/gemm/impl/int4_dequantize\l_xmx_xe.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$int4__dequantize__xmx__xe_8hpp.html",tooltip="C++ API."];
-  Node11 -> Node2 [id="edge13_Node000011_Node000002",color="steelblue1",style="solid",tooltip=" "];
-  Node11 -> Node10 [id="edge14_Node000011_Node000010",color="steelblue1",style="solid",tooltip=" "];
+  Node10 -> Node9 [id="edge12_Node000010_Node000009",color="steelblue1",style="solid",tooltip=" "];
 }

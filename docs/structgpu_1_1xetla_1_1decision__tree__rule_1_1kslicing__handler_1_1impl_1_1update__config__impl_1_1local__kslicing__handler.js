@@ -1,0 +1,4 @@
+var structgpu_1_1xetla_1_1decision__tree__rule_1_1kslicing__handler_1_1impl_1_1update__config__impl_1_1local__kslicing__handler =
+[
+    [ "type", "structgpu_1_1xetla_1_1decision__tree__rule_1_1kslicing__handler_1_1impl_1_1update__config__impl_1_1local__kslicing__handler.html#a6d2708dfb4f117d458d85ca84bae6adb", null ]
+];

@@ -5,5 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="gpu::xetla::kernel\l::layer_norm_bwd_t\<\l dtype_x_, dtype_y_,\l dtype_weight_, dtype\l_acc_, layer_norm_attr\l_, gpu_arch::Xe, ln_bwd\l_fused_op_ \>::get_barrier_count",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1kernel_1_1layer__norm__bwd__t_3_01dtype__x___00_01dtype__y___00_01dtype__wc6027ac29965333ffa97f8b5703c2982.html",tooltip=" "];
+  Node0 [id="Node000000",label="gpu::xetla::group::\lperf_tuning_knob_t\<\l k_stride_, stages_,\l sync_freq_ \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1group_1_1perf__tuning__knob__t.html",tooltip="Fine-tune knobs for gemm."];
 }

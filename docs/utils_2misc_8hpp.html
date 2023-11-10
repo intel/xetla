@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.5</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.6</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -137,6 +137,10 @@ Namespaces</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:a953184395f82fbc026383b49cb8e8dcd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_2misc_8hpp.html#a953184395f82fbc026383b49cb8e8dcd">div_round_up</a> (uint32_t n, uint32_t d)</td></tr>
 <tr class="separator:a953184395f82fbc026383b49cb8e8dcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0887bdde666faa6f2f8cb23d55920d23"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_2misc_8hpp.html#a0887bdde666faa6f2f8cb23d55920d23">div_round_down</a> (int n, int d)</td></tr>
+<tr class="separator:a0887bdde666faa6f2f8cb23d55920d23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a108393d8e0cff85fa1351bca96fa8868"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_2misc_8hpp.html#a108393d8e0cff85fa1351bca96fa8868">modulo</a> (int n, int d)</td></tr>
+<tr class="separator:a108393d8e0cff85fa1351bca96fa8868"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd2ebc2bb1756e8c35eee6fb8a2cd676"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_2misc_8hpp.html#afd2ebc2bb1756e8c35eee6fb8a2cd676">cacheline_align_up</a> (size_t size)</td></tr>
 <tr class="separator:afd2ebc2bb1756e8c35eee6fb8a2cd676"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga22d18fb3710da7ef004c8a3e5c53d365"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; uint32_t, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__xetla__util__misc.html#ga22d18fb3710da7ef004c8a3e5c53d365">gpu::xetla::get_time_stamp</a> ()</td></tr>
@@ -176,6 +180,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga3219128559cd3b13670888fc3302c0ea"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename dtype , int N_x, int N_y&gt; </td></tr>
 <tr class="memitem:ga3219128559cd3b13670888fc3302c0ea"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> std::enable_if_t&lt;(N_x &gt; 1), <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; dtype, N_y &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__xetla__util__misc.html#ga3219128559cd3b13670888fc3302c0ea">gpu::xetla::recur_col_reduce</a> (<a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; dtype, N_x *N_y &gt; in)</td></tr>
 <tr class="separator:ga3219128559cd3b13670888fc3302c0ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf39a19c926231a07fd3cf1e5de2ca00a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__xetla__util__misc.html#gaf39a19c926231a07fd3cf1e5de2ca00a">gpu::xetla::get_2d_group_linear_id</a> (sycl::nd_item&lt; 3 &gt; &amp;item)</td></tr>
+<tr class="memdesc:gaf39a19c926231a07fd3cf1e5de2ca00a"><td class="mdescLeft">&#160;</td><td class="mdescRight">get linear group id of the last two dimensions.  <br /></td></tr>
+<tr class="separator:gaf39a19c926231a07fd3cf1e5de2ca00a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>C++ API. </p>
@@ -206,6 +213,42 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a0887bdde666faa6f2f8cb23d55920d23" name="a0887bdde666faa6f2f8cb23d55920d23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0887bdde666faa6f2f8cb23d55920d23">&#9670;&#160;</a></span>div_round_down()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> constexpr int div_round_down </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>d</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a953184395f82fbc026383b49cb8e8dcd" name="a953184395f82fbc026383b49cb8e8dcd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a953184395f82fbc026383b49cb8e8dcd">&#9670;&#160;</a></span>div_round_up()</h2>
 
@@ -225,6 +268,42 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>d</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a108393d8e0cff85fa1351bca96fa8868" name="a108393d8e0cff85fa1351bca96fa8868"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a108393d8e0cff85fa1351bca96fa8868">&#9670;&#160;</a></span>modulo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> constexpr int modulo </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>d</em>&#160;</td>
         </tr>
         <tr>

@@ -5,5 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="gpu::xetla::group::\lgroup_reduce_t\< T, SZ,\l N, Op, wg_size_x, true,\l gpu_arch::Xe \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1group_1_1group__reduce__t.html",tooltip=" "];
+  Node0 [id="Node000000",label="gpu::xetla::group::\lcompute_policy_default\l_fpu\< compute_attr_, perf\l_tuning_knob_, arch_tag_ \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1group_1_1compute__policy__default__fpu.html",tooltip="Compute policy for fpu engine."];
 }

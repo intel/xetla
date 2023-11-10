@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.7"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>XeTLA: gpu::xetla::group::epilogue_policy_quant_op&lt; tile_op_t_, quant_op_t_, arch_tag_ &gt; Struct Template Reference</title>
+<title>XeTLA: gpu::xetla::group::epilogue_policy_quant_op&lt; dequant_op_t_, tile_op_t_, quant_op_t_, arch_tag_, dtype_dequant_ &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.5</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.6</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -107,7 +107,7 @@ $(document).ready(function(){initNavTree('structgpu_1_1xetla_1_1group_1_1epilogu
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="structgpu_1_1xetla_1_1group_1_1epilogue__policy__quant__op-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">gpu::xetla::group::epilogue_policy_quant_op&lt; tile_op_t_, quant_op_t_, arch_tag_ &gt; Struct Template Reference<div class="ingroups"><a class="el" href="group__xetla__epilogue.html">XeTLA EPILOGUE</a></div></div></div>
+  <div class="headertitle"><div class="title">gpu::xetla::group::epilogue_policy_quant_op&lt; dequant_op_t_, tile_op_t_, quant_op_t_, arch_tag_, dtype_dequant_ &gt; Struct Template Reference<div class="ingroups"><a class="el" href="group__xetla__epilogue.html">XeTLA EPILOGUE</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -118,54 +118,92 @@ $(document).ready(function(){initNavTree('structgpu_1_1xetla_1_1group_1_1epilogu
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a7d3c6d4231ba99e215eaedbbf8788412"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1group_1_1epilogue__policy__quant__op.html#a7d3c6d4231ba99e215eaedbbf8788412">tile_op</a> = tile_op_t_</td></tr>
-<tr class="separator:a7d3c6d4231ba99e215eaedbbf8788412"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2a6614b6787ead1db34258e1d35f815"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1group_1_1epilogue__policy__quant__op.html#ad2a6614b6787ead1db34258e1d35f815">quant_op</a> = quant_op_t_</td></tr>
-<tr class="separator:ad2a6614b6787ead1db34258e1d35f815"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71be86c1c21945722e2708c78cc2a359"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1group_1_1epilogue__policy__quant__op.html#a71be86c1c21945722e2708c78cc2a359">dequant_op_t</a> = dequant_op_t_</td></tr>
+<tr class="separator:a71be86c1c21945722e2708c78cc2a359"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8b89530612865bf234cd4bd5e63dcb3"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1group_1_1epilogue__policy__quant__op.html#ae8b89530612865bf234cd4bd5e63dcb3">tile_op_t</a> = tile_op_t_</td></tr>
+<tr class="separator:ae8b89530612865bf234cd4bd5e63dcb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a091a547a7a21cbe10791f007011983ef"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1group_1_1epilogue__policy__quant__op.html#a091a547a7a21cbe10791f007011983ef">quant_op_t</a> = quant_op_t_</td></tr>
+<tr class="separator:a091a547a7a21cbe10791f007011983ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a870235ac15dc5c8b7b1e15a98ea607c4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1group_1_1epilogue__policy__quant__op.html#a870235ac15dc5c8b7b1e15a98ea607c4">dtype_dequant</a> = dtype_dequant_</td></tr>
+<tr class="separator:a870235ac15dc5c8b7b1e15a98ea607c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a620e623524a48ecdfdbe197b3e738964"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1group_1_1epilogue__policy__quant__op.html#a620e623524a48ecdfdbe197b3e738964">arch_tag</a> = arch_tag_</td></tr>
-<tr class="separator:a620e623524a48ecdfdbe197b3e738964"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7df59b64ba44c305c96fb3445f2231c2"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1group_1_1epilogue__policy__quant__op.html#a7df59b64ba44c305c96fb3445f2231c2">arch_tag</a> = arch_tag_</td></tr>
+<tr class="separator:a7df59b64ba44c305c96fb3445f2231c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;typename tile_op_t_, typename quant_op_t_, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt;<br />
-struct gpu::xetla::group::epilogue_policy_quant_op&lt; tile_op_t_, quant_op_t_, arch_tag_ &gt;</div><p>Epilogue functor, specialized for quantization operator. </p>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename dequant_op_t_, typename tile_op_t_, typename quant_op_t_, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_, typename dtype_dequant_ = float&gt;<br />
+struct gpu::xetla::group::epilogue_policy_quant_op&lt; dequant_op_t_, tile_op_t_, quant_op_t_, arch_tag_, dtype_dequant_ &gt;</div><p>Epilogue functor, specialized for quantization operator. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
+    <tr><td class="paramname">dequant_op_t_</td><td>is the dequantization op type </td></tr>
     <tr><td class="paramname">tile_op_t_</td><td>is the tile op type. </td></tr>
-    <tr><td class="paramname">quant_op_t_</td><td>is the quantization op type </td></tr>
+    <tr><td class="paramname">quant_op_t_</td><td>is the quantization op type. </td></tr>
     <tr><td class="paramname">arch_tag_</td><td>Is the HW architecture. </td></tr>
+    <tr><td class="paramname">dequant_dtype_t_</td><td>Is the dequantize data type. </td></tr>
   </table>
   </dd>
 </dl>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="ad2a6614b6787ead1db34258e1d35f815" name="ad2a6614b6787ead1db34258e1d35f815"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2a6614b6787ead1db34258e1d35f815">&#9670;&#160;</a></span>quant_op</h2>
+<a id="a71be86c1c21945722e2708c78cc2a359" name="a71be86c1c21945722e2708c78cc2a359"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71be86c1c21945722e2708c78cc2a359">&#9670;&#160;</a></span>dequant_op_t</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename tile_op_t_ , typename quant_op_t_ , <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename dequant_op_t_ , typename tile_op_t_ , typename quant_op_t_ , <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_, typename dtype_dequant_  = float&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1group_1_1epilogue__policy__quant__op.html">gpu::xetla::group::epilogue_policy_quant_op</a>&lt; tile_op_t_, quant_op_t_, arch_tag_ &gt;::quant_op =  quant_op_t_</td>
+          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1group_1_1epilogue__policy__quant__op.html">gpu::xetla::group::epilogue_policy_quant_op</a>&lt; dequant_op_t_, tile_op_t_, quant_op_t_, arch_tag_, dtype_dequant_ &gt;::dequant_op_t =  dequant_op_t_</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a7d3c6d4231ba99e215eaedbbf8788412" name="a7d3c6d4231ba99e215eaedbbf8788412"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d3c6d4231ba99e215eaedbbf8788412">&#9670;&#160;</a></span>tile_op</h2>
+<a id="a870235ac15dc5c8b7b1e15a98ea607c4" name="a870235ac15dc5c8b7b1e15a98ea607c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a870235ac15dc5c8b7b1e15a98ea607c4">&#9670;&#160;</a></span>dtype_dequant</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename tile_op_t_ , typename quant_op_t_ , <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename dequant_op_t_ , typename tile_op_t_ , typename quant_op_t_ , <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_, typename dtype_dequant_  = float&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1group_1_1epilogue__policy__quant__op.html">gpu::xetla::group::epilogue_policy_quant_op</a>&lt; tile_op_t_, quant_op_t_, arch_tag_ &gt;::tile_op =  tile_op_t_</td>
+          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1group_1_1epilogue__policy__quant__op.html">gpu::xetla::group::epilogue_policy_quant_op</a>&lt; dequant_op_t_, tile_op_t_, quant_op_t_, arch_tag_, dtype_dequant_ &gt;::dtype_dequant =  dtype_dequant_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a091a547a7a21cbe10791f007011983ef" name="a091a547a7a21cbe10791f007011983ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a091a547a7a21cbe10791f007011983ef">&#9670;&#160;</a></span>quant_op_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename dequant_op_t_ , typename tile_op_t_ , typename quant_op_t_ , <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_, typename dtype_dequant_  = float&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1group_1_1epilogue__policy__quant__op.html">gpu::xetla::group::epilogue_policy_quant_op</a>&lt; dequant_op_t_, tile_op_t_, quant_op_t_, arch_tag_, dtype_dequant_ &gt;::quant_op_t =  quant_op_t_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae8b89530612865bf234cd4bd5e63dcb3" name="ae8b89530612865bf234cd4bd5e63dcb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8b89530612865bf234cd4bd5e63dcb3">&#9670;&#160;</a></span>tile_op_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename dequant_op_t_ , typename tile_op_t_ , typename quant_op_t_ , <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_, typename dtype_dequant_  = float&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1group_1_1epilogue__policy__quant__op.html">gpu::xetla::group::epilogue_policy_quant_op</a>&lt; dequant_op_t_, tile_op_t_, quant_op_t_, arch_tag_, dtype_dequant_ &gt;::tile_op_t =  tile_op_t_</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -173,19 +211,19 @@ template&lt;typename tile_op_t_ , typename quant_op_t_ , <a class="el" href="gro
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a620e623524a48ecdfdbe197b3e738964" name="a620e623524a48ecdfdbe197b3e738964"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a620e623524a48ecdfdbe197b3e738964">&#9670;&#160;</a></span>arch_tag</h2>
+<a id="a7df59b64ba44c305c96fb3445f2231c2" name="a7df59b64ba44c305c96fb3445f2231c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7df59b64ba44c305c96fb3445f2231c2">&#9670;&#160;</a></span>arch_tag</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename tile_op_t_ , typename quant_op_t_ , <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename dequant_op_t_ , typename tile_op_t_ , typename quant_op_t_ , <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_, typename dtype_dequant_  = float&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> <a class="el" href="structgpu_1_1xetla_1_1group_1_1epilogue__policy__quant__op.html">gpu::xetla::group::epilogue_policy_quant_op</a>&lt; tile_op_t_, quant_op_t_, arch_tag_ &gt;::arch_tag = arch_tag_</td>
+          <td class="memname">constexpr <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> <a class="el" href="structgpu_1_1xetla_1_1group_1_1epilogue__policy__quant__op.html">gpu::xetla::group::epilogue_policy_quant_op</a>&lt; dequant_op_t_, tile_op_t_, quant_op_t_, arch_tag_, dtype_dequant_ &gt;::arch_tag = arch_tag_</td>
         </tr>
       </table>
   </td>

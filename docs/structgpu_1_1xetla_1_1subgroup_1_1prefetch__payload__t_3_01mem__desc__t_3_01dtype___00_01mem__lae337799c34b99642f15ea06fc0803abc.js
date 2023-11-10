@@ -1,0 +1,16 @@
+var structgpu_1_1xetla_1_1subgroup_1_1prefetch__payload__t_3_01mem__desc__t_3_01dtype___00_01mem__lae337799c34b99642f15ea06fc0803abc =
+[
+    [ "dtype", "structgpu_1_1xetla_1_1subgroup_1_1prefetch__payload__t_3_01mem__desc__t_3_01dtype___00_01mem__lae337799c34b99642f15ea06fc0803abc.html#a6e28ce002ffaa11584114404cbbca7c3", null ],
+    [ "mem_desc_t", "structgpu_1_1xetla_1_1subgroup_1_1prefetch__payload__t_3_01mem__desc__t_3_01dtype___00_01mem__lae337799c34b99642f15ea06fc0803abc.html#a5cde9e7d13f3ce8bf49f4b789c12431d", null ],
+    [ "prefetch_dtype", "structgpu_1_1xetla_1_1subgroup_1_1prefetch__payload__t_3_01mem__desc__t_3_01dtype___00_01mem__lae337799c34b99642f15ea06fc0803abc.html#a80a1555a0b5dafb56e1feae97fa04683", null ],
+    [ "tile_desc", "structgpu_1_1xetla_1_1subgroup_1_1prefetch__payload__t_3_01mem__desc__t_3_01dtype___00_01mem__lae337799c34b99642f15ea06fc0803abc.html#abdfa2fcb71cf16a29e6a42d1c88fb9a9", null ],
+    [ "prefetch_payload_t", "structgpu_1_1xetla_1_1subgroup_1_1prefetch__payload__t_3_01mem__desc__t_3_01dtype___00_01mem__lae337799c34b99642f15ea06fc0803abc.html#a9f8f614f707f3d977975febe43d3705c", null ],
+    [ "prefetch_payload_t", "structgpu_1_1xetla_1_1subgroup_1_1prefetch__payload__t_3_01mem__desc__t_3_01dtype___00_01mem__lae337799c34b99642f15ea06fc0803abc.html#ab5566c6e04101f018421d5fa0faa009e", null ],
+    [ "prefetch_payload_t", "structgpu_1_1xetla_1_1subgroup_1_1prefetch__payload__t_3_01mem__desc__t_3_01dtype___00_01mem__lae337799c34b99642f15ea06fc0803abc.html#adf6ad95d9d7eac84eeb2cafe8f0d7091", null ],
+    [ "prefetch_payload_t", "structgpu_1_1xetla_1_1subgroup_1_1prefetch__payload__t_3_01mem__desc__t_3_01dtype___00_01mem__lae337799c34b99642f15ea06fc0803abc.html#ab1df6b5faf25bc0d71d6ad58f1caa8c7", null ],
+    [ "operator=", "structgpu_1_1xetla_1_1subgroup_1_1prefetch__payload__t_3_01mem__desc__t_3_01dtype___00_01mem__lae337799c34b99642f15ea06fc0803abc.html#ad2e603cb88380521024d0238424dd7a7", null ],
+    [ "update_tdesc", "structgpu_1_1xetla_1_1subgroup_1_1prefetch__payload__t_3_01mem__desc__t_3_01dtype___00_01mem__lae337799c34b99642f15ea06fc0803abc.html#a70c8570eaa7ea2c63acaa87b7eb90492", null ],
+    [ "base_offset", "structgpu_1_1xetla_1_1subgroup_1_1prefetch__payload__t_3_01mem__desc__t_3_01dtype___00_01mem__lae337799c34b99642f15ea06fc0803abc.html#a3f8d5aae84d836d6e3ef47a4f1687553", null ],
+    [ "base_ptr", "structgpu_1_1xetla_1_1subgroup_1_1prefetch__payload__t_3_01mem__desc__t_3_01dtype___00_01mem__lae337799c34b99642f15ea06fc0803abc.html#ae371f167792ab126f1efc431363caab8", null ],
+    [ "pitch_in_bytes", "structgpu_1_1xetla_1_1subgroup_1_1prefetch__payload__t_3_01mem__desc__t_3_01dtype___00_01mem__lae337799c34b99642f15ea06fc0803abc.html#a27a116f4631fcc5688a3531ebb5cabdc", null ]
+];

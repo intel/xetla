@@ -5,5 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="gpu::xetla::uint_type\< T \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1uint__type.html",tooltip="Get the unit representation of type T."];
+  Node0 [id="Node000000",label="gpu::xetla::subgroup\l::cooperative_load_helper\l_t\< matAcc_t_, mem_layout\l::col_major, num_cooperative\l_wg, arch_tag_, std::enable\l_if_t\< gpu_arch::Xe==arch_tag_ \> \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classgpu_1_1xetla_1_1subgroup_1_1cooperative__load__helper__t_3_01matAcc__t___00_01mem__layout_1e5d160d1807e4112d0d7ee81d27ce422.html",tooltip="Workgroups to do the cooperative load. Specialized for and row_major and Xe architecture."];
 }

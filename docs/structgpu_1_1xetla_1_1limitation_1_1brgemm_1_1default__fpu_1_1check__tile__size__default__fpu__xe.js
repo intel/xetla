@@ -1,4 +1,0 @@
-var structgpu_1_1xetla_1_1limitation_1_1brgemm_1_1default__fpu_1_1check__tile__size__default__fpu__xe =
-[
-    [ "register_attr", "structgpu_1_1xetla_1_1limitation_1_1brgemm_1_1default__fpu_1_1check__tile__size__default__fpu__xe.html#a1093c2635b160a48b770571ea9df252c", null ]
-];

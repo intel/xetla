@@ -1,0 +1,17 @@
+var structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__default_3_01group__swizfba6d51ee66d93e1d7cdebfe7c9ba60e =
+[
+    [ "arguments_t", "structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__default_3_01group__swizfba6d51ee66d93e1d7cdebfe7c9ba60e.html#aef1c76a66fee0ce988423daea2069daa", null ],
+    [ "arguments_t", "structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__default_3_01group__swizfba6d51ee66d93e1d7cdebfe7c9ba60e.html#a47a3c62b21927b80bce1af1d9d8607bc", null ],
+    [ "arguments_t", "structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__default_3_01group__swizfba6d51ee66d93e1d7cdebfe7c9ba60e.html#a7b8690a748689bdcf759b449cff4edeb", null ],
+    [ "operator=", "structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__default_3_01group__swizfba6d51ee66d93e1d7cdebfe7c9ba60e.html#a6d2c5d3cacaa0aa06f44a0cf34d2d4c5", null ],
+    [ "epilogue_args", "structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__default_3_01group__swizfba6d51ee66d93e1d7cdebfe7c9ba60e.html#ab4d6d453c7b88fc963cb850640c7d7cb", null ],
+    [ "matA_base", "structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__default_3_01group__swizfba6d51ee66d93e1d7cdebfe7c9ba60e.html#a749bbc5edcf56f84bb31468d89b5d16c", null ],
+    [ "matA_ld", "structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__default_3_01group__swizfba6d51ee66d93e1d7cdebfe7c9ba60e.html#a5eebf43129275be833232cbe5d74d4e9", null ],
+    [ "matB_base", "structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__default_3_01group__swizfba6d51ee66d93e1d7cdebfe7c9ba60e.html#a7d8e00936c4aaabecbf01756286bd202", null ],
+    [ "matB_ld", "structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__default_3_01group__swizfba6d51ee66d93e1d7cdebfe7c9ba60e.html#a699208693da4746984d21f0db7d42034", null ],
+    [ "matC_base", "structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__default_3_01group__swizfba6d51ee66d93e1d7cdebfe7c9ba60e.html#a995e84e39759aba6dd31715efacb8548", null ],
+    [ "matC_ld", "structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__default_3_01group__swizfba6d51ee66d93e1d7cdebfe7c9ba60e.html#ade87a375a27d4759a05efd742b4a6ae0", null ],
+    [ "matrix_k", "structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__default_3_01group__swizfba6d51ee66d93e1d7cdebfe7c9ba60e.html#a9f77acd18e41d398fab03bb26517bd37", null ],
+    [ "matrix_m", "structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__default_3_01group__swizfba6d51ee66d93e1d7cdebfe7c9ba60e.html#adf81ab5226702269faa36c2ce0c171a3", null ],
+    [ "matrix_n", "structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__default_3_01group__swizfba6d51ee66d93e1d7cdebfe7c9ba60e.html#a8248275fb4a14e810b3e7576cdfe225b", null ]
+];

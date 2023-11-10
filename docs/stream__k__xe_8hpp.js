@@ -1,0 +1,5 @@
+var stream__k__xe_8hpp =
+[
+    [ "gpu::xetla::kernel::gemm_universal_t< dispatch_policy_stream_k< gpu_arch::Xe >, gemm_t_, epilogue_t_ >::arguments_t", "structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__stream__k_3_01gpu__arch44ec53fb5fda79c5dea48a2afb335e8b.html", "structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__stream__k_3_01gpu__arch44ec53fb5fda79c5dea48a2afb335e8b" ],
+    [ "gpu::xetla::kernel::gemm_universal_t< dispatch_policy_stream_k< gpu_arch::Xe >, gemm_t_, epilogue_t_ >::TileWorkDesc", "structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__stream__k_3_01gpu__arch421c1a117893f171c99088210ef8b82b.html", "structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__stream__k_3_01gpu__arch421c1a117893f171c99088210ef8b82b" ]
+];

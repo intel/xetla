@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.5</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.6</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -148,7 +148,7 @@ Public Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:aac1496ccedafc82265302037f85a1fc1"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mac02497fd2f41eaf843c8266c909e0dbe.html#aac1496ccedafc82265302037f85a1fc1">arch_tag</a> = arch_tag_</td></tr>
+<tr class="memitem:aac1496ccedafc82265302037f85a1fc1"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mac02497fd2f41eaf843c8266c909e0dbe.html#aac1496ccedafc82265302037f85a1fc1">arch_tag</a> = arch_tag_</td></tr>
 <tr class="separator:aac1496ccedafc82265302037f85a1fc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a856f24566de1eaae3df1a70234be8bea"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mac02497fd2f41eaf843c8266c909e0dbe.html#a856f24566de1eaae3df1a70234be8bea">coop_num_y</a></td></tr>
 <tr class="separator:a856f24566de1eaae3df1a70234be8bea"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -170,7 +170,7 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:a52ac41646ff53de7d56250ee0f50435a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename tile_shape_, typename matAcc_t, uint32_t num_cooperative_wg, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt;<br />
+<div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename tile_shape_, typename matAcc_t, uint32_t num_cooperative_wg, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt;<br />
 class gpu::xetla::group::cooperative_reduce_t&lt; reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, arch_tag_, std::enable_if_t&lt;(arch_tag_==gpu_arch::Xe)&gt; &gt;</div><p>Workgroups to do the cooperative reduction. Specialized for Xe architecture. </p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a2c6548a8d45e2d57d1a0a02c84114f43" name="a2c6548a8d45e2d57d1a0a02c84114f43"></a>
@@ -179,10 +179,10 @@ class gpu::xetla::group::cooperative_reduce_t&lt; reduce_kind, tile_shape_, matA
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename tile_shape_ , typename matAcc_t , uint32_t num_cooperative_wg, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename tile_shape_ , typename matAcc_t , uint32_t num_cooperative_wg, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t.html">gpu::xetla::group::cooperative_reduce_t</a>&lt; reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::dtype =  typename matAcc_t::dtype</td>
+          <td class="memname">using <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t.html">gpu::xetla::group::cooperative_reduce_t</a>&lt; reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::dtype =  typename matAcc_t::dtype</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -195,10 +195,10 @@ template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a725172
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename tile_shape_ , typename matAcc_t , uint32_t num_cooperative_wg, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename tile_shape_ , typename matAcc_t , uint32_t num_cooperative_wg, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t.html">gpu::xetla::group::cooperative_reduce_t</a>&lt; reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::mat_slice_t =  <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__t.html">subgroup::tile_t</a>&lt;<a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mac02497fd2f41eaf843c8266c909e0dbe.html#a2c6548a8d45e2d57d1a0a02c84114f43">dtype</a>, <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__desc__t.html">local_ld_tile_desc_t</a>&gt;</td>
+          <td class="memname">using <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t.html">gpu::xetla::group::cooperative_reduce_t</a>&lt; reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::mat_slice_t =  <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__t.html">subgroup::tile_t</a>&lt;<a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mac02497fd2f41eaf843c8266c909e0dbe.html#a2c6548a8d45e2d57d1a0a02c84114f43">dtype</a>, <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__desc__t.html">local_ld_tile_desc_t</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -211,10 +211,10 @@ template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a725172
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename tile_shape_ , typename matAcc_t , uint32_t num_cooperative_wg, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename tile_shape_ , typename matAcc_t , uint32_t num_cooperative_wg, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t.html">gpu::xetla::group::cooperative_reduce_t</a>&lt; reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::tile_shape =  tile_shape_</td>
+          <td class="memname">using <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t.html">gpu::xetla::group::cooperative_reduce_t</a>&lt; reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::tile_shape =  tile_shape_</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -228,13 +228,13 @@ template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a725172
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename tile_shape_ , typename matAcc_t , uint32_t num_cooperative_wg, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename tile_shape_ , typename matAcc_t , uint32_t num_cooperative_wg, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t.html">gpu::xetla::group::cooperative_reduce_t</a>&lt; reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::cooperative_reduce_t </td>
+          <td class="memname"><a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t.html">gpu::xetla::group::cooperative_reduce_t</a>&lt; reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::cooperative_reduce_t </td>
           <td>(</td>
           <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>coop_id_</em></td><td>)</td>
@@ -257,13 +257,13 @@ template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a725172
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename tile_shape_ , typename matAcc_t , uint32_t num_cooperative_wg, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename tile_shape_ , typename matAcc_t , uint32_t num_cooperative_wg, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t.html">gpu::xetla::group::cooperative_reduce_t</a>&lt; reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::is_valid_post_process_wg </td>
+          <td class="memname">bool <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t.html">gpu::xetla::group::cooperative_reduce_t</a>&lt; reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::is_valid_post_process_wg </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -284,13 +284,13 @@ template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a725172
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename tile_shape_ , typename matAcc_t , uint32_t num_cooperative_wg, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename tile_shape_ , typename matAcc_t , uint32_t num_cooperative_wg, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="group__xetla__core.html#gafb2a0442e367d71b79a2f932d0d39c8b">KERNEL_FUNC</a> void <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t.html">gpu::xetla::group::cooperative_reduce_t</a>&lt; reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::operator() </td>
+          <td class="memname"><a class="el" href="group__xetla__core.html#gafb2a0442e367d71b79a2f932d0d39c8b">KERNEL_FUNC</a> void <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t.html">gpu::xetla::group::cooperative_reduce_t</a>&lt; reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::operator() </td>
           <td>(</td>
           <td class="paramtype">work_group_t &amp;&#160;</td>
           <td class="paramname"><em>g</em>, </td>
@@ -354,13 +354,13 @@ template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a725172
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename tile_shape_ , typename matAcc_t , uint32_t num_cooperative_wg, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename tile_shape_ , typename matAcc_t , uint32_t num_cooperative_wg, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t.html">gpu::xetla::group::cooperative_reduce_t</a>&lt; reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::arch_tag = arch_tag_</td>
+          <td class="memname">constexpr <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t.html">gpu::xetla::group::cooperative_reduce_t</a>&lt; reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::arch_tag = arch_tag_</td>
         </tr>
       </table>
   </td>
@@ -378,13 +378,13 @@ template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a725172
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename tile_shape_ , typename matAcc_t , uint32_t num_cooperative_wg, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename tile_shape_ , typename matAcc_t , uint32_t num_cooperative_wg, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr uint32_t <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t.html">gpu::xetla::group::cooperative_reduce_t</a>&lt; reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::barrier_count = work_group_size</td>
+          <td class="memname">constexpr uint32_t <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t.html">gpu::xetla::group::cooperative_reduce_t</a>&lt; reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::barrier_count = work_group_size</td>
         </tr>
       </table>
   </td>
@@ -402,10 +402,10 @@ template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a725172
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename tile_shape_ , typename matAcc_t , uint32_t num_cooperative_wg, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename tile_shape_ , typename matAcc_t , uint32_t num_cooperative_wg, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t.html">gpu::xetla::group::cooperative_reduce_t</a>&lt; reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::coop_id</td>
+          <td class="memname">uint32_t <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t.html">gpu::xetla::group::cooperative_reduce_t</a>&lt; reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::coop_id</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -418,10 +418,10 @@ template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a725172
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename tile_shape_ , typename matAcc_t , uint32_t num_cooperative_wg, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename tile_shape_ , typename matAcc_t , uint32_t num_cooperative_wg, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t.html">gpu::xetla::group::cooperative_reduce_t</a>&lt; reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::coop_id_x</td>
+          <td class="memname">uint32_t <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t.html">gpu::xetla::group::cooperative_reduce_t</a>&lt; reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::coop_id_x</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -434,10 +434,10 @@ template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a725172
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename tile_shape_ , typename matAcc_t , uint32_t num_cooperative_wg, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename tile_shape_ , typename matAcc_t , uint32_t num_cooperative_wg, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t.html">gpu::xetla::group::cooperative_reduce_t</a>&lt; reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::coop_id_y</td>
+          <td class="memname">uint32_t <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t.html">gpu::xetla::group::cooperative_reduce_t</a>&lt; reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::coop_id_y</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -450,13 +450,13 @@ template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a725172
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename tile_shape_ , typename matAcc_t , uint32_t num_cooperative_wg, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename tile_shape_ , typename matAcc_t , uint32_t num_cooperative_wg, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr uint32_t <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t.html">gpu::xetla::group::cooperative_reduce_t</a>&lt; reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::coop_num_x = sg_tile_n / <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mac02497fd2f41eaf843c8266c909e0dbe.html#a1d65d6079f0fb353f10dd96b27775ea0">tile_size_x</a></td>
+          <td class="memname">constexpr uint32_t <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t.html">gpu::xetla::group::cooperative_reduce_t</a>&lt; reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::coop_num_x = sg_tile_n / <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mac02497fd2f41eaf843c8266c909e0dbe.html#a1d65d6079f0fb353f10dd96b27775ea0">tile_size_x</a></td>
         </tr>
       </table>
   </td>
@@ -474,13 +474,13 @@ template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a725172
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename tile_shape_ , typename matAcc_t , uint32_t num_cooperative_wg, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename tile_shape_ , typename matAcc_t , uint32_t num_cooperative_wg, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr uint32_t <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t.html">gpu::xetla::group::cooperative_reduce_t</a>&lt; reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::coop_num_y</td>
+          <td class="memname">constexpr uint32_t <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t.html">gpu::xetla::group::cooperative_reduce_t</a>&lt; reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::coop_num_y</td>
         </tr>
       </table>
   </td>
@@ -501,13 +501,13 @@ template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a725172
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename tile_shape_ , typename matAcc_t , uint32_t num_cooperative_wg, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename tile_shape_ , typename matAcc_t , uint32_t num_cooperative_wg, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr uint32_t <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t.html">gpu::xetla::group::cooperative_reduce_t</a>&lt; reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::coop_remain_num_x = num_cooperative_wg / <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mac02497fd2f41eaf843c8266c909e0dbe.html#a856f24566de1eaae3df1a70234be8bea">coop_num_y</a></td>
+          <td class="memname">constexpr uint32_t <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t.html">gpu::xetla::group::cooperative_reduce_t</a>&lt; reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::coop_remain_num_x = num_cooperative_wg / <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mac02497fd2f41eaf843c8266c909e0dbe.html#a856f24566de1eaae3df1a70234be8bea">coop_num_y</a></td>
         </tr>
       </table>
   </td>
@@ -525,13 +525,13 @@ template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a725172
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename tile_shape_ , typename matAcc_t , uint32_t num_cooperative_wg, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename tile_shape_ , typename matAcc_t , uint32_t num_cooperative_wg, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr bool <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t.html">gpu::xetla::group::cooperative_reduce_t</a>&lt; reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::has_redundant_wg = (<a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mac02497fd2f41eaf843c8266c909e0dbe.html#a0f4a406e99d3651edc4ad8ab5f5dd421">coop_remain_num_x</a> * 16) &gt; sg_tile_n</td>
+          <td class="memname">constexpr bool <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t.html">gpu::xetla::group::cooperative_reduce_t</a>&lt; reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::has_redundant_wg = (<a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mac02497fd2f41eaf843c8266c909e0dbe.html#a0f4a406e99d3651edc4ad8ab5f5dd421">coop_remain_num_x</a> * 16) &gt; sg_tile_n</td>
         </tr>
       </table>
   </td>
@@ -549,13 +549,13 @@ template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a725172
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename tile_shape_ , typename matAcc_t , uint32_t num_cooperative_wg, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename tile_shape_ , typename matAcc_t , uint32_t num_cooperative_wg, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr uint32_t <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t.html">gpu::xetla::group::cooperative_reduce_t</a>&lt; reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::num_reduce_wg = <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mac02497fd2f41eaf843c8266c909e0dbe.html#ad33c05571f57a633a65cbfd15f883d36">coop_num_x</a> * <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mac02497fd2f41eaf843c8266c909e0dbe.html#a856f24566de1eaae3df1a70234be8bea">coop_num_y</a></td>
+          <td class="memname">constexpr uint32_t <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t.html">gpu::xetla::group::cooperative_reduce_t</a>&lt; reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::num_reduce_wg = <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mac02497fd2f41eaf843c8266c909e0dbe.html#ad33c05571f57a633a65cbfd15f883d36">coop_num_x</a> * <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mac02497fd2f41eaf843c8266c909e0dbe.html#a856f24566de1eaae3df1a70234be8bea">coop_num_y</a></td>
         </tr>
       </table>
   </td>
@@ -573,13 +573,13 @@ template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a725172
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename tile_shape_ , typename matAcc_t , uint32_t num_cooperative_wg, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename tile_shape_ , typename matAcc_t , uint32_t num_cooperative_wg, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr uint32_t <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t.html">gpu::xetla::group::cooperative_reduce_t</a>&lt; reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::slm_size = wg_tile_size * num_cooperative_wg</td>
+          <td class="memname">constexpr uint32_t <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t.html">gpu::xetla::group::cooperative_reduce_t</a>&lt; reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::slm_size = wg_tile_size * num_cooperative_wg</td>
         </tr>
       </table>
   </td>
@@ -597,13 +597,13 @@ template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a725172
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename tile_shape_ , typename matAcc_t , uint32_t num_cooperative_wg, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename tile_shape_ , typename matAcc_t , uint32_t num_cooperative_wg, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr uint32_t <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t.html">gpu::xetla::group::cooperative_reduce_t</a>&lt; reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::tile_size_x = <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mac02497fd2f41eaf843c8266c909e0dbe.html#ab9cd46fba0583ea81b41686cffa23b58">has_redundant_wg</a> ? 16 : sg_tile_n / <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mac02497fd2f41eaf843c8266c909e0dbe.html#a0f4a406e99d3651edc4ad8ab5f5dd421">coop_remain_num_x</a></td>
+          <td class="memname">constexpr uint32_t <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t.html">gpu::xetla::group::cooperative_reduce_t</a>&lt; reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::tile_size_x = <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mac02497fd2f41eaf843c8266c909e0dbe.html#ab9cd46fba0583ea81b41686cffa23b58">has_redundant_wg</a> ? 16 : sg_tile_n / <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mac02497fd2f41eaf843c8266c909e0dbe.html#a0f4a406e99d3651edc4ad8ab5f5dd421">coop_remain_num_x</a></td>
         </tr>
       </table>
   </td>
@@ -621,13 +621,13 @@ template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a725172
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename tile_shape_ , typename matAcc_t , uint32_t num_cooperative_wg, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;<a class="el" href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">reduce_op</a> reduce_kind, typename tile_shape_ , typename matAcc_t , uint32_t num_cooperative_wg, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr uint32_t <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t.html">gpu::xetla::group::cooperative_reduce_t</a>&lt; reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::tile_size_y = sg_tile_m / <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mac02497fd2f41eaf843c8266c909e0dbe.html#a856f24566de1eaae3df1a70234be8bea">coop_num_y</a></td>
+          <td class="memname">constexpr uint32_t <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t.html">gpu::xetla::group::cooperative_reduce_t</a>&lt; reduce_kind, tile_shape_, matAcc_t, num_cooperative_wg, arch_tag_, std::enable_if_t&lt;(arch_tag_==<a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>)&gt; &gt;::tile_size_y = sg_tile_m / <a class="el" href="classgpu_1_1xetla_1_1group_1_1cooperative__reduce__t_3_01reduce__kind_00_01tile__shape___00_01mac02497fd2f41eaf843c8266c909e0dbe.html#a856f24566de1eaae3df1a70234be8bea">coop_num_y</a></td>
         </tr>
       </table>
   </td>

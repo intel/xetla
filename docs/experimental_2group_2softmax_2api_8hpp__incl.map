@@ -1,9 +1,0 @@
-<map id="include/experimental/group/softmax/api.hpp" name="include/experimental/group/softmax/api.hpp">
-<area shape="rect" id="node1" title="C++ API." alt="" coords="119,5,274,45"/>
-<area shape="rect" id="node2" href="$experimental_2group_2softmax_2common_8hpp.html" title="C++ API." alt="" coords="121,93,272,133"/>
-<area shape="rect" id="node3" href="$experimental_2subgroup_2subgroup_8hpp.html" title="C++ API." alt="" coords="5,181,159,221"/>
-<area shape="rect" id="node5" title=" " alt="" coords="61,357,218,383"/>
-<area shape="rect" id="node6" href="$tile__shape_8hpp.html" title="C++ API." alt="" coords="236,189,379,214"/>
-<area shape="rect" id="node4" href="$tile__broadcast__op_8hpp.html" title="C++ API." alt="" coords="5,269,159,309"/>
-<area shape="rect" id="node7" title=" " alt="" coords="235,277,385,302"/>
-</map>

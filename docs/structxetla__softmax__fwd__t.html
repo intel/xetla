@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.5</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.6</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -132,17 +132,17 @@ Public Types</h2></td></tr>
 <tr class="separator:a544d18bdcd9677b0e3238b688d675377"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a655854e502e0036d5b34c30cb971b703"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structxetla__softmax__fwd__t.html#a655854e502e0036d5b34c30cb971b703">softmax_load_t</a> = <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__t.html">subgroup::tile_t</a>&lt; <a class="el" href="structxetla__softmax__fwd__t.html#a2d973d288049e757cf8019e01d3fda40">dtype_in</a>, <a class="el" href="structxetla__softmax__fwd__t.html#a544d18bdcd9677b0e3238b688d675377">softmax_tile_desc_t</a> &gt;</td></tr>
 <tr class="separator:a655854e502e0036d5b34c30cb971b703"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52ccc58be94d1bfcffd2d4b49889a412"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structxetla__softmax__fwd__t.html#a52ccc58be94d1bfcffd2d4b49889a412">softmax_load_payload_t</a> = <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t.html">subgroup::mem_payload_t</a>&lt; <a class="el" href="structxetla__softmax__fwd__t.html#a2d973d288049e757cf8019e01d3fda40">dtype_in</a>, <a class="el" href="structxetla__softmax__fwd__t.html#a544d18bdcd9677b0e3238b688d675377">softmax_tile_desc_t</a>, subgroup::msg_type_v&lt; <a class="el" href="structxetla__softmax__fwd__t.html#a544d18bdcd9677b0e3238b688d675377">softmax_tile_desc_t</a>, <a class="el" href="structxetla__softmax__fwd__t.html#acf008af9af2736b9f9c4dfa26eb6d2b4">mem_space_in</a> &gt;, mem_layout::row_major, <a class="el" href="structxetla__softmax__fwd__t.html#acf008af9af2736b9f9c4dfa26eb6d2b4">mem_space_in</a>, gpu_arch::Xe &gt;</td></tr>
-<tr class="separator:a52ccc58be94d1bfcffd2d4b49889a412"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89e44f08a27398923381215d185c7613"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structxetla__softmax__fwd__t.html#a89e44f08a27398923381215d185c7613">softmax_load_payload_t</a> = <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t.html">subgroup::mem_payload_t</a>&lt; <a class="el" href="structgpu_1_1xetla_1_1mem__desc__t.html">mem_desc_t</a>&lt; <a class="el" href="structxetla__softmax__fwd__t.html#a2d973d288049e757cf8019e01d3fda40">dtype_in</a>, mem_layout::row_major, <a class="el" href="structxetla__softmax__fwd__t.html#acf008af9af2736b9f9c4dfa26eb6d2b4">mem_space_in</a> &gt;, <a class="el" href="structxetla__softmax__fwd__t.html#a544d18bdcd9677b0e3238b688d675377">softmax_tile_desc_t</a>, subgroup::msg_type_v&lt; <a class="el" href="structxetla__softmax__fwd__t.html#a544d18bdcd9677b0e3238b688d675377">softmax_tile_desc_t</a>, <a class="el" href="structxetla__softmax__fwd__t.html#acf008af9af2736b9f9c4dfa26eb6d2b4">mem_space_in</a> &gt;, gpu_arch::Xe &gt;</td></tr>
+<tr class="separator:a89e44f08a27398923381215d185c7613"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1cab85f9eafca1685afeea65bf8df76"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structxetla__softmax__fwd__t.html#ae1cab85f9eafca1685afeea65bf8df76">softmax_store_t</a> = <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__t.html">subgroup::tile_t</a>&lt; <a class="el" href="structxetla__softmax__fwd__t.html#a018d03cff093a8c432dffa29fbd7004e">dtype_out</a>, <a class="el" href="structxetla__softmax__fwd__t.html#a544d18bdcd9677b0e3238b688d675377">softmax_tile_desc_t</a> &gt;</td></tr>
 <tr class="separator:ae1cab85f9eafca1685afeea65bf8df76"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99e5d3f91c0143f97d31d8cec09e4a4d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structxetla__softmax__fwd__t.html#a99e5d3f91c0143f97d31d8cec09e4a4d">softmax_store_payload_t</a> = <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t.html">subgroup::mem_payload_t</a>&lt; <a class="el" href="structxetla__softmax__fwd__t.html#a018d03cff093a8c432dffa29fbd7004e">dtype_out</a>, <a class="el" href="structxetla__softmax__fwd__t.html#a544d18bdcd9677b0e3238b688d675377">softmax_tile_desc_t</a>, subgroup::msg_type_v&lt; <a class="el" href="structxetla__softmax__fwd__t.html#a544d18bdcd9677b0e3238b688d675377">softmax_tile_desc_t</a>, <a class="el" href="structxetla__softmax__fwd__t.html#a3f5f42f50a0bc0a38d6b69b92525cc73">mem_space_out</a> &gt;, mem_layout::row_major, <a class="el" href="structxetla__softmax__fwd__t.html#a3f5f42f50a0bc0a38d6b69b92525cc73">mem_space_out</a>, gpu_arch::Xe &gt;</td></tr>
-<tr class="separator:a99e5d3f91c0143f97d31d8cec09e4a4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02c42fbe7b26bb1ba7531e247ecdc649"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structxetla__softmax__fwd__t.html#a02c42fbe7b26bb1ba7531e247ecdc649">softmax_store_payload_t</a> = <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t.html">subgroup::mem_payload_t</a>&lt; <a class="el" href="structgpu_1_1xetla_1_1mem__desc__t.html">mem_desc_t</a>&lt; <a class="el" href="structxetla__softmax__fwd__t.html#a018d03cff093a8c432dffa29fbd7004e">dtype_out</a>, mem_layout::row_major, <a class="el" href="structxetla__softmax__fwd__t.html#a3f5f42f50a0bc0a38d6b69b92525cc73">mem_space_out</a> &gt;, <a class="el" href="structxetla__softmax__fwd__t.html#a544d18bdcd9677b0e3238b688d675377">softmax_tile_desc_t</a>, subgroup::msg_type_v&lt; <a class="el" href="structxetla__softmax__fwd__t.html#a544d18bdcd9677b0e3238b688d675377">softmax_tile_desc_t</a>, <a class="el" href="structxetla__softmax__fwd__t.html#a3f5f42f50a0bc0a38d6b69b92525cc73">mem_space_out</a> &gt;, gpu_arch::Xe &gt;</td></tr>
+<tr class="separator:a02c42fbe7b26bb1ba7531e247ecdc649"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a06a3557b9985bd27968fc594bbf36951"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core.html#gafb2a0442e367d71b79a2f932d0d39c8b">KERNEL_FUNC</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structxetla__softmax__fwd__t.html#a06a3557b9985bd27968fc594bbf36951">operator()</a> (<a class="el" href="classgpu_1_1xetla_1_1xetla__exec__item.html">xetla_exec_item</a>&lt; 3 &gt; &amp;ei, <a class="el" href="structxetla__softmax__fwd__t_1_1arguments__t.html">arguments_t</a> *args)</td></tr>
-<tr class="separator:a06a3557b9985bd27968fc594bbf36951"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8144e45939a3987c6c597ec5bb767147"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core.html#gafb2a0442e367d71b79a2f932d0d39c8b">KERNEL_FUNC</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structxetla__softmax__fwd__t.html#a8144e45939a3987c6c597ec5bb767147">operator()</a> (sycl::nd_item&lt; 3 &gt; &amp;item, <a class="el" href="structxetla__softmax__fwd__t_1_1arguments__t.html">arguments_t</a> *args)</td></tr>
+<tr class="separator:a8144e45939a3987c6c597ec5bb767147"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -204,8 +204,8 @@ template&lt;typename dtype_in_ , typename dtype_out_ , typename tile_shape_ , me
 
 </div>
 </div>
-<a id="a52ccc58be94d1bfcffd2d4b49889a412" name="a52ccc58be94d1bfcffd2d4b49889a412"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52ccc58be94d1bfcffd2d4b49889a412">&#9670;&#160;</a></span>softmax_load_payload_t</h2>
+<a id="a89e44f08a27398923381215d185c7613" name="a89e44f08a27398923381215d185c7613"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89e44f08a27398923381215d185c7613">&#9670;&#160;</a></span>softmax_load_payload_t</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -213,7 +213,7 @@ template&lt;typename dtype_in_ , typename dtype_out_ , typename tile_shape_ , me
 template&lt;typename dtype_in_ , typename dtype_out_ , typename tile_shape_ , mem_space mem_space_in_, mem_space mem_space_out_, uint32_t SIMD_, uint32_t thread_num_, uint32_t softmax_size_&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structxetla__softmax__fwd__t.html">xetla_softmax_fwd_t</a>&lt; dtype_in_, dtype_out_, tile_shape_, mem_space_in_, mem_space_out_, SIMD_, thread_num_, softmax_size_ &gt;::softmax_load_payload_t =  <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t.html">subgroup::mem_payload_t</a>&lt;<a class="el" href="structxetla__softmax__fwd__t.html#a2d973d288049e757cf8019e01d3fda40">dtype_in</a>, <a class="el" href="structxetla__softmax__fwd__t.html#a544d18bdcd9677b0e3238b688d675377">softmax_tile_desc_t</a>, subgroup::msg_type_v&lt;<a class="el" href="structxetla__softmax__fwd__t.html#a544d18bdcd9677b0e3238b688d675377">softmax_tile_desc_t</a>, <a class="el" href="structxetla__softmax__fwd__t.html#acf008af9af2736b9f9c4dfa26eb6d2b4">mem_space_in</a>&gt;, mem_layout::row_major, <a class="el" href="structxetla__softmax__fwd__t.html#acf008af9af2736b9f9c4dfa26eb6d2b4">mem_space_in</a>, gpu_arch::Xe&gt;</td>
+          <td class="memname">using <a class="el" href="structxetla__softmax__fwd__t.html">xetla_softmax_fwd_t</a>&lt; dtype_in_, dtype_out_, tile_shape_, mem_space_in_, mem_space_out_, SIMD_, thread_num_, softmax_size_ &gt;::softmax_load_payload_t =  <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t.html">subgroup::mem_payload_t</a>&lt; <a class="el" href="structgpu_1_1xetla_1_1mem__desc__t.html">mem_desc_t</a>&lt;<a class="el" href="structxetla__softmax__fwd__t.html#a2d973d288049e757cf8019e01d3fda40">dtype_in</a>, mem_layout::row_major, <a class="el" href="structxetla__softmax__fwd__t.html#acf008af9af2736b9f9c4dfa26eb6d2b4">mem_space_in</a>&gt;, <a class="el" href="structxetla__softmax__fwd__t.html#a544d18bdcd9677b0e3238b688d675377">softmax_tile_desc_t</a>, subgroup::msg_type_v&lt;<a class="el" href="structxetla__softmax__fwd__t.html#a544d18bdcd9677b0e3238b688d675377">softmax_tile_desc_t</a>, <a class="el" href="structxetla__softmax__fwd__t.html#acf008af9af2736b9f9c4dfa26eb6d2b4">mem_space_in</a>&gt;, gpu_arch::Xe&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -236,8 +236,8 @@ template&lt;typename dtype_in_ , typename dtype_out_ , typename tile_shape_ , me
 
 </div>
 </div>
-<a id="a99e5d3f91c0143f97d31d8cec09e4a4d" name="a99e5d3f91c0143f97d31d8cec09e4a4d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99e5d3f91c0143f97d31d8cec09e4a4d">&#9670;&#160;</a></span>softmax_store_payload_t</h2>
+<a id="a02c42fbe7b26bb1ba7531e247ecdc649" name="a02c42fbe7b26bb1ba7531e247ecdc649"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02c42fbe7b26bb1ba7531e247ecdc649">&#9670;&#160;</a></span>softmax_store_payload_t</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -245,7 +245,7 @@ template&lt;typename dtype_in_ , typename dtype_out_ , typename tile_shape_ , me
 template&lt;typename dtype_in_ , typename dtype_out_ , typename tile_shape_ , mem_space mem_space_in_, mem_space mem_space_out_, uint32_t SIMD_, uint32_t thread_num_, uint32_t softmax_size_&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structxetla__softmax__fwd__t.html">xetla_softmax_fwd_t</a>&lt; dtype_in_, dtype_out_, tile_shape_, mem_space_in_, mem_space_out_, SIMD_, thread_num_, softmax_size_ &gt;::softmax_store_payload_t =  <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t.html">subgroup::mem_payload_t</a>&lt;<a class="el" href="structxetla__softmax__fwd__t.html#a018d03cff093a8c432dffa29fbd7004e">dtype_out</a>, <a class="el" href="structxetla__softmax__fwd__t.html#a544d18bdcd9677b0e3238b688d675377">softmax_tile_desc_t</a>, subgroup::msg_type_v&lt;<a class="el" href="structxetla__softmax__fwd__t.html#a544d18bdcd9677b0e3238b688d675377">softmax_tile_desc_t</a>, <a class="el" href="structxetla__softmax__fwd__t.html#a3f5f42f50a0bc0a38d6b69b92525cc73">mem_space_out</a>&gt;, mem_layout::row_major, <a class="el" href="structxetla__softmax__fwd__t.html#a3f5f42f50a0bc0a38d6b69b92525cc73">mem_space_out</a>, gpu_arch::Xe&gt;</td>
+          <td class="memname">using <a class="el" href="structxetla__softmax__fwd__t.html">xetla_softmax_fwd_t</a>&lt; dtype_in_, dtype_out_, tile_shape_, mem_space_in_, mem_space_out_, SIMD_, thread_num_, softmax_size_ &gt;::softmax_store_payload_t =  <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t.html">subgroup::mem_payload_t</a>&lt; <a class="el" href="structgpu_1_1xetla_1_1mem__desc__t.html">mem_desc_t</a>&lt;<a class="el" href="structxetla__softmax__fwd__t.html#a018d03cff093a8c432dffa29fbd7004e">dtype_out</a>, mem_layout::row_major, <a class="el" href="structxetla__softmax__fwd__t.html#a3f5f42f50a0bc0a38d6b69b92525cc73">mem_space_out</a>&gt;, <a class="el" href="structxetla__softmax__fwd__t.html#a544d18bdcd9677b0e3238b688d675377">softmax_tile_desc_t</a>, subgroup::msg_type_v&lt;<a class="el" href="structxetla__softmax__fwd__t.html#a544d18bdcd9677b0e3238b688d675377">softmax_tile_desc_t</a>, <a class="el" href="structxetla__softmax__fwd__t.html#a3f5f42f50a0bc0a38d6b69b92525cc73">mem_space_out</a>&gt;, gpu_arch::Xe&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -301,8 +301,8 @@ template&lt;typename dtype_in_ , typename dtype_out_ , typename tile_shape_ , me
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a06a3557b9985bd27968fc594bbf36951" name="a06a3557b9985bd27968fc594bbf36951"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a06a3557b9985bd27968fc594bbf36951">&#9670;&#160;</a></span>operator()()</h2>
+<a id="a8144e45939a3987c6c597ec5bb767147" name="a8144e45939a3987c6c597ec5bb767147"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8144e45939a3987c6c597ec5bb767147">&#9670;&#160;</a></span>operator()()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -315,8 +315,8 @@ template&lt;typename dtype_in_ , typename dtype_out_ , typename tile_shape_ , <a
         <tr>
           <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core.html#gafb2a0442e367d71b79a2f932d0d39c8b">KERNEL_FUNC</a> void <a class="el" href="structxetla__softmax__fwd__t.html">xetla_softmax_fwd_t</a>&lt; dtype_in_, dtype_out_, tile_shape_, mem_space_in_, mem_space_out_, SIMD_, thread_num_, softmax_size_ &gt;::operator() </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classgpu_1_1xetla_1_1xetla__exec__item.html">xetla_exec_item</a>&lt; 3 &gt; &amp;&#160;</td>
-          <td class="paramname"><em>ei</em>, </td>
+          <td class="paramtype">sycl::nd_item&lt; 3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>item</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

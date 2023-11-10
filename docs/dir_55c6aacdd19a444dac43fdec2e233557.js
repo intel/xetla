@@ -1,6 +1,6 @@
 var dir_55c6aacdd19a444dac43fdec2e233557 =
 [
-    [ "arch_config.hpp", "arch__config_8hpp.html", "arch__config_8hpp" ],
+    [ "arch_config.hpp", "arch__config_8hpp.html", null ],
     [ "barrier.hpp", "barrier_8hpp.html", "barrier_8hpp" ],
     [ "base_consts.hpp", "base__consts_8hpp.html", null ],
     [ "base_ops.hpp", "base__ops_8hpp.html", "base__ops_8hpp" ],

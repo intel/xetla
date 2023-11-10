@@ -5,5 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="gpu::xetla::subgroup\l::check_store\< gpu_arch\l::Xe, dtype, mem_dtype\l \>::local_scatter_vnni_col\l\< tile_bytes, min_store_bytes,\l block_bytes, num_channel_x,\l num_channel \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1subgroup_1_1check__store_3_01gpu__arch_1_1Xe_00_01dtype_00_01mem__dtype_01_4_1_1local__scatter__vnni__col.html",tooltip=" "];
+  Node0 [id="Node000000",label="gpu::xetla::kernel\l::xetla_data_transformer\l\< dtype_in_, dtype_out\l_, dtype_compute_, data\l_transformer_attr_, mem_layout\l_in_, need_fp8_op, gpu_arch::\lXe \>::get_barrier_count",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_015454549f3796976cb10fe3722d61088d.html",tooltip=" "];
 }

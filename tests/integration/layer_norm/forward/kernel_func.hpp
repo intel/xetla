@@ -22,11 +22,11 @@ using namespace gpu::xetla;
 
 template <typename dtype_x, typename dtype_y, typename dtype_weight,
         typename dtype_acc, int wg_n, int wg_m, int sg_n, int sg_m,
-        int wg_num_m, int wg_num_n, ln_fwd_fused_kind fused_op_kind,
-        bool store_for_bwd>
+        int chunk_size, int wg_num_m, int wg_num_n,
+        ln_fwd_fused_kind fused_op_kind, bool store_for_bwd>
 struct ln_fwd_func_t {
     using layer_norm_attr = gpu::xetla::kernel::layer_norm_attr_t<wg_n, wg_m,
-            sg_n, sg_m, wg_num_m, wg_num_n>;
+            sg_n, sg_m, wg_num_m, wg_num_n, chunk_size>;
     using ln_fused_op = gpu::xetla::group::ln_fwd_fused_op_t<fused_op_kind,
             dtype_x, dtype_x, dtype_acc, layer_norm_attr, gpu_arch::Xe>;
     using layer_norm_fwd = gpu::xetla::kernel::layer_norm_fwd_t<dtype_x,
@@ -37,7 +37,7 @@ struct ln_fwd_func_t {
     static constexpr uint32_t barrier_count
             = layer_norm_fwd::get_barrier_count::count;
 
-    static inline void call(xetla_exec_item<3> &ei, dtype_x *x_in,
+    static inline void call(sycl::nd_item<3> &item, dtype_x *x_in,
             dtype_y *y_out, int matrix_m, int matrix_n,
             dtype_weight *buffer_gamma, dtype_weight *buffer_beta,
             dtype_acc *buffer_rs, dtype_acc *buffer_mu, int mat_ld, int mask_ld,
@@ -69,6 +69,6 @@ struct ln_fwd_func_t {
         ln_fused_args.dropout_scale = drop_out_scale;
         ln_fused_args.bias_dropout_res_ptr = res_dropout_res_out;
 
-        layer_norm_fwd::call(ei, &args, 0, 0, &ln_fused_args);
+        layer_norm_fwd::call(item, &args, 0, 0, &ln_fused_args);
     }
 };

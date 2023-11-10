@@ -5,5 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="gpu::xetla::group::\lpre_processing_default\l_t\< tile_shape, arch_tag,\l enable \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1group_1_1pre__processing__default__t.html",tooltip="Gemm default pre_processing functor."];
+  Node0 [id="Node000000",label="gpu::xetla::group::\lepilogue_t\< epilogue\l_policy_quant_op\< dequant\l_op_t_, tile_op_t_, quant\l_op_t_, arch_tag_, dtype_dequant\l_ \>, tile_shape_, mem_desc_c_t\l_, std::enable_if_t\<(arch_tag_\l==gpu_arch::Xe)\> \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classgpu_1_1xetla_1_1group_1_1epilogue__t_3_01epilogue__policy__quant__op_3_01dequant__op__t___074b0f306937555be4c3ea6afc9383a35.html",tooltip="Is the epilogue functor specialized for epilogue_policy_quant_op and Xe architecture."];
 }

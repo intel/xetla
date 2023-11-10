@@ -5,5 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="gpu::xetla::group::\lxetla_row_reduction\l_fused_op_arguments_t\l\< dtype_in, dtype_out,\l dtype_acc \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1group_1_1xetla__row__reduction__fused__op__arguments__t.html",tooltip=" "];
+  Node0 [id="Node000000",label="gpu::xetla::group::\lgemm_t\< compute_policy\l_default_fpu\< compute\l_attr_, perf_tuning_knob\l_, arch_tag_ \>, tile_shape\l_, mem_desc_a_t_, mem_desc\l_b_t_, pre_processing_t_, std\l::enable_if_t\<(arch_tag_==gpu\l_arch::Xe)\> \>::arguments_t",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1group_1_1gemm__t_3_01compute__policy__default__fpu_3_01compute__attr___00_b6781e6821f4c914e56c1ef267ea713c.html",tooltip="Arguments for gemm."];
 }

@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.5</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.6</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -178,6 +178,13 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
+<tr class="memitem:aa5a2713edb27d6fed88a3c61673556f1"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu::xetla::gpu_arch</a> : uint8_t { <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu::xetla::Xe</a> = 0
+ }</td></tr>
+<tr class="separator:aa5a2713edb27d6fed88a3c61673556f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7feb5ab690922ff814907dc8a1e2cc0f"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegpu_1_1xetla.html#a7feb5ab690922ff814907dc8a1e2cc0f">gpu::xetla::grf_mode</a> : uint8_t { <a class="el" href="namespacegpu_1_1xetla.html#a7feb5ab690922ff814907dc8a1e2cc0fafea087517c26fadd409bd4b9dc642555">gpu::xetla::normal</a> = 0
+, <a class="el" href="namespacegpu_1_1xetla.html#a7feb5ab690922ff814907dc8a1e2cc0faa56a6a7ef88192cd34ebc810e2b0d878">gpu::xetla::double_grf</a> = 1
+ }</td></tr>
+<tr class="separator:a7feb5ab690922ff814907dc8a1e2cc0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4a355a1806510c5515fad16f5910561"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561">gpu::xetla::mem_layout</a> : uint8_t { <a class="el" href="namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561a641fabb8e5e7d1d0333e2c9c384f959c">gpu::xetla::row_major</a> = 0
 , <a class="el" href="namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561a55e5bef9f48cf4e944a16a034eac0704">gpu::xetla::col_major</a> = 1
  }</td></tr>
@@ -311,12 +318,6 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a7bbd70f1164d3a7251729e89fffc0609"><td class="mdescLeft">&#160;</td><td class="mdescRight">xetla reduce op  <a href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609">More...</a><br /></td></tr>
 <tr class="separator:a7bbd70f1164d3a7251729e89fffc0609"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb5a3893da6b1edf6e4222a8b9112645"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegpu_1_1xetla.html#abb5a3893da6b1edf6e4222a8b9112645">gpu::xetla::lsc_action</a> { <a class="el" href="namespacegpu_1_1xetla.html#abb5a3893da6b1edf6e4222a8b9112645a4c203b76e2847e3b6e1bdf7bf2ad63a2">gpu::xetla::prefetch</a>
-, <a class="el" href="namespacegpu_1_1xetla.html#abb5a3893da6b1edf6e4222a8b9112645aec4d1eb36b22d19728e9d1d23ca84d1c">gpu::xetla::load</a>
-, <a class="el" href="namespacegpu_1_1xetla.html#abb5a3893da6b1edf6e4222a8b9112645a8cd892b7b97ef9489ae4479d3f4ef0fc">gpu::xetla::store</a>
-, <a class="el" href="namespacegpu_1_1xetla.html#abb5a3893da6b1edf6e4222a8b9112645a23d33884d600e542d097cd3933df2ae4">gpu::xetla::atomic</a>
- }</td></tr>
-<tr class="separator:abb5a3893da6b1edf6e4222a8b9112645"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -329,9 +330,6 @@ Functions</h2></td></tr>
 <tr class="separator:a428721cf41093057d9903cb4fd664102"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8bdf9d65206f850195b0dfb058a14b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegpu_1_1xetla.html#aa8bdf9d65206f850195b0dfb058a14b0">gpu::xetla::xetla_wait</a> (uint16_t val)</td></tr>
 <tr class="separator:aa8bdf9d65206f850195b0dfb058a14b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24a643b2f929baf9f66ced1e2977907d"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="namespacegpu_1_1xetla.html#abb5a3893da6b1edf6e4222a8b9112645">lsc_action</a> Action, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L1H, <a class="el" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L2H&gt; </td></tr>
-<tr class="memitem:a24a643b2f929baf9f66ced1e2977907d"><td class="memTemplItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegpu_1_1xetla.html#a24a643b2f929baf9f66ced1e2977907d">gpu::xetla::check_lsc_cache_hint</a> ()</td></tr>
-<tr class="separator:a24a643b2f929baf9f66ced1e2977907d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>C++ API. </p>

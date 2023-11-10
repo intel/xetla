@@ -12,7 +12,10 @@ digraph "include/group"
     dir_a9a5b087e2fab9b66c5792b9867db3d8 [shape=plaintext, label="group"];
   dir_d902e7c656aca9e503ce55ef0fa4f219 [label="epilogue", fillcolor="#7a9bdc", color="grey25", style="filled", URL="dir_d902e7c656aca9e503ce55ef0fa4f219.html",tooltip=""];
   dir_3ef5fd3085d2aeb38fe9446b5445dc23 [label="gemm", fillcolor="#7a9bdc", color="grey25", style="filled", URL="dir_3ef5fd3085d2aeb38fe9446b5445dc23.html",tooltip=""];
+  dir_f0213ee72e990821806ad0a83c5a0577 [label="reduction", fillcolor="#7a9bdc", color="grey25", style="filled", URL="dir_f0213ee72e990821806ad0a83c5a0577.html",tooltip=""];
+  dir_eb6884a5172a2013168778e3748ff0cc [label="softmax", fillcolor="#7a9bdc", color="grey25", style="filled", URL="dir_eb6884a5172a2013168778e3748ff0cc.html",tooltip=""];
   }
   }
-  dir_a9a5b087e2fab9b66c5792b9867db3d8->dir_d902e7c656aca9e503ce55ef0fa4f219 [headlabel="6", labeldistance=1.5 headhref="dir_000024_000015.html" color="steelblue1" fontcolor="steelblue1"];
+  dir_a9a5b087e2fab9b66c5792b9867db3d8->dir_d902e7c656aca9e503ce55ef0fa4f219 [headlabel="6", labeldistance=1.5 headhref="dir_000025_000016.html" color="steelblue1" fontcolor="steelblue1"];
+  dir_a9a5b087e2fab9b66c5792b9867db3d8->dir_eb6884a5172a2013168778e3748ff0cc [headlabel="3", labeldistance=1.5 headhref="dir_000025_000041.html" color="steelblue1" fontcolor="steelblue1"];
 }

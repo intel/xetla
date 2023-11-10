@@ -5,5 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="gpu::xetla::subgroup\l::mem_payload_t\< dtype\l_, tile_desc_, msg_type\l::scatter, mem_layout::row\l_major, mem_space::local,\l arch_tag_, std::enable_if\l_t\<(arch_tag_==gpu_arch::Xe)\> \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_12160caa5437d2dee0f4ba40bf2822721.html",tooltip="Is to describe the shared local memory surface for scatter load/store."];
+  Node0 [id="Node000000",label="gpu::xetla::native\l_type\< int4x2 \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1native__type_3_01int4x2_01_4.html",tooltip="Set uint8_t as the native data type of int4x2."];
 }

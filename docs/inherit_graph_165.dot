@@ -5,5 +5,9 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="gpu::xetla::kernel\l::xetla_row_reduction\l_t\< dtype_in_, dtype_out\l_, dtype_acc_, reduction\l_attr_, arch_, fused_op_t_ \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1kernel_1_1xetla__row__reduction__t.html",tooltip="Is the row_reduction functor."];
+  Node0 [id="Node000000",label="gpu::xetla::impl::meta\l_impl_base",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1impl_1_1meta__impl__base.html",tooltip=" "];
+  Node0 -> Node1 [id="edge18_Node000000_Node000001",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 [id="Node000001",label="gpu::xetla::impl::meta\l_type_impl\< T \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1impl_1_1meta__type__impl.html",tooltip=" "];
+  Node0 -> Node2 [id="edge19_Node000000_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="gpu::xetla::impl::meta\l_value_impl\< T, value_ \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1impl_1_1meta__value__impl.html",tooltip=" "];
 }

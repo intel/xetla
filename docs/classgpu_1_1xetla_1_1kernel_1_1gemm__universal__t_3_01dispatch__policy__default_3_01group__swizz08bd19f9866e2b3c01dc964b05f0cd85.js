@@ -1,0 +1,5 @@
+var classgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__default_3_01group__swizz08bd19f9866e2b3c01dc964b05f0cd85 =
+[
+    [ "arguments_t", "structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__default_3_01group__swizfba6d51ee66d93e1d7cdebfe7c9ba60e.html", "structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__default_3_01group__swizfba6d51ee66d93e1d7cdebfe7c9ba60e" ],
+    [ "operator()", "classgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__default_3_01group__swizz08bd19f9866e2b3c01dc964b05f0cd85.html#ad186813995f1f7e46b8af81b58d0ba8d", null ]
+];

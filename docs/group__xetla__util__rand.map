@@ -1,4 +1,0 @@
-<map id="Random number generator API" name="Random number generator API">
-<area shape="rect" id="node1" href="$group__xetla__util.html" title="This is low level API wrapper for utility functions." alt="" coords="5,5,101,31"/>
-<area shape="rect" id="node2" title="Philox rng, will generate 4 uint32_t random number per call." alt="" coords="149,5,349,31"/>
-</map>

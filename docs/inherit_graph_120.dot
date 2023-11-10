@@ -5,5 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="gpu::xetla::kernel\l::dispatch_policy_int4\l_dequantize_kslicing\<\l num_global_kslicing_,\l num_local_kslicing_, arch_tag_ \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1kernel_1_1dispatch__policy__int4__dequantize__kslicing.html",tooltip="4bit kslicing GEMM implementation."];
+  Node0 [id="Node000000",label="gpu::xetla::group::\lgroup_reduce_t\< T, SZ,\l N, Op, N_SG, is_all_reduce,\l arch_ \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1group_1_1group__reduce__t.html",tooltip="This is the group reduction."];
 }

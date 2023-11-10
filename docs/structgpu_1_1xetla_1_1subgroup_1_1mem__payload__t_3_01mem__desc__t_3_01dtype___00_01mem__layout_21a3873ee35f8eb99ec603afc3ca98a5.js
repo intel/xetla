@@ -1,0 +1,23 @@
+var structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01mem__desc__t_3_01dtype___00_01mem__layout_21a3873ee35f8eb99ec603afc3ca98a5 =
+[
+    [ "dtype", "structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01mem__desc__t_3_01dtype___00_01mem__layout_21a3873ee35f8eb99ec603afc3ca98a5.html#a2c805de615db5c48b9a25d0a47c0fefe", null ],
+    [ "mem_desc_t", "structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01mem__desc__t_3_01dtype___00_01mem__layout_21a3873ee35f8eb99ec603afc3ca98a5.html#aad49255d942f92896e015d772c059cce", null ],
+    [ "tile_desc", "structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01mem__desc__t_3_01dtype___00_01mem__layout_21a3873ee35f8eb99ec603afc3ca98a5.html#a77317226ca90b8591ea2dd895f007d06", null ],
+    [ "mem_payload_t", "structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01mem__desc__t_3_01dtype___00_01mem__layout_21a3873ee35f8eb99ec603afc3ca98a5.html#aebc841c54be8babb1dab45e8a90ffe61", null ],
+    [ "mem_payload_t", "structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01mem__desc__t_3_01dtype___00_01mem__layout_21a3873ee35f8eb99ec603afc3ca98a5.html#a4668cb27eed028719d855ec3e6529ada", null ],
+    [ "mem_payload_t", "structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01mem__desc__t_3_01dtype___00_01mem__layout_21a3873ee35f8eb99ec603afc3ca98a5.html#ae74495b96a32e55c0b453938c0fd67a9", null ],
+    [ "mem_payload_t", "structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01mem__desc__t_3_01dtype___00_01mem__layout_21a3873ee35f8eb99ec603afc3ca98a5.html#a7282509106724a99082a91e64fb37fd7", null ],
+    [ "init", "structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01mem__desc__t_3_01dtype___00_01mem__layout_21a3873ee35f8eb99ec603afc3ca98a5.html#ac5245e2ceb861be1dfbb77450f81230a", null ],
+    [ "init", "structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01mem__desc__t_3_01dtype___00_01mem__layout_21a3873ee35f8eb99ec603afc3ca98a5.html#a3663940ef09c95ccb3c95762c4f58c82", null ],
+    [ "operator=", "structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01mem__desc__t_3_01dtype___00_01mem__layout_21a3873ee35f8eb99ec603afc3ca98a5.html#a0afbd39f243bacdf1fa67f806488b0cf", null ],
+    [ "update_tdesc", "structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01mem__desc__t_3_01dtype___00_01mem__layout_21a3873ee35f8eb99ec603afc3ca98a5.html#aae91e9d05f8063f114bb779b768fc7b4", null ],
+    [ "base_pointer", "structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01mem__desc__t_3_01dtype___00_01mem__layout_21a3873ee35f8eb99ec603afc3ca98a5.html#ab8d4edfd453e401d305449bbb77b6f39", null ],
+    [ "base_x", "structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01mem__desc__t_3_01dtype___00_01mem__layout_21a3873ee35f8eb99ec603afc3ca98a5.html#a62b37fc04e13de66091706675d45b7c7", null ],
+    [ "base_y", "structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01mem__desc__t_3_01dtype___00_01mem__layout_21a3873ee35f8eb99ec603afc3ca98a5.html#a00550867412a9e01f9c6dbf92486581c", null ],
+    [ "channel_offset", "structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01mem__desc__t_3_01dtype___00_01mem__layout_21a3873ee35f8eb99ec603afc3ca98a5.html#a7ab0a3812435269ee236043b106a52e5", null ],
+    [ "height_in_elems", "structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01mem__desc__t_3_01dtype___00_01mem__layout_21a3873ee35f8eb99ec603afc3ca98a5.html#aa1827af77402c23634c2989acbf97326", null ],
+    [ "pitch_in_bytes", "structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01mem__desc__t_3_01dtype___00_01mem__layout_21a3873ee35f8eb99ec603afc3ca98a5.html#a55d492581ee8c3626da5d8a1c884ee0c", null ],
+    [ "step_x", "structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01mem__desc__t_3_01dtype___00_01mem__layout_21a3873ee35f8eb99ec603afc3ca98a5.html#aa96e3a7c292ba65b6932e1fb74bb5451", null ],
+    [ "step_y", "structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01mem__desc__t_3_01dtype___00_01mem__layout_21a3873ee35f8eb99ec603afc3ca98a5.html#a02ecff33cafcdb08803f49219f237192", null ],
+    [ "width_in_elems", "structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01mem__desc__t_3_01dtype___00_01mem__layout_21a3873ee35f8eb99ec603afc3ca98a5.html#ac9c6f820b67250260db8e2d0a0087844", null ]
+];

@@ -5,5 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="gpu::xetla::subgroup\l::gelu_fwd_w_op_t\< dtype\l_out, arch_tag, enable \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1subgroup_1_1gelu__fwd__w__op__t.html",tooltip="Is the element-wise gelu training forward op functor."];
+  Node0 [id="Node000000",label="gpu::xetla::mem_desc\l_t\< dtype_, layout_,\l space_, alignment_, 2 \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1mem__desc__t_3_01dtype___00_01layout___00_01space___00_01alignment___00_012_01_4.html",tooltip=" "];
 }

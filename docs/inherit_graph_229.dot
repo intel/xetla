@@ -5,5 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="gpu::xetla::subgroup\l::elemwise_reduce_op\l_streamK_t\< reduce_kind\l_, dtype_in_, gpu_arch::Xe \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1subgroup_1_1elemwise__reduce__op__streamK__t_3_01reduce__kind___00_01dtype48504cd0c44b0af3c32097feb528bd67.html",tooltip="Is the element-wise reduce op functor, specialized for Xe architecture."];
+  Node0 [id="Node000000",label="gpu::xetla::kernel\l::xetla_row_reduction\l_t\< dtype_in_, dtype_out\l_, dtype_acc_, reduction\l_attr_, gpu_arch::Xe, fused\l_op_t_ \>::get_slm_size",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1kernel_1_1xetla__row__reduction__t_3_01dtype__in___00_01dtype__out___00_012cbcb158999a8b0a10ed2f46addec6df.html",tooltip=" "];
 }

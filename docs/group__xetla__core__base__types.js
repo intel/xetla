@@ -5,6 +5,8 @@ var group__xetla__core__base__types =
     [ "gpu::xetla::is_host_callable< T, typename >", "structgpu_1_1xetla_1_1is__host__callable.html", null ],
     [ "gpu::xetla::is_host_callable< T, std::enable_if_t< T::host_callable==true > >", "structgpu_1_1xetla_1_1is__host__callable_3_01T_00_01std_1_1enable__if__t_3_01T_1_1host__callable_0a_0atrue_01_4_01_4.html", null ],
     [ "gpu::xetla::is_internal_type< T >", "structgpu_1_1xetla_1_1is__internal__type.html", null ],
+    [ "gpu::xetla::is_floating_point< T >", "structgpu_1_1xetla_1_1is__floating__point.html", null ],
+    [ "gpu::xetla::is_integral< T >", "structgpu_1_1xetla_1_1is__integral.html", null ],
     [ "gpu::xetla::native_type< T >", "structgpu_1_1xetla_1_1native__type.html", [
       [ "type", "structgpu_1_1xetla_1_1native__type.html#aa86a47f2656c054f4009542e6a04f813", null ]
     ] ],

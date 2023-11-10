@@ -1,7 +1,0 @@
-var structgpu_1_1xetla_1_1subgroup_1_1elemwise__reduce__op__t_3_01reduce__kind___00_01dtype__in___00b3307d6d66a79c31b4e821c4e0de2150 =
-[
-    [ "arguments_t", "structgpu_1_1xetla_1_1subgroup_1_1elemwise__reduce__op__t_3_01reduce__kind___00_01dtype__in___00b3307d6d66a79c31b4e821c4e0de2150.html#ad08c95bfc0c756e7b0fbf0583bfd4b82", null ],
-    [ "arguments_t", "structgpu_1_1xetla_1_1subgroup_1_1elemwise__reduce__op__t_3_01reduce__kind___00_01dtype__in___00b3307d6d66a79c31b4e821c4e0de2150.html#a03a98c5148a35ddeaa34a183d3a4b950", null ],
-    [ "base", "structgpu_1_1xetla_1_1subgroup_1_1elemwise__reduce__op__t_3_01reduce__kind___00_01dtype__in___00b3307d6d66a79c31b4e821c4e0de2150.html#a7bd90dfa2f0df44ddefb496da8986806", null ],
-    [ "shape", "structgpu_1_1xetla_1_1subgroup_1_1elemwise__reduce__op__t_3_01reduce__kind___00_01dtype__in___00b3307d6d66a79c31b4e821c4e0de2150.html#a2b428bc24ccd8a4545c3cf4759c1c332", null ]
-];

@@ -5,5 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="gpu::xetla::subgroup\l::rng_dropout_op_t\< dtype\l_mask, arch_tag, enable \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1subgroup_1_1rng__dropout__op__t.html",tooltip="Is the random number generator and dropout op functor."];
+  Node0 [id="Node000000",label="gpu::xetla::subgroup\l::chained_tile_op_t\<\l tile_op_t \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1subgroup_1_1chained__tile__op__t.html",tooltip=" "];
 }

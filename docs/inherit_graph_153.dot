@@ -5,5 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="gpu::xetla::kernel\l::xetla_data_transformer\l\< dtype_in_, dtype_out\l_, dtype_compute_, data\l_transformer_attr_, mem_layout\l_in_, need_fp8_op, gpu_arch::Xe \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1kernel_1_1xetla__data__transformer_3_01dtype__in___00_01dtype__out___00_014a477369ffef328160ffcdf09316fb24.html",tooltip="Is the data_transformer functor for Xe Each time, each thread will load sg_tile_m x sg_tile_n data in..."];
+  Node0 [id="Node000000",label="gpu::xetla::group::\lsoftmax_policy_fwd\<\l dtype_acc, arch_tag_ \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1group_1_1softmax__policy__fwd.html",tooltip=" "];
 }

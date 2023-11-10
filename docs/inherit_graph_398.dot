@@ -1,0 +1,9 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node0 [id="Node000000",label="gru_layer\< T, Act_T,\l wg_tile_m, wg_tile\l_n, sg_tile_m, sg_tile\l_n, sg_tile_k, layout_input,\l layout_weight, layout_out,\l mem_loc_input, mem_loc_weight,\l mem_loc_out, periodic_sync_interval \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgru__layer.html",tooltip=" "];
+}

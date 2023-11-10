@@ -5,5 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="gpu::xetla::subgroup\l::mem_payload_t\< dtype\l_, tile_desc_, msg_type\l::block_2d, mem_layout_,\l mem_space::global, arch\l_tag_, std::enable_if_t\<(arch\l_tag_==gpu_arch::Xe)\> \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01dtype___00_01tile__desc___00_01msg__type_1a714a568de68751a2c1618b45d0219ea.html",tooltip="Is to describe the global memory surface for block-2d load/store for each block in one tile,..."];
+  Node0 [id="Node000000",label="gpu::xetla::mma_attr\l_t\< gpu_arch::Xe \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1mma__attr__t_3_01gpu__arch_1_1Xe_01_4.html",tooltip=" "];
 }

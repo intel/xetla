@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.5</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.6</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -114,12 +114,12 @@ $(document).ready(function(){initNavTree('structkernel__xcoder__gru__fusion.html
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ac2bb6e05f55275522a1db972497b10d9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkernel__xcoder__gru__fusion.html#ac2bb6e05f55275522a1db972497b10d9">run</a> (<a class="el" href="classgpu_1_1xetla_1_1xetla__exec__item.html">xetla_exec_item</a>&lt; 3 &gt; &amp;ei, input_T *layer_ptr, input_T *h0_ptr, input_T *W_ir_ptr, input_T *W_hr_ptr, input_T *W_iz_ptr, input_T *W_hz_ptr, input_T *W_in_ptr, input_T *W_hn_ptr, input_T *layer_out_ptr, input_T *hidden_out_ptr, input_T *ping_pong_buffer, input_T *ping_pong_cell, int batch_size, int input_size, int hidden_size, int sequence_length, int layer_size)</td></tr>
-<tr class="separator:ac2bb6e05f55275522a1db972497b10d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae0e4046e80281f52ab6d74afc1bb545"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkernel__xcoder__gru__fusion.html#aae0e4046e80281f52ab6d74afc1bb545">run</a> (sycl::nd_item&lt; 3 &gt; &amp;item, input_T *layer_ptr, input_T *h0_ptr, input_T *W_ir_ptr, input_T *W_hr_ptr, input_T *W_iz_ptr, input_T *W_hz_ptr, input_T *W_in_ptr, input_T *W_hn_ptr, input_T *layer_out_ptr, input_T *hidden_out_ptr, input_T *ping_pong_buffer, input_T *ping_pong_cell, int batch_size, int input_size, int hidden_size, int sequence_length, int layer_size)</td></tr>
+<tr class="separator:aae0e4046e80281f52ab6d74afc1bb545"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ac2bb6e05f55275522a1db972497b10d9" name="ac2bb6e05f55275522a1db972497b10d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac2bb6e05f55275522a1db972497b10d9">&#9670;&#160;</a></span>run()</h2>
+<a id="aae0e4046e80281f52ab6d74afc1bb545" name="aae0e4046e80281f52ab6d74afc1bb545"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae0e4046e80281f52ab6d74afc1bb545">&#9670;&#160;</a></span>run()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -132,8 +132,8 @@ template&lt;typename input_T , typename Act_T , uint32_t wg_tile_m_t, uint32_t w
         <tr>
           <td class="memname">static void <a class="el" href="structkernel__xcoder__gru__fusion.html">kernel_xcoder_gru_fusion</a>&lt; input_T, Act_T, wg_tile_m_t, wg_tile_n_t, sg_tile_m_t, sg_tile_n_t, sg_tile_k_t &gt;::run </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classgpu_1_1xetla_1_1xetla__exec__item.html">xetla_exec_item</a>&lt; 3 &gt; &amp;&#160;</td>
-          <td class="paramname"><em>ei</em>, </td>
+          <td class="paramtype">sycl::nd_item&lt; 3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>item</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -251,7 +251,7 @@ template&lt;typename input_T , typename Act_T , uint32_t wg_tile_m_t, uint32_t w
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ei</td><td>input </td></tr>
+    <tr><td class="paramname">item</td><td>Is the sycl::nd_item </td></tr>
     <tr><td class="paramname">layer_ptr</td><td>input from previous layer i.e X_t </td></tr>
     <tr><td class="paramname">h0_ptr</td><td>hx_ptr input i.e. h_{0} shape = layer_size x batch_size x hidden_size weights </td></tr>
     <tr><td class="paramname">W_ir_ptr</td><td>weights with input of reset gate, (input_weight_size, hidden_weight_size, ...) </td></tr>

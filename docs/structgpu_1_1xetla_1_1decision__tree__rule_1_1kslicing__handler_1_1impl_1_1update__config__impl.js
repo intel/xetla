@@ -1,0 +1,6 @@
+var structgpu_1_1xetla_1_1decision__tree__rule_1_1kslicing__handler_1_1impl_1_1update__config__impl =
+[
+    [ "local_kslicing_handler", "structgpu_1_1xetla_1_1decision__tree__rule_1_1kslicing__handler_1_1impl_1_1update__config__impl_1_1local__kslicing__handler.html", "structgpu_1_1xetla_1_1decision__tree__rule_1_1kslicing__handler_1_1impl_1_1update__config__impl_1_1local__kslicing__handler" ],
+    [ "orig", "structgpu_1_1xetla_1_1decision__tree__rule_1_1kslicing__handler_1_1impl_1_1update__config__impl.html#abee136267012b25f1dca92af6ac28d16", null ],
+    [ "type", "structgpu_1_1xetla_1_1decision__tree__rule_1_1kslicing__handler_1_1impl_1_1update__config__impl.html#a8c3dd902171d1761f693f68ef37a21e3", null ]
+];

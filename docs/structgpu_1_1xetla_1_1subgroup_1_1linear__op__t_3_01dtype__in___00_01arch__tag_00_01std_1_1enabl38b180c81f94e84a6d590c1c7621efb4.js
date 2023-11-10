@@ -1,0 +1,9 @@
+var structgpu_1_1xetla_1_1subgroup_1_1linear__op__t_3_01dtype__in___00_01arch__tag_00_01std_1_1enabl38b180c81f94e84a6d590c1c7621efb4 =
+[
+    [ "arguments_t", "structgpu_1_1xetla_1_1subgroup_1_1linear__op__t_3_01dtype__in___00_01arch__tag_00_01std_1_1enabl38b180c81f94e84a6d590c1c7621efb4.html#a608999d0b29802ce654cce8c1f4d370f", null ],
+    [ "arguments_t", "structgpu_1_1xetla_1_1subgroup_1_1linear__op__t_3_01dtype__in___00_01arch__tag_00_01std_1_1enabl38b180c81f94e84a6d590c1c7621efb4.html#a02ba4cbc0762845bc2322cd34c35c7e0", null ],
+    [ "alpha", "structgpu_1_1xetla_1_1subgroup_1_1linear__op__t_3_01dtype__in___00_01arch__tag_00_01std_1_1enabl38b180c81f94e84a6d590c1c7621efb4.html#a1c7feb26cf496d95b31f211a298cefa7", null ],
+    [ "base", "structgpu_1_1xetla_1_1subgroup_1_1linear__op__t_3_01dtype__in___00_01arch__tag_00_01std_1_1enabl38b180c81f94e84a6d590c1c7621efb4.html#a4573fc94429c253305825a5dccd067de", null ],
+    [ "beta", "structgpu_1_1xetla_1_1subgroup_1_1linear__op__t_3_01dtype__in___00_01arch__tag_00_01std_1_1enabl38b180c81f94e84a6d590c1c7621efb4.html#a856d9558cee107dfcd76b2e6ffd87f93", null ],
+    [ "shape", "structgpu_1_1xetla_1_1subgroup_1_1linear__op__t_3_01dtype__in___00_01arch__tag_00_01std_1_1enabl38b180c81f94e84a6d590c1c7621efb4.html#a1c096b3cccace150623db28be5d58ab5", null ]
+];

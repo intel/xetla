@@ -27,7 +27,7 @@ digraph "include/experimental/kernel/reduction/reduction.hpp"
   Node7 -> Node10 [id="edge12_Node000007_Node000010",color="steelblue1",style="solid",tooltip=" "];
   Node10 [id="Node000010",label="experimental/group\l/reduction/row_reduce\l_store_xe.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$row__reduce__store__xe_8hpp.html",tooltip="C++ API."];
   Node10 -> Node11 [id="edge13_Node000010_Node000011",color="steelblue1",style="solid",tooltip=" "];
-  Node11 [id="Node000011",label="experimental/group\l/reduction/reduction\l_api.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$reduction__api_8hpp.html",tooltip="C++ API."];
+  Node11 [id="Node000011",label="experimental/group\l/reduction/reduction\l_api.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$experimental_2group_2reduction_2reduction__api_8hpp.html",tooltip="C++ API."];
   Node11 -> Node5 [id="edge14_Node000011_Node000005",color="steelblue1",style="solid",tooltip=" "];
   Node7 -> Node2 [id="edge15_Node000007_Node000002",color="steelblue1",style="solid",tooltip=" "];
   Node7 -> Node3 [id="edge16_Node000007_Node000003",color="steelblue1",style="solid",tooltip=" "];

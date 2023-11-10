@@ -19,11 +19,14 @@
 
 #pragma once
 
-/// @defgroup xetla_gemm XeTLA GEMM
-/// This is a gemm API built on top of xetla group level API to provide a more convenient way to compose a GEMM kernel.
+/// @defgroup xetla_gemm_universal XeTLA GEMM_UNIVERSAL
+/// This is a gemm_universal API built on top of xetla group level API to provide a more convenient way to compose a GEMM_UNIVERSAL kernel.
 
 #include "kernel/gemm/api.hpp"
 #include "kernel/gemm/common.hpp"
+#include "kernel/gemm/default_gemm.hpp"
 #include "kernel/gemm/dispatch_policy.hpp"
+#include "kernel/gemm/gemm_preset.hpp"
 #include "kernel/gemm/impl/default_xe.hpp"
 #include "kernel/gemm/impl/kslicing_xe.hpp"
+#include "kernel/gemm/impl/stream_k_xe.hpp"

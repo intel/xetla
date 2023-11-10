@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.7"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>XeTLA: gpu::xetla::kernel::dispatch_policy_kslicing&lt; num_global_kslicing_, num_local_kslicing_, arch_tag_ &gt; Struct Template Reference</title>
+<title>XeTLA: gpu::xetla::kernel::dispatch_policy_kslicing&lt; group_swizzle_policy_, global_ratio_, local_ratio_ &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.5</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.6</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -104,9 +104,10 @@ $(document).ready(function(){initNavTree('structgpu_1_1xetla_1_1kernel_1_1dispat
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="structgpu_1_1xetla_1_1kernel_1_1dispatch__policy__kslicing-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">gpu::xetla::kernel::dispatch_policy_kslicing&lt; num_global_kslicing_, num_local_kslicing_, arch_tag_ &gt; Struct Template Reference<div class="ingroups"><a class="el" href="group__xetla__gemm__universal.html">XeTLA GEMM_UNIVERSAL</a></div></div></div>
+  <div class="headertitle"><div class="title">gpu::xetla::kernel::dispatch_policy_kslicing&lt; group_swizzle_policy_, global_ratio_, local_ratio_ &gt; Struct Template Reference<div class="ingroups"><a class="el" href="group__xetla__gemm__universal.html">XeTLA GEMM_UNIVERSAL</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -115,18 +116,23 @@ $(document).ready(function(){initNavTree('structgpu_1_1xetla_1_1kernel_1_1dispat
 
 <p><code>#include &lt;<a class="el" href="kernel_2gemm_2dispatch__policy_8hpp_source.html">dispatch_policy.hpp</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a6870db0231bd16d296ed9c61146c1ff8"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1dispatch__policy__kslicing.html#a6870db0231bd16d296ed9c61146c1ff8">group_swizzle_policy</a> = group_swizzle_policy_</td></tr>
+<tr class="separator:a6870db0231bd16d296ed9c61146c1ff8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a57f614faac9fd560ed56eb244ed8a2dc"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1dispatch__policy__kslicing.html#a57f614faac9fd560ed56eb244ed8a2dc">num_global_kslicing</a> = num_global_kslicing_</td></tr>
-<tr class="separator:a57f614faac9fd560ed56eb244ed8a2dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ec8b476011e974293a5603bdece73f0"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1dispatch__policy__kslicing.html#a7ec8b476011e974293a5603bdece73f0">num_local_kslicing</a> = num_local_kslicing_</td></tr>
-<tr class="separator:a7ec8b476011e974293a5603bdece73f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1fca3195058996ada3aa5b9b40abb416"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1dispatch__policy__kslicing.html#a1fca3195058996ada3aa5b9b40abb416">arch_tag</a> = arch_tag_</td></tr>
-<tr class="separator:a1fca3195058996ada3aa5b9b40abb416"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d48f7afeee7ecf748db499639fb7546"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1dispatch__policy__kslicing.html#a5d48f7afeee7ecf748db499639fb7546">global_ratio</a> = global_ratio_</td></tr>
+<tr class="separator:a5d48f7afeee7ecf748db499639fb7546"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a185bf8ee518ffe47a34b86fef5c37ece"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1dispatch__policy__kslicing.html#a185bf8ee518ffe47a34b86fef5c37ece">local_ratio</a> = local_ratio_</td></tr>
+<tr class="separator:a185bf8ee518ffe47a34b86fef5c37ece"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a749fb694ad2184cb88ed67d6f356df03"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1kernel_1_1dispatch__policy__kslicing.html#a749fb694ad2184cb88ed67d6f356df03">arch_tag</a> = group_swizzle_policy::arch_tag</td></tr>
+<tr class="separator:a749fb694ad2184cb88ed67d6f356df03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;int num_global_kslicing_, int num_local_kslicing_, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt;<br />
-struct gpu::xetla::kernel::dispatch_policy_kslicing&lt; num_global_kslicing_, num_local_kslicing_, arch_tag_ &gt;</div><p>Kslicing GEMM_UNIVERSAL implementation. </p>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename group_swizzle_policy_, int global_ratio_ = 1, int local_ratio_ = 1&gt;<br />
+struct gpu::xetla::kernel::dispatch_policy_kslicing&lt; group_swizzle_policy_, global_ratio_, local_ratio_ &gt;</div><p>Kslicing GEMM_UNIVERSAL implementation. </p>
 <p>A special GEMM_UNIVERSAL implementation to increase the hardware occupancy by splitting the GEMM_UNIVERSAL task along k dimension. It includes inter-group reduction (by using global atomic) and intra-group reduction (by using local memory for data exchange). </p><dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">num_global_kslicing_</td><td>Is the k dim split ratio between groups. </td></tr>
@@ -135,20 +141,37 @@ struct gpu::xetla::kernel::dispatch_policy_kslicing&lt; num_global_kslicing_, nu
   </table>
   </dd>
 </dl>
-</div><h2 class="groupheader">Member Data Documentation</h2>
-<a id="a1fca3195058996ada3aa5b9b40abb416" name="a1fca3195058996ada3aa5b9b40abb416"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1fca3195058996ada3aa5b9b40abb416">&#9670;&#160;</a></span>arch_tag</h2>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a6870db0231bd16d296ed9c61146c1ff8" name="a6870db0231bd16d296ed9c61146c1ff8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6870db0231bd16d296ed9c61146c1ff8">&#9670;&#160;</a></span>group_swizzle_policy</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int num_global_kslicing_, int num_local_kslicing_, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename group_swizzle_policy_ , int global_ratio_ = 1, int local_ratio_ = 1&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1dispatch__policy__kslicing.html">gpu::xetla::kernel::dispatch_policy_kslicing</a>&lt; group_swizzle_policy_, global_ratio_, local_ratio_ &gt;::group_swizzle_policy =  group_swizzle_policy_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a749fb694ad2184cb88ed67d6f356df03" name="a749fb694ad2184cb88ed67d6f356df03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a749fb694ad2184cb88ed67d6f356df03">&#9670;&#160;</a></span>arch_tag</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename group_swizzle_policy_ , int global_ratio_ = 1, int local_ratio_ = 1&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1dispatch__policy__kslicing.html">gpu::xetla::kernel::dispatch_policy_kslicing</a>&lt; num_global_kslicing_, num_local_kslicing_, arch_tag_ &gt;::arch_tag = arch_tag_</td>
+          <td class="memname">constexpr <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1dispatch__policy__kslicing.html">gpu::xetla::kernel::dispatch_policy_kslicing</a>&lt; group_swizzle_policy_, global_ratio_, local_ratio_ &gt;::arch_tag = group_swizzle_policy::arch_tag</td>
         </tr>
       </table>
   </td>
@@ -160,19 +183,19 @@ template&lt;int num_global_kslicing_, int num_local_kslicing_, <a class="el" hre
 
 </div>
 </div>
-<a id="a57f614faac9fd560ed56eb244ed8a2dc" name="a57f614faac9fd560ed56eb244ed8a2dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a57f614faac9fd560ed56eb244ed8a2dc">&#9670;&#160;</a></span>num_global_kslicing</h2>
+<a id="a5d48f7afeee7ecf748db499639fb7546" name="a5d48f7afeee7ecf748db499639fb7546"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d48f7afeee7ecf748db499639fb7546">&#9670;&#160;</a></span>global_ratio</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int num_global_kslicing_, int num_local_kslicing_, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename group_swizzle_policy_ , int global_ratio_ = 1, int local_ratio_ = 1&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr int <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1dispatch__policy__kslicing.html">gpu::xetla::kernel::dispatch_policy_kslicing</a>&lt; num_global_kslicing_, num_local_kslicing_, arch_tag_ &gt;::num_global_kslicing = num_global_kslicing_</td>
+          <td class="memname">constexpr int <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1dispatch__policy__kslicing.html">gpu::xetla::kernel::dispatch_policy_kslicing</a>&lt; group_swizzle_policy_, global_ratio_, local_ratio_ &gt;::global_ratio = global_ratio_</td>
         </tr>
       </table>
   </td>
@@ -184,19 +207,19 @@ template&lt;int num_global_kslicing_, int num_local_kslicing_, <a class="el" hre
 
 </div>
 </div>
-<a id="a7ec8b476011e974293a5603bdece73f0" name="a7ec8b476011e974293a5603bdece73f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7ec8b476011e974293a5603bdece73f0">&#9670;&#160;</a></span>num_local_kslicing</h2>
+<a id="a185bf8ee518ffe47a34b86fef5c37ece" name="a185bf8ee518ffe47a34b86fef5c37ece"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a185bf8ee518ffe47a34b86fef5c37ece">&#9670;&#160;</a></span>local_ratio</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int num_global_kslicing_, int num_local_kslicing_, <a class="el" href="group__xetla__core__arch__config.html#gaa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
+template&lt;typename group_swizzle_policy_ , int global_ratio_ = 1, int local_ratio_ = 1&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr int <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1dispatch__policy__kslicing.html">gpu::xetla::kernel::dispatch_policy_kslicing</a>&lt; num_global_kslicing_, num_local_kslicing_, arch_tag_ &gt;::num_local_kslicing = num_local_kslicing_</td>
+          <td class="memname">constexpr int <a class="el" href="structgpu_1_1xetla_1_1kernel_1_1dispatch__policy__kslicing.html">gpu::xetla::kernel::dispatch_policy_kslicing</a>&lt; group_swizzle_policy_, global_ratio_, local_ratio_ &gt;::local_ratio = local_ratio_</td>
         </tr>
       </table>
   </td>

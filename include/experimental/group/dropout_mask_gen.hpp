@@ -61,8 +61,8 @@ struct mask_gen_t {
         float dropout_prob;
     };
 
-    using arch_attr = arch_attr_t<arch_>;
-    using load_store_attr = typename arch_attr::load_store_attr;
+    using load_store_attr = typename arch_attr_t<
+            arch_>::template load_store_attr<msg_type::block_2d>;
     static constexpr uint32_t max_store_width_in_bytes
             = load_store_attr::max_store_width_in_bytes;
     static constexpr uint32_t max_store_width_in_elem
@@ -87,10 +87,11 @@ struct mask_gen_t {
     using mask_out_tile_desc_t = subgroup::tile_desc_t<tile_size_x, tile_size_y,
             block_size_x, block_size_y, reg_layout::tiled>;
     using mask_out_tile_t = subgroup::tile_t<dtype_mask, mask_out_tile_desc_t>;
-    using mask_out_payload_t
-            = subgroup::mem_payload_t<dtype_mask, mask_out_tile_desc_t,
-                    (sg_tile_m == 1) ? msg_type::block_1d : msg_type::block_2d,
-                    mem_layout::row_major, mem_space::global, gpu_arch::Xe>;
+    using mask_out_payload_t = subgroup::mem_payload_t<
+            mem_desc_t<dtype_mask, mem_layout::row_major, mem_space::global>,
+            mask_out_tile_desc_t,
+            (sg_tile_m == 1) ? msg_type::block_1d : msg_type::block_2d,
+            gpu_arch::Xe>;
     static constexpr uint32_t tile_size = tile_size_x * tile_size_y;
 
     /// @brief
@@ -138,7 +139,7 @@ struct mask_gen_t {
                     1, 0, mask_flag.xetla_select<remain_len, 1>(0));
         }
         mask_out.reg = mask;
-        tile_store<cache_hint::uncached>(mask_out, mask_out_payload);
+        subgroup::tile_store<cache_hint::uncached>(mask_out, mask_out_payload);
     }
 };
 } // namespace gpu::xetla::group

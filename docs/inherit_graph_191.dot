@@ -5,5 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="gpu::xetla::native\l_type\< int4x2 \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1native__type_3_01int4x2_01_4.html",tooltip="Set uint8_t as the native data type of int4x2."];
+  Node0 [id="Node000000",label="gpu::xetla::kernel\l::gemm_universal_t\<\l dispatch_policy_stream\l_k\< gpu_arch::Xe \>, gemm\l_t_, epilogue_t_ \>::TileWorkDesc",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__stream__k_3_01gpu__arch421c1a117893f171c99088210ef8b82b.html",tooltip="Tile work descriptor."];
 }

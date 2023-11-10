@@ -1,0 +1,6 @@
+var structgpu_1_1xetla_1_1dummy__optimizer_1_1impl_1_1finder__impl_3_01opt__val___00_01opt__t___00_01elem___00_01elems_8_8_8_01_4 =
+[
+    [ "cur_opt_t", "structgpu_1_1xetla_1_1dummy__optimizer_1_1impl_1_1finder__impl_3_01opt__val___00_01opt__t___00_01elem___00_01elems_8_8_8_01_4.html#a84f2a6e19bbf0a5661e2b406b8452040", null ],
+    [ "nxt_result", "structgpu_1_1xetla_1_1dummy__optimizer_1_1impl_1_1finder__impl_3_01opt__val___00_01opt__t___00_01elem___00_01elems_8_8_8_01_4.html#ac0a4a1ad9c5049ee148414fcd35dd962", null ],
+    [ "type", "structgpu_1_1xetla_1_1dummy__optimizer_1_1impl_1_1finder__impl_3_01opt__val___00_01opt__t___00_01elem___00_01elems_8_8_8_01_4.html#ad6e5a534a207e9becf795a9ea27f5841", null ]
+];

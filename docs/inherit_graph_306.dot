@@ -5,5 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="kernel_xcoder_gru_fusion\l\< input_T, Act_T, wg_tile\l_m_t, wg_tile_n_t, sg_tile\l_m_t, sg_tile_n_t, sg_tile_k_t \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structkernel__xcoder__gru__fusion.html",tooltip=" "];
+  Node0 [id="Node000000",label="gpu::xetla::subgroup\l::detail::NextPowerOf2\l\< N, K, true \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1subgroup_1_1detail_1_1NextPowerOf2_3_01N_00_01K_00_01true_01_4.html",tooltip=" "];
 }

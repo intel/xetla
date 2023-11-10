@@ -8,19 +8,12 @@ digraph "include/kernel/gemm/api.hpp"
   Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node2 [id="Node000002",label="include/kernel/gemm\l/gemm.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$kernel_2gemm_2gemm_8hpp.html",tooltip="C++ API."];
   Node1 -> Node3 [id="edge2_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node3 [id="Node000003",label="include/kernel/gemm\l/impl/block_xe.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$block__xe_8hpp.html",tooltip="C++ API."];
+  Node3 [id="Node000003",label="include/kernel/gemm\l/impl/default_xe.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$kernel_2gemm_2impl_2default__xe_8hpp.html",tooltip="C++ API."];
   Node3 -> Node2 [id="edge3_Node000003_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node1 -> Node4 [id="edge4_Node000001_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node4 [id="Node000004",label="include/kernel/gemm\l/impl/default_xe.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$kernel_2gemm_2impl_2default__xe_8hpp.html",tooltip="C++ API."];
+  Node4 [id="Node000004",label="include/kernel/gemm\l/impl/kslicing_xe.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$kslicing__xe_8hpp.html",tooltip="C++ API."];
   Node4 -> Node2 [id="edge5_Node000004_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node1 -> Node5 [id="edge6_Node000001_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node5 [id="Node000005",label="include/kernel/gemm\l/impl/kslicing_xe.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$kslicing__xe_8hpp.html",tooltip="C++ API."];
+  Node5 [id="Node000005",label="include/kernel/gemm\l/impl/stream_k_xe.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$stream__k__xe_8hpp.html",tooltip="C++ API."];
   Node5 -> Node2 [id="edge7_Node000005_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node1 -> Node6 [id="edge8_Node000001_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node6 [id="Node000006",label="include/kernel/gemm\l/impl/streamK_xe.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$streamK__xe_8hpp.html",tooltip="C++ API."];
-  Node6 -> Node2 [id="edge9_Node000006_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node1 -> Node7 [id="edge10_Node000001_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node7 [id="Node000007",label="include/kernel/gemm\l/impl/workgroup_split\l_streamK.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$workgroup__split__streamK_8hpp.html",tooltip="C++ API."];
-  Node7 -> Node2 [id="edge11_Node000007_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node7 -> Node6 [id="edge12_Node000007_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
 }

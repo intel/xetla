@@ -5,5 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="gpu::xetla::kernel\l::block_2d\< gpu_arch\l::Xe, T \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classgpu_1_1xetla_1_1kernel_1_1block__2d_3_01gpu__arch_1_1Xe_00_01T_01_4.html",tooltip=" "];
+  Node0 [id="Node000000",label="gpu::xetla::group::\lglobal_reduce_t\< reduce\l_kind, tile_shape_acc,\l tile_shape_cnt, mem_desc\l_acc_t, mem_desc_cnt_t, num\l_group_reduction, counter_size,\l arch_tag, enable \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classgpu_1_1xetla_1_1group_1_1global__reduce__t.html",tooltip="Cross group global reduction."];
 }

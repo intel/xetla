@@ -10,5 +10,5 @@ var dir_d28a4824dc47e487b107a5db32ef43c4 =
     [ "08_scaled_dot_product_attention", "dir_73709659c195a14d8144551c32b72ac9.html", "dir_73709659c195a14d8144551c32b72ac9" ],
     [ "09_gate_recurrent_unit", "dir_a423b45b3d6f6520c7e4af77296e3bc1.html", "dir_a423b45b3d6f6520c7e4af77296e3bc1" ],
     [ "10_gemm_large_n", "dir_6651089d139739e625e9239417043b45.html", "dir_6651089d139739e625e9239417043b45" ],
-    [ "11_streamK_gemm", "dir_8153752c0c34d54ef814616d5a980b35.html", "dir_8153752c0c34d54ef814616d5a980b35" ]
+    [ "11_stream_k_gemm", "dir_ef7f1b9af0714178c6cd1d14caef99b0.html", "dir_ef7f1b9af0714178c6cd1d14caef99b0" ]
 ];

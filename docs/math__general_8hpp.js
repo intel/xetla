@@ -26,6 +26,7 @@ var math__general_8hpp =
     [ "xetla_rnde", "math__general_8hpp.html#gaf884f51daedc0fb2adaa8e9edb8953b4", null ],
     [ "xetla_rsqrt", "math__general_8hpp.html#ga172b8ff88603dd1c241d71c4540abdb2", null ],
     [ "xetla_rsqrt", "math__general_8hpp.html#gaabd5a2631196ee6ae503c6b051ef8290", null ],
+    [ "xetla_sat", "math__general_8hpp.html#ga6b988fbdca923ae12db3935fda297744", null ],
     [ "xetla_sqrt", "math__general_8hpp.html#ga549d6c50a78b64cea44657f2cfd834d1", null ],
     [ "xetla_sqrt", "math__general_8hpp.html#ga717f8239997256ff3138a9b3df859a02", null ],
     [ "xetla_sqrt_ieee", "math__general_8hpp.html#ga0b6b295e825c39c5070b63ce574dffc4", null ],

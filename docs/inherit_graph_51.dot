@@ -5,5 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="gpu::xetla::group::\lgemm_selector_t\< dtype\l_a, dtype_b, mem_layout\l_a, mem_layout_b, mem_space\l_a, mem_space_b, alignment\l_a, alignment_b, dtype_acc,\l tile_shape, k_stride, mma_engine\l::xmx, arch_tag, stages, sync_freq,\l std::enable_if_t\<!detail::check_2d\l_block_pitch_alignment\< dtype_a, dtype\l_b, alignment_a, alignment_b, arch_tag\l \>::value \> \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classgpu_1_1xetla_1_1group_1_1gemm__selector__t_3_01dtype__a_00_01dtype__b_00_01mem__layout__a_0488ec0a0d1bc71533b403702f23930d3.html",tooltip="Selects scatter && xmx based brgemm."];
+  Node0 [id="Node000000",label="gpu::xetla::dummy_optimizer\l\< tag_, dict_t_, candidates\l_t \>::impl::param_distance\< T, U \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1dummy__optimizer_1_1impl_1_1param__distance.html",tooltip=" "];
 }

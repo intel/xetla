@@ -50,9 +50,8 @@ using remove_const_t = typename std::remove_const<T>::type;
 #define __ESIMD_NS sycl::ext::intel::esimd
 #endif
 
-#define XETLA_WARNING(msg) __SYCL_WARNING(msg)
-
 #define XETLA_MARKER(message) [[deprecated(message)]]
+#define XETLA_WARNING(msg) __SYCL_WARNING(msg)
 
 template <auto val>
 XETLA_MARKER("Help function to print value")
@@ -61,7 +60,18 @@ template <typename type>
 XETLA_MARKER("Help function to print type")
 inline constexpr void XETLA_PRINT() {}
 
+__XETLA_API int32_t xetla_get_hw_thread_id() {
+    return __ESIMD_ENS::get_hw_thread_id();
+}
+
+__XETLA_API int32_t xetla_get_subdevice_id() {
+    return __ESIMD_ENS::get_subdevice_id();
+}
+
 namespace gpu::xetla {
+
+enum class gpu_arch : uint8_t { Xe = 0 };
+enum class grf_mode : uint8_t { normal = 0, double_grf = 1 };
 
 enum class mem_layout : uint8_t { row_major = 0, col_major = 1 };
 enum class mem_space : uint8_t { global = 0, local = 1 };
@@ -69,12 +79,13 @@ enum class msg_type : uint8_t {
     block_2d = 0,
     block_1d = 1,
     scatter = 2,
-    atomic_add = 3
+    atomic_add = 3,
+    unaligned_2d = 4
     // prefetch_2d = 4,
     // prefetch_1d = 5
 };
 
-/// L1 or L3 cache hint kinds.
+/// L1 or L2 cache hint kinds.
 enum class cache_hint : uint8_t {
     none = 0,
     uncached = 1,
@@ -113,7 +124,7 @@ enum class fence_op : uint8_t {
     discard = 3, /// direct and clean lines are discarded w/o eviction
     clean = 4, /// dirty lines are written to memory, but retained in cache
     /// in clean state
-    flushl3 = 5, /// flush only L3
+    flushl2 = 5, /// flush only L2
 };
 /// The scope that xetla_fence operation should apply to
 enum class fence_scope : uint8_t {
@@ -187,13 +198,13 @@ enum class argument_type : uint8_t {
 };
 
 // Saturation tag
-class xettp_saturation_on_tag {
+class xetla_saturation_on_tag {
 public:
     using sat_tag = typename __ESIMD_NS::saturation_on_tag;
     static constexpr sat_tag value = {};
 };
 
-class xettp_saturation_off_tag {
+class xetla_saturation_off_tag {
 public:
     using sat_tag = typename __ESIMD_NS::saturation_off_tag;
     static constexpr sat_tag value = {};
@@ -216,55 +227,7 @@ enum class reduce_op : uint8_t {
 #define SW_BARRIER() __ESIMD_NS::fence<__ESIMD_NS::fence_mask::sw_barrier>()
 
 __XETLA_API void xetla_wait(uint16_t val) {
-    //__ESIMD_ENS::wait(__ESIMD_NS::simd<uint16_t, 1>(val));
-}
-
-enum class lsc_action { prefetch, load, store, atomic };
-
-template <lsc_action Action, cache_hint L1H, cache_hint L3H>
-constexpr void check_lsc_cache_hint() {
-    if constexpr (Action == lsc_action::prefetch) {
-        // https://gfxspecs.intel.com/Predator/Home/Index/53560
-        static_assert(
-                ((L3H == cache_hint::uncached || L3H == cache_hint::cached)
-                        && (L1H == cache_hint::uncached
-                                || L1H == cache_hint::cached
-                                || L1H == cache_hint::streaming)),
-                "cache hint type not supported!");
-    } else if constexpr (Action == lsc_action::load) {
-        // https://gfxspecs.intel.com/Predator/Home/Index/53560
-        static_assert((L1H == cache_hint::none && L3H == cache_hint::none)
-                        || ((L3H == cache_hint::uncached)
-                                && (L1H == cache_hint::uncached
-                                        || L1H == cache_hint::cached
-                                        || L1H == cache_hint::streaming))
-                        || ((L3H == cache_hint::cached)
-                                && (L1H == cache_hint::uncached
-                                        || L1H == cache_hint::cached
-                                        || L1H == cache_hint::streaming
-                                        || L1H == cache_hint::read_invalidate)),
-                "unsupported cache hint!");
-    } else if constexpr (Action == lsc_action::store) {
-        // https://gfxspecs.intel.com/Predator/Home/Index/53561
-        static_assert((L1H == cache_hint::none && L3H == cache_hint::none)
-                        || ((L3H == cache_hint::uncached)
-                                && (L1H == cache_hint::uncached
-                                        || L1H == cache_hint::write_through
-                                        || L1H == cache_hint::streaming))
-                        || ((L3H == cache_hint::write_back)
-                                && (L1H == cache_hint::uncached
-                                        || L1H == cache_hint::write_through
-                                        || L1H == cache_hint::streaming
-                                        || L1H == cache_hint::write_back)),
-                "unsupported cache hint!");
-    } else if constexpr (Action == lsc_action::atomic) {
-        // https://gfxspecs.intel.com/Predator/Home/Index/53561
-        static_assert((L1H == cache_hint::none && L3H == cache_hint::none)
-                        || (L1H == cache_hint::uncached
-                                && (L3H == cache_hint::uncached
-                                        || L3H == cache_hint::write_back)),
-                "unsupported cache hint!");
-    }
+    __ESIMD_ENS::wait(__ESIMD_NS::simd<uint16_t, 1>(val));
 }
 
 } // namespace gpu::xetla

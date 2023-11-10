@@ -29,23 +29,23 @@ namespace gpu::xetla::group {
 /// @{
 
 /// @brief Is the epilogue functor specialized for epilogue_policy_default and Xe architecture.
-template <typename tile_shape_, typename mem_desc_c_t_>
-class epilogue_t<epilogue_policy_default<gpu_arch::Xe>, tile_shape_,
-        mem_desc_c_t_> {
+template <typename tile_shape_, typename mem_desc_c_t_, gpu_arch arch_tag_>
+class epilogue_t<epilogue_policy_default<arch_tag_>, tile_shape_, mem_desc_c_t_,
+        std::enable_if_t<((arch_tag_ == gpu_arch::Xe))>> {
 public:
-    using update_method = result_overwrite;
+    using epilogue_policy = epilogue_policy_default<arch_tag_>;
     using tile_shape = tile_shape_;
     using mem_desc_c_t = mem_desc_c_t_;
-    static constexpr gpu_arch arch_tag = gpu_arch::Xe;
+    static constexpr gpu_arch arch_tag = arch_tag_;
     static constexpr uint32_t barrier_count = 0;
-    static constexpr uint32_t slm_size = 0;
+    static constexpr uint32_t slm_size = mem_desc_c_t::is_local
+            ? tile_shape::wg_tile_size_x * tile_shape::wg_tile_size_y
+            : 0;
     /// @brief Epilogue arguments.
     struct arguments_t {};
 
 private:
     using work_group_t = typename tile_shape::work_group_t;
-    static constexpr uint32_t wg_tile_m = tile_shape::wg_tile_size_y;
-    static constexpr uint32_t wg_tile_n = tile_shape::wg_tile_size_x;
     static constexpr uint32_t sg_tile_m = tile_shape::sg_tile_size_y;
     static constexpr uint32_t sg_tile_n = tile_shape::sg_tile_size_x;
     static constexpr uint32_t wg_size_x = tile_shape::wg_size_x;
@@ -53,9 +53,7 @@ private:
     using dtype_c = typename mem_desc_c_t::dtype;
     static constexpr mem_layout mem_layout_c = mem_desc_c_t::layout;
     static constexpr mem_space mem_space_c = mem_desc_c_t::space;
-    static constexpr msg_type msg_type_c
-            = (mem_space_c == mem_space::global ? msg_type::block_2d
-                                                : msg_type::scatter);
+
     /// @brief Updates tile base descriptor based on the tid.
     __XETLA_API static void update_sg_tile_tdesc(
             work_group_t &g, mem_desc_c_t &mem_desc_c) {
@@ -67,6 +65,10 @@ private:
     }
 
 public:
+    static constexpr msg_type msg_type_c
+            = (mem_space_c == mem_space::global ? msg_type::block_2d
+                                                : msg_type::scatter);
+
     /// @brief Default epilogue.
     /// 1) Convert dtype_acc to dtype_c 2) Overwrite to memory.
     /// @tparam matAcc_t Is the type of the input tile.
@@ -80,18 +82,16 @@ public:
     __XETLA_API KERNEL_FUNC void operator()(work_group_t &g, matAcc_t &matAcc,
             mem_desc_c_t mem_desc_c, arguments_t args = {},
             uint32_t slm_base = 0, uint32_t nbarrier_base = 0) {
-        using matC_tile_desc_t = subgroup::tile_desc_t<matAcc_t::tile_size_x,
-                matAcc_t::tile_size_y, matAcc_t::block_size_x,
-                matAcc_t::block_size_y, reg_layout::tiled>;
-        using matC_t = subgroup::tile_t<dtype_c, matC_tile_desc_t>;
-        using matC_payload_t
-                = subgroup::mem_payload_t<dtype_c, matC_tile_desc_t, msg_type_c,
-                        mem_layout_c, mem_space_c, arch_tag>;
+        using mat_tile_desc = typename matAcc_t::tile_desc;
+        using matC_t = subgroup::tile_t<dtype_c, mat_tile_desc>;
+        using matC_payload_t = subgroup::mem_payload_t<mem_desc_c_t,
+                mat_tile_desc, msg_type_c, arch_tag>;
         update_sg_tile_tdesc(g, mem_desc_c);
         matC_t matC;
         matC_payload_t matC_payload(mem_desc_c);
         subgroup::elemwise_cvt(matC, matAcc);
-        subgroup::tile_store(matC, matC_payload);
+        subgroup::tile_store<cache_hint::streaming, cache_hint::write_back>(
+                matC, matC_payload);
     }
 };
 

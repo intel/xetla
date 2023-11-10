@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.5</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.6</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -247,6 +247,10 @@ Functions</h2></td></tr>
 <tr class="memitem:gaf726445179b53828d58382a25a75e99f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; T1, SZ &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__xetla__core__math.html#gaf726445179b53828d58382a25a75e99f">gpu::xetla::xetla_add</a> (<a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; T0, SZ &gt; src0, <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; T0, SZ &gt; src1, Sat sat={})</td></tr>
 <tr class="memdesc:gaf726445179b53828d58382a25a75e99f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds two vectors with saturation The source operands must be both of floating-point type.  <br /></td></tr>
 <tr class="separator:gaf726445179b53828d58382a25a75e99f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6b988fbdca923ae12db3935fda297744"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T0 , int SZ&gt; </td></tr>
+<tr class="memitem:ga6b988fbdca923ae12db3935fda297744"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; T1, SZ &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__xetla__core__math.html#ga6b988fbdca923ae12db3935fda297744">gpu::xetla::xetla_sat</a> (<a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; T0, SZ &gt; src)</td></tr>
+<tr class="memdesc:ga6b988fbdca923ae12db3935fda297744"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saturation function.  <br /></td></tr>
+<tr class="separator:ga6b988fbdca923ae12db3935fda297744"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga70ca188b4a3c71e2b8fcc2defb3bf451"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="namespacegpu_1_1xetla.html#ad437c5605bdaef6fae80e6b099a54f5f">argument_type</a> src1_precision, <a class="el" href="namespacegpu_1_1xetla.html#ad437c5605bdaef6fae80e6b099a54f5f">argument_type</a> src2_precision, int systolic_depth, int repeat_count, typename T , typename T1 , typename T2 , int N, int N1, int N2, typename Sat  = xetla_saturation_off_tag&gt; </td></tr>
 <tr class="memitem:ga70ca188b4a3c71e2b8fcc2defb3bf451"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__xetla__core__math.html#ga70ca188b4a3c71e2b8fcc2defb3bf451">gpu::xetla::xetla_mma</a> (<a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; T, N &gt; src0, <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; T1, N1 &gt; src1, <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; T2, N2 &gt; src2, Sat sat={})</td></tr>
 <tr class="memdesc:ga70ca188b4a3c71e2b8fcc2defb3bf451"><td class="mdescLeft">&#160;</td><td class="mdescRight">description of xetla mma perform matrix multiply add operation  <br /></td></tr>
@@ -1568,6 +1572,36 @@ template&lt;typename T , int SZ, typename Sat  = xetla_saturation_off_tag&gt; </
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns the result of 1/sqrt(x) </dd></dl>
+
+</div>
+</div>
+<a id="ga6b988fbdca923ae12db3935fda297744" name="ga6b988fbdca923ae12db3935fda297744"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6b988fbdca923ae12db3935fda297744">&#9670;&#160;</a></span>xetla_sat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T1 , typename T0 , int SZ&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; T1, SZ &gt; gpu::xetla::xetla_sat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector</a>&lt; T0, SZ &gt;&#160;</td>
+          <td class="paramname"><em>src</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Saturation function. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T0</td><td>element type of the input vectors. </td></tr>
+    <tr><td class="paramname">T1</td><td>element type of the return vector. </td></tr>
+    <tr><td class="paramname">SZ</td><td>size of the input and returned vectors. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

@@ -22,6 +22,7 @@
 #include "common/core/base_ops.hpp"
 #include "common/core/base_types.hpp"
 #include "common/core/common.hpp"
+
 namespace gpu::xetla {
 
 /// @addtogroup xetla_core_misc

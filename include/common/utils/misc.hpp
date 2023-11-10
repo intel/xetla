@@ -20,6 +20,31 @@
 #pragma once
 
 #include "common/utils/common.hpp"
+
+__XETLA_API constexpr uint32_t div_round_up(uint32_t n, uint32_t d) {
+    return (n + d - 1) / d;
+}
+
+//Rounds number down towards the next lowest number
+//e.g. -2.0/3.0 ~ -0.666 -> -1.
+__XETLA_API constexpr int div_round_down(int n, int d) {
+
+    return (n - (((n % d) + d) % d)) / d;
+}
+
+//Calculate modulo based on definition that uses floored divison.
+//Result has the same sign as d.
+__XETLA_API constexpr int modulo(int n, int d) {
+    return (d + (n % d)) % d;
+}
+
+//Pad the given allocation size upto nearest cacheline
+__XETLA_API constexpr uint32_t cacheline_align_up(size_t size) {
+
+    const int CACHELINE_SIZE = 256;
+    return (size + CACHELINE_SIZE - 1) / CACHELINE_SIZE * CACHELINE_SIZE;
+}
+
 namespace gpu::xetla {
 
 /// @addtogroup xetla_util_misc
@@ -150,6 +175,11 @@ recur_col_reduce(xetla_vector<dtype, N_x * N_y> in) {
     return recur_col_reduce<reduce_kind, dtype, N_x / 2, N_y>(temp);
 }
 
+/// @brief get linear group id of the last two dimensions.
+/// @tparam item Is the given sycl::nd_item<3>.
+__XETLA_API uint32_t get_2d_group_linear_id(sycl::nd_item<3> &item) {
+    return item.get_group(2) + item.get_group(1) * item.get_group_range(2);
+}
 /// @} xetla_util_misc
 
 } // namespace gpu::xetla

@@ -5,7 +5,7 @@ var structgpu_1_1xetla_1_1group_1_1ln__fwd__fused__op__t_3_01ln__fwd__fused__kin
     [ "dtype_in", "structgpu_1_1xetla_1_1group_1_1ln__fwd__fused__op__t_3_01ln__fwd__fused__kind_1_1ln__rng__dropou7cd6e677abcfc7a2bed3e7feb170def7.html#a39aea02a391803a2de08ad97ab714e03", null ],
     [ "dtype_mask", "structgpu_1_1xetla_1_1group_1_1ln__fwd__fused__op__t_3_01ln__fwd__fused__kind_1_1ln__rng__dropou7cd6e677abcfc7a2bed3e7feb170def7.html#a4ee8eef4942bc6508bc546d2fb34bb0a", null ],
     [ "dtype_out", "structgpu_1_1xetla_1_1group_1_1ln__fwd__fused__op__t_3_01ln__fwd__fused__kind_1_1ln__rng__dropou7cd6e677abcfc7a2bed3e7feb170def7.html#a8e8f400b8f07f26cd1d91e25d452254c", null ],
-    [ "mask_out_payload_t", "structgpu_1_1xetla_1_1group_1_1ln__fwd__fused__op__t_3_01ln__fwd__fused__kind_1_1ln__rng__dropou7cd6e677abcfc7a2bed3e7feb170def7.html#a2478b0ec59b155e5f1b49bde9af00a8c", null ],
+    [ "mask_out_payload_t", "structgpu_1_1xetla_1_1group_1_1ln__fwd__fused__op__t_3_01ln__fwd__fused__kind_1_1ln__rng__dropou7cd6e677abcfc7a2bed3e7feb170def7.html#a930821aa6184572bb1a3ed3e8e17f1a4", null ],
     [ "mask_out_t", "structgpu_1_1xetla_1_1group_1_1ln__fwd__fused__op__t_3_01ln__fwd__fused__kind_1_1ln__rng__dropou7cd6e677abcfc7a2bed3e7feb170def7.html#a528187a78e26121406a8755983ded2a8", null ],
     [ "mask_out_tile_desc_t", "structgpu_1_1xetla_1_1group_1_1ln__fwd__fused__op__t_3_01ln__fwd__fused__kind_1_1ln__rng__dropou7cd6e677abcfc7a2bed3e7feb170def7.html#ad8f480847b3171e49ca9f72a26dbb703", null ],
     [ "init", "structgpu_1_1xetla_1_1group_1_1ln__fwd__fused__op__t_3_01ln__fwd__fused__kind_1_1ln__rng__dropou7cd6e677abcfc7a2bed3e7feb170def7.html#a79d6cf28d89c6fee3b050039f626bdbd", null ],

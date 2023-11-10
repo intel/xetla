@@ -5,5 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="gpu::xetla::group::\lln_fwd_fused_op_t\< ln\l_fwd_fused_kind::ln_rng\l_dropout, dtype_in_, dtype\l_out_, dtype_acc_, layer_norm\l_attr_, gpu_arch::Xe \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1group_1_1ln__fwd__fused__op__t_3_01ln__fwd__fused__kind_1_1ln__rng__dropou7cd6e677abcfc7a2bed3e7feb170def7.html",tooltip=" "];
+  Node0 [id="Node000000",label="gpu::xetla::group::\lepilogue_stream_k_t\l\< tile_shape_, epilogue\l_t_, mem_desc_d_t_, mem\l_desc_atomic_sync_t_ \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1group_1_1epilogue__stream__k__t.html",tooltip="Is the epilogue functor specialized for stream_k."];
 }

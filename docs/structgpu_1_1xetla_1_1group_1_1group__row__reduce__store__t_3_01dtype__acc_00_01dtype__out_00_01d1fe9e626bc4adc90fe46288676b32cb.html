@@ -37,7 +37,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.5</span>
+   <div id="projectname">XeTLA<span id="projectnumber">&#160;v0.3.6</span>
    </div>
    <div id="projectbrief">Intel® Xe Templates for Linear Algebra - API Definition Document</div>
   </td>
@@ -120,8 +120,8 @@ Public Types</h2></td></tr>
 <tr class="separator:adda421153a9adc725c34da9fd4e0db6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a464fea8dde1c134ca7160ccd8f17e2b1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1group_1_1group__row__reduce__store__t_3_01dtype__acc_00_01dtype__out_00_01d1fe9e626bc4adc90fe46288676b32cb.html#a464fea8dde1c134ca7160ccd8f17e2b1">global_st_t</a> = <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__t.html">subgroup::tile_t</a>&lt; dtype_out, <a class="el" href="structgpu_1_1xetla_1_1group_1_1group__row__reduce__store__t_3_01dtype__acc_00_01dtype__out_00_01d1fe9e626bc4adc90fe46288676b32cb.html#adda421153a9adc725c34da9fd4e0db6a">global_st_tile_desc_t</a> &gt;</td></tr>
 <tr class="separator:a464fea8dde1c134ca7160ccd8f17e2b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5c96a809a447b7aea1149ba4001892f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1group_1_1group__row__reduce__store__t_3_01dtype__acc_00_01dtype__out_00_01d1fe9e626bc4adc90fe46288676b32cb.html#aa5c96a809a447b7aea1149ba4001892f">global_st_payload_t</a> = <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t.html">subgroup::mem_payload_t</a>&lt; dtype_out, <a class="el" href="structgpu_1_1xetla_1_1group_1_1group__row__reduce__store__t_3_01dtype__acc_00_01dtype__out_00_01d1fe9e626bc4adc90fe46288676b32cb.html#adda421153a9adc725c34da9fd4e0db6a">global_st_tile_desc_t</a>,(row_size *sizeof(dtype_out) &gt; 64) ? <a class="el" href="namespacegpu_1_1xetla.html#aa8afe1d12e7777419fb6ea09534a0aa7a5baf9a1aba8e4b6fa44c20aafacc4233">msg_type::block_1d</a> :<a class="el" href="namespacegpu_1_1xetla.html#aa8afe1d12e7777419fb6ea09534a0aa7af359df7632214793e086fdf1885d5db6">msg_type::block_2d</a>, <a class="el" href="namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561a641fabb8e5e7d1d0333e2c9c384f959c">mem_layout::row_major</a>, <a class="el" href="namespacegpu_1_1xetla.html#a7f225ed816e841c1d31414d872dae59da9c70933aff6b2a6d08c687a6cbb6b765">mem_space::global</a>, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;</td></tr>
-<tr class="separator:aa5c96a809a447b7aea1149ba4001892f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bcc47a28bf9fe2d58f5b2879c7371bf"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpu_1_1xetla_1_1group_1_1group__row__reduce__store__t_3_01dtype__acc_00_01dtype__out_00_01d1fe9e626bc4adc90fe46288676b32cb.html#a3bcc47a28bf9fe2d58f5b2879c7371bf">global_st_payload_t</a> = <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t.html">subgroup::mem_payload_t</a>&lt; <a class="el" href="structgpu_1_1xetla_1_1mem__desc__t.html">mem_desc_t</a>&lt; dtype_out, <a class="el" href="namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561a641fabb8e5e7d1d0333e2c9c384f959c">mem_layout::row_major</a>, <a class="el" href="namespacegpu_1_1xetla.html#a7f225ed816e841c1d31414d872dae59da9c70933aff6b2a6d08c687a6cbb6b765">mem_space::global</a> &gt;, <a class="el" href="structgpu_1_1xetla_1_1group_1_1group__row__reduce__store__t_3_01dtype__acc_00_01dtype__out_00_01d1fe9e626bc4adc90fe46288676b32cb.html#adda421153a9adc725c34da9fd4e0db6a">global_st_tile_desc_t</a>,(row_size *sizeof(dtype_out) &gt; 64) ? <a class="el" href="namespacegpu_1_1xetla.html#aa8afe1d12e7777419fb6ea09534a0aa7a5baf9a1aba8e4b6fa44c20aafacc4233">msg_type::block_1d</a> :<a class="el" href="namespacegpu_1_1xetla.html#aa8afe1d12e7777419fb6ea09534a0aa7af359df7632214793e086fdf1885d5db6">msg_type::block_2d</a>, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;</td></tr>
+<tr class="separator:a3bcc47a28bf9fe2d58f5b2879c7371bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -136,8 +136,8 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:a81b12182a1979353f17d4812414127ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="aa5c96a809a447b7aea1149ba4001892f" name="aa5c96a809a447b7aea1149ba4001892f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa5c96a809a447b7aea1149ba4001892f">&#9670;&#160;</a></span>global_st_payload_t</h2>
+<a id="a3bcc47a28bf9fe2d58f5b2879c7371bf" name="a3bcc47a28bf9fe2d58f5b2879c7371bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bcc47a28bf9fe2d58f5b2879c7371bf">&#9670;&#160;</a></span>global_st_payload_t</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -145,7 +145,7 @@ Static Public Attributes</h2></td></tr>
 template&lt;typename dtype_acc , typename dtype_out , uint32_t row_size, uint32_t wg_size_x, uint32_t max_simd_len&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1group_1_1group__row__reduce__store__t.html">gpu::xetla::group::group_row_reduce_store_t</a>&lt; dtype_acc, dtype_out, row_size, wg_size_x, 1, max_simd_len, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;::global_st_payload_t =  <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t.html">subgroup::mem_payload_t</a>&lt;dtype_out, <a class="el" href="structgpu_1_1xetla_1_1group_1_1group__row__reduce__store__t_3_01dtype__acc_00_01dtype__out_00_01d1fe9e626bc4adc90fe46288676b32cb.html#adda421153a9adc725c34da9fd4e0db6a">global_st_tile_desc_t</a>, (row_size * sizeof(dtype_out) &gt; 64) ? <a class="el" href="namespacegpu_1_1xetla.html#aa8afe1d12e7777419fb6ea09534a0aa7a5baf9a1aba8e4b6fa44c20aafacc4233">msg_type::block_1d</a> : <a class="el" href="namespacegpu_1_1xetla.html#aa8afe1d12e7777419fb6ea09534a0aa7af359df7632214793e086fdf1885d5db6">msg_type::block_2d</a>, <a class="el" href="namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561a641fabb8e5e7d1d0333e2c9c384f959c">mem_layout::row_major</a>, <a class="el" href="namespacegpu_1_1xetla.html#a7f225ed816e841c1d31414d872dae59da9c70933aff6b2a6d08c687a6cbb6b765">mem_space::global</a>, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>&gt;</td>
+          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1group_1_1group__row__reduce__store__t.html">gpu::xetla::group::group_row_reduce_store_t</a>&lt; dtype_acc, dtype_out, row_size, wg_size_x, 1, max_simd_len, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;::global_st_payload_t =  <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t.html">subgroup::mem_payload_t</a>&lt; <a class="el" href="structgpu_1_1xetla_1_1mem__desc__t.html">mem_desc_t</a>&lt;dtype_out, <a class="el" href="namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561a641fabb8e5e7d1d0333e2c9c384f959c">mem_layout::row_major</a>, <a class="el" href="namespacegpu_1_1xetla.html#a7f225ed816e841c1d31414d872dae59da9c70933aff6b2a6d08c687a6cbb6b765">mem_space::global</a>&gt;, <a class="el" href="structgpu_1_1xetla_1_1group_1_1group__row__reduce__store__t_3_01dtype__acc_00_01dtype__out_00_01d1fe9e626bc4adc90fe46288676b32cb.html#adda421153a9adc725c34da9fd4e0db6a">global_st_tile_desc_t</a>, (row_size * sizeof(dtype_out) &gt; 64) ? <a class="el" href="namespacegpu_1_1xetla.html#aa8afe1d12e7777419fb6ea09534a0aa7a5baf9a1aba8e4b6fa44c20aafacc4233">msg_type::block_1d</a> : <a class="el" href="namespacegpu_1_1xetla.html#aa8afe1d12e7777419fb6ea09534a0aa7af359df7632214793e086fdf1885d5db6">msg_type::block_2d</a>, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -161,7 +161,7 @@ template&lt;typename dtype_acc , typename dtype_out , uint32_t row_size, uint32_
 template&lt;typename dtype_acc , typename dtype_out , uint32_t row_size, uint32_t wg_size_x, uint32_t max_simd_len&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1group_1_1group__row__reduce__store__t.html">gpu::xetla::group::group_row_reduce_store_t</a>&lt; dtype_acc, dtype_out, row_size, wg_size_x, 1, max_simd_len, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;::global_st_t =  <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__t.html">subgroup::tile_t</a>&lt;dtype_out, <a class="el" href="structgpu_1_1xetla_1_1group_1_1group__row__reduce__store__t_3_01dtype__acc_00_01dtype__out_00_01d1fe9e626bc4adc90fe46288676b32cb.html#adda421153a9adc725c34da9fd4e0db6a">global_st_tile_desc_t</a>&gt;</td>
+          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1group_1_1group__row__reduce__store__t.html">gpu::xetla::group::group_row_reduce_store_t</a>&lt; dtype_acc, dtype_out, row_size, wg_size_x, 1, max_simd_len, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;::global_st_t =  <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__t.html">subgroup::tile_t</a>&lt;dtype_out, <a class="el" href="structgpu_1_1xetla_1_1group_1_1group__row__reduce__store__t_3_01dtype__acc_00_01dtype__out_00_01d1fe9e626bc4adc90fe46288676b32cb.html#adda421153a9adc725c34da9fd4e0db6a">global_st_tile_desc_t</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -177,7 +177,7 @@ template&lt;typename dtype_acc , typename dtype_out , uint32_t row_size, uint32_
 template&lt;typename dtype_acc , typename dtype_out , uint32_t row_size, uint32_t wg_size_x, uint32_t max_simd_len&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1group_1_1group__row__reduce__store__t.html">gpu::xetla::group::group_row_reduce_store_t</a>&lt; dtype_acc, dtype_out, row_size, wg_size_x, 1, max_simd_len, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;::global_st_tile_desc_t =  <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__desc__t.html">subgroup::tile_desc_t</a>&lt;row_size, 1, <a class="el" href="structgpu_1_1xetla_1_1group_1_1group__row__reduce__store__t_3_01dtype__acc_00_01dtype__out_00_01d1fe9e626bc4adc90fe46288676b32cb.html#a81b12182a1979353f17d4812414127ab">block_size_x</a>, 1, <a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa78506882d645395a052df8b01a927395">reg_layout::tiled</a>&gt;</td>
+          <td class="memname">using <a class="el" href="structgpu_1_1xetla_1_1group_1_1group__row__reduce__store__t.html">gpu::xetla::group::group_row_reduce_store_t</a>&lt; dtype_acc, dtype_out, row_size, wg_size_x, 1, max_simd_len, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;::global_st_tile_desc_t =  <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__desc__t.html">subgroup::tile_desc_t</a>&lt;row_size, 1, <a class="el" href="structgpu_1_1xetla_1_1group_1_1group__row__reduce__store__t_3_01dtype__acc_00_01dtype__out_00_01d1fe9e626bc4adc90fe46288676b32cb.html#a81b12182a1979353f17d4812414127ab">block_size_x</a>, 1, <a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa78506882d645395a052df8b01a927395">reg_layout::tiled</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -197,7 +197,7 @@ template&lt;typename dtype_acc , typename dtype_out , uint32_t row_size, uint32_
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="structgpu_1_1xetla_1_1group_1_1group__row__reduce__store__t.html">gpu::xetla::group::group_row_reduce_store_t</a>&lt; dtype_acc, dtype_out, row_size, wg_size_x, 1, max_simd_len, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;::init </td>
+          <td class="memname">void <a class="el" href="structgpu_1_1xetla_1_1group_1_1group__row__reduce__store__t.html">gpu::xetla::group::group_row_reduce_store_t</a>&lt; dtype_acc, dtype_out, row_size, wg_size_x, 1, max_simd_len, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;::init </td>
           <td>(</td>
           <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>sg_idx_</em> = <code>0</code>, </td>
@@ -247,7 +247,7 @@ template&lt;typename dtype_acc , typename dtype_out , uint32_t row_size, uint32_
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="group__xetla__core.html#gafb2a0442e367d71b79a2f932d0d39c8b">KERNEL_FUNC</a> void <a class="el" href="structgpu_1_1xetla_1_1group_1_1group__row__reduce__store__t.html">gpu::xetla::group::group_row_reduce_store_t</a>&lt; dtype_acc, dtype_out, row_size, wg_size_x, 1, max_simd_len, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;::operator() </td>
+          <td class="memname"><a class="el" href="group__xetla__core.html#gafb2a0442e367d71b79a2f932d0d39c8b">KERNEL_FUNC</a> void <a class="el" href="structgpu_1_1xetla_1_1group_1_1group__row__reduce__store__t.html">gpu::xetla::group::group_row_reduce_store_t</a>&lt; dtype_acc, dtype_out, row_size, wg_size_x, 1, max_simd_len, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;::operator() </td>
           <td>(</td>
           <td class="paramtype">dtype_out *&#160;</td>
           <td class="paramname"><em>ptr</em>, </td>
@@ -316,7 +316,7 @@ template&lt;typename dtype_acc , typename dtype_out , uint32_t row_size, uint32_
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1group_1_1group__row__reduce__store__t.html">gpu::xetla::group::group_row_reduce_store_t</a>&lt; dtype_acc, dtype_out, row_size, wg_size_x, 1, max_simd_len, <a class="el" href="group__xetla__core__arch__config.html#ggaa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;::block_size_x = <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1detail_1_1gcd.html">gpu::xetla::subgroup::detail::gcd</a>&lt;row_size, max_simd_len&gt;::value</td>
+          <td class="memname">constexpr uint32_t <a class="el" href="structgpu_1_1xetla_1_1group_1_1group__row__reduce__store__t.html">gpu::xetla::group::group_row_reduce_store_t</a>&lt; dtype_acc, dtype_out, row_size, wg_size_x, 1, max_simd_len, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a> &gt;::block_size_x = <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1detail_1_1gcd.html">gpu::xetla::subgroup::detail::gcd</a>&lt;row_size, max_simd_len&gt;::value</td>
         </tr>
       </table>
   </td>

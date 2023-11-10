@@ -1,0 +1,9 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node0 [id="Node000000",label="gpu::xetla::subgroup\l::mem_payload_t\< mem\l_desc_t\< dtype_, mem_layout\l::row_major, mem_space::local,\l alignment_ \>, tile_desc_t\< tile\l_size_x_, tile_size_y_, block_size\l_x_, block_size_y_, reg_layout::vnni\l_tiled_col_major \>, msg_type::scatter,\l arch_tag_, std::enable_if_t\<(arch_tag\l_==gpu_arch::Xe)\> \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1subgroup_1_1mem__payload__t_3_01mem__desc__t_3_01dtype___00_01mem__layout_90628da9b41c8e6179e76c642bd368d1.html",tooltip="Is to describe the shared local memory surface for scattering store."];
+}

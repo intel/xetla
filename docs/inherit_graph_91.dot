@@ -5,5 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="gpu::xetla::group::\lpre_processing_matA\l_neg_filter_t\< tile_shape\l_, arch_tag, std::enable\l_if_t\<(arch_tag==gpu_arch\l::Xe)\> \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classgpu_1_1xetla_1_1group_1_1pre__processing__matA__neg__filter__t_3_01tile__shape___00_01arch_3f269232e8814e5747b4e6ab262f8b4f.html",tooltip="gemm pre_processing functor with applying relu op to matA. Specialized for Xe architecture."];
+  Node0 [id="Node000000",label="gpu::xetla::group::\lepilogue_t\< epilogue\l_policy_unaligned\< arch\l_tag_ \>, tile_shape_, mem\l_desc_c_t_, std::enable_if\l_t\<((arch_tag_==gpu_arch::Xe))\> \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classgpu_1_1xetla_1_1group_1_1epilogue__t_3_01epilogue__policy__unaligned_3_01arch__tag___01_4_0f9b8db79e061048fa53f846a863429de.html",tooltip="Is the epilogue functor specialized for epilogue_policy_default and Xe architecture."];
 }

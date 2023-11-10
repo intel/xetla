@@ -1,9 +1,9 @@
 var structgpu_1_1xetla_1_1group_1_1group__reduce__t_3_01T_00_01SZ_00_01N_00_01Op_00_01N__SG_00_01is_312e6f1fad2d403551d4a5a4b4ddfc07 =
 [
-    [ "local_ld_payload_t", "structgpu_1_1xetla_1_1group_1_1group__reduce__t_3_01T_00_01SZ_00_01N_00_01Op_00_01N__SG_00_01is_312e6f1fad2d403551d4a5a4b4ddfc07.html#a2deca4f1ef1ccbf2a2c6646f35e4300c", null ],
+    [ "local_ld_payload_t", "structgpu_1_1xetla_1_1group_1_1group__reduce__t_3_01T_00_01SZ_00_01N_00_01Op_00_01N__SG_00_01is_312e6f1fad2d403551d4a5a4b4ddfc07.html#a25189f29fa7d04352df4ccfc4b71ef3b", null ],
     [ "local_ld_t", "structgpu_1_1xetla_1_1group_1_1group__reduce__t_3_01T_00_01SZ_00_01N_00_01Op_00_01N__SG_00_01is_312e6f1fad2d403551d4a5a4b4ddfc07.html#ab1df91863535bcfa64120266c11d89e2", null ],
     [ "local_ld_tile_desc", "structgpu_1_1xetla_1_1group_1_1group__reduce__t_3_01T_00_01SZ_00_01N_00_01Op_00_01N__SG_00_01is_312e6f1fad2d403551d4a5a4b4ddfc07.html#a3d909ca7d687a600ac12146d5cbe4504", null ],
-    [ "local_st_payload_t", "structgpu_1_1xetla_1_1group_1_1group__reduce__t_3_01T_00_01SZ_00_01N_00_01Op_00_01N__SG_00_01is_312e6f1fad2d403551d4a5a4b4ddfc07.html#adbc4156eae4f355458b434e1aafee4b2", null ],
+    [ "local_st_payload_t", "structgpu_1_1xetla_1_1group_1_1group__reduce__t_3_01T_00_01SZ_00_01N_00_01Op_00_01N__SG_00_01is_312e6f1fad2d403551d4a5a4b4ddfc07.html#a48b65742ea07dc291f45b289ea2145f2", null ],
     [ "local_st_t", "structgpu_1_1xetla_1_1group_1_1group__reduce__t_3_01T_00_01SZ_00_01N_00_01Op_00_01N__SG_00_01is_312e6f1fad2d403551d4a5a4b4ddfc07.html#a850378568b0ab9f024f51f33504f3bdb", null ],
     [ "local_st_tile_desc", "structgpu_1_1xetla_1_1group_1_1group__reduce__t_3_01T_00_01SZ_00_01N_00_01Op_00_01N__SG_00_01is_312e6f1fad2d403551d4a5a4b4ddfc07.html#a109451e96f2328011925c3f6d7833ed7", null ],
     [ "group_reduce_t", "structgpu_1_1xetla_1_1group_1_1group__reduce__t_3_01T_00_01SZ_00_01N_00_01Op_00_01N__SG_00_01is_312e6f1fad2d403551d4a5a4b4ddfc07.html#ad224bbe3fa0643a73ddd9d93259e9a81", null ],
@@ -11,7 +11,7 @@ var structgpu_1_1xetla_1_1group_1_1group__reduce__t_3_01T_00_01SZ_00_01N_00_01Op
     [ "init", "structgpu_1_1xetla_1_1group_1_1group__reduce__t_3_01T_00_01SZ_00_01N_00_01Op_00_01N__SG_00_01is_312e6f1fad2d403551d4a5a4b4ddfc07.html#a4b2d794c3bf0f146b11d2fe8d6b551fc", null ],
     [ "operator()", "structgpu_1_1xetla_1_1group_1_1group__reduce__t_3_01T_00_01SZ_00_01N_00_01Op_00_01N__SG_00_01is_312e6f1fad2d403551d4a5a4b4ddfc07.html#a10f7e079836b3307a5e2c91ab84988ce", null ],
     [ "set_slm_base", "structgpu_1_1xetla_1_1group_1_1group__reduce__t_3_01T_00_01SZ_00_01N_00_01Op_00_01N__SG_00_01is_312e6f1fad2d403551d4a5a4b4ddfc07.html#a3b2d6affc44e7362c22dda20a18a73c7", null ],
-    [ "nbarrier", "structgpu_1_1xetla_1_1group_1_1group__reduce__t_3_01T_00_01SZ_00_01N_00_01Op_00_01N__SG_00_01is_312e6f1fad2d403551d4a5a4b4ddfc07.html#ae2c87aa8792c762cc949fead67161c5c", null ],
+    [ "nbarrier", "structgpu_1_1xetla_1_1group_1_1group__reduce__t_3_01T_00_01SZ_00_01N_00_01Op_00_01N__SG_00_01is_312e6f1fad2d403551d4a5a4b4ddfc07.html#a7de004d731154947e2e728b54c2079bc", null ],
     [ "sg_id", "structgpu_1_1xetla_1_1group_1_1group__reduce__t_3_01T_00_01SZ_00_01N_00_01Op_00_01N__SG_00_01is_312e6f1fad2d403551d4a5a4b4ddfc07.html#a77dd31d9bb35a2ad6e1e210c2dfdeeb1", null ],
     [ "sg_reduce", "structgpu_1_1xetla_1_1group_1_1group__reduce__t_3_01T_00_01SZ_00_01N_00_01Op_00_01N__SG_00_01is_312e6f1fad2d403551d4a5a4b4ddfc07.html#afa17ff59317261b0de3e98004f9b9060", null ],
     [ "slm_base", "structgpu_1_1xetla_1_1group_1_1group__reduce__t_3_01T_00_01SZ_00_01N_00_01Op_00_01N__SG_00_01is_312e6f1fad2d403551d4a5a4b4ddfc07.html#a427ca747533511c8a9a671c49bc9e3ba", null ]
