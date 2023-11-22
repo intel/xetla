@@ -217,9 +217,9 @@ concept xetla_matrix_ref
 
 } // namespace gpu::xetla
 
-namespace sycl {
+namespace sycl::detail {
 template <typename T>
-struct is_device_copyable<T,
+struct is_device_copyable_impl<T,
         std::enable_if_t<gpu::xetla::is_host_callable<T>::value>>
     : std::true_type {};
-} // namespace sycl
+} // namespace sycl::detail
