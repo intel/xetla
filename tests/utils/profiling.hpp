@@ -17,13 +17,15 @@
 #pragma once
 
 #include <algorithm>
+#include <cmath>
 #include <iostream>
-#include <math.h>
 #include <stdlib.h>
 #include <string>
 #include <vector>
 #include <CL/sycl.hpp>
 #include <gtest/gtest.h>
+
+using namespace sycl::_V1;
 
 enum class profiling_selector : uint8_t { CPU = 0, GPU = 1, ALL = 2 };
 
@@ -96,7 +98,7 @@ class profiling_helper {
 
         //time mean square error
         for (int i = 1; i < iter; i++) {
-            stat.variance += pow(time[i] - stat.mean, 2);
+            stat.variance += sycl::pow(time[i] - stat.mean, 2);
         }
         stat.variance /= iter;
     }
