@@ -1,9 +1,0 @@
-test_id,scenario,kernel,time,driver ver,compiler ver,kernel_time.minimum(ms),kernel_time.maximum(ms),kernel_time.median(ms),kernel_time.mean(ms),kernel_time.minimum(gflops),kernel_time.maximum(gflops),kernel_time.median(gflops),kernel_time.mean(gflops)
-nerf/mlp_fusion_test/esimd_tf32,"(1, 1024)",fused_gemm,2023.1.1,v12.3,dpcpp.1234,189436.74569,189436.74569,189436.74569,189436.74569,189436.74569,189436.74569,189436.74569,189436.74569
-nerf/mlp_fusion_test/esimd_tf32,"(1, 1048576)",fused_gemm,2023.1.1,v12.3,dpcpp.1234,122246.36961,122246.36961,122246.36961,122246.36961,122246.36961,122246.36961,122246.36961,122246.36961
-nerf/mlp_fusion_test/esimd_tf32,"(100, 1048576)",fused_gemm,2023.1.1,v12.3,dpcpp.1234,4483.085178,90896.487238,10441.569323,11789.031353,4483.085178,90896.487238,10441.569323,11789.031353
-nerf/mlp_fusion_test/esimd_fp16,"(1, 1024)",fused_gemm,2023.1.1,v12.3,dpcpp.1234,97272.786083,97272.786083,97272.786083,97272.786083,97272.786083,97272.786083,97272.786083,97272.786083
-nerf/mlp_fusion_test/esimd_fp16,"(1, 1048576)",fused_gemm,2023.1.1,v12.3,dpcpp.1234,68114.741997,68114.741997,68114.741997,68114.741997,68114.741997,68114.741997,68114.741997,68114.741997
-nerf/mlp_fusion_test/esimd_fp16,"(1, 1048576)",abc_gemm,2023.1.1,v12.3,dpcpp.1234,101.0,505.0,303.0,404.0,111.0,555.0,335.0,444.0
-nerf/mlp_fusion_test/esimd_fp16,"(100, 1048576)",fused_gemm,2023.1.1,v12.3,dpcpp.1234,1.1,5.5,3.3,4.4,10.1,50.5,30.3,40.4
-nerf/mlp_fusion_test/esimd_fp16,"(100, 1048576)",abc_gemm,2023.1.1,v12.3,dpcpp.1234,100.0,500.0,300.0,400.0,110.0,550.0,330.0,440.0
