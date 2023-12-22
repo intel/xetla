@@ -264,36 +264,36 @@ $(document).ready(function(){initNavTree('int4__dequantize__kslicing__xe_8hpp_so
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>            : matrix_m(matrix_m_)</div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>            , matrix_k(matrix_k_)</div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>            , matrix_n(matrix_n_)</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>            , matA_base(matA_base_)</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>            , matA_ld(matA_ld_)</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>            , matB_base(matB_base_)</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>            , matB_ld(matB_ld_)</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>            , matC_base(matC_base_)</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>            , matC_ld(matC_ld_)</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>            , scale_base(scale_base_)</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>            , scale_ld(scale_ld_)</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>            , zero_pt_base(zero_pt_base_)</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>            , zero_pt_ld(zero_pt_ld_)</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>            , acc_base(acc_base_)</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>            , cnt_base(cnt_base_)</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>            , epilogue_args(epilogue_args_) {}</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>            , matA_ld(matA_ld_)</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>            , matB_ld(matB_ld_)</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>            , matC_ld(matC_ld_)</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>            , matA_base(matA_base_)</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>            , matB_base(matB_base_)</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>            , matC_base(matC_base_)</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>            , acc_base(acc_base_)</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>            , cnt_base(cnt_base_)</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>            , epilogue_args(epilogue_args_)</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>            , scale_base(scale_base_)</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>            , zero_pt_base(zero_pt_base_)</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>            , scale_ld(scale_ld_)</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>            , zero_pt_ld(zero_pt_ld_) {}</div>
 <div class="line"><a id="l00209" name="l00209"></a><span class="lineno"><a class="line" href="structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__int4__dequantize__kslic3e58a74a26d2da102b5b4af80df768a2.html#a4912ef6c0b6c582826f2936d30509ac2">  209</a></span>        <span class="keyword">inline</span> <a class="code hl_function" href="structgpu_1_1xetla_1_1kernel_1_1gemm__universal__t_3_01dispatch__policy__int4__dequantize__kslic3e58a74a26d2da102b5b4af80df768a2.html#a4912ef6c0b6c582826f2936d30509ac2">arguments_t</a>(<span class="keyword">const</span> arguments_t &amp;args)</div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>            : matrix_m(args.matrix_m)</div>
 <div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>            , matrix_k(args.matrix_k)</div>
 <div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>            , matrix_n(args.matrix_n)</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>            , matA_base(args.matA_base)</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>            , matA_ld(args.matA_ld)</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>            , matB_base(args.matB_base)</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>            , matB_ld(args.matB_ld)</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>            , matC_base(args.matC_base)</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>            , matC_ld(args.matC_ld)</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>            , scale_base(args.scale_base)</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>            , scale_ld(args.scale_ld)</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>            , zero_pt_base(args.zero_pt_base)</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>            , zero_pt_ld(args.zero_pt_ld)</div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>            , acc_base(args.acc_base)</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>            , cnt_base(args.cnt_base)</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>            , epilogue_args(args.epilogue_args) {}</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>            , matA_ld(args.matA_ld)</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>            , matB_ld(args.matB_ld)</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>            , matC_ld(args.matC_ld)</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>            , matA_base(args.matA_base)</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>            , matB_base(args.matB_base)</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>            , matC_base(args.matC_base)</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>            , acc_base(args.acc_base)</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>            , cnt_base(args.cnt_base)</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>            , epilogue_args(args.epilogue_args)</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>            , scale_base(args.scale_base)</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>            , zero_pt_base(args.zero_pt_base)</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>            , scale_ld(args.scale_ld)</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>            , zero_pt_ld(args.zero_pt_ld) {}</div>
 <div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>        <span class="comment">// Be aware of the risks: Rule of three (copy constructor, copy assignment, destructor)</span></div>
 <div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>        <span class="comment">// Please check if you need to add self-define destructor</span></div>
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>        <span class="comment">// inline ~arguments_t(){}</span></div>
@@ -431,30 +431,30 @@ $(document).ready(function(){initNavTree('int4__dequantize__kslicing__xe_8hpp_so
 <div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>        <span class="keywordtype">int</span> start_m = group_swizzle.template get_tile_idx&lt;1&gt;(item) * wg_tile_m;</div>
 <div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>        <span class="keywordtype">int</span> start_n = group_swizzle.template get_tile_idx&lt;2&gt;(item) * wg_tile_n;</div>
 <div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>        <span class="keywordtype">int</span> start_k = 0;</div>
-<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>        uint32_t wg_tile_k = args.matrix_k;</div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>        uint32_t <a class="code hl_enumvalue" href="namespacegpu_1_1xetla.html#a9f7eef3c821ada280831b67eebf15730a80ab7aefc3ac2ea4fa2c288b3e479759">wg_tile_k</a> = args.matrix_k;</div>
 <div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>        uint32_t boundary_n = (start_n + wg_tile_n) &gt; args.matrix_n</div>
 <div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>                ? args.matrix_n</div>
 <div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>                : (start_n + wg_tile_n);</div>
 <div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>        uint32_t boundary_m = (start_m + wg_tile_m) &gt; args.matrix_m</div>
 <div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>                ? args.matrix_m</div>
 <div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>                : (start_m + wg_tile_m);</div>
-<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>        uint32_t boundary_k = wg_tile_k;</div>
+<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>        uint32_t boundary_k = <a class="code hl_enumvalue" href="namespacegpu_1_1xetla.html#a9f7eef3c821ada280831b67eebf15730a80ab7aefc3ac2ea4fa2c288b3e479759">wg_tile_k</a>;</div>
 <div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>        <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (num_global_kslicing &gt; 1) {</div>
-<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>            wg_tile_k = (wg_tile_k + num_global_kslicing - 1)</div>
+<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>            <a class="code hl_enumvalue" href="namespacegpu_1_1xetla.html#a9f7eef3c821ada280831b67eebf15730a80ab7aefc3ac2ea4fa2c288b3e479759">wg_tile_k</a> = (<a class="code hl_enumvalue" href="namespacegpu_1_1xetla.html#a9f7eef3c821ada280831b67eebf15730a80ab7aefc3ac2ea4fa2c288b3e479759">wg_tile_k</a> + num_global_kslicing - 1)</div>
 <div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>                    / num_global_kslicing;</div>
 <div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>            start_k = start_k</div>
-<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>                    + group_swizzle.template get_tile_idx&lt;0&gt;(item) * wg_tile_k;</div>
-<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>            boundary_k = (start_k + wg_tile_k) &gt; boundary_k</div>
+<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>                    + group_swizzle.template get_tile_idx&lt;0&gt;(item) * <a class="code hl_enumvalue" href="namespacegpu_1_1xetla.html#a9f7eef3c821ada280831b67eebf15730a80ab7aefc3ac2ea4fa2c288b3e479759">wg_tile_k</a>;</div>
+<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>            boundary_k = (start_k + <a class="code hl_enumvalue" href="namespacegpu_1_1xetla.html#a9f7eef3c821ada280831b67eebf15730a80ab7aefc3ac2ea4fa2c288b3e479759">wg_tile_k</a>) &gt; boundary_k</div>
 <div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>                    ? boundary_k</div>
-<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>                    : (start_k + wg_tile_k);</div>
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>                    : (start_k + <a class="code hl_enumvalue" href="namespacegpu_1_1xetla.html#a9f7eef3c821ada280831b67eebf15730a80ab7aefc3ac2ea4fa2c288b3e479759">wg_tile_k</a>);</div>
 <div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>        }</div>
 <div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>        <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (num_local_kslicing &gt; 1) {</div>
-<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>            wg_tile_k</div>
-<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>                    = (wg_tile_k + num_local_kslicing - 1) / num_local_kslicing;</div>
-<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>            start_k = start_k + wg_id * wg_tile_k;</div>
-<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>            boundary_k = (start_k + wg_tile_k) &gt; boundary_k</div>
+<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>            <a class="code hl_enumvalue" href="namespacegpu_1_1xetla.html#a9f7eef3c821ada280831b67eebf15730a80ab7aefc3ac2ea4fa2c288b3e479759">wg_tile_k</a></div>
+<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>                    = (<a class="code hl_enumvalue" href="namespacegpu_1_1xetla.html#a9f7eef3c821ada280831b67eebf15730a80ab7aefc3ac2ea4fa2c288b3e479759">wg_tile_k</a> + num_local_kslicing - 1) / num_local_kslicing;</div>
+<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>            start_k = start_k + wg_id * <a class="code hl_enumvalue" href="namespacegpu_1_1xetla.html#a9f7eef3c821ada280831b67eebf15730a80ab7aefc3ac2ea4fa2c288b3e479759">wg_tile_k</a>;</div>
+<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>            boundary_k = (start_k + <a class="code hl_enumvalue" href="namespacegpu_1_1xetla.html#a9f7eef3c821ada280831b67eebf15730a80ab7aefc3ac2ea4fa2c288b3e479759">wg_tile_k</a>) &gt; boundary_k</div>
 <div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>                    ? boundary_k</div>
-<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>                    : (start_k + wg_tile_k);</div>
+<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>                    : (start_k + <a class="code hl_enumvalue" href="namespacegpu_1_1xetla.html#a9f7eef3c821ada280831b67eebf15730a80ab7aefc3ac2ea4fa2c288b3e479759">wg_tile_k</a>);</div>
 <div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>        }</div>
 <div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span> </div>
 <div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span>        <span class="keywordtype">int</span> start_x_scale = start_n;</div>
@@ -499,7 +499,7 @@ $(document).ready(function(){initNavTree('int4__dequantize__kslicing__xe_8hpp_so
 <div class="line"><a id="l00461" name="l00461"></a><span class="lineno">  461</span>                        args.zero_pt_ld / pack_ratio},</div>
 <div class="line"><a id="l00462" name="l00462"></a><span class="lineno">  462</span>                {start_x_zero_pt, start_y_zero_pt});</div>
 <div class="line"><a id="l00463" name="l00463"></a><span class="lineno">  463</span> </div>
-<div class="line"><a id="l00464" name="l00464"></a><span class="lineno">  464</span>        uint32_t inner_loop_count = (wg_tile_k + k_stride - 1) / k_stride;</div>
+<div class="line"><a id="l00464" name="l00464"></a><span class="lineno">  464</span>        uint32_t inner_loop_count = (<a class="code hl_enumvalue" href="namespacegpu_1_1xetla.html#a9f7eef3c821ada280831b67eebf15730a80ab7aefc3ac2ea4fa2c288b3e479759">wg_tile_k</a> + k_stride - 1) / k_stride;</div>
 <div class="line"><a id="l00465" name="l00465"></a><span class="lineno">  465</span>        gemm_args_t gemm_args(mem_desc_a, mem_desc_b, inner_loop_count,</div>
 <div class="line"><a id="l00466" name="l00466"></a><span class="lineno">  466</span>                mem_desc_scale, mem_desc_zero_pt);</div>
 <div class="line"><a id="l00467" name="l00467"></a><span class="lineno">  467</span>        matAcc_t matAcc;</div>
@@ -582,6 +582,7 @@ $(document).ready(function(){initNavTree('int4__dequantize__kslicing__xe_8hpp_so
 <div class="ttc" id="agroup__xetla__core_html_gafb2a0442e367d71b79a2f932d0d39c8b"><div class="ttname"><a href="group__xetla__core.html#gafb2a0442e367d71b79a2f932d0d39c8b">KERNEL_FUNC</a></div><div class="ttdeci">#define KERNEL_FUNC</div><div class="ttdoc">KERNEL_FUNC macro.</div><div class="ttdef"><b>Definition</b> common.hpp:39</div></div>
 <div class="ttc" id="anamespacegpu_1_1xetla_1_1kernel_html"><div class="ttname"><a href="namespacegpu_1_1xetla_1_1kernel.html">gpu::xetla::kernel</a></div><div class="ttdef"><b>Definition</b> limitation.hpp:734</div></div>
 <div class="ttc" id="anamespacegpu_1_1xetla_html_a7bbd70f1164d3a7251729e89fffc0609a1d623b89683f9ce4e074de1676d12416"><div class="ttname"><a href="namespacegpu_1_1xetla.html#a7bbd70f1164d3a7251729e89fffc0609a1d623b89683f9ce4e074de1676d12416">gpu::xetla::reduce_op::sum</a></div><div class="ttdeci">@ sum</div></div>
+<div class="ttc" id="anamespacegpu_1_1xetla_html_a9f7eef3c821ada280831b67eebf15730a80ab7aefc3ac2ea4fa2c288b3e479759"><div class="ttname"><a href="namespacegpu_1_1xetla.html#a9f7eef3c821ada280831b67eebf15730a80ab7aefc3ac2ea4fa2c288b3e479759">gpu::xetla::tune_key::wg_tile_k</a></div><div class="ttdeci">@ wg_tile_k</div></div>
 <div class="ttc" id="anamespacegpu_1_1xetla_html_aa5a2713edb27d6fed88a3c61673556f1"><div class="ttname"><a href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu::xetla::gpu_arch</a></div><div class="ttdeci">gpu_arch</div><div class="ttdef"><b>Definition</b> common.hpp:73</div></div>
 <div class="ttc" id="anamespacegpu_1_1xetla_html_aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130"><div class="ttname"><a href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu::xetla::gpu_arch::Xe</a></div><div class="ttdeci">@ Xe</div></div>
 <div class="ttc" id="anamespacegpu_1_1xetla_html_aa8afe1d12e7777419fb6ea09534a0aa7a1fcd9767078d24d0fa3e5cec3234026b"><div class="ttname"><a href="namespacegpu_1_1xetla.html#aa8afe1d12e7777419fb6ea09534a0aa7a1fcd9767078d24d0fa3e5cec3234026b">gpu::xetla::msg_type::unaligned_2d</a></div><div class="ttdeci">@ unaligned_2d</div></div>

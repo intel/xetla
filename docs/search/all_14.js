@@ -8,8 +8,8 @@ var searchData=
   ['u32_5',['u32',['../namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76aa311a831b48d59687cf0822a612c9032',1,'gpu::xetla']]],
   ['u4_6',['U4',['../namespacegpu_1_1xetla.html#ad437c5605bdaef6fae80e6b099a54f5fa7a7e060fbac468049775df37d8dfa511',1,'gpu::xetla']]],
   ['u64_7',['u64',['../namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76a476bf781fb66b23778b1004edc3a1028',1,'gpu::xetla']]],
-  ['u8_8',['U8',['../namespacegpu_1_1xetla.html#ad437c5605bdaef6fae80e6b099a54f5fa6669348b484e3008dca2bfa8e85e40b5',1,'gpu::xetla']]],
-  ['u8_9',['u8',['../namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76a077393852be20e37026d6281827662f2',1,'gpu::xetla']]],
+  ['u8_8',['u8',['../namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76a077393852be20e37026d6281827662f2',1,'gpu::xetla']]],
+  ['u8_9',['U8',['../namespacegpu_1_1xetla.html#ad437c5605bdaef6fae80e6b099a54f5fa6669348b484e3008dca2bfa8e85e40b5',1,'gpu::xetla']]],
   ['u8u32_10',['u8u32',['../namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76ad2981f2caa06d6d029ad139601e2928c',1,'gpu::xetla']]],
   ['uint_5ftype_11',['uint_type',['../structgpu_1_1xetla_1_1uint__type.html',1,'gpu::xetla']]],
   ['uint_5ftype_5ft_12',['uint_type_t',['../group__xetla__core__base__types.html#ga91a3f78430a6bd2356e286df96846fba',1,'gpu::xetla']]],
@@ -43,7 +43,7 @@ var searchData=
   ['use_5fdynamic_5fjob_40',['use_dynamic_job',['../structgpu_1_1xetla_1_1kernel_1_1xetla__row__reduction__t_3_01dtype__in___00_01dtype__out___00_01cd72c8b824c01ad6c9039a9957986bd1.html#a77732e5ebf8e0a0d4753e05fcbc5a013',1,'gpu::xetla::kernel::xetla_row_reduction_t&lt; dtype_in_, dtype_out_, dtype_acc_, reduction_attr_, gpu_arch::Xe, fused_op_t_ &gt;']]],
   ['use_5ffallback_41',['use_fallback',['../structgpu_1_1xetla_1_1dummy__optimizer.html#ae62ba3e50b15e2fd455d2ca1da15ec29',1,'gpu::xetla::dummy_optimizer::use_fallback'],['../structgpu_1_1xetla_1_1decision__tree__optimizer.html#ae68c66897bfd18f15217cdda504e1e05',1,'gpu::xetla::decision_tree_optimizer::use_fallback']]],
   ['use_5fnext_42',['use_next',['../structgpu_1_1xetla_1_1decision__tree__rule_1_1tile__shape__handler_1_1impl_1_1find__min__elem_3_8c303bd46b6bdc2a81bce95658bf29a3.html#a40c412850581d2bdf0558910e9ff9dd6',1,'gpu::xetla::decision_tree_rule::tile_shape_handler::impl::find_min_elem&lt; ref, elem, elems... &gt;']]],
-  ['use_5frule_43',['use_rule',['../structgpu_1_1xetla_1_1param__optimizer_3_01param__optimizer__tag_1_1WORKGROUP_00_01dict__t___01_4.html#a8874046ad77b6df647b572f75e369af9',1,'gpu::xetla::param_optimizer&lt; param_optimizer_tag::WORKGROUP, dict_t_ &gt;::use_rule'],['../structgpu_1_1xetla_1_1param__optimizer_3_01param__optimizer__tag_1_1KERNEL_00_01dict__t___01_4.html#a442058ecc3b638c6f26b8935d0738f4d',1,'gpu::xetla::param_optimizer&lt; param_optimizer_tag::KERNEL, dict_t_ &gt;::use_rule']]],
+  ['use_5frule_43',['use_rule',['../structgpu_1_1xetla_1_1param__optimizer_3_01param__optimizer__tag_1_1work__group_00_01dict__t___01_4.html#af62538da6646463edf3737a109155813',1,'gpu::xetla::param_optimizer&lt; param_optimizer_tag::work_group, dict_t_ &gt;::use_rule'],['../structgpu_1_1xetla_1_1param__optimizer_3_01param__optimizer__tag_1_1kernel_00_01dict__t___01_4.html#ad5d66cad2aa677d544364b30315eab2b',1,'gpu::xetla::param_optimizer&lt; param_optimizer_tag::kernel, dict_t_ &gt;::use_rule']]],
   ['util_20misc_20api_44',['Util misc API',['../group__xetla__util__misc.html',1,'']]],
   ['utils_2ehpp_45',['utils.hpp',['../utils_8hpp.html',1,'']]]
 ];

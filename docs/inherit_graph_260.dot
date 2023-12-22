@@ -5,5 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="gpu::xetla::param_optimizer\l\< param_optimizer_tag::WORKGROUP,\l dict_t_ \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1param__optimizer_3_01param__optimizer__tag_1_1WORKGROUP_00_01dict__t___01_4.html",tooltip=" "];
+  Node0 [id="Node000000",label="gpu::xetla::param_optimizer\l\< param_optimizer_tag::work\l_group, dict_t_ \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structgpu_1_1xetla_1_1param__optimizer_3_01param__optimizer__tag_1_1work__group_00_01dict__t___01_4.html",tooltip=" "];
 }

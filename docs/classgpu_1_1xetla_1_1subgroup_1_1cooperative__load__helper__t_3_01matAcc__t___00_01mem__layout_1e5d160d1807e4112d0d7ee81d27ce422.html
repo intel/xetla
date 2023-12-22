@@ -124,8 +124,8 @@ Public Types</h2></td></tr>
 <tr class="separator:a1bdce549c31473bed55b08784f0b7467"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f6a666b94581ff902fca15d00789f25"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1subgroup_1_1cooperative__load__helper__t_3_01matAcc__t___00_01mem__layout_1e5d160d1807e4112d0d7ee81d27ce422.html#a3f6a666b94581ff902fca15d00789f25">dtype</a> = typename matAcc_t::dtype</td></tr>
 <tr class="separator:a3f6a666b94581ff902fca15d00789f25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7856872de15d9c595340bbef6142b3e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1subgroup_1_1cooperative__load__helper__t_3_01matAcc__t___00_01mem__layout_1e5d160d1807e4112d0d7ee81d27ce422.html#ab7856872de15d9c595340bbef6142b3e">tile_desc_t</a> = matAcc_t::tile_desc</td></tr>
-<tr class="separator:ab7856872de15d9c595340bbef6142b3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9da566cd613dc764b0a80767da02da1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1subgroup_1_1cooperative__load__helper__t_3_01matAcc__t___00_01mem__layout_1e5d160d1807e4112d0d7ee81d27ce422.html#ac9da566cd613dc764b0a80767da02da1">tile_desc_t</a> = typename matAcc_t::tile_desc</td></tr>
+<tr class="separator:ac9da566cd613dc764b0a80767da02da1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a467b4b672b5eacc846f541245453750b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgpu_1_1xetla_1_1subgroup_1_1cooperative__load__helper__t_3_01matAcc__t___00_01mem__layout_1e5d160d1807e4112d0d7ee81d27ce422.html#a467b4b672b5eacc846f541245453750b">co_tile_desc_t</a> = <a class="el" href="structgpu_1_1xetla_1_1subgroup_1_1tile__desc__t.html">subgroup::tile_desc_t</a>&lt; <a class="el" href="classgpu_1_1xetla_1_1subgroup_1_1cooperative__load__helper__t_3_01matAcc__t___00_01mem__layout_1e5d160d1807e4112d0d7ee81d27ce422.html#a9417641edd5a9652a5ff0991dd9932b1">tile_size_x</a>, <a class="el" href="classgpu_1_1xetla_1_1subgroup_1_1cooperative__load__helper__t_3_01matAcc__t___00_01mem__layout_1e5d160d1807e4112d0d7ee81d27ce422.html#ac42c7d0851fcf229e8dfff845de6f7ba">tile_size_y</a>, <a class="el" href="classgpu_1_1xetla_1_1subgroup_1_1cooperative__load__helper__t_3_01matAcc__t___00_01mem__layout_1e5d160d1807e4112d0d7ee81d27ce422.html#a02bae66aa0a1487e4468068e553ee1ef">block_size_x</a>, <a class="el" href="classgpu_1_1xetla_1_1subgroup_1_1cooperative__load__helper__t_3_01matAcc__t___00_01mem__layout_1e5d160d1807e4112d0d7ee81d27ce422.html#a94e3e08e4f5ca1735d77355787ac8d0b">block_size_y</a>, <a class="el" href="namespacegpu_1_1xetla.html#a51137fd81d0d9d2156525a1e279432aaa78506882d645395a052df8b01a927395">reg_layout::tiled</a> &gt;</td></tr>
 <tr class="separator:a467b4b672b5eacc846f541245453750b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -224,8 +224,8 @@ template&lt;typename matAcc_t_ , uint32_t num_cooperative_wg, <a class="el" href
 
 </div>
 </div>
-<a id="ab7856872de15d9c595340bbef6142b3e" name="ab7856872de15d9c595340bbef6142b3e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab7856872de15d9c595340bbef6142b3e">&#9670;&#160;</a></span>tile_desc_t</h2>
+<a id="ac9da566cd613dc764b0a80767da02da1" name="ac9da566cd613dc764b0a80767da02da1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9da566cd613dc764b0a80767da02da1">&#9670;&#160;</a></span>tile_desc_t</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -233,7 +233,7 @@ template&lt;typename matAcc_t_ , uint32_t num_cooperative_wg, <a class="el" href
 template&lt;typename matAcc_t_ , uint32_t num_cooperative_wg, <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1">gpu_arch</a> arch_tag_&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classgpu_1_1xetla_1_1subgroup_1_1cooperative__load__helper__t.html">gpu::xetla::subgroup::cooperative_load_helper_t</a>&lt; matAcc_t_, <a class="el" href="namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561a55e5bef9f48cf4e944a16a034eac0704">mem_layout::col_major</a>, num_cooperative_wg, arch_tag_, std::enable_if_t&lt; <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>==arch_tag_ &gt; &gt;::tile_desc_t =  matAcc_t::tile_desc</td>
+          <td class="memname">using <a class="el" href="classgpu_1_1xetla_1_1subgroup_1_1cooperative__load__helper__t.html">gpu::xetla::subgroup::cooperative_load_helper_t</a>&lt; matAcc_t_, <a class="el" href="namespacegpu_1_1xetla.html#af4a355a1806510c5515fad16f5910561a55e5bef9f48cf4e944a16a034eac0704">mem_layout::col_major</a>, num_cooperative_wg, arch_tag_, std::enable_if_t&lt; <a class="el" href="namespacegpu_1_1xetla.html#aa5a2713edb27d6fed88a3c61673556f1a8fde9df1bf2567b76160d1beedca3130">gpu_arch::Xe</a>==arch_tag_ &gt; &gt;::tile_desc_t =  typename matAcc_t::tile_desc</td>
         </tr>
       </table>
 </div><div class="memdoc">

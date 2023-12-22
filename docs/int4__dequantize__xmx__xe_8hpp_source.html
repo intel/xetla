@@ -408,7 +408,7 @@ $(document).ready(function(){initNavTree('int4__dequantize__xmx__xe_8hpp_source.
 <div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>    }</div>
 <div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span> </div>
 <div class="line"><a id="l00328" name="l00328"></a><span class="lineno"><a class="line" href="classgpu_1_1xetla_1_1group_1_1gemm__t_3_01compute__policy__int4__dequantize__xmx_3_01compute__at39fee55bd55562861c58529b7fe30902.html#afdee73ec45c7ae2364f0a0b2f7df8397">  328</a></span>    <a class="code hl_define" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="code hl_define" href="group__xetla__core.html#gafb2a0442e367d71b79a2f932d0d39c8b">KERNEL_FUNC</a> <span class="keywordtype">void</span> <a class="code hl_function" href="classgpu_1_1xetla_1_1group_1_1gemm__t_3_01compute__policy__int4__dequantize__xmx_3_01compute__at39fee55bd55562861c58529b7fe30902.html#afdee73ec45c7ae2364f0a0b2f7df8397">operator()</a>(<a class="code hl_typedef" href="classgpu_1_1xetla_1_1group_1_1gemm__t_3_01compute__policy__int4__dequantize__xmx_3_01compute__at39fee55bd55562861c58529b7fe30902.html#aa475f31e0de851048cc91f9c5c16ee49">work_group_t</a> &amp;g, <a class="code hl_struct" href="structgpu_1_1xetla_1_1subgroup_1_1tile__t.html">matAcc_t</a> &amp;matAcc,</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>            arguments_t args, uint32_t slm_base = 0,</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>            arguments_t args, [[maybe_unused]] uint32_t slm_base = 0,</div>
 <div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>            uint32_t nbarrier_base = 0) {</div>
 <div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>        int32_t sg_idx = g.get_id() % wg_size_x;</div>
 <div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>        int32_t sg_idy = g.get_id() / wg_size_x;</div>
@@ -443,7 +443,7 @@ $(document).ready(function(){initNavTree('int4__dequantize__xmx__xe_8hpp_source.
 <div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>        <span class="keywordtype">int</span> scale_load_addr_i = 0;</div>
 <div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>        <a class="code hl_define" href="common_2core_2common_8hpp.html#a4894ef2f787a454434527ed8416177d9">SW_BARRIER</a>();</div>
 <div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span><span class="preprocessor">#pragma unroll</span></div>
-<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; stages; i++) {</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>        <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; stages; i++) {</div>
 <div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>            subgroup::tile_prefetch&lt;cache_hint::cached, cache_hint::cached&gt;(</div>
 <div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>                    matA_prefetch_payload);</div>
 <div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>            subgroup::tile_prefetch&lt;cache_hint::cached, cache_hint::cached&gt;(</div>
@@ -467,7 +467,7 @@ $(document).ready(function(){initNavTree('int4__dequantize__xmx__xe_8hpp_source.
 <div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>            }</div>
 <div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>        }</div>
 <div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span> </div>
-<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; args.inner_loop_count; i++) {</div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>        <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; args.inner_loop_count; i++) {</div>
 <div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>            <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (enable_periodic_sync) {</div>
 <div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>                <span class="keywordflow">if</span> ((i % sync_freq) == 0) {</div>
 <div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>                    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (wg_size_x &gt; 1) { nbarrier_a.<a class="code hl_function" href="structgpu_1_1xetla_1_1xetla__nbarrier__t.html#a1da68dc186c272389a9d3c7b8bd3aa2f">arrive</a>(); }</div>
@@ -548,9 +548,9 @@ $(document).ready(function(){initNavTree('int4__dequantize__xmx__xe_8hpp_source.
 <div class="line"><a id="l00466" name="l00466"></a><span class="lineno">  466</span>        <span class="keyword">constexpr</span> uint32_t vnni_rows = <span class="keyword">sizeof</span>(uint32_t) / <span class="keyword">sizeof</span>(dtype_mma_b);</div>
 <div class="line"><a id="l00467" name="l00467"></a><span class="lineno">  467</span>        <span class="keyword">constexpr</span> uint32_t block_b_y_per_scale = dequant_s / block_size_y_b;</div>
 <div class="line"><a id="l00468" name="l00468"></a><span class="lineno">  468</span><span class="preprocessor">#pragma unroll</span></div>
-<div class="line"><a id="l00469" name="l00469"></a><span class="lineno">  469</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num_block_y; ++i) {</div>
+<div class="line"><a id="l00469" name="l00469"></a><span class="lineno">  469</span>        <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; num_block_y; ++i) {</div>
 <div class="line"><a id="l00470" name="l00470"></a><span class="lineno">  470</span><span class="preprocessor">#pragma unroll</span></div>
-<div class="line"><a id="l00471" name="l00471"></a><span class="lineno">  471</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; num_block_x; ++j) {</div>
+<div class="line"><a id="l00471" name="l00471"></a><span class="lineno">  471</span>            <span class="keywordflow">for</span> (uint32_t j = 0; j &lt; num_block_x; ++j) {</div>
 <div class="line"><a id="l00472" name="l00472"></a><span class="lineno">  472</span>                <span class="keywordtype">int</span> block_id = (i * num_block_x + j);</div>
 <div class="line"><a id="l00473" name="l00473"></a><span class="lineno">  473</span>                <span class="keyword">auto</span> matB_blk = matB.reg.xetla_select&lt;matB_t::block_elems, 1&gt;(</div>
 <div class="line"><a id="l00474" name="l00474"></a><span class="lineno">  474</span>                                                block_id * matB_t::block_elems)</div>
@@ -581,7 +581,7 @@ $(document).ready(function(){initNavTree('int4__dequantize__xmx__xe_8hpp_source.
 <div class="line"><a id="l00499" name="l00499"></a><span class="lineno">  499</span>                <a class="code hl_typedef" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector&lt;uint8_t, block_size_x_b * block_size_y_b&gt;</a></div>
 <div class="line"><a id="l00500" name="l00500"></a><span class="lineno">  500</span>                        zero_pt_blk;</div>
 <div class="line"><a id="l00501" name="l00501"></a><span class="lineno">  501</span><span class="preprocessor">#pragma unroll</span></div>
-<div class="line"><a id="l00502" name="l00502"></a><span class="lineno">  502</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> row = 0; row &lt; block_size_y_b; row++) {</div>
+<div class="line"><a id="l00502" name="l00502"></a><span class="lineno">  502</span>                <span class="keywordflow">for</span> (uint32_t row = 0; row &lt; block_size_y_b; row++) {</div>
 <div class="line"><a id="l00503" name="l00503"></a><span class="lineno">  503</span>                    zero_pt_blk</div>
 <div class="line"><a id="l00504" name="l00504"></a><span class="lineno">  504</span>                            .xetla_select&lt;block_size_x_b, 1&gt;(</div>
 <div class="line"><a id="l00505" name="l00505"></a><span class="lineno">  505</span>                                    row * block_size_x_b)</div>
@@ -606,9 +606,9 @@ $(document).ready(function(){initNavTree('int4__dequantize__xmx__xe_8hpp_source.
 <div class="line"><a id="l00524" name="l00524"></a><span class="lineno">  524</span>                        = cvt_blk_i32;</div>
 <div class="line"><a id="l00525" name="l00525"></a><span class="lineno">  525</span> </div>
 <div class="line"><a id="l00526" name="l00526"></a><span class="lineno">  526</span><span class="preprocessor">#pragma unroll</span></div>
-<div class="line"><a id="l00527" name="l00527"></a><span class="lineno">  527</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; block_size_y_b; k += vnni_rows) {</div>
+<div class="line"><a id="l00527" name="l00527"></a><span class="lineno">  527</span>                <span class="keywordflow">for</span> (uint32_t k = 0; k &lt; block_size_y_b; k += vnni_rows) {</div>
 <div class="line"><a id="l00528" name="l00528"></a><span class="lineno">  528</span><span class="preprocessor">#pragma unroll</span></div>
-<div class="line"><a id="l00529" name="l00529"></a><span class="lineno">  529</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> row = 0; row &lt; vnni_rows; row++) {</div>
+<div class="line"><a id="l00529" name="l00529"></a><span class="lineno">  529</span>                    <span class="keywordflow">for</span> (uint32_t row = 0; row &lt; vnni_rows; row++) {</div>
 <div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span>                        temp_blk.xetla_select&lt;block_size_x_b, vnni_rows&gt;(</div>
 <div class="line"><a id="l00531" name="l00531"></a><span class="lineno">  531</span>                                row + block_size_x_b * k * vnni_rows)</div>
 <div class="line"><a id="l00532" name="l00532"></a><span class="lineno">  532</span>                                = temp_blk.xetla_select&lt;block_size_x_b,</div>
@@ -619,13 +619,13 @@ $(document).ready(function(){initNavTree('int4__dequantize__xmx__xe_8hpp_source.
 <div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span> </div>
 <div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span>                xetla_vector&lt;dtype_scale, block_size_x_b * vnni_rows&gt; scale_blk;</div>
 <div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span><span class="preprocessor">#pragma unroll</span></div>
-<div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> row = 0; row &lt; vnni_rows; row++) {</div>
+<div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>                <span class="keywordflow">for</span> (uint32_t row = 0; row &lt; vnni_rows; row++) {</div>
 <div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span>                    scale_blk.xetla_select&lt;block_size_x_b, vnni_rows&gt;(row)</div>
 <div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span>                            = scale_vec;</div>
 <div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span>                }</div>
 <div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span> </div>
 <div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span><span class="preprocessor">#pragma unroll</span></div>
-<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; block_size_y_b; k += vnni_rows) {</div>
+<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>                <span class="keywordflow">for</span> (uint32_t k = 0; k &lt; block_size_y_b; k += vnni_rows) {</div>
 <div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span>                    dst_blk.xetla_select&lt;block_size_x_b * vnni_rows, 1&gt;(</div>
 <div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>                            k * block_size_x_b)</div>
 <div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>                            = temp_blk.xetla_select&lt;block_size_x_b * vnni_rows,</div>

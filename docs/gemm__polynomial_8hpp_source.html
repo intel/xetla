@@ -139,40 +139,41 @@ $(document).ready(function(){initNavTree('gemm__polynomial_8hpp_source.html','')
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="structgpu_1_1xetla_1_1subgroup_1_1polynomial__op__t_1_1arguments__t.html#a1f036be53b5eb77e7bde828e67fdc79d">   31</a></span>        <span class="keyword">inline</span> <a class="code hl_function" href="structgpu_1_1xetla_1_1subgroup_1_1polynomial__op__t_1_1arguments__t.html#a1f036be53b5eb77e7bde828e67fdc79d">arguments_t</a>(<a class="code hl_typedef" href="structgpu_1_1xetla_1_1subgroup_1_1polynomial__op__t.html#ae67023fed4bac2895959156ab6aaabc4">coeff_t</a> coeff_) : <a class="code hl_variable" href="structgpu_1_1xetla_1_1subgroup_1_1polynomial__op__t_1_1arguments__t.html#a06921dc856fdc3c6adab17017ef117b0">coeff</a>(coeff_) {}</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    };</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> matAcc_t, <span class="keyword">typename</span> coord_t&gt;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="structgpu_1_1xetla_1_1subgroup_1_1polynomial__op__t.html#a9ab64dfdd8bb40dbcdf715336c8574f7">   34</a></span>    <a class="code hl_define" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="code hl_define" href="group__xetla__core.html#gafb2a0442e367d71b79a2f932d0d39c8b">KERNEL_FUNC</a> <span class="keywordtype">void</span> <a class="code hl_function" href="structgpu_1_1xetla_1_1subgroup_1_1polynomial__op__t.html#a9ab64dfdd8bb40dbcdf715336c8574f7">operator()</a>(matAcc_t &amp;matAcc, coord_t coord,</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <a class="code hl_struct" href="structgpu_1_1xetla_1_1subgroup_1_1polynomial__op__t_1_1arguments__t.html">arguments_t</a> args, uint32_t slm_base = 0,</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            uint32_t nbarrier_base = 0) {</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keyword">using </span>dtype_acc = <span class="keyword">typename</span> matAcc_t::dtype;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="comment">// total flag register</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keyword">constexpr</span> uint32_t elems = 8 * 16;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keyword">constexpr</span> uint32_t rounds = matAcc_t::tile_elems / elems;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#pragma unroll</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordflow">for</span> (uint32_t r = 0; r &lt; rounds; ++r) {</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <a class="code hl_typedef" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector&lt;dtype_acc, elems&gt;</a> res(0.0f);</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <span class="keyword">auto</span> x = matAcc.reg.xetla_select&lt;elems, 1&gt;(elems * r);</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#pragma unroll</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; N; ++i) {</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                res = x * res;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                res += <span class="keyword">static_cast&lt;</span>dtype_acc<span class="keyword">&gt;</span>(args.<a class="code hl_variable" href="structgpu_1_1xetla_1_1subgroup_1_1polynomial__op__t_1_1arguments__t.html#a06921dc856fdc3c6adab17017ef117b0">coeff</a>[i]);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            }</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            x = res;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        }</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keyword">constexpr</span> uint32_t remained_elems = matAcc_t::tile_elems % elems;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (remained_elems != 0) {</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            <a class="code hl_typedef" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector&lt;dtype_acc, remained_elems&gt;</a> res(0.0f);</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            <span class="keyword">auto</span> x = matAcc.reg.xetla_select&lt;remained_elems, 1&gt;(</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                    elems * (matAcc_t::tile_elems / elems));</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#pragma unroll</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; N; ++i) {</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                res = x * res;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                res += <span class="keyword">static_cast&lt;</span>dtype_acc<span class="keyword">&gt;</span>(args.<a class="code hl_variable" href="structgpu_1_1xetla_1_1subgroup_1_1polynomial__op__t_1_1arguments__t.html#a06921dc856fdc3c6adab17017ef117b0">coeff</a>[i]);</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            }</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            x = res;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        }</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    }</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>};</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>} <span class="comment">// namespace gpu::xetla::subgroup</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="structgpu_1_1xetla_1_1subgroup_1_1polynomial__op__t.html#a9ab64dfdd8bb40dbcdf715336c8574f7">   34</a></span>    <a class="code hl_define" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <a class="code hl_define" href="group__xetla__core.html#gafb2a0442e367d71b79a2f932d0d39c8b">KERNEL_FUNC</a> <span class="keywordtype">void</span> <a class="code hl_function" href="structgpu_1_1xetla_1_1subgroup_1_1polynomial__op__t.html#a9ab64dfdd8bb40dbcdf715336c8574f7">operator()</a>(matAcc_t &amp;matAcc,</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            [[maybe_unused]] coord_t coord, <a class="code hl_struct" href="structgpu_1_1xetla_1_1subgroup_1_1polynomial__op__t_1_1arguments__t.html">arguments_t</a> args,</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            [[maybe_unused]] uint32_t slm_base = 0,</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            [[maybe_unused]] uint32_t nbarrier_base = 0) {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keyword">using </span>dtype_acc = <span class="keyword">typename</span> matAcc_t::dtype;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="comment">// total flag register</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keyword">constexpr</span> uint32_t elems = 8 * 16;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keyword">constexpr</span> uint32_t rounds = matAcc_t::tile_elems / elems;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#pragma unroll</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordflow">for</span> (uint32_t r = 0; r &lt; rounds; ++r) {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <a class="code hl_typedef" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector&lt;dtype_acc, elems&gt;</a> res(0.0f);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            <span class="keyword">auto</span> x = matAcc.reg.xetla_select&lt;elems, 1&gt;(elems * r);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#pragma unroll</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; N; ++i) {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                res = x * res;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                res += <span class="keyword">static_cast&lt;</span>dtype_acc<span class="keyword">&gt;</span>(args.<a class="code hl_variable" href="structgpu_1_1xetla_1_1subgroup_1_1polynomial__op__t_1_1arguments__t.html#a06921dc856fdc3c6adab17017ef117b0">coeff</a>[i]);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            x = res;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keyword">constexpr</span> uint32_t remained_elems = matAcc_t::tile_elems % elems;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (remained_elems != 0) {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            <a class="code hl_typedef" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector&lt;dtype_acc, remained_elems&gt;</a> res(0.0f);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <span class="keyword">auto</span> x = matAcc.reg.xetla_select&lt;remained_elems, 1&gt;(</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                    elems * (matAcc_t::tile_elems / elems));</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">#pragma unroll</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; N; ++i) {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                res = x * res;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                res += <span class="keyword">static_cast&lt;</span>dtype_acc<span class="keyword">&gt;</span>(args.<a class="code hl_variable" href="structgpu_1_1xetla_1_1subgroup_1_1polynomial__op__t_1_1arguments__t.html#a06921dc856fdc3c6adab17017ef117b0">coeff</a>[i]);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            x = res;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>};</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>} <span class="comment">// namespace gpu::xetla::subgroup</span></div>
 <div class="ttc" id="acommon_2core_2common_8hpp_html_a9ed53999886ec13b86a4fe2e0fc16765"><div class="ttname"><a href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a></div><div class="ttdeci">#define __XETLA_API</div><div class="ttdef"><b>Definition</b> common.hpp:43</div></div>
 <div class="ttc" id="agroup__xetla__core__base__types_html_ga8cf5d016d24c8870706e20c376287e04"><div class="ttname"><a href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">gpu::xetla::xetla_vector</a></div><div class="ttdeci">__ESIMD_NS::simd&lt; native_type_t&lt; Ty &gt;, N &gt; xetla_vector</div><div class="ttdoc">wrapper for xetla_vector.</div><div class="ttdef"><b>Definition</b> base_types.hpp:149</div></div>
 <div class="ttc" id="agroup__xetla__core_html_gafb2a0442e367d71b79a2f932d0d39c8b"><div class="ttname"><a href="group__xetla__core.html#gafb2a0442e367d71b79a2f932d0d39c8b">KERNEL_FUNC</a></div><div class="ttdeci">#define KERNEL_FUNC</div><div class="ttdoc">KERNEL_FUNC macro.</div><div class="ttdef"><b>Definition</b> common.hpp:39</div></div>

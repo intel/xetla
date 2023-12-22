@@ -212,7 +212,7 @@ $(document).ready(function(){initNavTree('examples_208__scaled__dot__product__at
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                ? <a class="code hl_variable" href="structxetla__softmax__fwd__t.html#a5fee74c8ef035fdb69b10f85b844ed9a">wg_tile_m</a> / <a class="code hl_variable" href="structxetla__softmax__fwd__t.html#a806359bb5937b204543c5f6d8fd07f0f">thread_num</a></div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                : (<a class="code hl_variable" href="structxetla__softmax__fwd__t.html#a5fee74c8ef035fdb69b10f85b844ed9a">wg_tile_m</a> / <a class="code hl_variable" href="structxetla__softmax__fwd__t.html#a806359bb5937b204543c5f6d8fd07f0f">thread_num</a>) + 1;</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> row = 0; row &lt; inner_loop_count; ++row) {</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <span class="keywordflow">for</span> (uint32_t row = 0; row &lt; inner_loop_count; ++row) {</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            subgroup::tile_load&lt;cache_hint::cached, cache_hint::cached&gt;(</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                    softmax_load, softmax_load_payload);</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            softmax_load_payload.template update_tdesc&lt;tdesc_update_dir::y_dir&gt;(</div>

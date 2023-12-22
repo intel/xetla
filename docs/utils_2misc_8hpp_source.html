@@ -180,7 +180,7 @@ $(document).ready(function(){initNavTree('utils_2misc_8hpp_source.html',''); ini
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keyword">constexpr</span> uint32_t unroll_size = num_flag * 16;</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <a class="code hl_define" href="common_2core_2common_8hpp.html#a4894ef2f787a454434527ed8416177d9">SW_BARRIER</a>();</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="preprocessor">#pragma unroll</span></div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; N / unroll_size; i++) {</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; N / unroll_size; i++) {</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <a class="code hl_typedef" href="group__xetla__core__base__types.html#gaf7f6ada235a6c3ab30aa12c97f5d7459">xetla_mask&lt;unroll_size&gt;</a> mask_flag</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                = mask.xetla_select&lt;unroll_size, 1&gt;(i * unroll_size) &gt; 0;</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        out.xetla_select&lt;unroll_size, 1&gt;(i * unroll_size)</div>
