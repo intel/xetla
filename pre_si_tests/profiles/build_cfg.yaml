@@ -1,3 +1,0 @@
-_doc: "testing config for build"
-_build_sh : "build.sh"
-_timeout_in_minutes: 20
