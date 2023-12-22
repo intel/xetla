@@ -3,52 +3,52 @@ var kernel_2default__config_2common_8hpp =
     [ "gpu::xetla::param_optimizer_base", "structgpu_1_1xetla_1_1param__optimizer__base.html", "structgpu_1_1xetla_1_1param__optimizer__base" ],
     [ "gpu::xetla::param_optimizer_base::validate_attribute< T, U >", "structgpu_1_1xetla_1_1param__optimizer__base_1_1validate__attribute.html", null ],
     [ "gpu::xetla::param_adaptor_base< dict_t_ >", "structgpu_1_1xetla_1_1param__adaptor__base.html", "structgpu_1_1xetla_1_1param__adaptor__base" ],
-    [ "param_adaptor_tag", "kernel_2default__config_2common_8hpp.html#ab708b8fc21aec25b67746e52415daa89", [
-      [ "KERNEL", "kernel_2default__config_2common_8hpp.html#ab708b8fc21aec25b67746e52415daa89a35c10219c45ccfb5b07444fd7e17214c", null ],
-      [ "WORKGROUP_GEMM", "kernel_2default__config_2common_8hpp.html#ab708b8fc21aec25b67746e52415daa89a2658a1128193a36408a5a1efde8300bb", null ],
-      [ "WORKGROUP_EPILOGUE", "kernel_2default__config_2common_8hpp.html#ab708b8fc21aec25b67746e52415daa89a465cd5dc07b54ab27fb75269b751fc44", null ]
+    [ "param_adaptor_tag", "kernel_2default__config_2common_8hpp.html#a39c557144e35644fa13880aa0307147a", [
+      [ "kernel", "kernel_2default__config_2common_8hpp.html#a39c557144e35644fa13880aa0307147aa50484c19f1afdaf3841a0d821ed393d2", null ],
+      [ "work_group_gemm", "kernel_2default__config_2common_8hpp.html#a39c557144e35644fa13880aa0307147aa22b5c9d074c52e8ace491010ed8d386e", null ],
+      [ "work_group_epilogue", "kernel_2default__config_2common_8hpp.html#a39c557144e35644fa13880aa0307147aa00f6f180cd1f8664962aa9774905456b", null ]
     ] ],
-    [ "param_optimizer_tag", "kernel_2default__config_2common_8hpp.html#a6a28e89f14bfbb47172083fb9917350d", [
-      [ "KERNEL", "kernel_2default__config_2common_8hpp.html#a6a28e89f14bfbb47172083fb9917350da35c10219c45ccfb5b07444fd7e17214c", null ],
-      [ "WORKGROUP", "kernel_2default__config_2common_8hpp.html#a6a28e89f14bfbb47172083fb9917350daf7464491a3fc676a9c74fee700dd2973", null ]
+    [ "param_optimizer_tag", "kernel_2default__config_2common_8hpp.html#adc7aeadcb1142afd337593e71d86a942", [
+      [ "kernel", "kernel_2default__config_2common_8hpp.html#adc7aeadcb1142afd337593e71d86a942a50484c19f1afdaf3841a0d821ed393d2", null ],
+      [ "work_group", "kernel_2default__config_2common_8hpp.html#adc7aeadcb1142afd337593e71d86a942ab3e0f839df2b0e6f5abea4204282dc5e", null ]
     ] ],
-    [ "tune_key", "kernel_2default__config_2common_8hpp.html#a5636a4588add568d236bd2c22f21c341", [
-      [ "DATA_TYPE_A", "kernel_2default__config_2common_8hpp.html#a5636a4588add568d236bd2c22f21c341a97cb9d50be4f3dda8832b5caa9ffacb7", null ],
-      [ "MEMORY_LAYOUT_A", "kernel_2default__config_2common_8hpp.html#a5636a4588add568d236bd2c22f21c341a217f3fa68c2d172f7119a82b80d507bb", null ],
-      [ "MEMORY_ALIGNMENT_A", "kernel_2default__config_2common_8hpp.html#a5636a4588add568d236bd2c22f21c341a737e4a54f4d9bc791a23f39ee83b859a", null ],
-      [ "MEMORY_SPACE_A", "kernel_2default__config_2common_8hpp.html#a5636a4588add568d236bd2c22f21c341a71c3f0554e53ea3edfd962959c0a2f89", null ],
-      [ "DATA_TYPE_B", "kernel_2default__config_2common_8hpp.html#a5636a4588add568d236bd2c22f21c341a390a19eae3ce72aa6e44902b93c726ef", null ],
-      [ "MEMORY_LAYOUT_B", "kernel_2default__config_2common_8hpp.html#a5636a4588add568d236bd2c22f21c341a96be9c6a0a17b559b818d32c06ddba6b", null ],
-      [ "MEMORY_ALIGNMENT_B", "kernel_2default__config_2common_8hpp.html#a5636a4588add568d236bd2c22f21c341ad1675501dc71364e41f1e1a667d6a9c5", null ],
-      [ "MEMORY_SPACE_B", "kernel_2default__config_2common_8hpp.html#a5636a4588add568d236bd2c22f21c341af57487763c26f325146b0dda54d3aa98", null ],
-      [ "DATA_TYPE_C", "kernel_2default__config_2common_8hpp.html#a5636a4588add568d236bd2c22f21c341ad3000bf485cad6c913d81d9e61e0c716", null ],
-      [ "MEMORY_LAYOUT_C", "kernel_2default__config_2common_8hpp.html#a5636a4588add568d236bd2c22f21c341aaa5e8ebce355fceafcf55095b1597639", null ],
-      [ "MEMORY_ALIGNMENT_C", "kernel_2default__config_2common_8hpp.html#a5636a4588add568d236bd2c22f21c341a2f143f039b9c7c37b6919a8d85f6f235", null ],
-      [ "MEMORY_SPACE_C", "kernel_2default__config_2common_8hpp.html#a5636a4588add568d236bd2c22f21c341a201592f03bb48aa2242861ceac33679e", null ],
-      [ "DATA_TYPE_ACC", "kernel_2default__config_2common_8hpp.html#a5636a4588add568d236bd2c22f21c341ac78263b8951d5b60f42dcb2f0174631d", null ],
-      [ "GLOBAL_KSLICING_RATIO", "kernel_2default__config_2common_8hpp.html#a5636a4588add568d236bd2c22f21c341a7ebc314626ad46b30a58dd2085c69761", null ],
-      [ "LOCAL_KSLICING_RATIO", "kernel_2default__config_2common_8hpp.html#a5636a4588add568d236bd2c22f21c341a4b88b2b367e99e50daac42df131b20ef", null ],
-      [ "WG_TILE_SHAPE", "kernel_2default__config_2common_8hpp.html#a5636a4588add568d236bd2c22f21c341a55159a4cd8dcce11dbee7ba2e6f6bdaa", null ],
-      [ "WG_TILE_K", "kernel_2default__config_2common_8hpp.html#a5636a4588add568d236bd2c22f21c341a9876821d0d69bc7cae7ad178e257061d", null ],
-      [ "SG_TILE_SHAPE", "kernel_2default__config_2common_8hpp.html#a5636a4588add568d236bd2c22f21c341a9e5ac95978677125c7ad4fd463693e73", null ],
-      [ "PRE_PROCESSING", "kernel_2default__config_2common_8hpp.html#a5636a4588add568d236bd2c22f21c341a7a41a591614cbe93bc7496985e71565b", null ],
-      [ "PREFETCH_DISTANCE", "kernel_2default__config_2common_8hpp.html#a5636a4588add568d236bd2c22f21c341a520d31d53559e3259d9f6ad1f702a038", null ],
-      [ "PERIODIC_SYNC_INTERVAL", "kernel_2default__config_2common_8hpp.html#a5636a4588add568d236bd2c22f21c341a2cb49c058776d329936d30b953174d5d", null ],
-      [ "MMA_ENGINE", "kernel_2default__config_2common_8hpp.html#a5636a4588add568d236bd2c22f21c341afe8eaeffaa7d759269c17560a52719d5", null ],
-      [ "GPU_ARCH", "kernel_2default__config_2common_8hpp.html#a5636a4588add568d236bd2c22f21c341ac580604114324280ef75687ab5183cb6", null ],
-      [ "EPILOGUE_POLICY", "kernel_2default__config_2common_8hpp.html#a5636a4588add568d236bd2c22f21c341ab4e2b32a119978be47443381618b5301", null ],
-      [ "DISPATCH_POLICY", "kernel_2default__config_2common_8hpp.html#a5636a4588add568d236bd2c22f21c341aa3db0a8ec3ccef1cf08bdb5b9d6db994", null ],
-      [ "GROUP_SWIZZLE_POLICY", "kernel_2default__config_2common_8hpp.html#a5636a4588add568d236bd2c22f21c341ad2fd3dd1a805edec641787342194f5c6", null ],
-      [ "PARAM_OPTIMZER_TYPE", "kernel_2default__config_2common_8hpp.html#a5636a4588add568d236bd2c22f21c341aa9abec760878c0be60bf30a310552a3f", null ],
-      [ "SOURCE_LOCATION", "kernel_2default__config_2common_8hpp.html#a5636a4588add568d236bd2c22f21c341aed16d63f3c586c4eb7654abc625c02d9", null ]
+    [ "tune_key", "kernel_2default__config_2common_8hpp.html#a9f7eef3c821ada280831b67eebf15730", [
+      [ "data_type_a", "kernel_2default__config_2common_8hpp.html#a9f7eef3c821ada280831b67eebf15730a1ce5be4ef22159a7365b4fb9905deffa", null ],
+      [ "memory_layout_a", "kernel_2default__config_2common_8hpp.html#a9f7eef3c821ada280831b67eebf15730a730e78446ce3ef0617f1ff00a3071ec5", null ],
+      [ "memory_alignment_a", "kernel_2default__config_2common_8hpp.html#a9f7eef3c821ada280831b67eebf15730ad5ed8ca997f880f4b50c94b6b684b044", null ],
+      [ "memory_space_a", "kernel_2default__config_2common_8hpp.html#a9f7eef3c821ada280831b67eebf15730ad2430ecc6c77ee3f798c5983f968d347", null ],
+      [ "data_type_b", "kernel_2default__config_2common_8hpp.html#a9f7eef3c821ada280831b67eebf15730a494dee75a4ff637ea489ecc798cbd62f", null ],
+      [ "memory_layout_b", "kernel_2default__config_2common_8hpp.html#a9f7eef3c821ada280831b67eebf15730a59973df49c6ac084be7d79f4d4edd87a", null ],
+      [ "memory_alignment_b", "kernel_2default__config_2common_8hpp.html#a9f7eef3c821ada280831b67eebf15730ab776a2754045cad931ef94e21381439b", null ],
+      [ "memory_space_b", "kernel_2default__config_2common_8hpp.html#a9f7eef3c821ada280831b67eebf15730acf4af1f0c5d054feb3cd010a0256523e", null ],
+      [ "data_type_c", "kernel_2default__config_2common_8hpp.html#a9f7eef3c821ada280831b67eebf15730ac8d61d543d43e5a3ccf1ea3485a66f8e", null ],
+      [ "memory_layout_c", "kernel_2default__config_2common_8hpp.html#a9f7eef3c821ada280831b67eebf15730a7b7cbc5788658738d8f2488c02b74e99", null ],
+      [ "memory_alignment_c", "kernel_2default__config_2common_8hpp.html#a9f7eef3c821ada280831b67eebf15730af17397777a8b630864036c9fce965587", null ],
+      [ "memory_space_c", "kernel_2default__config_2common_8hpp.html#a9f7eef3c821ada280831b67eebf15730a89fa14eee8ffb3b9ebb6c70c026e9f3e", null ],
+      [ "data_type_acc", "kernel_2default__config_2common_8hpp.html#a9f7eef3c821ada280831b67eebf15730a7d5128c766f8722e5d43232c47b9530b", null ],
+      [ "global_kslicing_ratio", "kernel_2default__config_2common_8hpp.html#a9f7eef3c821ada280831b67eebf15730a808fa9b6b7bbd16e7dbbe6bb917d3b68", null ],
+      [ "local_kslicing_ratio", "kernel_2default__config_2common_8hpp.html#a9f7eef3c821ada280831b67eebf15730aa2cc57a4336984878a479fa8795ec8e8", null ],
+      [ "wg_tile_shape", "kernel_2default__config_2common_8hpp.html#a9f7eef3c821ada280831b67eebf15730a84250f83d6c0367eb0e40ed921e201eb", null ],
+      [ "wg_tile_k", "kernel_2default__config_2common_8hpp.html#a9f7eef3c821ada280831b67eebf15730a80ab7aefc3ac2ea4fa2c288b3e479759", null ],
+      [ "sg_tile_shape", "kernel_2default__config_2common_8hpp.html#a9f7eef3c821ada280831b67eebf15730ae86db511353b46528cbb7943551264d8", null ],
+      [ "pre_processing", "kernel_2default__config_2common_8hpp.html#a9f7eef3c821ada280831b67eebf15730adea67a3c05f2d6347036aa774cba6af1", null ],
+      [ "prefetch_distance", "kernel_2default__config_2common_8hpp.html#a9f7eef3c821ada280831b67eebf15730a4098cf8e3d3bd63d7622055cd691b7fe", null ],
+      [ "periodic_sync_interval", "kernel_2default__config_2common_8hpp.html#a9f7eef3c821ada280831b67eebf15730a93da26067b8e239db0d36d6f058a9c2b", null ],
+      [ "mma_engine", "kernel_2default__config_2common_8hpp.html#a9f7eef3c821ada280831b67eebf15730a07eb135487105dbc2b9b4f80f8483eb3", null ],
+      [ "gpu_arch", "kernel_2default__config_2common_8hpp.html#a9f7eef3c821ada280831b67eebf15730ab4cb6c2b5a13e4f76e7909dd08fbc0ce", null ],
+      [ "epilogue_policy", "kernel_2default__config_2common_8hpp.html#a9f7eef3c821ada280831b67eebf15730a959761e5f58e591b085fe951afba2be7", null ],
+      [ "dispatch_policy", "kernel_2default__config_2common_8hpp.html#a9f7eef3c821ada280831b67eebf15730a3ea44ad2e4490f0de68e4b6863dcb898", null ],
+      [ "group_swizzle_policy", "kernel_2default__config_2common_8hpp.html#a9f7eef3c821ada280831b67eebf15730ab20551720e970deaf84d33ba348c4d1c", null ],
+      [ "param_optimizer_type", "kernel_2default__config_2common_8hpp.html#a9f7eef3c821ada280831b67eebf15730abb7b4dde8dac467a331b52f9ea83f578", null ],
+      [ "source_location", "kernel_2default__config_2common_8hpp.html#a9f7eef3c821ada280831b67eebf15730ace7516f01c071c789b65e0e815838391", null ]
     ] ],
-    [ "tune_key_value", "kernel_2default__config_2common_8hpp.html#a43dcfba6f09f68dd7de522fad3fa9dbc", [
-      [ "PRE_PROCESSING_DEFAULT", "kernel_2default__config_2common_8hpp.html#a43dcfba6f09f68dd7de522fad3fa9dbca051eafa15c8953e6868182c77afa476c", null ],
-      [ "PRE_PROCESSING_MATA_NEG_FILTER", "kernel_2default__config_2common_8hpp.html#a43dcfba6f09f68dd7de522fad3fa9dbcaffc5515a0c29253e4d77a7359f6664be", null ],
-      [ "DISPATCH_POLICY_DEFAULT", "kernel_2default__config_2common_8hpp.html#a43dcfba6f09f68dd7de522fad3fa9dbca212d97ce465a5f8e2bdc9b789be1edaf", null ],
-      [ "DISPATCH_POLICY_KSLICING", "kernel_2default__config_2common_8hpp.html#a43dcfba6f09f68dd7de522fad3fa9dbcac2d610370df67f44490982e5bb30b4e5", null ],
-      [ "DISPATCH_POLICY_STREAM_K", "kernel_2default__config_2common_8hpp.html#a43dcfba6f09f68dd7de522fad3fa9dbcaf24d60d4523f34286aa30770aa5580a1", null ],
-      [ "PARAM_OPTIMZER_DUMMY", "kernel_2default__config_2common_8hpp.html#a43dcfba6f09f68dd7de522fad3fa9dbca9314e90648fcd619dd933f04e727b29c", null ],
-      [ "PARAM_OPTIMZER_DECISION_TREE", "kernel_2default__config_2common_8hpp.html#a43dcfba6f09f68dd7de522fad3fa9dbcaae30245b78eaeb2e5ddbc5695fb6d60a", null ]
+    [ "tune_key_value", "kernel_2default__config_2common_8hpp.html#ad1abdaba8853da87a91cf666ed7a37a8", [
+      [ "pre_processing_default", "kernel_2default__config_2common_8hpp.html#ad1abdaba8853da87a91cf666ed7a37a8a344e041b88306067491462c7456d2b8b", null ],
+      [ "pre_processing_mata_neg_filter", "kernel_2default__config_2common_8hpp.html#ad1abdaba8853da87a91cf666ed7a37a8a6b72bc4a4c0b85e95c61d32bea91fdf7", null ],
+      [ "dispatch_policy_default", "kernel_2default__config_2common_8hpp.html#ad1abdaba8853da87a91cf666ed7a37a8aa534f12d2cdea953d35eca86bb9f4abe", null ],
+      [ "dispatch_policy_kslicing", "kernel_2default__config_2common_8hpp.html#ad1abdaba8853da87a91cf666ed7a37a8af77d64f8e6309aad8d333d670350eb68", null ],
+      [ "dispatch_policy_stream_k", "kernel_2default__config_2common_8hpp.html#ad1abdaba8853da87a91cf666ed7a37a8ac073112c00d76ac231e4d46044df39b0", null ],
+      [ "param_optimizer_dummy", "kernel_2default__config_2common_8hpp.html#ad1abdaba8853da87a91cf666ed7a37a8aa6cf00308c9f4a5c111e798821d595fe", null ],
+      [ "param_optimizer_decision_tree", "kernel_2default__config_2common_8hpp.html#ad1abdaba8853da87a91cf666ed7a37a8acbb6c080d7651fed72bab73c3955a1fc", null ]
     ] ]
 ];

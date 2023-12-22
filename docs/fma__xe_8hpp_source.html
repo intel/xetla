@@ -204,24 +204,24 @@ $(document).ready(function(){initNavTree('fma__xe_8hpp_source.html',''); initRes
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="keyword">auto</span> b_blk_2d = b_block.xetla_format&lt;<a class="code hl_typedef" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t_3_01matAcc__dst__t___00_01matAcc__src__t___00_01m06b88c4e579b298664a350bfbec02f8f.html#aaceff36206e292663b1adc22f19b2380">dtype_dst</a>, blk_k, blk_n&gt;();</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <span class="keyword">auto</span> src_blk_2d = src.xetla_format&lt;<a class="code hl_typedef" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t_3_01matAcc__dst__t___00_01matAcc__src__t___00_01m06b88c4e579b298664a350bfbec02f8f.html#a7ccf3831b2dc22b3919bedfddb69d803">dtype_src</a>, blk_m, blk_n&gt;();</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="preprocessor">#pragma unroll</span></div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; blk_m / mma_m; i++) {</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; blk_m / mma_m; i++) {</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            <a class="code hl_typedef" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector&lt;dtype_dst, mma_m * blk_n&gt;</a> dst_tmp;</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            <span class="keyword">auto</span> dst_tmp_2d = dst_tmp.xetla_format&lt;<a class="code hl_typedef" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t_3_01matAcc__dst__t___00_01matAcc__src__t___00_01m06b88c4e579b298664a350bfbec02f8f.html#aaceff36206e292663b1adc22f19b2380">dtype_dst</a>, mma_m, blk_n&gt;();</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="preprocessor">#pragma unroll</span></div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i_acc = 0; i_acc &lt; mma_m; i_acc++) {</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            <span class="keywordflow">for</span> (uint32_t i_acc = 0; i_acc &lt; mma_m; i_acc++) {</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>                dst_tmp_2d.row(i_acc)</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>                        = a_block[i_acc + i * mma_m] * b_blk_2d.row(0)</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                        + src_blk_2d.row(i_acc + i * mma_m);</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            }</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="preprocessor">#pragma unroll</span></div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 1; k &lt; blk_k - 1; k++) {</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i_acc = 0; i_acc &lt; mma_m; i_acc++) {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            <span class="keywordflow">for</span> (uint32_t k = 1; k &lt; blk_k - 1; k++) {</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                <span class="keywordflow">for</span> (uint32_t i_acc = 0; i_acc &lt; mma_m; i_acc++) {</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                    <span class="keywordtype">int</span> a_offset = k * blk_m + i_acc + i * mma_m;</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                    dst_tmp_2d.row(i_acc)</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>                            += a_block[a_offset] * b_blk_2d.row(k);</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>                }</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            }</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i_acc = 0; i_acc &lt; mma_m; i_acc++) {</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            <span class="keywordflow">for</span> (uint32_t i_acc = 0; i_acc &lt; mma_m; i_acc++) {</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                <span class="keywordtype">int</span> a_offset = (blk_k - 1) * blk_m + i_acc + i * mma_m;</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                dst_blk_2d.row(i_acc + i * mma_m)</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                        = a_block[a_offset] * b_blk_2d.row(blk_k - 1)</div>
@@ -236,20 +236,20 @@ $(document).ready(function(){initNavTree('fma__xe_8hpp_source.html',''); initRes
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>            <a class="code hl_typedef" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector&lt;dtype_dst, tail_m * blk_n&gt;</a> dst_tmp;</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>            <span class="keyword">auto</span> dst_tmp_2d = dst_tmp.xetla_format&lt;<a class="code hl_typedef" href="structgpu_1_1xetla_1_1subgroup_1_1tile__mma__t_3_01matAcc__dst__t___00_01matAcc__src__t___00_01m06b88c4e579b298664a350bfbec02f8f.html#aaceff36206e292663b1adc22f19b2380">dtype_dst</a>, tail_m, blk_n&gt;();</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="preprocessor">#pragma unroll</span></div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i_acc = 0; i_acc &lt; tail_m; i_acc++) {</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            <span class="keywordflow">for</span> (uint32_t i_acc = 0; i_acc &lt; tail_m; i_acc++) {</div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>                dst_tmp_2d.row(i_acc)</div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>                        = a_block[i_acc + tail_start_m] * b_blk_2d.row(0)</div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>                        + src_blk_2d.row(i_acc + tail_start_m);</div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>            }</div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="preprocessor">#pragma unroll</span></div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 1; k &lt; blk_k - 1; k++) {</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i_acc = 0; i_acc &lt; tail_m; i_acc++) {</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>            <span class="keywordflow">for</span> (uint32_t k = 1; k &lt; blk_k - 1; k++) {</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>                <span class="keywordflow">for</span> (uint32_t i_acc = 0; i_acc &lt; tail_m; i_acc++) {</div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>                    <span class="keywordtype">int</span> a_offset = k * blk_m + i_acc + tail_start_m;</div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>                    dst_tmp_2d.row(i_acc)</div>
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>                            += a_block[a_offset] * b_blk_2d.row(k);</div>
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>                }</div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>            }</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i_acc = 0; i_acc &lt; tail_m; i_acc++) {</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>            <span class="keywordflow">for</span> (uint32_t i_acc = 0; i_acc &lt; tail_m; i_acc++) {</div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>                <span class="keywordtype">int</span> a_offset = (blk_k - 1) * blk_m + i_acc + tail_start_m;</div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>                dst_blk_2d.row(i_acc + tail_start_m)</div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                        = a_block[a_offset] * b_blk_2d.row(blk_k - 1)</div>
@@ -264,11 +264,11 @@ $(document).ready(function(){initNavTree('fma__xe_8hpp_source.html',''); initRes
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>            <span class="keyword">auto</span> b_reg</div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>                    = b.reg.xetla_select&lt;b_block_size_y * b_tile_size_x, 1&gt;(0);</div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span><span class="preprocessor">#pragma unroll</span></div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; tile_size_m / block_size_m; i++) {</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>            <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; tile_size_m / block_size_m; i++) {</div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                <span class="keyword">auto</span> a_block = a.reg.xetla_select&lt;a_block_elems, 1&gt;(</div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>                        i * num_block_k * a_block_elems);</div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="preprocessor">#pragma unroll</span></div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; num_block_n; j++) {</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>                <span class="keywordflow">for</span> (uint32_t j = 0; j &lt; num_block_n; j++) {</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>                    <span class="keyword">auto</span> b_block = b_reg.xetla_select&lt;b_block_elems, 1&gt;(</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>                            j * b_block_elems);</div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>                    <span class="keyword">auto</span> src_block = src.reg.xetla_select&lt;block_elems, 1&gt;(</div>
@@ -293,7 +293,7 @@ $(document).ready(function(){initNavTree('fma__xe_8hpp_source.html',''); initRes
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>                <span class="keyword">auto</span> a_block = a.reg.xetla_select&lt;a_tail_blk_elems, 1&gt;(</div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>                        a_tile_size_x * tail_start_m);</div>
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span><span class="preprocessor">#pragma unroll</span></div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; num_block_n; j++) {</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>                <span class="keywordflow">for</span> (uint32_t j = 0; j &lt; num_block_n; j++) {</div>
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>                    <span class="keyword">auto</span> b_block = b_reg.xetla_select&lt;b_block_elems, 1&gt;(</div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>                            j * b_block_elems);</div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>                    <span class="keyword">auto</span> src_block</div>
@@ -311,16 +311,16 @@ $(document).ready(function(){initNavTree('fma__xe_8hpp_source.html',''); initRes
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        }</div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        <span class="comment">// different K block</span></div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span><span class="preprocessor">#pragma unroll</span></div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k_i = 1; k_i &lt; num_block_k; k_i++) {</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        <span class="keywordflow">for</span> (uint32_t k_i = 1; k_i &lt; num_block_k; k_i++) {</div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> </div>
 <div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>            <span class="keyword">auto</span> b_reg = b.reg.xetla_select&lt;b_block_size_y * b_tile_size_x, 1&gt;(</div>
 <div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>                    k_i * b_block_size_y * b_tile_size_x);</div>
 <div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span><span class="preprocessor">#pragma unroll</span></div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; tile_size_m / block_size_m; i++) {</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>            <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; tile_size_m / block_size_m; i++) {</div>
 <div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>                <span class="keyword">auto</span> a_block = a.reg.xetla_select&lt;a_block_elems, 1&gt;(</div>
 <div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>                        (i * num_block_k + k_i) * a_block_elems);</div>
 <div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span><span class="preprocessor">#pragma unroll</span></div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; num_block_n; j++) {</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>                <span class="keywordflow">for</span> (uint32_t j = 0; j &lt; num_block_n; j++) {</div>
 <div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>                    <span class="keyword">auto</span> b_block = b_reg.xetla_select&lt;b_block_elems, 1&gt;(</div>
 <div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>                            j * b_block_elems);</div>
 <div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>                    <span class="keyword">auto</span> dst_block = dst.reg.xetla_select&lt;block_elems, 1&gt;(</div>
@@ -342,7 +342,7 @@ $(document).ready(function(){initNavTree('fma__xe_8hpp_source.html',''); initRes
 <div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>                <span class="keyword">auto</span> a_block = a.reg.xetla_select&lt;a_tail_blk_elems, 1&gt;(</div>
 <div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>                        a_tile_size_x * tail_start_m + k_i * a_tail_blk_elems);</div>
 <div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span><span class="preprocessor">#pragma unroll</span></div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; num_block_n; j++) {</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>                <span class="keywordflow">for</span> (uint32_t j = 0; j &lt; num_block_n; j++) {</div>
 <div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>                    <span class="keyword">auto</span> b_block = b_reg.xetla_select&lt;b_block_elems, 1&gt;(</div>
 <div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>                            j * b_block_elems);</div>
 <div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>                    <span class="keyword">auto</span> dst_block</div>

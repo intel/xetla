@@ -297,7 +297,7 @@ $(document).ready(function(){initNavTree('layer__norm__fwd__xe_8hpp_source.html'
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>                + wg_size_x * wg_size_y * 2 * <span class="keyword">sizeof</span>(<a class="code hl_typedef" href="structgpu_1_1xetla_1_1kernel_1_1layer__norm__fwd__t_3_01dtype__x___00_01dtype__y___00_01dtype__wf6b635a4d65490f92949ed8f8e6c9766.html#a28616c528c93bcbf9dfcf4b5e232b035">dtype_acc</a>);</div>
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        uint32_t itr_count = 0;</div>
 <div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span> </div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> row = start_m; row &lt; args-&gt;matrix_m;</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>        <span class="keywordflow">for</span> (uint32_t row = start_m; row &lt; args-&gt;matrix_m;</div>
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>                row += wg_num_m * wg_tile_m) {</div>
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>            <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (n_chunks &gt; 1) {</div>
 <div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>                fused_op.init(</div>
@@ -312,7 +312,7 @@ $(document).ready(function(){initNavTree('layer__norm__fwd__xe_8hpp_source.html'
 <div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>                        args-&gt;matrix_m, args-&gt;mat_ld, start_n, row);</div>
 <div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>            }</div>
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span><span class="preprocessor">#pragma unroll</span></div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n_chunks; i++) {</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>            <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; n_chunks; i++) {</div>
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>                <a class="code hl_function" href="namespacegpu_1_1xetla_1_1subgroup.html#ae110043dd5332ce2a7ef91d2c8ae79ef">subgroup::tile_load</a>(x_in, x_in_payload);</div>
 <div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>                x_in_payload.update_tdesc(chunk_size);</div>
 <div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>                input = xetla_cvt&lt;dtype_acc, dtype_x&gt;(x_in.<a class="code hl_variable" href="structgpu_1_1xetla_1_1subgroup_1_1tile__t.html#a7985ceac15e399ebf3000e5693d8801e">reg</a>);</div>
@@ -330,7 +330,7 @@ $(document).ready(function(){initNavTree('layer__norm__fwd__xe_8hpp_source.html'
 <div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>                        args-&gt;matrix_m, args-&gt;mat_ld, start_n, row);</div>
 <div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>            }</div>
 <div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span><span class="preprocessor">#pragma unroll</span></div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n_chunks; i++) {</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>            <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; n_chunks; i++) {</div>
 <div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>                <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (n_chunks &gt; 1) {</div>
 <div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>                    <a class="code hl_function" href="namespacegpu_1_1xetla_1_1subgroup.html#ae110043dd5332ce2a7ef91d2c8ae79ef">subgroup::tile_load</a>(x_in, x_in_payload);</div>
 <div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>                    x_in_payload.update_tdesc(chunk_size);</div>
@@ -384,69 +384,65 @@ $(document).ready(function(){initNavTree('layer__norm__fwd__xe_8hpp_source.html'
 <div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>                }</div>
 <div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>            }</div>
 <div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>            <span class="comment">// to generate mixed instruction</span></div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>            <span class="keyword">constexpr</span> uint32_t <a class="code hl_define" href="gemm__softmax_8cpp.html#ad1ab836291a12a078c0b378699e1de73">SIMD</a> = 64 / <span class="keyword">sizeof</span>(<a class="code hl_typedef" href="structgpu_1_1xetla_1_1kernel_1_1layer__norm__fwd__t_3_01dtype__x___00_01dtype__y___00_01dtype__wf6b635a4d65490f92949ed8f8e6c9766.html#a28616c528c93bcbf9dfcf4b5e232b035">dtype_acc</a>);</div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>            <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (chunk_size &gt; 1) {</div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>                gamma_in_payload.init(args-&gt;gamma_ptr, args-&gt;matrix_n, 1,</div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>                        args-&gt;mat_ld, start_n, 0);</div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>                beta_in_payload.init(args-&gt;beta_ptr, args-&gt;matrix_n, 1,</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>                        args-&gt;mat_ld, start_n, 0);</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>            }</div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span> </div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>            <a class="code hl_typedef" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector&lt;dtype_acc, chunk_size&gt;</a> output;</div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span> </div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>            <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (n_chunks &gt; 1) {</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>                fused_op.init(</div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>                        fused_op_args, wg_idx, wg_idy, sg_idx, sg_idy, row);</div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>                x_in_payload.init(args-&gt;x_in_ptr, args-&gt;matrix_n,</div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>                        args-&gt;matrix_m, args-&gt;mat_ld, start_n, row);</div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>            }</div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>            <a class="code hl_typedef" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector&lt;dtype_acc, chunk_size&gt;</a> beta;</div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>            <a class="code hl_typedef" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector&lt;dtype_acc, chunk_size&gt;</a> gamma;</div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span><span class="preprocessor">#pragma unroll</span></div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n_chunks; i++) {</div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>                <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (n_chunks &gt; 1) {</div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>                    <a class="code hl_function" href="namespacegpu_1_1xetla_1_1subgroup.html#ae110043dd5332ce2a7ef91d2c8ae79ef">subgroup::tile_load</a>(gamma_in, gamma_in_payload);</div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>                    gamma_in_payload.update_tdesc(chunk_size);</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>            <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (chunk_size &gt; 1) {</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>                gamma_in_payload.init(args-&gt;gamma_ptr, args-&gt;matrix_n, 1,</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>                        args-&gt;mat_ld, start_n, 0);</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>                beta_in_payload.init(args-&gt;beta_ptr, args-&gt;matrix_n, 1,</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>                        args-&gt;mat_ld, start_n, 0);</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>            }</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span> </div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>            <a class="code hl_typedef" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector&lt;dtype_acc, chunk_size&gt;</a> output;</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span> </div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>            <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (n_chunks &gt; 1) {</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>                fused_op.init(</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>                        fused_op_args, wg_idx, wg_idy, sg_idx, sg_idy, row);</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>                x_in_payload.init(args-&gt;x_in_ptr, args-&gt;matrix_n,</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>                        args-&gt;matrix_m, args-&gt;mat_ld, start_n, row);</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>            }</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span><span class="preprocessor">#pragma unroll</span></div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>            <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; n_chunks; i++) {</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>                <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (n_chunks &gt; 1) {</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>                    <a class="code hl_function" href="namespacegpu_1_1xetla_1_1subgroup.html#ae110043dd5332ce2a7ef91d2c8ae79ef">subgroup::tile_load</a>(gamma_in, gamma_in_payload);</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>                    gamma_in_payload.update_tdesc(chunk_size);</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span> </div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>                    <a class="code hl_function" href="namespacegpu_1_1xetla_1_1subgroup.html#ae110043dd5332ce2a7ef91d2c8ae79ef">subgroup::tile_load</a>(beta_in, beta_in_payload);</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>                    beta_in_payload.update_tdesc(chunk_size);</div>
 <div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span> </div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>                    <a class="code hl_function" href="namespacegpu_1_1xetla_1_1subgroup.html#ae110043dd5332ce2a7ef91d2c8ae79ef">subgroup::tile_load</a>(beta_in, beta_in_payload);</div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>                    beta_in_payload.update_tdesc(chunk_size);</div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span> </div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>                    <a class="code hl_function" href="namespacegpu_1_1xetla_1_1subgroup.html#ae110043dd5332ce2a7ef91d2c8ae79ef">subgroup::tile_load</a>(x_in, x_in_payload);</div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>                    x_in_payload.update_tdesc(chunk_size);</div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>                    input = xetla_cvt&lt;dtype_acc, dtype_x&gt;(x_in.<a class="code hl_variable" href="structgpu_1_1xetla_1_1subgroup_1_1tile__t.html#a7985ceac15e399ebf3000e5693d8801e">reg</a>);</div>
-<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>                    <span class="comment">// &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; fused op pre-processing</span></div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>                    input = fused_op.pre_op(input);</div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>                }</div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>                <a class="code hl_typedef" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector&lt;dtype_acc, chunk_size&gt;</a> beta</div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>                        = xetla_cvt&lt;dtype_acc, dtype_weight, chunk_size&gt;(</div>
-<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>                                beta_in.<a class="code hl_variable" href="structgpu_1_1xetla_1_1subgroup_1_1tile__t.html#a7985ceac15e399ebf3000e5693d8801e">reg</a>);</div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>                <a class="code hl_typedef" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector&lt;dtype_acc, chunk_size&gt;</a> gamma</div>
-<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>                        = xetla_cvt&lt;dtype_acc, dtype_weight&gt;(gamma_in.<a class="code hl_variable" href="structgpu_1_1xetla_1_1subgroup_1_1tile__t.html#a7985ceac15e399ebf3000e5693d8801e">reg</a>);</div>
-<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span> </div>
-<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>                output = beta + (rs * (input - mu)) * gamma;</div>
-<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>                <span class="comment">// &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; fused op post-processing</span></div>
-<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>                output = fused_op.post_op(output);</div>
-<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>                y_out.<a class="code hl_variable" href="structgpu_1_1xetla_1_1subgroup_1_1tile__t.html#a7985ceac15e399ebf3000e5693d8801e">reg</a> = xetla_cvt&lt;dtype_y, dtype_acc, chunk_size&gt;(output);</div>
-<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>                <a class="code hl_function" href="namespacegpu_1_1xetla_1_1subgroup.html#aca86d85d16cd70ce167a4819af5d29ef">subgroup::tile_store</a>&lt;<a class="code hl_enumvalue" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30aaf9f686f9eb416162d298446a94cfafb">cache_hint::uncached</a>,</div>
-<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>                        <a class="code hl_enumvalue" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30aa9c64c25d98516dabbeaa44fa4b798fe">cache_hint::write_back</a>&gt;(y_out, y_out_payload);</div>
-<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>                y_out_payload.update_tdesc(chunk_size);</div>
-<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>            }</div>
-<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>            x_in_payload.update_tdesc(</div>
-<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>                    wg_num_m * wg_tile_m * args-&gt;mat_ld - sg_tile_n);</div>
-<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>            y_out_payload.update_tdesc(</div>
-<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>                    wg_num_m * wg_tile_m * args-&gt;mat_ld - sg_tile_n);</div>
-<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>        }</div>
-<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>    }</div>
-<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>};</div>
-<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span> </div>
-<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>} <span class="comment">// namespace gpu::xetla::kernel</span></div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>                    <a class="code hl_function" href="namespacegpu_1_1xetla_1_1subgroup.html#ae110043dd5332ce2a7ef91d2c8ae79ef">subgroup::tile_load</a>(x_in, x_in_payload);</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>                    x_in_payload.update_tdesc(chunk_size);</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>                    input = xetla_cvt&lt;dtype_acc, dtype_x&gt;(x_in.<a class="code hl_variable" href="structgpu_1_1xetla_1_1subgroup_1_1tile__t.html#a7985ceac15e399ebf3000e5693d8801e">reg</a>);</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>                    <span class="comment">// &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; fused op pre-processing</span></div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>                    input = fused_op.pre_op(input);</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>                }</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>                <a class="code hl_typedef" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector&lt;dtype_acc, chunk_size&gt;</a> beta</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>                        = xetla_cvt&lt;dtype_acc, dtype_weight, chunk_size&gt;(</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>                                beta_in.<a class="code hl_variable" href="structgpu_1_1xetla_1_1subgroup_1_1tile__t.html#a7985ceac15e399ebf3000e5693d8801e">reg</a>);</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>                <a class="code hl_typedef" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector&lt;dtype_acc, chunk_size&gt;</a> gamma</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>                        = xetla_cvt&lt;dtype_acc, dtype_weight&gt;(gamma_in.<a class="code hl_variable" href="structgpu_1_1xetla_1_1subgroup_1_1tile__t.html#a7985ceac15e399ebf3000e5693d8801e">reg</a>);</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span> </div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>                output = beta + (rs * (input - mu)) * gamma;</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>                <span class="comment">// &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; fused op post-processing</span></div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>                output = fused_op.post_op(output);</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>                y_out.<a class="code hl_variable" href="structgpu_1_1xetla_1_1subgroup_1_1tile__t.html#a7985ceac15e399ebf3000e5693d8801e">reg</a> = xetla_cvt&lt;dtype_y, dtype_acc, chunk_size&gt;(output);</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>                <a class="code hl_function" href="namespacegpu_1_1xetla_1_1subgroup.html#aca86d85d16cd70ce167a4819af5d29ef">subgroup::tile_store</a>&lt;<a class="code hl_enumvalue" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30aaf9f686f9eb416162d298446a94cfafb">cache_hint::uncached</a>,</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>                        <a class="code hl_enumvalue" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30aa9c64c25d98516dabbeaa44fa4b798fe">cache_hint::write_back</a>&gt;(y_out, y_out_payload);</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>                y_out_payload.update_tdesc(chunk_size);</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>            }</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>            x_in_payload.update_tdesc(</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>                    wg_num_m * wg_tile_m * args-&gt;mat_ld - sg_tile_n);</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>            y_out_payload.update_tdesc(</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>                    wg_num_m * wg_tile_m * args-&gt;mat_ld - sg_tile_n);</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>        }</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>    }</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>};</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span> </div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>} <span class="comment">// namespace gpu::xetla::kernel</span></div>
 <div class="ttc" id="acommon_2core_2common_8hpp_html_a9ed53999886ec13b86a4fe2e0fc16765"><div class="ttname"><a href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a></div><div class="ttdeci">#define __XETLA_API</div><div class="ttdef"><b>Definition</b> common.hpp:43</div></div>
 <div class="ttc" id="aexperimental_2kernel_2layer__norm_2api_8hpp_html"><div class="ttname"><a href="experimental_2kernel_2layer__norm_2api_8hpp.html">api.hpp</a></div><div class="ttdoc">C++ API.</div></div>
 <div class="ttc" id="aexperimental_2kernel_2layer__norm_2common_8hpp_html"><div class="ttname"><a href="experimental_2kernel_2layer__norm_2common_8hpp.html">common.hpp</a></div><div class="ttdoc">C++ API.</div></div>
-<div class="ttc" id="agemm__softmax_8cpp_html_ad1ab836291a12a078c0b378699e1de73"><div class="ttname"><a href="gemm__softmax_8cpp.html#ad1ab836291a12a078c0b378699e1de73">SIMD</a></div><div class="ttdeci">#define SIMD</div><div class="ttdef"><b>Definition</b> gemm_softmax.cpp:23</div></div>
 <div class="ttc" id="agroup__xetla__core__base__types_html_ga8cf5d016d24c8870706e20c376287e04"><div class="ttname"><a href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">gpu::xetla::xetla_vector</a></div><div class="ttdeci">__ESIMD_NS::simd&lt; native_type_t&lt; Ty &gt;, N &gt; xetla_vector</div><div class="ttdoc">wrapper for xetla_vector.</div><div class="ttdef"><b>Definition</b> base_types.hpp:149</div></div>
-<div class="ttc" id="agroup__xetla__core__math_html_ga015799ae43ea114a01cfce9b7f9f8f7f"><div class="ttname"><a href="group__xetla__core__math.html#ga015799ae43ea114a01cfce9b7f9f8f7f">gpu::xetla::xetla_reduce</a></div><div class="ttdeci">__XETLA_API T0 xetla_reduce(xetla_vector&lt; T1, SZ &gt; v)</div><div class="ttdoc">Performs reduction over elements of the input vector.</div><div class="ttdef"><b>Definition</b> math_general.hpp:519</div></div>
-<div class="ttc" id="agroup__xetla__core__math_html_gaabd5a2631196ee6ae503c6b051ef8290"><div class="ttname"><a href="group__xetla__core__math.html#gaabd5a2631196ee6ae503c6b051ef8290">gpu::xetla::xetla_rsqrt</a></div><div class="ttdeci">__XETLA_API xetla_vector&lt; T, SZ &gt; xetla_rsqrt(xetla_vector&lt; T, SZ &gt; src, Sat sat={})</div><div class="ttdoc">Calculate the inversion of square root, i.e.</div><div class="ttdef"><b>Definition</b> math_general.hpp:374</div></div>
+<div class="ttc" id="agroup__xetla__core__math_html_ga015799ae43ea114a01cfce9b7f9f8f7f"><div class="ttname"><a href="group__xetla__core__math.html#ga015799ae43ea114a01cfce9b7f9f8f7f">gpu::xetla::xetla_reduce</a></div><div class="ttdeci">__XETLA_API T0 xetla_reduce(xetla_vector&lt; T1, SZ &gt; v)</div><div class="ttdoc">Performs reduction over elements of the input vector.</div><div class="ttdef"><b>Definition</b> math_general.hpp:520</div></div>
+<div class="ttc" id="agroup__xetla__core__math_html_gaabd5a2631196ee6ae503c6b051ef8290"><div class="ttname"><a href="group__xetla__core__math.html#gaabd5a2631196ee6ae503c6b051ef8290">gpu::xetla::xetla_rsqrt</a></div><div class="ttdeci">__XETLA_API xetla_vector&lt; T, SZ &gt; xetla_rsqrt(xetla_vector&lt; T, SZ &gt; src, Sat sat={})</div><div class="ttdoc">Calculate the inversion of square root, i.e.</div><div class="ttdef"><b>Definition</b> math_general.hpp:375</div></div>
 <div class="ttc" id="agroup__xetla__core__memory_html_gaebb12622dff8d79811e1809d108cb812"><div class="ttname"><a href="group__xetla__core__memory.html#gaebb12622dff8d79811e1809d108cb812">gpu::xetla::xetla_store_global</a></div><div class="ttdeci">__XETLA_API void xetla_store_global(Ty *p, xetla_vector&lt; Toffset, N &gt; offsets, xetla_vector&lt; Ty, N *NElts &gt; vals, xetla_mask&lt; N &gt; pred=1)</div><div class="ttdoc">Stateless scattered store.</div><div class="ttdef"><b>Definition</b> memory.hpp:316</div></div>
 <div class="ttc" id="agroup__xetla__util__named__barrier_html_ggaad562941909edcd788dd091e31841fe1a4c44b0011c9c00f486a2d65f1293de8f"><div class="ttname"><a href="group__xetla__util__named__barrier.html#ggaad562941909edcd788dd091e31841fe1a4c44b0011c9c00f486a2d65f1293de8f">gpu::xetla::nbarrier_role::producer_consumer</a></div><div class="ttdeci">@ producer_consumer</div></div>
 <div class="ttc" id="alayer__norm_2config_8hpp_html"><div class="ttname"><a href="layer__norm_2config_8hpp.html">config.hpp</a></div><div class="ttdoc">C++ API.</div></div>

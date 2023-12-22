@@ -35,7 +35,7 @@ var namespacegpu_1_1xetla_1_1kernel =
     [ "xetla_mha_core_attn_fwd_t", "structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t.html", "structgpu_1_1xetla_1_1kernel_1_1xetla__mha__core__attn__fwd__t" ],
     [ "xetla_row_reduction_t", "structgpu_1_1xetla_1_1kernel_1_1xetla__row__reduction__t.html", null ],
     [ "xetla_row_reduction_t< dtype_in_, dtype_out_, dtype_acc_, reduction_attr_, gpu_arch::Xe, fused_op_t_ >", "structgpu_1_1xetla_1_1kernel_1_1xetla__row__reduction__t_3_01dtype__in___00_01dtype__out___00_01cd72c8b824c01ad6c9039a9957986bd1.html", "structgpu_1_1xetla_1_1kernel_1_1xetla__row__reduction__t_3_01dtype__in___00_01dtype__out___00_01cd72c8b824c01ad6c9039a9957986bd1" ],
-    [ "param_kslicing_g1l1_t", "namespacegpu_1_1xetla_1_1kernel.html#a04115ab7a0eebf4245cea97b6af3d13e", null ],
-    [ "param_kslicing_g1l2_t", "namespacegpu_1_1xetla_1_1kernel.html#a62487614bc778bea7b5323e2fe4788ce", null ],
-    [ "param_kslicing_g2l1_t", "namespacegpu_1_1xetla_1_1kernel.html#ae56a98d76edcdbc8ff443b493efa1ce5", null ]
+    [ "param_kslicing_g1l1_t", "namespacegpu_1_1xetla_1_1kernel.html#a6ee2af23548de0df515a5b526c2781f7", null ],
+    [ "param_kslicing_g1l2_t", "namespacegpu_1_1xetla_1_1kernel.html#a281f2c3e6367e46220e31c839f731822", null ],
+    [ "param_kslicing_g2l1_t", "namespacegpu_1_1xetla_1_1kernel.html#abab46a218bb8935be0d51131b03a6fe5", null ]
 ];

@@ -1,4 +1,0 @@
-var structgpu_1_1xetla_1_1param__optimizer_3_01param__optimizer__tag_1_1WORKGROUP_00_01dict__t___01_4 =
-[
-    [ "type", "structgpu_1_1xetla_1_1param__optimizer_3_01param__optimizer__tag_1_1WORKGROUP_00_01dict__t___01_4.html#acaaa86670c3daa4aa5e1002d7e964520", null ]
-];

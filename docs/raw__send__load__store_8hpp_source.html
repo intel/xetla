@@ -297,37 +297,36 @@ $(document).ready(function(){initNavTree('raw__send__load__store_8hpp_source.htm
 <div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span> </div>
 <div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>    <span class="keyword">constexpr</span> uint32_t numSrc0 = (N * <span class="keyword">sizeof</span>(uint64_t) + 63) / 64;</div>
 <div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>    <span class="keyword">constexpr</span> uint32_t numSrc1 = (N * <span class="keyword">sizeof</span>(Ty) + 63) / 64;</div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>    <span class="keyword">constexpr</span> uint32_t num_dest = (N * <span class="keyword">sizeof</span>(Ty) + 63) / 64;</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span> </div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>    <span class="keyword">static_assert</span>(<span class="keyword">sizeof</span>(Ty) == 2 || <span class="keyword">sizeof</span>(Ty) == 4 || <span class="keyword">sizeof</span>(Ty) == 8,</div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>            <span class="stringliteral">&quot;element_size not supported!&quot;</span>);</div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>    uint32_t element_size_code;</div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (<span class="keyword">sizeof</span>(Ty) == 2) {</div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>        element_size_code = 5;</div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (<span class="keyword">sizeof</span>(Ty) == 4) {</div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>        element_size_code = 2;</div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (<span class="keyword">sizeof</span>(Ty) == 8) {</div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>        element_size_code = 3;</div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>    }</div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span> </div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>    uint32_t msg_desc = detail::get_atomic_opcode&lt;Op&gt;();</div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>    msg_desc |= 3 &lt;&lt; 7;</div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>    msg_desc |= element_size_code &lt;&lt; 9;</div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>    msg_desc |= detail::get_atomic_cache_hint_code&lt;L1H, L2H, arch_tag&gt;() &lt;&lt; 17;</div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>    msg_desc |= numSrc0 &lt;&lt; 25;</div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span> </div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>    <span class="keyword">constexpr</span> uint32_t execSize = gpu::xetla::detail::get_execSize_code&lt;N&gt;();</div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>    <span class="keyword">constexpr</span> uint32_t sfid = 0xF;</div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>    <span class="keyword">constexpr</span> uint32_t exDesc = 0;</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span> </div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>    <a class="code hl_typedef" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector&lt;uint64_t, N&gt;</a> address = base_address + offset;</div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span> </div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>    xetla_raw_send&lt;uint64_t, N, Ty, N, execSize, sfid, numSrc0, numSrc1&gt;(</div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>            address, data, exDesc, msg_desc, pred);</div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>}</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span> </div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span> </div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>} <span class="comment">// namespace gpu::xetla</span></div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span> </div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>    <span class="keyword">static_assert</span>(<span class="keyword">sizeof</span>(Ty) == 2 || <span class="keyword">sizeof</span>(Ty) == 4 || <span class="keyword">sizeof</span>(Ty) == 8,</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>            <span class="stringliteral">&quot;element_size not supported!&quot;</span>);</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>    uint32_t element_size_code;</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (<span class="keyword">sizeof</span>(Ty) == 2) {</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>        element_size_code = 5;</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (<span class="keyword">sizeof</span>(Ty) == 4) {</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>        element_size_code = 2;</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (<span class="keyword">sizeof</span>(Ty) == 8) {</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>        element_size_code = 3;</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>    }</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span> </div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>    uint32_t msg_desc = detail::get_atomic_opcode&lt;Op&gt;();</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>    msg_desc |= 3 &lt;&lt; 7;</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>    msg_desc |= element_size_code &lt;&lt; 9;</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>    msg_desc |= detail::get_atomic_cache_hint_code&lt;L1H, L2H, arch_tag&gt;() &lt;&lt; 17;</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>    msg_desc |= numSrc0 &lt;&lt; 25;</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span> </div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>    <span class="keyword">constexpr</span> uint32_t execSize = gpu::xetla::detail::get_execSize_code&lt;N&gt;();</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>    <span class="keyword">constexpr</span> uint32_t sfid = 0xF;</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>    <span class="keyword">constexpr</span> uint32_t exDesc = 0;</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span> </div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>    <a class="code hl_typedef" href="group__xetla__core__base__types.html#ga8cf5d016d24c8870706e20c376287e04">xetla_vector&lt;uint64_t, N&gt;</a> address = base_address + offset;</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span> </div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>    xetla_raw_send&lt;uint64_t, N, Ty, N, execSize, sfid, numSrc0, numSrc1&gt;(</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>            address, data, exDesc, msg_desc, pred);</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>}</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span> </div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span> </div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>} <span class="comment">// namespace gpu::xetla</span></div>
 <div class="ttc" id="aclassgpu_1_1xetla_1_1core_1_1block__2d_html"><div class="ttname"><a href="classgpu_1_1xetla_1_1core_1_1block__2d.html">gpu::xetla::core::block_2d</a></div><div class="ttdef"><b>Definition</b> limitation.hpp:33</div></div>
 <div class="ttc" id="acommon_2core_2common_8hpp_html_a9ed53999886ec13b86a4fe2e0fc16765"><div class="ttname"><a href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a></div><div class="ttdeci">#define __XETLA_API</div><div class="ttdef"><b>Definition</b> common.hpp:43</div></div>
 <div class="ttc" id="acommon_2utils_2common_8hpp_html"><div class="ttname"><a href="common_2utils_2common_8hpp.html">common.hpp</a></div><div class="ttdoc">C++ API.</div></div>

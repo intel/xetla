@@ -161,7 +161,7 @@ $(document).ready(function(){initNavTree('prefetch__xe_8hpp_source.html',''); in
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            = payload.tdesc_prefetch.xetla_format&lt;uint32_t, num_tdesc, 16&gt;();</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">#pragma unroll</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num_tdesc; i++) {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; num_tdesc; i++) {</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        xetla_tprefetch_global&lt;dtype, L1, L2, payload_t::arch_tag&gt;(</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                tdesc_2d.row(i));</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    }</div>
@@ -179,7 +179,7 @@ $(document).ready(function(){initNavTree('prefetch__xe_8hpp_source.html',''); in
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            = tile_desc::tile_size_x / payload_t::scale_factor;</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (prefetch_len &gt;= 64) {</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="preprocessor">#pragma unroll</span></div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; prefetch_len / 64; j++) {</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="keywordflow">for</span> (uint32_t j = 0; j &lt; prefetch_len / 64; j++) {</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            uint32_t offset_x = j * 64 * payload_t::scale_factor;</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            uint32_t address_offset = offset_x * <span class="keyword">sizeof</span>(dtype);</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            <a class="code hl_function" href="group__xetla__core__memory.html#ga4d89ab60cfe99dedda4f94185b13eed9">xetla_prefetch_global</a>&lt;prefetch_dtype, 64, <a class="code hl_enumvalue" href="namespacegpu_1_1xetla.html#a2cf716afc0eaf0c0a87c572193d7ca76a6bad67b5e8990b5f40b54dddd984ea08">data_size::default_size</a>,</div>
@@ -197,7 +197,7 @@ $(document).ready(function(){initNavTree('prefetch__xe_8hpp_source.html',''); in
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <a class="code hl_enumeration" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30">cache_hint</a> L2 = <a class="code hl_enumvalue" href="namespacegpu_1_1xetla.html#a23ee6c8b836eb63360633951d75d7e30a1fb1a060534164a18a99494122825190">cache_hint::cached</a>, <span class="keyword">typename</span> payload_t&gt;</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><a class="code hl_define" href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a> <span class="keyword">typename</span> std::enable_if_t&lt;</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <a class="code hl_variable" href="structgpu_1_1xetla_1_1subgroup_1_1detail_1_1check__prefetch__type.html#a61218c45dec77783e2d84cdde0e7a91e">detail::check_prefetch_type&lt;payload_t&gt;::is_local_xe</a>&gt;</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="namespacegpu_1_1xetla_1_1subgroup.html#ae231c0f2ba538dd630ff96861a796544">  116</a></span><a class="code hl_function" href="namespacegpu_1_1xetla_1_1subgroup.html#aaceb202d8614f8ac1526c8d6d81871af">tile_prefetch</a>(payload_t &amp;payload) {}</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="namespacegpu_1_1xetla_1_1subgroup.html#ae231c0f2ba538dd630ff96861a796544">  116</a></span><a class="code hl_function" href="namespacegpu_1_1xetla_1_1subgroup.html#aaceb202d8614f8ac1526c8d6d81871af">tile_prefetch</a>([[maybe_unused]] payload_t &amp;payload) {}</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>} <span class="comment">// namespace gpu::xetla::subgroup</span></div>
 <div class="ttc" id="acommon_2core_2common_8hpp_html_a9ed53999886ec13b86a4fe2e0fc16765"><div class="ttname"><a href="common_2core_2common_8hpp.html#a9ed53999886ec13b86a4fe2e0fc16765">__XETLA_API</a></div><div class="ttdeci">#define __XETLA_API</div><div class="ttdef"><b>Definition</b> common.hpp:43</div></div>

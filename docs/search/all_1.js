@@ -32,7 +32,7 @@ var searchData=
   ['arr_5flen_29',['arr_len',['../namespacegpu_1_1xetla_1_1subgroup_1_1detail.html#a8e654a2fb9d4dcfaceb007855a4920f4',1,'gpu::xetla::subgroup::detail']]],
   ['arrive_30',['arrive',['../structgpu_1_1xetla_1_1xetla__nbarrier__t.html#a1da68dc186c272389a9d3c7b8bd3aa2f',1,'gpu::xetla::xetla_nbarrier_t']]],
   ['arrive_5fwait_31',['arrive_wait',['../structgpu_1_1xetla_1_1xetla__nbarrier__t.html#a49285611e6ecc26f0e301a373bb2ecfd',1,'gpu::xetla::xetla_nbarrier_t']]],
-  ['atomic_32',['atomic',['../namespacegpu_1_1xetla_1_1detail.html#ad610b6521a5d057ad9d283160f02a99ca23d33884d600e542d097cd3933df2ae4',1,'gpu::xetla::detail']]],
+  ['atomic_32',['atomic',['../namespacegpu_1_1xetla_1_1detail.html#abc116c5e560f63bfb006ac600f9bc46fa23d33884d600e542d097cd3933df2ae4',1,'gpu::xetla::detail']]],
   ['atomic_5fadd_33',['atomic_add',['../namespacegpu_1_1xetla.html#aa8afe1d12e7777419fb6ea09534a0aa7a482b36a4abeb767ddd4d552020cf2174',1,'gpu::xetla']]],
   ['atomic_5ffadd_34',['atomic_fadd',['../namespacegpu_1_1xetla.html#afe840f2cd61a9923187aa3b7a5dd3217a70bc0dad97f15581bf0c5e6e2117051e',1,'gpu::xetla']]],
   ['atomic_5fiadd_35',['atomic_iadd',['../namespacegpu_1_1xetla.html#afe840f2cd61a9923187aa3b7a5dd3217a10d2781242dc741ce88a156e605fb05a',1,'gpu::xetla']]],

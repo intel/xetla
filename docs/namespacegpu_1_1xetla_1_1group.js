@@ -77,5 +77,5 @@ var namespacegpu_1_1xetla_1_1group =
     [ "softmax_t< softmax_policy_fwd< dtype_acc_, gpu_arch::Xe >, tile_shape_ >", "classgpu_1_1xetla_1_1group_1_1softmax__t_3_01softmax__policy__fwd_3_01dtype__acc___00_01gpu__arc90582f6f8cb5a09b900a35996a4b06fd.html", "classgpu_1_1xetla_1_1group_1_1softmax__t_3_01softmax__policy__fwd_3_01dtype__acc___00_01gpu__arc90582f6f8cb5a09b900a35996a4b06fd" ],
     [ "tile_shape_t", "structgpu_1_1xetla_1_1group_1_1tile__shape__t.html", "structgpu_1_1xetla_1_1group_1_1tile__shape__t" ],
     [ "xetla_row_reduction_fused_op_arguments_t", "structgpu_1_1xetla_1_1group_1_1xetla__row__reduction__fused__op__arguments__t.html", "structgpu_1_1xetla_1_1group_1_1xetla__row__reduction__fused__op__arguments__t" ],
-    [ "param_dict1_wg_t", "namespacegpu_1_1xetla_1_1group.html#ac6347e7d215287c556e3f5df03d0035e", null ]
+    [ "param_dict1_wg_t", "namespacegpu_1_1xetla_1_1group.html#a58a84d17b3f21df59d18d1c608a7f2d0", null ]
 ];
