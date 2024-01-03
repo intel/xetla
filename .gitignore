@@ -7,6 +7,7 @@ build
 *.so
 *.dll
 *.pyc
+format.sh
 
 # test output of ci
 /_output
