@@ -27,6 +27,12 @@
 
 using namespace sycl::_V1;
 
+#if (__LIBSYCL_MAJOR_VERSION >= 7) && (__LIBSYCL_MINOR_VERSION >= 1)
+#include <cmath>
+#else
+#include <math.h>
+#endif
+
 enum class profiling_selector : uint8_t { CPU = 0, GPU = 1, ALL = 2 };
 
 struct profiling_statistics {
@@ -98,7 +104,11 @@ class profiling_helper {
 
         //time mean square error
         for (int i = 1; i < iter; i++) {
+#if (__LIBSYCL_MAJOR_VERSION >= 7) && (__LIBSYCL_MINOR_VERSION >= 1)
             stat.variance += sycl::pow(time[i] - stat.mean, 2);
+#else
+            stat.variance += pow(time[i] - stat.mean, 2);
+#endif
         }
         stat.variance /= iter;
     }
