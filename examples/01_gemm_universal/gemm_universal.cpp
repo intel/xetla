@@ -18,18 +18,6 @@
 
 enum class kslicing_impl_t : uint8_t { none = 0, global = 1, local = 2 };
 
-inline size_t time_event(sycl::event &e) {
-    // get start and end times
-    cl_ulong start_time = e.template get_profiling_info<
-            sycl::info::event_profiling::command_start>();
-
-    cl_ulong end_time = e.template get_profiling_info<
-            sycl::info::event_profiling::command_end>();
-
-    // return the delta
-    return static_cast<size_t>(end_time - start_time);
-}
-
 template <int m, int n, int k,
         kslicing_impl_t kslicing_type = kslicing_impl_t::none>
 void gemm_universal_run(uint32_t iter) {
@@ -160,10 +148,21 @@ void gemm_universal_run(uint32_t iter) {
 
     uint32_t warmup = 10;
     std::vector<float> event_times(iter + warmup);
-    long ops = 2 * static_cast<long>(matrix_m) * matrix_n * matrix_k;
-    profiling_helper prof("gemm_universal", ops, "gflops");
+
+    long ops_flo = 2 * static_cast<long>(matrix_m) * matrix_n * matrix_k;
+    long ops_hbm = (sizeof(data_type_a) * matrix_m * matrix_k
+            + sizeof(data_type_b) * matrix_k * matrix_n
+            + sizeof(data_type_c) * matrix_m * matrix_n);
+
+    profiling_helper prof_flo("gemm_universal", ops_flo, "gflops");
+    profiling_helper prof_hbm("gemm_universal", ops_hbm, "GB/s");
+
     for (uint32_t i = 0; i < iter + warmup; i++) {
-        if (i >= warmup) { prof.cpu_start(); }
+        if (i >= warmup) {
+            prof_flo.cpu_start();
+            prof_hbm.cpu_start();
+        }
+
         if constexpr (kslicing_type == kslicing_impl_t::global) {
             queue.memset(C, 0, size_c * sizeof(data_type_c));
         }
@@ -177,39 +176,21 @@ void gemm_universal_run(uint32_t iter) {
             });
         });
         gpu_event.wait();
-
-        event_times[i] = time_event(gpu_event) / 1e9;
-
-        // if (i >= warmup) {
-        //     prof.cpu_end();
-        //     prof.add_gpu_event(gpu_event);
-        // }
+        if (i >= warmup) {
+            prof_flo.cpu_end();
+            prof_flo.add_gpu_event(gpu_event);
+            prof_hbm.cpu_end();
+            prof_hbm.add_gpu_event(gpu_event);
+        }
     }
-
-    double average_event_time = 0.f;
-    auto best = 999.f;
-    for (uint32_t i = warmup; i < iter + warmup; i++) {
-        printf("GPU time is %f ms, Tflops is: %f, HBM (GBs) is %f\n",
-                event_times[i] / 1e3,
-                2.0 * matrix_m * matrix_n * matrix_k / 1e12 / event_times[i],
-                (matrix_m * matrix_k * sizeof(data_type_a)
-                        + matrix_k * matrix_n * sizeof(data_type_b)
-                        + matrix_m * matrix_n * sizeof(data_type_c))
-                        / event_times[i] / 1e9);
-        average_event_time += event_times[i];
-        best = min(best, event_times[i]);
-    }
-    average_event_time /= iter;
-    printf("Best is %f Tflops, %f HBM (GBs)\n",
-            2.0 * matrix_m * matrix_n * matrix_k / 1e12 / best,
-            (matrix_m * matrix_k * sizeof(data_type_a)
-                    + matrix_k * matrix_n * sizeof(data_type_b)
-                    + matrix_m * matrix_n * sizeof(data_type_c))
-                    / best / 1e9);
 
     ASSERT_EQ(0,
             gemm_result_validate(A, B, C, 1, matrix_m, matrix_k, matrix_n,
                     queue, mem_layout::row_major, mem_layout::row_major));
+
+    // performance
+    prof_flo.print_profiling_result(profiling_selector::GPU);
+    prof_hbm.print_profiling_result(profiling_selector::GPU);
 
     free(A, context);
     free(B, context);

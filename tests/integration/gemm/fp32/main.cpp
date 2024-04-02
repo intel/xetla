@@ -29,7 +29,7 @@ TYPED_TEST_SUITE_P(fp32_gemm_test);
 
 TYPED_TEST_P(fp32_gemm_test, esimd) {
     gemm_exec<TypeParam, result_validate<TypeParam>, fp32_gemm_func<TypeParam>>(
-            esimd_compile_string, TypeParam::batch_size);
+            esimd_compile_string, TypeParam::batch);
 }
 
 REGISTER_TYPED_TEST_SUITE_P(fp32_gemm_test, esimd);

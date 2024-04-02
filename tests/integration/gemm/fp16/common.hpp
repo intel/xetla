@@ -39,6 +39,8 @@ public:
         return name;
     }
     static constexpr mma_engine engine = mma_engine::xmx;
+
+    static constexpr size_t batch = 1;
 };
 
 class Test0 : public TestBase {

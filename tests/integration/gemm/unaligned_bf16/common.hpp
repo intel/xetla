@@ -38,6 +38,8 @@ public:
                 + mem_layout_a_str + "_" + mem_layout_b_str;
         return name;
     }
+
+    static constexpr size_t batch = 1;
     static constexpr mma_engine engine = mma_engine::xmx;
 };
 

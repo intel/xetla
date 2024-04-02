@@ -17,7 +17,5 @@
 #pragma once
 
 #include "buff_compare.hpp"
-#include "common.hpp"
 #include "execution.hpp"
 #include "gemm_gen.hpp"
-#include "profiling.hpp"

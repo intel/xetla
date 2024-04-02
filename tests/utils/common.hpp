@@ -165,6 +165,30 @@ inline data_type *alloc_device_and_init(size_t size,
 
 template <typename data_type>
 inline data_type *alloc_device_and_init(size_t size, size_t iter,
+        std::function<void(data_type *data, size_t elements)> init_func,
+        sycl::queue &queue, sycl::device &device, sycl::context &context) {
+    auto host_ptr
+            = static_cast<data_type *>(malloc(size * iter * sizeof(data_type)));
+
+    for (size_t i = 0; i < (size * iter); ++i) {
+        init_func(host_ptr, i);
+    }
+
+    auto device_ptr = static_cast<data_type *>(
+            aligned_alloc_device(DEVICE_MEM_ALIGNMENT,
+                    size * iter * sizeof(data_type), device, context));
+
+    queue.memcpy((void *)device_ptr, (void *)host_ptr,
+                 size * iter * sizeof(data_type))
+            .wait();
+
+    free(host_ptr);
+
+    return device_ptr;
+}
+
+template <typename data_type>
+inline data_type *alloc_device_and_init(size_t size, size_t iter,
         sycl::queue &queue, sycl::device &device, sycl::context &context) {
     std::vector<data_type> a(size);
     fill_matrix(a);

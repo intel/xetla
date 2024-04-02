@@ -69,14 +69,13 @@ constexpr __ESIMD_ENS::lsc_data_size get_data_size(gpu::xetla::data_size ds) {
     }
 }
 
+#if (__LIBSYCL_MAJOR_VERSION >= 8)
 /// @brief lookup table for memory kind.
 ///
 ///
 constexpr __ESIMD_NS::memory_kind get_memory_kind(gpu::xetla::memory_kind mk) {
     switch (mk) {
         case gpu::xetla::memory_kind::untyped_global:
-            return __ESIMD_NS::memory_kind::global;
-        case gpu::xetla::memory_kind::untyped_global_low_pri:
             return __ESIMD_NS::memory_kind::global;
         case gpu::xetla::memory_kind::typed_global:
             return __ESIMD_NS::memory_kind::image;
@@ -96,11 +95,7 @@ constexpr __ESIMD_NS::fence_flush_op get_fence_op(gpu::xetla::fence_op fo) {
             return __ESIMD_NS::fence_flush_op::evict;
         case gpu::xetla::fence_op::invalidate:
             return __ESIMD_NS::fence_flush_op::invalidate;
-        case gpu::xetla::fence_op::discard:
-            return __ESIMD_NS::fence_flush_op::invalidate;
         case gpu::xetla::fence_op::clean:
-            return __ESIMD_NS::fence_flush_op::clean;
-        case gpu::xetla::fence_op::flushl2:
             return __ESIMD_NS::fence_flush_op::clean;
     }
 }
@@ -125,6 +120,62 @@ constexpr __ESIMD_NS::fence_scope get_fence_scope(gpu::xetla::fence_scope fs) {
             return __ESIMD_NS::fence_scope::system_acquire;
     }
 }
+#else
+/// @brief lookup table for memory kind.
+///
+///
+constexpr __ESIMD_ENS::lsc_memory_kind get_memory_kind(
+        gpu::xetla::memory_kind mk) {
+    switch (mk) {
+        case gpu::xetla::memory_kind::untyped_global:
+            return __ESIMD_ENS::lsc_memory_kind::untyped_global;
+        case gpu::xetla::memory_kind::untyped_global_low_pri:
+            return __ESIMD_ENS::lsc_memory_kind::untyped_global_low_pri;
+        case gpu::xetla::memory_kind::typed_global:
+            return __ESIMD_ENS::lsc_memory_kind::typed_global;
+        case gpu::xetla::memory_kind::shared_local:
+            return __ESIMD_ENS::lsc_memory_kind::shared_local;
+    }
+}
+
+/// @brief lookup table for fence op.
+///
+///
+constexpr __ESIMD_ENS::lsc_fence_op get_fence_op(gpu::xetla::fence_op fo) {
+    switch (fo) {
+        case gpu::xetla::fence_op::none: return __ESIMD_ENS::lsc_fence_op::none;
+        case gpu::xetla::fence_op::evict:
+            return __ESIMD_ENS::lsc_fence_op::evict;
+        case gpu::xetla::fence_op::invalidate:
+            return __ESIMD_ENS::lsc_fence_op::invalidate;
+        case gpu::xetla::fence_op::discard:
+            return __ESIMD_ENS::lsc_fence_op::discard;
+        case gpu::xetla::fence_op::clean:
+            return __ESIMD_ENS::lsc_fence_op::clean;
+        case gpu::xetla::fence_op::flushl2:
+            return __ESIMD_ENS::lsc_fence_op::flushl3;
+    }
+}
+
+/// @brief lookup table for fence scope.
+///
+///
+constexpr __ESIMD_ENS::lsc_scope get_fence_scope(gpu::xetla::fence_scope fs) {
+    switch (fs) {
+        case gpu::xetla::fence_scope::group:
+            return __ESIMD_ENS::lsc_scope::group;
+        case gpu::xetla::fence_scope::local:
+            return __ESIMD_ENS::lsc_scope::local;
+        case gpu::xetla::fence_scope::tile: return __ESIMD_ENS::lsc_scope::tile;
+        case gpu::xetla::fence_scope::gpu: return __ESIMD_ENS::lsc_scope::gpu;
+        case gpu::xetla::fence_scope::gpus: return __ESIMD_ENS::lsc_scope::gpus;
+        case gpu::xetla::fence_scope::system:
+            return __ESIMD_ENS::lsc_scope::system;
+        case gpu::xetla::fence_scope::sysacq:
+            return __ESIMD_ENS::lsc_scope::sysacq;
+    }
+}
+#endif
 
 /// @brief lookup table for atomic op.
 ///
@@ -626,6 +677,22 @@ __XETLA_API xetla_vector<T, N> xetla_atomic_local(
             offsets, src0, src1, pred);
 }
 
+#if (__LIBSYCL_MAJOR_VERSION >= 8)
+/// @brief Memory fence.
+/// Supported platforms: DG2, PVC
+///
+/// @tparam Kind is the Sfid shaded function.
+/// @tparam FenceOp is the fence operation.
+/// @tparam Scope is the operation scope.
+template <memory_kind Kind = memory_kind::untyped_global,
+        fence_op FenceOp = fence_op::none,
+        fence_scope Scope = fence_scope::group>
+__XETLA_API void xetla_fence() {
+    __ESIMD_NS::fence<gpu::xetla::detail::get_memory_kind(Kind),
+            gpu::xetla::detail::get_fence_op(FenceOp),
+            gpu::xetla::detail::get_fence_scope(Scope)>();
+}
+#else
 /// @brief Memory fence.
 /// Supported platforms: DG2, PVC
 ///
@@ -638,10 +705,11 @@ template <memory_kind Kind = memory_kind::untyped_global,
         fence_op FenceOp = fence_op::none,
         fence_scope Scope = fence_scope::group, int N = 16>
 __XETLA_API void xetla_fence(xetla_mask<N> pred = 1) {
-    __ESIMD_NS::fence<gpu::xetla::detail::get_memory_kind(Kind),
+    __ESIMD_ENS::lsc_fence<gpu::xetla::detail::get_memory_kind(Kind),
             gpu::xetla::detail::get_fence_op(FenceOp),
-            gpu::xetla::detail::get_fence_scope(Scope)>();
+            gpu::xetla::detail::get_fence_scope(Scope), N>(pred);
 }
+#endif
 
 /// @} xetla_core_memory
 

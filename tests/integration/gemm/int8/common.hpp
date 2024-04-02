@@ -43,6 +43,7 @@ public:
         return name;
     }
 
+    static constexpr size_t batch = 1;
     static constexpr mma_engine engine = mma_engine::xmx;
 };
 

@@ -462,7 +462,11 @@ __XETLA_API xetla_vector<T, SZ> xetla_add_c(xetla_vector<T, SZ> src0,
     static_assert((std::is_same<remove_const_t<T>, uint32_t>::value),
             "For addc, only uint32_t is supported");
     xetla_vector<T, SZ> carry_tmp;
+#if (__LIBSYCL_MAJOR_VERSION >= 8)
     xetla_vector<T, SZ> out = __ESIMD_NS::addc(carry_tmp, src0, src1);
+#else
+    xetla_vector<T, SZ> out = __ESIMD_ENS::addc(carry_tmp, src0, src1);
+#endif
     carry = carry_tmp;
     return out;
 }
@@ -480,7 +484,11 @@ __XETLA_API xetla_vector<T, SZ> xetla_add_c(xetla_vector<T, SZ> src0, T src1,
     static_assert((std::is_same<remove_const_t<T>, uint32_t>::value),
             "For addc, only uint32_t is supported");
     xetla_vector<T, SZ> carry_tmp;
+#if (__LIBSYCL_MAJOR_VERSION >= 8)
     xetla_vector<T, SZ> out = __ESIMD_NS::addc(carry_tmp, src0, src1);
+#else
+    xetla_vector<T, SZ> out = __ESIMD_ENS::addc(carry_tmp, src0, src1);
+#endif
     carry = carry_tmp;
     return out;
 }
@@ -498,8 +506,8 @@ template <typename T0, typename T1, typename T2, int SZ>
 __XETLA_API xetla_vector<T0, SZ> xetla_imul(xetla_vector_ref<T0, SZ> __REF__ lo,
         xetla_vector<T1, SZ> src0, T2 src1) {
     xetla_vector<T0, SZ> lo_tmp;
-    xetla_vector<T0, SZ> hi_tmp;
-    //            = __ESIMD_NS::fmul<T0, T1, T2, SZ>(lo_tmp, src0, src1);
+    xetla_vector<T0, SZ> hi_tmp
+            = __ESIMD_ENS::imul<T0, T1, T2, SZ>(lo_tmp, src0, src1);
     lo = lo_tmp;
     return hi_tmp;
 }

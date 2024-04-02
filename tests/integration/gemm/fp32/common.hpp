@@ -37,10 +37,11 @@ public:
                 + std::to_string(wg_m) + "x" + std::to_string(wg_n) + "_"
                 + std::to_string(sg_m) + "x" + std::to_string(sg_n) + "_"
                 + mem_layout_a_str + "_" + mem_layout_b_str;
+        static constexpr size_t batch = 1;
         return name;
     }
 
-    static constexpr size_t batch_size = 1;
+    static constexpr size_t batch = 1;
     static constexpr mma_engine engine = mma_engine::fpu;
 };
 
@@ -206,7 +207,7 @@ public:
 
 class Test9 : public TestBase {
 public:
-    static constexpr size_t batch_size = 64;
+    static constexpr size_t batch = 64;
     static constexpr size_t mat_m = 256;
     static constexpr size_t mat_n = 256;
     static constexpr size_t mat_k = 256;
@@ -228,7 +229,7 @@ public:
 
 class Test10 : public TestBase {
 public:
-    static constexpr size_t batch_size = 64;
+    static constexpr size_t batch = 64;
     static constexpr size_t mat_m = 256;
     static constexpr size_t mat_n = 256;
     static constexpr size_t mat_k = 256;
@@ -249,7 +250,7 @@ public:
 
 class Test11 : public TestBase {
 public:
-    static constexpr size_t batch_size = 35;
+    static constexpr size_t batch = 35;
     static constexpr size_t mat_m = 4193;
     static constexpr size_t mat_k = 1134;
     static constexpr size_t mat_n = 686;
@@ -287,7 +288,7 @@ public:
 
     int operator()(dtype_a *A, dtype_b *B, dtype_c *C, sycl::queue &queue) {
         return gemm_result_validate<dtype_a, dtype_b, dtype_c, dtype_acc>(A, B,
-                C, Test::batch_size, Test::mat_m, Test::mat_k, Test::mat_n,
-                queue, Test::layout_a, Test::layout_b);
+                C, Test::batch, Test::mat_m, Test::mat_k, Test::mat_n, queue,
+                Test::layout_a, Test::layout_b);
     }
 };
