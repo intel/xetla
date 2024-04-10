@@ -208,7 +208,8 @@ concept xetla_matrix_ref
 
 } // namespace gpu::xetla
 
-#if (__LIBSYCL_MAJOR_VERSION >= 7) && (__LIBSYCL_MINOR_VERSION >= 1)
+#if (__LIBSYCL_MAJOR_VERSION > 7) \
+        || ((__LIBSYCL_MAJOR_VERSION == 7) && (__LIBSYCL_MINOR_VERSION >= 1))
 
 namespace sycl::detail {
 template <typename T>
