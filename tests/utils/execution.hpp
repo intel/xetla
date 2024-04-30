@@ -24,6 +24,18 @@ using namespace cl::sycl;
 using namespace gpu;
 using namespace gpu::xetla;
 
+inline size_t time_event(sycl::event &e) {
+    // get start and end times
+    cl_ulong start_time = e.template get_profiling_info<
+            sycl::info::event_profiling::command_start>();
+
+    cl_ulong end_time = e.template get_profiling_info<
+            sycl::info::event_profiling::command_end>();
+
+    // return the delta
+    return static_cast<size_t>(end_time - start_time);
+}
+
 template <class Test, typename validate_func, typename KERNEL,
         int SLMSIZE = 128 * 1024, int BARNUM = 32>
 void gemm_exec(const std::string &compile_str, size_t batch = 1) {
@@ -103,41 +115,64 @@ void gemm_exec(const std::string &compile_str, size_t batch = 1) {
                 nullptr,
                 Test::layout_b == mem_layout::col_major ? matrix_k : matrix_n,
                 nullptr, matrix_n, nullptr, nullptr);
-
+        arg.matA_base = A;
+        arg.matB_base = B;
+        arg.matC_base = C;
+        arg.acc_base = Acc;
+        arg.cnt_base = Cnt;
+        if (!gemm_op_t::can_implement(arg)) {
+            std::cout << "The arguments cannot be supported, skip ... "
+                      << std::endl;
+            result = test_result::skip;
+        }
         cl::sycl::nd_range<3> nd_range = gemm_op_t::get_nd_range(arg);
-
-        for (size_t i = 0; i < batch; i++) {
-            auto A_ptr = A + i * size_a;
-            auto B_ptr = B + i * size_b;
-            auto C_ptr = C + i * size_c;
-            auto Acc_ptr = Acc + i * size_acc;
-            auto Cnt_ptr = Cnt + i * size_cnt;
-
-            arg.matA_base = A_ptr;
-            arg.matB_base = B_ptr;
-            arg.matC_base = C_ptr;
-            arg.acc_base = Acc_ptr;
-            arg.cnt_base = Cnt_ptr;
-
-            if (!gemm_op_t::can_implement(arg)) {
-                std::cout << "The arguments cannot be supported, skip ... "
-                          << std::endl;
-                result = test_result::skip;
-                break;
-            }
+        int iter = 10, warmup = 10;
+        std::vector<float> event_times(iter + warmup);
+        for (uint32_t j = 0; j < iter + warmup; j++) {
 
             auto e_esimd = queue.submit([&](handler &cgh) {
                 cgh.use_kernel_bundle(exeBundle);
                 cgh.parallel_for<Test>(
                         nd_range, [=](nd_item<3> item) KERNEL_MAIN {
+                            // int batch_idx = item.get_workgroup(0);
+                            // auto A_ptr = A + batch_idx * size_a;
+                            // auto B_ptr = B + batch_idx * size_b;
+                            // auto C_ptr = C + batch_idx * size_c;
+                            // auto Acc_ptr = Acc + batch_idx * size_acc;
+                            // auto Cnt_ptr = Cnt + batch_idx * size_cnt;
+
                             gpu::xetla::xetla_local_init<SLMSIZE>();
                             gpu::xetla::xetla_nbarrier_init<BARNUM>();
-                            KERNEL::run(item, A_ptr, B_ptr, C_ptr, matrix_m,
-                                    matrix_n, matrix_k, Acc_ptr, Cnt_ptr);
+                            KERNEL::run(item, A, B, C, matrix_m, matrix_n,
+                                    matrix_k, Acc, Cnt);
                         });
             });
+
             e_esimd.wait();
+            event_times[j] = time_event(e_esimd) / 1e9;
         }
+        double average_event_time = 0.f;
+        auto best = 999.f;
+        for (uint32_t i = warmup; i < iter + warmup; i++) {
+            printf("GPU time is %f ms, Tflops is: %f, HBM (GBs) is %f\n",
+                    event_times[i] * 1e3,
+                    2.0 * matrix_m * matrix_n * matrix_k / 1e12
+                            / event_times[i],
+                    (matrix_m * matrix_k * sizeof(data_type_a)
+                            + matrix_k * matrix_n * sizeof(data_type_b)
+                            + matrix_m * matrix_n * sizeof(data_type_c))
+                            / event_times[i] / 1e9);
+            average_event_time += event_times[i];
+            best = min(best, event_times[i]);
+        }
+        average_event_time /= iter;
+        printf("Best is %f Tflops, %f HBM (GBs)\n",
+                2.0 * matrix_m * matrix_n * matrix_k / 1e12 / best,
+                (matrix_m * matrix_k * sizeof(data_type_a)
+                        + matrix_k * matrix_n * sizeof(data_type_b)
+                        + matrix_m * matrix_n * sizeof(data_type_c))
+                        / best / 1e9);
+
     } catch (cl::sycl::exception const &e) {
         std::cout << "SYCL exception caught: " << e.what() << '\n';
         result = test_result::fail;

@@ -26,9 +26,9 @@ void batch_gemm_run(uint32_t iter) {
     uint32_t batch_size = 256;
 
     //GEMM input size
-    uint32_t matrix_m = 512;
-    uint32_t matrix_n = 768;
-    uint32_t matrix_k = 64;
+    uint32_t matrix_m = 2048;
+    uint32_t matrix_n = 2048;
+    uint32_t matrix_k = 96;
 
     // define slice of each matrices
     uint32_t size_a_slice = matrix_m * matrix_k;
@@ -82,7 +82,7 @@ void batch_gemm_run(uint32_t iter) {
     constexpr uint32_t sg_tile_n = 64;
 
     //There are implicit requirement for wg_tile_k range
-    constexpr uint32_t wg_tile_k = 32;
+    constexpr uint32_t wg_tile_k = 16;
     constexpr uint32_t sync_freq = 8;
     constexpr uint32_t stages = 3;
 

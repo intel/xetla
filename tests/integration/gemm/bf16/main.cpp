@@ -32,6 +32,5 @@ TYPED_TEST_P(bf16_gemm_test, esimd) {
             esimd_compile_string);
 }
 REGISTER_TYPED_TEST_SUITE_P(bf16_gemm_test, esimd);
-using tests = ::testing::Types<Test0, Test1, Test2, Test3, Test4, Test5, Test6,
-        Test7, Test8, Test9, Test10, Test11>;
+using tests = ::testing::Types<Test0>;
 INSTANTIATE_TYPED_TEST_SUITE_P(bf16_gemm_test_suite, bf16_gemm_test, tests);

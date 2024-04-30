@@ -18,16 +18,29 @@
 
 enum class kslicing_impl_t : uint8_t { none = 0, global = 1, local = 2 };
 
-template <kslicing_impl_t kslicing_type = kslicing_impl_t::none>
+inline size_t time_event(sycl::event &e) {
+    // get start and end times
+    cl_ulong start_time = e.template get_profiling_info<
+            sycl::info::event_profiling::command_start>();
+
+    cl_ulong end_time = e.template get_profiling_info<
+            sycl::info::event_profiling::command_end>();
+
+    // return the delta
+    return static_cast<size_t>(end_time - start_time);
+}
+
+template <int m, int n, int k,
+        kslicing_impl_t kslicing_type = kslicing_impl_t::none>
 void gemm_universal_run(uint32_t iter) {
     // Tips, the example demonstrates programming kernel with XeTLA, it works as expected with current configurations.
     // Please make sure you fully understand these configurations before you do any modifications, incomplete changes may lead to unexpected behaviors.
     // Please contact us for support.
 
     //GEMM_UNIVERSAL input size
-    size_t matrix_m = 4096;
-    size_t matrix_n = 4096;
-    size_t matrix_k = 4096;
+    size_t matrix_m = m;
+    size_t matrix_n = n;
+    size_t matrix_k = k;
 
     size_t size_a = matrix_m * matrix_k;
     size_t size_b = matrix_k * matrix_n;
@@ -70,9 +83,9 @@ void gemm_universal_run(uint32_t iter) {
     //Define the shape of workgroup
     //It's tunable parameters based on different input shape and hardware for better performance
     constexpr uint32_t wg_tile_m
-            = (kslicing_type != kslicing_impl_t::local) ? 256 : 64;
+            = (kslicing_type != kslicing_impl_t::local) ? 128 : 64;
     constexpr uint32_t wg_tile_n
-            = (kslicing_type != kslicing_impl_t::local) ? 256 : 128;
+            = (kslicing_type != kslicing_impl_t::local) ? 128 : 128;
 
     // specify the range k_w/k_s by setting the corresponding ratio
     // splitk using global memory
@@ -146,6 +159,7 @@ void gemm_universal_run(uint32_t iter) {
     }
 
     uint32_t warmup = 10;
+    std::vector<float> event_times(iter + warmup);
     long ops = 2 * static_cast<long>(matrix_m) * matrix_n * matrix_k;
     profiling_helper prof("gemm_universal", ops, "gflops");
     for (uint32_t i = 0; i < iter + warmup; i++) {
@@ -164,18 +178,38 @@ void gemm_universal_run(uint32_t iter) {
         });
         gpu_event.wait();
 
-        if (i >= warmup) {
-            prof.cpu_end();
-            prof.add_gpu_event(gpu_event);
-        }
+        event_times[i] = time_event(gpu_event) / 1e9;
+
+        // if (i >= warmup) {
+        //     prof.cpu_end();
+        //     prof.add_gpu_event(gpu_event);
+        // }
     }
+
+    double average_event_time = 0.f;
+    auto best = 999.f;
+    for (uint32_t i = warmup; i < iter + warmup; i++) {
+        printf("GPU time is %f ms, Tflops is: %f, HBM (GBs) is %f\n",
+                event_times[i] / 1e3,
+                2.0 * matrix_m * matrix_n * matrix_k / 1e12 / event_times[i],
+                (matrix_m * matrix_k * sizeof(data_type_a)
+                        + matrix_k * matrix_n * sizeof(data_type_b)
+                        + matrix_m * matrix_n * sizeof(data_type_c))
+                        / event_times[i] / 1e9);
+        average_event_time += event_times[i];
+        best = min(best, event_times[i]);
+    }
+    average_event_time /= iter;
+    printf("Best is %f Tflops, %f HBM (GBs)\n",
+            2.0 * matrix_m * matrix_n * matrix_k / 1e12 / best,
+            (matrix_m * matrix_k * sizeof(data_type_a)
+                    + matrix_k * matrix_n * sizeof(data_type_b)
+                    + matrix_m * matrix_n * sizeof(data_type_c))
+                    / best / 1e9);
 
     ASSERT_EQ(0,
             gemm_result_validate(A, B, C, 1, matrix_m, matrix_k, matrix_n,
                     queue, mem_layout::row_major, mem_layout::row_major));
-
-    //performance
-    prof.print_profiling_result(profiling_selector::GPU);
 
     free(A, context);
     free(B, context);
@@ -208,7 +242,7 @@ int main() {
     // be found in the example 01_gemm_universal with custom implementation
 
     // basic gemm_universal
-    gemm_universal_run<kslicing_impl_t::none>(10);
+    gemm_universal_run<1024, 1024, 1024, kslicing_impl_t::none>(10);
 
     // basic gemm_universal with workgroup cooperation
     // gemm_universal_run<kslicing_impl_t::global>(10);
