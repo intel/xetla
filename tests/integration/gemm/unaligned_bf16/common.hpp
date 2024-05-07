@@ -43,14 +43,14 @@ public:
 
 class Test0 : public TestBase {
 public:
-    static constexpr size_t mat_m = 253;
-    static constexpr size_t mat_n = 257;
-    static constexpr size_t mat_k = 255;
-    static constexpr size_t wg_m = 256;
-    static constexpr size_t wg_n = 256;
-    static constexpr size_t sg_m = 32;
-    static constexpr size_t sg_n = 64;
-    static constexpr size_t sg_k = 32;
+    static constexpr size_t mat_m = 512;
+    static constexpr size_t mat_n = 687;
+    static constexpr size_t mat_k = 381;
+    static constexpr size_t wg_m = 64;
+    static constexpr size_t wg_n = 64;
+    static constexpr size_t sg_m = 8;
+    static constexpr size_t sg_n = 16;
+    static constexpr size_t sg_k = 16;
     static constexpr uint32_t global_kslicing = 1;
     static constexpr uint32_t local_kslicing = 1;
     static constexpr mem_layout layout_a = mem_layout::row_major;

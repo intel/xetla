@@ -60,6 +60,47 @@ public:
 //     using data_type_c = bf16;
 //     using data_type_acc = float;
 // };
+
+// class Test0 : public TestBase {
+// public:
+//     static constexpr size_t mat_m = 4096;
+//     static constexpr size_t mat_n = 4096;
+//     static constexpr size_t mat_k = 4096;
+//     static constexpr size_t wg_m = 256;
+//     static constexpr size_t wg_n = 256;
+//     static constexpr size_t sg_m = 32;
+//     static constexpr size_t sg_n = 64;
+//     static constexpr size_t sg_k = 32;
+//     static constexpr uint32_t global_kslicing = 1;
+//     static constexpr uint32_t local_kslicing = 1;
+//     static constexpr mem_layout layout_a = mem_layout::row_major;
+//     static constexpr mem_layout layout_b = mem_layout::row_major;
+//     using data_type_a = bf16;
+//     using data_type_b = bf16;
+//     using data_type_c = bf16;
+//     using data_type_acc = float;
+// };
+
+// class Test0 : public TestBase {
+// public:
+//     static constexpr size_t mat_m = 8192;
+//     static constexpr size_t mat_n = 8192;
+//     static constexpr size_t mat_k = 8192;
+//     static constexpr size_t wg_m = 256;
+//     static constexpr size_t wg_n = 256;
+//     static constexpr size_t sg_m = 32;
+//     static constexpr size_t sg_n = 64;
+//     static constexpr size_t sg_k = 32;
+//     static constexpr uint32_t global_kslicing = 1;
+//     static constexpr uint32_t local_kslicing = 1;
+//     static constexpr mem_layout layout_a = mem_layout::row_major;
+//     static constexpr mem_layout layout_b = mem_layout::row_major;
+//     using data_type_a = bf16;
+//     using data_type_b = bf16;
+//     using data_type_c = bf16;
+//     using data_type_acc = float;
+// };
+
 // class Test0 : public TestBase {
 // public:
 //     static constexpr size_t mat_m = 1;
@@ -83,8 +124,8 @@ public:
 // class Test0 : public TestBase {
 // public:
 //     static constexpr size_t mat_m = 1;
-//     static constexpr size_t mat_n = 5120;
 //     static constexpr size_t mat_k = 13824;
+//     static constexpr size_t mat_n = 5120;
 //     static constexpr size_t wg_m = 8;
 //     static constexpr size_t wg_n = 128;
 //     static constexpr size_t sg_m = 8;
@@ -103,8 +144,8 @@ public:
 // class Test0 : public TestBase {
 // public:
 //     static constexpr size_t mat_m = 1;
-//     static constexpr size_t mat_n = 13824;
 //     static constexpr size_t mat_k = 5120;
+//     static constexpr size_t mat_n = 13824;
 //     static constexpr size_t wg_m = 8;
 //     static constexpr size_t wg_n = 512;
 //     static constexpr size_t sg_m = 8;
@@ -123,8 +164,8 @@ public:
 // class Test0 : public TestBase {
 // public:
 //     static constexpr size_t mat_m = 4;
-//     static constexpr size_t mat_n = 4096;
 //     static constexpr size_t mat_k = 16384;
+//     static constexpr size_t mat_n = 4096;
 //     static constexpr size_t wg_m = 32;
 //     static constexpr size_t wg_n = 64;
 //     static constexpr size_t sg_m = 8;
@@ -143,8 +184,8 @@ public:
 // class Test0 : public TestBase {
 // public:
 //     static constexpr size_t mat_m = 256;
-//     static constexpr size_t mat_n = 4096;
 //     static constexpr size_t mat_k = 4096;
+//     static constexpr size_t mat_n = 4096;
 //     static constexpr size_t wg_m = 128;
 //     static constexpr size_t wg_n = 128;
 //     static constexpr size_t sg_m = 32;
@@ -180,25 +221,25 @@ public:
 //     using data_type_acc = float;
 // };
 
-class Test0 : public TestBase {
-public:
-    static constexpr size_t mat_m = 1024;
-    static constexpr size_t mat_k = 28762;
-    static constexpr size_t mat_n = 8192;
-    static constexpr size_t wg_m = 32;
-    static constexpr size_t wg_n = 512;
-    static constexpr size_t sg_m = 32;
-    static constexpr size_t sg_n = 32;
-    static constexpr size_t sg_k = 32;
-    static constexpr uint32_t local_kslicing = 1;
-    static constexpr uint32_t global_kslicing = 1;
-    static constexpr mem_layout layout_a = mem_layout::row_major;
-    static constexpr mem_layout layout_b = mem_layout::row_major;
-    using data_type_a = bf16;
-    using data_type_b = bf16;
-    using data_type_c = bf16;
-    using data_type_acc = float;
-};
+// class Test0 : public TestBase {
+// public:
+//     static constexpr size_t mat_m = 1024;
+//     static constexpr size_t mat_k = 28762;
+//     static constexpr size_t mat_n = 8192;
+//     static constexpr size_t wg_m = 32;
+//     static constexpr size_t wg_n = 512;
+//     static constexpr size_t sg_m = 32;
+//     static constexpr size_t sg_n = 32;
+//     static constexpr size_t sg_k = 32;
+//     static constexpr uint32_t local_kslicing = 1;
+//     static constexpr uint32_t global_kslicing = 1;
+//     static constexpr mem_layout layout_a = mem_layout::row_major;
+//     static constexpr mem_layout layout_b = mem_layout::row_major;
+//     using data_type_a = bf16;
+//     using data_type_b = bf16;
+//     using data_type_c = bf16;
+//     using data_type_acc = float;
+// };
 
 // class Test0 : public TestBase {
 // public:
@@ -272,6 +313,46 @@ public:
 //     static constexpr size_t sg_k = 64;
 //     static constexpr uint32_t local_kslicing = 4;
 //     static constexpr uint32_t global_kslicing = 1;
+//     static constexpr mem_layout layout_a = mem_layout::row_major;
+//     static constexpr mem_layout layout_b = mem_layout::row_major;
+//     using data_type_a = bf16;
+//     using data_type_b = bf16;
+//     using data_type_c = bf16;
+//     using data_type_acc = float;
+// };
+
+// class Test0 : public TestBase {
+// public:
+//     static constexpr size_t mat_m = 1024;
+//     static constexpr size_t mat_n = 1024;
+//     static constexpr size_t mat_k = 1024;
+//     static constexpr size_t wg_m = 128;
+//     static constexpr size_t wg_n = 128;
+//     static constexpr size_t sg_m = 16;
+//     static constexpr size_t sg_n = 32;
+//     static constexpr size_t sg_k = 16;
+//     static constexpr uint32_t global_kslicing = 1;
+//     static constexpr uint32_t local_kslicing = 1;
+//     static constexpr mem_layout layout_a = mem_layout::col_major;
+//     static constexpr mem_layout layout_b = mem_layout::col_major;
+//     using data_type_a = bf16;
+//     using data_type_b = bf16;
+//     using data_type_c = bf16;
+//     using data_type_acc = float;
+// };
+
+// class Test0 : public TestBase {
+// public:
+//     static constexpr size_t mat_m = 128;
+//     static constexpr size_t mat_n = 128;
+//     static constexpr size_t mat_k = 128;
+//     static constexpr size_t wg_m = 64;
+//     static constexpr size_t wg_n = 64;
+//     static constexpr size_t sg_m = 8;
+//     static constexpr size_t sg_n = 16;
+//     static constexpr size_t sg_k = 16;
+//     static constexpr uint32_t global_kslicing = 1;
+//     static constexpr uint32_t local_kslicing = 1;
 //     static constexpr mem_layout layout_a = mem_layout::row_major;
 //     static constexpr mem_layout layout_b = mem_layout::row_major;
 //     using data_type_a = bf16;

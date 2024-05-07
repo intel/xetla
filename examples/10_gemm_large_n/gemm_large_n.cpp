@@ -22,8 +22,8 @@ void gemm_large_n_run(uint32_t iter) {
     // Please contact us for support.
 
     //GEMM input size
-    size_t matrix_m = 4096;
-    size_t matrix_n = 51200;
+    size_t matrix_m = 4;
+    size_t matrix_n = 250880;
     size_t matrix_k = 4096;
 
     size_t size_a = matrix_m * matrix_k;
@@ -66,19 +66,19 @@ void gemm_large_n_run(uint32_t iter) {
 
     //Define the shape of workgroup and subgroup
     //It's tunable parameters based on different input shape and hardware for better performance
-    constexpr uint32_t wg_tile_m = 256;
-    constexpr uint32_t wg_tile_n = 256;
-    constexpr uint32_t sg_tile_m = 32;
-    constexpr uint32_t sg_tile_n = 64;
+    constexpr uint32_t wg_tile_m = 8;
+    constexpr uint32_t wg_tile_n = 512;
+    constexpr uint32_t sg_tile_m = 8;
+    constexpr uint32_t sg_tile_n = 16;
 
     //There are implicit requirement for wg_tile_k range
-    constexpr uint32_t wg_tile_k = 32;
+    constexpr uint32_t wg_tile_k = 16;
 
     // This parameter indicates the workgroup number in
     // single Xe-core on vectorizonal direction
     // available settings: 1, 2, 4 ,8, 16, 32, 64
     // default 8
-    static constexpr uint32_t wg_num_n = 8;
+    static constexpr uint32_t wg_num_n = 64;
 
     // Mirco-kernel configuration
     using group_swizzle

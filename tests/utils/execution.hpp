@@ -48,6 +48,9 @@ void gemm_exec(const std::string &compile_str, size_t batch = 1) {
     using data_type_c = typename Test::data_type_c;
     using data_type_acc = typename Test::data_type_acc;
 
+    int iter = 10, warmup = 10;
+    batch = iter + warmup;
+
     constexpr size_t matrix_m = Test::mat_m;
     constexpr size_t matrix_n = Test::mat_n;
     constexpr size_t matrix_k = Test::mat_k;
@@ -120,13 +123,13 @@ void gemm_exec(const std::string &compile_str, size_t batch = 1) {
         arg.matC_base = C;
         arg.acc_base = Acc;
         arg.cnt_base = Cnt;
-        if (!gemm_op_t::can_implement(arg)) {
-            std::cout << "The arguments cannot be supported, skip ... "
-                      << std::endl;
-            result = test_result::skip;
-        }
+        // if (!gemm_op_t::can_implement(arg)) {
+        //     std::cout << "The arguments cannot be supported, skip ... "
+        //               << std::endl;
+        //     result = test_result::skip;
+        // }
         cl::sycl::nd_range<3> nd_range = gemm_op_t::get_nd_range(arg);
-        int iter = 10, warmup = 10;
+
         std::vector<float> event_times(iter + warmup);
         for (uint32_t j = 0; j < iter + warmup; j++) {
 
@@ -135,16 +138,17 @@ void gemm_exec(const std::string &compile_str, size_t batch = 1) {
                 cgh.parallel_for<Test>(
                         nd_range, [=](nd_item<3> item) KERNEL_MAIN {
                             // int batch_idx = item.get_workgroup(0);
-                            // auto A_ptr = A + batch_idx * size_a;
-                            // auto B_ptr = B + batch_idx * size_b;
-                            // auto C_ptr = C + batch_idx * size_c;
-                            // auto Acc_ptr = Acc + batch_idx * size_acc;
-                            // auto Cnt_ptr = Cnt + batch_idx * size_cnt;
+                            int batch_idx = j;
+                            auto A_ptr = A + batch_idx * size_a;
+                            auto B_ptr = B + batch_idx * size_b;
+                            auto C_ptr = C + batch_idx * size_c;
+                            auto Acc_ptr = Acc + batch_idx * size_acc;
+                            auto Cnt_ptr = Cnt + batch_idx * size_cnt;
 
                             gpu::xetla::xetla_local_init<SLMSIZE>();
                             gpu::xetla::xetla_nbarrier_init<BARNUM>();
-                            KERNEL::run(item, A, B, C, matrix_m, matrix_n,
-                                    matrix_k, Acc, Cnt);
+                            KERNEL::run(item, A_ptr, B_ptr, C_ptr, matrix_m,
+                                    matrix_n, matrix_k, Acc_ptr, Cnt_ptr);
                         });
             });
 
