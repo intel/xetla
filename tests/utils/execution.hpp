@@ -36,6 +36,8 @@ inline size_t time_event(sycl::event &e) {
     return static_cast<size_t>(end_time - start_time);
 }
 
+#define CACHE_FLUSH 1
+
 template <class Test, typename validate_func, typename KERNEL,
         int SLMSIZE = 128 * 1024, int BARNUM = 32>
 void gemm_exec(const std::string &compile_str, size_t batch = 1) {
@@ -49,8 +51,11 @@ void gemm_exec(const std::string &compile_str, size_t batch = 1) {
     using data_type_acc = typename Test::data_type_acc;
 
     int iter = 10, warmup = 10;
+#ifdef CACHE_FLUSH
     batch = iter + warmup;
-
+#else
+    batch = 1;
+#endif
     constexpr size_t matrix_m = Test::mat_m;
     constexpr size_t matrix_n = Test::mat_n;
     constexpr size_t matrix_k = Test::mat_k;
@@ -63,7 +68,9 @@ void gemm_exec(const std::string &compile_str, size_t batch = 1) {
     auto context = queue.get_info<info::queue::context>();
     auto device = queue.get_info<info::queue::device>();
 
-    std::cout << "Running on batch: " << batch << ", "
+    std::cout << "Problem size MKN:" << matrix_m << "x" << matrix_k << "x"
+              << matrix_n << std::endl;
+    std::cout << "Running on test iter: " << batch << ", "
               << device.get_info<info::device::name>() << "\n";
 
     auto A = alloc_device_and_init<data_type_a>(
@@ -137,14 +144,21 @@ void gemm_exec(const std::string &compile_str, size_t batch = 1) {
                 cgh.use_kernel_bundle(exeBundle);
                 cgh.parallel_for<Test>(
                         nd_range, [=](nd_item<3> item) KERNEL_MAIN {
-                            // int batch_idx = item.get_workgroup(0);
+                // int batch_idx = item.get_workgroup(0);
+#ifdef CACHE_FLUSH
                             int batch_idx = j;
                             auto A_ptr = A + batch_idx * size_a;
                             auto B_ptr = B + batch_idx * size_b;
                             auto C_ptr = C + batch_idx * size_c;
                             auto Acc_ptr = Acc + batch_idx * size_acc;
                             auto Cnt_ptr = Cnt + batch_idx * size_cnt;
-
+#else
+                            auto A_ptr = A;
+                            auto B_ptr = B;
+                            auto C_ptr = C;
+                            auto Acc_ptr = Acc;
+                            auto Cnt_ptr = Cnt;
+#endif
                             gpu::xetla::xetla_local_init<SLMSIZE>();
                             gpu::xetla::xetla_nbarrier_init<BARNUM>();
                             KERNEL::run(item, A_ptr, B_ptr, C_ptr, matrix_m,

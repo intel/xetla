@@ -22,6 +22,8 @@ void stream_k_gemm_run(uint32_t iter) {
     // Please contact us for support.
 
     //GEMM input size
+    uint32_t warmup = 10;
+    uint32_t test_iter = iter + warmup;
     uint32_t matrix_m = 3072;
     uint32_t matrix_n = 3072;
     uint32_t matrix_k = 4096;
@@ -32,7 +34,7 @@ void stream_k_gemm_run(uint32_t iter) {
 
     using data_type_a = bf16;
     using data_type_b = bf16;
-    using data_type_c = bf16;
+    using data_type_c = float;
     using data_type_acc = float;
 
     //Turn on the profiling property to facilitate subsequent profiling
@@ -47,19 +49,19 @@ void stream_k_gemm_run(uint32_t iter) {
 
     //Define and initialize the data required for the calculation
     auto A = alloc_device_and_init<data_type_a>(
-            size_a,
+            size_a * test_iter,
             [](data_type_a *data, size_t idx) {
                 data[idx] = static_cast<data_type_a>(random_float());
             },
             queue, device, context);
     auto B = alloc_device_and_init<data_type_b>(
-            size_b,
+            size_b * test_iter,
             [](data_type_b *data, size_t idx) {
                 data[idx] = static_cast<data_type_b>(random_float());
             },
             queue, device, context);
     auto C = alloc_device_and_init<data_type_c>(
-            size_c,
+            size_c * test_iter,
             [](data_type_c *data, size_t idx) {
                 data[idx] = static_cast<data_type_c>(0.0f);
             },
@@ -123,40 +125,41 @@ void stream_k_gemm_run(uint32_t iter) {
     size_t size_cnt = gemm_op_t::get_cnt_buf_size(stream_k);
 
     auto Acc = alloc_device_and_init<data_type_acc>(
-            size_acc,
+            size_acc * test_iter,
             [](data_type_acc *data, size_t idx) {
                 data[idx] = static_cast<data_type_acc>(0.0f);
             },
             queue, device, context);
     auto Cnt = alloc_device_and_init<uint32_t>(
-            size_cnt,
+            size_cnt * test_iter,
             [](uint32_t *data, size_t idx) {
                 data[idx] = static_cast<uint32_t>(0);
             },
             queue, device, context);
 
-    // set up gemm arguments
-    typename gemm_op_t::arguments_t gemm_arg(matrix_m, matrix_k, matrix_n, A,
-            matrix_k, B, matrix_n, C, matrix_n, Acc, matrix_n, Cnt, size_cnt,
-            stream_k);
-
-    cl::sycl::nd_range<3> NDRange = gemm_op_t::get_nd_range(gemm_arg);
-
-    if (!gemm_op_t::can_implement(gemm_arg)) {
-        std::cout << "The arguments cannot be supported, aborting ... "
-                  << std::endl;
-        free(A, queue);
-        free(B, queue);
-        free(C, queue);
-        free(Acc, queue);
-        free(Cnt, queue);
-        FAIL();
-    }
-
-    uint32_t warmup = 5;
     long ops = 2 * static_cast<long>(matrix_m) * matrix_n * matrix_k;
     profiling_helper prof("stream_k_universalgemm", ops, "gflops");
+    std::vector<float> event_times(iter + warmup);
     for (uint32_t i = 0; i < iter + warmup; i++) {
+        // set up gemm arguments
+        typename gemm_op_t::arguments_t gemm_arg(matrix_m, matrix_k, matrix_n,
+                A + i * size_a, matrix_k, B + i * size_b, matrix_n,
+                C + i * size_c, matrix_n, Acc + i * size_acc, matrix_n,
+                Cnt + i * size_cnt, size_cnt, stream_k);
+
+        cl::sycl::nd_range<3> NDRange = gemm_op_t::get_nd_range(gemm_arg);
+
+        if (!gemm_op_t::can_implement(gemm_arg)) {
+            std::cout << "The arguments cannot be supported, aborting ... "
+                      << std::endl;
+            free(A, queue);
+            free(B, queue);
+            free(C, queue);
+            free(Acc, queue);
+            free(Cnt, queue);
+            FAIL();
+        }
+
         if (i >= warmup) { prof.cpu_start(); }
         auto gpu_event = queue.submit([&](handler &cgh) {
             // GPU kernel
@@ -168,19 +171,39 @@ void stream_k_gemm_run(uint32_t iter) {
             });
         });
         gpu_event.wait();
-
+        event_times[i] = time_event(gpu_event) / 1e9;
         if (i >= warmup) {
             prof.cpu_end();
             prof.add_gpu_event(gpu_event);
         }
     }
+    double average_event_time = 0.f;
+    auto best = 999.f;
+    for (uint32_t i = warmup; i < iter + warmup; i++) {
+        printf("GPU time is %f ms, Tflops is: %f, HBM (GBs) is %f\n",
+                event_times[i] * 1e3,
+                2.0 * matrix_m * matrix_n * matrix_k / 1e12 / event_times[i],
+                (matrix_m * matrix_k * sizeof(data_type_a)
+                        + matrix_k * matrix_n * sizeof(data_type_b)
+                        + matrix_m * matrix_n * sizeof(data_type_c))
+                        / event_times[i] / 1e9);
+        average_event_time += event_times[i];
+        best = min(best, event_times[i]);
+    }
+    average_event_time /= iter;
+    printf("Best is %f Tflops, %f HBM (GBs)\n",
+            2.0 * matrix_m * matrix_n * matrix_k / 1e12 / best,
+            (matrix_m * matrix_k * sizeof(data_type_a)
+                    + matrix_k * matrix_n * sizeof(data_type_b)
+                    + matrix_m * matrix_n * sizeof(data_type_c))
+                    / best / 1e9);
 
     ASSERT_EQ(0,
             gemm_result_validate(A, B, C, 1, matrix_m, matrix_k, matrix_n,
                     queue, mem_layout::row_major, mem_layout::row_major));
 
     //performance
-    if (iter > 0) { prof.print_profiling_result(profiling_selector::GPU); }
+    //     if (iter > 0) { prof.print_profiling_result(profiling_selector::GPU); }
 
     free(A, context);
     free(B, context);
