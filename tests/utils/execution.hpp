@@ -24,6 +24,8 @@ using namespace cl::sycl;
 using namespace gpu;
 using namespace gpu::xetla;
 
+#define CACHE_FLUSH 1
+
 inline size_t time_event(sycl::event &e) {
     // get start and end times
     cl_ulong start_time = e.template get_profiling_info<
@@ -36,7 +38,29 @@ inline size_t time_event(sycl::event &e) {
     return static_cast<size_t>(end_time - start_time);
 }
 
-#define CACHE_FLUSH 1
+template <typename data_type>
+inline data_type *alloc_device_and_init(size_t size, size_t test_iter,
+        std::function<void(data_type *data, size_t elements)> init_func,
+        sycl::queue &queue, sycl::device &device, sycl::context &context) {
+    auto host_ptr = static_cast<data_type *>(malloc(size * sizeof(data_type)));
+
+    for (size_t i = 0; i < size; ++i) {
+        init_func(host_ptr, i);
+    }
+
+    auto device_ptr = static_cast<data_type *>(
+            aligned_alloc_device(DEVICE_MEM_ALIGNMENT,
+                    test_iter * size * sizeof(data_type), device, context));
+    for (int it = 0; it < test_iter; it++) {
+        queue.memcpy((void *)(device_ptr + it * size), (void *)host_ptr,
+                     size * sizeof(data_type))
+                .wait();
+    }
+
+    free(host_ptr);
+
+    return device_ptr;
+}
 
 template <class Test, typename validate_func, typename KERNEL,
         int SLMSIZE = 128 * 1024, int BARNUM = 32>
@@ -74,19 +98,19 @@ void gemm_exec(const std::string &compile_str, size_t batch = 1) {
               << device.get_info<info::device::name>() << "\n";
 
     auto A = alloc_device_and_init<data_type_a>(
-            batch * size_a,
+            size_a, batch,
             [](data_type_a *data, size_t idx) {
                 data[idx] = static_cast<data_type_a>(random_float());
             },
             queue, device, context);
     auto B = alloc_device_and_init<data_type_b>(
-            batch * size_b,
+            size_b, batch,
             [](data_type_b *data, size_t idx) {
                 data[idx] = static_cast<data_type_b>(random_float());
             },
             queue, device, context);
     auto C = alloc_device_and_init<data_type_c>(
-            batch * size_c,
+            size_c, batch,
             [](data_type_c *data, size_t idx) {
                 data[idx] = static_cast<data_type_c>(0);
             },
@@ -95,13 +119,13 @@ void gemm_exec(const std::string &compile_str, size_t batch = 1) {
     size_t size_acc = gemm_op_t::get_acc_buf_size(matrix_m, matrix_n);
     size_t size_cnt = gemm_op_t::get_cnt_buf_size(matrix_m, matrix_n);
     auto Acc = alloc_device_and_init<data_type_acc>(
-            batch * size_acc,
+            size_acc, batch,
             [](data_type_acc *data, size_t idx) {
                 data[idx] = static_cast<data_type_acc>(0);
             },
             queue, device, context);
     auto Cnt = alloc_device_and_init<uint32_t>(
-            batch * size_cnt,
+            size_cnt, batch,
             [](uint32_t *data, size_t idx) {
                 data[idx] = static_cast<uint32_t>(0);
             },
