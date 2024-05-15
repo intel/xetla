@@ -193,27 +193,44 @@ void gemm_exec(const std::string &compile_str, size_t batch = 1) {
             e_esimd.wait();
             event_times[j] = time_event(e_esimd) / 1e9;
         }
-        double average_event_time = 0.f;
         auto best = 999.f;
+        auto worst = 0.f;
+        double average = 0.f;
+
+        auto best_iter = 0;
+        auto worst_iter = 0;
+
         for (uint32_t i = warmup; i < iter + warmup; i++) {
+#if 1
             printf("GPU time is %f ms, Tflops is: %f, HBM (GBs) is %f\n",
-                    event_times[i] * 1e3,
+                    event_times[i] / 1e3,
                     2.0 * matrix_m * matrix_n * matrix_k / 1e12
                             / event_times[i],
                     (matrix_m * matrix_k * sizeof(data_type_a)
                             + matrix_k * matrix_n * sizeof(data_type_b)
                             + matrix_m * matrix_n * sizeof(data_type_c))
                             / event_times[i] / 1e9);
-            average_event_time += event_times[i];
+#endif
+            average += event_times[i];
             best = min(best, event_times[i]);
+            worst = max(worst, event_times[i]);
+            if (best == event_times[i]) { best_iter = i; }
+            if (worst == event_times[i]) { worst_iter = i; }
         }
-        average_event_time /= iter;
-        printf("Best is %f Tflops, %f HBM (GBs)\n",
-                2.0 * matrix_m * matrix_n * matrix_k / 1e12 / best,
-                (matrix_m * matrix_k * sizeof(data_type_a)
-                        + matrix_k * matrix_n * sizeof(data_type_b)
-                        + matrix_m * matrix_n * sizeof(data_type_c))
-                        / best / 1e9);
+        average = average - best - worst;
+        average /= (iter - 2);
+        auto tflo = 2.0 * matrix_m * matrix_n * matrix_k / 1e12;
+        auto hbm = (matrix_m * matrix_k * sizeof(data_type_a)
+                           + matrix_k * matrix_n * sizeof(data_type_b)
+                           + matrix_m * matrix_n * sizeof(data_type_c))
+                / 1e9;
+        printf("Performance result:\n");
+        printf("    Best at iter %d, %f ms; Worst at iter %d, %f ms\n",
+                best_iter, best, worst_iter, worst);
+        printf("    Tflops  [min: %f, max: %f, average: %f]\n", tflo / worst,
+                tflo / best, tflo / average);
+        printf("    HBM(GBs)[min: %f, max: %f, average: %f]\n", hbm / worst,
+                hbm / best, hbm / average);
 
     } catch (cl::sycl::exception const &e) {
         std::cout << "SYCL exception caught: " << e.what() << '\n';
