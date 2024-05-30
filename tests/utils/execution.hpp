@@ -163,7 +163,7 @@ void gemm_exec(const std::string &compile_str, size_t batch = 1) {
 
         std::vector<float> event_times(iter + warmup);
         for (uint32_t j = 0; j < iter + warmup; j++) {
-
+            auto start = std::chrono::high_resolution_clock::now();
             auto e_esimd = queue.submit([&](handler &cgh) {
                 cgh.use_kernel_bundle(exeBundle);
                 cgh.parallel_for<Test>(
@@ -189,9 +189,10 @@ void gemm_exec(const std::string &compile_str, size_t batch = 1) {
                                     matrix_n, matrix_k, Acc_ptr, Cnt_ptr);
                         });
             });
-
-            e_esimd.wait();
-            event_times[j] = time_event(e_esimd) / 1e9;
+            queue.wait();
+            auto end = std::chrono::high_resolution_clock::now();
+            std::chrono::duration<float, std::milli> time = end - start;
+            event_times[j] = time.count() / 1000;
         }
         auto best = 999.f;
         auto worst = 0.f;

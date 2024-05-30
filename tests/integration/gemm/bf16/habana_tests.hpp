@@ -45,7 +45,7 @@ public:
 class Habana_Test1 : public TestBase {
 public:
     static constexpr size_t mat_m = 512;
-    static constexpr size_t mat_k = 8912;
+    static constexpr size_t mat_k = 8192;
     static constexpr size_t mat_n = 32768;
     static constexpr size_t wg_m = 256;
     static constexpr size_t wg_n = 256;
@@ -66,7 +66,7 @@ class Habana_Test2 : public TestBase {
 public:
     static constexpr size_t mat_m = 512;
     static constexpr size_t mat_k = 32768;
-    static constexpr size_t mat_n = 8912;
+    static constexpr size_t mat_n = 8192;
     static constexpr size_t wg_m = 256;
     static constexpr size_t wg_n = 256;
     static constexpr size_t sg_m = 32;
@@ -247,10 +247,10 @@ public:
     static constexpr size_t mat_m = 8;
     static constexpr size_t mat_k = 128;
     static constexpr size_t mat_n = 16384;
-    static constexpr size_t wg_m = 8;
-    static constexpr size_t wg_n = 1024;
-    static constexpr size_t sg_m = 8;
-    static constexpr size_t sg_n = 32;
+    static constexpr size_t wg_m = 256;
+    static constexpr size_t wg_n = 256;
+    static constexpr size_t sg_m = 32;
+    static constexpr size_t sg_n = 64;
     static constexpr size_t sg_k = 32;
     static constexpr uint32_t local_kslicing = 1;
     static constexpr uint32_t global_kslicing = 1;
