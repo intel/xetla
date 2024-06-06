@@ -24,7 +24,7 @@ using namespace cl::sycl;
 using namespace gpu;
 using namespace gpu::xetla;
 
-#define CACHE_FLUSH 1
+#define CACHE_FLUSH 2
 
 inline size_t time_event(sycl::event &e) {
     // get start and end times
@@ -74,11 +74,20 @@ void gemm_exec(const std::string &compile_str, size_t batch = 1) {
     using data_type_c = typename Test::data_type_c;
     using data_type_acc = typename Test::data_type_acc;
 
-    int iter = 10, warmup = 10;
-#ifdef CACHE_FLUSH
-    batch = iter + warmup;
+    static constexpr int iter = 10, warmup = 10;
+#if CACHE_FLUSH == 1
+    static constexpr auto mem_iter = iter + warmup;
+#elif CACHE_FLUSH == 2
+    static constexpr auto l3_cache_size = 256 * 1024 * 1024;
+    static constexpr auto mem_iter = 3;
+    size_t pingpong_size_a = max(
+            Test::mat_m * Test::mat_k, l3_cache_size / sizeof(data_type_a));
+    size_t pingpong_size_b = max(
+            Test::mat_n * Test::mat_k, l3_cache_size / sizeof(data_type_b));
+    size_t pingpong_size_c = max(
+            Test::mat_m * Test::mat_n, l3_cache_size / sizeof(data_type_c));
 #else
-    batch = 1;
+    static constexpr auto mem_iter = 1;
 #endif
     constexpr size_t matrix_m = Test::mat_m;
     constexpr size_t matrix_n = Test::mat_n;
@@ -96,48 +105,67 @@ void gemm_exec(const std::string &compile_str, size_t batch = 1) {
               << matrix_n << std::endl;
     std::cout << "Running on test iter: " << batch << ", "
               << device.get_info<info::device::name>() << "\n";
-
+#if CACHE_FLUSH == 2
     auto A = alloc_device_and_init<data_type_a>(
-            size_a, batch,
+            pingpong_size_a, mem_iter * batch,
             [](data_type_a *data, size_t idx) {
                 data[idx] = static_cast<data_type_a>(random_float());
             },
             queue, device, context);
     auto B = alloc_device_and_init<data_type_b>(
-            size_b, batch,
+            pingpong_size_b, mem_iter * batch,
             [](data_type_b *data, size_t idx) {
                 data[idx] = static_cast<data_type_b>(random_float());
             },
             queue, device, context);
     auto C = alloc_device_and_init<data_type_c>(
-            size_c, batch,
+            pingpong_size_c, mem_iter * batch,
             [](data_type_c *data, size_t idx) {
                 data[idx] = static_cast<data_type_c>(0);
             },
             queue, device, context);
-
+#else
+    auto A = alloc_device_and_init<data_type_a>(
+            size_a, mem_iter * batch,
+            [](data_type_a *data, size_t idx) {
+                data[idx] = static_cast<data_type_a>(random_float());
+            },
+            queue, device, context);
+    auto B = alloc_device_and_init<data_type_b>(
+            size_b, mem_iter * batch,
+            [](data_type_b *data, size_t idx) {
+                data[idx] = static_cast<data_type_b>(random_float());
+            },
+            queue, device, context);
+    auto C = alloc_device_and_init<data_type_c>(
+            size_c, mem_iter * batch,
+            [](data_type_c *data, size_t idx) {
+                data[idx] = static_cast<data_type_c>(0);
+            },
+            queue, device, context);
+#endif
     size_t size_acc = gemm_op_t::get_acc_buf_size(matrix_m, matrix_n);
     size_t size_cnt = gemm_op_t::get_cnt_buf_size(matrix_m, matrix_n);
     auto Acc = alloc_device_and_init<data_type_acc>(
-            size_acc, batch,
+            size_acc, mem_iter * batch,
             [](data_type_acc *data, size_t idx) {
                 data[idx] = static_cast<data_type_acc>(0);
             },
             queue, device, context);
     auto Cnt = alloc_device_and_init<uint32_t>(
-            size_cnt, batch,
+            size_cnt, mem_iter * batch,
             [](uint32_t *data, size_t idx) {
                 data[idx] = static_cast<uint32_t>(0);
             },
             queue, device, context);
 
     try {
-        std::vector<kernel_id> kernelId = {get_kernel_id<Test>()};
-        auto inputBundle
-                = get_kernel_bundle<bundle_state::input>(context, kernelId);
-        setenv("SYCL_PROGRAM_COMPILE_OPTIONS", compile_str.c_str(), 1);
-        kernel_bundle<bundle_state::executable> exeBundle = build(inputBundle);
-        unsetenv("SYCL_PROGRAM_COMPILE_OPTIONS");
+        // std::vector<kernel_id> kernelId = {get_kernel_id<KERNEL>()};
+        // auto inputBundle
+        //         = get_kernel_bundle<bundle_state::input>(context, kernelId);
+        // setenv("SYCL_PROGRAM_COMPILE_OPTIONS", compile_str.c_str(), 1);
+        // kernel_bundle<bundle_state::executable> exeBundle = build(inputBundle);
+        // unsetenv("SYCL_PROGRAM_COMPILE_OPTIONS");
 
         using namespace gpu::xetla::group;
         using namespace gpu::xetla::kernel;
@@ -165,29 +193,35 @@ void gemm_exec(const std::string &compile_str, size_t batch = 1) {
         for (uint32_t j = 0; j < iter + warmup; j++) {
             auto start = std::chrono::high_resolution_clock::now();
             auto e_esimd = queue.submit([&](handler &cgh) {
-                cgh.use_kernel_bundle(exeBundle);
-                cgh.parallel_for<Test>(
-                        nd_range, [=](nd_item<3> item) KERNEL_MAIN {
-                // int batch_idx = item.get_workgroup(0);
-#ifdef CACHE_FLUSH
-                            int batch_idx = j;
+                // cgh.use_kernel_bundle(exeBundle);
+                cgh.parallel_for(nd_range, [=](nd_item<3> item) KERNEL_MAIN {
+                    int batch_idx = item.get_group(0);
+#if CACHE_FLUSH == 1
+                    int it = j;
+                    auto A_ptr = A + (it * batch + batch_idx) * size_a;
+                    auto B_ptr = B + (it * batch + batch_idx) * size_b;
+                    auto C_ptr = C + (it * batch + batch_idx) * size_c;
+                    auto Acc_ptr = Acc + (it * batch + batch_idx) * size_acc;
+                    auto Cnt_ptr = Cnt + (it * batch + batch_idx) * size_cnt;
+#elif CACHE_FLUSH == 2
+                            int it = j % 3;
+                            auto A_ptr = A + batch_idx * size_a + it * pingpong_size_a;
+                            auto B_ptr = B + batch_idx * size_b + it * pingpong_size_a;
+                            auto C_ptr = C + batch_idx * size_c + it * pingpong_size_a;
+                            auto Acc_ptr = Acc + batch_idx * size_acc + it * batch * size_acc;
+                            auto Cnt_ptr = Cnt + batch_idx * size_cnt + it * batch * size_cnt;
+#else
                             auto A_ptr = A + batch_idx * size_a;
                             auto B_ptr = B + batch_idx * size_b;
                             auto C_ptr = C + batch_idx * size_c;
                             auto Acc_ptr = Acc + batch_idx * size_acc;
                             auto Cnt_ptr = Cnt + batch_idx * size_cnt;
-#else
-                            auto A_ptr = A;
-                            auto B_ptr = B;
-                            auto C_ptr = C;
-                            auto Acc_ptr = Acc;
-                            auto Cnt_ptr = Cnt;
 #endif
-                            gpu::xetla::xetla_local_init<SLMSIZE>();
-                            gpu::xetla::xetla_nbarrier_init<BARNUM>();
-                            KERNEL::run(item, A_ptr, B_ptr, C_ptr, matrix_m,
-                                    matrix_n, matrix_k, Acc_ptr, Cnt_ptr);
-                        });
+                    gpu::xetla::xetla_local_init<SLMSIZE>();
+                    gpu::xetla::xetla_nbarrier_init<BARNUM>();
+                    KERNEL::run(item, A_ptr, B_ptr, C_ptr, matrix_m, matrix_n,
+                            matrix_k, Acc_ptr, Cnt_ptr);
+                });
             });
             queue.wait();
             auto end = std::chrono::high_resolution_clock::now();
