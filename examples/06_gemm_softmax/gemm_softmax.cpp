@@ -162,10 +162,18 @@ void gemm_softmax(uint32_t matrix_m, uint32_t matrix_k, uint32_t matrix_n,
 
     long ops
             = 2 * static_cast<long>(matrix_m) * matrix_n * matrix_k * batch_num;
+    long ops_hbm = (sizeof(data_type_a) * matrix_m * matrix_k
+                           + sizeof(data_type_b) * matrix_k * matrix_n
+                           + sizeof(data_type_c) * matrix_m * matrix_n)
+            * batch_num;
     profiling_helper prof("gemm_softmax", ops, "gflops");
+    profiling_helper prof_hbm("gemm_softmax", ops_hbm, "GB/s");
     try {
         for (uint32_t i = 0; i < iter + warmup; i++) {
-            if (i >= warmup) { prof.cpu_start(); }
+            if (i >= warmup) {
+                prof.cpu_start();
+                prof_hbm.cpu_start();
+            }
             auto gpu_event = queue.submit([&](handler &cgh) {
                 cgh.parallel_for(nd_range, [=](nd_item<3> item) KERNEL_MAIN {
                     using namespace gpu::xetla;
@@ -311,6 +319,8 @@ void gemm_softmax(uint32_t matrix_m, uint32_t matrix_k, uint32_t matrix_n,
             if (i >= warmup) {
                 prof.cpu_end();
                 prof.add_gpu_event(gpu_event);
+                prof_hbm.cpu_end();
+                prof_hbm.add_gpu_event(gpu_event);
             }
         }
     } catch (cl::sycl::exception const &e) {
@@ -324,6 +334,7 @@ void gemm_softmax(uint32_t matrix_m, uint32_t matrix_k, uint32_t matrix_n,
 
     // performance
     prof.print_profiling_result(profiling_selector::GPU);
+    prof_hbm.print_profiling_result(profiling_selector::GPU);
 
     free(A, context);
     free(B, context);
