@@ -29,8 +29,10 @@ template <typename T>
 class bf16_gemm_test : public ::testing::Test {};
 TYPED_TEST_SUITE_P(bf16_gemm_test);
 TYPED_TEST_P(bf16_gemm_test, esimd) {
-    gemm_exec<TypeParam, result_validate<TypeParam>, bf16_gemm_func<TypeParam>>(
-            esimd_compile_string);
+    gemm_exec<TypeParam, result_validate<TypeParam>,
+            bf16_gemm_func_default<TypeParam>>(esimd_compile_string);
+    gemm_exec<TypeParam, result_validate<TypeParam>,
+            bf16_gemm_func_m_first<TypeParam>>(esimd_compile_string);
 }
 REGISTER_TYPED_TEST_SUITE_P(bf16_gemm_test, esimd);
 // using tests = ::testing::Types<Habana_Batch_Test0,Habana_Batch_Test1,Habana_Batch_Test2,Habana_Batch_Test3,Habana_Batch_Test4>;
