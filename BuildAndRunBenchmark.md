@@ -10,7 +10,7 @@
         HBM(GBs)[min: 461.581285, max: 704.865826, average: 689.972831]
 
 ### Add a New Matrix Shape
-- Add a new shape class like "class Test_xxx : public TestBase ..." in tests/integration/gemm/bf16/common.hpp
+- Add a new shape class like "class Test_xxx : public TestBase ..." in [tests/integration/gemm/bf16/common.hpp](./tests/integration/gemm/bf16/common.hpp)
 - Add the Test "Test_xxx" to gtest list in tests/integration/gemm/bf16/main.cpp
 
 
