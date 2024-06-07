@@ -5,9 +5,10 @@
 ### Build And Run
     $cd {XETLA_REPO}
     $./tools/scripts/benchmark/build_run_gemm.sh
-The output show the average/max/min Bandwidth and Tflops like below:
-    Tflops  [min: 199.014415, max: 303.908466, average: 297.487233]
-    HBM(GBs)[min: 461.581285, max: 704.865826, average: 689.972831]
+
+    The output show the average/max/min Bandwidth and Tflops like below:
+        Tflops  [min: 199.014415, max: 303.908466, average: 297.487233]
+        HBM(GBs)[min: 461.581285, max: 704.865826, average: 689.972831]
 
 ### Add a New Matrix Shape
 - Add a new shape class like "class Test_xxx : public TestBase ..." in tests/integration/gemm/bf16/common.hpp
@@ -18,8 +19,8 @@ The output show the average/max/min Bandwidth and Tflops like below:
     $cd {XETLA_REPO}
     $./tools/scripts/benchmark/build_run_softmax.sh
 
-The output show the average/max/min Bandwidth like below:
-    average Bandwidth: GB/S: 1252.778991,max Bandwidth: GB/S: 1278.751180, min Bandwidth: GB/S: 1219.274418
+    The output show the average/max/min Bandwidth like below:
+        average Bandwidth: GB/S: 1252.778991,max Bandwidth: GB/S: 1278.751180, min Bandwidth: GB/S: 1219.274418
 
 ### Add a New Matrix Shape
 - Add a test case like "mat1_4096x256_bf16_xxx" in tests/integration/softmax/softmax_config.hpp
@@ -29,19 +30,20 @@ The output show the average/max/min Bandwidth like below:
 ### Build And Run
     $cd {XETLA_REPO}
     $./tools/scripts/benchmark/build_run_gemm_softmax.sh
-The output show the average/max/min Bandwidth like below:
-    ============== [kernel time] gflops   ==================
-    [kernel time]The minimum gflops(GPU_time) is 22218
-    [kernel time]The maximum gflops(GPU_time) is 29418.6
-    [kernel time]The median  gflops(GPU_time) is 25499.3
-    [kernel time]The mean    gflops(GPU_time) is 25441.1
-    ======================================================
 
-    ============== [kernel time] GB/s   ==================
-    [kernel time]The minimum GB/s(GPU_time) is 21.6973
-    [kernel time]The maximum GB/s(GPU_time) is 28.7291
-    [kernel time]The median  GB/s(GPU_time) is 24.9016
-    [kernel time]The mean    GB/s(GPU_time) is 24.8448
+    The output show the average/max/min Bandwidth like below:
+        ============== [kernel time] gflops   ==================
+        [kernel time]The minimum gflops(GPU_time) is 22218
+        [kernel time]The maximum gflops(GPU_time) is 29418.6
+        [kernel time]The median  gflops(GPU_time) is 25499.3
+        [kernel time]The mean    gflops(GPU_time) is 25441.1
+        ======================================================
+
+        ============== [kernel time] GB/s   ==================
+        [kernel time]The minimum GB/s(GPU_time) is 21.6973
+        [kernel time]The maximum GB/s(GPU_time) is 28.7291
+        [kernel time]The median  GB/s(GPU_time) is 24.9016
+        [kernel time]The mean    GB/s(GPU_time) is 24.8448
 
 
 ### Add a New Matrix Shape
