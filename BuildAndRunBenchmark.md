@@ -10,8 +10,8 @@
         HBM(GBs)[min: 461.581285, max: 704.865826, average: 689.972831]
 
 ### Add a New Matrix Shape
-- Add a new shape class like "class Test_xxx : public TestBase ..." in [tests/integration/gemm/bf16/common.hpp](./tests/integration/gemm/bf16/common.hpp)
-- Add the Test "Test_xxx" to gtest list in tests/integration/gemm/bf16/main.cpp
+- Add a new shape class like "class Test_xxx : public TestBase ..." in [tests/integration/gemm/bf16/common.hpp](./tests/integration/gemm/bf16/common.hpp).
+- Add the Test "Test_xxx" to gtest list in [tests/integration/gemm/bf16/main.cpp](./tests/integration/gemm/bf16/main.cpp).
 
 
 
@@ -24,8 +24,8 @@
         average Bandwidth: GB/S: 1252.778991,max Bandwidth: GB/S: 1278.751180, min Bandwidth: GB/S: 1219.274418
 
 ### Add a New Matrix Shape
-- Add a test case like "mat1_4096x256_bf16_xxx" in tests/integration/softmax/softmax_config.hpp
-- Add the test "mat1_4096x256_bf16_xxx" like "softmax_fwd_run<mat1_4096x256_bf16_xxx>();" in tests/integration/softmax/softmax_fwd.cpp
+- Add a test case like "mat1_4096x256_bf16_xxx" in [tests/integration/softmax/softmax_config.hpp](./tests/integration/softmax/softmax_config.hpp).
+- Add the test "mat1_4096x256_bf16_xxx" like "softmax_fwd_run<mat1_4096x256_bf16_xxx>();" in [tests/integration/softmax/softmax_fwd.cpp](./tests/integration/softmax/softmax_fwd.cpp).
 
 
 
@@ -49,7 +49,7 @@
         [kernel time]The mean    GB/s(GPU_time) is 24.8448
 
 ### Add a New Matrix Shape
-- Add a new shape MKN 4x4096x12288 and wg_tile_m 32, wg_tile_n 12288, sg_tile_m 32, sg_tile_n 512, sg_tile_k 32, like "gemm_softmax<32, 12288, 32, 512, 32>(4, 4096, 12288)" in examples/06_gemm_softmax/gemm_softmax.cpp
+- Add a new shape MKN 4x4096x12288 and wg_tile_m 32, wg_tile_n 12288, sg_tile_m 32, sg_tile_n 512, sg_tile_k 32, like "gemm_softmax<32, 12288, 32, 512, 32>(4, 4096, 12288)" in [examples/06_gemm_softmax/gemm_softmax.cpp](./examples/06_gemm_softmax/gemm_softmax.cpp).
 
 
 ## Copyright
