@@ -5,10 +5,10 @@
       $wget https://registrationcenter-download.intel.com/akdlm/IRC_NAS/fdc7a2bc-b7a8-47eb-8876-de6201297144/l_BaseKit_p_2024.1.0.596_offline.sh
       $sudo sh ./l_BaseKit_p_2024.1.0.596_offline.sh -a --silent --cli --eula accept
 
-After installing, please check the $ONEAPI_INSTALL_PATH here [https://github.com/intel/xetla/blob/benchmark/tools/scripts/env.sh#L8].
+  After installing, please check the $ONEAPI_INSTALL_PATH here [https://github.com/intel/xetla/blob/benchmark/tools/scripts/env.sh#L8].
 
   ### GPU Driver
-      Download from https://ubit-gfx.intel.com/build/19168301/artifacts and install it.
+  Download from https://ubit-gfx.intel.com/build/19168301/artifacts and install it.
 
 ## GEMM Benchmark
 ### Build And Run
