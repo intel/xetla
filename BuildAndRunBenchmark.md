@@ -51,6 +51,30 @@
 ### Add a New Matrix Shape
 - Add a new shape MKN 4x4096x12288 and wg_tile_m 32, wg_tile_n 12288, sg_tile_m 32, sg_tile_n 512, sg_tile_k 32, like "gemm_softmax<32, 12288, 32, 512, 32>(4, 4096, 12288)" in [examples/06_gemm_softmax/gemm_softmax.cpp](./examples/06_gemm_softmax/gemm_softmax.cpp).
 
+## GEMM + RELU Benchmark
+### Build And Run
+    $cd {XETLA_REPO}
+    $./tools/scripts/benchmark/build_run_gemm_relu.sh
+
+    The output show the average/max/min Bandwidth like:
+        ============= Profiling for [kernel time] =============
+        [kernel time]The first   running(GPU_time) time is 0.44096ms
+        [kernel time]The minimum running(GPU_time) time is 0.43072ms
+        [kernel time]The maximum running(GPU_time) time is 0.57168ms
+        [kernel time]The median  running(GPU_time) time is 0.45776ms
+        [kernel time]The mean(exclude the first trial) running(GPU_time) time is 0.4712ms
+        [kernel time]The variance(exclude the first trial) running(GPU_time) time is 0.00135906ms
+        ======================================================
+        ============== [kernel time] GB/s   ================== 
+        [kernel time]The minimum GB/s(GPU_time) is 234.778
+        [kernel time]The maximum GB/s(GPU_time) is 311.612
+        [kernel time]The median  GB/s(GPU_time) is 293.205
+        [kernel time]The mean    GB/s(GPU_time) is 284.842
+
+### Add a New Matrix Shape
+- Add a new shape MKN 8192x8192x8192 and wg_tile_m 256, wg_tile_n 256, sg_tile_m 32, sg_tile_n 64, sg_tile_k 32, like "gemm_relu<256, 256, 32, 64, 32>(8192, 8192, 8192)" in [examples/03_gemm_relu_bias/gemm_relu_bias.cpp](./examples/03_gemm_relu_bias/gemm_relu_bias.cpp).
+
+
 
 ## Copyright
 
