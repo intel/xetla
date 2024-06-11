@@ -1,5 +1,13 @@
 # Build And Run Benchmark
 
+## Install Compiler And GPU Driver
+  ### Compiler
+      $wget https://registrationcenter-download.intel.com/akdlm/IRC_NAS/fdc7a2bc-b7a8-47eb-8876-de6201297144/l_BaseKit_p_2024.1.0.596_offline.sh
+      $sudo sh ./l_BaseKit_p_2024.1.0.596_offline.sh -a --silent --cli --eula accept
+
+  ### GPU Driver
+      Download from https://ubit-gfx.intel.com/build/19168301/artifacts and install it.
+
 ## GEMM Benchmark
 ### Build And Run
     $cd {XETLA_REPO}
