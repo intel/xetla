@@ -266,11 +266,11 @@ public:
     static constexpr size_t mat_m = 1024;
     static constexpr size_t mat_k = 28672;
     static constexpr size_t mat_n = 8192;
-    static constexpr size_t wg_m = 64;
-    static constexpr size_t wg_n = 512;
+    static constexpr size_t wg_m = 256;
+    static constexpr size_t wg_n = 256;
     static constexpr size_t sg_m = 32;
-    static constexpr size_t sg_n = 32;
-    static constexpr size_t sg_k = 16;
+    static constexpr size_t sg_n = 64;
+    static constexpr size_t sg_k = 32;
     static constexpr uint32_t local_kslicing = 1;
     static constexpr uint32_t global_kslicing = 1;
     static constexpr mem_layout layout_a = mem_layout::row_major;
@@ -391,15 +391,28 @@ public:
     using dtype_acc = typename Test::data_type_acc;
 
     int operator()(dtype_a *A, dtype_b *B, dtype_c *C, sycl::queue &queue) {
+        std::cout << "into func";
         return gemm_result_validate<dtype_a, dtype_b, dtype_c, dtype_acc>(A, B,
-                C, 1, Test::mat_m, Test::mat_k, Test::mat_n, queue,
+                C, Test::batch, Test::mat_m, Test::mat_k, Test::mat_n, queue,
                 Test::layout_a, Test::layout_b);
     }
 };
 
 template <class Test>
-using bf16_gemm_func = bf16_gemm_test_func<typename Test::data_type_a,
+using bf16_gemm_func_default = bf16_gemm_test_func<typename Test::data_type_a,
         typename Test::data_type_b, typename Test::data_type_c,
-        typename Test::data_type_acc, Test::wg_m, Test::wg_n, Test::sg_m,
-        Test::sg_n, Test::sg_k, Test::layout_a, Test::layout_b,
-        Test::global_kslicing, Test::local_kslicing, Test::engine>;
+        typename Test::data_type_acc,
+        gpu::xetla::kernel::group_swizzle_default<gpu_arch::Xe>, Test::wg_m,
+        Test::wg_n, Test::sg_m, Test::sg_n, Test::sg_k, Test::layout_a,
+        Test::layout_b, Test::global_kslicing, Test::local_kslicing,
+        Test::engine>;
+
+template <class Test>
+using bf16_gemm_func_m_first = bf16_gemm_test_func<typename Test::data_type_a,
+        typename Test::data_type_b, typename Test::data_type_c,
+        typename Test::data_type_acc,
+        gpu::xetla::kernel::group_swizzle_m_first<Test::mat_m / Test::wg_m,
+                gpu_arch::Xe>,
+        Test::wg_m, Test::wg_n, Test::sg_m, Test::sg_n, Test::sg_k,
+        Test::layout_a, Test::layout_b, Test::global_kslicing,
+        Test::local_kslicing, Test::engine>;
