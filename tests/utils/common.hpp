@@ -171,17 +171,19 @@ int gemm_result_validate(data_type_a *A_device, data_type_b *B_device,
         mem_layout mem_layout_a_ = mem_layout::row_major,
         mem_layout mem_layout_b_ = mem_layout::row_major) {
     // define slice of each matrices
+    std::cout << "start";
     size_t size_a_slice = m * k;
     size_t size_b_slice = k * n;
     size_t size_c_slice = m * n;
 
+    std::cout << "allocate";
     auto A = alloc_host_and_copy<data_type_a>(
             A_device, batch_size * size_a_slice, queue);
     auto B = alloc_host_and_copy<data_type_b>(
             B_device, batch_size * size_b_slice, queue);
     auto C = alloc_host_and_copy<data_type_c>(
             C_device, batch_size * size_c_slice, queue);
-
+    std::cout << "buf_compare";
     buff_cmp::buff_vals<data_type_c> data(C, batch_size * m, n, n);
     std::vector<data_type_acc> gold_C(batch_size * m * n, 0);
     for (uint32_t batch = 0; batch < batch_size; batch++) {

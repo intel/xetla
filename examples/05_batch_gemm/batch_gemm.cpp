@@ -23,12 +23,12 @@ void batch_gemm_run(uint32_t iter) {
     // Please contact us for support.
 
     // batch size
-    uint32_t batch_size = 256;
+    uint32_t batch_size = 2048;
 
     //GEMM input size
-    uint32_t matrix_m = 2048;
-    uint32_t matrix_n = 2048;
-    uint32_t matrix_k = 96;
+    uint32_t matrix_m = 8;
+    uint32_t matrix_n = 16384;
+    uint32_t matrix_k = 128;
 
     // define slice of each matrices
     uint32_t size_a_slice = matrix_m * matrix_k;
@@ -42,7 +42,7 @@ void batch_gemm_run(uint32_t iter) {
 
     using data_type_a = bf16;
     using data_type_b = bf16;
-    using data_type_c = bf16;
+    using data_type_c = float;
     using data_type_acc = float;
 
     //Turn on the profiling property to facilitate subsequent profiling
@@ -76,10 +76,10 @@ void batch_gemm_run(uint32_t iter) {
 
     //Define the shape of workgroup and subgroup
     //It's tunable parameters based on different input shape and hardware for better performance
-    constexpr uint32_t wg_tile_m = 256;
-    constexpr uint32_t wg_tile_n = 256;
-    constexpr uint32_t sg_tile_m = 32;
-    constexpr uint32_t sg_tile_n = 64;
+    constexpr uint32_t wg_tile_m = 8;
+    constexpr uint32_t wg_tile_n = 512;
+    constexpr uint32_t sg_tile_m = 8;
+    constexpr uint32_t sg_tile_n = 16;
 
     //There are implicit requirement for wg_tile_k range
     constexpr uint32_t wg_tile_k = 16;

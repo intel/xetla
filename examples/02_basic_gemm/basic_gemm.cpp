@@ -22,8 +22,8 @@ void basic_gemm_run(uint32_t iter) {
     // Please contact us for support.
 
     // GEMM input size
-    uint32_t matrix_m = 3072;
-    uint32_t matrix_n = 3072;
+    uint32_t matrix_m = 4096;
+    uint32_t matrix_n = 4096;
     uint32_t matrix_k = 4096;
 
     uint32_t size_a = matrix_m * matrix_k;
