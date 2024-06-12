@@ -20,18 +20,18 @@
 using namespace cl::sycl;
 using namespace gpu::xetla;
 using namespace gpu;
+using namespace gpu::xetla::kernel;
+using namespace gpu::xetla::subgroup;
 
 template <typename data_type_a, typename data_type_b, typename data_type_c,
-        typename data_type_d, typename data_type_acc = float>
-int gemm_relu_bias_result_validate(data_type_a *A_device, data_type_b *B_device,
-        data_type_c *C_device, data_type_d *D_device, uint32_t m, uint32_t k,
-        uint32_t n, sycl::queue &queue,
-        mem_layout mem_layout_a_ = mem_layout::row_major,
+        typename data_type_acc = float>
+int gemm_relu_result_validate(data_type_a *A_device, data_type_b *B_device,
+        data_type_c *C_device, uint32_t m, uint32_t k, uint32_t n,
+        sycl::queue &queue, mem_layout mem_layout_a_ = mem_layout::row_major,
         mem_layout mem_layout_b_ = mem_layout::row_major) {
     auto A = alloc_host_and_copy<data_type_a>(A_device, m * k, queue);
     auto B = alloc_host_and_copy<data_type_b>(B_device, k * n, queue);
     auto C = alloc_host_and_copy<data_type_c>(C_device, m * n, queue);
-    auto D = alloc_host_and_copy<data_type_d>(D_device, n, queue);
 
     buff_cmp::buff_vals<data_type_c> data(C, m, n, n);
     std::vector<data_type_acc> gold_C(m * n, 0);
@@ -40,46 +40,49 @@ int gemm_relu_bias_result_validate(data_type_a *A_device, data_type_b *B_device,
     // ReLU
     std::transform(gold_C.cbegin(), gold_C.cend(), gold_C.begin(),
             [](data_type_acc c) { return c > 0.0f ? c : 0.0f; });
-    // BiasAdd
-    for (uint32_t i = 0; i < gold_C.size(); ++i) {
-        uint32_t col = gold_C.size() % n;
-        gold_C[i] += D[col];
-    }
+
     buff_cmp::buff_vals<data_type_c, data_type_acc> other(
             gold_C.data(), m, n, n);
 
-    bool result = buff_cmp::xetla_buff_cmp(
-            data, other, "gemm_relu_bias validation");
+    bool result = buff_cmp::xetla_buff_cmp(data, other, "gemm_relu validation");
 
     free(A);
     free(B);
     free(C);
-    free(D);
 
     std::cout << (!result ? "FAILED\n" : "PASSED\n");
     return result ? 0 : 1;
 }
 
-void gemm_relu_bias_run(uint32_t iter) {
+template <uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m,
+        uint32_t sg_tile_n, uint32_t sg_tile_k>
+void gemm_relu(uint32_t matrix_m, uint32_t matrix_k, uint32_t matrix_n,
+        size_t batch_num = 1) {
     // Tips, the example demonstrates programming kernel with XeTLA, it works as expected with current configurations.
     // Please make sure you fully understand these configurations before you do any modifications, incomplete changes may lead to unexpected behaviors.
     // Please contact us for support.
 
     //GEMM input size
-    uint32_t matrix_m = 4096;
-    uint32_t matrix_n = 4096;
-    uint32_t matrix_k = 4096;
-
     uint32_t size_a = matrix_m * matrix_k;
     uint32_t size_b = matrix_k * matrix_n;
     uint32_t size_c = matrix_m * matrix_n;
-    uint32_t size_d = 1 * matrix_n;
 
     using data_type_a = bf16;
     using data_type_b = bf16;
-    using data_type_c = bf16;
+    using data_type_c = float;
     using data_type_d = float;
     using data_type_acc = float;
+
+    static constexpr auto iter = 10;
+    static constexpr auto l3_cache_size = 256 * 1024 * 1024;
+    static constexpr auto pingpong_flush_iter = 3;
+
+    size_t pingpong_size_a
+            = max(batch_num * size_a, l3_cache_size / sizeof(data_type_a));
+    size_t pingpong_size_b
+            = max(batch_num * size_b, l3_cache_size / sizeof(data_type_b));
+    size_t pingpong_size_c
+            = max(batch_num * size_c, l3_cache_size / sizeof(data_type_c));
 
     //Turn on the profiling property to facilitate subsequent profiling
     sycl::property_list properties {sycl::property::queue::enable_profiling()};
@@ -92,42 +95,34 @@ void gemm_relu_bias_run(uint32_t iter) {
     std::cout << "Running on " << device.get_info<info::device::name>() << "\n";
 
     auto A = alloc_device_and_init<data_type_a>(
-            size_a,
+            pingpong_size_a * pingpong_flush_iter,
             [](data_type_a *data, size_t idx) {
                 data[idx] = static_cast<data_type_a>(random_float());
             },
             queue, device, context);
     auto B = alloc_device_and_init<data_type_b>(
-            size_b,
+            pingpong_size_b * pingpong_flush_iter,
             [](data_type_b *data, size_t idx) {
                 data[idx] = static_cast<data_type_b>(random_float());
             },
             queue, device, context);
     auto C = alloc_device_and_init<data_type_c>(
-            size_c,
+            pingpong_size_c * pingpong_flush_iter,
             [](data_type_c *data, size_t idx) {
                 data[idx] = static_cast<data_type_c>(0.0f);
-            },
-            queue, device, context);
-    auto D = alloc_device_and_init<data_type_d>(
-            size_d,
-            [](data_type_d *data, size_t idx) {
-                data[idx] = static_cast<data_type_d>(random_float());
             },
             queue, device, context);
 
     //Define the shape of workgroup
     //It's tunable parameters based on different input shape and hardware for better performance
-    constexpr uint32_t wg_tile_m = 256;
-    constexpr uint32_t wg_tile_n = 256;
+    static constexpr uint32_t periodic_sync_interval = 8;
+    static constexpr uint32_t prefetch_distance = 3;
 
-    // [ReLuBias] Chain multiple elementwise op in chained_tile_op_t<>: relu_op_t, bias_add_op_t
-    using bias_op_t = xetla::subgroup::bias_add_op_t<float, gpu_arch::Xe>;
+    // [ReLu] Chain multiple elementwise op in chained_tile_op_t<>: relu_op_t
     using tile_op_t = xetla::subgroup::chained_tile_op_t<
-            xetla::subgroup::relu_op_t, // apply elementwise ReLU
-            bias_op_t // apply elementwise BiasAdd
+            xetla::subgroup::relu_op_t // apply elementwise ReLU
             >;
-    // [ReLuBias] epilogue_t is an elementwise operation that will be applied to the
+    // [ReLu] epilogue_t is an elementwise operation that will be applied to the
     // accumulator C_acc in the final stage, in which
     //   C_acc = A x B
     // is already calculated.
@@ -135,61 +130,59 @@ void gemm_relu_bias_run(uint32_t iter) {
     //   epilogue_t: [m, n] -> [m, n], C_acc |-> tile_op_t(C_acc)
     using epilogue_policy
             = xetla::group::epilogue_policy_tile_op<tile_op_t, gpu_arch::Xe>;
+    using tile_shape = gpu::xetla::group::tile_shape_t<wg_tile_n, wg_tile_m,
+            sg_tile_n, sg_tile_m>;
 
     // Mirco-kernel configuration
-    using tune_option = dict_t<
-            elem_v_t<tune_key::param_optimizer_type,
-                    tune_key_value::param_optimizer_decision_tree>,
-            elem_t_t<tune_key::epilogue_policy, epilogue_policy>,
-            elem_t_t<tune_key::wg_tile_shape, shape<wg_tile_n, wg_tile_m>>>;
-    using default_config_t = gpu::xetla::kernel::default_gemm_config_t<
-            data_type_a, // input datatype for A
-            mem_layout::row_major, // memory layout for A
-            8, // leading dimension alignment for A, in unit of element
-            data_type_b, // input datatype for B
-            mem_layout::row_major, // memory layout for B
-            8, // leading dimension alignment for B, in unit of element
-            data_type_c, // output datatype for C
-            mem_layout::row_major, // memory layout for C
-            8, // leading dimension alignment for C, in unit of element
-            data_type_acc, // accumulator data type for intermediate resutls
-            gpu_arch::Xe, // GPU arch
-            tune_option>;
-    using gemm_op_t = typename default_config_t::type;
+    using gemm_t = typename xetla::group::gemm_selector_t<data_type_a,
+            data_type_b, mem_layout::row_major, mem_layout::row_major,
+            mem_space::global, mem_space::global, 8, 8, data_type_acc,
+            tile_shape, sg_tile_k, mma_engine::xmx, gpu_arch::Xe,
+            prefetch_distance, periodic_sync_interval>::gemm;
 
-    // [ReLuBias] define the shape of bias matrix D, which should be identitcal to C
-    bias_op_t::shape_t bias_add_shape(matrix_n, 1, matrix_n);
-    // [ReLuBias] pass arguments of chained_tile_op_t<> to epilogue_args
-    using epilogue_args_t = typename default_config_t::epilogue_t::arguments_t;
-    epilogue_args_t epilogue_args({//epilogue_args init list
-            // [ReLuBias] 1. relu_op_t
-            // ReLU accepts no arguments
-            {},
-            // [ReLuBias] 2. bias_add_op_t
-            // It accepts the base pointer to matrix D, and its dimensions
-            {D, bias_add_shape}});
-    // [ReLuBias] assign epilogue_args to gemm_op_t::arguments_t
-    typename gemm_op_t::arguments_t arg(matrix_m, matrix_k, matrix_n, A,
-            matrix_k, B, matrix_n, C, matrix_n, epilogue_args);
+    using epilogue_t = xetla::group::epilogue_t<epilogue_policy, tile_shape,
+            mem_desc_t<data_type_c, mem_layout::row_major, mem_space::global>>;
+
+    using group_swizzle = xetla::kernel::group_swizzle_default<gpu_arch::Xe>;
+
+    using dispatch_policy = dispatch_policy_kslicing<group_swizzle, 1, 1>;
+
+    using gemm_op_t = gemm_universal_t<dispatch_policy, gemm_t, epilogue_t>;
+
+    typename gemm_op_t::arguments_t arg(matrix_m, matrix_k, matrix_n, nullptr,
+            matrix_k, nullptr, matrix_n, nullptr, matrix_n, nullptr, nullptr);
+
     cl::sycl::nd_range<3> nd_range = gemm_op_t::get_nd_range(arg);
-    if (!gemm_op_t::can_implement(arg)) {
-        std::cout << "The arguments cannot be supported, aborting ... "
-                  << std::endl;
-        FAIL();
-    }
 
     constexpr uint32_t warmup = 10;
     long ops = 2 * static_cast<long>(matrix_m) * matrix_n * matrix_k
             + matrix_m * matrix_n;
-    profiling_helper prof("gemm_relu_bias_run", ops, "gflops");
+    profiling_helper prof("gemm_relu_run", ops, "gflops");
+    long ops_hbm = (sizeof(data_type_a) * matrix_m * matrix_k
+                           + sizeof(data_type_b) * matrix_k * matrix_n
+                           + sizeof(data_type_c) * matrix_m * matrix_n)
+            * batch_num;
+    profiling_helper prof_hbm("gemm_relu_run", ops_hbm, "GB/s");
     for (uint32_t i = 0; i < iter + warmup; i++) {
-        if (i >= warmup) { prof.cpu_start(); }
+        if (i >= warmup) {
+            prof.cpu_start();
+            prof_hbm.cpu_start();
+        }
         auto gpu_event = queue.submit([&](handler &cgh) {
             // GPU kernel
             cgh.parallel_for(nd_range, [=](nd_item<3> item) KERNEL_MAIN {
                 // allocate slm and nbarrier resource
                 slm_barrier_init<gemm_op_t>();
                 gemm_op_t gemm_op;
+                typename gemm_op_t::arguments_t arg(matrix_m, matrix_k,
+                        matrix_n, nullptr, matrix_k, nullptr, matrix_n, nullptr,
+                        matrix_n, nullptr, nullptr);
+                arg.matA_base
+                        = (A + (i % pingpong_flush_iter) * pingpong_size_a);
+                arg.matB_base
+                        = (B + (i % pingpong_flush_iter) * pingpong_size_b);
+                arg.matC_base
+                        = (C + (i % pingpong_flush_iter) * pingpong_size_c);
                 gemm_op(item, arg);
             });
         });
@@ -198,21 +191,22 @@ void gemm_relu_bias_run(uint32_t iter) {
         if (i >= warmup) {
             prof.cpu_end();
             prof.add_gpu_event(gpu_event);
+            prof_hbm.cpu_end();
+            prof_hbm.add_gpu_event(gpu_event);
         }
     }
 
     ASSERT_EQ(0,
-            gemm_relu_bias_result_validate(A, B, C, D, matrix_m, matrix_k,
-                    matrix_n, queue, mem_layout::row_major,
-                    mem_layout::row_major));
+            gemm_relu_result_validate(A, B, C, matrix_m, matrix_k, matrix_n,
+                    queue, mem_layout::row_major, mem_layout::row_major));
 
     //performance
     prof.print_profiling_result(profiling_selector::GPU);
+    prof_hbm.print_profiling_result(profiling_selector::GPU);
 
     free(A, context);
     free(B, context);
     free(C, context);
-    free(D, context);
 }
 
 int main() {
@@ -241,9 +235,9 @@ int main() {
     //   C  = A x B
     // - tile_op_t=relu_op_t
     //   C = ReLU(A x B)
-    // - tile_op_t=[relu_op_t, bias_add_op_t]
-    //   C = BiasAdd(ReLU(A x B))
-    //     = ReLU(A x B) + D
+    // - tile_op_t=[relu_op_t]
+    //   C
+    //     = ReLU(A x B)
     //  where:
     //    shape(A) = [m, k]
     //    shape(B) = [k, n]
@@ -254,7 +248,12 @@ int main() {
     // checkout op_functor.hpp for more elementwise ops
 
     // Note:
-    //   - comments related to this example will be prefixed with "[ReLuBias]"
-    gemm_relu_bias_run(10);
+    //   - comments related to this example will be prefixed with "[ReLu]"
+    gemm_relu<256, 256, 32, 64, 32>(4096, 4096, 4096);
+    gemm_relu<256, 256, 32, 64, 32>(8192, 8192, 8192);
+    gemm_relu<8, 512, 8, 16, 16>(1, 5120, 13824);
+    gemm_relu<64, 512, 32, 32, 16>(1024, 28672, 8192);
+    gemm_relu<256, 256, 32, 64, 32>(3072, 4096, 3072);
+    gemm_relu<8, 512, 8, 16, 16>(4, 4096, 12288);
     return (0);
 }
