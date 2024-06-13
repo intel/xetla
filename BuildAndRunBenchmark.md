@@ -82,7 +82,7 @@
         [kernel time]The mean    GB/s(GPU_time) is 284.842
 
 ### Add a New Matrix Shape
-- Add a new shape MKN 8192x8192x8192 and wg_tile_m 256, wg_tile_n 256, sg_tile_m 32, sg_tile_n 64, sg_tile_k 32, like "gemm_relu<256, 256, 32, 64, 32>(8192, 8192, 8192)" in [examples/gemm_relu/gemm_relu.cpp](./examples/gemm_relu/gemm_relu.cpp).
+- Add a new shape MKN 8192x8192x8192 and wg_tile_m 256, wg_tile_n 256, sg_tile_m 32, sg_tile_n 64, sg_tile_k 32, like "gemm_relu<256, 256, 32, 64, 32>(8192, 8192, 8192)" in [examples/12_gemm_relu/gemm_relu.cpp](./examples/12_gemm_relu/gemm_relu.cpp).
 
 
 
