@@ -17,6 +17,11 @@
 #include "tests/utils/utils.hpp"
 #include "xetla.hpp"
 
+// flush cache 0: NO flush
+// flush cache 1: memset
+// flush cache 2: pingpong moving ptr offset
+#define FLUSH_CACHE 2
+
 using namespace cl::sycl;
 using namespace gpu::xetla;
 using namespace gpu;
@@ -77,13 +82,6 @@ void gemm_relu(uint32_t matrix_m, uint32_t matrix_k, uint32_t matrix_n,
     static constexpr auto l3_cache_size = 256 * 1024 * 1024;
     static constexpr auto pingpong_flush_iter = 3;
 
-    size_t pingpong_size_a
-            = max(batch_num * size_a, l3_cache_size / sizeof(data_type_a));
-    size_t pingpong_size_b
-            = max(batch_num * size_b, l3_cache_size / sizeof(data_type_b));
-    size_t pingpong_size_c
-            = max(batch_num * size_c, l3_cache_size / sizeof(data_type_c));
-
     //Turn on the profiling property to facilitate subsequent profiling
     sycl::property_list properties {sycl::property::queue::enable_profiling()};
 
@@ -93,6 +91,23 @@ void gemm_relu(uint32_t matrix_m, uint32_t matrix_k, uint32_t matrix_n,
     auto device = queue.get_info<info::queue::device>();
 
     std::cout << "Running on " << device.get_info<info::device::name>() << "\n";
+
+#if FLUSH_CACHE == 1
+    auto dev_cache = alloc_device_and_init<int8_t>(
+            l3_cache_size,
+            [](int8_t *data, size_t idx) {
+                data[idx] = static_cast<int8_t>(random_float());
+            },
+            queue, device, context);
+#endif
+
+#if FLUSH_CACHE == 2
+    size_t pingpong_size_a
+            = max(batch_num * size_a, l3_cache_size / sizeof(data_type_a));
+    size_t pingpong_size_b
+            = max(batch_num * size_b, l3_cache_size / sizeof(data_type_b));
+    size_t pingpong_size_c
+            = max(batch_num * size_c, l3_cache_size / sizeof(data_type_c));
 
     auto A = alloc_device_and_init<data_type_a>(
             pingpong_size_a * pingpong_flush_iter,
@@ -112,6 +127,26 @@ void gemm_relu(uint32_t matrix_m, uint32_t matrix_k, uint32_t matrix_n,
                 data[idx] = static_cast<data_type_c>(0.0f);
             },
             queue, device, context);
+#else
+    auto A = alloc_device_and_init<data_type_a>(
+            batch_num * size_a,
+            [](data_type_a *data, size_t idx) {
+                data[idx] = static_cast<data_type_a>(random_float());
+            },
+            queue, device, context);
+    auto B = alloc_device_and_init<data_type_b>(
+            batch_num * size_b,
+            [](data_type_b *data, size_t idx) {
+                data[idx] = static_cast<data_type_b>(random_float());
+            },
+            queue, device, context);
+    auto C = alloc_device_and_init<data_type_c>(
+            batch_num * size_c,
+            [](data_type_c *data, size_t idx) {
+                data[idx] = static_cast<data_type_c>(0.0f);
+            },
+            queue, device, context);
+#endif
 
     //Define the shape of workgroup
     //It's tunable parameters based on different input shape and hardware for better performance
@@ -164,6 +199,10 @@ void gemm_relu(uint32_t matrix_m, uint32_t matrix_k, uint32_t matrix_n,
             * batch_num;
     profiling_helper prof_hbm("gemm_relu_run", ops_hbm, "GB/s");
     for (uint32_t i = 0; i < iter + warmup; i++) {
+#if FLUSH_CACHE == 1
+        queue.memset((void *)(dev_cache), 0, l3_cache_size).wait();
+#endif
+
         if (i >= warmup) {
             prof.cpu_start();
             prof_hbm.cpu_start();
@@ -177,12 +216,21 @@ void gemm_relu(uint32_t matrix_m, uint32_t matrix_k, uint32_t matrix_n,
                 typename gemm_op_t::arguments_t arg(matrix_m, matrix_k,
                         matrix_n, nullptr, matrix_k, nullptr, matrix_n, nullptr,
                         matrix_n, nullptr, nullptr);
+#if FLUSH_CACHE == 2
                 arg.matA_base
                         = (A + (i % pingpong_flush_iter) * pingpong_size_a);
                 arg.matB_base
                         = (B + (i % pingpong_flush_iter) * pingpong_size_b);
                 arg.matC_base
                         = (C + (i % pingpong_flush_iter) * pingpong_size_c);
+#else
+                arg.matA_base
+                        = A ;
+                arg.matB_base
+                        = B ;
+                arg.matC_base
+                        = C ;
+#endif
                 gemm_op(item, arg);
             });
         });
@@ -207,6 +255,9 @@ void gemm_relu(uint32_t matrix_m, uint32_t matrix_k, uint32_t matrix_n,
     free(A, context);
     free(B, context);
     free(C, context);
+#if FLUSH_CACHE == 1
+    free(dev_cache, context);
+#endif
 }
 
 int main() {

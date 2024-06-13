@@ -22,6 +22,7 @@
 
 using namespace gpu::xetla;
 
+// flush cache 0: NO flush
 // flush cache 1: memset
 // flush cache 2: pingpong moving ptr offset
 #define FLUSH_CACHE 2
@@ -40,11 +41,6 @@ void flush_cache_1(sycl::queue &queue, unsigned *ptr, size_t num_elem) {
                      });
          }).wait();
 }
-#elif FLUSH_CACHE == 2
-// flush cache 2: pingpong moving ptr offset
-void flush_cache_2() {}
-#else
-static_assert(0, "no such flush cache !!!");
 #endif
 
 //Test: accept different test data
@@ -66,15 +62,6 @@ void softmax_fwd_run() {
     int size_in = mat_n * mat_m;
     int size_out = mat_n * mat_m;
 
-#if FLUSH_CACHE == 2
-    static constexpr size_t l3_cache_size = 256 * 1024 * 1024;
-    auto pingpong_size_in
-            = std::max(l3_cache_size / sizeof(data_type_in), (size_t)size_in);
-    auto pingpong_size_out
-            = std::max(l3_cache_size / sizeof(data_type_out), (size_t)size_out);
-    static constexpr auto pingpong_iter = 3;
-#endif
-
     //Turn on the enable_profiling property to facilitate subsequent profiling
     sycl::property_list properties {sycl::property::queue::enable_profiling()};
     auto queue = sycl::queue(properties);
@@ -90,7 +77,7 @@ void softmax_fwd_run() {
 
 #if FLUSH_CACHE == 1
     // Malloc the cache flush buffer.
-    auto cache_flush = alloc_device_and_init<unsigned>(
+    auto dev_cache = alloc_device_and_init<unsigned>(
             256 * 1024 * 1024 / 4, // 256M bytes
             [](unsigned *data, size_t idx) {
                 data[idx] = static_cast<unsigned>(0);
@@ -98,27 +85,41 @@ void softmax_fwd_run() {
             queue, device, context);
 #endif
 
+#if FLUSH_CACHE == 2
+    static constexpr size_t l3_cache_size = 256 * 1024 * 1024;
+    auto pingpong_size_in
+            = std::max(l3_cache_size / sizeof(data_type_in), (size_t)size_in);
+    auto pingpong_size_out
+            = std::max(l3_cache_size / sizeof(data_type_out), (size_t)size_out);
+    static constexpr auto pingpong_iter = 3;
+
     //Define and initialize the data required for the calculation
     auto buffer_in = alloc_device_and_init<data_type_in>(
-#if FLUSH_CACHE == 1
-            size_in,
-#elif FLUSH_CACHE == 2
             pingpong_size_in * pingpong_iter,
-#endif
             [](data_type_in *data, size_t idx) {
                 data[idx] = static_cast<data_type_in>(random_float());
             },
             queue, device, context);
     auto buffer_out = alloc_device_and_init<data_type_out>(
-#if FLUSH_CACHE == 1
-            size_out,
-#elif FLUSH_CACHE == 2
             pingpong_size_out * pingpong_iter,
-#endif
             [](data_type_out *data, size_t idx) {
                 data[idx] = static_cast<data_type_out>(0);
             },
             queue, device, context);
+#else
+    auto buffer_in = alloc_device_and_init<data_type_in>(
+            size_in,
+            [](data_type_in *data, size_t idx) {
+                data[idx] = static_cast<data_type_in>(random_float());
+            },
+            queue, device, context);
+    auto buffer_out = alloc_device_and_init<data_type_out>(
+            size_out,
+            [](data_type_out *data, size_t idx) {
+                data[idx] = static_cast<data_type_out>(0);
+            },
+            queue, device, context);
+#endif
 
     data_type_acc sqrt_dk_inv = 0.125f;
 
@@ -136,51 +137,23 @@ void softmax_fwd_run() {
 
     // esimd kernel prepratation and execution
     {
-        std::vector<sycl::kernel_id> kernelId = {sycl::get_kernel_id<Test>()};
-#if 0
-        auto inputBundle
-                = get_kernel_bundle<sycl::bundle_state::input>(context, kernelId);
-        setenv("SYCL_PROGRAM_COMPILE_OPTIONS",
-                " -vc-codegen -doubleGRF  -Xfinalizer ' "
-                "-printregusage -enableBCR  "
-                "-DPASTokenReduction '",
-                1);
-        sycl::kernel_bundle<sycl::bundle_state::executable> exeBundle = build(inputBundle);
-        unsetenv("SYCL_PROGRAM_COMPILE_OPTIONS");
-#else
-#if 0
-        static std::once_flag jit_once;
-        std::call_once(jit_once, [&]() {
-            auto inputBundle =
-                    sycl::get_kernel_bundle<sycl::bundle_state::input>(context, kernelId);
-            setenv("SYCL_PROGRAM_COMPILE_OPTIONS",
-                   " -vc-codegen -doubleGRF  -Xfinalizer ' "
-                   "-printregusage -enableBCR  "
-                   "-DPASTokenReduction '",
-                   1);
-            sycl::kernel_bundle<sycl::bundle_state::executable> exeBundle =
-                    build(inputBundle);
-            unsetenv("SYCL_PROGRAM_COMPILE_OPTIONS");
-        });
-
-        auto exeBundle = sycl::get_kernel_bundle<sycl::bundle_state::executable>(
-                context, kernelId);
-#endif
-#endif
         std::vector<double> kernel_times;
         try {
             for (size_t i = 0; i < total_cnt; i++) {
 #if FLUSH_CACHE == 1
-                flush_cache_1(queue, cache_flush, 256 * 1024 * 1024 / 4);
+                flush_cache_1(queue, dev_cache, 256 * 1024 * 1024 / 4);
                 queue.wait_and_throw();
                 usleep(300);
-                auto ptr_in = buffer_in;
-                auto ptr_out = buffer_out;
-#elif FLUSH_CACHE == 2
+#endif
+
+#if FLUSH_CACHE == 2
                 auto ptr_in
                         = buffer_in + (i % pingpong_iter) * pingpong_size_in;
                 auto ptr_out
                         = buffer_out + (i % pingpong_iter) * pingpong_size_out;
+#else
+                auto ptr_in = buffer_in;
+                auto ptr_out = buffer_out;
 #endif
 
                 // kernel
@@ -254,7 +227,7 @@ void softmax_fwd_run() {
     assert(0 == correct);
 
 #if FLUSH_CACHE == 1
-    free(cache_flush, context);
+    free(dev_cache, context);
 #endif
 
     free(buffer_in, context);

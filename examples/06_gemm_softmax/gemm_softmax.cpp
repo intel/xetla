@@ -22,6 +22,11 @@ using namespace cl::sycl;
 
 #define SIMD 32
 
+// flush cache 0: NO flush
+// flush cache 1: memset
+// flush cache 2: pingpong moving ptr offset
+#define FLUSH_CACHE 2
+
 template <typename data_type_a, typename data_type_b, typename data_type_c,
         typename data_type_acc = float>
 int gemm_softmax_result_validate(data_type_a *A_device, data_type_b *B_device,
@@ -106,13 +111,6 @@ void gemm_softmax(uint32_t matrix_m, uint32_t matrix_k, uint32_t matrix_n,
     static constexpr auto l3_cache_size = 256 * 1024 * 1024;
     static constexpr auto pingpong_flush_iter = 3;
 
-    size_t pingpong_size_a
-            = max(batch_num * size_a, l3_cache_size / sizeof(data_type_a));
-    size_t pingpong_size_b
-            = max(batch_num * size_b, l3_cache_size / sizeof(data_type_b));
-    size_t pingpong_size_c
-            = max(batch_num * size_c, l3_cache_size / sizeof(data_type_c));
-
     sycl::property_list properties {sycl::property::queue::enable_profiling()};
 
     auto queue = sycl::queue(properties);
@@ -121,6 +119,22 @@ void gemm_softmax(uint32_t matrix_m, uint32_t matrix_k, uint32_t matrix_n,
 
     std::cout << "Running on " << device.get_info<info::device::name>() << "\n";
 
+#if FLUSH_CACHE == 1
+    auto dev_cache = alloc_device_and_init<int8_t>(
+            l3_cache_size,
+            [](int8_t *data, size_t idx) {
+                data[idx] = static_cast<int8_t>(random_float());
+            },
+            queue, device, context);
+#endif
+
+#if FLUSH_CACHE == 2
+    size_t pingpong_size_a
+            = max(batch_num * size_a, l3_cache_size / sizeof(data_type_a));
+    size_t pingpong_size_b
+            = max(batch_num * size_b, l3_cache_size / sizeof(data_type_b));
+    size_t pingpong_size_c
+            = max(batch_num * size_c, l3_cache_size / sizeof(data_type_c));
     auto A = alloc_device_and_init<data_type_a>(
             pingpong_size_a * pingpong_flush_iter,
             [](data_type_a *data, size_t idx) {
@@ -139,6 +153,26 @@ void gemm_softmax(uint32_t matrix_m, uint32_t matrix_k, uint32_t matrix_n,
                 data[idx] = static_cast<data_type_c>(0.0f);
             },
             queue, device, context);
+#else
+    auto A = alloc_device_and_init<data_type_a>(
+            batch_num * size_a,
+            [](data_type_a *data, size_t idx) {
+                data[idx] = static_cast<data_type_a>(random_float());
+            },
+            queue, device, context);
+    auto B = alloc_device_and_init<data_type_b>(
+            batch_num * size_b,
+            [](data_type_b *data, size_t idx) {
+                data[idx] = static_cast<data_type_b>(random_float());
+            },
+            queue, device, context);
+    auto C = alloc_device_and_init<data_type_c>(
+            batch_num * size_c,
+            [](data_type_c *data, size_t idx) {
+                data[idx] = static_cast<data_type_c>(0.0f);
+            },
+            queue, device, context);
+#endif
 
     // default set Thread num = 32 to maximize EU utilization
     constexpr uint32_t thread_num = 32;
@@ -170,6 +204,10 @@ void gemm_softmax(uint32_t matrix_m, uint32_t matrix_k, uint32_t matrix_n,
     profiling_helper prof_hbm("gemm_softmax", ops_hbm, "GB/s");
     try {
         for (uint32_t i = 0; i < iter + warmup; i++) {
+#if FLUSH_CACHE == 1
+            queue.memset((void *)(dev_cache), 0, l3_cache_size).wait();
+#endif
+
             if (i >= warmup) {
                 prof.cpu_start();
                 prof_hbm.cpu_start();
@@ -251,7 +289,8 @@ void gemm_softmax(uint32_t matrix_m, uint32_t matrix_k, uint32_t matrix_n,
                     xetla_nbarrier_init<barrier_count>();
                     xetla_local_init<slm_size>();
 
-                    // matA & matB & matC base address and load width
+// matA & matB & matC base address and load width
+#if FLUSH_CACHE == 2
                     data_type_a *matA_ptr = A
                             + (i % pingpong_flush_iter) * pingpong_size_a
                             + batch_id * size_a;
@@ -263,6 +302,17 @@ void gemm_softmax(uint32_t matrix_m, uint32_t matrix_k, uint32_t matrix_n,
                     data_type_c *matC_ptr = C
                             + (i % pingpong_flush_iter) * pingpong_size_c
                             + batch_id * size_c;
+#else
+                    data_type_a *matA_ptr = A
+                            + batch_id * size_a;
+                    uint32_t matA_ld = matrix_k;
+                    data_type_b *matB_ptr = B
+                            + batch_id * size_b;
+                    uint32_t matB_ld = matrix_k;
+                    data_type_c *matC_ptr = C
+                            + batch_id * size_c;
+#endif
+
                     uint32_t matC_ld = matrix_n;
 
                     // ecah workgroup gets it individual index to start computation
@@ -339,6 +389,9 @@ void gemm_softmax(uint32_t matrix_m, uint32_t matrix_k, uint32_t matrix_n,
     free(A, context);
     free(B, context);
     free(C, context);
+#if FLUSH_CACHE == 1
+    free(dev_cache, context);
+#endif
 }
 
 int main() {
