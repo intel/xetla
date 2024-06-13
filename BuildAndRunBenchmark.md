@@ -1,5 +1,7 @@
 # Build And Run Benchmark
 
+
+
 ## Install Compiler And GPU Driver
   ### Compiler
       $wget https://registrationcenter-download.intel.com/akdlm/IRC_NAS/fdc7a2bc-b7a8-47eb-8876-de6201297144/l_BaseKit_p_2024.1.0.596_offline.sh
@@ -9,6 +11,13 @@
 
   ### GPU Driver
   Download from https://ubit-gfx.intel.com/build/19168301/artifacts and install it.
+
+## There are 3 data cache flushing mode:
+- No flush
+- Memset whole L3 cache to zero data
+- Allocate memory multiple times and then move the device pointer
+
+You can switch these mode in below different benchmark.
 
 ## GEMM Benchmark
 ### Build And Run
@@ -23,6 +32,8 @@
 - Add a new shape class like "class Test_xxx : public TestBase ..." in [tests/integration/gemm/bf16/common.hpp](./tests/integration/gemm/bf16/common.hpp).
 - Add the Test "Test_xxx" to gtest list in [tests/integration/gemm/bf16/main.cpp](./tests/integration/gemm/bf16/main.cpp).
 
+### Switch cache flushing mode
+- Switch the macro FLUSH_CACHE at [https://github.com/intel/xetla/blob/benchmark/tests/utils/execution.hpp#L30]
 
 
 ## Softmax Benchmark
@@ -37,6 +48,8 @@
 - Add a test case like "mat1_4096x256_bf16_xxx" in [tests/integration/softmax/softmax_config.hpp](./tests/integration/softmax/softmax_config.hpp).
 - Add the test "mat1_4096x256_bf16_xxx" like "softmax_fwd_run<mat1_4096x256_bf16_xxx>();" in [tests/integration/softmax/softmax_fwd.cpp](./tests/integration/softmax/softmax_fwd.cpp).
 
+### Switch cache flushing mode
+- Switch the macro FLUSH_CACHE at [https://github.com/intel/xetla/blob/benchmark/tests/integration/softmax/softmax_fwd.cpp#L28]
 
 
 ## GEMM + Softmax Benchmark
@@ -61,6 +74,11 @@
 ### Add a New Matrix Shape
 - Add a new shape MKN 4x4096x12288 and wg_tile_m 32, wg_tile_n 12288, sg_tile_m 32, sg_tile_n 512, sg_tile_k 32, like "gemm_softmax<32, 12288, 32, 512, 32>(4, 4096, 12288)" in [examples/06_gemm_softmax/gemm_softmax.cpp](./examples/06_gemm_softmax/gemm_softmax.cpp).
 
+### Switch cache flushing mode
+- Switch the macro FLUSH_CACHE at [https://github.com/intel/xetla/blob/benchmark/examples/06_gemm_softmax/gemm_softmax.cpp#L28]
+
+
+
 ## GEMM + RELU Benchmark
 ### Build And Run
     $cd {XETLA_REPO}
@@ -84,6 +102,8 @@
 ### Add a New Matrix Shape
 - Add a new shape MKN 8192x8192x8192 and wg_tile_m 256, wg_tile_n 256, sg_tile_m 32, sg_tile_n 64, sg_tile_k 32, like "gemm_relu<256, 256, 32, 64, 32>(8192, 8192, 8192)" in [examples/12_gemm_relu/gemm_relu.cpp](./examples/12_gemm_relu/gemm_relu.cpp).
 
+### Switch cache flushing mode
+- Switch the macro FLUSH_CACHE at [https://github.com/intel/xetla/blob/benchmark/examples/12_gemm_relu/gemm_relu.cpp#L23]
 
 
 ## Copyright
