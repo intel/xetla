@@ -328,6 +328,7 @@ public:
 
 class Habana_Batch_Test4 : public TestBase {
 public:
+    static constexpr size_t batch = 32;
     static constexpr size_t mat_m = 4096;
     static constexpr size_t mat_k = 4096;
     static constexpr size_t mat_n = 128;
