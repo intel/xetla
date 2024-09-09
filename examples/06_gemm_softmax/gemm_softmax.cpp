@@ -418,13 +418,20 @@ int main() {
     // we need to reshape the surface:
     //   [1, 512] will be seen as [16, 32] with row major layout
     // After this all operations will be implemented in register.
-
+#if 0
     gemm_softmax<16, 4096, 16, 128, 32>(4096, 4096, 4096);
     gemm_softmax<8, 8192, 8, 256, 32>(8192, 8192, 8192);
-    //  gemm_softmax<32, 13824, 32, 512, 32>(1, 5120, 13824);
+    gemm_softmax<32, 13824, 32, 512, 32>(1, 5120, 13824);
     gemm_softmax<8, 8192, 8, 256, 32>(1024, 28672, 8192);
-    //  gemm_softmax<32, 3072, 32, 128, 32>(3072, 4096, 3072);
-    //  gemm_softmax<32, 12288, 32, 512, 32>(4, 4096, 12288);
-
+    gemm_softmax<32, 3072, 32, 128, 32>(3072, 4096, 3072);
+    gemm_softmax<32, 12288, 32, 512, 32>(4, 4096, 12288);
+#else
+    gemm_softmax<64, 1024, 64, 32, 16>(1024, 64, 1024, 4);
+    gemm_softmax<128, 512, 64, 32, 16>(512, 64, 512, 32);
+    gemm_softmax<64, 1024, 64, 32, 16>(1024, 64, 1024, 16);
+    gemm_softmax<64, 2048, 64, 64, 16>(2048, 64, 2048, 8);
+    gemm_softmax<32, 4096, 32, 128, 16>(4096, 64, 4096, 4);
+    gemm_softmax<16, 8192, 16, 256, 16>(8192, 64, 8192, 2);
+#endif
     return 0;
 }
