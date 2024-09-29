@@ -354,11 +354,12 @@ void gemm_softmax(uint32_t matrix_m, uint32_t matrix_k, uint32_t matrix_n,
                     gemm_op_t gemm;
                     gemm(g, matAcc, gemm_args);
 
+#if 1
                     // for each matAcc, call softmax op
                     softmax_fwd_t softmax_fwd;
                     softmax_fwd_args_t softmax_fwd_args(1);
                     softmax_fwd(g, matAcc, {}, softmax_fwd_args);
-
+#endif
                     // write matAcc value into pointer C
                     epilogue_t epilogue;
                     epilogue(g, matAcc, mem_desc_c);
@@ -427,11 +428,11 @@ int main() {
     gemm_softmax<32, 12288, 32, 512, 32>(4, 4096, 12288);
 #else
     gemm_softmax<64, 1024, 64, 32, 16>(1024, 64, 1024, 4);
-    gemm_softmax<128, 512, 64, 32, 16>(512, 64, 512, 32);
-    gemm_softmax<64, 1024, 64, 32, 16>(1024, 64, 1024, 16);
-    gemm_softmax<16, 2048, 16, 32, 64>(2048, 64, 2048, 8);
-    gemm_softmax<8, 4096, 8, 64, 32>(4096, 64, 4096, 4);
-    gemm_softmax<16, 8192, 16, 256, 16>(8192, 64, 8192, 2);
+//    gemm_softmax<128, 512, 64, 32, 16>(512, 64, 512, 32);
+//    gemm_softmax<64, 1024, 64, 32, 16>(1024, 64, 1024, 16);
+//    gemm_softmax<16, 2048, 16, 32, 64>(2048, 64, 2048, 8);
+//    gemm_softmax<8, 4096, 8, 64, 32>(4096, 64, 4096, 4);
+//    gemm_softmax<16, 8192, 16, 256, 16>(8192, 64, 8192, 2);
 #endif
     return 0;
 }

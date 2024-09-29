@@ -1,3 +1,6 @@
+export IGC_ShaderDumpEnable=1
+export IGC_DumpToCustomDir=./mm_dumps
+
 export SYCL_PROGRAM_COMPILE_OPTIONS=" -vc-codegen -vc-disable-indvars-opt -doubleGRF -Xfinalizer ' -printregusage -enableBCR -DPASTokenReduction ' "
 
 script_dir=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
