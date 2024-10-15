@@ -79,6 +79,10 @@ public:
                 = slm_base + sg_idy * wg_size_x * sg_tile_m * sizeof(dtype_acc);
         xetla_nbarrier_t<wg_size_x, wg_size_x, arch_tag> nbarrier;
         nbarrier.init_nbarrier(nbarrier_id, nbarrier_role::producer_consumer);
+
+#if defined(WITHOUT_REDUCTION)
+        xetla_vector<dtype_acc, sg_tile_m> group_max = args.sqrt_dk_inv;
+#else
         xetla_vector<dtype_acc, sg_tile_m> local_max
                 = subgroup::tile_reduce<reduce_op::max, dtype_acc, dtype_acc,
                         1>(matAcc);
@@ -86,10 +90,15 @@ public:
         wg_reduce_max_t wg_reduce_max(sg_idx, nbarrier_id, slm_base_addr);
         xetla_vector<dtype_acc, sg_tile_m> group_max = wg_reduce_max(local_max);
         if constexpr (wg_size_x > 1) { nbarrier.arrive(); }
+#endif
         subgroup::tile_broadcast_op<subgroup::tile_minus, matAcc_t>(
                 matAcc, group_max);
         matAcc.reg = matAcc.reg * args.sqrt_dk_inv;
         matAcc.reg = xetla_exp<dtype_acc>(matAcc.reg);
+
+#if defined(WITHOUT_REDUCTION)
+        xetla_vector<dtype_acc, sg_tile_m> group_sum = args.sqrt_dk_inv;
+#else
         xetla_vector<dtype_acc, sg_tile_m> local_sum
                 = subgroup::tile_reduce<reduce_op::sum, dtype_acc, dtype_acc,
                         1>(matAcc);
@@ -97,6 +106,7 @@ public:
         wg_reduce_sum_t wg_reduce_sum(sg_idx, nbarrier_id, slm_base_addr);
         if constexpr (wg_size_x > 1) { nbarrier.wait(); }
         xetla_vector<dtype_acc, sg_tile_m> group_sum = wg_reduce_sum(local_sum);
+#endif
         subgroup::tile_broadcast_op<subgroup::tile_div, matAcc_t>(
                 matAcc, group_sum);
     }

@@ -353,12 +353,12 @@ void gemm_softmax(uint32_t matrix_m, uint32_t matrix_k, uint32_t matrix_n,
                     typename gemm_op_t::matAcc_t matAcc(0);
                     gemm_op_t gemm;
                     gemm(g, matAcc, gemm_args);
-
+#if !defined(WITHOUT_SOFTMAX)
                     // for each matAcc, call softmax op
                     softmax_fwd_t softmax_fwd;
                     softmax_fwd_args_t softmax_fwd_args(1);
                     softmax_fwd(g, matAcc, {}, softmax_fwd_args);
-
+#endif
                     // write matAcc value into pointer C
                     epilogue_t epilogue;
                     epilogue(g, matAcc, mem_desc_c);
