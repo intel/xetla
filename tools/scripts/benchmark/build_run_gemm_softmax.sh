@@ -6,7 +6,7 @@ export IGC_DumpToCustomDir=./xetla_dumps
 unset without_softmax
 unset without_reduction
 
-#without_softmax=" -DWITHOUT_SOFTMAX "
+without_softmax=" -DWITHOUT_SOFTMAX "
 #without_reduction=" -DWITHOUT_REDUCTION "
 
 script_dir=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
