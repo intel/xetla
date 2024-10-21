@@ -4,7 +4,7 @@ unset gpu_driver_path
 unset without_softmax
 unset without_reduction
 
-export SYCL_PROGRAM_COMPILE_OPTIONS=" -vc-codegen -vc-disable-indvars-opt -Xfinalizer ' -printregusage -enableBCR -DPASTokenReduction ' "
+export SYCL_PROGRAM_COMPILE_OPTIONS=" -vc-codegen -vc-disable-indvars-opt -doubleGRF -Xfinalizer ' -printregusage -enableBCR -DPASTokenReduction ' "
 
 # https://github.com/intel/llvm/releases/tag/nightly-2024-05-16
 sycl_compiler_path=/opt/intel_validation/oneapi/compiler/latest/
