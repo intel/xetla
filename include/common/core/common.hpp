@@ -19,7 +19,6 @@
 
 #pragma once
 
-#include <version.hpp>
 #include <CL/sycl.hpp>
 #include <ext/intel/esimd.hpp>
 
