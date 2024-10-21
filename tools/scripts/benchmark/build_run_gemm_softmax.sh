@@ -6,7 +6,7 @@ unset without_reduction
 
 export SYCL_PROGRAM_COMPILE_OPTIONS=" -vc-codegen -vc-disable-indvars-opt -doubleGRF -Xfinalizer ' -printregusage -enableBCR -DPASTokenReduction ' "
 
-# https://github.com/intel/llvm/releases/tag/nightly-2024-05-16
+
 sycl_compiler_path=/opt/intel_validation/oneapi/compiler/latest/
 
 # https://ubit-gfx.intel.com/build/19168301/artifacts
