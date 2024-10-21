@@ -23,6 +23,14 @@ export MKLROOT=/opt/intel_validation/oneapi/mkl/2024.0/
 export IGC_ShaderDumpEnable=1
 export IGC_DumpToCustomDir=./xetla_dumps
 
+gpu_driver_path=/opt/cutlass/gpu_driver/gfx-driver-ci-comp_igc-27004/extract/
+
+export LIBRARY_PATH=$gpu_driver_path/usr/lib/x86_64-linux-gnu/
+export LD_LIBRARY_PATH=$LIBRARY_PATH
+
+unset without_softmax
+unset without_reduction
+
 #without_softmax=" -DWITHOUT_SOFTMAX "
 #without_reduction=" -DWITHOUT_REDUCTION "
 
