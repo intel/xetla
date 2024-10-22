@@ -286,7 +286,9 @@ struct dispatch_policy_stream_k {
                 iters_per_tile, avail_xecores,
                 false); // cannot run with less than a full wave of SK-groups
 
+        #ifdef DEBUG
         std::cout << "SK Score: " << score << "\n\n";
+        #endif
 
         if (score < 0) { //Not profitable for stream_k split
 
@@ -384,6 +386,7 @@ struct dispatch_policy_stream_k {
         dp_groups = dp_tiles;
         num_workgroups = get_num_active_groups();
 
+        #ifdef DEBUG
         //Print the stats
         uint32_t total_tiles = num_tiles_m * num_tiles_n;
         std::cout << " problem size: (" << matrix_m << "," << matrix_n << ")"
@@ -403,6 +406,7 @@ struct dispatch_policy_stream_k {
                   << sk_iters_per_normal_group
                   << ", sk_big_groups_per_region: " << sk_big_groups_per_region
                   << ", avail_xecores: " << avail_xecores << "\n\n";
+        #endif
     }
 
     ///@brief Host helper function to return number of groups after stream_k split
