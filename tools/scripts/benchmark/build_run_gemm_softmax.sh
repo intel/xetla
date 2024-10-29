@@ -4,13 +4,16 @@ unset gpu_driver_path
 unset without_softmax
 unset without_reduction
 
+export ZE_AFFINITY_MASK=0
+
 export SYCL_PROGRAM_COMPILE_OPTIONS=" -vc-codegen -vc-disable-indvars-opt -doubleGRF -Xfinalizer ' -printregusage -enableBCR -DPASTokenReduction ' "
 
 
 sycl_compiler_path=/opt/intel_validation/oneapi/compiler/2024.0/
 
 # https://ubit-gfx.intel.com/build/19168301/artifacts
-gpu_driver_path=/opt/cutlass/gpu_driver/gfx-driver-ci-comp_igc-27004/extract/
+#gpu_driver_path=/opt/cutlass/gpu_driver/agama-996.6/extract/
+#gpu_driver_path=/opt/cutlass/gpu_driver/gfx-driver-ci-comp_igc-27004/extract/
 
 export CPATH=$sycl_compiler_path/include:$sycl_compiler_path/include/sycl:/opt/intel_validation/oneapi/2024.0/include/
 export CC=${sycl_compiler_path}/bin/icx

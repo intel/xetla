@@ -186,10 +186,10 @@ void gemm_softmax(uint32_t matrix_m, uint32_t matrix_k, uint32_t matrix_n,
 
     //     static_assert(subgroup_range_m * subgroup_range_n == thread_num,
     //             "Given thread number should equal to pre-set value 32!");
-    std::cout << "MKN: " << matrix_m << ", " << matrix_k << ", " << matrix_n
-              << ", Config: " << wg_tile_m << ", " << wg_tile_n << ", "
-              << sg_tile_m << ", " << sg_tile_n << ", " << sg_tile_k
-              << std::endl;
+    std::cout << "MKNL: " << matrix_m << ", " << matrix_k << ", " << matrix_n
+              << ", " << batch_num << ", Config: " << wg_tile_m << ", "
+              << wg_tile_n << ", " << sg_tile_m << ", " << sg_tile_n << ", "
+              << sg_tile_k << std::endl;
     cl::sycl::range<3> group_range {batch_num, group_range_m, group_range_n};
     cl::sycl::range<3> local_range {1, subgroup_range_m, subgroup_range_n};
     cl::sycl::nd_range<3> nd_range(group_range * local_range, local_range);
@@ -426,12 +426,13 @@ int main() {
     gemm_softmax<32, 3072, 32, 128, 32>(3072, 4096, 3072);
     gemm_softmax<32, 12288, 32, 512, 32>(4, 4096, 12288);
 #else
-    gemm_softmax<64, 1024, 64, 32, 16>(1024, 64, 1024, 4);
+    gemm_softmax<32, 1024, 32, 64, 16>(1024, 64, 1024, 4);
     gemm_softmax<128, 512, 64, 32, 16>(512, 64, 512, 32);
-    gemm_softmax<64, 1024, 64, 32, 16>(1024, 64, 1024, 16);
+    gemm_softmax<32, 1024, 32, 64, 16>(1024, 64, 1024, 16);
     gemm_softmax<16, 2048, 16, 32, 64>(2048, 64, 2048, 8);
     gemm_softmax<8, 4096, 8, 64, 32>(4096, 64, 4096, 4);
-    gemm_softmax<16, 8192, 16, 256, 16>(8192, 64, 8192, 2);
+    gemm_softmax<8, 8192, 8, 256, 16>(8192, 64, 8192, 2);
+    gemm_softmax<8, 16384, 8, 512, 16>(16384, 64, 16384, 1);
 #endif
     return 0;
 }
