@@ -25,7 +25,7 @@ using namespace cl::sycl;
 // flush cache 0: NO flush
 // flush cache 1: memset
 // flush cache 2: pingpong moving ptr offset
-#define FLUSH_CACHE 2
+#define FLUSH_CACHE 1
 
 template <typename data_type_a, typename data_type_b, typename data_type_c,
         typename data_type_acc = float>

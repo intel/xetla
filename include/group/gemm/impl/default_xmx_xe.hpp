@@ -294,6 +294,7 @@ public:
         nbarrier_b.init_nbarrier(sg_idx + barrier_count_y + nbarrier_base,
                 nbarrier_role::producer_consumer);
 
+#if !defined(DISABLE_GEMM_PREFETCH)
 #pragma unroll
         for (uint32_t i = 0; i < stages; i++) {
             subgroup::tile_prefetch<cache_hint::cached, cache_hint::cached>(
@@ -305,6 +306,7 @@ public:
             matB_prefetch_payload.template update_tdesc<update_dir_b>(
                     matB_t::tile_size_y);
         }
+#endif
 
         for (uint32_t i = 0; i < args.inner_loop_count; i++) {
             if constexpr (enable_periodic_sync) {
@@ -317,6 +319,7 @@ public:
                     matB, matB_payload);
             subgroup::tile_load<cache_hint::cached, cache_hint::cached>(
                     matA, matA_payload);
+#if !defined(DISABLE_GEMM_PREFETCH)
             if constexpr (stages != 0) {
                 subgroup::tile_prefetch<cache_hint::cached, cache_hint::cached>(
                         matA_prefetch_payload);
@@ -324,10 +327,12 @@ public:
                         matB_prefetch_payload);
             }
             SW_BARRIER();
+#endif
             matA_payload.template update_tdesc<update_dir_a>(
                     matA_t::tile_size_x);
             matB_payload.template update_tdesc<update_dir_b>(
                     matB_t::tile_size_y);
+#if !defined(DISABLE_GEMM_PREFETCH)
             if constexpr (stages != 0) {
                 matA_prefetch_payload.template update_tdesc<update_dir_a>(
                         matA_t::tile_size_x);
@@ -335,6 +340,7 @@ public:
                         matB_t::tile_size_y);
             }
             SW_BARRIER();
+#endif
             matA_acc_t matA_acc;
             matB_acc_t matB_acc;
             subgroup::elemwise_cvt(matA_acc, matA);
