@@ -72,12 +72,22 @@ class profiling_helper {
     }
 
     void get_statistics(vector<double> &time, profiling_statistics &stat) {
-        //first execution time
-        stat.first_time = time[0];
-
         int iter = time.size();
-        std::sort(time.begin(), time.end());
 
+        // When iter < 3, the statistics data is meaning-less, \
+        // We will remove the min and max data then caculate the mean data.
+        if (iter < 3) {
+            stat.first_time = 0.0;
+            stat.min = 0.0;
+            stat.max = 0.0;
+            stat.median = 0.0;
+            stat.mean = 0.0;
+            stat.variance = 0.0;
+            return;
+        }
+
+        stat.first_time = time[0];
+        std::sort(time.begin(), time.end());
         //minimum time
         stat.min = time[0];
         //maximum time(include first execution time)
@@ -87,18 +97,19 @@ class profiling_helper {
         stat.median
                 = iter % 2 == 0 ? (time[mid] + time[mid + 1]) * 0.5 : time[mid];
 
-        //mean time(exclude first execution time)
+        //mean time(exclude min and max execution time)
         double total = 0.0;
-        for (int i = 1; i < iter; i++) {
+
+        for (int i = 1; i < (iter - 1); i++) {
             total += time[i];
         }
-        stat.mean = (iter == 1 ? time[0] : (total / (iter - 1)));
+        stat.mean = (total / (iter - 2));
 
         //time mean square error
-        for (int i = 1; i < iter; i++) {
+        for (int i = 1; i < (iter - 1); i++) {
             stat.variance += pow(time[i] - stat.mean, 2);
         }
-        stat.variance /= iter;
+        stat.variance /= (iter - 2);
     }
 
     void print_info(string &label, string &info, double &value, string &unit) {
@@ -112,8 +123,7 @@ class profiling_helper {
         vector<double> value = {stat.first_time, stat.min, stat.max,
                 stat.median, stat.mean, stat.variance};
         vector<string> desc = {"first   ", "minimum ", "maximum ", "median  ",
-                "mean(exclude the first trial) ",
-                "variance(exclude the first trial) "};
+                "mean    ", "variance "};
         string unit = "ms";
 
         for (uint32_t i = 0; i < value.size(); i++) {
@@ -139,8 +149,10 @@ class profiling_helper {
         for (uint32_t i = 0; i < value.size(); i++) {
             string info = "The " + desc[i] + work_name[kernel_id] + "(" + device
                     + "_time) is ";
-            double perf = ((double)work_amount[kernel_id] / scaling_ratio)
-                    / value[i];
+            double perf = std::isnormal(value[i])
+                    ? (((double)work_amount[kernel_id] / scaling_ratio)
+                            / value[i])
+                    : 0.0;
             print_info(label, info, perf, unit);
 
             perf_string = perf_string + std::to_string(perf) + " ";
