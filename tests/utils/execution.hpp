@@ -27,7 +27,7 @@ using namespace gpu::xetla;
 // flush cache 0: NO flush
 // flush cache 1: memset
 // flush cache 2: pingpong moving ptr offset
-#define FLUSH_CACHE 2
+#define FLUSH_CACHE 1
 
 template <typename T>
 static void fill_matrix(std::vector<T> &M) {
