@@ -71,6 +71,7 @@ void basic_gemm_run(uint32_t iter) {
     constexpr uint32_t wg_tile_n = 256;
     constexpr uint32_t sg_tile_m = 32;
     constexpr uint32_t sg_tile_n = 64;
+    constexpr uint32_t sg_tile_k = 32;
 
     // Workload mapping, linear mapping will be used in the code
     // Suppose it is divisible.
@@ -87,6 +88,11 @@ void basic_gemm_run(uint32_t iter) {
     uint32_t ldb = matrix_n;
     uint32_t ldc = matrix_n;
 
+    std::cout << "MKNL: " << matrix_m << ", " << matrix_k << ", " << matrix_n
+              << ", Config: " << wg_tile_m << ", " << wg_tile_n << ", "
+              << sg_tile_m << ", " << sg_tile_n << ", " << sg_tile_k
+              << std::endl;
+
     // Ndrange and workgroup shape
     cl::sycl::range<3> group_range {1, group_range_m, group_range_n};
     cl::sycl::range<3> local_range {1, thread_range_m, thread_range_n};
@@ -95,9 +101,19 @@ void basic_gemm_run(uint32_t iter) {
 
     constexpr uint32_t warmup = 10;
     long ops = 2 * static_cast<long>(matrix_m) * matrix_n * matrix_k;
+    long ops_hbm = (sizeof(data_type_a) * matrix_m * matrix_k
+            + sizeof(data_type_b) * matrix_k * matrix_n
+            + sizeof(data_type_c) * matrix_m * matrix_n);
+
     profiling_helper prof("basic_gemm", ops, "gflops");
+    profiling_helper prof_hbm("basic_gemm", ops_hbm, "GB/s");
+
     for (uint32_t i = 0; i < iter + warmup; i++) {
-        if (i >= warmup) { prof.cpu_start(); }
+        if (i >= warmup) {
+            prof.cpu_start();
+            prof_hbm.cpu_start();
+        }
+
         auto gpu_event = queue.submit([&](handler &cgh) {
             // GPU kernel
             cgh.parallel_for(nd_range, [=](nd_item<3> item) KERNEL_MAIN {
@@ -112,7 +128,7 @@ void basic_gemm_run(uint32_t iter) {
                 static constexpr uint32_t periodic_sync_interval = 8;
                 static constexpr uint32_t prefetch_distance = 3;
                 // should larger than 8
-                static constexpr uint32_t k_stride = 32;
+                static constexpr uint32_t k_stride = sg_tile_k;
 
                 // Step 1: define mirco-kernel's configuration
                 using wg_shape = shape<wg_tile_n, wg_tile_m>;
@@ -208,6 +224,8 @@ void basic_gemm_run(uint32_t iter) {
         if (i >= warmup) {
             prof.cpu_end();
             prof.add_gpu_event(gpu_event);
+            prof_hbm.cpu_end();
+            prof_hbm.add_gpu_event(gpu_event);
         }
     }
 
@@ -217,6 +235,7 @@ void basic_gemm_run(uint32_t iter) {
 
     // performance
     prof.print_profiling_result(profiling_selector::GPU);
+    prof_hbm.print_profiling_result(profiling_selector::GPU);
 
     free(A, context);
     free(B, context);

@@ -8,9 +8,9 @@ unset disable_prefetch
 export ZE_AFFINITY_MASK=0
 
 #enable doubleGRF for shapes 512*64*512, 1024*64*1024, 2048*64*2048
-export SYCL_PROGRAM_COMPILE_OPTIONS=" -vc-codegen -vc-disable-indvars-opt -doubleGRF -Xfinalizer ' -printregusage -enableBCR -DPASTokenReduction ' "
+#export SYCL_PROGRAM_COMPILE_OPTIONS=" -vc-codegen -vc-disable-indvars-opt -doubleGRF -Xfinalizer ' -printregusage -enableBCR -DPASTokenReduction ' "
 #disable doubleGRF for shapes 2048*64*2048, 4096*64*4096, 8192*64*8192, 16384*64*16384
-#export SYCL_PROGRAM_COMPILE_OPTIONS=" -vc-codegen -vc-disable-indvars-opt -Xfinalizer ' -printregusage -enableBCR -DPASTokenReduction ' "
+export SYCL_PROGRAM_COMPILE_OPTIONS=" -vc-codegen -vc-disable-indvars-opt -Xfinalizer ' -printregusage -enableBCR -DPASTokenReduction ' "
 
 
 sycl_compiler_path=/opt/intel/oneapi/compiler/2024.2
