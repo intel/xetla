@@ -24,9 +24,9 @@
 
 class Habana_Test0 : public TestBase {
 public:
-    static constexpr size_t mat_m = 4096;
-    static constexpr size_t mat_n = 4096;
-    static constexpr size_t mat_k = 4096;
+    static constexpr size_t mat_m = 512;
+    static constexpr size_t mat_n = 8192;
+    static constexpr size_t mat_k = 8192;
     static constexpr size_t wg_m = 256;
     static constexpr size_t wg_n = 256;
     static constexpr size_t sg_m = 32;
