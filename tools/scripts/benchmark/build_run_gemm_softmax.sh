@@ -14,18 +14,18 @@ export SYCL_PROGRAM_COMPILE_OPTIONS=" -vc-codegen -vc-disable-indvars-opt -Xfina
 
 
 sycl_compiler_path=/opt/intel/oneapi/compiler/2024.2
+export MKLROOT=/opt/intel/oneapi/mkl/2024.2/
 
 # https://ubit-gfx.intel.com/build/19168301/artifacts
 gpu_driver_path=/opt/cutlass/gpu_driver/agama-996.6/extract/
 #gpu_driver_path=/opt/cutlass/gpu_driver/gfx-driver-ci-comp_igc-27004/extract/
 
 export CPATH=$sycl_compiler_path/include:$sycl_compiler_path/include/sycl:/opt/intel/oneapi/2024.2/include/
-export CC=${sycl_compiler_path}/bin/icx
-export CXX=${sycl_compiler_path}/bin/icpx
+export CC=$sycl_compiler_path/bin/icx
+export CXX=$sycl_compiler_path/bin/icpx
 
 export LIBRARY_PATH=$gpu_driver_path/usr/lib/x86_64-linux-gnu/:$sycl_compiler_path/lib/:/opt/intel/oneapi/2024.2/lib/
 export LD_LIBRARY_PATH=$LIBRARY_PATH
-export MKLROOT=/opt/intel/oneapi/mkl/2024.2/
 
 export IGC_ShaderDumpEnable=1
 export IGC_DumpToCustomDir=./xetla_dumps

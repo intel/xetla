@@ -107,7 +107,6 @@ void basic_gemm_run(uint32_t iter) {
 
     profiling_helper prof("basic_gemm", ops, "gflops");
     profiling_helper prof_hbm("basic_gemm", ops_hbm, "GB/s");
-
     for (uint32_t i = 0; i < iter + warmup; i++) {
         if (i >= warmup) {
             prof.cpu_start();
@@ -124,55 +123,47 @@ void basic_gemm_run(uint32_t iter) {
 
                 // wrap the nd_range to XeTLA range
 
+                // Step 1: basic computation information
+                // define A, B and accumulator datatype
+                // Using float as accumuator for better accuracy
+                using compute_attr = compute_attr_t<data_type_a, data_type_b,
+                        data_type_acc>;
+
                 // Performance tuning setting based on different shapes
                 static constexpr uint32_t periodic_sync_interval = 8;
                 static constexpr uint32_t prefetch_distance = 3;
                 // should larger than 8
                 static constexpr uint32_t k_stride = sg_tile_k;
+                using perf_tuning_knob = perf_tuning_knob_t<k_stride,
+                        prefetch_distance, periodic_sync_interval>;
 
-                // Step 1: define mirco-kernel's configuration
-                using wg_shape = shape<wg_tile_n, wg_tile_m>;
-                using sg_shape = shape<sg_tile_n, sg_tile_m>;
+                // specific the computation, performance tuning and computation core
+                using compute_policy = compute_policy_default_xmx<compute_attr,
+                        perf_tuning_knob, gpu_arch::Xe>;
 
-                // Mirco-kernel configuration
-                using gemm_tune_option
-                        = dict_t<elem_t_t<tune_key::sg_tile_shape, sg_shape>,
-                                elem_v_t<tune_key::prefetch_distance,
-                                        prefetch_distance>,
-                                elem_v_t<tune_key::periodic_sync_interval,
-                                        periodic_sync_interval>>;
-                using gemm_t = xetla::group::default_gemm_selector_t<
-                        data_type_a, // input datatype for A
-                        mem_layout::row_major, // memory layout for A
-                        8, // leading dimension for A, in unit of element
-                        mem_space::
-                                global, // memory reading from global mem for A
-                        data_type_b, // input datatype for B
-                        mem_layout::row_major, // memory layout for B
-                        8, // leading dimension for B, in unit of element
-                        mem_space::
-                                global, // memory reading from global mem for B
-                        data_type_acc, // accumulator data type for intermediate resutls
-                        wg_shape, // computation tile shape
-                        k_stride, // elements in each iteration
-                        gpu_arch::Xe, // GPU arch
-                        gemm_tune_option>;
+                // Step 2: define the memory layout & location of input/output
+                // this setting could be used to optimize the data re-use in shared
+                // local memory
+                using mem_desc_input_a = mem_desc_t<data_type_a,
+                        mem_layout::row_major, mem_space::global>;
+                using mem_desc_input_b = mem_desc_t<data_type_b,
+                        mem_layout::row_major, mem_space::global>;
+                using mem_desc_output_c = mem_desc_t<data_type_c,
+                        mem_layout::row_major, mem_space::global>;
+
+                // Step 3: define mirco-kernel's configuration
+                using tile_shape = tile_shape_t<wg_tile_n, wg_tile_m, sg_tile_n,
+                        sg_tile_m>;
+                using gemm_t = gemm_t<compute_policy, tile_shape,
+                        mem_desc_input_a, mem_desc_input_b>;
                 gemm_t gemm;
 
-                // Step 2: epilogue function to overwrite the result
-                using epilogue_tune_option
-                        = dict_t<elem_t_t<tune_key::sg_tile_shape, sg_shape>>;
-                using epilogue_t = xetla::group::default_epilogue_selector_t<
-                        data_type_c, // onput datatype for C
-                        mem_layout::row_major, // memory layout for C
-                        8, // leading dimension for C, in unit of element
-                        mem_space::global, // memory writing to global mem for C
-                        wg_shape, // computation tile shape
-                        k_stride, // elements in each iteration
-                        gpu_arch::Xe, // GPU arch
-                        epilogue_tune_option>;
+                // Step 4: epilogue function to overwrite the result
+                using epilogue_t
+                        = epilogue_t<epilogue_policy_default<gpu_arch::Xe>,
+                                tile_shape, mem_desc_output_c>;
 
-                // Step 3: define the shared local memory usages
+                // Step 5: define the shared local memory usages
                 // developers have the responsibility to set
                 // shared loacal memory through XeTLA API
                 static constexpr uint32_t barrier_count = gemm_t::barrier_count;
@@ -180,7 +171,7 @@ void basic_gemm_run(uint32_t iter) {
                 xetla_nbarrier_init<barrier_count>();
                 xetla_local_init<slm_size>();
 
-                // Step 4: ecah workgroup gets it individual index to start computation
+                // Step 6: ecah workgroup gets it individual index to start computation
                 int start_n = item.get_group(2) * wg_tile_n;
                 int start_m = item.get_group(1) * wg_tile_m;
                 // no slicing in K direction so start from zero for all WG
@@ -192,10 +183,7 @@ void basic_gemm_run(uint32_t iter) {
                 uint32_t inner_loop_count
                         = (wg_tile_k + k_stride - 1) / k_stride;
 
-                // Step 5: define the workgroup start point for each workgroup
-                using mem_desc_input_a = gemm_t::mem_desc_a_t;
-                using mem_desc_input_b = gemm_t::mem_desc_b_t;
-                using mem_desc_output_c = epilogue_t::mem_desc_c_t;
+                // Step 7: define the workgroup start point for each workgroup
                 mem_desc_input_a md_a(
                         {A}, {matrix_k, matrix_m, lda}, {start_k, start_m});
                 mem_desc_input_b md_b(
@@ -203,7 +191,7 @@ void basic_gemm_run(uint32_t iter) {
                 mem_desc_output_c md_c(
                         {C}, {matrix_n, matrix_m, ldc}, {start_n, start_m});
 
-                // Step 6: real calculation with accumulator varibales which suppose
+                // Step 8: real calculation with accumulator varibales which suppose
                 // will be in register.
                 gemm_t::matAcc_t matAcc;
                 matAcc.init(0);
@@ -214,7 +202,7 @@ void basic_gemm_run(uint32_t iter) {
                 gemm_t::work_group_t g(item.get_local_linear_id());
                 gemm(g, matAcc, gemm_args);
 
-                // Step 7: write the results from matACC to real output C
+                // Step 9: write the results from matACC to real output C
                 epilogue_t epilogue;
                 epilogue(g, matAcc, md_c);
             });
