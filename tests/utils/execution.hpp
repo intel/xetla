@@ -26,7 +26,7 @@ using namespace gpu::xetla;
 
 // flush cache 0: NO flush
 // flush cache 1: memset
-// flush cache 2: pingpong moving ptr offset
+// default, flush cache 2: pingpong moving ptr offset;
 #define FLUSH_CACHE 2
 
 template <typename T>
@@ -83,6 +83,7 @@ void gemm_exec(const std::string &compile_str, size_t batch = 1) {
 
     batch = Test::batch;
 
+    // iter must > 2, it will remove min and max for performance statistic.
     static constexpr int iter = 10, warmup = 10;
 
     constexpr size_t matrix_m = Test::mat_m;
@@ -97,10 +98,10 @@ void gemm_exec(const std::string &compile_str, size_t batch = 1) {
     auto context = queue.get_info<info::queue::context>();
     auto device = queue.get_info<info::queue::device>();
 
-    std::cout << "Problem size MKN:" << matrix_m << "x" << matrix_k << "x"
-              << matrix_n << std::endl;
-    std::cout << "Running on test iter: " << batch << ", "
-              << device.get_info<info::device::name>() << "\n";
+    std::cout << "MKNL: " << matrix_m << ", " << matrix_k << ", " << matrix_n
+              << ", " << batch << ", Config: " << Test::wg_m << ", "
+              << Test::wg_n << ", " << Test::sg_m << ", " << Test::sg_m << ", "
+              << Test::sg_k << std::endl;
 
     static constexpr auto l3_cache_size = 256 * 1024 * 1024;
 
@@ -178,6 +179,15 @@ void gemm_exec(const std::string &compile_str, size_t batch = 1) {
             },
             queue, device, context);
 
+    auto ops_flo = 2.0 * matrix_m * matrix_n * matrix_k * batch;
+    auto ops_hbm = batch
+            * (matrix_m * matrix_k * sizeof(data_type_a)
+                    + matrix_k * matrix_n * sizeof(data_type_b)
+                    + matrix_m * matrix_n * sizeof(data_type_c));
+
+    profiling_helper prof_flo("gemm", ops_flo, "gflops");
+    profiling_helper prof_hbm("gemm", ops_hbm, "GB/s");
+
     try {
         // std::vector<kernel_id> kernelId = {get_kernel_id<KERNEL>()};
         // auto inputBundle
@@ -216,13 +226,15 @@ void gemm_exec(const std::string &compile_str, size_t batch = 1) {
                 = {group_range * local_range, local_range};
         // cl::sycl::nd_range<3> nd_range = gemm_op_t::get_nd_range(arg);
 
-        std::vector<float> event_times(iter + warmup);
         for (uint32_t j = 0; j < iter + warmup; j++) {
 #if FLUSH_CACHE == 1
             queue.memset((void *)(dev_cache), 0, l3_cache_size).wait();
 #endif
+            if (j >= warmup) {
+                prof_flo.cpu_start();
+                prof_hbm.cpu_start();
+            }
 
-            auto start = std::chrono::high_resolution_clock::now();
             auto e_esimd = queue.submit([&](handler &cgh) {
                 // cgh.use_kernel_bundle(exeBundle);
                 cgh.parallel_for(nd_range, [=](nd_item<3> item) KERNEL_MAIN {
@@ -251,49 +263,14 @@ void gemm_exec(const std::string &compile_str, size_t batch = 1) {
                 });
             });
             queue.wait();
-            auto end = std::chrono::high_resolution_clock::now();
-            std::chrono::duration<float, std::milli> time = end - start;
-            event_times[j] = time.count() / 1000;
-        }
-        auto best = 999.f;
-        auto worst = 0.f;
-        double average = 0.f;
 
-        auto best_iter = 0;
-        auto worst_iter = 0;
-
-        for (uint32_t i = warmup; i < iter + warmup; i++) {
-#if 0
-            printf("GPU time is %f ms, Tflops is: %f, HBM (GBs) is %f\n",
-                    event_times[i] / 1e3,
-                    2.0 * matrix_m * matrix_n * matrix_k / 1e12
-                            / event_times[i],
-                    (matrix_m * matrix_k * sizeof(data_type_a)
-                            + matrix_k * matrix_n * sizeof(data_type_b)
-                            + matrix_m * matrix_n * sizeof(data_type_c))
-                            / event_times[i] / 1e9);
-#endif
-            average += event_times[i];
-            best = min(best, event_times[i]);
-            worst = max(worst, event_times[i]);
-            if (best == event_times[i]) { best_iter = i; }
-            if (worst == event_times[i]) { worst_iter = i; }
+            if (j >= warmup) {
+                prof_flo.cpu_end();
+                prof_flo.add_gpu_event(e_esimd);
+                prof_hbm.cpu_end();
+                prof_hbm.add_gpu_event(e_esimd);
+            }
         }
-        average = average - best - worst;
-        average /= (iter - 2);
-        auto tflo = 2.0 * matrix_m * matrix_n * matrix_k * batch / 1e12;
-        auto hbm = batch
-                * (matrix_m * matrix_k * sizeof(data_type_a)
-                        + matrix_k * matrix_n * sizeof(data_type_b)
-                        + matrix_m * matrix_n * sizeof(data_type_c))
-                / 1e9;
-        printf("Performance result:\n");
-        printf("    Best at iter %d, %f ms; Worst at iter %d, %f ms\n",
-                best_iter, best, worst_iter, worst);
-        printf("    Tflops  [min: %f, max: %f, average: %f]\n", tflo / worst,
-                tflo / best, tflo / average);
-        printf("    HBM(GBs)[min: %f, max: %f, average: %f]\n", hbm / worst,
-                hbm / best, hbm / average);
 
     } catch (cl::sycl::exception const &e) {
         std::cout << "SYCL exception caught: " << e.what() << '\n';
@@ -305,6 +282,10 @@ void gemm_exec(const std::string &compile_str, size_t batch = 1) {
         validate_func vfunc;
         ASSERT_EQ(0, vfunc(A, B, C, queue));
     }
+
+    // performance
+    prof_flo.print_profiling_result(profiling_selector::GPU);
+    prof_hbm.print_profiling_result(profiling_selector::GPU);
 
     free(A, context);
     free(B, context);

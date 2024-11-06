@@ -21,11 +21,11 @@ using namespace cl::sycl;
 
 #define SIMD 32
 
-// FLUSH_CACHE is define in tests/utils/execution.hpp
+// FLUSH_CACHE is define in tests/utils/execution.hpp; default value is: 2
 // flush cache 0: NO flush
 // flush cache 1: memset
 // flush cache 2: pingpong moving ptr offset
-//#define FLUSH_CACHE 0
+#define FLUSH_CACHE 1
 
 //#define WITHOUT_SOFTMAX
 
@@ -198,13 +198,13 @@ void gemm_softmax(uint32_t matrix_m, uint32_t matrix_k, uint32_t matrix_n,
     cl::sycl::range<3> local_range {1, subgroup_range_m, subgroup_range_n};
     cl::sycl::nd_range<3> nd_range(group_range * local_range, local_range);
 
-    long ops
+    long ops_flo
             = 2 * static_cast<long>(matrix_m) * matrix_n * matrix_k * batch_num;
     long ops_hbm = (sizeof(data_type_a) * matrix_m * matrix_k
                            + sizeof(data_type_b) * matrix_k * matrix_n
                            + sizeof(data_type_c) * matrix_m * matrix_n)
             * batch_num;
-    profiling_helper prof("gemm_softmax", ops, "gflops");
+    profiling_helper prof_flo("gemm_softmax", ops_flo, "gflops");
     profiling_helper prof_hbm("gemm_softmax", ops_hbm, "GB/s");
     try {
         for (uint32_t i = 0; i < iter + warmup; i++) {
@@ -213,7 +213,7 @@ void gemm_softmax(uint32_t matrix_m, uint32_t matrix_k, uint32_t matrix_n,
 #endif
 
             if (i >= warmup) {
-                prof.cpu_start();
+                prof_flo.cpu_start();
                 prof_hbm.cpu_start();
             }
             auto gpu_event = queue.submit([&](handler &cgh) {
@@ -340,8 +340,8 @@ void gemm_softmax(uint32_t matrix_m, uint32_t matrix_k, uint32_t matrix_n,
             gpu_event.wait();
 
             if (i >= warmup) {
-                prof.cpu_end();
-                prof.add_gpu_event(gpu_event);
+                prof_flo.cpu_end();
+                prof_flo.add_gpu_event(gpu_event);
                 prof_hbm.cpu_end();
                 prof_hbm.add_gpu_event(gpu_event);
             }
@@ -357,7 +357,7 @@ void gemm_softmax(uint32_t matrix_m, uint32_t matrix_k, uint32_t matrix_n,
                     mem_layout::row_major));
 
     // performance
-    prof.print_profiling_result(profiling_selector::GPU);
+    prof_flo.print_profiling_result(profiling_selector::GPU);
     prof_hbm.print_profiling_result(profiling_selector::GPU);
 
     free(A, context);
