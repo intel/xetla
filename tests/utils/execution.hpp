@@ -27,7 +27,7 @@ using namespace gpu::xetla;
 // flush cache 0: NO flush
 // flush cache 1: memset
 // default, flush cache 2: pingpong moving ptr offset;
-#define FLUSH_CACHE 2
+#define FLUSH_CACHE 1
 
 template <typename T>
 static void fill_matrix(std::vector<T> &M) {
@@ -100,7 +100,7 @@ void gemm_exec(const std::string &compile_str, size_t batch = 1) {
 
     std::cout << "MKNL: " << matrix_m << ", " << matrix_k << ", " << matrix_n
               << ", " << batch << ", Config: " << Test::wg_m << ", "
-              << Test::wg_n << ", " << Test::sg_m << ", " << Test::sg_m << ", "
+              << Test::wg_n << ", " << Test::sg_m << ", " << Test::sg_n << ", "
               << Test::sg_k << std::endl;
 
     static constexpr auto l3_cache_size = 256 * 1024 * 1024;

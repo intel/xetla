@@ -100,16 +100,16 @@ void basic_gemm_run(uint32_t iter) {
     cl::sycl::nd_range<3> nd_range(group_range * local_range, local_range);
 
     constexpr uint32_t warmup = 10;
-    long ops = 2 * static_cast<long>(matrix_m) * matrix_n * matrix_k;
+    long ops_flo = 2 * static_cast<long>(matrix_m) * matrix_n * matrix_k;
     long ops_hbm = (sizeof(data_type_a) * matrix_m * matrix_k
             + sizeof(data_type_b) * matrix_k * matrix_n
             + sizeof(data_type_c) * matrix_m * matrix_n);
 
-    profiling_helper prof("basic_gemm", ops, "gflops");
+    profiling_helper prof_flo("basic_gemm", ops_flo, "gflops");
     profiling_helper prof_hbm("basic_gemm", ops_hbm, "GB/s");
     for (uint32_t i = 0; i < iter + warmup; i++) {
         if (i >= warmup) {
-            prof.cpu_start();
+            prof_flo.cpu_start();
             prof_hbm.cpu_start();
         }
 
@@ -210,8 +210,8 @@ void basic_gemm_run(uint32_t iter) {
         gpu_event.wait();
 
         if (i >= warmup) {
-            prof.cpu_end();
-            prof.add_gpu_event(gpu_event);
+            prof_flo.cpu_end();
+            prof_flo.add_gpu_event(gpu_event);
             prof_hbm.cpu_end();
             prof_hbm.add_gpu_event(gpu_event);
         }
@@ -222,7 +222,7 @@ void basic_gemm_run(uint32_t iter) {
                     queue, mem_layout::row_major, mem_layout::row_major));
 
     // performance
-    prof.print_profiling_result(profiling_selector::GPU);
+    prof_flo.print_profiling_result(profiling_selector::GPU);
     prof_hbm.print_profiling_result(profiling_selector::GPU);
 
     free(A, context);
