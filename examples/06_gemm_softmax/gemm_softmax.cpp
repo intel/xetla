@@ -298,7 +298,7 @@ void gemm_softmax(uint32_t matrix_m, uint32_t matrix_k, uint32_t matrix_n,
                     data_type_b *matB_ptr = B
                             + (i % pingpong_flush_iter) * pingpong_size_b
                             + batch_id * size_b;
-                    uint32_t matB_ld = matrix_k;
+                    uint32_t matB_ld = matrix_n;
                     data_type_c *matC_ptr = C
                             + (i % pingpong_flush_iter) * pingpong_size_c
                             + batch_id * size_c;
@@ -308,7 +308,7 @@ void gemm_softmax(uint32_t matrix_m, uint32_t matrix_k, uint32_t matrix_n,
                     uint32_t matA_ld = matrix_k;
                     data_type_b *matB_ptr = B
                             + batch_id * size_b;
-                    uint32_t matB_ld = matrix_k;
+                    uint32_t matB_ld = matrix_n;
                     data_type_c *matC_ptr = C
                             + batch_id * size_c;
 #endif
