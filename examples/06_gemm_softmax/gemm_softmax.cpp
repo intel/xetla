@@ -27,8 +27,6 @@ using namespace cl::sycl;
 // flush cache 2: pingpong moving ptr offset
 #define FLUSH_CACHE 1
 
-#define WITHOUT_SOFTMAX
-
 template <typename data_type_a, typename data_type_b, typename data_type_c,
         typename data_type_acc = float>
 int gemm_softmax_result_validate(data_type_a *A_device, data_type_b *B_device,
@@ -210,6 +208,7 @@ void gemm_softmax(uint32_t matrix_m, uint32_t matrix_k, uint32_t matrix_n,
         for (uint32_t i = 0; i < iter + warmup; i++) {
 #if FLUSH_CACHE == 1
             queue.memset((void *)(dev_cache), 0, l3_cache_size).wait();
+            sleep(2); // align with cutlass
 #endif
 
             if (i >= warmup) {
