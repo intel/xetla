@@ -43,7 +43,7 @@ template <typename T0, typename T1, int SZ, typename U,
         class Sat = xetla_saturation_off_tag>
 __XETLA_API xetla_vector<T0, SZ> xetla_shl(
         xetla_vector<T1, SZ> src0, U src1, Sat sat = {}) {
-#if (defined(__INTEL_LLVM_COMPILER) && __INTEL_LLVM_COMPILER >= 20250000)
+#if (__LIBSYCL_MAJOR_VERSION >= 8)
     return __ESIMD_NS::shl<T0, T1, SZ, U, typename Sat::sat_tag>(
 #else
     return __ESIMD_ENS::shl<T0, T1, SZ, U, typename Sat::sat_tag>(
@@ -63,7 +63,7 @@ __XETLA_API xetla_vector<T0, SZ> xetla_shl(
 template <typename T0, typename T1, typename T2,
         class Sat = xetla_saturation_off_tag>
 typename std::remove_const<T0>::type xetla_shl(T1 src0, T2 src1, Sat sat = {}) {
-#if (defined(__INTEL_LLVM_COMPILER) && __INTEL_LLVM_COMPILER >= 20250000)
+#if (__LIBSYCL_MAJOR_VERSION >= 8)
     return __ESIMD_NS::shl<T0, T1, T2, typename Sat::sat_tag>(
 #else
     return __ESIMD_ENS::shl<T0, T1, T2, typename Sat::sat_tag>(
@@ -85,7 +85,7 @@ template <typename T0, typename T1, int SZ, typename U,
         class Sat = xetla_saturation_off_tag>
 __XETLA_API xetla_vector<T0, SZ> xetla_shr(
         xetla_vector<T1, SZ> src0, U src1, Sat sat = {}) {
-#if (defined(__INTEL_LLVM_COMPILER) && __INTEL_LLVM_COMPILER >= 20250000)
+#if (__LIBSYCL_MAJOR_VERSION >= 8)
     return __ESIMD_NS::shr<T0, T1, SZ, U, typename Sat::sat_tag>(
 #else
     return __ESIMD_ENS::shr<T0, T1, SZ, U, typename Sat::sat_tag>(
@@ -106,7 +106,7 @@ template <typename T0, typename T1, typename T2,
         class Sat = xetla_saturation_off_tag>
 __XETLA_API typename std::remove_const<T0>::type xetla_shr(
         T1 src0, T2 src1, Sat sat = {}) {
-#if (defined(__INTEL_LLVM_COMPILER) && __INTEL_LLVM_COMPILER >= 20250000)
+#if (__LIBSYCL_MAJOR_VERSION >= 8)
     return __ESIMD_NS::shr<T0, T1, T2, typename Sat::sat_tag>(
 #else
     return __ESIMD_ENS::shr<T0, T1, T2, typename Sat::sat_tag>(
@@ -125,7 +125,7 @@ __XETLA_API typename std::remove_const<T0>::type xetla_shr(
 template <typename T0, typename T1, int SZ>
 __XETLA_API xetla_vector<T0, SZ> xetla_rol(
         xetla_vector<T1, SZ> src0, xetla_vector<T1, SZ> src1) {
-#if (defined(__INTEL_LLVM_COMPILER) && __INTEL_LLVM_COMPILER >= 20250000)
+#if (__LIBSYCL_MAJOR_VERSION >= 8)
     return __ESIMD_NS::rol<T0, T1, SZ>(src0, src1);
 #else
     return __ESIMD_ENS::rol<T0, T1, SZ>(src0, src1);
@@ -146,7 +146,7 @@ __XETLA_API std::enable_if_t<std::is_integral<T0>::value
                 && is_xetla_scalar<U>::value,
         xetla_vector<T0, SZ>>
 xetla_rol(xetla_vector<T1, SZ> src0, U src1) {
-#if (defined(__INTEL_LLVM_COMPILER) && __INTEL_LLVM_COMPILER >= 20250000)
+#if (__LIBSYCL_MAJOR_VERSION >= 8)
     return __ESIMD_NS::rol<T0, T1, SZ, U>(src0, src1);
 #else
     return __ESIMD_ENS::rol<T0, T1, SZ, U>(src0, src1);
@@ -165,7 +165,7 @@ __XETLA_API std::enable_if_t<std::is_integral<T0>::value
                 && std::is_integral<T1>::value && std::is_integral<T2>::value,
         remove_const_t<T0>>
 xetla_rol(T1 src0, T2 src1) {
-#if (defined(__INTEL_LLVM_COMPILER) && __INTEL_LLVM_COMPILER >= 20250000)
+#if (__LIBSYCL_MAJOR_VERSION >= 8)
     return __ESIMD_NS::rol<T0, T1, T2>(src0, src1);
 #else
     return __ESIMD_ENS::rol<T0, T1, T2>(src0, src1);
@@ -183,7 +183,7 @@ xetla_rol(T1 src0, T2 src1) {
 template <typename T0, typename T1, int SZ>
 __XETLA_API xetla_vector<T0, SZ> xetla_ror(
         xetla_vector<T1, SZ> src0, xetla_vector<T1, SZ> src1) {
-#if (defined(__INTEL_LLVM_COMPILER) && __INTEL_LLVM_COMPILER >= 20250000)
+#if (__LIBSYCL_MAJOR_VERSION >= 8)
     return __ESIMD_NS::ror<T0, T1, SZ>(src0, src1);
 #else
     return __ESIMD_ENS::ror<T0, T1, SZ>(src0, src1);
@@ -204,7 +204,7 @@ __XETLA_API std::enable_if_t<std::is_integral<T0>::value
                 && is_xetla_scalar<U>::value,
         xetla_vector<T0, SZ>>
 xetla_ror(xetla_vector<T1, SZ> src0, U src1) {
-#if (defined(__INTEL_LLVM_COMPILER) && __INTEL_LLVM_COMPILER >= 20250000)
+#if (__LIBSYCL_MAJOR_VERSION >= 8)
     return __ESIMD_NS::ror<T0, T1, SZ, U>(src0, src1);
 #else
     return __ESIMD_ENS::ror<T0, T1, SZ, U>(src0, src1);
@@ -223,7 +223,7 @@ __XETLA_API std::enable_if_t<std::is_integral<T0>::value
                 && std::is_integral<T1>::value && std::is_integral<T2>::value,
         remove_const_t<T0>>
 xetla_ror(T1 src0, T2 src1) {
-#if (defined(__INTEL_LLVM_COMPILER) && __INTEL_LLVM_COMPILER >= 20250000)
+#if (__LIBSYCL_MAJOR_VERSION >= 8)
     return __ESIMD_NS::ror<T0, T1, T2>(src0, src1);
 #else
     return __ESIMD_ENS::ror<T0, T1, T2>(src0, src1);
@@ -244,7 +244,7 @@ template <typename T0, typename T1, int SZ, typename U,
         class Sat = xetla_saturation_off_tag>
 __XETLA_API xetla_vector<T0, SZ> xetla_lsr(
         xetla_vector<T1, SZ> src0, U src1, Sat sat = {}) {
-#if (defined(__INTEL_LLVM_COMPILER) && __INTEL_LLVM_COMPILER >= 20250000)
+#if (__LIBSYCL_MAJOR_VERSION >= 8)
     return __ESIMD_NS::lsr<T0, T1, SZ, U, typename Sat::sat_tag>(
 #else
     return __ESIMD_ENS::lsr<T0, T1, SZ, U, typename Sat::sat_tag>(
@@ -266,7 +266,7 @@ template <typename T0, typename T1, typename T2,
         class Sat = xetla_saturation_off_tag>
 __XETLA_API typename std::remove_const<T0>::type xetla_lsr(
         T1 src0, T2 src1, Sat sat = {}) {
-#if (defined(__INTEL_LLVM_COMPILER) && __INTEL_LLVM_COMPILER >= 20250000)
+#if (__LIBSYCL_MAJOR_VERSION >= 8)
     return __ESIMD_NS::lsr<T0, T1, T2, typename Sat::sat_tag>(
 #else
     return __ESIMD_ENS::lsr<T0, T1, T2, typename Sat::sat_tag>(
@@ -288,7 +288,7 @@ template <typename T0, typename T1, int SZ, typename U,
         class Sat = xetla_saturation_off_tag>
 __XETLA_API xetla_vector<T0, SZ> xetla_asr(
         xetla_vector<T1, SZ> src0, U src1, Sat sat = {}) {
-#if (defined(__INTEL_LLVM_COMPILER) && __INTEL_LLVM_COMPILER >= 20250000)
+#if (__LIBSYCL_MAJOR_VERSION >= 8)
     return __ESIMD_NS::asr<T0, T1, SZ, U, typename Sat::sat_tag>(
 #else
     return __ESIMD_ENS::asr<T0, T1, SZ, U, typename Sat::sat_tag>(
@@ -310,7 +310,7 @@ template <typename T0, typename T1, typename T2,
         class Sat = xetla_saturation_off_tag>
 __XETLA_API typename std::remove_const<T0>::type xetla_asr(
         T1 src0, T2 src1, Sat sat = {}) {
-#if (defined(__INTEL_LLVM_COMPILER) && __INTEL_LLVM_COMPILER >= 20250000)
+#if (__LIBSYCL_MAJOR_VERSION >= 8)
     return __ESIMD_NS::asr<T0, T1, T2, typename Sat::sat_tag>(
 #else
     return __ESIMD_ENS::asr<T0, T1, T2, typename Sat::sat_tag>(

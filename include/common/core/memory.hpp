@@ -69,7 +69,7 @@ constexpr __ESIMD_ENS::lsc_data_size get_data_size(gpu::xetla::data_size ds) {
     }
 }
 
-#if (defined(__INTEL_LLVM_COMPILER) && __INTEL_LLVM_COMPILER >= 20250000)
+#if (__LIBSYCL_MAJOR_VERSION >= 8)
 /// @brief lookup table for memory kind.
 ///
 ///
@@ -677,7 +677,7 @@ __XETLA_API xetla_vector<T, N> xetla_atomic_local(
             offsets, src0, src1, pred);
 }
 
-#if (defined(__INTEL_LLVM_COMPILER) && __INTEL_LLVM_COMPILER >= 20250000)
+#if (__LIBSYCL_MAJOR_VERSION >= 8)
 /// @brief Memory fence.
 /// Supported platforms: DG2, PVC
 ///
