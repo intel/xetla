@@ -29,7 +29,7 @@ In this example, the input for the GEMM operation is a matrix with dimensions (4
 However, if we consider a scenario where the input dimensions are (32, 1024), the current workgroup and subgroup sizes would result in work-groups that are too large to create a sufficient number of them. In this case, it becomes necessary to adjust the size of the workgroup and subgroup to achieve efficient computation.
 
 ### SplitK
-This situation is quite common in AI workloads, where the matrix is rectangular, meaning that the M and N dimensions are relatively small, while the K dimension is . For instance, consider a workload with dimensions (256, 256, 8192), resulting in an output shape of C as (256, 256). If we were to use a workgroup shape of (256, 256), only one workgroup would be created, which is far from sufficient for efficient GPU utilization.
+This situation is quite common in AI workloads, where the matrix is rectangular, meaning that the M and N dimensions are relatively small, while the K dimension is large. For instance, consider a workload with dimensions (256, 256, 8192), resulting in an output shape of C as (256, 256). If we were to use a workgroup shape of (256, 256), only one workgroup would be created, which is far from sufficient for efficient GPU utilization.
 
 Even if we reduce the workgroup size to (64, 64), we would still have only 16 workgroups on the GPU. Further reducing the workgroup size introduces other challenges, including poor memory locality and difficulty in hiding latency. The example code below demonstrates this mapping alogrithm:
 
