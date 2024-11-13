@@ -12,3 +12,4 @@ source ${script_dir}/clang_format.sh
 #export CC=icx
 #export CXX=icpx
 export ONEAPI_DEVICE_SELECTOR=level_zero:gpu
+rm -rf ~/.cache

@@ -12,3 +12,4 @@ source ${ONEAPI_INSTALL_PATH}/setvars.sh
 export CC=icx
 export CXX=icpx
 export ONEAPI_DEVICE_SELECTOR=level_zero:*
+rm -rf ~/.cache
