@@ -224,8 +224,11 @@ enum class reduce_op : uint8_t {
 
 /// SW_BARRIER, insert software scheduling barrier, for better code control
 ///
-
-#define SW_BARRIER() __ESIMD_NS::fence<__ESIMD_NS::fence_mask::sw_barrier>()
+#ifdef __SYCL_DEVICE_ONLY__
+#define SW_BARRIER() __asm__ volatile("fence_sw" : : :)
+#else
+#define SW_BARRIER()
+#endif
 
 __XETLA_API void xetla_wait(uint16_t val) {
     __ESIMD_ENS::wait(__ESIMD_NS::simd<uint16_t, 1>(val));

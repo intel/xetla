@@ -79,7 +79,7 @@ public:
     xetla_vector<uint32_t, 16 * num_block> payloads;
 
     inline mem_payload_t(const this_payload_t &rhs) {
-        this->payload = rhs.payload;
+        this->payloads = rhs.payloads;
     }
 
     inline mem_payload_t(mem_desc_t &mem_desc) {
@@ -128,7 +128,7 @@ public:
     // ~mem_payload_t(){}
 
     inline this_payload_t &operator=(const this_payload_t &rhs) {
-        this->payload = rhs.payload;
+        this->payloads = rhs.payloads;
         return *this;
     }
 
