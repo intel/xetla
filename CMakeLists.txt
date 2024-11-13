@@ -22,8 +22,8 @@ if (${LOG} STREQUAL "on")
     add_definitions(-DLOG_PRINT)
 endif ()
 
-add_compile_options(-fsycl -fp-model=precise -Wall -Wextra)
-add_link_options(-fsycl -lmkl_intel_lp64 -lmkl_sequential -lmkl_core -lpthread -lm)
+add_compile_options(-fsycl -fp-model=precise -Wall -Wextra -gline-tables-only -Rno-debug-disables-optimization)
+add_link_options(-fsycl -lmkl_intel_lp64 -lmkl_sequential -lmkl_core -lpthread -lm -gline-tables-only -Rno-debug-disables-optimization)
 link_libraries(-lgtest -lgtest_main)
 
 add_subdirectory(tests)
