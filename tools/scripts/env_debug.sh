@@ -11,4 +11,4 @@ source ${script_dir}/clang_format.sh
 # Export environment variables
 #export CC=icx
 #export CXX=icpx
-export ONEAPI_DEVICE_SELECTOR=level_zero:*
+export ONEAPI_DEVICE_SELECTOR=level_zero:gpu

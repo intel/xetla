@@ -1,3 +1,8 @@
+script_dir=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+repo_path=$script_dir/../../../
+mkdir -p $repo_path/build
+rm -rf $repo_path/build/* && cd $repo_path/build
+
 unset SYCL_PROGRAM_COMPILE_OPTIONS
 unset sycl_compiler_path
 unset gpu_driver_path
@@ -6,6 +11,8 @@ unset without_reduction
 unset disable_prefetch
 
 export ZE_AFFINITY_MASK=0
+export SYCL_CACHE_PERSISTENT=0
+export SYCL_CACHE_IN_MEM=0
 
 #enable doubleGRF for shapes 512*64*512, 1024*64*1024, 2048*64*2048
 #export SYCL_PROGRAM_COMPILE_OPTIONS=" -vc-codegen -vc-disable-indvars-opt -doubleGRF -Xfinalizer ' -printregusage -enableBCR -DPASTokenReduction ' "
@@ -28,21 +35,17 @@ export LIBRARY_PATH=$gpu_driver_path/usr/lib/x86_64-linux-gnu/:$sycl_compiler_pa
 export LD_LIBRARY_PATH=$LIBRARY_PATH
 
 export IGC_ShaderDumpEnable=1
-export IGC_DumpToCustomDir=$repo_path/build/xetla_dumps/
+export IGC_DumpToCustomDir=$repo_path/build/xetla_dumps
 
 disable_prefetch=" -DDISABLE_GEMM_PREFETCH "
 #without_softmax=" -DWITHOUT_SOFTMAX "
 #without_reduction=" -DWITHOUT_REDUCTION "
-
-script_dir=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-repo_path=$script_dir/../../../
-rm -rf $repo_path/build/* && cd $repo_path/build
 
 source $repo_path/tools/scripts/env_debug.sh
 cmake .. -DCMAKE_CXX_FLAGS=" $without_softmax $without_reduction $disable_prefetch " \
 && make gemm_softmax \
 && ./examples/06_gemm_softmax/gemm_softmax
 
-#/home/zt/workspace/cutlass/unitrace/tools/unitrace/build/unitrace --chrome-kernel-logging --stall-sampling -i 20 -o xetla_pvc_gemm_softmax.csv ./examples/06_gemm_softmax/gemm_softmax
+/home/zt/workspace/cutlass/unitrace/tools/unitrace/build/unitrace --chrome-kernel-logging --stall-sampling -i 20 -o xetla_pvc_gemm_softmax.csv ./examples/06_gemm_softmax/gemm_softmax
 #python3 ~/workspace/cutlass/unitrace/tools/unitrace/scripts/analyzeperfmetrics.py -s $IGC_DumpToCustomDir -t "XVE Stalls by Instruction" $csv_file -o ${csv_file}.pdf
 
