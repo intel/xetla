@@ -15,9 +15,9 @@ export SYCL_CACHE_PERSISTENT=0
 export SYCL_CACHE_IN_MEM=0
 
 #enable doubleGRF for shapes 512*64*512, 1024*64*1024, 2048*64*2048
-#export SYCL_PROGRAM_COMPILE_OPTIONS=" -vc-codegen -vc-disable-indvars-opt -doubleGRF -Xfinalizer ' -printregusage -enableBCR -DPASTokenReduction ' "
+export SYCL_PROGRAM_COMPILE_OPTIONS=" -vc-codegen -vc-disable-indvars-opt -doubleGRF -Xfinalizer ' -printregusage -enableBCR -DPASTokenReduction ' "
 #disable doubleGRF for shapes 2048*64*2048, 4096*64*4096, 8192*64*8192, 16384*64*16384
-export SYCL_PROGRAM_COMPILE_OPTIONS=" -vc-codegen -vc-disable-indvars-opt -Xfinalizer ' -printregusage -enableBCR -DPASTokenReduction ' "
+#export SYCL_PROGRAM_COMPILE_OPTIONS=" -vc-codegen -vc-disable-indvars-opt -Xfinalizer ' -printregusage -enableBCR -DPASTokenReduction ' "
 
 
 sycl_compiler_path=/opt/intel/oneapi/compiler/2024.2
@@ -46,6 +46,6 @@ cmake .. -DCMAKE_CXX_FLAGS=" $without_softmax $without_reduction $disable_prefet
 && make gemm_softmax \
 && ./examples/06_gemm_softmax/gemm_softmax
 
-/home/zt/workspace/cutlass/unitrace/tools/unitrace/build/unitrace --chrome-kernel-logging --stall-sampling -i 20 -o xetla_pvc_gemm_softmax.csv ./examples/06_gemm_softmax/gemm_softmax
+#/home/zt/workspace/cutlass/unitrace/tools/unitrace/build/unitrace --chrome-kernel-logging --stall-sampling -i 20 -o xetla_pvc_gemm_softmax.csv ./examples/06_gemm_softmax/gemm_softmax
 #python3 ~/workspace/cutlass/unitrace/tools/unitrace/scripts/analyzeperfmetrics.py -s $IGC_DumpToCustomDir -t "XVE Stalls by Instruction" $csv_file -o ${csv_file}.pdf
 
