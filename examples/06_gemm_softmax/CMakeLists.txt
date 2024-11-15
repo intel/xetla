@@ -1,3 +1,4 @@
+
 set(TARGET gemm_softmax)
 
 set(XETLA_KERNEL_FLAGS ${XETLA_KERNEL_FLAGS} -fsycl)
@@ -17,8 +18,9 @@ set(XETLA_OFFLINE_OPTIONS "${XETLA_OFFLINE_OPTIONS} -Xfinalizer -DPASTokenReduct
 set(XETLA_KERNEL_FLAGS ${XETLA_KERNEL_FLAGS} -Xs)
 set(XETLA_KERNEL_FLAGS ${XETLA_KERNEL_FLAGS} "-device pvc -options '${XETLA_OFFLINE_OPTIONS} ' ")
 
-#build test
 add_executable(${TARGET} gemm_softmax.cpp)
-#target_link_options(${TARGET} PRIVATE ${XETLA_KERNEL_FLAGS})
-#target_compile_options(${TARGET} PRIVATE ${XETLA_KERNEL_FLAGS})
+
+# AOT mode, uncommnets the following 2 lines. JIT mode, commnets the following 2 lines
+target_link_options(${TARGET} PRIVATE ${XETLA_KERNEL_FLAGS})
+target_compile_options(${TARGET} PRIVATE ${XETLA_KERNEL_FLAGS})
 

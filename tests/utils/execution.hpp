@@ -29,15 +29,6 @@ using namespace gpu::xetla;
 // default, flush cache 2: pingpong moving ptr offset;
 #define FLUSH_CACHE 1
 
-template <typename T>
-static void fill_matrix(std::vector<T> &M) {
-    std::random_device dev;
-    std::mt19937 rng(dev());
-    std::uniform_real_distribution<float> dist((T)0.0, (T)1.0);
-    std::generate(std::begin(M), std::end(M),
-            [&] { return static_cast<T>(dist(rng)); });
-}
-
 inline size_t time_event(sycl::event &e) {
     // get start and end times
     cl_ulong start_time = e.template get_profiling_info<
@@ -48,25 +39,6 @@ inline size_t time_event(sycl::event &e) {
 
     // return the delta
     return static_cast<size_t>(end_time - start_time);
-}
-
-template <typename data_type>
-inline data_type *alloc_device_and_init(size_t size, size_t iter,
-        std::function<void(data_type *data, size_t elements)> init_func,
-        sycl::queue &queue, sycl::device &device, sycl::context &context) {
-    std::vector<data_type> a(size);
-    fill_matrix(a);
-
-    auto device_ptr = static_cast<data_type *>(
-            aligned_alloc_device(DEVICE_MEM_ALIGNMENT,
-                    size * iter * sizeof(data_type), device, context));
-    for (int it = 0; it < iter; it++) {
-        queue.memcpy((void *)(device_ptr + it * size), a.data(),
-                     a.size() * sizeof(data_type))
-                .wait();
-    }
-
-    return device_ptr;
 }
 
 template <class Test, typename validate_func, typename KERNEL,

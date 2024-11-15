@@ -122,12 +122,7 @@ void gemm_softmax(uint32_t matrix_m, uint32_t matrix_k, uint32_t matrix_n,
     std::cout << "Running on " << device.get_info<info::device::name>() << "\n";
 
 #if FLUSH_CACHE == 1
-    auto dev_cache = alloc_device_and_init<int8_t>(
-            l3_cache_size,
-            [](int8_t *data, size_t idx) {
-                data[idx] = static_cast<int8_t>(random_float());
-            },
-            queue, device, context);
+    auto dev_cache = alloc_device<int8_t>(l3_cache_size, device, context);
 #endif
 
 #if FLUSH_CACHE == 2
@@ -138,46 +133,20 @@ void gemm_softmax(uint32_t matrix_m, uint32_t matrix_k, uint32_t matrix_n,
     size_t pingpong_size_c
             = max(batch_num * size_c, l3_cache_size / sizeof(data_type_c));
     auto A = alloc_device_and_init<data_type_a>(
-            pingpong_size_a * pingpong_flush_iter,
-            [](data_type_a *data, size_t idx) {
-                data[idx] = static_cast<data_type_a>(random_float());
-            },
-            queue, device, context);
+            pingpong_size_a, pingpong_flush_iter, queue, device, context);
     auto B = alloc_device_and_init<data_type_b>(
-            pingpong_size_b * pingpong_flush_iter,
-            [](data_type_b *data, size_t idx) {
-                data[idx] = static_cast<data_type_b>(random_float());
-            },
-            queue, device, context);
+            pingpong_size_b, pingpong_flush_iter, queue, device, context);
     auto C = alloc_device_and_init<data_type_c>(
-            pingpong_size_c * pingpong_flush_iter,
-            [](data_type_c *data, size_t idx) {
-                data[idx] = static_cast<data_type_c>(0.0f);
-            },
-            queue, device, context);
+            pingpong_size_c, pingpong_flush_iter, queue, device, context);
 #else
     auto A = alloc_device_and_init<data_type_a>(
-            batch_num * size_a,
-            [](data_type_a *data, size_t idx) {
-                data[idx] = static_cast<data_type_a>(random_float());
-            },
-            queue, device, context);
+            size_a, batch_num, queue, device, context);
     auto B = alloc_device_and_init<data_type_b>(
-            batch_num * size_b,
-            [](data_type_b *data, size_t idx) {
-                data[idx] = static_cast<data_type_b>(random_float());
-            },
-            queue, device, context);
+            size_b, batch_num, queue, device, context);
     auto C = alloc_device_and_init<data_type_c>(
-            batch_num * size_c,
-            [](data_type_c *data, size_t idx) {
-                data[idx] = static_cast<data_type_c>(0.0f);
-            },
-            queue, device, context);
+            size_c, batch_num, queue, device, context);
 #endif
 
-    // default set Thread num = 32 to maximize EU utilization
-    constexpr uint32_t thread_num = 32;
     //"Row data need to be in a same work group!"
     //    assert(matrix_n == wg_tile_n);
 
@@ -186,7 +155,9 @@ void gemm_softmax(uint32_t matrix_m, uint32_t matrix_k, uint32_t matrix_n,
     constexpr size_t subgroup_range_m = wg_tile_m / sg_tile_m;
     constexpr size_t subgroup_range_n = wg_tile_n / sg_tile_n;
 
-    //     static_assert(subgroup_range_m * subgroup_range_n == thread_num,
+    // default set Thread num = 32 to maximize EU utilization
+    // constexpr uint32_t thread_num = 32;
+    // static_assert(subgroup_range_m * subgroup_range_n == thread_num,
     //             "Given thread number should equal to pre-set value 32!");
     std::cout << "MKNL: " << matrix_m << ", " << matrix_k << ", " << matrix_n
               << ", " << batch_num << ", Config: " << wg_tile_m << ", "
@@ -442,6 +413,11 @@ int main() {
     gemm_softmax<8, 4096, 8, 64, 16>(4096, 64, 4096, 4);
     gemm_softmax<8, 8192, 8, 128, 16>(8192, 64, 8192, 2);
     gemm_softmax<8, 16384, 8, 256, 16>(16384, 64, 16384, 1);
+    // The following config just make the shapes could run on doubleGRF mode.
+    //    gemm_softmax<16, 4096, 16, 128, 32>(4096, 64, 4096, 4);
+    //    gemm_softmax<8, 8192, 8, 256, 16>(8192, 64, 8192, 2);
+    //    gemm_softmax<8, 16384, 8, 512, 16>(16384, 64, 16384, 1);
+
 #endif
     return 0;
 }

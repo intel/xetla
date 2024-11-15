@@ -88,6 +88,15 @@ inline auto getTypeName<gpu::xetla::tf32>() {
 
 enum class test_result : uint8_t { complete = 0, skip = 1, fail = 2 };
 
+template <typename T>
+static void fill_matrix(std::vector<T> &M) {
+    std::random_device dev;
+    std::mt19937 rng(dev());
+    std::uniform_real_distribution<float> dist((T)0.0, (T)1.0);
+    std::generate(std::begin(M), std::end(M),
+            [&] { return static_cast<T>(dist(rng)); });
+}
+
 template <typename result_type>
 inline result_type generate_real_random(
         result_type a = 0.0, result_type b = 1.0) {
@@ -150,6 +159,25 @@ inline data_type *alloc_device_and_init(size_t size,
             .wait();
 
     free(host_ptr);
+
+    return device_ptr;
+}
+
+template <typename data_type>
+inline data_type *alloc_device_and_init(size_t size, size_t iter,
+        sycl::queue &queue, sycl::device &device, sycl::context &context) {
+    std::vector<data_type> a(size);
+    fill_matrix(a);
+
+    auto device_ptr = static_cast<data_type *>(
+            aligned_alloc_device(DEVICE_MEM_ALIGNMENT,
+                    size * iter * sizeof(data_type), device, context));
+
+    for (int it = 0; it < iter; it++) {
+        queue.memcpy((void *)(device_ptr + it * size), a.data(),
+                     a.size() * sizeof(data_type))
+                .wait();
+    }
 
     return device_ptr;
 }

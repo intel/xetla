@@ -37,7 +37,7 @@ export LD_LIBRARY_PATH=$LIBRARY_PATH
 export IGC_ShaderDumpEnable=1
 export IGC_DumpToCustomDir=$repo_path/build/xetla_dumps
 
-disable_prefetch=" -DDISABLE_GEMM_PREFETCH "
+#disable_prefetch=" -DDISABLE_GEMM_PREFETCH "
 #without_softmax=" -DWITHOUT_SOFTMAX "
 #without_reduction=" -DWITHOUT_REDUCTION "
 
