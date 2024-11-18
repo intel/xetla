@@ -1,13 +1,13 @@
 
 set(TARGET gemm_softmax)
 
-set(XETLA_KERNEL_FLAGS ${XETLA_KERNEL_FLAGS} -fsycl)
+set(XETLA_KERNEL_FLAGS ${XETLA_KERNEL_FLAGS} -fsycl -ftarget-register-alloc-mode=pvc:auto)
 set(XETLA_KERNEL_FLAGS ${XETLA_KERNEL_FLAGS} -fsycl-targets=spir64_gen)
 
 # disable loop invariance optimization, this is for performance
 set(XETLA_OFFLINE_OPTIONS "${XETLA_OFFLINE_OPTIONS} -vc-disable-indvars-opt")
 # For large registers mode, enable 256 registers for kernels
-set(XETLA_OFFLINE_OPTIONS "${XETLA_OFFLINE_OPTIONS} -doubleGRF")
+#set(XETLA_OFFLINE_OPTIONS "${XETLA_OFFLINE_OPTIONS} -autoGRFSelection")
 # For registers usage verbose at AOT
 set(XETLA_OFFLINE_OPTIONS "${XETLA_OFFLINE_OPTIONS} -Xfinalizer -printregusage")
 # Enable bank conflict reduction.

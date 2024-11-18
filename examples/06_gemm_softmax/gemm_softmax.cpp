@@ -410,14 +410,16 @@ int main() {
     gemm_softmax<32, 1024, 32, 64, 16>(1024, 64, 1024, 4);
     gemm_softmax<32, 1024, 32, 64, 16>(1024, 64, 1024, 16);
     gemm_softmax<16, 2048, 16, 64, 16>(2048, 64, 2048, 8);
+#if 1
     gemm_softmax<8, 4096, 8, 64, 16>(4096, 64, 4096, 4);
     gemm_softmax<8, 8192, 8, 128, 16>(8192, 64, 8192, 2);
     gemm_softmax<8, 16384, 8, 256, 16>(16384, 64, 16384, 1);
+#else
     // The following config just make the shapes could run on doubleGRF mode.
-    //    gemm_softmax<16, 4096, 16, 128, 32>(4096, 64, 4096, 4);
-    //    gemm_softmax<8, 8192, 8, 256, 16>(8192, 64, 8192, 2);
-    //    gemm_softmax<8, 16384, 8, 512, 16>(16384, 64, 16384, 1);
-
+    gemm_softmax<16, 4096, 16, 128, 32>(4096, 64, 4096, 4);
+    gemm_softmax<8, 8192, 8, 256, 16>(8192, 64, 8192, 2);
+    gemm_softmax<8, 16384, 8, 512, 16>(16384, 64, 16384, 1);
+#endif
 #endif
     return 0;
 }
