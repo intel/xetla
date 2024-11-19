@@ -42,13 +42,11 @@ using remove_const_t = typename std::remove_const<T>::type;
 
 #define __XETLA_API inline
 
-#ifndef __ESIMD_ENS
+#undef __ESIMD_ENS
 #define __ESIMD_ENS sycl::ext::intel::experimental::esimd
-#endif
 
-#ifndef __ESIMD_NS
+#undef __ESIMD_NS
 #define __ESIMD_NS sycl::ext::intel::esimd
-#endif
 
 #define XETLA_MARKER(message) [[deprecated(message)]]
 #define XETLA_WARNING(msg) __SYCL_WARNING(msg)
@@ -224,7 +222,7 @@ enum class reduce_op : uint8_t {
 /// SW_BARRIER, insert software scheduling barrier, for better code control
 ///
 
-#define SW_BARRIER() __ESIMD_NS::fence<__ESIMD_NS::fence_mask::sw_barrier>()
+#define SW_BARRIER() __ESIMD_NS::fence<__ESIMD_NS::fence_mask::local_barrier>()
 
 __XETLA_API void xetla_wait(uint16_t val) {
     __ESIMD_ENS::wait(__ESIMD_NS::simd<uint16_t, 1>(val));

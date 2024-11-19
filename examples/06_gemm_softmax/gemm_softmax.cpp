@@ -374,7 +374,7 @@ void gemm_softmax(uint32_t matrix_m, uint32_t matrix_k, uint32_t matrix_n,
 #endif
 }
 
-int main() {
+int main(int argc, char **args) {
     // This example implements batch-GeMM with softmax activation.
     // Softmax needs entire row data for reduced sum and reduced max,
     // So result of batch-GeMM will be written into SLM.
@@ -407,14 +407,16 @@ int main() {
     gemm_softmax<32, 12288, 32, 512, 32>(4, 4096, 12288);
 #else
     gemm_softmax<128, 512, 64, 32, 16>(512, 64, 512, 32);
-    gemm_softmax<32, 1024, 32, 64, 16>(1024, 64, 1024, 4);
-    gemm_softmax<32, 1024, 32, 64, 16>(1024, 64, 1024, 16);
-    gemm_softmax<16, 2048, 16, 64, 16>(2048, 64, 2048, 8);
-#if 1
+//    gemm_softmax<32, 1024, 32, 64, 16>(1024, 64, 1024, 4);
+//    gemm_softmax<32, 1024, 32, 64, 16>(1024, 64, 1024, 16);
+//    gemm_softmax<16, 2048, 16, 64, 16>(2048, 64, 2048, 8);
+#if 0
+    if (argc > 10) {
     gemm_softmax<8, 4096, 8, 64, 16>(4096, 64, 4096, 4);
     gemm_softmax<8, 8192, 8, 128, 16>(8192, 64, 8192, 2);
     gemm_softmax<8, 16384, 8, 256, 16>(16384, 64, 16384, 1);
-#else
+}
+//#else
     // The following config just make the shapes could run on doubleGRF mode.
     gemm_softmax<16, 4096, 16, 128, 32>(4096, 64, 4096, 4);
     gemm_softmax<8, 8192, 8, 256, 16>(8192, 64, 8192, 2);

@@ -33,7 +33,7 @@ namespace gpu::xetla {
 template <uint8_t NbarCount>
 __XETLA_API void xetla_nbarrier_init() {
     if constexpr (NbarCount != 0) {
-        __ESIMD_ENS::named_barrier_init<NbarCount>();
+        __ESIMD_NS::named_barrier_init<NbarCount>();
     }
 }
 
@@ -52,7 +52,7 @@ __XETLA_API void xetla_nbarrier_init() {
 __XETLA_API void named_barrier_signal(uint8_t barrier_id,
         uint8_t producer_consumer_mode, uint32_t num_producers,
         uint32_t num_consumers) {
-    __ESIMD_ENS::named_barrier_signal(
+    __ESIMD_NS::named_barrier_signal(
             barrier_id, producer_consumer_mode, num_producers, num_consumers);
 }
 
@@ -62,7 +62,7 @@ __XETLA_API void named_barrier_signal(uint8_t barrier_id,
 /// @param barrier_id  [in] is the named barrier id.
 /// It’s value cannot exceed the total count of initialized named barriers.
 __XETLA_API void named_barrier_wait(uint8_t barrier_id) {
-    __ESIMD_ENS::named_barrier_wait(barrier_id);
+    __ESIMD_NS::named_barrier_wait(barrier_id);
 }
 
 /// @} xetla_core_barrier
