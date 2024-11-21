@@ -39,15 +39,17 @@ export LD_LIBRARY_PATH=$LIBRARY_PATH
 export IGC_ShaderDumpEnable=1
 export IGC_DumpToCustomDir=$repo_path/build/xetla_dumps
 
-#disable_prefetch=" -DDISABLE_GEMM_PREFETCH "
-#without_softmax=" -DWITHOUT_SOFTMAX "
+disable_prefetch=" -DDISABLE_GEMM_PREFETCH "
+without_softmax=" -DWITHOUT_SOFTMAX "
 #without_reduction=" -DWITHOUT_REDUCTION "
 
 source $repo_path/tools/scripts/env_debug.sh
 cmake .. -DCMAKE_CXX_FLAGS=" $without_softmax $without_reduction $disable_prefetch " \
-&& make gemm_softmax \
-&& ./examples/06_gemm_softmax/gemm_softmax
+&& make gemm_softmax && ./examples/06_gemm_softmax/gemm_softmax
 
-#/home/zt/workspace/cutlass/unitrace/tools/unitrace/build/unitrace --chrome-kernel-logging --stall-sampling -i 20 -o xetla_pvc_gemm_softmax.csv ./examples/06_gemm_softmax/gemm_softmax
+
+#unitrace --chrome-kernel-logging -k -i 20 -o xetla_pvc_gemm.csv ./examples/06_gemm_softmax/gemm_softmax
+#unitrace --device-timing --kernel-submission --device-timeline --chrome-kernel-logging --chrome-device-logging --chrome-no-thread-on-device --chrome-no-engine-on-device -i 20 ./examples/06_gemm_softmax/gemm_softmax
+
 #python3 ~/workspace/cutlass/unitrace/tools/unitrace/scripts/analyzeperfmetrics.py -s $IGC_DumpToCustomDir -t "XVE Stalls by Instruction" $csv_file -o ${csv_file}.pdf
 
