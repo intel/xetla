@@ -49,7 +49,8 @@ cmake .. -DCMAKE_CXX_FLAGS=" $without_softmax $without_reduction $disable_prefet
 
 
 #unitrace --chrome-kernel-logging -k -i 20 -o xetla_pvc_gemm.csv ./examples/06_gemm_softmax/gemm_softmax
-#unitrace --device-timing --kernel-submission --device-timeline --chrome-kernel-logging --chrome-device-logging --chrome-no-thread-on-device --chrome-no-engine-on-device -i 20 ./examples/06_gemm_softmax/gemm_softmax
+#unitrace -k -i 20 --chrome-kernel-logging -o xetla.csv ./examples/06_gemm_softmax/gemm_softmax
+#unitrace -k --device-timing --kernel-submission --device-timeline --chrome-kernel-logging --chrome-device-logging --chrome-no-thread-on-device --chrome-no-engine-on-device -i 20 ./examples/06_gemm_softmax/gemm_softmax -o xetla.csv
 
 #python3 ~/workspace/cutlass/unitrace/tools/unitrace/scripts/analyzeperfmetrics.py -s $IGC_DumpToCustomDir -t "XVE Stalls by Instruction" $csv_file -o ${csv_file}.pdf
 

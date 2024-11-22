@@ -113,6 +113,8 @@ void gemm_softmax(uint32_t matrix_m, uint32_t matrix_k, uint32_t matrix_n,
     static constexpr auto l3_cache_size = 256 * 1024 * 1024;
     static constexpr auto pingpong_flush_iter = 3;
 
+    std::vector<uint8_t> host_cache;
+
     sycl::property_list properties {sycl::property::queue::enable_profiling()};
 
     auto queue = sycl::queue(properties);
@@ -122,6 +124,9 @@ void gemm_softmax(uint32_t matrix_m, uint32_t matrix_k, uint32_t matrix_n,
     std::cout << "Running on " << device.get_info<info::device::name>() << "\n";
 
 #if FLUSH_CACHE == 1
+    host_cache = std::vector<uint8_t>((size_t)l3_cache_size);
+    fill_matrix(host_cache);
+
     auto dev_cache = alloc_device<int8_t>(l3_cache_size, device, context);
 #endif
 
@@ -178,7 +183,12 @@ void gemm_softmax(uint32_t matrix_m, uint32_t matrix_k, uint32_t matrix_n,
     try {
         for (uint32_t i = 0; i < iter + warmup; i++) {
 #if FLUSH_CACHE == 1
-            queue.memset((void *)(dev_cache), 0, l3_cache_size).wait();
+#if 0
+        queue.memset((void *)(dev_cache), 0, l3_cache_size).wait();
+#else
+            queue.memcpy((void *)(dev_cache), host_cache.data(), l3_cache_size)
+                    .wait();
+#endif
 //            sleep(2); // align with cutlass
 #endif
 
