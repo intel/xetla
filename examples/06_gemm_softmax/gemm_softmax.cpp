@@ -27,6 +27,8 @@ using namespace cl::sycl;
 // flush cache 2: pingpong moving ptr offset
 #define FLUSH_CACHE 1
 
+static constexpr auto l3_cache_size = 192 * 1024 * 1024;
+
 template <typename data_type_a, typename data_type_b, typename data_type_c,
         typename data_type_acc = float>
 int gemm_softmax_result_validate(data_type_a *A_device, data_type_b *B_device,
@@ -93,10 +95,12 @@ int gemm_softmax_result_validate(data_type_a *A_device, data_type_b *B_device,
 template <uint32_t wg_tile_m, uint32_t wg_tile_n, uint32_t sg_tile_m,
         uint32_t sg_tile_n, uint32_t sg_tile_k>
 void gemm_softmax(uint32_t matrix_m, uint32_t matrix_k, uint32_t matrix_n,
-        size_t batch_num = 1) {
-    // Tips, the example demonstrates programming kernel with XeTLA, it works as expected with current configurations.
-    // Please make sure you fully understand these configurations before you do any modifications, incomplete changes may lead to unexpected behaviors.
-    // Please contact us for support.
+        size_t batch_num, uint8_t *dev_cache, uint8_t *host_cache,
+        sycl::queue &queue) {
+    // Tips, the example demonstrates programming kernel with XeTLA, it works as
+    // expected with current configurations. Please make sure you fully understand
+    // these configurations before you do any modifications, incomplete changes
+    // may lead to unexpected behaviors. Please contact us for support.
 
     uint32_t size_a = matrix_m * matrix_k;
     uint32_t size_b = matrix_k * matrix_n;
@@ -110,27 +114,12 @@ void gemm_softmax(uint32_t matrix_m, uint32_t matrix_k, uint32_t matrix_n,
 
     static constexpr auto warmup = 10;
     static constexpr auto iter = 10;
-    static constexpr auto l3_cache_size = 192 * 1024 * 1024;
     static constexpr auto pingpong_flush_iter = 3;
 
-    std::vector<uint8_t> host_cache;
-
-    sycl::property_list properties {sycl::property::queue::enable_profiling()};
-
-    auto queue = sycl::queue(properties);
     auto context = queue.get_info<info::queue::context>();
     auto device = queue.get_info<info::queue::device>();
 
     std::cout << "Running on " << device.get_info<info::device::name>() << "\n";
-
-#if FLUSH_CACHE == 1
-    host_cache = std::vector<uint8_t>((size_t)l3_cache_size);
-    fill_matrix(host_cache);
-
-    auto dev_cache = alloc_device<int8_t>(l3_cache_size, device, context);
-    auto dev_cache_bak = alloc_device_and_init<uint8_t>(
-            l3_cache_size, 1, queue, device, context);
-#endif
 
 #if FLUSH_CACHE == 2
     size_t pingpong_size_a
@@ -185,15 +174,9 @@ void gemm_softmax(uint32_t matrix_m, uint32_t matrix_k, uint32_t matrix_n,
     try {
         for (uint32_t i = 0; i < iter + warmup; i++) {
 #if FLUSH_CACHE == 1
-#if 0
-        queue.memset((void *)(dev_cache), 0, l3_cache_size).wait();
-#else
-            queue.memcpy((void *)(dev_cache), host_cache.data(), l3_cache_size)
+            //queue.memset((void *)(dev_cache), 0, l3_cache_size).wait();
+            queue.memcpy((void *)(host_cache), (void *)dev_cache, l3_cache_size)
                     .wait();
-            //queue.memcpy((void *)(dev_cache), dev_cache_bak, l3_cache_size)
-            //      .wait();
-#endif
-//            sleep(2); // align with cutlass
 #endif
 
             if (i >= warmup) {
@@ -383,10 +366,6 @@ void gemm_softmax(uint32_t matrix_m, uint32_t matrix_k, uint32_t matrix_n,
     free(A, context);
     free(B, context);
     free(C, context);
-#if FLUSH_CACHE == 1
-    free(dev_cache, context);
-    free(dev_cache_bak, context);
-#endif
 }
 
 int main(int argc, char **args) {
@@ -409,6 +388,16 @@ int main(int argc, char **args) {
     //   shape(B) = [256, 512, 64]
     //   shape(C) = [256, 512, 512]
 
+    sycl::property_list properties {sycl::property::queue::enable_profiling()};
+    auto queue = sycl::queue(properties);
+    auto context = queue.get_info<info::queue::context>();
+    auto device = queue.get_info<info::queue::device>();
+
+    std::vector<uint8_t> host_vec = std::vector<uint8_t>((size_t)l3_cache_size);
+    uint8_t *host_cache = (uint8_t *)host_vec.data();
+    uint8_t *dev_cache = (uint8_t *)alloc_device_and_init<int8_t>(
+            l3_cache_size, 1, queue, device, context);
+
     // To make each single thread load entire one row data
     // we need to reshape the surface:
     //   [1, 512] will be seen as [16, 32] with row major layout
@@ -421,22 +410,32 @@ int main(int argc, char **args) {
     gemm_softmax<32, 3072, 32, 128, 32>(3072, 4096, 3072);
     gemm_softmax<32, 12288, 32, 512, 32>(4, 4096, 12288);
 #else
-    gemm_softmax<128, 512, 64, 32, 16>(512, 64, 512, 32);
-    gemm_softmax<32, 1024, 32, 64, 16>(1024, 64, 1024, 4);
-    gemm_softmax<32, 1024, 32, 64, 16>(1024, 64, 1024, 16);
-    gemm_softmax<16, 2048, 16, 64, 16>(2048, 64, 2048, 8);
+    gemm_softmax<128, 512, 64, 32, 16>(
+            512, 64, 512, 32, dev_cache, host_cache, queue);
+    gemm_softmax<32, 1024, 32, 64, 16>(
+            1024, 64, 1024, 4, dev_cache, host_cache, queue);
+    gemm_softmax<32, 1024, 32, 64, 16>(
+            1024, 64, 1024, 16, dev_cache, host_cache, queue);
+    gemm_softmax<16, 2048, 16, 64, 16>(
+            2048, 64, 2048, 8, dev_cache, host_cache, queue);
 #if 0
     if (argc > 10) {
-    gemm_softmax<8, 4096, 8, 64, 16>(4096, 64, 4096, 4);
-    gemm_softmax<8, 8192, 8, 128, 16>(8192, 64, 8192, 2);
-    gemm_softmax<8, 16384, 8, 256, 16>(16384, 64, 16384, 1);
-}
+        gemm_softmax<8, 4096, 8, 64, 16>(4096, 64, 4096, 4, dev_cache, host_cache, queue);
+        gemm_softmax<8, 8192, 8, 128, 16>(8192, 64, 8192, 2, dev_cache, host_cache, queue);
+        gemm_softmax<8, 16384, 8, 256, 16>(16384, 64, 16384, 1, dev_cache, host_cache, queue);
+    }
 #else
     // The following config just make the shapes could run on doubleGRF mode.
-    gemm_softmax<16, 4096, 16, 128, 32>(4096, 64, 4096, 4);
-    gemm_softmax<8, 8192, 8, 256, 16>(8192, 64, 8192, 2);
-    gemm_softmax<8, 16384, 8, 512, 16>(16384, 64, 16384, 1);
+    gemm_softmax<16, 4096, 16, 128, 32>(
+            4096, 64, 4096, 4, dev_cache, host_cache, queue);
+    gemm_softmax<8, 8192, 8, 256, 16>(
+            8192, 64, 8192, 2, dev_cache, host_cache, queue);
+    gemm_softmax<8, 16384, 8, 512, 16>(
+            16384, 64, 16384, 1, dev_cache, host_cache, queue);
 #endif
 #endif
+
+    free(dev_cache, context);
+
     return 0;
 }

@@ -40,7 +40,7 @@ export IGC_ShaderDumpEnable=1
 export IGC_DumpToCustomDir=$repo_path/build/xetla_dumps
 
 disable_prefetch=" -DDISABLE_GEMM_PREFETCH "
-without_softmax=" -DWITHOUT_SOFTMAX "
+#without_softmax=" -DWITHOUT_SOFTMAX "
 #without_reduction=" -DWITHOUT_REDUCTION "
 
 source $repo_path/tools/scripts/env_debug.sh
