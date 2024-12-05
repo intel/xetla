@@ -19,7 +19,7 @@
 #include "utils/utils.hpp"
 #include "gtest/gtest.h"
 
-using namespace cl::sycl;
+using namespace sycl;
 
 template <typename test>
 void ln_fwd_run() {
@@ -125,11 +125,11 @@ void ln_fwd_run() {
             },
             queue, device, context);
 
-    cl::sycl::range<3> group_range {1, test::wg_num_m, test::wg_num_n};
-    cl::sycl::range<3> local_range {1,
+    sycl::range<3> group_range {1, test::wg_num_m, test::wg_num_n};
+    sycl::range<3> local_range {1,
             (test::wg_m + test::sg_m - 1) / test::sg_m,
             (test::wg_n + test::sg_n - 1) / test::sg_n};
-    cl::sycl::nd_range<3> nd_range(group_range * local_range, local_range);
+    sycl::nd_range<3> nd_range(group_range * local_range, local_range);
 
     try {
         auto e_esimd = queue.submit([&](handler &cgh) {
@@ -156,7 +156,7 @@ void ln_fwd_run() {
             });
         });
         e_esimd.wait();
-    } catch (cl::sycl::exception const &e) {
+    } catch (sycl::exception const &e) {
         std::cout << "SYCL exception caught: " << e.what() << '\n';
         FAIL();
     }

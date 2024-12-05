@@ -19,7 +19,7 @@
 #include "utils/buff_compare.hpp"
 #include "gtest/gtest.h"
 
-using namespace cl::sycl;
+using namespace sycl;
 
 template <typename data_type_x, typename data_type_weight, typename data_type_y,
         typename data_type_acc = float>

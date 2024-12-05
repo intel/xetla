@@ -22,7 +22,7 @@
 #include <stdlib.h>
 #include <string>
 #include <vector>
-#include <CL/sycl.hpp>
+#include <sycl/sycl.hpp>
 #include <gtest/gtest.h>
 
 enum class profiling_selector : uint8_t { CPU = 0, GPU = 1, ALL = 2 };

@@ -25,7 +25,7 @@ using namespace gpu::xetla;
 class Test1;
 
 #define data_type tf32
-using namespace cl::sycl;
+using namespace sycl;
 
 int vadd_result_validate(data_type *A_device, data_type *B_device,
         data_type *C_device, unsigned Size, sycl::queue &queue) {

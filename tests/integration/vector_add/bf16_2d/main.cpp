@@ -50,9 +50,9 @@ static void vadd_run() {
             queue, device, context);
 
     // each thread process 16x16 block
-    cl::sycl::range<1> global_range {size / BL / BL};
-    cl::sycl::range<1> local_range {group_size};
-    cl::sycl::nd_range<1> nd_range(global_range, local_range);
+    sycl::range<1> global_range {size / BL / BL};
+    sycl::range<1> local_range {group_size};
+    sycl::nd_range<1> nd_range(global_range, local_range);
 
     try {
         auto e_esimd = queue.submit([&](handler &cgh) {
@@ -61,7 +61,7 @@ static void vadd_run() {
             });
         });
         e_esimd.wait();
-    } catch (cl::sycl::exception const &e) {
+    } catch (sycl::exception const &e) {
         std::cout << "SYCL exception caught: " << e.what() << '\n';
         FAIL();
     }

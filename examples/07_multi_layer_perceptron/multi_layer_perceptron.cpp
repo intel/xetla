@@ -17,7 +17,7 @@
 #include "multi_layer_perceptron.hpp"
 #include "tests/utils/utils.hpp"
 
-using namespace cl::sycl;
+using namespace sycl;
 using namespace gpu::xetla;
 
 // MLP input size
@@ -243,7 +243,7 @@ void mlp_run(uint32_t iter) {
     typename mlp_op_t::arguments_t mlp_arg(matrix_m, matrix_k, matrix_n,
             matrix_m, matrix_n, matrix_l, A, matrix_k, W, matrix_n, B, matrix_n,
             V, matrix_l, C, matrix_l);
-    cl::sycl::nd_range<3> nd_range = mlp_op_t::get_nd_range(mlp_arg);
+    sycl::nd_range<3> nd_range = mlp_op_t::get_nd_range(mlp_arg);
 
     if (!mlp_op_t::can_implement(mlp_arg)) {
         std::cout << "The arguments cannot be supported, aborting ... "

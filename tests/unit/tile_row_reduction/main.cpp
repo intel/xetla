@@ -21,7 +21,7 @@
 using namespace std::placeholders;
 
 TEST(tile_row_reduction_fp32, esimd) {
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate = std::bind(
             tile_row_reduction_result_validate<float>, _1, _2, _3, 128, 32, 24);
     kernel_run<float,

@@ -21,14 +21,14 @@
 using namespace std::placeholders;
 
 TEST(test_exp_fp32, esimd) {
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate = std::bind(
             kernel_validation<float, exp_op<float>>, _1, _2, _3, 16);
     kernel_run<float, exp_func<float, 16>>(nd_range, result_validate);
 }
 
 TEST(test_exp_fp16, esimd) {
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate
             = std::bind(kernel_validation<fp16, exp_op<fp16>>, _1, _2, _3, 16);
     kernel_run<float, exp_func<fp16, 16>>(nd_range, result_validate);
@@ -37,14 +37,14 @@ TEST(test_exp_fp16, esimd) {
 ////for exp2
 
 TEST(test_exp2_fp32, esimd) {
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate = std::bind(
             kernel_validation<float, exp2_op<float>>, _1, _2, _3, 16);
     kernel_run<float, exp2_func<float, 16>>(nd_range, result_validate);
 }
 
 TEST(test_exp2_fp16, esimd) {
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate
             = std::bind(kernel_validation<fp16, exp2_op<fp16>>, _1, _2, _3, 16);
     kernel_run<float, exp2_func<fp16, 16>>(nd_range, result_validate);
@@ -53,14 +53,14 @@ TEST(test_exp2_fp16, esimd) {
 ////for inv
 
 TEST(test_inv_fp32, esimd) {
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate = std::bind(
             kernel_validation<float, inv_op<float>>, _1, _2, _3, 16);
     kernel_run<float, inv_func<float, 16>>(nd_range, result_validate);
 }
 
 TEST(test_inv_fp16, esimd) {
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate
             = std::bind(kernel_validation<fp16, inv_op<fp16>>, _1, _2, _3, 16);
     kernel_run<float, inv_func<fp16, 16>>(nd_range, result_validate);
@@ -69,14 +69,14 @@ TEST(test_inv_fp16, esimd) {
 ////for sqrt
 
 TEST(test_sqrt_fp32, esimd) {
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate = std::bind(
             kernel_validation<float, sqrt_op<float>>, _1, _2, _3, 16);
     kernel_run<float, sqrt_func<float, 16>>(nd_range, result_validate);
 }
 
 TEST(test_sqrt_fp16, esimd) {
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate
             = std::bind(kernel_validation<fp16, sqrt_op<fp16>>, _1, _2, _3, 16);
     kernel_run<float, sqrt_func<fp16, 16>>(nd_range, result_validate);
@@ -85,7 +85,7 @@ TEST(test_sqrt_fp16, esimd) {
 ////for sqrt_ieee
 
 TEST(test_sqrt_ieee_fp32, esimd) {
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate = std::bind(
             kernel_validation<float, sqrt_ieee_op<float>>, _1, _2, _3, 16);
     kernel_run<float, sqrt_ieee_func<float, 16>>(nd_range, result_validate);
@@ -94,14 +94,14 @@ TEST(test_sqrt_ieee_fp32, esimd) {
 ////for rsqrt
 
 TEST(test_rsqrt_fp32, esimd) {
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate = std::bind(
             kernel_validation<float, rsqrt_op<float>>, _1, _2, _3, 16);
     kernel_run<float, rsqrt_func<float, 16>>(nd_range, result_validate);
 }
 
 TEST(test_rsqrt_fp16, esimd) {
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate = std::bind(
             kernel_validation<fp16, rsqrt_op<fp16>>, _1, _2, _3, 16);
     kernel_run<float, rsqrt_func<fp16, 16>>(nd_range, result_validate);
@@ -110,7 +110,7 @@ TEST(test_rsqrt_fp16, esimd) {
 ////for tanh
 
 TEST(test_tanh_fp32, esimd) {
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate = std::bind(
             kernel_validation<float, tanh_op<float>>, _1, _2, _3, 16);
     kernel_run<float, tanh_func<float, 16>>(nd_range, result_validate);
@@ -119,7 +119,7 @@ TEST(test_tanh_fp32, esimd) {
 ////for tanh
 
 TEST(test_tanh_fp32_long_vector, esimd) {
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     constexpr int elem_size = 128;
     auto result_validate = std::bind(
             kernel_validation<float, tanh_op<float>>, _1, _2, _3, elem_size);

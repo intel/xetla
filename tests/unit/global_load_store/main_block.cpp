@@ -29,7 +29,7 @@ using namespace std::placeholders;
 ///------------------------------------------------------------------
 
 TEST(load_store_block_default, esimd) {
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate
             = std::bind(load_store_result_validate<int>, _1, _2, _3, 16);
     kernel_run<int, global_load_store_block_default<int, 16>>(
@@ -46,7 +46,7 @@ TEST(load_store_block_default, esimd) {
 ///------------------------------------------------------------------
 
 TEST(load_store_block_default_ref, esimd) {
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate
             = std::bind(load_store_result_validate<int>, _1, _2, _3, 16);
     kernel_run<int, global_load_store_block_default_ref<int, 16>>(
@@ -69,7 +69,7 @@ TYPED_TEST_SUITE_P(load_store_block_datatype_test);
 TYPED_TEST_P(load_store_block_datatype_test, esimd) {
     using datatype = TypeParam;
 
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate
             = std::bind(load_store_result_validate<datatype>, _1, _2, _3, 16);
     kernel_run<datatype, global_load_store_block_default<datatype, 16>>(
@@ -100,7 +100,7 @@ TYPED_TEST_P(load_block_cache_test, esimd) {
     constexpr cache_hint L1H = std::tuple_element_t<0, TypeParam>::value;
     constexpr cache_hint L2H = std::tuple_element_t<1, TypeParam>::value;
 
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate
             = std::bind(load_store_result_validate<int>, _1, _2, _3, 16);
     kernel_run<int, global_load_block_cache<int, 16, L1H, L2H>>(
@@ -135,7 +135,7 @@ TYPED_TEST_P(store_block_cache_test, esimd) {
     constexpr cache_hint L1H = std::tuple_element_t<0, TypeParam>::value;
     constexpr cache_hint L2H = std::tuple_element_t<1, TypeParam>::value;
 
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate
             = std::bind(load_store_result_validate<int>, _1, _2, _3, 16);
     kernel_run<int, global_store_block_cache<int, 16, L1H, L2H>>(
@@ -170,7 +170,7 @@ TYPED_TEST_P(prefetch_block_cache_test, esimd) {
     constexpr cache_hint L1H = std::tuple_element_t<0, TypeParam>::value;
     constexpr cache_hint L2H = std::tuple_element_t<1, TypeParam>::value;
 
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate
             = std::bind(load_store_result_validate<int>, _1, _2, _3, 16);
     kernel_run<int, global_prefetch_block<int, 16, L1H, L2H>>(
@@ -205,7 +205,7 @@ TYPED_TEST_SUITE_P(prefetch_block_datatype_test);
 TYPED_TEST_P(prefetch_block_datatype_test, esimd) {
     using datatype = TypeParam;
 
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate
             = std::bind(load_store_result_validate<datatype>, _1, _2, _3, 16);
     kernel_run<datatype,

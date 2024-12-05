@@ -18,7 +18,7 @@
 #include "xetla.hpp"
 
 using namespace gpu::xetla;
-using namespace cl::sycl;
+using namespace sycl;
 
 #define SIMD 32
 
@@ -151,9 +151,9 @@ void gemm_softmax_run(uint32_t iter) {
               << ", group_num_z: " << batch_num << "\n";
     std::cout << "group_size_x: " << subgroup_range_n
               << ", group_size_y: " << subgroup_range_m << std::endl;
-    cl::sycl::range<3> group_range {batch_num, group_range_m, group_range_n};
-    cl::sycl::range<3> local_range {1, subgroup_range_m, subgroup_range_n};
-    cl::sycl::nd_range<3> nd_range(group_range * local_range, local_range);
+    sycl::range<3> group_range {batch_num, group_range_m, group_range_n};
+    sycl::range<3> local_range {1, subgroup_range_m, subgroup_range_n};
+    sycl::nd_range<3> nd_range(group_range * local_range, local_range);
 
     uint32_t warmup = 10;
     long ops
@@ -303,7 +303,7 @@ void gemm_softmax_run(uint32_t iter) {
                 prof.add_gpu_event(gpu_event);
             }
         }
-    } catch (cl::sycl::exception const &e) {
+    } catch (sycl::exception const &e) {
         std::cout << "SYCL exception caught: " << e.what() << '\n';
         FAIL();
     }

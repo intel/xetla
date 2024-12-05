@@ -40,7 +40,7 @@ using tf32_gemm_func = tf32_gemm_test_func<typename Test::data_type_a,
         Test::layout_a, Test::layout_b, Test::global_kslicing,
         Test::local_kslicing>;
 
-using namespace cl::sycl;
+using namespace sycl;
 
 std::string esimd_compile_string
         = " -vc-codegen -doubleGRF "

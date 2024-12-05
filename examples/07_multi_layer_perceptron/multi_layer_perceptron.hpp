@@ -284,7 +284,7 @@ public:
 
     /// @brief Host helper function to get the expected local range under the current MLP config.
     /// @return Expected local range.
-    static cl::sycl::range<3> get_local_range() {
+    static sycl::range<3> get_local_range() {
         // make sure first layer and second layer use same subgroup number.
         static_assert(work_group_layer1_t::size == work_group_layer2_t::size,
                 "we should make sure first gemm and second gemm use same "
@@ -296,14 +296,14 @@ public:
         std::cout << "Local range: {" << 1 << ", " << local_range_m << ", "
                   << local_range_n << "} \n";
         assert(local_range_m * local_range_n <= 32);
-        return cl::sycl::range<3> {1, local_range_m, local_range_n};
+        return sycl::range<3> {1, local_range_m, local_range_n};
     };
 
     /// @brief Host helper function to get the expected group range under the current MLP config.
     /// @param matrix_m Is the size of the m dimension of the matrix multiplication (m x k x n).
     /// @param matrix_n Is the size of the n dimension of the matrix multiplication (m x k x n).
     /// @return Expected group range.
-    static cl::sycl::range<3> get_group_range(arguments_t &args) {
+    static sycl::range<3> get_group_range(arguments_t &args) {
         // make sure first layer and second layer meet the condition to be fused.
         static_assert(wg_tile_m_layer1 == wg_tile_m_layer2,
                 "first gemm and second gemm should have the same wg_tile_m");
@@ -320,16 +320,16 @@ public:
                 / wg_tile_n_layer1;
         std::cout << "Group range: {1"
                   << ", " << group_range_m << ", " << group_range_n << "} \n";
-        return cl::sycl::range<3> {1, group_range_m, group_range_n};
+        return sycl::range<3> {1, group_range_m, group_range_n};
     };
 
     /// @brief Host helper function to get the expected nd_range under the current MLP config.
     /// @param args Is the MLP arguments for application-related runtime variables.
     /// @return Expected nd_range.
-    static cl::sycl::nd_range<3> get_nd_range(arguments_t &args) {
-        cl::sycl::range<3> local_range = get_local_range();
-        cl::sycl::range<3> group_range = get_group_range(args);
-        return cl::sycl::nd_range<3> {group_range * local_range, local_range};
+    static sycl::nd_range<3> get_nd_range(arguments_t &args) {
+        sycl::range<3> local_range = get_local_range();
+        sycl::range<3> group_range = get_group_range(args);
+        return sycl::nd_range<3> {group_range * local_range, local_range};
     };
 
     /// @brief Check if the arguments can be implemented.

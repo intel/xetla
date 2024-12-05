@@ -21,7 +21,7 @@
 using namespace std::placeholders;
 
 TEST(test_linear_layout_1, esimd) {
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate
             = std::bind(kernel_validation<float>, _1, _2, _3, 32, 32);
     kernel_run<float, conversion_func<float, 32, 32, 16, 16>>(
@@ -29,7 +29,7 @@ TEST(test_linear_layout_1, esimd) {
 }
 
 TEST(test_linear_layout_2, esimd) {
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate
             = std::bind(kernel_validation<float>, _1, _2, _3, 32, 30);
     kernel_run<float, conversion_func<float, 32, 30, 16, 16>>(
@@ -37,7 +37,7 @@ TEST(test_linear_layout_2, esimd) {
 }
 
 TEST(test_linear_layout_3, esimd) {
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate
             = std::bind(kernel_validation<float>, _1, _2, _3, 64, 64);
     kernel_run<float, conversion_func<float, 64, 64, 16, 16>>(
@@ -45,7 +45,7 @@ TEST(test_linear_layout_3, esimd) {
 }
 
 TEST(test_linear_layout_4, esimd) {
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate
             = std::bind(kernel_validation<float>, _1, _2, _3, 64, 60);
     kernel_run<float, conversion_func<float, 64, 60, 16, 16>>(

@@ -35,7 +35,7 @@ TYPED_TEST_SUITE_P(load_scatter_datatype_test);
 TYPED_TEST_P(load_scatter_datatype_test, esimd) {
     using datatype = TypeParam;
 
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     // For load mask kernel, the masked value would be 0 in buffer A and write to bufferB
     auto result_validate
             = std::bind(mask_result_validate<datatype>, _1, _2, _3, 16, 0xF, 0);
@@ -67,7 +67,7 @@ TYPED_TEST_SUITE_P(prefetch_scatter_datatype_test);
 TYPED_TEST_P(prefetch_scatter_datatype_test, esimd) {
     using datatype = TypeParam;
 
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     // For load mask kernel, the masked value would be 0 in buffer A and write to bufferB
     auto result_validate
             = std::bind(mask_result_validate<datatype>, _1, _2, _3, 16, 0xF, 0);
@@ -99,7 +99,7 @@ TYPED_TEST_SUITE_P(store_scatter_datatype_test);
 TYPED_TEST_P(store_scatter_datatype_test, esimd) {
     using datatype = TypeParam;
 
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     // For store mask kernel, we write buffer B as value of SIMD in advance, so masked channel value should be 16
     auto result_validate = std::bind(
             mask_result_validate<datatype>, _1, _2, _3, 16, 0xF, 16);
@@ -125,7 +125,7 @@ INSTANTIATE_TYPED_TEST_SUITE_P(
 ///------------------------------------------------------------------
 
 TEST(load_store_scatter_nelts2, esimd) {
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate
             = std::bind(load_store_result_validate<int>, _1, _2, _3, 32);
     kernel_run<int, global_load_store_scatter_nelt2<int, 16>>(

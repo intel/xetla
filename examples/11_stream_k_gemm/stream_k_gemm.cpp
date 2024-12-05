@@ -140,7 +140,7 @@ void stream_k_gemm_run(uint32_t iter) {
             matrix_k, B, matrix_n, C, matrix_n, Acc, matrix_n, Cnt, size_cnt,
             stream_k);
 
-    cl::sycl::nd_range<3> NDRange = gemm_op_t::get_nd_range(gemm_arg);
+    sycl::nd_range<3> NDRange = gemm_op_t::get_nd_range(gemm_arg);
 
     if (!gemm_op_t::can_implement(gemm_arg)) {
         std::cout << "The arguments cannot be supported, aborting ... "
@@ -382,7 +382,7 @@ void stream_k_gemm_relu_biasadd_run(uint32_t iter) {
             matrix_k, B, matrix_n, C, matrix_n, Acc, matrix_n, Cnt, size_cnt,
             stream_k, epilogue_args);
 
-    cl::sycl::nd_range<3> NDRange = gemm_op_t::get_nd_range(gemm_arg);
+    sycl::nd_range<3> NDRange = gemm_op_t::get_nd_range(gemm_arg);
 
     if (!gemm_op_t::can_implement(gemm_arg)) {
         std::cout << "The arguments cannot be supported, aborting ... "

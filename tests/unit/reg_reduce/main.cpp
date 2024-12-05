@@ -21,7 +21,7 @@
 using namespace std::placeholders;
 
 TEST(test_reduce_add_fp32, esimd) {
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate = std::bind(
             kernel_validation<float, reduce_sum<float>>, _1, _2, _3, 64);
     kernel_run<float, reduce_func<float, 64, reduce_op::sum>>(
@@ -29,7 +29,7 @@ TEST(test_reduce_add_fp32, esimd) {
 }
 
 TEST(test_reduce_mul_fp32, esimd) {
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate = std::bind(
             kernel_validation<float, reduce_prod<float>>, _1, _2, _3, 64);
     kernel_run<float, reduce_func<float, 64, reduce_op::prod>>(
@@ -37,7 +37,7 @@ TEST(test_reduce_mul_fp32, esimd) {
 }
 
 TEST(test_reduce_min_fp32, esimd) {
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate = std::bind(
             kernel_validation<float, reduce_min<float>>, _1, _2, _3, 64);
     kernel_run<float, reduce_func<float, 64, reduce_op::min>>(
@@ -45,7 +45,7 @@ TEST(test_reduce_min_fp32, esimd) {
 }
 
 TEST(test_reduce_max_fp32, esimd) {
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate = std::bind(
             kernel_validation<float, reduce_max<float>>, _1, _2, _3, 16);
     kernel_run<float, reduce_func<float, 16, reduce_op::max>>(

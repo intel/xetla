@@ -21,7 +21,7 @@
 using namespace std::placeholders;
 
 TEST(block_load_store, esimd) {
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate = std::bind(
             block_load_store_result_validate, _1, _2, _3, 32, 16, 16);
     kernel_run<int, block_load_store_func<int, 32, 32, 32, 16, 16>>(

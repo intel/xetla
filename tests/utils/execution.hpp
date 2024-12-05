@@ -20,7 +20,7 @@
 #include "profiling.hpp"
 #include "xetla.hpp"
 
-using namespace cl::sycl;
+using namespace sycl;
 using namespace gpu;
 using namespace gpu::xetla;
 
@@ -104,7 +104,7 @@ void gemm_exec(const std::string &compile_str, size_t batch = 1) {
                 Test::layout_b == mem_layout::col_major ? matrix_k : matrix_n,
                 nullptr, matrix_n, nullptr, nullptr);
 
-        cl::sycl::nd_range<3> nd_range = gemm_op_t::get_nd_range(arg);
+        sycl::nd_range<3> nd_range = gemm_op_t::get_nd_range(arg);
 
         for (size_t i = 0; i < batch; i++) {
             auto A_ptr = A + i * size_a;
@@ -138,7 +138,7 @@ void gemm_exec(const std::string &compile_str, size_t batch = 1) {
             });
             e_esimd.wait();
         }
-    } catch (cl::sycl::exception const &e) {
+    } catch (sycl::exception const &e) {
         std::cout << "SYCL exception caught: " << e.what() << '\n';
         result = test_result::fail;
     }
@@ -206,7 +206,7 @@ void kernel_run(auto nd_range, auto validate_result) {
             });
         });
         e_esimd.wait();
-    } catch (cl::sycl::exception const &e) {
+    } catch (sycl::exception const &e) {
         std::cout << "SYCL exception caught: " << e.what() << '\n';
         FAIL();
     }

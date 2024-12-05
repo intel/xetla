@@ -19,7 +19,7 @@
 
 #include "gemm_polynomial.hpp"
 
-using namespace cl::sycl;
+using namespace sycl;
 using namespace gpu::xetla;
 
 template <typename data_type_a, typename data_type_b, typename data_type_c,
@@ -179,7 +179,7 @@ void gemm_polynomial_run(int iter) {
     typename gemm_op_t::arguments_t gemm_arg(matrix_m, matrix_k, matrix_n, A,
             matrix_k, B, matrix_n, C, matrix_n, {epilogue_args});
 
-    cl::sycl::nd_range<3> nd_range = gemm_op_t::get_nd_range(gemm_arg);
+    sycl::nd_range<3> nd_range = gemm_op_t::get_nd_range(gemm_arg);
 
     if (!gemm_op_t::can_implement(gemm_arg)) {
         std::cout << "The arguments cannot be supported, aborting ... "

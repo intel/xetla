@@ -19,7 +19,7 @@
 #include "utils/utils.hpp"
 #include "gtest/gtest.h"
 
-using namespace cl::sycl;
+using namespace sycl;
 
 template <typename test>
 void ln_bwd_run() {
@@ -164,19 +164,19 @@ void ln_bwd_run() {
             },
             queue, device, context);
 
-    cl::sycl::range<3> group_range {1, test::wg_num_m, test::wg_num_n};
-    cl::sycl::range<3> local_range {1,
+    sycl::range<3> group_range {1, test::wg_num_m, test::wg_num_n};
+    sycl::range<3> local_range {1,
             (test::wg_m + test::sg_m - 1) / test::sg_m,
             (test::wg_n + test::sg_n - 1) / test::sg_n};
-    cl::sycl::nd_range<3> nd_range(group_range * local_range, local_range);
+    sycl::nd_range<3> nd_range(group_range * local_range, local_range);
 
     // 3 buffers.
-    cl::sycl::range<3> final_group_range {
+    sycl::range<3> final_group_range {
             3, 1, (final_mat_n + final_wg_n - 1) / final_wg_n};
-    cl::sycl::range<3> final_local_range {1,
+    sycl::range<3> final_local_range {1,
             (final_wg_m + final_sg_m - 1) / final_sg_m,
             (final_wg_n + final_sg_n - 1) / final_sg_n};
-    cl::sycl::nd_range<3> final_range(
+    sycl::nd_range<3> final_range(
             final_group_range * final_local_range, final_local_range);
 
     try {
@@ -221,7 +221,7 @@ void ln_bwd_run() {
             });
         });
         e_esimd_bwd1.wait();
-    } catch (cl::sycl::exception const &e) {
+    } catch (sycl::exception const &e) {
         std::cout << "SYCL exception caught: " << e.what() << '\n';
         FAIL();
     }
