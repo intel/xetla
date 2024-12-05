@@ -328,8 +328,12 @@ void gemm_softmax(uint32_t matrix_m, uint32_t matrix_k, uint32_t matrix_n,
                     typename gemm_op_t::work_group_t g(
                             item.get_local_linear_id());
                     typename gemm_op_t::matAcc_t matAcc(0);
+
+#if !defined(DISABLE_GEMM)
                     gemm_op_t gemm;
                     gemm(g, matAcc, gemm_args);
+#endif
+
 #if !defined(WITHOUT_SOFTMAX)
                     // for each matAcc, call softmax op
                     softmax_fwd_t softmax_fwd;

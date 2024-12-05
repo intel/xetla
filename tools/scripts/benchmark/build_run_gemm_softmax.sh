@@ -11,6 +11,7 @@ unset gpu_driver_path
 unset without_softmax
 unset without_reduction
 unset disable_prefetch
+unset disable_gemm
 
 export ZE_AFFINITY_MASK=0
 export SYCL_CACHE_PERSISTENT=0
@@ -39,12 +40,13 @@ export LD_LIBRARY_PATH=$LIBRARY_PATH
 export IGC_ShaderDumpEnable=1
 export IGC_DumpToCustomDir=$repo_path/build/xetla_dumps
 
+#disable_gemm=" -DDISABLE_GEMM "
 disable_prefetch=" -DDISABLE_GEMM_PREFETCH "
 #without_softmax=" -DWITHOUT_SOFTMAX "
 #without_reduction=" -DWITHOUT_REDUCTION "
 
 source $repo_path/tools/scripts/env_debug.sh
-cmake .. -DCMAKE_CXX_FLAGS=" $without_softmax $without_reduction $disable_prefetch " \
+cmake .. -DCMAKE_CXX_FLAGS=" $without_softmax $without_reduction $disable_prefetch $disable_gemm " \
 && make gemm_softmax && ./examples/06_gemm_softmax/gemm_softmax
 
 
