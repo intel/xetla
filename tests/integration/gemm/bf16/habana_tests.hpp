@@ -347,6 +347,86 @@ public:
     using data_type_acc = float;
 };
 
+class Habana_Test4k_TT : public TestBase {
+public:
+    static constexpr size_t mat_m = 4096;
+    static constexpr size_t mat_n = 4096;
+    static constexpr size_t mat_k = 4096;
+    static constexpr size_t wg_m = 256;
+    static constexpr size_t wg_n = 256;
+    static constexpr size_t sg_m = 32;
+    static constexpr size_t sg_n = 64;
+    static constexpr size_t sg_k = 32;
+    static constexpr uint32_t global_kslicing = 1;
+    static constexpr uint32_t local_kslicing = 1;
+    static constexpr mem_layout layout_a = mem_layout::row_major;
+    static constexpr mem_layout layout_b = mem_layout::row_major;
+    using data_type_a = bf16;
+    using data_type_b = bf16;
+    using data_type_c = float;
+    using data_type_acc = float;
+};
+
+class Habana_Test4k_TN : public TestBase {
+public:
+    static constexpr size_t mat_m = 4096;
+    static constexpr size_t mat_n = 4096;
+    static constexpr size_t mat_k = 4096;
+    static constexpr size_t wg_m = 256;
+    static constexpr size_t wg_n = 256;
+    static constexpr size_t sg_m = 32;
+    static constexpr size_t sg_n = 64;
+    static constexpr size_t sg_k = 32;
+    static constexpr uint32_t global_kslicing = 1;
+    static constexpr uint32_t local_kslicing = 1;
+    static constexpr mem_layout layout_a = mem_layout::row_major;
+    static constexpr mem_layout layout_b = mem_layout::col_major;
+    using data_type_a = bf16;
+    using data_type_b = bf16;
+    using data_type_c = float;
+    using data_type_acc = float;
+};
+
+class Habana_Test4k_NT : public TestBase {
+public:
+    static constexpr size_t mat_m = 4096;
+    static constexpr size_t mat_n = 4096;
+    static constexpr size_t mat_k = 4096;
+    static constexpr size_t wg_m = 256;
+    static constexpr size_t wg_n = 256;
+    static constexpr size_t sg_m = 32;
+    static constexpr size_t sg_n = 64;
+    static constexpr size_t sg_k = 32;
+    static constexpr uint32_t global_kslicing = 1;
+    static constexpr uint32_t local_kslicing = 1;
+    static constexpr mem_layout layout_a = mem_layout::col_major;
+    static constexpr mem_layout layout_b = mem_layout::row_major;
+    using data_type_a = bf16;
+    using data_type_b = bf16;
+    using data_type_c = float;
+    using data_type_acc = float;
+};
+
+class Habana_Test4k_NN : public TestBase {
+public:
+    static constexpr size_t mat_m = 4096;
+    static constexpr size_t mat_n = 4096;
+    static constexpr size_t mat_k = 4096;
+    static constexpr size_t wg_m = 256;
+    static constexpr size_t wg_n = 256;
+    static constexpr size_t sg_m = 32;
+    static constexpr size_t sg_n = 64;
+    static constexpr size_t sg_k = 32;
+    static constexpr uint32_t global_kslicing = 1;
+    static constexpr uint32_t local_kslicing = 1;
+    static constexpr mem_layout layout_a = mem_layout::col_major;
+    static constexpr mem_layout layout_b = mem_layout::col_major;
+    using data_type_a = bf16;
+    using data_type_b = bf16;
+    using data_type_c = float;
+    using data_type_acc = float;
+};
+
 template <class Test>
 using bf16_gemm_func_default = bf16_gemm_test_func<typename Test::data_type_a,
         typename Test::data_type_b, typename Test::data_type_c,

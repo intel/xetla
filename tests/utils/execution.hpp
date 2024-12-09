@@ -79,11 +79,7 @@ void gemm_exec(const std::string &compile_str, size_t batch = 1) {
 
 #if FLUSH_CACHE == 1
     auto dev_cache = alloc_device_and_init<int8_t>(
-            l3_cache_size,
-            [](int8_t *data, size_t idx) {
-                data[idx] = static_cast<int8_t>(random_float());
-            },
-            queue, device, context);
+            l3_cache_size, batch, queue, device, context);
 #endif
 
 #if FLUSH_CACHE == 2
@@ -96,60 +92,28 @@ void gemm_exec(const std::string &compile_str, size_t batch = 1) {
             l3_cache_size / sizeof(data_type_c));
 
     auto A = alloc_device_and_init<data_type_a>(
-            pingpong_size_a, mem_iter,
-            [](data_type_a *data, size_t idx) {
-                data[idx] = static_cast<data_type_a>(random_float());
-            },
-            queue, device, context);
+            pingpong_size_a, mem_iter, queue, device, context);
     auto B = alloc_device_and_init<data_type_b>(
-            pingpong_size_b, mem_iter,
-            [](data_type_b *data, size_t idx) {
-                data[idx] = static_cast<data_type_b>(random_float());
-            },
-            queue, device, context);
+            pingpong_size_b, mem_iter, queue, device, context);
     auto C = alloc_device_and_init<data_type_c>(
-            pingpong_size_c, mem_iter,
-            [](data_type_c *data, size_t idx) {
-                data[idx] = static_cast<data_type_c>(0);
-            },
-            queue, device, context);
+            pingpong_size_c, mem_iter, queue, device, context);
 #else
     static constexpr auto mem_iter = 1;
 
     auto A = alloc_device_and_init<data_type_a>(
-            size_a, mem_iter * batch,
-            [](data_type_a *data, size_t idx) {
-                data[idx] = static_cast<data_type_a>(random_float());
-            },
-            queue, device, context);
+            size_a, mem_iter * batch, queue, device, context);
     auto B = alloc_device_and_init<data_type_b>(
-            size_b, mem_iter * batch,
-            [](data_type_b *data, size_t idx) {
-                data[idx] = static_cast<data_type_b>(random_float());
-            },
-            queue, device, context);
+            size_b, mem_iter * batch, queue, device, context);
     auto C = alloc_device_and_init<data_type_c>(
-            size_c, mem_iter * batch,
-            [](data_type_c *data, size_t idx) {
-                data[idx] = static_cast<data_type_c>(0);
-            },
-            queue, device, context);
+            size_c, mem_iter * batch, queue, device, context);
 #endif
 
     size_t size_acc = gemm_op_t::get_acc_buf_size(matrix_m, matrix_n);
     size_t size_cnt = gemm_op_t::get_cnt_buf_size(matrix_m, matrix_n);
     auto Acc = alloc_device_and_init<data_type_acc>(
-            size_acc, mem_iter * batch,
-            [](data_type_acc *data, size_t idx) {
-                data[idx] = static_cast<data_type_acc>(0);
-            },
-            queue, device, context);
+            size_acc, mem_iter * batch, queue, device, context);
     auto Cnt = alloc_device_and_init<uint32_t>(
-            size_cnt, mem_iter * batch,
-            [](uint32_t *data, size_t idx) {
-                data[idx] = static_cast<uint32_t>(0);
-            },
-            queue, device, context);
+            size_cnt, mem_iter * batch, queue, device, context);
 
     auto ops_flo = 2.0 * matrix_m * matrix_n * matrix_k * batch;
     auto ops_hbm = batch
@@ -222,11 +186,11 @@ void gemm_exec(const std::string &compile_str, size_t batch = 1) {
                     auto Cnt_ptr = Cnt + batch_idx * size_cnt
                             + it * batch * size_cnt;
 #else
-                            auto A_ptr = A + batch_idx * size_a;
-                            auto B_ptr = B + batch_idx * size_b;
-                            auto C_ptr = C + batch_idx * size_c;
-                            auto Acc_ptr = Acc + batch_idx * size_acc;
-                            auto Cnt_ptr = Cnt + batch_idx * size_cnt;
+                    auto A_ptr = A + batch_idx * size_a;
+                    auto B_ptr = B + batch_idx * size_b;
+                    auto C_ptr = C + batch_idx * size_c;
+                    auto Acc_ptr = Acc + batch_idx * size_acc;
+                    auto Cnt_ptr = Cnt + batch_idx * size_cnt;
 #endif
                     gpu::xetla::xetla_local_init<SLMSIZE>();
                     gpu::xetla::xetla_nbarrier_init<BARNUM>();
@@ -292,24 +256,9 @@ void kernel_run(auto nd_range, auto validate_result) {
     auto device = queue.get_info<info::queue::device>();
     std::cout << "Running on " << device.get_info<info::device::name>() << "\n";
 
-    auto A = alloc_device_and_init<data_type>(
-            Size,
-            [](data_type *data, size_t idx) {
-                data[idx] = static_cast<data_type>(idx);
-            },
-            queue, device, context);
-    auto B = alloc_device_and_init<data_type>(
-            Size,
-            [](data_type *data, size_t idx) {
-                data[idx] = static_cast<data_type>(idx);
-            },
-            queue, device, context);
-    auto C = alloc_device_and_init<data_type>(
-            Size,
-            [](data_type *data, size_t idx) {
-                data[idx] = static_cast<data_type>(idx);
-            },
-            queue, device, context);
+    auto A = alloc_device_and_init<data_type>(Size, 1, queue, device, context);
+    auto B = alloc_device_and_init<data_type>(Size, 1, queue, device, context);
+    auto C = alloc_device_and_init<data_type>(Size, 1, queue, device, context);
 
     try {
         auto e_esimd = queue.submit([&](handler &cgh) {
