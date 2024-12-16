@@ -6,7 +6,6 @@
 - fp16 - half-precision floating-point
 - fp32 - single-precision floating-point
 - bf16 - bfloat16 (Brain Floating Point Format)
-- bf32 - bfloat32
 - tf32 - tensor float32
 - N - Row Major matrix
 - T - Column Major Matrix
@@ -32,11 +31,11 @@ The following table summarizes epilogue APIs, organized by API and data type.Hyp
 
 |**API** | **Data Type**                   | **Unit Test**    |
 |-----------------|--------------------------------|------------------------|
-| **Bias Add**        |  `{ int8, bf16, bf32, fp16, fp32, tf32 }`       |  [example](/examples/03_gemm_relu_bias) |
-| **GELU Forward**        |  `{ int8, bf16, bf32, fp16, fp32, tf32 }`       |  [example](/tests/unit/epilogue_tile_op) |
-| **GELU Backward**        |  `{ int8, bf16, bf32, fp16, fp32, tf32 }`       |  [example](/tests/unit/epilogue_tile_op) |
-| **RELU**        |  `{ int8, bf16, bf32, fp16, fp32, tf32 }`       |  [example](/examples/03_gemm_relu_bias) |
-| **Residual Add**        |  `{ int8, bf16, bf32, fp16, fp32, tf32 }`       |  [example](/tests/unit/epilogue_tile_op) |
+| **Bias Add**        |  `{ int8, bf16, fp16, fp32, tf32 }`       |  [example](/examples/03_gemm_relu_bias) |
+| **GELU Forward**        |  `{ int8, bf16, fp16, fp32, tf32 }`       |  [example](/tests/unit/epilogue_tile_op) |
+| **GELU Backward**        |  `{ int8, bf16, fp16, fp32, tf32 }`       |  [example](/tests/unit/epilogue_tile_op) |
+| **RELU**        |  `{ int8, bf16, fp16, fp32, tf32 }`       |  [example](/examples/03_gemm_relu_bias) |
+| **Residual Add**        |  `{ int8, bf16, fp16, fp32, tf32 }`       |  [example](/tests/unit/epilogue_tile_op) |
 
 ## Copyright
 Copyright (c) 2022-2023 Intel Corporation Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
