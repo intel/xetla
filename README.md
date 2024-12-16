@@ -1,3 +1,17 @@
+DISCONTINUATION OF PROJECT
+
+This project will no longer be maintained by Intel.
+
+Intel has ceased development and contributions including, but not limited to, maintenance, bug fixes, new releases, or updates, to this project.
+
+Intel no longer accepts patches to this project.
+
+If you have an ongoing need to use this project, are interested in independently developing it, or would like to maintain patches for the open source software community, please create your own fork of this project.
+
+The alternative project CUTLASS will include all XeTLA features, refer: https://github.com/codeplaysoftware/cutlass-fork
+
+Contact: webadmin@linux.intel.com
+
 # Intel® Xe Templates for Linear Algebra
 
 _Intel® XeTLA [v0.3.7](/CHANGELOG.md) - December 2023_
