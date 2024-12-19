@@ -50,9 +50,9 @@ static void vadd_run() {
             queue, device, context);
 
     // We need that many workitems. Each processes VL elements of data.
-    cl::sycl::range<1> global_range {size / VL};
-    cl::sycl::range<1> local_range {group_size};
-    cl::sycl::nd_range<1> nd_range(global_range, local_range);
+    sycl::range<1> global_range {size / VL};
+    sycl::range<1> local_range {group_size};
+    sycl::nd_range<1> nd_range(global_range, local_range);
 
     try {
         auto e_esimd = queue.submit([&](handler &cgh) {
@@ -61,7 +61,7 @@ static void vadd_run() {
             });
         });
         e_esimd.wait();
-    } catch (cl::sycl::exception const &e) {
+    } catch (sycl::exception const &e) {
         std::cout << "SYCL exception caught: " << e.what() << '\n';
         FAIL();
     }

@@ -21,7 +21,7 @@
 using namespace std::placeholders;
 
 TEST(tile_load_store_vnni_local_func, esimd) {
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate = std::bind(
             tile_load_store_result_validate<bf16>, _1, _2, _3, 128, 32, 32);
     kernel_run<bf16,
@@ -30,7 +30,7 @@ TEST(tile_load_store_vnni_local_func, esimd) {
 }
 
 TEST(tile_load_store_local, esimd) {
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate = std::bind(
             tile_load_store_result_validate<int>, _1, _2, _3, 128, 32, 32);
     kernel_run<int,
@@ -39,7 +39,7 @@ TEST(tile_load_store_local, esimd) {
 }
 
 TEST(tile_load_store_local_with_update, esimd) {
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate = std::bind(
             tile_load_store_result_validate<int>, _1, _2, _3, 128, 32, 32);
     kernel_run<int,
@@ -48,7 +48,7 @@ TEST(tile_load_store_local_with_update, esimd) {
 }
 
 TEST(tile_transpose_store_local, esimd) {
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate = std::bind(
             tile_load_store_result_validate<int>, _1, _2, _3, 64, 32, 32);
     kernel_run<int,
@@ -57,7 +57,7 @@ TEST(tile_transpose_store_local, esimd) {
 }
 
 TEST(tile_transpose_store_local_bf16, esimd) {
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate = std::bind(
             tile_load_store_result_validate<bf16>, _1, _2, _3, 64, 32, 32);
     kernel_run<bf16,
@@ -66,7 +66,7 @@ TEST(tile_transpose_store_local_bf16, esimd) {
 }
 
 TEST(tile_load_store_1d_local, esimd) {
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate = std::bind(
             tile_load_store_result_validate<int>, _1, _2, _3, 128, 32, 32);
     kernel_run<int,
@@ -75,7 +75,7 @@ TEST(tile_load_store_1d_local, esimd) {
 }
 
 TEST(tile_load_store_1row_local, esimd) {
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate = std::bind(
             tile_load_store_result_validate<int>, _1, _2, _3, 128, 32, 1);
     kernel_run<int,
@@ -84,7 +84,7 @@ TEST(tile_load_store_1row_local, esimd) {
 }
 
 TEST(tile_load_store_1d_local_with_update, esimd) {
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate = std::bind(
             tile_load_store_result_validate<int>, _1, _2, _3, 128, 32, 32);
     kernel_run<int,
@@ -93,7 +93,7 @@ TEST(tile_load_store_1d_local_with_update, esimd) {
 }
 
 TEST(tile_load_store_1row_local_with_update, esimd) {
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate = std::bind(
             tile_load_store_result_validate<int>, _1, _2, _3, 128, 32, 1);
     kernel_run<int,

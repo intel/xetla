@@ -224,7 +224,7 @@ public:
 
     /// @brief Host helper function to get the expected local range under the current GEMM config.
     /// @return Expected local range.
-    static cl::sycl::range<3> get_local_range() {
+    static sycl::range<3> get_local_range() {
         uint32_t local_range_m = (wg_tile_m + sg_tile_m - 1) / sg_tile_m;
         uint32_t local_range_n = (wg_tile_n + sg_tile_n - 1) / sg_tile_n;
         #ifdef DEBUG
@@ -233,15 +233,15 @@ public:
         #endif
         assert(local_range_m * local_range_n <= 32);
         //Linearize for stream_k algorithm
-        return cl::sycl::range<3> {1, 1, local_range_m * local_range_n};
+        return sycl::range<3> {1, 1, local_range_m * local_range_n};
     };
 
     /// @brief Host helper function to get the expected nd_range under the current GEMM config.
     /// @return Expected nd_range.
-    static cl::sycl::nd_range<3> get_nd_range(arguments_t &args) {
-        cl::sycl::range<3> local_range = get_local_range();
-        cl::sycl::range<3> group_range = args.stream_k_args.get_group_range();
-        return cl::sycl::nd_range<3> {group_range * local_range, local_range};
+    static sycl::nd_range<3> get_nd_range(arguments_t &args) {
+        sycl::range<3> local_range = get_local_range();
+        sycl::range<3> group_range = args.stream_k_args.get_group_range();
+        return sycl::nd_range<3> {group_range * local_range, local_range};
     };
 
     /// @brief Host helper function to get the expected accumulation buffer size of the current STREAMK_GEMM_UNIVERSAL config.

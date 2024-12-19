@@ -309,7 +309,7 @@ void dequantize_gemm_run(uint32_t iter) {
             matrix_k, B_d, matrix_n, C_d, matrix_n, scale_d, matrix_n,
             zero_pt_d, matrix_n, Acc_d, Cnt_d);
 
-    cl::sycl::nd_range<3> nd_range = gemm_op_t::get_nd_range(gemm_arg);
+    sycl::nd_range<3> nd_range = gemm_op_t::get_nd_range(gemm_arg);
     if (!gemm_op_t::can_implement(gemm_arg)) {
         std::cout << "The arguments cannot be supported, aborting ... "
                   << std::endl;
@@ -334,7 +334,7 @@ void dequantize_gemm_run(uint32_t iter) {
             prof.cpu_end();
             prof.add_gpu_event(e_esimd);
         }
-    } catch (cl::sycl::exception const &e) {
+    } catch (sycl::exception const &e) {
         std::cout << "SYCL exception caught: " << e.what() << '\n';
         FAIL();
     }

@@ -21,7 +21,7 @@
 using namespace std::placeholders;
 
 TEST(test_add_update_carry, esimd) {
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate
             = std::bind(add_update_carry_result_validate, _1, _2, _3, 16);
     kernel_run<uint32_t, add_update_carry_func<uint32_t, 16>>(

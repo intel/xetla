@@ -80,9 +80,9 @@ void softmax_bwd_run() {
               << ",  group_num_y: " << group_range_m << "\n";
     std::cout << " group_size_x: " << subgroup_range_n
               << ",  group_size_y: " << subgroup_range_m << std::endl;
-    cl::sycl::range<3> group_range {1, group_range_m, group_range_n};
-    cl::sycl::range<3> local_range {1, subgroup_range_m, subgroup_range_n};
-    cl::sycl::nd_range<3> nd_range(group_range * local_range, local_range);
+    sycl::range<3> group_range {1, group_range_m, group_range_n};
+    sycl::range<3> local_range {1, subgroup_range_m, subgroup_range_n};
+    sycl::nd_range<3> nd_range(group_range * local_range, local_range);
 
     long transferred_bytes = sizeof(data_type_in) * size_in
             + sizeof(data_type_out) * size_out
@@ -125,7 +125,7 @@ void softmax_bwd_run() {
             });
             e_softmax_bwd.wait();
 
-        } catch (cl::sycl::exception const &e) {
+        } catch (sycl::exception const &e) {
             std::cout << "SYCL exception caught: " << e.what() << '\n';
             FAIL();
         }

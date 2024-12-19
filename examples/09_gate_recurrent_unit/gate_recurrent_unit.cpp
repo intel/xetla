@@ -16,7 +16,7 @@
 #include "kernel_func.hpp"
 #include "tests/utils/utils.hpp"
 
-using namespace cl::sycl;
+using namespace sycl;
 using namespace gpu::xetla;
 
 template <typename data_type>
@@ -342,10 +342,10 @@ void gru_run(uint32_t iter) {
 
     //***********dpcpp runtime setup && buffer allocation start ************//
 
-    cl::sycl::range<3> group_range {1, (N + wg_tile_m - 1) / wg_tile_m, 1};
-    cl::sycl::range<3> local_range {1, (wg_tile_m + sg_tile_m - 1) / sg_tile_m,
+    sycl::range<3> group_range {1, (N + wg_tile_m - 1) / wg_tile_m, 1};
+    sycl::range<3> local_range {1, (wg_tile_m + sg_tile_m - 1) / sg_tile_m,
             (wg_tile_n + sg_tile_n - 1) / sg_tile_n};
-    cl::sycl::nd_range<3> nd_range(group_range * local_range, local_range);
+    sycl::nd_range<3> nd_range(group_range * local_range, local_range);
 
     std::cout << "Launch kernel:\n";
     std::cout << "group_num_x: " << 1

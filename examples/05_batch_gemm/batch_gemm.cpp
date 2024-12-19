@@ -129,7 +129,7 @@ void batch_gemm_run(uint32_t iter) {
     typename batch_gemm_op_t::arguments_t gemm_arg(batch_size, matrix_m,
             matrix_k, matrix_n, A, matrix_k, B, matrix_n, C, matrix_n);
 
-    cl::sycl::nd_range<3> nd_range = batch_gemm_op_t::get_nd_range(gemm_arg);
+    sycl::nd_range<3> nd_range = batch_gemm_op_t::get_nd_range(gemm_arg);
     if (!batch_gemm_op_t::can_implement(gemm_arg)) {
         std::cout << "The arguments cannot be supported, aborting ... "
                   << std::endl;

@@ -20,7 +20,7 @@
 #include "utils/common.hpp"
 #include "gtest/gtest.h"
 
-using namespace cl::sycl;
+using namespace sycl;
 
 template <typename test>
 static void dropout_op_run() {
@@ -78,13 +78,13 @@ static void dropout_op_run() {
             },
             queue, device, context);
 
-    cl::sycl::range<3> group_range {1,
+    sycl::range<3> group_range {1,
             (test::mat_m + test::wg_m - 1) / test::wg_m,
             (test::mat_n + test::wg_n - 1) / test::wg_n};
-    cl::sycl::range<3> local_range {1,
+    sycl::range<3> local_range {1,
             (test::wg_m + test::sg_m - 1) / test::sg_m,
             (test::wg_n + test::sg_n - 1) / test::sg_n};
-    cl::sycl::nd_range<3> nd_range(group_range * local_range, local_range);
+    sycl::nd_range<3> nd_range(group_range * local_range, local_range);
 
     try {
         auto e_esimd = queue.submit([&](handler &cgh) {
@@ -99,7 +99,7 @@ static void dropout_op_run() {
             });
         });
         e_esimd.wait();
-    } catch (cl::sycl::exception const &e) {
+    } catch (sycl::exception const &e) {
         std::cout << "SYCL exception caught: " << e.what() << '\n';
         FAIL();
     }

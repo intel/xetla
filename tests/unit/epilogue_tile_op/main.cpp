@@ -21,7 +21,7 @@
 using namespace std::placeholders;
 
 TEST(tile_elemwise_op_relu, esimd) {
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate
             = std::bind(tile_elemwise_op_validate<float, relu_op<float>>, _1,
                     _2, _3, 128, 16, 16);
@@ -31,7 +31,7 @@ TEST(tile_elemwise_op_relu, esimd) {
 }
 
 TEST(tile_elemwise_op_gelu_fwd, esimd) {
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate
             = std::bind(tile_elemwise_op_validate<float, gelu_op<float>>, _1,
                     _2, _3, 128, 16, 24);
@@ -41,7 +41,7 @@ TEST(tile_elemwise_op_gelu_fwd, esimd) {
 }
 
 TEST(tile_elemwise_op_gelu_fwd_w, esimd) {
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate
             = std::bind(tile_elemwise_op_validate<float, gelu_fwd_w_op<float>>,
                     _1, _2, _3, 128, 16, 24);
@@ -52,7 +52,7 @@ TEST(tile_elemwise_op_gelu_fwd_w, esimd) {
 }
 
 TEST(tile_elemwise_op_gelu_bwd, esimd) {
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate = std::bind(
             tile_elemwise_gelu_bwd_validate<float>, _1, _2, _3, 128, 16, 24);
     kernel_run<float,
@@ -62,7 +62,7 @@ TEST(tile_elemwise_op_gelu_bwd, esimd) {
 }
 
 TEST(tile_elemwise_op_bias_add, esimd) {
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate = std::bind(
             tile_elemwise_bias_add_validate<float>, _1, _2, _3, 128, 16, 24);
     kernel_run<float,
@@ -72,7 +72,7 @@ TEST(tile_elemwise_op_bias_add, esimd) {
 }
 
 TEST(tile_elemwise_op_res_add, esimd) {
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate = std::bind(
             tile_elemwise_res_add_validate<float>, _1, _2, _3, 128, 16, 24);
     kernel_run<float,
@@ -82,7 +82,7 @@ TEST(tile_elemwise_op_res_add, esimd) {
 }
 
 TEST(tile_elemwise_op_linear_op, esimd) {
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate = std::bind(
             tile_elemwise_linear_op_validate<float>, _1, _2, _3, 128, 16, 32);
     kernel_run<float,
@@ -92,7 +92,7 @@ TEST(tile_elemwise_op_linear_op, esimd) {
 }
 
 TEST(tile_elemwise_op_linear_op_2, esimd) {
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate = std::bind(
             tile_elemwise_linear_op_validate<float>, _1, _2, _3, 128, 16, 24);
     kernel_run<float,

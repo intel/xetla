@@ -19,7 +19,7 @@
 #include "xetla.hpp"
 
 using namespace gpu::xetla;
-using namespace cl::sycl;
+using namespace sycl;
 
 template <typename data_type_in, typename data_type_out, typename data_type_acc>
 int data_transformer_result_validate(data_type_in *in_device,

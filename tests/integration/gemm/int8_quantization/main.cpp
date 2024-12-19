@@ -85,9 +85,9 @@ static void igemm_quantize_run(int iter = 100) {
     size_t group_range_n = (matrix_n + wg_tile_n - 1) / wg_tile_n;
     size_t subgroup_range_m = (wg_tile_m + sg_tile_m - 1) / sg_tile_m;
     size_t subgroup_range_n = (wg_tile_n + sg_tile_n - 1) / sg_tile_n;
-    cl::sycl::range<3> group_range {1, group_range_m, group_range_n};
-    cl::sycl::range<3> local_range {1, subgroup_range_m, subgroup_range_n};
-    cl::sycl::nd_range<3> nd_range(group_range * local_range, local_range);
+    sycl::range<3> group_range {1, group_range_m, group_range_n};
+    sycl::range<3> local_range {1, subgroup_range_m, subgroup_range_n};
+    sycl::nd_range<3> nd_range(group_range * local_range, local_range);
     std::cout << "group_num_x: " << group_range_n
               << ", group_num_y: " << group_range_m << ", group_num_z: " << 1
               << "\n";
@@ -127,7 +127,7 @@ static void igemm_quantize_run(int iter = 100) {
             prof.cpu_end();
             prof.add_gpu_event(e_esimd);
         }
-    } catch (cl::sycl::exception const &e) {
+    } catch (sycl::exception const &e) {
         std::cout << "SYCL exception caught: " << e.what() << '\n';
         FAIL();
     }

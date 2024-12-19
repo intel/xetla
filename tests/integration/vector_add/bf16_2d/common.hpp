@@ -18,7 +18,7 @@
 #include "utils/utils.hpp"
 #include "xetla.hpp"
 
-using namespace cl::sycl;
+using namespace sycl;
 using namespace gpu;
 using namespace gpu::xetla;
 

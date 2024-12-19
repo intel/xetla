@@ -88,10 +88,10 @@ void basic_gemm_run(uint32_t iter) {
     uint32_t ldc = matrix_n;
 
     // Ndrange and workgroup shape
-    cl::sycl::range<3> group_range {1, group_range_m, group_range_n};
-    cl::sycl::range<3> local_range {1, thread_range_m, thread_range_n};
+    sycl::range<3> group_range {1, group_range_m, group_range_n};
+    sycl::range<3> local_range {1, thread_range_m, thread_range_n};
 
-    cl::sycl::nd_range<3> nd_range(group_range * local_range, local_range);
+    sycl::nd_range<3> nd_range(group_range * local_range, local_range);
 
     constexpr uint32_t warmup = 10;
     long ops = 2 * static_cast<long>(matrix_m) * matrix_n * matrix_k;

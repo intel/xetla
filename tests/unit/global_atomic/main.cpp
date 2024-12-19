@@ -26,7 +26,7 @@ using namespace std::placeholders;
 /// - xetla_atomic_global API with [0 src] [no return] [all channel enabled].
 TEST(global_atomic_iinc_base, esimd) {
     kernel_run<int, global_atomic_iinc_base<16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(global_atomic_result_validate<int>, _1, _2, _3, 16,
                     atomic_op::iinc));
 }
@@ -37,7 +37,7 @@ TEST(global_atomic_iinc_base, esimd) {
 /// - xetla_atomic_global API with [0 src] [no return] [4 channel enabled].
 TEST(global_atomic_iinc_mask, esimd) {
     kernel_run<int, global_atomic_iinc_mask<16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(global_atomic_with_mask_result_validate<int>, _1, _2, _3,
                     16, atomic_op::iinc, 0xF));
 }
@@ -48,7 +48,7 @@ TEST(global_atomic_iinc_mask, esimd) {
 /// - xetla_atomic_global API with [0 src] [with return] [all channel enabled].
 TEST(global_atomic_iinc_return, esimd) {
     kernel_run<int, global_atomic_iinc_return<16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(global_atomic_with_ret_result_validate<int>, _1, _2, _3,
                     16, atomic_op::iinc));
 }
@@ -59,7 +59,7 @@ TEST(global_atomic_iinc_return, esimd) {
 /// - xetla_atomic_global API with [0 src] [no return] [all channel enabled].
 TEST(global_atomic_idec_base, esimd) {
     kernel_run<int, global_atomic_idec_base<16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(global_atomic_result_validate<int>, _1, _2, _3, 16,
                     atomic_op::idec));
 }
@@ -70,7 +70,7 @@ TEST(global_atomic_idec_base, esimd) {
 /// - xetla_atomic_global API with [1 src] [no return] [all channel enabled].
 TEST(global_atomic_iadd_base, esimd) {
     kernel_run<int, global_atomic_iadd_base<16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(global_atomic_result_validate<int>, _1, _2, _3, 16,
                     atomic_op::iadd));
 }
@@ -81,7 +81,7 @@ TEST(global_atomic_iadd_base, esimd) {
 /// - xetla_atomic_global API with [1 src] [no return] [4 channel enabled].
 TEST(global_atomic_iadd_mask, esimd) {
     kernel_run<int, global_atomic_iadd_mask<16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(global_atomic_with_mask_result_validate<int>, _1, _2, _3,
                     16, atomic_op::iadd, 0xF));
 }
@@ -92,7 +92,7 @@ TEST(global_atomic_iadd_mask, esimd) {
 /// - xetla_atomic_global API with [1 src] [with return] [all channel enabled].
 TEST(global_atomic_iadd_return, esimd) {
     kernel_run<int, global_atomic_iadd_return<16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(global_atomic_with_ret_result_validate<int>, _1, _2, _3,
                     16, atomic_op::iadd));
 }
@@ -103,7 +103,7 @@ TEST(global_atomic_iadd_return, esimd) {
 /// - xetla_atomic_global API with [1 src] [no return] [all channel enabled].
 TEST(global_atomic_isub_base, esimd) {
     kernel_run<int, global_atomic_isub_base<16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(global_atomic_result_validate<int>, _1, _2, _3, 16,
                     atomic_op::isub));
 }
@@ -114,7 +114,7 @@ TEST(global_atomic_isub_base, esimd) {
 /// - xetla_atomic_global API with [1 src] [no return] [all channel enabled].
 TEST(global_atomic_smin_base, esimd) {
     kernel_run<int, global_atomic_smin_base<16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(global_atomic_result_validate<int>, _1, _2, _3, 16,
                     atomic_op::smin));
 }
@@ -125,7 +125,7 @@ TEST(global_atomic_smin_base, esimd) {
 /// - xetla_atomic_global API with [1 src] [no return] [all channel enabled].
 TEST(global_atomic_smax_base, esimd) {
     kernel_run<int, global_atomic_smax_base<16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(global_atomic_result_validate<int>, _1, _2, _3, 16,
                     atomic_op::smax));
 }
@@ -136,7 +136,7 @@ TEST(global_atomic_smax_base, esimd) {
 /// - xetla_atomic_global API with [1 src] [no return] [all channel enabled].
 TEST(global_atomic_fadd_base, esimd) {
     kernel_run<float, global_atomic_fadd_base<16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(global_atomic_result_validate<float>, _1, _2, _3, 16,
                     atomic_op::fadd));
 }
@@ -147,7 +147,7 @@ TEST(global_atomic_fadd_base, esimd) {
 /// - xetla_atomic_global API with [1 src] [no return] [all channel enabled].
 TEST(global_atomic_fsub_base, esimd) {
     kernel_run<float, global_atomic_fsub_base<16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(global_atomic_result_validate<float>, _1, _2, _3, 16,
                     atomic_op::fsub));
 }
@@ -158,7 +158,7 @@ TEST(global_atomic_fsub_base, esimd) {
 /// - xetla_atomic_global API with [1 src] [no return] [all channel enabled].
 TEST(global_atomic_fmin_base, esimd) {
     kernel_run<float, global_atomic_fmin_base<16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(global_atomic_result_validate<float>, _1, _2, _3, 16,
                     atomic_op::fmin));
 }
@@ -169,7 +169,7 @@ TEST(global_atomic_fmin_base, esimd) {
 /// - xetla_atomic_global API with [1 src] [no return] [all channel enabled].
 TEST(global_atomic_fmax_base, esimd) {
     kernel_run<float, global_atomic_fmax_base<16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(global_atomic_result_validate<float>, _1, _2, _3, 16,
                     atomic_op::fmax));
 }
@@ -179,7 +179,7 @@ TEST(global_atomic_fmax_base, esimd) {
 /// - xetla_atomic_global API with [1 src] [no return] [all channel enabled].
 TEST(global_atomic_umin_base, esimd) {
     kernel_run<uint32_t, global_atomic_umin_base<16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(global_atomic_result_validate<uint32_t>, _1, _2, _3, 16,
                     atomic_op::umin));
 }
@@ -190,7 +190,7 @@ TEST(global_atomic_umin_base, esimd) {
 /// - xetla_atomic_global API with [1 src] [no return] [all channel enabled].
 TEST(global_atomic_umax_base, esimd) {
     kernel_run<uint32_t, global_atomic_umax_base<16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(global_atomic_result_validate<uint32_t>, _1, _2, _3, 16,
                     atomic_op::umax));
 }
@@ -201,7 +201,7 @@ TEST(global_atomic_umax_base, esimd) {
 /// - xetla_atomic_global API with [1 src] [no return] [all channel enabled].
 TEST(global_atomic_bit_and_base, esimd) {
     kernel_run<uint32_t, global_atomic_bit_and_base<16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(global_atomic_bit_op_result_validate, _1, _2, _3, 16,
                     atomic_op::bit_and));
 }
@@ -212,7 +212,7 @@ TEST(global_atomic_bit_and_base, esimd) {
 /// - xetla_atomic_global API with [1 src] [no return] [all channel enabled].
 TEST(global_atomic_bit_or_base, esimd) {
     kernel_run<uint32_t, global_atomic_bit_or_base<16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(global_atomic_bit_op_result_validate, _1, _2, _3, 16,
                     atomic_op::bit_or));
 }
@@ -223,7 +223,7 @@ TEST(global_atomic_bit_or_base, esimd) {
 /// - xetla_atomic_global API with [1 src] [no return] [all channel enabled].
 TEST(global_atomic_bit_xor_base, esimd) {
     kernel_run<uint32_t, global_atomic_bit_xor_base<16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(global_atomic_bit_op_result_validate, _1, _2, _3, 16,
                     atomic_op::bit_xor));
 }
@@ -234,7 +234,7 @@ TEST(global_atomic_bit_xor_base, esimd) {
 /// - xetla_atomic_global API with [0 src] [with return] [all channel enabled].
 TEST(global_atomic_load, esimd) {
     kernel_run<uint32_t, global_atomic_load<16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(global_atomic_result_validate<uint32_t>, _1, _2, _3, 16,
                     atomic_op::load));
 }
@@ -244,7 +244,7 @@ TEST(global_atomic_load, esimd) {
 /// - xetla_atomic_global API with [1 src] [no return] [all channel enabled].
 TEST(global_atomic_store, esimd) {
     kernel_run<uint32_t, global_atomic_store<16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(global_atomic_result_validate<uint32_t>, _1, _2, _3, 16,
                     atomic_op::store));
 }
@@ -254,7 +254,7 @@ TEST(global_atomic_store, esimd) {
 /// - xetla_atomic_global API with [2 src] [no return] [all channel enabled].
 TEST(global_atomic_cmpxchg_base, esimd) {
     kernel_run<uint32_t, global_atomic_cmpxchg_base<16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(global_atomic_result_validate<uint32_t>, _1, _2, _3, 16,
                     atomic_op::cmpxchg));
 }
@@ -265,7 +265,7 @@ TEST(global_atomic_cmpxchg_base, esimd) {
 /// - xetla_atomic_global API with [2 src] [no return] [4 channel enabled].
 TEST(global_atomic_cmpxchg_mask, esimd) {
     kernel_run<uint32_t, global_atomic_cmpxchg_mask<16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(global_atomic_with_mask_result_validate<uint32_t>, _1, _2,
                     _3, 16, atomic_op::cmpxchg, 0xF));
 }
@@ -276,7 +276,7 @@ TEST(global_atomic_cmpxchg_mask, esimd) {
 /// - xetla_atomic_global API with [2 src] [with return] [all channel enabled].
 TEST(global_atomic_cmpxchg_return, esimd) {
     kernel_run<uint32_t, global_atomic_cmpxchg_return<16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(global_atomic_with_ret_result_validate<uint32_t>, _1, _2,
                     _3, 16, atomic_op::cmpxchg));
 }
@@ -286,7 +286,7 @@ TEST(global_atomic_cmpxchg_return, esimd) {
 /// - xetla_atomic_global API with [2 src] [no return] [all channel enabled].
 TEST(global_atomic_fcmpxchg_base, esimd) {
     kernel_run<float, global_atomic_fcmpxchg_base<16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(global_atomic_result_validate<float>, _1, _2, _3, 16,
                     atomic_op::fcmpxchg));
 }

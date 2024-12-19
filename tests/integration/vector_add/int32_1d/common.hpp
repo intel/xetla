@@ -22,7 +22,7 @@ using namespace gpu;
 using namespace gpu::xetla;
 
 #define data_type int
-using namespace cl::sycl;
+using namespace sycl;
 
 int vadd_result_validate(data_type *A_device, data_type *B_device,
         data_type *C_device, unsigned Size, sycl::queue &queue) {

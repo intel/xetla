@@ -1,5 +1,5 @@
-include_directories(${CMAKE_SOURCE_DIR}/include)
-include_directories(${CMAKE_SOURCE_DIR})
+include_directories(${PROJECT_SOURCE_DIR}/include)
+include_directories(${PROJECT_SOURCE_DIR})
 
 add_subdirectory(01_gemm_universal)
 add_subdirectory(02_basic_gemm)

@@ -28,7 +28,7 @@ using namespace std::placeholders;
 TEST(test_abs_vector_version_with_different_input_and_output_types, esimd) {
     kernel_run<int,
             xetla_abs_vector_version_with_different_input_and_output_types<16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(math_result_validate<int>, _1, _2, _3, 16,
                     math_op::abs_vector));
 }
@@ -41,7 +41,7 @@ TEST(test_abs_vector_version_with_different_input_and_output_types, esimd) {
 TEST(test_abs_vector_version_with_same_input_and_output_types, esimd) {
     kernel_run<int,
             xetla_abs_vector_version_with_same_input_and_output_types<16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(math_result_validate<int>, _1, _2, _3, 16,
                     math_op::abs_vector));
 }
@@ -54,7 +54,7 @@ TEST(test_abs_vector_version_with_same_input_and_output_types, esimd) {
 TEST(test_abs_scalar_version_with_different_input_and_output_types, esimd) {
     kernel_run<int,
             xetla_abs_scalar_version_with_different_input_and_output_types<16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(math_result_validate<int>, _1, _2, _3, 16,
                     math_op::abs_scalar));
 }
@@ -67,7 +67,7 @@ TEST(test_abs_scalar_version_with_different_input_and_output_types, esimd) {
 TEST(test_abs_scalar_version_with_same_input_and_output_types, esimd) {
     kernel_run<int,
             xetla_abs_scalar_version_with_same_input_and_output_types<16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(math_result_validate<int>, _1, _2, _3, 16,
                     math_op::abs_scalar));
 }
@@ -79,7 +79,7 @@ TEST(test_abs_scalar_version_with_same_input_and_output_types, esimd) {
 
 TEST(test_max_with_vector_Src0_and_vector_Src1, esimd) {
     kernel_run<int, xetla_max_with_vector_Src0_and_vector_Src1<16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(math_result_validate<int>, _1, _2, _3, 16,
                     math_op::max_vector));
 }
@@ -91,7 +91,7 @@ TEST(test_max_with_vector_Src0_and_vector_Src1, esimd) {
 
 TEST(test_max_with_vector_Src0_and_scalar_Src1, esimd) {
     kernel_run<int, xetla_max_with_vector_Src0_and_scalar_Src1<16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(math_result_validate<int>, _1, _2, _3, 16,
                     math_op::max_vector));
 }
@@ -103,7 +103,7 @@ TEST(test_max_with_vector_Src0_and_scalar_Src1, esimd) {
 
 TEST(test_max_with_scalar_Src0_and_vector_Src1, esimd) {
     kernel_run<int, xetla_max_with_scalar_Src0_and_vector_Src1<16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(math_result_validate<int>, _1, _2, _3, 16,
                     math_op::max_vector));
 }
@@ -115,7 +115,7 @@ TEST(test_max_with_scalar_Src0_and_vector_Src1, esimd) {
 
 TEST(test_max_with_scalar_Src0_and_scalar_Src1, esimd) {
     kernel_run<int, xetla_max_with_scalar_Src0_and_scalar_Src1<16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(math_result_validate<int>, _1, _2, _3, 16,
                     math_op::max_scalar));
 }
@@ -127,7 +127,7 @@ TEST(test_max_with_scalar_Src0_and_scalar_Src1, esimd) {
 
 TEST(test_min_with_vector_Src0_and_vector_Src1, esimd) {
     kernel_run<int, xetla_min_with_vector_Src0_and_vector_Src1<16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(math_result_validate<int>, _1, _2, _3, 16,
                     math_op::min_vector));
 }
@@ -139,7 +139,7 @@ TEST(test_min_with_vector_Src0_and_vector_Src1, esimd) {
 
 TEST(test_min_with_vector_Src0_and_scalar_Src1, esimd) {
     kernel_run<int, xetla_min_with_vector_Src0_and_scalar_Src1<16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(math_result_validate<int>, _1, _2, _3, 16,
                     math_op::min_vector));
 }
@@ -151,7 +151,7 @@ TEST(test_min_with_vector_Src0_and_scalar_Src1, esimd) {
 
 TEST(test_min_with_scalar_Src0_and_vector_Src1, esimd) {
     kernel_run<int, xetla_min_with_scalar_Src0_and_vector_Src1<16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(math_result_validate<int>, _1, _2, _3, 16,
                     math_op::min_vector));
 }
@@ -163,7 +163,7 @@ TEST(test_min_with_scalar_Src0_and_vector_Src1, esimd) {
 
 TEST(test_min_with_scalar_Src0_and_scalar_Src1, esimd) {
     kernel_run<int, xetla_min_with_scalar_Src0_and_scalar_Src1<16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(math_result_validate<int>, _1, _2, _3, 16,
                     math_op::min_scalar));
 }

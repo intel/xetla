@@ -20,7 +20,7 @@
 #include <gtest/gtest.h>
 
 using namespace gpu::xetla;
-using namespace cl::sycl;
+using namespace sycl;
 
 template <class Test>
 static void data_transformer_run() {
@@ -76,11 +76,11 @@ static void data_transformer_run() {
             },
             queue, device, context);
 
-    cl::sycl::range<3> group_range {1, (matrix_m + wg_tile_m - 1) / wg_tile_m,
+    sycl::range<3> group_range {1, (matrix_m + wg_tile_m - 1) / wg_tile_m,
             (matrix_n + wg_tile_n - 1) / wg_tile_n};
-    cl::sycl::range<3> local_range {1, (wg_tile_m + sg_tile_m - 1) / sg_tile_m,
+    sycl::range<3> local_range {1, (wg_tile_m + sg_tile_m - 1) / sg_tile_m,
             (wg_tile_n + sg_tile_n - 1) / sg_tile_n};
-    cl::sycl::nd_range<3> nd_range(group_range * local_range, local_range);
+    sycl::nd_range<3> nd_range(group_range * local_range, local_range);
 
     std::vector<kernel_id> kernelId = {get_kernel_id<Test>()};
     auto inputBundle
@@ -125,7 +125,7 @@ static void data_transformer_run() {
         });
         e_esimd.wait();
 
-    } catch (cl::sycl::exception const &e) {
+    } catch (sycl::exception const &e) {
         std::cout << "SYCL exception caught: " << e.what() << '\n';
         FAIL();
     }

@@ -1,4 +1,4 @@
-include_directories(${CMAKE_SOURCE_DIR}/tests/integration/gemm)
+include_directories(${PROJECT_SOURCE_DIR}/tests/integration/gemm)
 
 add_subdirectory(bf16)
 add_subdirectory(bf16_stream_k)

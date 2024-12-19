@@ -35,7 +35,7 @@ TYPED_TEST_SUITE_P(load_store_block_datatype_test);
 TYPED_TEST_P(load_store_block_datatype_test, esimd) {
     using datatype = TypeParam;
 
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate = std::bind(
             local_load_store_result_validate<datatype>, _1, _2, _3, 16);
     kernel_run<datatype, local_load_store_block<datatype, 16>>(
@@ -66,7 +66,7 @@ TYPED_TEST_SUITE_P(load_store_scatter_datatype_test);
 TYPED_TEST_P(load_store_scatter_datatype_test, esimd) {
     using datatype = TypeParam;
 
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate = std::bind(
             local_load_store_result_validate<datatype>, _1, _2, _3, 16);
     kernel_run<datatype, local_load_store_scatter<datatype, 16>>(
@@ -91,7 +91,7 @@ INSTANTIATE_TYPED_TEST_SUITE_P(
 ///------------------------------------------------------------------
 
 TEST(local_load_scatter_mask, esimd) {
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate
             = std::bind(mask_result_validate<int>, _1, _2, _3, 16, 0xF, 0);
     kernel_run<int, local_load_scatter_mask<int, 16>>(
@@ -108,7 +108,7 @@ TEST(local_load_scatter_mask, esimd) {
 ///------------------------------------------------------------------
 
 TEST(local_store_scatter_mask, esimd) {
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate
             = std::bind(mask_result_validate<int>, _1, _2, _3, 16, 0xF, 16);
     kernel_run<int, local_store_scatter_mask<int, 16>>(
@@ -125,7 +125,7 @@ TEST(local_store_scatter_mask, esimd) {
 ///------------------------------------------------------------------
 
 TEST(local_store_scatter_nelts2, esimd) {
-    cl::sycl::nd_range<1> nd_range({1}, {1});
+    sycl::nd_range<1> nd_range({1}, {1});
     auto result_validate
             = std::bind(local_load_store_result_validate<int>, _1, _2, _3, 32);
     kernel_run<int, local_load_store_scatter_nelt2<int, 16>>(

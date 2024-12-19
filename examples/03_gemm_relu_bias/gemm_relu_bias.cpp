@@ -17,7 +17,7 @@
 #include "tests/utils/utils.hpp"
 #include "xetla.hpp"
 
-using namespace cl::sycl;
+using namespace sycl;
 using namespace gpu::xetla;
 using namespace gpu;
 
@@ -171,7 +171,7 @@ void gemm_relu_bias_run(uint32_t iter) {
     // [ReLuBias] assign epilogue_args to gemm_op_t::arguments_t
     typename gemm_op_t::arguments_t arg(matrix_m, matrix_k, matrix_n, A,
             matrix_k, B, matrix_n, C, matrix_n, epilogue_args);
-    cl::sycl::nd_range<3> nd_range = gemm_op_t::get_nd_range(arg);
+    sycl::nd_range<3> nd_range = gemm_op_t::get_nd_range(arg);
     if (!gemm_op_t::can_implement(arg)) {
         std::cout << "The arguments cannot be supported, aborting ... "
                   << std::endl;

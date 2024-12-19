@@ -26,7 +26,7 @@ using namespace std::placeholders;
 /// - xetla_shl API with [2 src] [with return] [all channel enabled].
 TEST(shl_with_vector_input, esimd) {
     kernel_run<uint64_t, shl_with_vector_input<uint64_t, 16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(bit_shift_result_validate<uint64_t>, _1, _2, _3, 16,
                     bit_shift_op::shl_vector));
 }
@@ -37,7 +37,7 @@ TEST(shl_with_vector_input, esimd) {
 /// - xetla_shl API with [2 src] [with return] [all channel enabled].
 TEST(shl_with_scalar_input, esimd) {
     kernel_run<uint64_t, shl_with_scalar_input<uint64_t, 16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(bit_shift_result_validate<uint64_t>, _1, _2, _3, 16,
                     bit_shift_op::shl_scalar));
 }
@@ -48,7 +48,7 @@ TEST(shl_with_scalar_input, esimd) {
 /// - xetla_shr API with [2 src] [with return] [all channel enabled].
 TEST(shr_with_vector_input, esimd) {
     kernel_run<uint64_t, shr_with_vector_input<uint64_t, 16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(bit_shift_result_validate<uint64_t>, _1, _2, _3, 16,
                     bit_shift_op::shr_vector));
 }
@@ -59,7 +59,7 @@ TEST(shr_with_vector_input, esimd) {
 /// - xetla_shr API with [2 src] [with return] [all channel enabled].
 TEST(shr_with_scalar_input, esimd) {
     kernel_run<uint64_t, shr_with_scalar_input<uint64_t, 16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(bit_shift_result_validate<uint64_t>, _1, _2, _3, 16,
                     bit_shift_op::shr_scalar));
 }
@@ -70,7 +70,7 @@ TEST(shr_with_scalar_input, esimd) {
 /// - xetla_rol API with [2 src] [with return] [all channel enabled].
 TEST(rol_with_2_vector_input, esimd) {
     kernel_run<uint64_t, rol_with_2_vector_input<uint64_t, 16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(bit_shift_result_validate<uint64_t>, _1, _2, _3, 16,
                     bit_shift_op::rol_vector));
 }
@@ -81,7 +81,7 @@ TEST(rol_with_2_vector_input, esimd) {
 /// - xetla_rol API with [2 src] [with return] [all channel enabled].
 TEST(rol_with_a_vector_and_a_scalar_input, esimd) {
     kernel_run<uint64_t, rol_with_a_vector_and_a_scalar_input<uint64_t, 16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(bit_shift_result_validate<uint64_t>, _1, _2, _3, 16,
                     bit_shift_op::rol_vector));
 }
@@ -92,7 +92,7 @@ TEST(rol_with_a_vector_and_a_scalar_input, esimd) {
 /// - xetla_rol API with [2 src] [with return] [all channel enabled].
 TEST(rol_with_2_scalar_input, esimd) {
     kernel_run<uint64_t, rol_with_2_scalar_input<uint64_t, 16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(bit_shift_result_validate<uint64_t>, _1, _2, _3, 16,
                     bit_shift_op::rol_scalar));
 }
@@ -103,7 +103,7 @@ TEST(rol_with_2_scalar_input, esimd) {
 /// - xetla_ror API with [2 src] [with return] [all channel enabled].
 TEST(ror_with_2_vector_input, esimd) {
     kernel_run<uint64_t, ror_with_2_vector_input<uint64_t, 16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(bit_shift_result_validate<uint64_t>, _1, _2, _3, 16,
                     bit_shift_op::ror_vector));
 }
@@ -114,7 +114,7 @@ TEST(ror_with_2_vector_input, esimd) {
 /// - xetla_ror API with [2 src] [with return] [all channel enabled].
 TEST(ror_with_a_vector_and_a_scalar_input, esimd) {
     kernel_run<uint64_t, ror_with_a_vector_and_a_scalar_input<uint64_t, 16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(bit_shift_result_validate<uint64_t>, _1, _2, _3, 16,
                     bit_shift_op::ror_vector));
 }
@@ -125,7 +125,7 @@ TEST(ror_with_a_vector_and_a_scalar_input, esimd) {
 /// - xetla_ror API with [2 src] [with return] [all channel enabled].
 TEST(ror_with_2_scalar_input, esimd) {
     kernel_run<uint64_t, ror_with_2_scalar_input<uint64_t, 16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(bit_shift_result_validate<uint64_t>, _1, _2, _3, 16,
                     bit_shift_op::ror_scalar));
 }
@@ -136,7 +136,7 @@ TEST(ror_with_2_scalar_input, esimd) {
 /// - xetla_lsr API with [2 src] [with return] [all channel enabled].
 TEST(lsr_with_vector_input, esimd) {
     kernel_run<uint64_t, lsr_with_vector_input<uint64_t, 16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(bit_shift_result_validate<uint64_t>, _1, _2, _3, 16,
                     bit_shift_op::lsr_vector));
 }
@@ -147,7 +147,7 @@ TEST(lsr_with_vector_input, esimd) {
 /// - xetla_lsr API with [2 src] [with return] [all channel enabled].
 TEST(lsr_with_scalar_input, esimd) {
     kernel_run<uint64_t, lsr_with_scalar_input<uint64_t, 16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(bit_shift_result_validate<uint64_t>, _1, _2, _3, 16,
                     bit_shift_op::lsr_scalar));
 }
@@ -158,7 +158,7 @@ TEST(lsr_with_scalar_input, esimd) {
 /// - xetla_asr API with [2 src] [with return] [all channel enabled].
 TEST(asr_with_vector_input, esimd) {
     kernel_run<uint64_t, asr_with_vector_input<uint64_t, 16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(bit_shift_result_validate<uint64_t>, _1, _2, _3, 16,
                     bit_shift_op::asr_vector));
 }
@@ -169,7 +169,7 @@ TEST(asr_with_vector_input, esimd) {
 /// - xetla_asr API with [2 src] [with return] [all channel enabled].
 TEST(asr_with_scalar_input, esimd) {
     kernel_run<uint64_t, asr_with_scalar_input<uint64_t, 16>>(
-            cl::sycl::nd_range<1>({1}, {1}),
+            sycl::nd_range<1>({1}, {1}),
             std::bind(bit_shift_result_validate<uint64_t>, _1, _2, _3, 16,
                     bit_shift_op::asr_scalar));
 }

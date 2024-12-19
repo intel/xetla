@@ -21,7 +21,7 @@
 using namespace std::placeholders;
 
 TEST(test_named_barrier, esimd) {
-    cl::sycl::nd_range<1> nd_range({16}, {16});
+    sycl::nd_range<1> nd_range({16}, {16});
     auto result_validate
             = std::bind(named_barrier_result_validate, _1, _2, _3, 16);
     kernel_run<int, named_barrier_func<int, 16>>(nd_range, result_validate);
@@ -37,7 +37,7 @@ TEST(test_named_barrier, esimd) {
 ///------------------------------------------------------------------
 
 TEST(test_named_barrier_producer_consumer_1, esimd) {
-    cl::sycl::nd_range<1> nd_range({4}, {4});
+    sycl::nd_range<1> nd_range({4}, {4});
     auto result_validate
             = std::bind(named_barrier_split_validate, _1, _2, _3, 32, 2);
     kernel_run<int, named_barrier_producer_consumer_1_func<int, 16>>(
@@ -55,7 +55,7 @@ TEST(test_named_barrier_producer_consumer_1, esimd) {
 ///------------------------------------------------------------------
 
 TEST(test_named_barrier_producer_consumer_2, esimd) {
-    cl::sycl::nd_range<1> nd_range({32}, {32});
+    sycl::nd_range<1> nd_range({32}, {32});
     auto result_validate
             = std::bind(named_barrier_split_validate, _1, _2, _3, 256, 2);
     kernel_run<int, named_barrier_producer_consumer_2_func<int, 16>>(
@@ -73,7 +73,7 @@ TEST(test_named_barrier_producer_consumer_2, esimd) {
 ///------------------------------------------------------------------
 
 TEST(test_named_barrier_producer_consumer_3, esimd) {
-    cl::sycl::nd_range<1> nd_range({16}, {16});
+    sycl::nd_range<1> nd_range({16}, {16});
     auto result_validate
             = std::bind(named_barrier_split_validate, _1, _2, _3, 128, 6);
     kernel_run<int, named_barrier_producer_consumer_3_func<int, 16>>(
